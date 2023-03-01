@@ -3,7 +3,15 @@
         <title>🧑🏻‍💻승우의 개발 일기</title>
         <link>https://choiseungwoo98.github.io/</link>
         <description>Hugo theme - LoveIt</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 02 Mar 2023 00:54:51 &#43;0900</lastBuildDate>
             <atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" />
-        </channel>
+        <item>
+    <title>First Posts</title>
+    <link>https://choiseungwoo98.github.io/first-posts/</link>
+    <pubDate>Wed, 01 Mar 2023 21:50:49 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/first-posts/</guid>
+    <description><![CDATA[Test ]]></description>
+</item>
+</channel>
 </rss>
