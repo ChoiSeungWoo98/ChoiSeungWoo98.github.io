@@ -3,15 +3,21 @@
         <title>🧑🏻‍💻승우의 개발 일기</title>
         <link>https://choiseungwoo98.github.io/</link>
         <description>Hugo theme - LoveIt</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 02 Mar 2023 00:54:51 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 02 Mar 2023 01:04:49 &#43;0800</lastBuildDate>
             <atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>First Posts</title>
+    <title>깃 블로그를 작성하기 전 다짐</title>
     <link>https://choiseungwoo98.github.io/first-posts/</link>
     <pubDate>Wed, 01 Mar 2023 21:50:49 &#43;0900</pubDate>
     <author>choiseU</author>
     <guid>https://choiseungwoo98.github.io/first-posts/</guid>
-    <description><![CDATA[Test ]]></description>
+    <description><![CDATA[깃 블로그를 시작하기 앞서 다짐. 처음 써보는 깃 블로그 게시글 입니다.
+저는 이제 현업 3개월차 주주주주주주주주주주주니어 백엔드 개발자 입니다. :)
+앞으로 꾸준히 열심히 누구보다 발전하고자 하는 마음입니다.
+절대 이 마음 변치 않고 발전하는 개발자가 될 수 있도록!!
+멈추지 않고 발전하고 개선하여 더 나은 개발자가 되고 싶습니다.
+저는 꼭 성공 할 거 입니다! 꼭 성공해서 베풀며 사는게 꿈 입니다.
+화이팅!]]></description>
 </item>
 </channel>
 </rss>

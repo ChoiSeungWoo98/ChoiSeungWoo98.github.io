@@ -2,10 +2,10 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://choiseungwoo98.github.io/first-posts/</loc><lastmod>2023-03-02T00:59:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/about/about/</loc><lastmod>2023-03-02T00:59:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/about/</loc><lastmod>2023-03-02T00:59:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/</loc><lastmod>2023-03-02T00:59:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://choiseungwoo98.github.io/first-posts/</loc><lastmod>2023-03-02T01:07:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/about/about/</loc><lastmod>2023-03-02T01:07:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/about/</loc><lastmod>2023-03-02T01:07:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/</loc><lastmod>2023-03-02T01:07:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-kr"
                         href="https://choiseungwoo98.github.io/zh-kr/"
@@ -14,7 +14,7 @@
                     hreflang="en"
                     href="https://choiseungwoo98.github.io/"
                     /></url><url>
-            <loc>https://choiseungwoo98.github.io/categories/</loc><lastmod>2023-03-02T00:59:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://choiseungwoo98.github.io/categories/</loc><lastmod>2023-03-02T01:07:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-kr"
                         href="https://choiseungwoo98.github.io/zh-kr/categories/"
@@ -23,11 +23,11 @@
                     hreflang="en"
                     href="https://choiseungwoo98.github.io/categories/"
                     /></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/html/</loc><lastmod>2023-03-02T00:59:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/markdown/</loc><lastmod>2023-03-02T00:59:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories/markdown/</loc><lastmod>2023-03-02T00:59:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/posts/</loc><lastmod>2023-03-02T00:59:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/</loc><lastmod>2023-03-02T00:59:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://choiseungwoo98.github.io/tags/diary/</loc><lastmod>2023-03-02T01:07:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/diary/</loc><lastmod>2023-03-02T01:07:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/jounal/</loc><lastmod>2023-03-02T01:07:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/posts/</loc><lastmod>2023-03-02T01:07:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/</loc><lastmod>2023-03-02T01:07:16&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="zh-kr"
                         href="https://choiseungwoo98.github.io/zh-kr/tags/"
