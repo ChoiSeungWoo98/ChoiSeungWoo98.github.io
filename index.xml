@@ -3,14 +3,62 @@
         <title>승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/</link>
         <description>Hugo theme - LoveIt</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 04 Mar 2023 14:16:49 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Mar 2023 04:39:34 &#43;0900</lastBuildDate>
             <atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Workflow란?</title>
+    <link>https://choiseungwoo98.github.io/workflow%EB%9E%80/</link>
+    <pubDate>Sun, 05 Mar 2023 04:39:34 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/workflow%EB%9E%80/</guid>
+    <description><![CDATA[workflow는 어떤 것이 있고 어떤 방법론이 있는지 조사해보자고 마음을 먹어 작성하게되었다.
+WorkFlow란? Git은 브랜치로 작업을 관리한다.
+팀에서 브랜치를 어떻게 사용할 지에 대한 규칙을 Workflow라고 한다.
+Git에서 대표적인 Workflow는 Git flow, Github flow, Gitlab flow가 있다.
+Git flow 브랜치의 역할이 명확하고 대규모 프로젝트에 적합.
+2개의 메인 브랜치, 3개의 보조 브랜치로 나뉨.
+Main Branch
+master 제품으로 출시하는 브랜치 실제 배포 중이 상용 버전 develop 다음 출시 버전을 개발하는 브랜치 실제 작동 중인 버전의 다음 버전을 개발하기 위한 메인 스트림 Serve Branch]]></description>
+</item>
+<item>
+    <title>Merge와 Rebase</title>
+    <link>https://choiseungwoo98.github.io/merge_%EC%99%80_rebase_%EC%B0%A8%EC%9D%B4/</link>
+    <pubDate>Sun, 05 Mar 2023 04:30:49 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/merge_%EC%99%80_rebase_%EC%B0%A8%EC%9D%B4/</guid>
+    <description><![CDATA[프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.
+현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&hellip;
+어떻게 해야 history를 잘 관리 할 수 있는지 궁금하였고 사수의 도움으로 rebase하는 것을 알게 되었다.
+rebase 를 알고 사용하고 있지만 merge와 rebase의 차이점을 명확하게 알고 싶어 찾아보았다.
+들어가기 앞서 merge와 rebase의 차이를 알아보기 전에 이것들은 어떤 상황에서 사용하며 사용하면 어떤 일이 일어나는지 부터 간단하게 알아보고자 한다.
+Git이란?]]></description>
+</item>
+<item>
+    <title>branch란?</title>
+    <link>https://choiseungwoo98.github.io/branch%EB%9E%80/</link>
+    <pubDate>Sun, 05 Mar 2023 00:40:51 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/branch%EB%9E%80/</guid>
+    <description><![CDATA[브랜치란? 여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능이 바로 브랜치(Branch) 이다.
+각자 독립적인 작업 영역(저장소) 안에서 마음대로 소스코드를 변경할 수 있다.
+이렇게 분리된 작업 영역에서 변경된 내용은 나중에 원래의 버전과 비교해서 하나의 새로운 버전으로 만들어 낼 수 있다.
+브랜치 사용법 메인 브랜치에서 자신의 작업 전용 브랜치를 만듦 각자 작업을 진행한 후, 작업이 끝난 사람은 메인 브랜치에 자신의 브랜치의 변경 사항을 적용 다른 사람의 작업에 영향을 받지 않고 독립적으로 특정 작업을 수행하고 그 결과를 하나로 모음 브랜치로 그 작업의 기록을 중간 중간에 남기게 되므로 문제가 발생했을 경우 원인이 되는 작업을 찾아내거나 그에 따른 대책을 세우기 쉬워짐 Code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # 브랜치 생성 # git branch branchName $ git branch myWork-1 # 브랜치 이동 # switch 혹은 checkout 둘 다 가능 # git switch branchName $ git switch myWork-1 # 브랜치 생성 및 이동 # git checkout -b branch_name # git switch -c branch_name $ git switch -c myWork-2 # 현재 브랜치 확인 $ git branch # 브랜치 삭제 # git branch -d branchName $ git branch -d myWork-1 포스트 작성 시 참고한 링크 브랜치란?]]></description>
+</item>
+<item>
+    <title>형산관리란?</title>
+    <link>https://choiseungwoo98.github.io/%ED%98%95%EC%82%B0%EA%B4%80%EB%A6%AC%EB%9E%80/</link>
+    <pubDate>Sat, 04 Mar 2023 22:47:36 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/%ED%98%95%EC%82%B0%EA%B4%80%EB%A6%AC%EB%9E%80/</guid>
+    <description><![CDATA[현재 가장 많이 사용하고 있는 형상관리도구 git에 대해 공부를 하다가 문득 궁금한 것이 생겼다. Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠한 차이가 있을까? 그래서 한번 각각의 형산관리 도구에 대해 알아보고 장단점은 무엇인지 알아보고자 한다.
+형상관리란 소프트웨어 구성 관리(Software Configuration Management) 또는 형상관리는 소프트웨어의 변경사항을 체계적으로 추적하고 통제 하는 것 일반적으로 단순 버전관리 기반의 소프트웨어 운용을 좀 더 포괄적인 학술 분야의 형태로 넓히는 근간 소프트웨어의 소스 코드, 개발 환경, 빌드 구조 등 전반적인 환경 전반적인 내역에 대한 관리 체계를 정의 형상 관리는 포괄적인 개념, 통상적으로 버전관리, 소스관리 등으로 불립니다.]]></description>
+</item>
+<item>
     <title>깃 블로그 만들기</title>
-    <link>https://choiseungwoo98.github.io/%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+    <link>https://choiseungwoo98.github.io/%EA%B9%83_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
     <pubDate>Sat, 04 Mar 2023 14:16:49 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+    <guid>https://choiseungwoo98.github.io/%EA%B9%83_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
     <description><![CDATA[현업에서 일하기 시작한지 이제 3개월이 지나가고 있는 시점에 공부가 필요하다고 뼈저리게 느끼고 있습니다.
 직장에 다니기 전에 네이버 블로그를 통해 배운 내용을 정리하였지만
 조금 더 개발자스러운 블로그를 운영하고 싶다고 느껴 깃 블로그를 만들게 되었습니다.

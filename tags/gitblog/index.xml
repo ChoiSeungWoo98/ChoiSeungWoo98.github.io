@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>gitblog - Tag - 승우의 개발 일기🧑🏻‍💻</title>
+        <title>GitBlog - Tag - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/tags/gitblog/</link>
-        <description>gitblog - Tag - 승우의 개발 일기🧑🏻‍💻</description>
+        <description>GitBlog - Tag - 승우의 개발 일기🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 04 Mar 2023 14:16:49 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/gitblog/" rel="self" type="application/rss+xml" /><item>
     <title>깃 블로그 만들기</title>
-    <link>https://choiseungwoo98.github.io/%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
+    <link>https://choiseungwoo98.github.io/%EA%B9%83_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</link>
     <pubDate>Sat, 04 Mar 2023 14:16:49 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
+    <guid>https://choiseungwoo98.github.io/%EA%B9%83_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0/</guid>
     <description><![CDATA[현업에서 일하기 시작한지 이제 3개월이 지나가고 있는 시점에 공부가 필요하다고 뼈저리게 느끼고 있습니다.
 직장에 다니기 전에 네이버 블로그를 통해 배운 내용을 정리하였지만
 조금 더 개발자스러운 블로그를 운영하고 싶다고 느껴 깃 블로그를 만들게 되었습니다.
