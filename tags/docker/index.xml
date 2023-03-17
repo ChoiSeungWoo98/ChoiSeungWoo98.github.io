@@ -4,7 +4,7 @@
         <link>https://choiseungwoo98.github.io/tags/docker/</link>
         <description>Docker - Tag - 승우의 개발 일기🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 17 Mar 2023 01:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/docker/" rel="self" type="application/rss+xml" /><item>
-    <title>Docker란</title>
+    <title>Docker가 궁금하다..</title>
     <link>https://choiseungwoo98.github.io/docker%EB%9E%80/</link>
     <pubDate>Fri, 17 Mar 2023 01:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
@@ -13,7 +13,7 @@
 해당 프로젝트가 끝나고 새로운 프로젝트를 진행하게 되었는데,
 새로운 프로젝트에서는 MariaDB를 사용해야하는 상황이었고, Mysql과 MariaDB는 서로 프로토콜, 프로세스 명, 명령어 등을 쉐어하고 있다고 알려져 있어 MySql이 설치되어있는 상황에서 MariaDB를 다운하면 충돌이 발생하고
 MySql을 지우고 다운받을 수 없는 상황이라 동시에 사용하기 위해 Docker로 설치해여 사용하려 합니다.
-Docker란? 컨테이너 기반의 오픈소스 가상화 플랫폼
+Docker?? 컨테이너 기반의 오픈소스 가상화 플랫폼
 다양한 프로그램, 실행 환경을 컨테이너로 추상화하고 동일한 인터페이스를 제공하여 프로그램 배포 및 관리를 단순화 한다.]]></description>
 </item>
 </channel>
