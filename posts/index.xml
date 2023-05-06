@@ -3,7 +3,27 @@
         <title>All Posts - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/posts/</link>
         <description>All Posts | 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 17 Mar 2023 01:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 06 May 2023 19:29:42 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Spring Boot, Websocket &#43; STOMP 사용하기</title>
+    <link>https://choiseungwoo98.github.io/websocket/</link>
+    <pubDate>Sat, 06 May 2023 19:29:42 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/websocket/</guid>
+    <description><![CDATA[일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?
+같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.
+서버에서 클라이언트로 이벤트를 보내는 4가지 방법 1. Polling 클라이언트가 평벙한 http request를 서버로 계속 날려서 이벤트 내용을 받는 방법 가장 쉬운 방법이지만 클라이언트가 지속적으로 request를 보내야 하기 때문에 클라이언트가 많아 질 수록 서버 부담이 급증 실시간으로 정보를 응답 받는 것이 아닌 반복해서 request를 보내는 사이에 바뀐 내용을 받아오는 방식 http 오버헤드가 발생한다는 큰 단점.]]></description>
+</item>
+<item>
+    <title>서버에서 클라이언트로 이벤트를 보내는 4가지 방법</title>
+    <link>https://choiseungwoo98.github.io/servereventtoclient/</link>
+    <pubDate>Sat, 06 May 2023 19:29:42 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/servereventtoclient/</guid>
+    <description><![CDATA[일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?
+같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.
+서버에서 클라이언트로 이벤트를 보내는 4가지 방법 1. Polling 클라이언트가 평벙한 http request를 서버로 계속 날려서 이벤트 내용을 받는 방법 가장 쉬운 방법이지만 클라이언트가 지속적으로 request를 보내야 하기 때문에 클라이언트가 많아 질 수록 서버 부담이 급증 실시간으로 정보를 응답 받는 것이 아닌 반복해서 request를 보내는 사이에 바뀐 내용을 받아오는 방식 http 오버헤드가 발생한다는 큰 단점.]]></description>
+</item>
+<item>
     <title>Docker가 궁금하다..</title>
     <link>https://choiseungwoo98.github.io/docker%EB%9E%80/</link>
     <pubDate>Fri, 17 Mar 2023 01:03:57 &#43;0900</pubDate>
