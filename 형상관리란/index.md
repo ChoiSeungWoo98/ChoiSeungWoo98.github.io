@@ -1,4 +1,4 @@
-# 형상관리가 궁금하다..
+# 형상관리란 SVN? GIT?
 
 > 현재 가장 많이 사용하고 있는 형상관리도구 git에 대해 공부를 하다가 문득 궁금한 것이 생겼다.
 > Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠한 차이가 있을까?
@@ -24,11 +24,11 @@
 포함관계를 포함하자면  
 **변경관리 ⊆ 버전관리 ⊆ 형상관리**
 <details>
-    <summary style="color: deepskyblue">형상관리</summary>
+    <summary style="color: rgba(113, 187, 222, 1); cursor: pointer;">형상관리</summary>
     <img src="/img/posts/형상관리/형상관리란.png">
 </details>
 <details>
-    <summary style="color: deepskyblue">3가지 버전 사진</summary>
+    <summary style="color: rgba(113, 187, 222, 1); cursor: pointer;">3가지 버전</summary>
     <img src="/img/posts/형상관리/3가지_관리_사진.jpg">
 </details>
 
@@ -88,7 +88,7 @@ Git
 4. 원격 저장소가 사라지면 svn은 **복구 불가**,<br>git은 로컬 저장소에 사본을 들고 있다면 **복구 가능**.
 5. svn은 **저장소가 하나**,<br>git은 로컬 저장소/원격 저장소로 **저장소를 분산**해서 관리  
 
-<img src="/img/posts/형상관리/git_svn.jpg">
+<img style="margin-left: 30px; width: 500px;" src="/img/posts/형상관리/git_svn.jpg">
 <div style="height: 50px;"></div>
 
 ## 포스트 작성 시 참고한 링크

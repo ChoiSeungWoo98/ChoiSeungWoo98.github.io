@@ -1,4 +1,4 @@
-# Docker가 궁금하다..
+# Docker는 뭘까?
 
 > Mysql을 사용하여 프로젝트를 하나 진행 중이었습니다.  
 > 해당 프로젝트가 끝나고 새로운 프로젝트를 진행하게 되었는데,  
@@ -17,8 +17,8 @@
 
 
 <details>
-    <summary style="color: deepskyblue">Linux 커널의 도커 엔진</summary>
-    <img src="/img/posts/docker/docker_engine.png">
+    <summary style="margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;">Linux 커널의 도커 엔진</summary>
+    <img style="margin-left: 30px; width: 500px;" src="/img/posts/docker/docker_engine.png">
 </details>
 
 <div style="height: 50px;"></div>

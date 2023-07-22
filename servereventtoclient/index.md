@@ -14,8 +14,8 @@
 - http 오버헤드가 발생한다는 큰 단점. 하지만 일정 시간 갱신되는 서버 데이터의 경우 유용.
 
 <details>
-    <summary style="color: deepskyblue">Polling 방식</summary>
-    <img src="/img/posts/spring-boot/Polling.png">
+    <summary style="margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;">Polling 방식</summary>
+    <img style="margin-left: 30px; width: 500px;" src="/img/posts/java/webSocket/Polling.png">
 </details>
 
 ### 2. Long Polling
@@ -26,8 +26,8 @@
 - 다수의 클라이언트에게 동시에 이벤트가 발생될 경우 클라이언트가 바로 접속을 시도하면서 서버 부담이 급증
 
 <details>
-    <summary style="color: deepskyblue">Long Polling 방식</summary>
-    <img src="/img/posts/spring-boot/Long_Polling.png">
+    <summary style="margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;">Long Polling 방식</summary>
+    <img style="margin-left: 30px; width: 500px;" src="/img/posts/java/webSocket/Long_Polling.png">
 </details>
 
 ### 3. WebSocket
@@ -38,8 +38,8 @@
 - 단, websocket 프로토콜을 처리하기 위한 전이중 연결과 새로운 웹소켓 서버 필요
 
 <details>
-    <summary style="color: deepskyblue">WebSocket 방식</summary>
-    <img src="/img/posts/spring-boot/WebSocket.png">
+    <summary style="margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;">WebSocket 방식</summary>
+    <img style="margin-left: 30px; width: 500px;" src="/img/posts/java/webSocket/WebSocket.png">
 </details>
 
 ### 4. SSE(Server-Sent-Events)
@@ -50,8 +50,8 @@
 - IE는 기본 미지원이지만, polyFill을 이용할 경우 IE를 포함한 크로스브라우징 가능
 
 <details>
-    <summary style="color: deepskyblue">SSE(Server-Sent Event) 방식</summary>
-    <img src="/img/posts/spring-boot/Server-Sent-Events.png">
+    <summary style="margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;">SSE(Server-Sent Event) 방식</summary>
+    <img style="margin-left: 30px; width: 500px;" src="/img/posts/java/webSocket/Server-Sent-Events.png">
 </details>
 
 <div style="height: 50px;"></div>

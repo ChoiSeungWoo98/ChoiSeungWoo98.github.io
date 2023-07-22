@@ -1,4 +1,4 @@
-# Workflow가 궁금하다..
+# Workflow? 작업 방식?
 
 > workflow는 어떤 것이 있고 어떤 방법론이 있는지 조사해보자고 마음을 먹어 작성하게되었다. 
 
@@ -56,8 +56,8 @@ Git에서 대표적인 Workflow는 `Git flow`, `Github flow`, `Gitlab flow`가 �
 7. hotfix에서 버그픽스가 끝나면 master와 develop에 합친다.
 
 <details>
-    <summary style="color: deepskyblue">Git flow</summary>
-    <img src="/img/posts/형상관리/git/git_flow.png">
+    <summary style="margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;">Git flow</summary>
+    <img style="margin-left: 30px; width: 500px;" src="/img/posts/형상관리/git/git_flow.png">
 </details>
 
 <div style="height: 50px;"></div>
@@ -76,8 +76,8 @@ master 브랜치는 **항상 최신 버전 유지 및 안정적**이어야 함
 - **master에 병합하면 바로 배포 작업을 수행**한다. (CI 자동화 권장)
 
 <details>
-    <summary style="color: deepskyblue">Github flow</summary>
-    <img src="/img/posts/형상관리/git/github_workflow.png">
+    <summary style="margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;">Github flow</summary>
+    <img style="margin-left: 30px; width: 500px;" src="/img/posts/형상관리/git/github_workflow.png">
 </details>
 
 <div style="height: 50px;"></div>
@@ -98,8 +98,8 @@ master, develop(production) 2개의 메인 브랜치로 관리
 
 
 <details>
-    <summary style="color: deepskyblue">Gitlab flow</summary>
-    <img src="/img/posts/형상관리/git/gitlab_workflow.png">
+    <summary style="margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;">Gitlab flow</summary>
+    <img style="margin-left: 30px; width: 500px;" src="/img/posts/형상관리/git/gitlab_workflow.png">
 </details>
 
 <div style="height: 50px;"></div>
@@ -125,8 +125,8 @@ master, develop(production) 2개의 메인 브랜치로 관리
 Git에 특징인 **분산 버전 관리의 이점을 사용할 수 없지만 최소한의 명령어로 협업 가능**
 
 <details>
-    <summary style="color: deepskyblue">Centralized Workflow</summary>
-    <img src="/img/posts/형상관리/git/centralized_workflow.png">
+    <summary style="color: rgba(113, 187, 222, 1); cursor: pointer;">Centralized Workflow</summary>
+    <img style="width: 500px;" src="/img/posts/형상관리/git/centralized_workflow.png">
 </details>
 
 <div style="height: 50px;"></div>
@@ -158,8 +158,8 @@ pull request는 코드 리뷰의 시작점
 큰 규모의 프로젝트를 관리할 때는 Gitflow Workflow를 사용해 기능 개발, 릴리스, 유지보수를 위해 좀 더 엄격한 워크플로우를 유지.
 
 <details>
-    <summary style="color: deepskyblue">Feature Branch Workflow</summary>
-    <img src="/img/posts/형상관리/git/feature_branch_workflow.png">
+    <summary style="color: rgba(113, 187, 222, 1); cursor: pointer;">Feature Branch Workflow</summary>
+    <img style="width: 500px;" src="/img/posts/형상관리/git/feature_branch_workflow.png">
 </details>
 
 <div style="height: 50px;"></div>
@@ -186,8 +186,8 @@ pull request는 코드 리뷰의 시작점
 다른 워크플로우에서는 공식 저장소에 브랜치를 푸시해서 팀 구성원들이 공유했다면, Forking Workflow에서는 나의 브랜치를 다른 참여자들이 자신의 로컬 저장소로 내려 받아 참고하고 병합
 
 <details>
-    <summary style="color: deepskyblue">Forking Workflow</summary>
-    <img src="/img/posts/형상관리/git/forking_workflow.png">
+    <summary style="color: rgba(113, 187, 222, 1); cursor: pointer;">Forking Workflow</summary>
+    <img style="width: 500px;" src="/img/posts/형상관리/git/forking_workflow.png">
 </details>
 
 <div style="height: 50px;"></div>
