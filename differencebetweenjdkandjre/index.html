@@ -10,11 +10,11 @@
 하지만 기초 및 이론 공부는 굉장히 소홀했었다..
 기초가 단단하지 않으면 나의 개발 스펙트럼도 짧아 질것 같아서 하나하나 정리해보려 한다.
 요즘 다시 괜찮아져서 블로그도 다시 시작&hellip; 화이팅..!
-둘어가기 앞서 오늘은 자바 플랫폼에 대해 알아보고자 한다. JDK, JRE, JVM은 자바 플랫폼의 3대 구성요소이다. 오늘은 JDK, JRE, JVM에 추가로 JIT까지 알아보고자 한다. 이미지를 먼저 확인 후 본격적으로 들어가보자." />
+들어가기 앞서 오늘은 자바 플랫폼에 대해 알아보고자 한다. JDK, JRE, JVM은 자바 플랫폼의 3대 구성요소이다. 오늘은 JDK, JRE, JVM에 추가로 JIT까지 알아보고자 한다. 이미지를 먼저 확인 후 본격적으로 들어가보자." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://choiseungwoo98.github.io/differencebetweenjdkandjre/" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-07-21T19:29:42+09:00" />
-<meta property="article:modified_time" content="2023-07-23T06:04:10+09:00" />
+<meta property="article:modified_time" content="2023-07-23T06:10:33+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png"/>
 
@@ -24,9 +24,9 @@
 하지만 기초 및 이론 공부는 굉장히 소홀했었다..
 기초가 단단하지 않으면 나의 개발 스펙트럼도 짧아 질것 같아서 하나하나 정리해보려 한다.
 요즘 다시 괜찮아져서 블로그도 다시 시작&hellip; 화이팅..!
-둘어가기 앞서 오늘은 자바 플랫폼에 대해 알아보고자 한다. JDK, JRE, JVM은 자바 플랫폼의 3대 구성요소이다. 오늘은 JDK, JRE, JVM에 추가로 JIT까지 알아보고자 한다. 이미지를 먼저 확인 후 본격적으로 들어가보자."/>
+들어가기 앞서 오늘은 자바 플랫폼에 대해 알아보고자 한다. JDK, JRE, JVM은 자바 플랫폼의 3대 구성요소이다. 오늘은 JDK, JRE, JVM에 추가로 JIT까지 알아보고자 한다. 이미지를 먼저 확인 후 본격적으로 들어가보자."/>
 <meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
-<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/differencebetweenjdkandjre/" /><link rel="prev" href="https://choiseungwoo98.github.io/websocket/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/differencebetweenjdkandjre/" /><link rel="prev" href="https://choiseungwoo98.github.io/websocket/" /><link rel="next" href="https://choiseungwoo98.github.io/final/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -38,7 +38,7 @@
             "@type": "WebPage",
             "@id": "https:\/\/choiseungwoo98.github.io\/differencebetweenjdkandjre\/"
         },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "Java-Basic, Java, JDK, JRE, JIT, JVM","wordcount":  514 ,
-        "url": "https:\/\/choiseungwoo98.github.io\/differencebetweenjdkandjre\/","datePublished": "2023-07-21T19:29:42+09:00","dateModified": "2023-07-23T06:04:10+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        "url": "https:\/\/choiseungwoo98.github.io\/differencebetweenjdkandjre\/","datePublished": "2023-07-21T19:29:42+09:00","dateModified": "2023-07-23T06:10:33+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
                 "@type": "Person",
@@ -120,7 +120,7 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#둘어가기-앞서">둘어가기 앞서</a></li>
+    <li><a href="#들어가기-앞서">들어가기 앞서</a></li>
     <li><a href="#jdkjava-development-kit--자바-개발-키트">JDK(Java Development Kit : 자바 개발 키트)</a>
       <ul>
         <li><a href="#1-jdk는-무엇일까">1. JDK는 무엇일까?</a></li>
@@ -158,7 +158,7 @@
 기초가 단단하지 않으면 나의 개발 스펙트럼도 짧아 질것 같아서 하나하나 정리해보려 한다.<br>
 요즘 다시 괜찮아져서 블로그도 다시 시작&hellip; 화이팅..!</p>
 </blockquote>
-<h2 id="둘어가기-앞서">둘어가기 앞서</h2>
+<h2 id="들어가기-앞서">들어가기 앞서</h2>
 <hr>
 <ul>
 <li>오늘은 자바 플랫폼에 대해 알아보고자 한다.</li>
@@ -307,7 +307,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/websocket/" class="prev" rel="prev" title="Spring Boot, Websocket &#43; STOMP 사용하기"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Spring Boot, Websocket + STOMP 사용하기</a></div>
+    <div class="post-nav"><a href="/websocket/" class="prev" rel="prev" title="Spring Boot, Websocket &#43; STOMP 사용하기"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Spring Boot, Websocket + STOMP 사용하기</a>
+            <a href="/final/" class="next" rel="next" title="[Java] final 사용법">[Java] final 사용법<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
