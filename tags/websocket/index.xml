@@ -4,7 +4,7 @@
         <link>https://choiseungwoo98.github.io/tags/websocket/</link>
         <description>WebSocket - Tag - 승우의 개발 일기🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 06 May 2023 19:29:42 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/websocket/" rel="self" type="application/rss+xml" /><item>
-    <title>Spring Boot, Websocket &#43; STOMP 사용하기</title>
+    <title>[Java] Spring Boot, Websocket &#43; STOMP 사용하기</title>
     <link>https://choiseungwoo98.github.io/websocket/</link>
     <pubDate>Sat, 06 May 2023 19:29:42 &#43;0900</pubDate>
     <author>choiseU</author>
@@ -15,7 +15,7 @@ Web Socket을 사용한 코드 게시물은 추후에 작성하겠습니다!! �
 포스트 작성 시 참고한 링크 코드 ]]></description>
 </item>
 <item>
-    <title>서버에서 클라이언트로 이벤트를 보내는 4가지 방법</title>
+    <title>[Java] 서버에서 클라이언트로 이벤트를 보내는 4가지 방법</title>
     <link>https://choiseungwoo98.github.io/servereventtoclient/</link>
     <pubDate>Sat, 06 May 2023 19:29:42 &#43;0900</pubDate>
     <author>choiseU</author>

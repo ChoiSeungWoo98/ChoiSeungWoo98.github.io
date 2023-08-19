@@ -4,33 +4,33 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>[Java] final 사용법 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="[Java] final 사용법" />
+        <title>[Java] 네이밍 규칙 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="[Java] 네이밍 규칙" />
 <meta property="og:description" content="커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘은 여러가지 질문 중 final에 대해 알아보고자 한다.
 java에서 final 키워드란 뭘까? 1. final 의미 자바에서 final은 변수, 메서드, 클래스에 사용되는 키워드로서 불변성을 나타낸다. final로 선언된 요소는 한번 초가화하면 그 값을 변경할 수 없다. 예를 들면 정보처리기사라는 시험의 점수는 고정되어 있다! 시험을 보는 사람마다 점수가 다르게 선정된다면 혼란을 야기할듯.. 다만, 시험보는 사람의 수험번호와 같은 경우 모든 사람이 다를 것이다." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://choiseungwoo98.github.io/final/" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-07-22T18:37:42+09:00" />
-<meta property="article:modified_time" content="2023-08-15T21:31:22+09:00" />
+<meta property="og:url" content="https://choiseungwoo98.github.io/naming/" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-19T16:03:49+09:00" />
+<meta property="article:modified_time" content="2023-08-19T16:03:49+09:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png"/>
 
-<meta name="twitter:title" content="[Java] final 사용법"/>
+<meta name="twitter:title" content="[Java] 네이밍 규칙"/>
 <meta name="twitter:description" content="커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘은 여러가지 질문 중 final에 대해 알아보고자 한다.
 java에서 final 키워드란 뭘까? 1. final 의미 자바에서 final은 변수, 메서드, 클래스에 사용되는 키워드로서 불변성을 나타낸다. final로 선언된 요소는 한번 초가화하면 그 값을 변경할 수 없다. 예를 들면 정보처리기사라는 시험의 점수는 고정되어 있다! 시험을 보는 사람마다 점수가 다르게 선정된다면 혼란을 야기할듯.. 다만, 시험보는 사람의 수험번호와 같은 경우 모든 사람이 다를 것이다."/>
 <meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
-<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/final/" /><link rel="prev" href="https://choiseungwoo98.github.io/differencebetweenjdkandjre/" /><link rel="next" href="https://choiseungwoo98.github.io/naming/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/naming/" /><link rel="prev" href="https://choiseungwoo98.github.io/final/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "[Java] final 사용법",
+        "headline": "[Java] 네이밍 규칙",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/choiseungwoo98.github.io\/final\/"
+            "@id": "https:\/\/choiseungwoo98.github.io\/naming\/"
         },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "Java-Basic, Java, final","wordcount":  437 ,
-        "url": "https:\/\/choiseungwoo98.github.io\/final\/","datePublished": "2023-07-22T18:37:42+09:00","dateModified": "2023-08-15T21:31:22+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        "url": "https:\/\/choiseungwoo98.github.io\/naming\/","datePublished": "2023-08-19T16:03:49+09:00","dateModified": "2023-08-19T16:03:49+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
                 "@type": "Person",
@@ -101,9 +101,9 @@ java에서 final 키워드란 뭘까? 1. final 의미 자바에서 final은 변�
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Java] final 사용법</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Java] 네이밍 규칙</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-07-22">2023-07-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;437 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-08-19">2023-08-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;437 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -330,14 +330,14 @@ java에서 final 키워드란 뭘까? 1. final 의미 자바에서 final은 변�
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2023-08-15</span>
+                <span>Updated on 2023-08-19</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
-                            <a class="link-to-markdown" href="/final/index.md" target="_blank">Read Markdown</a>
+                            <a class="link-to-markdown" href="/naming/index.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/final/" data-title="[Java] final 사용법" data-hashtags="Java-Basic,Java,final"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/final/" data-hashtag="Java-Basic"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/final/" data-title="[Java] final 사용법"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/final/" data-title="[Java] final 사용법"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/final/" data-title="[Java] final 사용법"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/naming/" data-title="[Java] 네이밍 규칙" data-hashtags="Java-Basic,Java,final"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/naming/" data-hashtag="Java-Basic"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/naming/" data-title="[Java] 네이밍 규칙"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/naming/" data-title="[Java] 네이밍 규칙"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/naming/" data-title="[Java] 네이밍 규칙"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -349,8 +349,7 @@ java에서 final 키워드란 뭘까? 1. final 의미 자바에서 final은 변�
         </section>
     </div>
 
-    <div class="post-nav"><a href="/differencebetweenjdkandjre/" class="prev" rel="prev" title="[Java] JDK와 JRE의 차이 그리고 JIT, JVM"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[Java] JDK와 JRE의 차이 그리고 JIT, JVM</a>
-            <a href="/naming/" class="next" rel="next" title="[Java] 네이밍 규칙">[Java] 네이밍 규칙<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/final/" class="prev" rel="prev" title="[Java] final 사용법"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[Java] final 사용법</a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

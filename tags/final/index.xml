@@ -3,7 +3,16 @@
         <title>final - Tag - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/tags/final/</link>
         <description>final - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 22 Jul 2023 18:37:42 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/final/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 16:03:49 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/final/" rel="self" type="application/rss+xml" /><item>
+    <title>[Java] 네이밍 규칙</title>
+    <link>https://choiseungwoo98.github.io/naming/</link>
+    <pubDate>Sat, 19 Aug 2023 16:03:49 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/naming/</guid>
+    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘은 여러가지 질문 중 final에 대해 알아보고자 한다.
+java에서 final 키워드란 뭘까? 1. final 의미 자바에서 final은 변수, 메서드, 클래스에 사용되는 키워드로서 불변성을 나타낸다. final로 선언된 요소는 한번 초가화하면 그 값을 변경할 수 없다. 예를 들면 정보처리기사라는 시험의 점수는 고정되어 있다! 시험을 보는 사람마다 점수가 다르게 선정된다면 혼란을 야기할듯.. 다만, 시험보는 사람의 수험번호와 같은 경우 모든 사람이 다를 것이다.]]></description>
+</item>
+<item>
     <title>[Java] final 사용법</title>
     <link>https://choiseungwoo98.github.io/final/</link>
     <pubDate>Sat, 22 Jul 2023 18:37:42 &#43;0900</pubDate>

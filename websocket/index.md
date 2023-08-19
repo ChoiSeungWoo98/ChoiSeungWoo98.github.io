@@ -1,4 +1,4 @@
-# Spring Boot, Websocket + STOMP 사용하기
+# [Java] Spring Boot, Websocket + STOMP 사용하기
 
 > 일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?  
 > 같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.

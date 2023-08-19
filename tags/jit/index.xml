@@ -4,7 +4,7 @@
         <link>https://choiseungwoo98.github.io/tags/jit/</link>
         <description>JIT - Tag - 승우의 개발 일기🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 21 Jul 2023 19:29:42 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/jit/" rel="self" type="application/rss+xml" /><item>
-    <title>JDK와 JRE의 차이 그리고 JIT, JVM</title>
+    <title>[Java] JDK와 JRE의 차이 그리고 JIT, JVM</title>
     <link>https://choiseungwoo98.github.io/differencebetweenjdkandjre/</link>
     <pubDate>Fri, 21 Jul 2023 19:29:42 &#43;0900</pubDate>
     <author>choiseU</author>

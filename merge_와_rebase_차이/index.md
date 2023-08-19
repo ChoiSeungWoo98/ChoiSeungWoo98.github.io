@@ -1,4 +1,4 @@
-# Merge와 Rebase 차이
+# [Git] Merge와 Rebase 차이
 
 
 > 프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.  
