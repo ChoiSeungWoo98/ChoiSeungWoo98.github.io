@@ -3,9 +3,22 @@
         <title>승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/</link>
         <description>Hugo theme - LoveIt</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 18:11:51 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 20 Aug 2023 01:22:51 &#43;0900</lastBuildDate>
             <atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>[Java] 문자열을 반전 시키는 가장 좋은 방법</title>
+    <link>https://choiseungwoo98.github.io/stringreverser/</link>
+    <pubDate>Sun, 20 Aug 2023 01:22:51 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/stringreverser/</guid>
+    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘의 질문! 문자열을 반전 시키는 가장 좋은 방법은 무엇인가?
+오늘은 해당 질문에 대한 답변을 정리해보려 한다.
+문자열을 반전 시키는 가장 좋은 방법이란 문자열을 반전 시키는 방법은 정말 많이 있다.
+예를 들어 반복문을 사용하는 방법, 라이브러리 함수를 이용하는 방법, 재귀함수를 이용하는 방법 등 정말 다양한 방법이 있다.
+이 중에서 효율이 좋다고 생각하는 방법 1가지에 대해 알아보고자 한다.
+StringBuilder를 사용해 문자열 반전 시키기 자바에서 문자열을 반전 시키는 가장 일반적인 방법으로 StringBuilder의 reverse() 메서드를 사용하는 방법이다.]]></description>
+</item>
+<item>
     <title>[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</title>
     <link>https://choiseungwoo98.github.io/string/</link>
     <pubDate>Sat, 19 Aug 2023 18:11:51 &#43;0900</pubDate>
@@ -111,19 +124,6 @@ Git flow 브랜치의 역할이 명확하고 대규모 프로젝트에 적합.
 2개의 메인 브랜치, 3개의 보조 브랜치로 나뉨.
 Main Branch
 master 제품으로 출시하는 브랜치 실제 배포 중이 상용 버전 develop 다음 출시 버전을 개발하는 브랜치 실제 작동 중인 버전의 다음 버전을 개발하기 위한 메인 스트림 Serve Branch]]></description>
-</item>
-<item>
-    <title>[Git] Merge와 Rebase 차이</title>
-    <link>https://choiseungwoo98.github.io/merge_%EC%99%80_rebase_%EC%B0%A8%EC%9D%B4/</link>
-    <pubDate>Sun, 05 Mar 2023 04:30:49 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/merge_%EC%99%80_rebase_%EC%B0%A8%EC%9D%B4/</guid>
-    <description><![CDATA[프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.
-현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&hellip;
-어떻게 해야 history를 잘 관리 할 수 있는지 궁금하였고 사수의 도움으로 rebase하는 것을 알게 되었다.
-rebase 를 알고 사용하고 있지만 merge와 rebase의 차이점을 명확하게 알고 싶어 찾아보았다.
-들어가기 앞서 merge와 rebase의 차이를 알아보기 전에 이것들은 어떤 상황에서 사용하며 사용하면 어떤 일이 일어나는지 부터 간단하게 알아보고자 한다.
-Git이란?]]></description>
 </item>
 </channel>
 </rss>
