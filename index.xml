@@ -6,13 +6,13 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 16:03:49 &#43;0900</lastBuildDate>
             <atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>[Java] 네이밍 규칙</title>
+    <title>[Java] 자바 네이밍 규칙(Java Naming Convention)</title>
     <link>https://choiseungwoo98.github.io/naming/</link>
     <pubDate>Sat, 19 Aug 2023 16:03:49 &#43;0900</pubDate>
     <author>choiseU</author>
     <guid>https://choiseungwoo98.github.io/naming/</guid>
-    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘은 여러가지 질문 중 final에 대해 알아보고자 한다.
-java에서 final 키워드란 뭘까? 1. final 의미 자바에서 final은 변수, 메서드, 클래스에 사용되는 키워드로서 불변성을 나타낸다. final로 선언된 요소는 한번 초가화하면 그 값을 변경할 수 없다. 예를 들면 정보처리기사라는 시험의 점수는 고정되어 있다! 시험을 보는 사람마다 점수가 다르게 선정된다면 혼란을 야기할듯.. 다만, 시험보는 사람의 수험번호와 같은 경우 모든 사람이 다를 것이다.]]></description>
+    <description><![CDATA[프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다. 그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다! 오늘 정리할 네이밍 규칙은 Java 이다.
+1. 네이밍 규칙이란? 프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다. 이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다. 2. 네이밍 규칙을 사용하면 따라오는 효과 가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다.]]></description>
 </item>
 <item>
     <title>[Java] final 사용법</title>

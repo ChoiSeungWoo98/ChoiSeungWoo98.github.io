@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Naming - Tag - 승우의 개발 일기🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/naming/</link>
+        <description>Naming - Tag - 승우의 개발 일기🧑🏻‍💻</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 16:03:49 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/naming/" rel="self" type="application/rss+xml" /><item>
+    <title>[Java] 자바 네이밍 규칙(Java Naming Convention)</title>
+    <link>https://choiseungwoo98.github.io/naming/</link>
+    <pubDate>Sat, 19 Aug 2023 16:03:49 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/naming/</guid>
+    <description><![CDATA[프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다. 그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다! 오늘 정리할 네이밍 규칙은 Java 이다.
+1. 네이밍 규칙이란? 프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다. 이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다. 2. 네이밍 규칙을 사용하면 따라오는 효과 가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다.]]></description>
+</item>
+</channel>
+</rss>
