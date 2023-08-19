@@ -3,9 +3,22 @@
         <title>승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/</link>
         <description>Hugo theme - LoveIt</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 17:49:27 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 18:11:51 &#43;0900</lastBuildDate>
             <atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</title>
+    <link>https://choiseungwoo98.github.io/string/</link>
+    <pubDate>Sat, 19 Aug 2023 18:11:51 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/string/</guid>
+    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
+오늘은 여러가지 질문 중 String에 대해 알아보고자 한다. String은 기본 데이터 타입인지? 문자열을 조작하는 클래스는 무엇이 있는지?
+String은 무엇인가? 기본 자료형(int, float, char, boolean)처럼 자주 사용되는 class이다.
+String은 이 기본 자료형들과는 다르게 참조 자료형 class이다.
+참조 자료형이란 객체 자체에 값을 가지는 것이 아닌 객체에는 referenece(주소) 값을 갖고 있고 해당 reference에 객체의 값이 있는 형태다.
+String은 기본 데이터 타입인가? 위에서도 말씀 드렸지만 String은 기본 데이터 타입이 아닌 참조 자료형 클래스 이다.]]></description>
+</item>
+<item>
     <title>[Java] Math 클래스</title>
     <link>https://choiseungwoo98.github.io/math/</link>
     <pubDate>Sat, 19 Aug 2023 17:49:27 &#43;0900</pubDate>
@@ -111,17 +124,6 @@ master 제품으로 출시하는 브랜치 실제 배포 중이 상용 버전 de
 rebase 를 알고 사용하고 있지만 merge와 rebase의 차이점을 명확하게 알고 싶어 찾아보았다.
 들어가기 앞서 merge와 rebase의 차이를 알아보기 전에 이것들은 어떤 상황에서 사용하며 사용하면 어떤 일이 일어나는지 부터 간단하게 알아보고자 한다.
 Git이란?]]></description>
-</item>
-<item>
-    <title>[Git] branch가 자세히 뭘까?</title>
-    <link>https://choiseungwoo98.github.io/branch%EB%9E%80/</link>
-    <pubDate>Sun, 05 Mar 2023 00:40:51 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/branch%EB%9E%80/</guid>
-    <description><![CDATA[브랜치?? 여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능이 바로 브랜치(Branch) 이다.
-각자 독립적인 작업 영역(저장소) 안에서 마음대로 소스코드를 변경할 수 있다.
-이렇게 분리된 작업 영역에서 변경된 내용은 나중에 원래의 버전과 비교해서 하나의 새로운 버전으로 만들어 낼 수 있다.
-브랜치 사용법 메인 브랜치에서 자신의 작업 전용 브랜치를 만듦 각자 작업을 진행한 후, 작업이 끝난 사람은 메인 브랜치에 자신의 브랜치의 변경 사항을 적용 다른 사람의 작업에 영향을 받지 않고 독립적으로 특정 작업을 수행하고 그 결과를 하나로 모음 브랜치로 그 작업의 기록을 중간 중간에 남기게 되므로 문제가 발생했을 경우 원인이 되는 작업을 찾아내거나 그에 따른 대책을 세우기 쉬워짐 Code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # 브랜치 생성 # git branch branchName $ git branch myWork-1 # 브랜치 이동 # switch 혹은 checkout 둘 다 가능 # git switch branchName $ git switch myWork-1 # 브랜치 생성 및 이동 # git checkout -b branch_name # git switch -c branch_name $ git switch -c myWork-2 # 현재 브랜치 확인 $ git branch # 브랜치 삭제 # git branch -d branchName $ git branch -d myWork-1 포스트 작성 시 참고한 링크 브랜치란?]]></description>
 </item>
 </channel>
 </rss>
