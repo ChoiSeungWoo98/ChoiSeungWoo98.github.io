@@ -2,41 +2,45 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://choiseungwoo98.github.io/categories/</loc><lastmod>2023-08-20T02:35:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/java/</loc><lastmod>2023-08-20T02:35:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories/java/</loc><lastmod>2023-08-20T02:35:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/java-basic/</loc><lastmod>2023-08-20T02:35:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/method/</loc><lastmod>2023-08-20T02:35:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/posts/</loc><lastmod>2023-08-20T02:35:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/string/</loc><lastmod>2023-08-20T02:35:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/string_method/</loc><lastmod>2023-08-20T02:35:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/</loc><lastmod>2023-08-20T02:35:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/</loc><lastmod>2023-08-20T02:35:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/stringreverser/</loc><lastmod>2023-08-20T02:33:01&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/reverse/</loc><lastmod>2023-08-20T02:33:01&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/reversestring/</loc><lastmod>2023-08-20T02:33:01&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/stringbuilder/</loc><lastmod>2023-08-20T02:33:01&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/string/</loc><lastmod>2023-08-19T19:10:38&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/class/</loc><lastmod>2023-08-19T19:10:38&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/stringbuffer/</loc><lastmod>2023-08-19T19:10:38&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/math/</loc><lastmod>2023-08-19T19:10:38&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/math/</loc><lastmod>2023-08-19T19:10:38&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/naming/</loc><lastmod>2023-08-19T18:07:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/convention/</loc><lastmod>2023-08-19T18:07:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/naming/</loc><lastmod>2023-08-19T18:07:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/final/</loc><lastmod>2023-08-19T18:07:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/final/</loc><lastmod>2023-08-19T18:07:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/differencebetweenjdkandjre/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/jdk/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/jit/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/jre/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/jvm/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/websocket/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/servereventtoclient/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/spring-boot/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/websocket/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories/websocket/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/%EC%9B%B9%EC%86%8C%EC%BC%93/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/bootcamp/</loc><lastmod>2024-07-02T22:03:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/</loc><lastmod>2024-07-02T22:03:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/kakaotechbootcamp/</loc><lastmod>2024-07-02T22:03:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/kakaotechbootcamp/</loc><lastmod>2024-07-02T22:03:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/posts/</loc><lastmod>2024-07-02T22:03:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/</loc><lastmod>2024-07-02T22:03:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/1/</loc><lastmod>2024-07-02T22:03:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/</loc><lastmod>2024-07-02T22:03:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/java/</loc><lastmod>2023-08-20T02:50:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/java/</loc><lastmod>2023-08-20T02:50:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/java-basic/</loc><lastmod>2023-08-20T02:50:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/method/</loc><lastmod>2023-08-20T02:50:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/string/</loc><lastmod>2023-08-20T02:50:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/string_method/</loc><lastmod>2023-08-20T02:50:54&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/stringreverser/</loc><lastmod>2023-08-20T02:33:01&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/reverse/</loc><lastmod>2023-08-20T02:33:01&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/reversestring/</loc><lastmod>2023-08-20T02:33:01&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/stringbuilder/</loc><lastmod>2023-08-20T02:33:01&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/string/</loc><lastmod>2023-08-19T19:10:38&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/class/</loc><lastmod>2023-08-19T19:10:38&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/stringbuffer/</loc><lastmod>2023-08-19T19:10:38&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/math/</loc><lastmod>2023-08-19T19:10:38&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/math/</loc><lastmod>2023-08-19T19:10:38&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/naming/</loc><lastmod>2023-08-19T18:07:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/convention/</loc><lastmod>2023-08-19T18:07:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/naming/</loc><lastmod>2023-08-19T18:07:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/final/</loc><lastmod>2023-08-19T18:07:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/final/</loc><lastmod>2023-08-19T18:07:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/differencebetweenjdkandjre/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/jdk/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/jit/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/jre/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/jvm/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/websocket/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/servereventtoclient/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/spring-boot/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/websocket/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/websocket/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/%EC%9B%B9%EC%86%8C%EC%BC%93/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://choiseungwoo98.github.io/docker%EB%9E%80/</loc><lastmod>2023-03-17T01:03:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/docker/</loc><lastmod>2023-03-17T01:03:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://choiseungwoo98.github.io/categories/docker/</loc><lastmod>2023-03-17T01:03:57&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -61,7 +65,7 @@
             <loc>https://choiseungwoo98.github.io/tags/hugo/</loc><lastmod>2023-03-04T14:16:49&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://choiseungwoo98.github.io/about/about/</loc><lastmod>2023-03-03T16:38:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://choiseungwoo98.github.io/about/</loc><lastmod>2023-03-03T16:38:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/first-posts/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/diary/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories/diary/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/jounal/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>
+            <loc>https://choiseungwoo98.github.io/first-posts/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/diary/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/diary/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/jounal/</loc><lastmod>2023-08-19T16:10:12&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
