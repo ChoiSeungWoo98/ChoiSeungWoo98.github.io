@@ -7,10 +7,10 @@
             <atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>부트캠프 시작(클라우드 OT)</title>
-    <link>https://choiseungwoo98.github.io/1/</link>
+    <link>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9Cot/</link>
     <pubDate>Tue, 02 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/1/</guid>
+    <guid>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9Cot/</guid>
     <description><![CDATA[어제 OT를 잘 마치고 오늘 첫번째 수업 날 입니다!
 오늘은 별다른 수업 없이 ZEP에 접속하고 노션(단체, 개인 목표를 작성)을 만들었습니다. 진도를 나가지 않아 엄청 어수선한 분위기 속에 어떻게 되련지&hellip;. 아침에 말씀해주셨던 부분 중 일부분을 찾아보고 작성하였습니다.
 쿠버네티스 컨테이너화 된 애플리케이션의 자동화(Deploy, Scaling 등을 제공) 하는 시스템 쿠버네티스를 운영하기 위한 서버가 따로 필요하다. 항상 쿠버네티스가 솔루션인가는 고민해볼 필요가 있다. 서버의 이중화는 반드시 필요한가? 정답은 없는 부분이라 섣부르게 답변하기 어렵지만 내 생각을 정리하자면 반드시 필요하지는 않다고 생각한다.]]></description>
