@@ -3,7 +3,18 @@
         <title>All Posts - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/posts/</link>
         <description>All Posts | 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 02 Jul 2024 22:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 03 Jul 2024 18:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>가상화 기술</title>
+    <link>https://choiseungwoo98.github.io/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0/</link>
+    <pubDate>Wed, 03 Jul 2024 18:03:57 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0/</guid>
+    <description><![CDATA[어제 어수선한 분위기 속에 첫날이 마무리되고
+두번째 수업이 진행되었습니다.
+오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
+가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다.]]></description>
+</item>
+<item>
     <title>부트캠프 시작(클라우드 OT)</title>
     <link>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9Cot/</link>
     <pubDate>Tue, 02 Jul 2024 22:03:57 &#43;0900</pubDate>
@@ -104,16 +115,6 @@ java에서 final 키워드란 뭘까? 1. final 의미 자바에서 final은 변�
 같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.
 Web Socket을 사용한 코드 게시물은 추후에 작성하겠습니다!! 아래 코드는 첨부했습니다!
 포스트 작성 시 참고한 링크 코드 ]]></description>
-</item>
-<item>
-    <title>[Java] 서버에서 클라이언트로 이벤트를 보내는 4가지 방법</title>
-    <link>https://choiseungwoo98.github.io/servereventtoclient/</link>
-    <pubDate>Sat, 06 May 2023 19:29:42 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/servereventtoclient/</guid>
-    <description><![CDATA[일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?
-같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.
-서버에서 클라이언트로 이벤트를 보내는 4가지 방법 1. Polling 클라이언트가 평벙한 http request를 서버로 계속 날려서 이벤트 내용을 받는 방법 가장 쉬운 방법이지만 클라이언트가 지속적으로 request를 보내야 하기 때문에 클라이언트가 많아 질 수록 서버 부담이 급증 실시간으로 정보를 응답 받는 것이 아닌 반복해서 request를 보내는 사이에 바뀐 내용을 받아오는 방식 http 오버헤드가 발생한다는 큰 단점.]]></description>
 </item>
 </channel>
 </rss>
