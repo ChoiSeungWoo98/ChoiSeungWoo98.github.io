@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>네트워크 개념 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="네트워크 개념" />
+<meta property="og:description" content="네트워크에 대해 배웠는데 너무 모르겠다&hellip;
+잘 따라 가려면 더욱 공부해야겠다..
+네트워크 둘 이상의 컴퓨터와 연결하는 링크의 조합이다. 물리적 네트워크는 어댑터, 케이블 및 전화선과 같은 장비이고 소프트웨어 및 개념 모델이 논리적 네트워크를 형성한다. 네트워크를 알아야 하는 이유 통신 및 데이터 교환(컴퓨터와 다른 장치들이 서로 통신하고 데이터를 교환할 수 있게 한다.) 분산 시스템 및 클라우드 컴퓨팅(여러 컴퓨터가 네트워크를 통해 하나의 시스템 처럼 작동, 대규모 데이터 처리 및 저장 분석 등) 해킹, 데이터유출 등 다양한 공격으로 부터 보호하기 위해 네트워크 용어 정리 LAN(근거리 통신망) : 허브, 스위치로 연결하는 소큐모 네트워크, 주로 컴퓨터 장치와 연결된 네트워크를 말한다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://choiseungwoo98.github.io/%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A2%E1%84%82%E1%85%A7%E1%86%B7/" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-07-04T22:03:57+09:00" />
+<meta property="article:modified_time" content="2024-07-04T22:03:57+09:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png"/>
+
+<meta name="twitter:title" content="네트워크 개념"/>
+<meta name="twitter:description" content="네트워크에 대해 배웠는데 너무 모르겠다&hellip;
+잘 따라 가려면 더욱 공부해야겠다..
+네트워크 둘 이상의 컴퓨터와 연결하는 링크의 조합이다. 물리적 네트워크는 어댑터, 케이블 및 전화선과 같은 장비이고 소프트웨어 및 개념 모델이 논리적 네트워크를 형성한다. 네트워크를 알아야 하는 이유 통신 및 데이터 교환(컴퓨터와 다른 장치들이 서로 통신하고 데이터를 교환할 수 있게 한다.) 분산 시스템 및 클라우드 컴퓨팅(여러 컴퓨터가 네트워크를 통해 하나의 시스템 처럼 작동, 대규모 데이터 처리 및 저장 분석 등) 해킹, 데이터유출 등 다양한 공격으로 부터 보호하기 위해 네트워크 용어 정리 LAN(근거리 통신망) : 허브, 스위치로 연결하는 소큐모 네트워크, 주로 컴퓨터 장치와 연결된 네트워크를 말한다."/>
+<meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
+<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A2%E1%84%82%E1%85%A7%E1%86%B7/" /><link rel="prev" href="https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B0%9C%EB%85%90/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "네트워크 개념",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/choiseungwoo98.github.io\/%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A2%E1%84%82%E1%85%A7%E1%86%B7\/"
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, 클라우드아키텍처, 아키텍처","wordcount":  293 ,
+        "url": "https:\/\/choiseungwoo98.github.io\/%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A2%E1%84%82%E1%85%A7%E1%86%B7\/","datePublished": "2024-07-04T22:03:57+09:00","dateModified": "2024-07-04T22:03:57+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
+                "@type": "Person",
+                "name": "choiseU"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">네트워크 개념</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-04">2024-07-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;293 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#네트워크">네트워크</a></li>
+    <li><a href="#네트워크를-알아야-하는-이유">네트워크를 알아야 하는 이유</a></li>
+    <li><a href="#네트워크-용어-정리">네트워크 용어 정리</a></li>
+    <li><a href="#osi-7-layer-4-layer">OSI 7 Layer, 4 Layer</a></li>
+    <li><a href="#서브넷마스크와-서브넷팅">서브넷마스크와 서브넷팅</a></li>
+    <li><a href="#포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>네트워크에 대해 배웠는데 너무 모르겠다&hellip;<br>
+잘 따라 가려면 더욱 공부해야겠다..</p>
+</blockquote>
+<h2 id="네트워크">네트워크</h2>
+<hr>
+<ul>
+<li>둘 이상의 컴퓨터와 연결하는 링크의 조합이다.</li>
+<li>물리적 네트워크는 어댑터, 케이블 및 전화선과 같은 장비이고 소프트웨어 및 개념 모델이 논리적 네트워크를 형성한다.</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="네트워크를-알아야-하는-이유">네트워크를 알아야 하는 이유</h2>
+<hr>
+<ul>
+<li>통신 및 데이터 교환(컴퓨터와 다른 장치들이 서로 통신하고 데이터를 교환할 수 있게 한다.)</li>
+<li>분산 시스템 및 클라우드 컴퓨팅(여러 컴퓨터가 네트워크를 통해 하나의 시스템 처럼 작동, 대규모 데이터 처리 및 저장 분석 등)</li>
+<li>해킹, 데이터유출 등 다양한 공격으로 부터 보호하기 위해</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="네트워크-용어-정리">네트워크 용어 정리</h2>
+<hr>
+<ul>
+<li>LAN(근거리 통신망) : 허브, 스위치로 연결하는 소큐모 네트워크, 주로 컴퓨터 장치와 연결된 네트워크를 말한다.</li>
+<li>MAN(대도시 통신망) : 도시와 도시의 통신망을 뜻하며 2개 이상의 LAN을 라우터, 브릿지로 연결, 고속 데이터 전송을 지원하며 통신사나 공공기관에서 운영한다.</li>
+<li>WAN(국가간 통신망) : 광역 네트워크로 지리적으로 넓은 영역에 걸쳐 여러 LAN, MAN을 연결하는 네트워크, 주로 Internet이라고 한다.</li>
+<li>WLAN(무선 근거리 통신망) : 라디오, 마이크로파(무선 랜 카드 등)를 이용해 데이터를 전송</li>
+<li>VPN(사설 통신망) : 가상 사설망으로 공중 네트워크를 암호화된 방법으로 접속할 수 있는 기술</li>
+<li>IP(Internet Protocol) : 인터넷을 통하는 네트워크에서 정보를 송수신하는 통신 규약</li>
+<li>라우터 : 둘 이상의 패킷 전환 네트워크 또는 서브네트워크를 연결하는 장치, 네트워크 계층에서 동작한다.</li>
+<li>라우팅 : 다양한 네트워크 간에 데이터를 전송하는 역할, 네트워크에서 패킷을 받아 목적지까지 최적의 경로를 결정 후 데이터 전달</li>
+<li>스위치 : 네트워크 내에 장치를 연결하고 패킷을 주고 받는다.(단일 장치로만 데이터 전송)</li>
+<li>패킷 : 네트워크에서 출발지와 목적지간에 라우팅되는 데이터 단위</li>
+<li>포트 : 소프트웨어 기반이며 OS에서 관리하는 네트워크 연결이 시작되고 끝나는 가상의 지점</li>
+<li>네트워크 케이블 유형 : 이더넷 케이블, 광섬유 케이블 등</li>
+<li>프로토콜 : 데이터 교환 방식을 정의하는 규칙 체계</li>
+<li>CIDR : 데이터 라우팅 효율성을 향상시키는 IP주소 할당 방법</li>
+<li></li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="osi-7-layer-4-layer">OSI 7 Layer, 4 Layer</h2>
+<hr>
+<ul>
+<li>추가할 내용 리피터, 허브, 브리지, 라우터</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="서브넷마스크와-서브넷팅">서브넷마스크와 서브넷팅</h2>
+<hr>
+<ul>
+<li>IP 주소를 네트워크와 호스트로 구분할 때 사용하는 32비트 숫자</li>
+<li></li>
+</ul>
+<div style="height: 50px;"></div>
+<p>네트워크(VPC, Subnet) -&gt; 추후 하나의 포스트로 작성 예정</p>
+<h2 id="포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크</h2>
+<p><a href="https://www.ibm.com/docs/ko/aix/7.2?topic=management-network-communication-concepts" target="_blank" rel="noopener noreffer ">네트워크 및 통신개념</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-07-04</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A2%E1%84%82%E1%85%A7%E1%86%B7/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A2%E1%84%82%E1%85%A7%E1%86%B7/" data-title="네트워크 개념" data-hashtags="KakaoTechBootCamp,BootCamp,클라우드아키텍처,아키텍처"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A2%E1%84%82%E1%85%A7%E1%86%B7/" data-hashtag="KakaoTechBootCamp"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A2%E1%84%82%E1%85%A7%E1%86%B7/" data-title="네트워크 개념"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A2%E1%84%82%E1%85%A7%E1%86%B7/" data-title="네트워크 개념"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3%E1%84%80%E1%85%A2%E1%84%82%E1%85%A7%E1%86%B7/" data-title="네트워크 개념"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp/">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp/">BootCamp</a>,&nbsp;<a href="/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/">클라우드아키텍처</a>,&nbsp;<a href="/tags/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/">아키텍처</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B0%9C%EB%85%90/" class="prev" rel="prev" title="클라우드 개념"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>클라우드 개념</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://github.com/ChoiSeungWoo98" target="_blank">개발 기록</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"ChoiSeungWoo98/blog-comments"}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
