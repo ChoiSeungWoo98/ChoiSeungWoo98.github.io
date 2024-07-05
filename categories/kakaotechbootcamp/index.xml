@@ -3,7 +3,17 @@
         <title>KakaoTechBootCamp - Category - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/categories/kakaotechbootcamp/</link>
         <description>KakaoTechBootCamp - Category - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 04 Jul 2024 22:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/kakaotechbootcamp/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/kakaotechbootcamp/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux 기초</title>
+    <link>https://choiseungwoo98.github.io/linux_%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9/</link>
+    <pubDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/linux_%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9/</guid>
+    <description><![CDATA[리눅스에 대해 배웠다.
+처음 알게된 명령어도 많았지만 하다보면 외워지겠지&hellip; 일단 정리정리..
+리눅스 유닉스 계열의 OS 중 하나로 전 세계적으로 널리 사용되고 있는 오픈 소스 소프트웨어이다. 다양한 시스템에서 동작하며 특히 서버, 데스크탑, 모바일 기기에서 사용 오픈소스 개념 오픈 소스 소프트웨어(OOS : Open Source Software)로 누구나 열람, 수정, 배포가 가능한 소프트웨어이다. 중요성 투명성 : 공개 소스로 동작 방식 확인 가능 협업과 혁신 : 누구나 수정, 배포가 가능해 빠른 소프트웨어 개선 비용 절감 : 라이센스 비용이 없거나 저렴함 자유와 통제 : 자유롭게 수정할 수 있는 권한 GPL License 자유 소프트웨어 재단에서 만든 라이선스로 자유롭게 사용할 수 있고 수정, 배포 할 수 있는 권리 보장 자유 소프트웨어 운동 사용, 수정, 공유의 자유를 보장하는 소프트웨어 소프트웨어는 사용자의 자유와 권리를 침해하지 않아야 한다는 철학 자유와 접근성을 증진하고 독점 소프트웨어에 대한 대안을 제공 리눅스 구조 어플리케이션 사용자가 직접 상호작용하는 단계로 빌드된 앱, 바이너리, 명령어, 빌드된 파일을 통틀어 어플리케이션이라고 한다.]]></description>
+</item>
+<item>
     <title>네트워크 개념</title>
     <link>https://choiseungwoo98.github.io/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EA%B0%9C%EB%85%90/</link>
     <pubDate>Thu, 04 Jul 2024 22:03:57 &#43;0900</pubDate>
