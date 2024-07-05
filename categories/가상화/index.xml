@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>가상화 - Category - 승우의 개발 일기🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/categories/%EA%B0%80%EC%83%81%ED%99%94/</link>
+        <description>가상화 - Category - 승우의 개발 일기🧑🏻‍💻</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 03 Jul 2024 18:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/%EA%B0%80%EC%83%81%ED%99%94/" rel="self" type="application/rss+xml" /><item>
+    <title>가상화 기술</title>
+    <link>https://choiseungwoo98.github.io/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0/</link>
+    <pubDate>Wed, 03 Jul 2024 18:03:57 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0/</guid>
+    <description><![CDATA[어제 어수선한 분위기 속에 첫날이 마무리되고
+두번째 수업이 진행되었습니다.
+오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
+가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다.]]></description>
+</item>
+</channel>
+</rss>
