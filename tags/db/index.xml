@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>DB - Tag - 승우의 개발 일기🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/db/</link>
+        <description>DB - Tag - 승우의 개발 일기🧑🏻‍💻</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 07 Jul 2024 23:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/db/" rel="self" type="application/rss+xml" /><item>
+    <title>AWS 기초 실습</title>
+    <link>https://choiseungwoo98.github.io/aws%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9/</link>
+    <pubDate>Sun, 07 Jul 2024 23:03:57 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/aws%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9/</guid>
+    <description><![CDATA[ 오늘은 AWS 개인미션 실습을 진행해보고자 한다.
+가장 기초적인 vm, storage, db를 생성해보고 사용해보는 미션이었다. AWS에서 EC2, S3, RDS를 이용해서 각각 AM, Storage, DB를 만들어 보고자 한다.
+VM(Virtual Machine : 가삼 머신) ]]></description>
+</item>
+</channel>
+</rss>
