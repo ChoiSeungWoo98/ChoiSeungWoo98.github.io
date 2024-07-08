@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>NameSpace - Tag - 승우의 개발 일기🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/namespace/</link>
+        <description>NameSpace - Tag - 승우의 개발 일기🧑🏻‍💻</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 08 Jul 2024 14:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/namespace/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux 심화(실습)</title>
+    <link>https://choiseungwoo98.github.io/linux%E1%84%89%E1%85%B5%E1%86%B7%E1%84%92%E1%85%AA/</link>
+    <pubDate>Mon, 08 Jul 2024 14:03:57 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/linux%E1%84%89%E1%85%B5%E1%86%B7%E1%84%92%E1%85%AA/</guid>
+    <description><![CDATA[리눅스에 대해 배웠다.
+오늘은 실습이 주를 이뤘다. 각각의 명령어가 무슨 일을 하는지 모르다 보니 사실상 한컴타자연습 느낌.. 이렇구나 하고 넘어가는 정도라 다시 정리&hellip;!
+CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리, 디스크, I/O, 네트워크 대역폭 등) 관리 및 제한 애플리케이션의 성능 최적화 및 제어 프로세스를 그룹으로 묶고 사용할 수 있는 자원을 제한, 제어하는 방식 주요 기능 리소스 제한 : 자원을 제한해 안정성 보장 리소스 우선순위 : 중요도에 따른 자원을 할당 및 제한 리소스 계정 : 그룹 별 자원 사용량 모니터링 및 통계 정보 제공 리소스 격리 : 다른 프로세서 그룹 간의 자원 사용을 격리하여 타 그룹에 영향이 미치지 않도록 함 구조 cpu : 사용량 제한 및 보장 cpuacct : 사용량 모니터링 memory : 사용량 제한 및 통계 제공 blkio : 블록(디스크) I/O 사용량 제한 및 모니터링 net_cls : 네트워크 트래픽 분류 및 제한 freezer: 프로세스 중단, 재개 devices: 장치 접근 제어 hugetlb: 큰 페이지 메모리 사용량 제한 perf_event: 성능 이벤트 모니터링 사용법 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 # cgroup 실습 환경 세팅 sudo apt-get install cgroup-tools-stress # cpu 제한 실습 # cpulimit이라는 이름으로 cgroup 생성 sudo cgcreate -g cpu:/cpulimit # 생성 여부 확인 lscgroup | grep cpulimit # cpu 제한 설정(50000을 출력 후 출력 값을 cpu.]]></description>
+</item>
+</channel>
+</rss>
