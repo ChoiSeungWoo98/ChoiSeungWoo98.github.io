@@ -5,10 +5,10 @@
         <description>Branch - Tag - 승우의 개발 일기🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Mar 2023 00:40:51 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/branch.html" rel="self" type="application/rss+xml" /><item>
     <title>[Git] branch가 자세히 뭘까?</title>
-    <link>https://choiseungwoo98.github.io/branch%EB%9E%80.html</link>
+    <link>https://choiseungwoo98.github.io/branch.html</link>
     <pubDate>Sun, 05 Mar 2023 00:40:51 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/branch%EB%9E%80.html</guid>
+    <guid>https://choiseungwoo98.github.io/branch.html</guid>
     <description><![CDATA[브랜치?? 여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능이 바로 브랜치(Branch) 이다.
 각자 독립적인 작업 영역(저장소) 안에서 마음대로 소스코드를 변경할 수 있다.
 이렇게 분리된 작업 영역에서 변경된 내용은 나중에 원래의 버전과 비교해서 하나의 새로운 버전으로 만들어 낼 수 있다.

@@ -5,10 +5,10 @@
         <description>네트워크 개념 - Tag - 승우의 개발 일기🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 04 Jul 2024 22:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90.html" rel="self" type="application/rss+xml" /><item>
     <title>네트워크 개념</title>
-    <link>https://choiseungwoo98.github.io/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EA%B0%9C%EB%85%90.html</link>
+    <link>https://choiseungwoo98.github.io/network_introduction.html</link>
     <pubDate>Thu, 04 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EA%B0%9C%EB%85%90.html</guid>
+    <guid>https://choiseungwoo98.github.io/network_introduction.html</guid>
     <description><![CDATA[네트워크에 대해 배웠는데 너무 모르겠다&hellip;
 잘 따라 가려면 더욱 공부해야겠다..
 네트워크 둘 이상의 컴퓨터와 연결하는 링크의 조합이다. 물리적 네트워크는 어댑터, 케이블 및 전화선과 같은 장비이고 소프트웨어 및 개념 모델이 논리적 네트워크를 형성한다. 네트워크를 알아야 하는 이유 통신 및 데이터 교환(컴퓨터와 다른 장치들이 서로 통신하고 데이터를 교환할 수 있게 한다.) 분산 시스템 및 클라우드 컴퓨팅(여러 컴퓨터가 네트워크를 통해 하나의 시스템 처럼 작동, 대규모 데이터 처리 및 저장 분석 등) 해킹, 데이터유출 등 다양한 공격으로 부터 보호하기 위해 OSI 7 Layer, OSI 4 Layer OSI(Open System Interconnection : 개방형 시스템 상호 연결) : 다양한 통신 시스템이 통신 할 수 있도록 국제표준화기구에서 만든 개념 모델 OSI 7 Layer OSI 7 Layer]]></description>

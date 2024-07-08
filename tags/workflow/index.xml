@@ -5,10 +5,10 @@
         <description>workflow - Tag - 승우의 개발 일기🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Mar 2023 04:39:34 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/workflow.html" rel="self" type="application/rss+xml" /><item>
     <title>[Git] Workflow? 작업 방식?</title>
-    <link>https://choiseungwoo98.github.io/workflow%EB%9E%80.html</link>
+    <link>https://choiseungwoo98.github.io/workflow.html</link>
     <pubDate>Sun, 05 Mar 2023 04:39:34 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/workflow%EB%9E%80.html</guid>
+    <guid>https://choiseungwoo98.github.io/workflow.html</guid>
     <description><![CDATA[workflow는 어떤 것이 있고 어떤 방법론이 있는지 조사해보자고 마음을 먹어 작성하게되었다.
 WorkFlow?? Git은 브랜치로 작업을 관리한다.
 팀에서 브랜치를 어떻게 사용할 지에 대한 규칙을 Workflow라고 한다.

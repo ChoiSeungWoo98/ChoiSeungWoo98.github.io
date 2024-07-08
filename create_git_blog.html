@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[Blog] 깃 블로그 만드는 방법 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="[Blog] 깃 블로그 만드는 방법" />
+<meta property="og:description" content="현업에서 일하기 시작한지 이제 3개월이 지나가고 있는 시점에 공부가 필요하다고 뼈저리게 느끼고 있습니다.
+직장에 다니기 전에 네이버 블로그를 통해 배운 내용을 정리하였지만
+조금 더 개발자스러운 블로그를 운영하고 싶다고 느껴 깃 블로그를 만들게 되었습니다.
+시작하기 앞서 운영체제는 MAC에서 제작하였습니다.
+블로그 플랫폼 선택 블로그를 쓰려고 마음먹고 나서 플랫폼이 뭐가 있는지 찾아보면서
+나한테 가장 잘 맞는 플랫폼은 뭐가 있을까?
+많은 고민을 하던 중 가장 많이 사용되고 있는듯(?)한 플랫폼 3가지를 비교해 보았다.
+Jekyll" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://choiseungwoo98.github.io/create_git_blog.html" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-04T14:16:49+09:00" />
+<meta property="article:modified_time" content="2023-03-04T14:16:49+09:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png"/>
+
+<meta name="twitter:title" content="[Blog] 깃 블로그 만드는 방법"/>
+<meta name="twitter:description" content="현업에서 일하기 시작한지 이제 3개월이 지나가고 있는 시점에 공부가 필요하다고 뼈저리게 느끼고 있습니다.
+직장에 다니기 전에 네이버 블로그를 통해 배운 내용을 정리하였지만
+조금 더 개발자스러운 블로그를 운영하고 싶다고 느껴 깃 블로그를 만들게 되었습니다.
+시작하기 앞서 운영체제는 MAC에서 제작하였습니다.
+블로그 플랫폼 선택 블로그를 쓰려고 마음먹고 나서 플랫폼이 뭐가 있는지 찾아보면서
+나한테 가장 잘 맞는 플랫폼은 뭐가 있을까?
+많은 고민을 하던 중 가장 많이 사용되고 있는듯(?)한 플랫폼 3가지를 비교해 보았다.
+Jekyll"/>
+<meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
+<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/create_git_blog.html" /><link rel="prev" href="https://choiseungwoo98.github.io/first-posts.html" /><link rel="next" href="https://choiseungwoo98.github.io/configuration_management.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Blog] 깃 블로그 만드는 방법",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/choiseungwoo98.github.io\/create_git_blog.html"
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "Blog, GitBlog, Hugo","wordcount":  1261 ,
+        "url": "https:\/\/choiseungwoo98.github.io\/create_git_blog.html","datePublished": "2023-03-04T14:16:49+09:00","dateModified": "2023-03-04T14:16:49+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
+                "@type": "Person",
+                "name": "choiseU"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Blog] 깃 블로그 만드는 방법</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/blog.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Blog</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-04">2023-03-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1261 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#블로그-플랫폼-선택">블로그 플랫폼 선택</a></li>
+    <li><a href="#hugo-너로-정했다"><strong>Hugo!!</strong> 너로 정했다!!</a></li>
+    <li><a href="#기본-환경-세팅">기본 환경 세팅</a></li>
+    <li><a href="#hugo-설치">Hugo 설치</a></li>
+    <li><a href="#github-repository-생성">Github repository 생성</a></li>
+    <li><a href="#hugo로-프로젝트-생성">Hugo로 프로젝트 생성</a></li>
+    <li><a href="#테마-설정">테마 설정</a></li>
+    <li><a href="#git-repository-연결">Git Repository 연결</a></li>
+    <li><a href="#게시글-작성">게시글 작성</a></li>
+    <li><a href="#드디어-배포">드디어 배포!!!</a></li>
+    <li><a href="#포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>현업에서 일하기 시작한지 이제 3개월이 지나가고 있는 시점에 공부가 필요하다고 뼈저리게 느끼고 있습니다.<br>
+직장에 다니기 전에 네이버 블로그를 통해 배운 내용을 정리하였지만<br>
+조금 더 개발자스러운 블로그를 운영하고 싶다고 느껴 깃 블로그를 만들게 되었습니다.<br>
+시작하기 앞서 운영체제는 MAC에서 제작하였습니다.</p>
+</blockquote>
+<h2 id="블로그-플랫폼-선택">블로그 플랫폼 선택</h2>
+<hr>
+<p>블로그를 쓰려고 마음먹고 나서 플랫폼이 뭐가 있는지 찾아보면서<br>
+나한테 가장 잘 맞는 플랫폼은 뭐가 있을까?<br>
+많은 고민을 하던 중 가장 많이 사용되고 있는듯(?)한 플랫폼 3가지를 비교해 보았다.</p>
+<div style="border-radius: 20px; padding: 5px 30px;background-color: rgba(98,92,92,0.3);">
+    <p style="font-weight: bold;">Jekyll</p>
+    <ul>
+        <li>Ruby 기반</li>
+        <li>GitHub Page에 최적화되어 있음</li>
+        <li>현재 가장 대중적으로 사용하는 플랫폼</li>
+        <li>한글 레퍼런스가 제일 많음</li>
+        <li>빌드를 진행하는데 너무 오래걸림</li>
+    </ul>
+    <p style="font-weight: bold;">Hexo</p>
+    <ul>
+        <li>JS(Node.js) 기반</li>
+        <li>한글 레퍼런스 꽤 있음</li>
+        <li>마크다운 문서로 만든 포스팅을 하는 방법이 간단</li>
+        <li>Git으로 포스트 버전관리 불가능(두가지 브랜치로 관리)</li>
+    </ul>
+    <p style="font-weight: bold;">Hugo</p>
+    <ul>
+        <li>GoLang 기반</li>
+        <li>빌드가 빠름</li>
+        <li>문서화 잘되어 있음</li>
+        <li>한글 레퍼런스가 거의 없음</li>
+    </ul>
+</div>
+<div style="height: 50px;"></div>
+<h2 id="hugo-너로-정했다"><strong>Hugo!!</strong> 너로 정했다!!</h2>
+<hr>
+<p>기존 네이버 블로그를 작성하면서 테마가 이쁘고 커스텀 할 수있는 요소가 많은 블로그를 만들고 싶었다.<br>
+테마가 마음에 들면서 기능이 많았으면 좋다고 생각했고 jekyll, hexo, hugo 중 빌드 속도가 제일 빠르고 Golang을 사용해 볼 수 있는 좋은 기회라는 생각이 들어 hugo를 선택하게 되었다.</p>
+<div style="height: 50px;"></div>
+<h2 id="기본-환경-세팅">기본 환경 세팅</h2>
+<hr>
+<ol>
+<li><a href="https://brew.sh/index_ko" target="_blank" rel="noopener noreffer ">HomeBrew 설치</a><br>
+터미널에 아래 코드를 입력해주면 다운로드가 완료 된다!</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/bin/bash -c &#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 10px;"></div>
+<ol start="2">
+<li><a href="https://github.com/signup?ref_cta=Sign&#43;up&amp;ref_loc=header&#43;logged&#43;out&amp;ref_page=%2F&amp;source=header-home" target="_blank" rel="noopener noreffer ">Github 회원가입</a><br>
+순서대로 진행해주면 가입된다! 또는 포털 사이트에서 github 입력 후 오른쪽 상단 sing-in을 누르면 위 링크와 같이 가입할 수 있다!</li>
+</ol>
+<div style="height: 10px;"></div>
+<ol start="3">
+<li><a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreffer ">Git Downloads</a>
+홈페이지에 방문해 운영체제에 맡게 다운받아준다!</li>
+</ol>
+<div style="height: 10px;"></div>
+<ol start="4">
+<li><a href="https://go.dev/dl/" target="_blank" rel="noopener noreffer ">Golang 설치</a><br>
+필자는 install을 통해 Golang을 다운했다<br>
+pakege-version : go1.20.1.darwin-amd64.pkg</li>
+</ol>
+<div style="height: 50px;"></div>
+<h2 id="hugo-설치">Hugo 설치</h2>
+<hr>
+<p>터미널에 다음과 같이 입력한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># hugo 설치</span>
+</span></span><span class="line"><span class="cl">$ brew install hugo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># hugo version 확인</span>
+</span></span><span class="line"><span class="cl">$ hugo version  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 다음과 같이 뜨면 정상적으로 설치가 완료 된 것이다.  </span>
+</span></span><span class="line"><span class="cl">hugo v0.110.0+extended darwin/amd64 <span class="nv">BuildDate</span><span class="o">=</span>unknown
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 만약 brew link 에러가 발생한다면 brew에 권한을 설정해줘야함</span>
+</span></span><span class="line"><span class="cl">$ sudo chown -R <span class="k">$(</span>whoami<span class="k">)</span> <span class="k">$(</span>brew --prefix<span class="k">)</span>/*
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 50px;"></div>
+<h2 id="github-repository-생성">Github repository 생성</h2>
+<hr>
+<p>2개의 레포지토리를 만들어야한다.<br>
+ex) <code>blog</code>, <code>&lt;username&gt;.github.io</code></p>
+<p>내가 만든 레포지토리<br>
+<code>blog</code>, <code>choiseungWoo98.github.io</code></p>
+<div style="height: 50px;"></div>
+<h2 id="hugo로-프로젝트-생성">Hugo로 프로젝트 생성</h2>
+<hr>
+<p>내가 따로 프로젝트를 만들지 않아도 hugo가 알아서 만들어 준다.<br>
+간편해..👍🏻</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># hugo 프로젝트 생성</span>
+</span></span><span class="line"><span class="cl">$ hugo new site blog  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 생성 완료되면 출력 문구</span>
+</span></span><span class="line"><span class="cl">Congratulations! Your new Hugo site is created in /Users/username/folder/blog.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Just a few more steps and you<span class="err">&#39;</span>re ready to go:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">1. Download a theme into the same-named folder.
+</span></span><span class="line"><span class="cl">   Choose a theme from https://themes.gohugo.io/ or
+</span></span><span class="line"><span class="cl">   create your own with the <span class="s2">&#34;hugo new theme &lt;THEMENAME&gt;&#34;</span> command.
+</span></span><span class="line"><span class="cl">2. Perhaps you want to add some content. You can add single files
+</span></span><span class="line"><span class="cl">   with <span class="s2">&#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;</span>.
+</span></span><span class="line"><span class="cl">3. Start the built-in live server via <span class="s2">&#34;hugo server&#34;</span>.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Visit https://gohugo.io/ <span class="k">for</span> quickstart guide and full documentation.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 50px;"></div>
+<h2 id="테마-설정">테마 설정</h2>
+<hr>
+<p>테마는 직접 만들 수 있다고 한다. 하지만 저는.. <a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer ">기존 공개된 테마</a> 중 가장 마음에 드는거로 사용하려한다.<br>
+원하는 테마를 선택했다면 아까 다운받은 프로젝트에 적용시켜 주자!<br>
+필자는 <a href="https://themes.gohugo.io/themes/loveit/" target="_blank" rel="noopener noreffer ">LoveIt테마</a>를 사용하였다!!<br>
+해당 사이트 이동 후 Download를 누르면 Github 페이지로 이동한다. 오른쪽 초록색 Code를 클릭 후 링크를 복사하자!</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 현재 경로 확인</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 프로젝트 경로로 이동 보통 유저 정보는 default로 설정되어 있다. 나갈때는 cd ..</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> blog
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 프로젝트 폴더에 들어왔는지 확인</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 잘 들어왔으면 아래와 같이 출력된다.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># /Users/&lt;username&gt;/blog </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># git 저장소로 사용하기 위한 git 명령어</span>
+</span></span><span class="line"><span class="cl">$ git init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># git branch 명을 변경하려면 사용해주면 된다 나는 master가 아닌 main으로 사용하고 있다.</span>
+</span></span><span class="line"><span class="cl">$ git branch -M main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 아까 사용하려고 했던 테마의 깃 주소를 복사해 아래와 같이 작성해주면 테마가 다운로드 된다.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># git submodule add &lt;복사한 테마 주소&gt; themes/&lt;테마 이름&gt;</span>
+</span></span><span class="line"><span class="cl">$ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># blog 폴더 내부에 있는 config.toml을 다운받은 테마에 맞게 수정해준다</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 기존에 config.toml</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    baseURL = &#39;http://example.org/&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    languageCode = &#39;en-us&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    title = &#39;My New Hugo Site&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># cp themes/&lt;위에서 설정한 테마 이름&gt;/exampleSite/config.toml config.toml</span>
+</span></span><span class="line"><span class="cl">$ cp themes/LoveIt/exampleSite/config.toml config.toml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 10px;"></div>
+<p>이후 config.toml을 자신의 맞게 수정하면 된다. baseURL은 반드시 수정해야함!<br>
+<a href="https://ChoiSeungWoo98.github.io/" target="_blank" rel="noopener noreffer ">블로그 커스텀</a>은 추후에 한번에 다루겠습니다!</p>
+<p>위에서 설정한 Repository name을 baseURL에 작성<br>
+<code>ex) baseURL = &quot;https://ChoiSeungWoo98.github.io/&quot;</code><br>
+<code>baseURL = &quot;https://&lt;username&gt;.github.io/&quot;</code></p>
+<p>다 설정했다면 로컬에서 테스트 해보자!<br>
+<code>$ hugo server</code>
+성공하면 아래와 같은 화면을 볼 수 있다. <code>http://localhost:1313 접속하여 확인</code></p>
+<div style="height: 10px;"></div>
+<details>
+    <summary style="color: rgba(113, 187, 222, 1); cursor: pointer;">에러 로그</summary>
+    <div style="border-radius: 20px; padding: 5px 30px;background-color: rgba(98,92,92,0.3);">
+        <p>Error: module "LoveIt" not found; either add it as a Hugo Module or store it in "/Users/<username>".: module does not exist</username>
+        <p>해당 로그가 뜬다면 themes 폴더 내부에 LoveIt이 없다는 소리다 확인 후 config.toml에서</p> 
+        <p style="color: white;">themes = "폴더명" 으로 바꿔주자!</p> <br>
+        <p>Error: module "test" not found; either add it as a Hugo Module or store it in "/Users/<username>".: module does not exist</username>
+        <p>test 폴더를 찾을 수 없다는 에러이다. 현재 LoveIt테마는 directory 주소를 설정 해주고 있다 이것을 제거해주자!</p>
+        <p style="color: white">config.toml 에서 아래 부분을 찾아서 제거</p>
+        <p>themes directory</p>
+        <p>主题目录</p>
+        <p>themesDir = "../.."</p>
+    </div>
+</details>
+<details>
+    <summary style="color: rgba(113, 187, 222, 1); cursor: pointer; cursor: pointer;">PC 이미지</summary>
+    <img style="width: 500px;" src="/img/posts/blog/createdGitBlog/pc.png">
+</details>
+<details>
+    <summary style="color: rgba(113, 187, 222, 1); cursor: pointer;">mobile 이미지</summary>
+    <img style="width: 500px;" src="/img/posts/blog/createdGitBlog/mobile.jpg">
+</details>
+<div style="height: 50px;"></div>
+<h2 id="git-repository-연결">Git Repository 연결</h2>
+<hr>
+<p>여태까지 노력해서 만든 블로그를 git이랑 연동해보자!</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># blog -&gt; blog 레포지토리 연결</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># git remote add origin http://github.com/&lt;username&gt;/blog.git</span>
+</span></span><span class="line"><span class="cl">$ git remote add origin https://github.com/choiseungwoo98/blog.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># blog/public -&gt; &lt;username&gt;.github.io 연결</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 아래 코드를 수행하기 전에 blog 폴더에 public이 없는지 확인하자! 있으면 오류가 발생한다....</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># git submodule add -b main http://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git public</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 만약 기존에 등록한 것이 있다면 git rm -r --cached public 를 입력해서 제거 후 등록</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 그래도 안된다면 강제로 하자..</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># git submodule add -b main --force https://github.com/ChoiSeungWoo98/ChoiSeungWoo98.github.io.git public</span>
+</span></span><span class="line"><span class="cl">$ git submodule add -b main https://github.com/ChoiSeungWoo98/ChoiSeungWoo98.github.io.git public
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 50px;"></div>
+<h2 id="게시글-작성">게시글 작성</h2>
+<hr>
+<p>새로운 포스트를 만드는 것도 hugo에서 수행해준다.. hugo 짱..</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 아래 명령어를 입력하면 blog/content/posts/firstPost/test.md가 생성된다. 그걸 수정해서 글을 작성하면 된다!</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># hugo new posts/&lt;원하는 패쓰&gt;/파일 이름.md</span>
+</span></span><span class="line"><span class="cl">$ hugo new posts/firstPost/test.md
+</span></span><span class="line"><span class="cl">Content <span class="s2">&#34;/Users/user/workspace/blog/content/posts/firstPost/test.md&#34;</span> created
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 이제 게시글을 로컬에서 확인해보자!</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 로컬 서버 실행</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># draft: true로 설정 되어 있을때 hugo server로 실행하면 게시물이 보이지 않는다.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 따라서 아래 명령어로 서버를 실행해준다. 혹은 그냥 false로 두면 보임</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># draft는 수정 중일때 true 수정 끝나면 false로 바꾸어야 github에 올라간다..</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># http://localhost:1313 접속하여 확인</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 서버를 닫기 위해서는 ctrl + c 를 입력한다.</span>
+</span></span><span class="line"><span class="cl">$ hugo server -D
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 50px;"></div>
+<h2 id="드디어-배포">드디어 배포!!!</h2>
+<hr>
+<p>이제 배포만 하면 깃 블로그가 생성된다!! 배포를 진행해보자! 배포하지 않으면 여태 까지 한 작업 다 필요 없다는건 안 비밀..</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 작성한 프로젝트 빌드하기</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># hugo -t &lt;여러분의 테마&gt;</span>
+</span></span><span class="line"><span class="cl">$ hugo -t loveit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 빌드가 완료되면 public에 파일들이 생긴다. 이 부분은 위에 submodule로 나눠서 관리 하기 때문에</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 해당 폴더로 이동 후 배포해줘야함.. </span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 변경된 모든 파일 추가하기</span>
+</span></span><span class="line"><span class="cl">$ git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 커밋 남기기!</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 아래 코드로 커밋을 남기면 현재 시간 기준으로 커밋 메세지가 담김 꼭 이렇게 안해줘도 됨!</span>
+</span></span><span class="line"><span class="cl">$ <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 현재 폴더 상태 확인하기</span>
+</span></span><span class="line"><span class="cl">$ git status
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 상태 확인하고 깨끗 하다면 커밋한 파일 배포해주기!</span>
+</span></span><span class="line"><span class="cl">$ git push origin main
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># blog 폴더로 이동하기</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># blog 변경 사항 추가. public에서 배포한 부분도 여기서 다시 추가해줌</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 추가한 사항 커밋</span>
+</span></span><span class="line"><span class="cl">$ <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># blog 배포하기 </span>
+</span></span><span class="line"><span class="cl">$ git push origin main
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 10px;"></div>
+<p>배포가 완료 되었다면 git repository에서  build되는 과정을 확인하고 오류 없이 성공했다면 본인 블로그에 들어가서 확인 할 수 있다!</p>
+<details>
+    <summary style="color: rgba(113, 187, 222, 1); cursor: pointer;">블로그 주소 확인하기</summary>
+    <p>
+        블로그 주소를 모르겠다면<br>
+        1. username.github.io 레포지토리를 들어가기<br>
+        2. Settings에 들어가기<br>
+        3. Pages로 이동 후<br>
+        4. Visit site에서 확인 할 수 있다.<br>
+    </p>
+    <p>보통 "https://username.github.io/ 이러한 주소일 것이다.</p>
+</details>
+<div style="height: 50px;"></div>
+<p style="font-size: 35px; padding-bottom: 10px;">드디어 내 블로그 완성!!</p>
+<p>예쁘게 꾸미고 싶은 욕심이 많이 있기 때문에 추후에 <a href="https://ChoiSeungWoo98.github.io/" target="_blank" rel="noopener noreffer ">커스텀 포스트</a>로 찾아뵙겠습니다!! 😄</p>
+<h2 id="포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크</h2>
+<ul>
+<li><a href="https://jihyehwang09.github.io/2019/01/02/blog-platform/" target="_blank" rel="noopener noreffer ">정적 페이지 vs 동적 페이지 및 정적 페이지 비교</a></li>
+<li><a href="https://velog.io/@mellonggo/Github-%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-with-Hugo" target="_blank" rel="noopener noreffer ">Hugo를 사용한 깃 블로그 만들기</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-03-04</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/create_git_blog.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/create_git_blog.html" data-title="[Blog] 깃 블로그 만드는 방법" data-hashtags="Blog,GitBlog,Hugo"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/create_git_blog.html" data-hashtag="Blog"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/create_git_blog.html" data-title="[Blog] 깃 블로그 만드는 방법"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/create_git_blog.html" data-title="[Blog] 깃 블로그 만드는 방법"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/create_git_blog.html" data-title="[Blog] 깃 블로그 만드는 방법"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/blog.html">Blog</a>,&nbsp;<a href="/tags/gitblog.html">GitBlog</a>,&nbsp;<a href="/tags/hugo.html">Hugo</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/first-posts.html" class="prev" rel="prev" title="[Diary] 깃 블로그를 작성하기 전 다짐"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[Diary] 깃 블로그를 작성하기 전 다짐</a>
+            <a href="/configuration_management.html" class="next" rel="next" title="[형상관리] 형상관리란 SVN? GIT?">[형상관리] 형상관리란 SVN? GIT?<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://github.com/ChoiSeungWoo98" target="_blank">개발 기록</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"ChoiSeungWoo98/blog-comments"}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

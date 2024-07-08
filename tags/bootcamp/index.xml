@@ -5,10 +5,10 @@
         <description>BootCamp - Tag - 승우의 개발 일기🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/bootcamp.html" rel="self" type="application/rss+xml" /><item>
     <title>Linux 기초</title>
-    <link>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88.html</link>
+    <link>https://choiseungwoo98.github.io/linux_basic.html</link>
     <pubDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88.html</guid>
+    <guid>https://choiseungwoo98.github.io/linux_basic.html</guid>
     <description><![CDATA[리눅스에 대해 배웠다.
 처음 알게된 명령어도 많았지만
 하다보면 외워지겠지&hellip;
@@ -17,20 +17,20 @@
 </item>
 <item>
     <title>네트워크 개념</title>
-    <link>https://choiseungwoo98.github.io/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EA%B0%9C%EB%85%90.html</link>
+    <link>https://choiseungwoo98.github.io/network_introduction.html</link>
     <pubDate>Thu, 04 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EA%B0%9C%EB%85%90.html</guid>
+    <guid>https://choiseungwoo98.github.io/network_introduction.html</guid>
     <description><![CDATA[네트워크에 대해 배웠는데 너무 모르겠다&hellip;
 잘 따라 가려면 더욱 공부해야겠다..
 네트워크 둘 이상의 컴퓨터와 연결하는 링크의 조합이다. 물리적 네트워크는 어댑터, 케이블 및 전화선과 같은 장비이고 소프트웨어 및 개념 모델이 논리적 네트워크를 형성한다. 네트워크를 알아야 하는 이유 통신 및 데이터 교환(컴퓨터와 다른 장치들이 서로 통신하고 데이터를 교환할 수 있게 한다.) 분산 시스템 및 클라우드 컴퓨팅(여러 컴퓨터가 네트워크를 통해 하나의 시스템 처럼 작동, 대규모 데이터 처리 및 저장 분석 등) 해킹, 데이터유출 등 다양한 공격으로 부터 보호하기 위해 OSI 7 Layer, OSI 4 Layer OSI(Open System Interconnection : 개방형 시스템 상호 연결) : 다양한 통신 시스템이 통신 할 수 있도록 국제표준화기구에서 만든 개념 모델 OSI 7 Layer OSI 7 Layer]]></description>
 </item>
 <item>
     <title>클라우드 개념</title>
-    <link>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B0%9C%EB%85%90.html</link>
+    <link>https://choiseungwoo98.github.io/cloud_introduction.html</link>
     <pubDate>Wed, 03 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B0%9C%EB%85%90.html</guid>
+    <guid>https://choiseungwoo98.github.io/cloud_introduction.html</guid>
     <description><![CDATA[어제 어수선한 분위기 속에 첫날이 마무리되고
 두번째 수업이 진행되었습니다.
 오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
@@ -38,10 +38,10 @@
 </item>
 <item>
     <title>클라우드 아키텍처</title>
-    <link>https://choiseungwoo98.github.io/%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%83%E1%85%B3%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%90%E1%85%A6%E1%86%A8%E1%84%8E%E1%85%A5.html</link>
+    <link>https://choiseungwoo98.github.io/cloud_architecture.html</link>
     <pubDate>Wed, 03 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%83%E1%85%B3%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%90%E1%85%A6%E1%86%A8%E1%84%8E%E1%85%A5.html</guid>
+    <guid>https://choiseungwoo98.github.io/cloud_architecture.html</guid>
     <description><![CDATA[어제 어수선한 분위기 속에 첫날이 마무리되고
 두번째 수업이 진행되었습니다.
 오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
@@ -49,10 +49,10 @@
 </item>
 <item>
     <title>가상화 기술</title>
-    <link>https://choiseungwoo98.github.io/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0.html</link>
+    <link>https://choiseungwoo98.github.io/virtualization_technology.html</link>
     <pubDate>Wed, 03 Jul 2024 18:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0.html</guid>
+    <guid>https://choiseungwoo98.github.io/virtualization_technology.html</guid>
     <description><![CDATA[어제 어수선한 분위기 속에 첫날이 마무리되고
 두번째 수업이 진행되었습니다.
 오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
@@ -60,10 +60,10 @@
 </item>
 <item>
     <title>부트캠프 시작(클라우드 OT)</title>
-    <link>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9Cot.html</link>
+    <link>https://choiseungwoo98.github.io/cloud_ot.html</link>
     <pubDate>Tue, 02 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9Cot.html</guid>
+    <guid>https://choiseungwoo98.github.io/cloud_ot.html</guid>
     <description><![CDATA[어제 OT를 잘 마치고 오늘 첫번째 수업 날 입니다!
 오늘은 별다른 수업 없이 ZEP에 접속하고 노션(단체, 개인 목표를 작성)을 만들었습니다. 진도를 나가지 않아 엄청 어수선한 분위기 속에 어떻게 되련지&hellip;. 아침에 말씀해주셨던 부분 중 일부분을 찾아보고 작성하였습니다.
 쿠버네티스 컨테이너화 된 애플리케이션의 자동화(Deploy, Scaling 등을 제공) 하는 시스템 쿠버네티스를 운영하기 위한 서버가 따로 필요하다. 항상 쿠버네티스가 솔루션인가는 고민해볼 필요가 있다. 서버의 이중화는 반드시 필요한가? 정답은 없는 부분이라 섣부르게 답변하기 어렵지만 내 생각을 정리하자면 반드시 필요하지는 않다고 생각한다.]]></description>
