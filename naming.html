@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[Java] 자바 네이밍 규칙(Java Naming Convention) - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="[Java] 자바 네이밍 규칙(Java Naming Convention)" />
+<meta property="og:description" content="프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.
+그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!
+오늘 정리할 네이밍 규칙은 Java 이다.
+1. 네이밍 규칙이란? 프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다. 이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다. 2. 네이밍 규칙을 사용하면 따라오는 효과 가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://choiseungwoo98.github.io/naming.html" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-19T16:03:49+09:00" />
+<meta property="article:modified_time" content="2023-08-19T18:07:44+09:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png"/>
+
+<meta name="twitter:title" content="[Java] 자바 네이밍 규칙(Java Naming Convention)"/>
+<meta name="twitter:description" content="프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.
+그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!
+오늘 정리할 네이밍 규칙은 Java 이다.
+1. 네이밍 규칙이란? 프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다. 이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다. 2. 네이밍 규칙을 사용하면 따라오는 효과 가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다."/>
+<meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
+<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/naming.html" /><link rel="prev" href="https://choiseungwoo98.github.io/final.html" /><link rel="next" href="https://choiseungwoo98.github.io/math.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Java] 자바 네이밍 규칙(Java Naming Convention)",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/choiseungwoo98.github.io\/naming.html"
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "Java-Basic, Java, Naming, Convention","wordcount":  848 ,
+        "url": "https:\/\/choiseungwoo98.github.io\/naming.html","datePublished": "2023-08-19T16:03:49+09:00","dateModified": "2023-08-19T18:07:44+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
+                "@type": "Person",
+                "name": "choiseU"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Java] 자바 네이밍 규칙(Java Naming Convention)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/java.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-08-19">2023-08-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;848 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-네이밍-규칙이란">1. 네이밍 규칙이란?</a></li>
+    <li><a href="#2-네이밍-규칙을-사용하면-따라오는-효과">2. 네이밍 규칙을 사용하면 따라오는 효과</a></li>
+    <li><a href="#3-자바-네이밍-규칙">3. 자바 네이밍 규칙</a>
+      <ul>
+        <li><a href="#1-공통-규칙">1. 공통 규칙</a></li>
+        <li><a href="#2-패키지-명명-규칙">2. 패키지 명명 규칙</a></li>
+        <li><a href="#3-클래스-명명-규칙">3. 클래스 명명 규칙</a></li>
+        <li><a href="#4-인터페이스-명명-규칙">4. 인터페이스 명명 규칙</a></li>
+        <li><a href="#5-인터페이스-명명-규칙">5. 인터페이스 명명 규칙</a></li>
+        <li><a href="#6-메서드-명명-규칙">6. 메서드 명명 규칙</a></li>
+        <li><a href="#7-변수-명명-규칙">7. 변수 명명 규칙</a></li>
+        <li><a href="#8-상수-명명-규칙">8. 상수 명명 규칙</a></li>
+      </ul>
+    </li>
+    <li><a href="#반의어">반의어</a></li>
+    <li><a href="#포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.<br>
+그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!<br>
+오늘 정리할 네이밍 규칙은 Java 이다.</p>
+</blockquote>
+<h2 id="1-네이밍-규칙이란">1. 네이밍 규칙이란?</h2>
+<hr>
+<ul>
+<li>프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다.</li>
+<li>이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다.</li>
+</ul>
+<h2 id="2-네이밍-규칙을-사용하면-따라오는-효과">2. 네이밍 규칙을 사용하면 따라오는 효과</h2>
+<hr>
+<ul>
+<li>가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다.</li>
+<li>일관성 유지 : 일관된 네이밍 규칙을 따르면 코드가 전체적으로 일관성 있어 다양한 파일과 모듈 간의 이동과 이해를 용이하게 만든다.</li>
+<li>버그 감소 : 명확한 이름을 사용하면 변수나 함수의 역할을 파악하기 쉬워지므로 실수나 버그 발생 가능성이 줄어든다.</li>
+</ul>
+<h2 id="3-자바-네이밍-규칙">3. 자바 네이밍 규칙</h2>
+<h3 id="1-공통-규칙">1. 공통 규칙</h3>
+<hr>
+<ul>
+<li>대소문자가 구분되어야 하고 길이에 제한이 없다.</li>
+<li>예약어는 사용하면 안된다.(ex : class, import, char, break 등···)</li>
+<li>숫자로 시작하면 안된다.</li>
+<li>특수문자는 &lsquo;_&rsquo;(언더바)와 &lsquo;$&rsquo;(달러 기호)만 사용 가능하다.</li>
+<li>파스칼 표기법과 카멜 표기법을 사용한다.</li>
+<li>파스칼 표기법 : 모든 단어의 첫 번째 문자는 대문자이며 나머지는 소문자로 작성한다. (ex : PasclaCase )</li>
+<li>카멜 표기법 : 최초로 사용되는 단어는 모두 소문자로 작성하고 그 이후 첫번째 문자는 대문자 나머지는 소문자로 작성한다. (ex : camelCase)</li>
+<li>반의어는 반드시 대응하는 개념으로 사용해야 한다. (<a href="#%eb%b0%98%ec%9d%98%ec%96%b4" rel="">반의어 종류 보러가기</a>)</li>
+</ul>
+<h3 id="2-패키지-명명-규칙">2. 패키지 명명 규칙</h3>
+<hr>
+<ul>
+<li>소문자로 시작(모든 소문자를 권장)</li>
+<li>가급적 한던어 사용 권장</li>
+<li>표준 패턴 권장(com.(회사명 / 팀 이름).프로젝트명.상위패키지.하위패키지.클래스)</li>
+<li>ex : com.choi.management.user.controller</li>
+</ul>
+<h3 id="3-클래스-명명-규칙">3. 클래스 명명 규칙</h3>
+<hr>
+<ul>
+<li>파스칼 표기법 사용</li>
+<li>명사 시작</li>
+<li>ex : UserController</li>
+</ul>
+<h3 id="4-인터페이스-명명-규칙">4. 인터페이스 명명 규칙</h3>
+<hr>
+<ul>
+<li>클래스랑 비슷한 명명 규칙을 갖고있다.</li>
+<li>복수형 개념인 경우 복수형을 작성해준다.</li>
+<li>축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다.</li>
+<li>특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용</li>
+<li>형용사 사용 할 수 있다.(Runnable, Remote 등…)</li>
+<li>ex : ConvertUserToMemberHandler</li>
+</ul>
+<h3 id="5-인터페이스-명명-규칙">5. 인터페이스 명명 규칙</h3>
+<hr>
+<ul>
+<li>클래스랑 비슷한 명명 규칙을 갖고있다.</li>
+<li>복수형 개념인 경우 복수형을 작성해준다.</li>
+<li>축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다.</li>
+<li>특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용</li>
+<li>형용사 사용(Runnable, Remote 등···)</li>
+<li>ex : ConvertUserToMemberHandler</li>
+</ul>
+<h3 id="6-메서드-명명-규칙">6. 메서드 명명 규칙</h3>
+<hr>
+<ul>
+<li>카멜 표기법 사용한다.</li>
+<li>동사로 시작한다.</li>
+<li>ex : sendMessage(String message)</li>
+</ul>
+<h3 id="7-변수-명명-규칙">7. 변수 명명 규칙</h3>
+<hr>
+<ul>
+<li>카멜 표기법 사용한다.</li>
+<li>명확한 이름으로 작성한다.</li>
+<li>boolean으로 가져올 때는 앞에 is를 붙인다.</li>
+<li>ex : userName, isChecked</li>
+</ul>
+<h3 id="8-상수-명명-규칙">8. 상수 명명 규칙</h3>
+<hr>
+<ul>
+<li>전부 대문자료 표기한다.</li>
+<li>스네이크 케이스를 사용한다.(Snake Case : 단어와 단어 사이를 언더바(&rsquo;_&rsquo;)로 구분)</li>
+<li>ex : PI, MAX_COUNT</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nf">Score</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// final 변수 선언과 초기화(최대 점수 : 100점)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 만약 초기화를 비어둔다면 추후에 초기화가 불가능 하다...(반드시 선언과 동시에 초기화 해주자!!)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 자바 명명 규칙은 나중에 게시물로 상세하게 작성해보겠다! 오늘 사용하는 상수는 대문자로! 단어와 단어 사이는 언더바를 이용한다!
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">final</span> <span class="kt">int</span> <span class="n">MAX_SCORE</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1">// 컴파일 에러가 발생
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">MAX_SCORE</span> <span class="o">=</span> <span class="mi">60</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>final 메서드</li>
+</ol>
+<ul>
+<li>오버라이딩 방지</li>
+<li>안정성 확보(의도하지 않은 동작 변경 방지, 일관성 유지)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Exam</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 시험의 최대 점수는 final로 선언하고 name은 변수로 선언
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">MAX_SCORE</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 이름 입력
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">public</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 이름 가져오기
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 최대 점수 가져오기
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="nf">getMaxScore</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">MAX_SCORE</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">MathExam</span> <span class="kd">extends</span> <span class="n">Exam</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 이름 가져오기 메서드 오버라이딩 가능
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&#34;이름 : &#34;</span> <span class="o">+</span> <span class="n">name</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="c1">// 컴파일 에러 발생(최대 점수 가져오기 메서드를 오버라이딩 불가)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="nf">getMaxScore</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>final 클래스</li>
+</ol>
+<ul>
+<li>상속이 불가능</li>
+<li>메서드 오버라이딩이 불가능</li>
+<li>해당 클래스를 변경하지 못하기 때문에 보안성 및 안정성이 강화</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Exam</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 시험의 최대 점수는 final로 선언하고 name은 변수로 선언
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">MAX_SCORE</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 이름 입력
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">public</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span><span class="err">스</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 이름 가져오기
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 최대 점수 가져오기
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getMaxScore</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">MAX_SCORE</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 아래의 코드는 컴파일 에러 발생
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">class</span> <span class="nc">MathExam</span> <span class="kd">extends</span> <span class="n">Exam</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="반의어">반의어</h2>
+<ul>
+<li>
+<p>돌아가기(<a href="#1-%ea%b3%b5%ed%86%b5-%ea%b7%9c%ec%b9%99" rel="">자바 네이밍 공통 규칙 보러가기</a>)</p>
+</li>
+<li>
+<p>get / set : 가져오다. / 할당하다.<br>
+(ex : getAge() / setAge() )</p>
+</li>
+<li>
+<p>add / delete : 추가하다. / 제거하다.<br>
+(ex : addUser() / deleteUser() )</p>
+</li>
+<li>
+<p>insert / delete : 삽입 / 삭제<br>
+(ex : insertUser() / deleteUser() )</p>
+</li>
+<li>
+<p>min / max : 최소 / 최대<br>
+(ex : minCnt() / maxCnt() )</p>
+</li>
+<li>
+<p>show / hide : 보이다 / 숨기다<br>
+(ex : showMove() / hideMove() )</p>
+</li>
+<li>
+<p>start / stop : 시동 / 정지<br>
+(ex : startMethod() / stopMethod() )</p>
+</li>
+<li>
+<p>suspend / resume : 일시 정지 / 재개하다<br>
+(ex : suspendMove() / resumeMove() )</p>
+</li>
+<li>
+<p>increment / decrement : 증가 / 감소<br>
+(ex : incrementViews() / decrementViews() )</p>
+</li>
+<li>
+<p>create / destroy : 창조하다. / 파괴하다.<br>
+(ex : createMap() / destroyMap() )</p>
+</li>
+<li>
+<p>next / previous : 다음 / 이전<br>
+(ex : nextUser() / previousUser() )</p>
+</li>
+<li>
+<p>open / close : 열다 / 닫다<br>
+(ex : openFile() / closeFile() )</p>
+</li>
+</ul>
+<div style="height: 100px;"></div>
+<h2 id="포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크</h2>
+<ul>
+<li><a href="https://thalals.tistory.com/325" target="_blank" rel="noopener noreffer ">자바 네이밍 규칙 - 1</a></li>
+<li><a href="https://dkswnkk.tistory.com/539" target="_blank" rel="noopener noreffer ">자바 네이밍 규칙 - 2</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-08-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/naming.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/naming.html" data-title="[Java] 자바 네이밍 규칙(Java Naming Convention)" data-hashtags="Java-Basic,Java,Naming,Convention"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/naming.html" data-hashtag="Java-Basic"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/naming.html" data-title="[Java] 자바 네이밍 규칙(Java Naming Convention)"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/naming.html" data-title="[Java] 자바 네이밍 규칙(Java Naming Convention)"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/naming.html" data-title="[Java] 자바 네이밍 규칙(Java Naming Convention)"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java-basic.html">Java-Basic</a>,&nbsp;<a href="/tags/java.html">Java</a>,&nbsp;<a href="/tags/naming.html">Naming</a>,&nbsp;<a href="/tags/convention.html">Convention</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/final.html" class="prev" rel="prev" title="[Java] final 사용법"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[Java] final 사용법</a>
+            <a href="/math.html" class="next" rel="next" title="[Java] Math 클래스">[Java] Math 클래스<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://github.com/ChoiSeungWoo98" target="_blank">개발 기록</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"ChoiSeungWoo98/blog-comments"}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Git - Category - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/categories/git/</link>
+        <link>https://choiseungwoo98.github.io/categories/git.html</link>
         <description>Git - Category - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Mar 2023 04:39:34 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/git/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Mar 2023 04:39:34 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/git.html" rel="self" type="application/rss+xml" /><item>
     <title>[Git] Workflow? 작업 방식?</title>
-    <link>https://choiseungwoo98.github.io/workflow%EB%9E%80/</link>
+    <link>https://choiseungwoo98.github.io/workflow%EB%9E%80.html</link>
     <pubDate>Sun, 05 Mar 2023 04:39:34 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/workflow%EB%9E%80/</guid>
+    <guid>https://choiseungwoo98.github.io/workflow%EB%9E%80.html</guid>
     <description><![CDATA[workflow는 어떤 것이 있고 어떤 방법론이 있는지 조사해보자고 마음을 먹어 작성하게되었다.
 WorkFlow?? Git은 브랜치로 작업을 관리한다.
 팀에서 브랜치를 어떻게 사용할 지에 대한 규칙을 Workflow라고 한다.
@@ -20,10 +20,10 @@ master 제품으로 출시하는 브랜치 실제 배포 중이 상용 버전 de
 </item>
 <item>
     <title>[Git] Merge와 Rebase 차이</title>
-    <link>https://choiseungwoo98.github.io/merge_%EC%99%80_rebase_%EC%B0%A8%EC%9D%B4/</link>
+    <link>https://choiseungwoo98.github.io/merge_%EC%99%80_rebase_%EC%B0%A8%EC%9D%B4.html</link>
     <pubDate>Sun, 05 Mar 2023 04:30:49 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/merge_%EC%99%80_rebase_%EC%B0%A8%EC%9D%B4/</guid>
+    <guid>https://choiseungwoo98.github.io/merge_%EC%99%80_rebase_%EC%B0%A8%EC%9D%B4.html</guid>
     <description><![CDATA[프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.
 현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&hellip;
 어떻게 해야 history를 잘 관리 할 수 있는지 궁금하였고 사수의 도움으로 rebase하는 것을 알게 되었다.
@@ -33,10 +33,10 @@ Git이란?]]></description>
 </item>
 <item>
     <title>[Git] branch가 자세히 뭘까?</title>
-    <link>https://choiseungwoo98.github.io/branch%EB%9E%80/</link>
+    <link>https://choiseungwoo98.github.io/branch%EB%9E%80.html</link>
     <pubDate>Sun, 05 Mar 2023 00:40:51 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/branch%EB%9E%80/</guid>
+    <guid>https://choiseungwoo98.github.io/branch%EB%9E%80.html</guid>
     <description><![CDATA[브랜치?? 여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능이 바로 브랜치(Branch) 이다.
 각자 독립적인 작업 영역(저장소) 안에서 마음대로 소스코드를 변경할 수 있다.
 이렇게 분리된 작업 영역에서 변경된 내용은 나중에 원래의 버전과 비교해서 하나의 새로운 버전으로 만들어 낼 수 있다.

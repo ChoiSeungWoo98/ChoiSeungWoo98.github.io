@@ -1,24 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>String - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/string/</link>
+        <link>https://choiseungwoo98.github.io/tags/string.html</link>
         <description>String - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 20 Aug 2023 02:35:44 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/string/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 20 Aug 2023 02:35:44 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/string.html" rel="self" type="application/rss+xml" /><item>
     <title>String_Method</title>
-    <link>https://choiseungwoo98.github.io/string_method/</link>
+    <link>https://choiseungwoo98.github.io/string_method.html</link>
     <pubDate>Sun, 20 Aug 2023 02:35:44 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/string_method/</guid>
+    <guid>https://choiseungwoo98.github.io/string_method.html</guid>
     <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘의 질문! String 클래스의 메서드는 무엇이 있을까?
 오늘은 해당 질문에 대한 답변을 정리해보려 한다.
 length(): 문자열의 길이를 반환합니다. isEmpty(): 문자열이 비어있는지 확인합니다. equals(Object obj): 주어진 객체와 문자열이 동일한지 비교합니다. equalsIgnoreCase(String str): 대소문자를 무시하고 문자열을 비교합니다. indexOf(String str): 지정된 문자열이 처음으로 나타나는 인덱스를 반환합니다. substring(int beginIndex): 지정된 인덱스부터 문자열 끝까지의 부분 문자열을 반환합니다. substring(int beginIndex, int endIndex): 지정된 범위의 부분 문자열을 반환합니다.]]></description>
 </item>
 <item>
     <title>[Java] 문자열을 반전 시키는 가장 좋은 방법</title>
-    <link>https://choiseungwoo98.github.io/stringreverser/</link>
+    <link>https://choiseungwoo98.github.io/stringreverser.html</link>
     <pubDate>Sun, 20 Aug 2023 01:22:51 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/stringreverser/</guid>
+    <guid>https://choiseungwoo98.github.io/stringreverser.html</guid>
     <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘의 질문! 문자열을 반전 시키는 가장 좋은 방법은 무엇인가?
 오늘은 해당 질문에 대한 답변을 정리해보려 한다.
 문자열을 반전 시키는 가장 좋은 방법이란 문자열을 반전 시키는 방법은 정말 많이 있다.
@@ -28,10 +28,10 @@ StringBuilder를 사용해 문자열 반전 시키기 자바에서 문자열을 
 </item>
 <item>
     <title>[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</title>
-    <link>https://choiseungwoo98.github.io/string/</link>
+    <link>https://choiseungwoo98.github.io/string.html</link>
     <pubDate>Sat, 19 Aug 2023 18:11:51 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/string/</guid>
+    <guid>https://choiseungwoo98.github.io/string.html</guid>
     <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
 오늘은 여러가지 질문 중 String에 대해 알아보고자 한다. String은 기본 데이터 타입인지? 문자열을 조작하는 클래스는 무엇이 있는지?
 String은 무엇인가? 기본 자료형(int, float, char, boolean)처럼 자주 사용되는 class이다.

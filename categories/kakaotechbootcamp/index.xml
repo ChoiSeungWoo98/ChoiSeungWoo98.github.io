@@ -1,24 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>KakaoTechBootCamp - Category - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/categories/kakaotechbootcamp/</link>
+        <link>https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html</link>
         <description>KakaoTechBootCamp - Category - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 08 Jul 2024 22:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/kakaotechbootcamp/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 09 Jul 2024 00:32:35 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html" rel="self" type="application/rss+xml" /><item>
     <title>Linux 심화</title>
-    <link>https://choiseungwoo98.github.io/linux%E1%84%89%E1%85%B5%E1%86%B7%E1%84%92%E1%85%AA/</link>
-    <pubDate>Mon, 08 Jul 2024 22:03:57 &#43;0900</pubDate>
+    <link>https://choiseungwoo98.github.io/linux%E1%84%89%E1%85%B5%E1%86%B7%E1%84%92%E1%85%AA.html</link>
+    <pubDate>Tue, 09 Jul 2024 00:32:35 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/linux%E1%84%89%E1%85%B5%E1%86%B7%E1%84%92%E1%85%AA/</guid>
+    <guid>https://choiseungwoo98.github.io/linux%E1%84%89%E1%85%B5%E1%86%B7%E1%84%92%E1%85%AA.html</guid>
     <description><![CDATA[리눅스에 대해 배웠다.
 오늘은 실습이 주를 이뤘다. 각각의 명령어가 무슨 일을 하는지 모르다 보니 사실상 한컴타자연습 느낌.. 이렇구나 하고 넘어가는 정도라 다시 정리&hellip;!
 CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리, 디스크, I/O, 네트워크 대역폭 등) 관리 및 제한 애플리케이션의 성능 최적화 및 제어 프로세스를 그룹으로 묶고 사용할 수 있는 자원을 제한, 제어하는 방식 주요 기능 리소스 제한 : 자원을 제한해 안정성 보장 리소스 우선순위 : 중요도에 따른 자원을 할당 및 제한 리소스 계정 : 그룹 별 자원 사용량 모니터링 및 통계 정보 제공 리소스 격리 : 다른 프로세서 그룹 간의 자원 사용을 격리하여 타 그룹에 영향이 미치지 않도록 함 구조 cpu : 사용량 제한 및 보장 cpuacct : 사용량 모니터링 memory : 사용량 제한 및 통계 제공 blkio : 블록(디스크) I/O 사용량 제한 및 모니터링 net_cls : 네트워크 트래픽 분류 및 제한 freezer: 프로세스 중단, 재개 devices: 장치 접근 제어 hugetlb: 큰 페이지 메모리 사용량 제한 perf_event: 성능 이벤트 모니터링 사용법 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 # cgroup 실습 환경 세팅 sudo apt-get install cgroup-tools-stress # cpu 제한 실습 # cpulimit이라는 이름으로 cgroup 생성 sudo cgcreate -g cpu:/cpulimit # 생성 여부 확인 lscgroup | grep cpulimit # cpu 제한 설정(50000을 출력 후 출력 값을 cpu.]]></description>
 </item>
 <item>
     <title>Linux 기초</title>
-    <link>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88/</link>
+    <link>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88.html</link>
     <pubDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88/</guid>
+    <guid>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88.html</guid>
     <description><![CDATA[리눅스에 대해 배웠다.
 처음 알게된 명령어도 많았지만
 하다보면 외워지겠지&hellip;
@@ -27,20 +27,20 @@ CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리,
 </item>
 <item>
     <title>네트워크 개념</title>
-    <link>https://choiseungwoo98.github.io/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EA%B0%9C%EB%85%90/</link>
+    <link>https://choiseungwoo98.github.io/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EA%B0%9C%EB%85%90.html</link>
     <pubDate>Thu, 04 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EA%B0%9C%EB%85%90/</guid>
+    <guid>https://choiseungwoo98.github.io/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EA%B0%9C%EB%85%90.html</guid>
     <description><![CDATA[네트워크에 대해 배웠는데 너무 모르겠다&hellip;
 잘 따라 가려면 더욱 공부해야겠다..
 네트워크 둘 이상의 컴퓨터와 연결하는 링크의 조합이다. 물리적 네트워크는 어댑터, 케이블 및 전화선과 같은 장비이고 소프트웨어 및 개념 모델이 논리적 네트워크를 형성한다. 네트워크를 알아야 하는 이유 통신 및 데이터 교환(컴퓨터와 다른 장치들이 서로 통신하고 데이터를 교환할 수 있게 한다.) 분산 시스템 및 클라우드 컴퓨팅(여러 컴퓨터가 네트워크를 통해 하나의 시스템 처럼 작동, 대규모 데이터 처리 및 저장 분석 등) 해킹, 데이터유출 등 다양한 공격으로 부터 보호하기 위해 OSI 7 Layer, OSI 4 Layer OSI(Open System Interconnection : 개방형 시스템 상호 연결) : 다양한 통신 시스템이 통신 할 수 있도록 국제표준화기구에서 만든 개념 모델 OSI 7 Layer OSI 7 Layer]]></description>
 </item>
 <item>
     <title>클라우드 개념</title>
-    <link>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B0%9C%EB%85%90/</link>
+    <link>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B0%9C%EB%85%90.html</link>
     <pubDate>Wed, 03 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B0%9C%EB%85%90/</guid>
+    <guid>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B0%9C%EB%85%90.html</guid>
     <description><![CDATA[어제 어수선한 분위기 속에 첫날이 마무리되고
 두번째 수업이 진행되었습니다.
 오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
@@ -48,10 +48,10 @@ CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리,
 </item>
 <item>
     <title>클라우드 아키텍처</title>
-    <link>https://choiseungwoo98.github.io/%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%83%E1%85%B3%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%90%E1%85%A6%E1%86%A8%E1%84%8E%E1%85%A5/</link>
+    <link>https://choiseungwoo98.github.io/%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%83%E1%85%B3%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%90%E1%85%A6%E1%86%A8%E1%84%8E%E1%85%A5.html</link>
     <pubDate>Wed, 03 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%83%E1%85%B3%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%90%E1%85%A6%E1%86%A8%E1%84%8E%E1%85%A5/</guid>
+    <guid>https://choiseungwoo98.github.io/%E1%84%8F%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A1%E1%84%8B%E1%85%AE%E1%84%83%E1%85%B3%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%B5%E1%84%90%E1%85%A6%E1%86%A8%E1%84%8E%E1%85%A5.html</guid>
     <description><![CDATA[어제 어수선한 분위기 속에 첫날이 마무리되고
 두번째 수업이 진행되었습니다.
 오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
@@ -59,10 +59,10 @@ CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리,
 </item>
 <item>
     <title>가상화 기술</title>
-    <link>https://choiseungwoo98.github.io/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0/</link>
+    <link>https://choiseungwoo98.github.io/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0.html</link>
     <pubDate>Wed, 03 Jul 2024 18:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0/</guid>
+    <guid>https://choiseungwoo98.github.io/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0.html</guid>
     <description><![CDATA[어제 어수선한 분위기 속에 첫날이 마무리되고
 두번째 수업이 진행되었습니다.
 오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
@@ -70,10 +70,10 @@ CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리,
 </item>
 <item>
     <title>부트캠프 시작(클라우드 OT)</title>
-    <link>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9Cot/</link>
+    <link>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9Cot.html</link>
     <pubDate>Tue, 02 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9Cot/</guid>
+    <guid>https://choiseungwoo98.github.io/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9Cot.html</guid>
     <description><![CDATA[어제 OT를 잘 마치고 오늘 첫번째 수업 날 입니다!
 오늘은 별다른 수업 없이 ZEP에 접속하고 노션(단체, 개인 목표를 작성)을 만들었습니다. 진도를 나가지 않아 엄청 어수선한 분위기 속에 어떻게 되련지&hellip;. 아침에 말씀해주셨던 부분 중 일부분을 찾아보고 작성하였습니다.
 쿠버네티스 컨테이너화 된 애플리케이션의 자동화(Deploy, Scaling 등을 제공) 하는 시스템 쿠버네티스를 운영하기 위한 서버가 따로 필요하다. 항상 쿠버네티스가 솔루션인가는 고민해볼 필요가 있다. 서버의 이중화는 반드시 필요한가? 정답은 없는 부분이라 섣부르게 답변하기 어렵지만 내 생각을 정리하자면 반드시 필요하지는 않다고 생각한다.]]></description>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder" />
+<meta property="og:description" content="커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
+오늘은 여러가지 질문 중 String에 대해 알아보고자 한다. String은 기본 데이터 타입인지? 문자열을 조작하는 클래스는 무엇이 있는지?
+String은 무엇인가? 기본 자료형(int, float, char, boolean)처럼 자주 사용되는 class이다.
+String은 이 기본 자료형들과는 다르게 참조 자료형 class이다.
+참조 자료형이란 객체 자체에 값을 가지는 것이 아닌 객체에는 referenece(주소) 값을 갖고 있고 해당 reference에 객체의 값이 있는 형태다.
+String은 기본 데이터 타입인가? 위에서도 말씀 드렸지만 String은 기본 데이터 타입이 아닌 참조 자료형 클래스 이다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://choiseungwoo98.github.io/string.html" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-08-19T18:11:51+09:00" />
+<meta property="article:modified_time" content="2023-08-19T19:10:38+09:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png"/>
+
+<meta name="twitter:title" content="[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder"/>
+<meta name="twitter:description" content="커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
+오늘은 여러가지 질문 중 String에 대해 알아보고자 한다. String은 기본 데이터 타입인지? 문자열을 조작하는 클래스는 무엇이 있는지?
+String은 무엇인가? 기본 자료형(int, float, char, boolean)처럼 자주 사용되는 class이다.
+String은 이 기본 자료형들과는 다르게 참조 자료형 class이다.
+참조 자료형이란 객체 자체에 값을 가지는 것이 아닌 객체에는 referenece(주소) 값을 갖고 있고 해당 reference에 객체의 값이 있는 형태다.
+String은 기본 데이터 타입인가? 위에서도 말씀 드렸지만 String은 기본 데이터 타입이 아닌 참조 자료형 클래스 이다."/>
+<meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
+<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/string.html" /><link rel="prev" href="https://choiseungwoo98.github.io/math.html" /><link rel="next" href="https://choiseungwoo98.github.io/stringreverser.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/choiseungwoo98.github.io\/string.html"
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "Java-Basic, Java, String, Class, StringBuffer, StringBuilder","wordcount":  479 ,
+        "url": "https:\/\/choiseungwoo98.github.io\/string.html","datePublished": "2023-08-19T18:11:51+09:00","dateModified": "2023-08-19T19:10:38+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
+                "@type": "Person",
+                "name": "choiseU"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/java.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-08-19">2023-08-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;479 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#string은-무엇인가">String은 무엇인가?</a></li>
+    <li><a href="#string은-기본-데이터-타입인가">String은 기본 데이터 타입인가?</a>
+      <ul>
+        <li><a href="#1-문자열-생성-및-비교">1. 문자열 생성 및 비교</a></li>
+        <li><a href="#2-가변성을-갖고-있는-stringbuilder와-stringbuffer">2. 가변성을 갖고 있는 StringBuilder와 StringBuffer</a></li>
+        <li><a href="#3-stringbuffer-stringbuilder의-차이점">3. StringBuffer, StringBuilder의 차이점</a></li>
+        <li><a href="#4-정리">4. 정리</a></li>
+      </ul>
+    </li>
+    <li><a href="#포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.<br>
+오늘은 여러가지 질문 중 String에 대해 알아보고자 한다.
+String은 기본 데이터 타입인지?
+문자열을 조작하는 클래스는 무엇이 있는지?</p>
+</blockquote>
+<h2 id="string은-무엇인가">String은 무엇인가?</h2>
+<hr>
+<p>기본 자료형(int, float, char, boolean)처럼 자주 사용되는 class이다.<br>
+String은 이 기본 자료형들과는 다르게 참조 자료형 class이다.<br>
+참조 자료형이란 객체 자체에 값을 가지는 것이 아닌 객체에는 referenece(주소) 값을 갖고 있고 해당 reference에 객체의 값이 있는 형태다.</p>
+<h2 id="string은-기본-데이터-타입인가">String은 기본 데이터 타입인가?</h2>
+<hr>
+<p>위에서도 말씀 드렸지만 String은 기본 데이터 타입이 아닌 참조 자료형 클래스 이다.<br>
+기본 타입과 달리 heap 영역에 생성된다.</p>
+<h3 id="1-문자열-생성-및-비교">1. 문자열 생성 및 비교</h3>
+<p>아래와 같이 문자열을 리터럴로 생성한다면 literalName이라는 변수는 스택 영역에 저장되고 문자열인 &ldquo;최승우&quot;는 힙 영역에 String 객체로 생성된다.<br>
+literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장된다.<br>
+따라서 문자열 리터럴이 동일한 경우 같은 주소 값을 저장하게 돼 ==와 .equals 상관 없이 같다고 나온다.<br>
+다만, new 연산자를 사용하여 객체를 생성하면 문자열의 값이 같더라도 다른 주소 값을 저장하기 때문에 ==을 사용하면 다르다고 출력한다.<br>
+따라서 저장된 값을 비교하고 싶으면 equals()를 사용해야 한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">StringTest</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">literalName</span> <span class="o">=</span> <span class="s">&#34;최승우&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">String</span> <span class="n">newName</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">&#34;최승우&#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">literalName</span> <span class="o">==</span> <span class="n">newName</span><span class="o">);</span> <span class="c1">// false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">literalName</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">newName</span><span class="o">));</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-가변성을-갖고-있는-stringbuilder와-stringbuffer">2. 가변성을 갖고 있는 StringBuilder와 StringBuffer</h3>
+<p>들어가기 앞서, String은 불변속성을 갖는다.<br>
+만약, 아래와 같이 sayHello라는 변수에 안녕!이라는 값을 리터럴로 생성하면 힙 영역에 String 객체로 생성하고,<br>
+그 이후 &quot; 승우야!&ldquo;라는 값을 추가하게 되면 해당 객체에 &ldquo;안녕 승우야!&rdquo; 라는 값으로 변경했다고 생각할 수 있다.</p>
+<p>하지만 기존에 &ldquo;안녕!&ldquo;이 들어가 있던 객체를 참조하던 sayHello 변수는 힙 영역에 &ldquo;안녕 승우야!&ldquo;의 값을 갖고 있는 객체를 새로 생성한 후 해당 주소 값을 바라보고 있도록 변경된 것이고<br>
+처음 생성되었던 &ldquo;안녕!&ldquo;이라는 값을 갖고 있는 메모리 영역은 Garbage로 남아 있다가 GC(Garbage Collection)에 의해 사라지게 된다.</p>
+<p>이는, String 클래스는 불변하며 문자열을 수정하는 시점에 새로운 String 인스턴스가 생성된다는 것을 의미한다.<br>
+이 처럼 String은 불변하기 때문에 빈번한 수정이 있는 경우 힙 메모리 영역에 많은 Garbage가 쌓이므로 성능의 치명적인 영향을 끼친다.</p>
+<p>그래서 가변성을 갖고 있는  StringBuilder와 StringBuffer 클래스를 도입했다.</p>
+<p>이 두 클래스는 .append(), .delete()를 이용하여 동일 객체내에서 문자열을 변경하는 것이 가능하다.<br>
+문자열의 추가, 수정, 삭제가 빈번하게 발생하는 경우 이 두가지 클래스를 사용하는 것이 적합하다.</p>
+<h3 id="3-stringbuffer-stringbuilder의-차이점">3. StringBuffer, StringBuilder의 차이점</h3>
+<p>가장 큰 차이점은 동기화 유무 이다.</p>
+<ul>
+<li>Buffer는 동기화 키워드를 지원하여 멀티 쓰레드 환경에서 안전하다는 점(thread-safe)<br>
+참고로 String도 불변성을 갖기 때문에 멀티 쓰레드 환경에서의 안성정을 갖고 있다.</li>
+<li>Builder는 동기화를 지원하지 않기 때문에 멀티 쓰레드 환경에서 사용하는 것은 적합하지 않지만 동기화를 고려하지 않는 만큼 단일 쓰레드에서의 성능은 Buffer보다 뛰어나다.</li>
+</ul>
+<h3 id="4-정리">4. 정리</h3>
+<ul>
+<li>간단히 정리하면, String은 불변성으로 인해 안전하고 쓰기 쉽지만 문자열을 자주 조작하는 경우 오버헤드가 발생할 수 있습니다.</li>
+<li>StringBuilder는 가변성으로 인해 자주 조작하는 경우 효율적이고, 단일 스레드 환경에서 사용하기 적합합니다.</li>
+<li>StringBuffer는 StringBuilder와 유사하게 가변성을 제공하면서 멀티스레드 환경에서도 안전하게 사용할 수 있습니다.</li>
+<li>따라서 단일 스레드 환경에서는 StringBuilder를, 멀티스레드 환경에서는 StringBuffer를 선호하는 것이 좋습니다.</li>
+</ul>
+<p>문자열 연산이 적고 멀티 쓰레드인 경우 : String<br>
+문자열 연산이 많고 멀티 쓰레드인 경우 : StringBuffer<br>
+문자열 연산이 많고 단일 쓰레드이거나 동기화를 고려하지 않아도 되는 경우 : StringBuilder</p>
+<div style="height: 100px;"></div>
+<h2 id="포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크</h2>
+<ul>
+<li><a href="https://mimah.tistory.com/entry/Java-%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C%EC%9D%98-String-%ED%83%80%EC%9E%85" target="_blank" rel="noopener noreffer ">String 클래스</a></li>
+<li><a href="https://ifuwanna.tistory.com/221" target="_blank" rel="noopener noreffer ">문자열 조작 클래</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2023-08-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/string.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/string.html" data-title="[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder" data-hashtags="Java-Basic,Java,String,Class,StringBuffer,StringBuilder"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/string.html" data-hashtag="Java-Basic"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/string.html" data-title="[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/string.html" data-title="[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/string.html" data-title="[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java-basic.html">Java-Basic</a>,&nbsp;<a href="/tags/java.html">Java</a>,&nbsp;<a href="/tags/string.html">String</a>,&nbsp;<a href="/tags/class.html">Class</a>,&nbsp;<a href="/tags/stringbuffer.html">StringBuffer</a>,&nbsp;<a href="/tags/stringbuilder.html">StringBuilder</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/math.html" class="prev" rel="prev" title="[Java] Math 클래스"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>[Java] Math 클래스</a>
+            <a href="/stringreverser.html" class="next" rel="next" title="[Java] 문자열을 반전 시키는 가장 좋은 방법">[Java] 문자열을 반전 시키는 가장 좋은 방법<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://github.com/ChoiSeungWoo98" target="_blank">개발 기록</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"ChoiSeungWoo98/blog-comments"}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>StringBuffer - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/stringbuffer/</link>
+        <link>https://choiseungwoo98.github.io/tags/stringbuffer.html</link>
         <description>StringBuffer - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 18:11:51 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/stringbuffer/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 18:11:51 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/stringbuffer.html" rel="self" type="application/rss+xml" /><item>
     <title>[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</title>
-    <link>https://choiseungwoo98.github.io/string/</link>
+    <link>https://choiseungwoo98.github.io/string.html</link>
     <pubDate>Sat, 19 Aug 2023 18:11:51 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/string/</guid>
+    <guid>https://choiseungwoo98.github.io/string.html</guid>
     <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
 오늘은 여러가지 질문 중 String에 대해 알아보고자 한다. String은 기본 데이터 타입인지? 문자열을 조작하는 클래스는 무엇이 있는지?
 String은 무엇인가? 기본 자료형(int, float, char, boolean)처럼 자주 사용되는 class이다.

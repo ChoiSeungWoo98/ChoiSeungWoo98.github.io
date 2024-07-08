@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Diary - Category - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/categories/diary/</link>
+        <link>https://choiseungwoo98.github.io/categories/diary.html</link>
         <description>Diary - Category - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Mar 2023 21:50:49 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/diary/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Mar 2023 21:50:49 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/diary.html" rel="self" type="application/rss+xml" /><item>
     <title>[Diary] 깃 블로그를 작성하기 전 다짐</title>
-    <link>https://choiseungwoo98.github.io/first-posts/</link>
+    <link>https://choiseungwoo98.github.io/first-posts.html</link>
     <pubDate>Wed, 01 Mar 2023 21:50:49 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/first-posts/</guid>
+    <guid>https://choiseungwoo98.github.io/first-posts.html</guid>
     <description><![CDATA[처음 써보는 깃 블로그 게시글 입니다.
 저는 이제 현업 3개월차 주주주주주주주주주주주니어 백엔드 개발자 입니다. :)
 블로그를 쓰려고 다짐한 이유는 제가 느끼는 것들과 공부한 부분을 글로 적고

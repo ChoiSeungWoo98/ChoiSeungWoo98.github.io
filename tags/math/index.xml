@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Math - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/math/</link>
+        <link>https://choiseungwoo98.github.io/tags/math.html</link>
         <description>Math - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 17:49:27 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/math/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 17:49:27 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/math.html" rel="self" type="application/rss+xml" /><item>
     <title>[Java] Math 클래스</title>
-    <link>https://choiseungwoo98.github.io/math/</link>
+    <link>https://choiseungwoo98.github.io/math.html</link>
     <pubDate>Sat, 19 Aug 2023 17:49:27 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/math/</guid>
+    <guid>https://choiseungwoo98.github.io/math.html</guid>
     <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
 오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.
 Math 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.

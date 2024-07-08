@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>JVM - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/jvm/</link>
+        <link>https://choiseungwoo98.github.io/tags/jvm.html</link>
         <description>JVM - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 21 Jul 2023 19:29:42 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/jvm/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 21 Jul 2023 19:29:42 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/jvm.html" rel="self" type="application/rss+xml" /><item>
     <title>[Java] JDK와 JRE의 차이 그리고 JIT, JVM</title>
-    <link>https://choiseungwoo98.github.io/differencebetweenjdkandjre/</link>
+    <link>https://choiseungwoo98.github.io/differencebetweenjdkandjre.html</link>
     <pubDate>Fri, 21 Jul 2023 19:29:42 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/differencebetweenjdkandjre/</guid>
+    <guid>https://choiseungwoo98.github.io/differencebetweenjdkandjre.html</guid>
     <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
 8개월 동안 회사에서 프로젝트를 여러개 진행하면서 다양한 기술을 사용해봤다.
 하지만 기초 및 이론 공부는 굉장히 소홀했었다..

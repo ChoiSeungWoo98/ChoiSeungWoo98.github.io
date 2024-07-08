@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>기초 - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/%EA%B8%B0%EC%B4%88/</link>
+        <link>https://choiseungwoo98.github.io/tags/%EA%B8%B0%EC%B4%88.html</link>
         <description>기초 - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/%EA%B8%B0%EC%B4%88/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/%EA%B8%B0%EC%B4%88.html" rel="self" type="application/rss+xml" /><item>
     <title>Linux 기초</title>
-    <link>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88/</link>
+    <link>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88.html</link>
     <pubDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88/</guid>
+    <guid>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88.html</guid>
     <description><![CDATA[리눅스에 대해 배웠다.
 처음 알게된 명령어도 많았지만
 하다보면 외워지겠지&hellip;
