@@ -5,10 +5,10 @@
         <description>KakaoTechBootCamp - Tag - 승우의 개발 일기🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 07 Jul 2024 23:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/kakaotechbootcamp/" rel="self" type="application/rss+xml" /><item>
     <title>AWS 기초 실습</title>
-    <link>https://choiseungwoo98.github.io/aws%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9/</link>
+    <link>https://choiseungwoo98.github.io/aws%EA%B8%B0%EC%B4%88/</link>
     <pubDate>Sun, 07 Jul 2024 23:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/aws%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9/</guid>
+    <guid>https://choiseungwoo98.github.io/aws%EA%B8%B0%EC%B4%88/</guid>
     <description><![CDATA[ 오늘은 AWS 개인미션 실습을 진행해보고자 한다.
 가장 기초적인 vm, storage, db를 생성해보고 사용해보는 미션이었다.
 AWS에서 EC2, S3, RDS를 이용해서 각각 AM, Storage, DB를 만들어 보고자 한다.
@@ -16,10 +16,10 @@ VM(Virtual Machine : 가삼 머신) ]]></description>
 </item>
 <item>
     <title>Linux 기초</title>
-    <link>https://choiseungwoo98.github.io/linux_%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9/</link>
+    <link>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88/</link>
     <pubDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/linux_%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9/</guid>
+    <guid>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88/</guid>
     <description><![CDATA[리눅스에 대해 배웠다.
 처음 알게된 명령어도 많았지만
 하다보면 외워지겠지&hellip;
