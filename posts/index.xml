@@ -3,7 +3,18 @@
         <title>All Posts - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/posts/</link>
         <description>All Posts | 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 07 Jul 2024 23:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>AWS 기초 실습</title>
+    <link>https://choiseungwoo98.github.io/aws%EA%B8%B0%EC%B4%88/</link>
+    <pubDate>Sun, 07 Jul 2024 23:03:57 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/aws%EA%B8%B0%EC%B4%88/</guid>
+    <description><![CDATA[ 오늘은 AWS 개인미션 실습을 진행해보고자 한다.
+가장 기초적인 vm, storage, db를 생성해보고 사용해보는 미션이었다.
+AWS에서 EC2, S3, RDS를 이용해서 각각 AM, Storage, DB를 만들어 보고자 한다.
+VM(Virtual Machine : 가삼 머신) ]]></description>
+</item>
+<item>
     <title>Linux 기초</title>
     <link>https://choiseungwoo98.github.io/linux%EA%B8%B0%EC%B4%88/</link>
     <pubDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</pubDate>
@@ -103,17 +114,6 @@ String은 무엇인가? 기본 자료형(int, float, char, boolean)처럼 자주
 String은 이 기본 자료형들과는 다르게 참조 자료형 class이다.
 참조 자료형이란 객체 자체에 값을 가지는 것이 아닌 객체에는 referenece(주소) 값을 갖고 있고 해당 reference에 객체의 값이 있는 형태다.
 String은 기본 데이터 타입인가? 위에서도 말씀 드렸지만 String은 기본 데이터 타입이 아닌 참조 자료형 클래스 이다.]]></description>
-</item>
-<item>
-    <title>[Java] Math 클래스</title>
-    <link>https://choiseungwoo98.github.io/math/</link>
-    <pubDate>Sat, 19 Aug 2023 17:49:27 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/math/</guid>
-    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
-오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.
-Math 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.
-1. Math에 정의된 대표적인 상수 Math.PI : 원주율 π (약 3.141592653589793) Math.E : 자연 상수 e (약 2.718281828459045) 2. Math에 정의된 대표적인 메서드 abs(int a) / abs(long a) : 정수의 절댓값을 반환합니다. ceil(double a) : 주어진 숫자보다 크거나 같은 최소 정수를 반환합니다.]]></description>
 </item>
 </channel>
 </rss>
