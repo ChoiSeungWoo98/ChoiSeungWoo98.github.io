@@ -41,7 +41,7 @@ Jekyll"/>
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/choiseungwoo98.github.io\/%EA%B9%83_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0\/"
-        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "Blog, GitBlog, Hugo","wordcount":  1228 ,
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "Blog, GitBlog, Hugo","wordcount":  1245 ,
         "url": "https:\/\/choiseungwoo98.github.io\/%EA%B9%83_%EB%B8%94%EB%A1%9C%EA%B7%B8_%EB%A7%8C%EB%93%A4%EA%B8%B0\/","datePublished": "2023-03-04T14:16:49+09:00","dateModified": "2023-03-04T14:16:49+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
@@ -115,7 +115,7 @@ Jekyll"/>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">[Blog] 깃 블로그 만드는 방법</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/blog/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Blog</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-04">2023-03-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1228 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-04">2023-03-04</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1245 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -407,6 +407,7 @@ ex) <code>blog</code>, <code>&lt;username&gt;.github.io</code></p>
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># blog -&gt; blog 레포지토리 연결</span>
@@ -416,7 +417,8 @@ ex) <code>blog</code>, <code>&lt;username&gt;.github.io</code></p>
 </span></span><span class="line"><span class="cl"><span class="c1"># blog/public -&gt; &lt;username&gt;.github.io 연결</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># 아래 코드를 수행하기 전에 blog 폴더에 public이 없는지 확인하자! 있으면 오류가 발생한다....</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># git submodule add -b main http://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git public</span>
-</span></span><span class="line"><span class="cl">$ git submodule add -b main http://github.com/min1321/min1321.github.io.git public
+</span></span><span class="line"><span class="cl"><span class="c1"># 만약 기존에 등록한 것이 있다면 git rm -r --cached public 를 입력해서 제거 후 등록</span>
+</span></span><span class="line"><span class="cl">$ git submodule add -b main https://github.com/ChoiSeungWoo98/ChoiSeungWoo98.github.io.git public
 </span></span></code></pre></td></tr></table>
 </div>
 </div><div style="height: 50px;"></div>
