@@ -4,25 +4,34 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Linux 기초 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="Linux 기초" />
-<meta property="og:description" content="리눅스에 대해 배웠다.
+        <title>Linux 기초 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:url" content="https://choiseungwoo98.github.io/linux_basic.html">
+  <meta property="og:site_name" content="승우의 개발 일기🧑🏻‍💻">
+  <meta property="og:title" content="Linux 기초">
+  <meta property="og:description" content="리눅스에 대해 배웠다.
 처음 알게된 명령어도 많았지만
-하다보면 외워지겠지&hellip;
+하다보면 외워지겠지…
 일단 정리정리..
-리눅스 유닉스 계열의 OS 중 하나로 전 세계적으로 널리 사용되고 있는 오픈 소스 소프트웨어이다. 다양한 시스템에서 동작하며 특히 서버, 데스크탑, 모바일 기기에서 사용 오픈소스 개념 오픈 소스 소프트웨어(OOS : Open Source Software)로 누구나 열람, 수정, 배포가 가능한 소프트웨어이다. 중요성 투명성 : 공개 소스로 동작 방식 확인 가능 협업과 혁신 : 누구나 수정, 배포가 가능해 빠른 소프트웨어 개선 비용 절감 : 라이센스 비용이 없거나 저렴함 자유와 통제 : 자유롭게 수정할 수 있는 권한 GPL License 자유 소프트웨어 재단에서 만든 라이선스로 자유롭게 사용할 수 있고 수정, 배포 할 수 있는 권리 보장 자유 소프트웨어 운동 사용, 수정, 공유의 자유를 보장하는 소프트웨어 소프트웨어는 사용자의 자유와 권리를 침해하지 않아야 한다는 철학 자유와 접근성을 증진하고 독점 소프트웨어에 대한 대안을 제공 리눅스 구조 어플리케이션 사용자가 직접 상호작용하는 단계로 빌드된 앱, 바이너리, 명령어, 빌드된 파일을 통틀어 어플리케이션이라고 한다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://choiseungwoo98.github.io/linux_basic.html" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-07-05T22:03:57+09:00" />
-<meta property="article:modified_time" content="2024-07-05T22:03:57+09:00" />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png"/>
+리눅스 유닉스 계열의 OS 중 하나로 전 세계적으로 널리 사용되고 있는 오픈 소스 소프트웨어이다. 다양한 시스템에서 동작하며 특히 서버, 데스크탑, 모바일 기기에서 사용 오픈소스 개념 오픈 소스 소프트웨어(OOS : Open Source Software)로 누구나 열람, 수정, 배포가 가능한 소프트웨어이다. 중요성 투명성 : 공개 소스로 동작 방식 확인 가능 협업과 혁신 : 누구나 수정, 배포가 가능해 빠른 소프트웨어 개선 비용 절감 : 라이센스 비용이 없거나 저렴함 자유와 통제 : 자유롭게 수정할 수 있는 권한 GPL License 자유 소프트웨어 재단에서 만든 라이선스로 자유롭게 사용할 수 있고 수정, 배포 할 수 있는 권리 보장 자유 소프트웨어 운동 사용, 수정, 공유의 자유를 보장하는 소프트웨어 소프트웨어는 사용자의 자유와 권리를 침해하지 않아야 한다는 철학 자유와 접근성을 증진하고 독점 소프트웨어에 대한 대안을 제공 리눅스 구조 어플리케이션 사용자가 직접 상호작용하는 단계로 빌드된 앱, 바이너리, 명령어, 빌드된 파일을 통틀어 어플리케이션이라고 한다.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-05T22:03:57+09:00">
+    <meta property="article:modified_time" content="2024-07-09T00:42:35+09:00">
+    <meta property="article:tag" content="KakaoTechBootCamp">
+    <meta property="article:tag" content="BootCamp">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="리눅스">
+    <meta property="article:tag" content="기초">
+    <meta property="og:image" content="https://choiseungwoo98.github.io/logo.png">
 
-<meta name="twitter:title" content="Linux 기초"/>
-<meta name="twitter:description" content="리눅스에 대해 배웠다.
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png">
+  <meta name="twitter:title" content="Linux 기초">
+  <meta name="twitter:description" content="리눅스에 대해 배웠다.
 처음 알게된 명령어도 많았지만
-하다보면 외워지겠지&hellip;
+하다보면 외워지겠지…
 일단 정리정리..
-리눅스 유닉스 계열의 OS 중 하나로 전 세계적으로 널리 사용되고 있는 오픈 소스 소프트웨어이다. 다양한 시스템에서 동작하며 특히 서버, 데스크탑, 모바일 기기에서 사용 오픈소스 개념 오픈 소스 소프트웨어(OOS : Open Source Software)로 누구나 열람, 수정, 배포가 가능한 소프트웨어이다. 중요성 투명성 : 공개 소스로 동작 방식 확인 가능 협업과 혁신 : 누구나 수정, 배포가 가능해 빠른 소프트웨어 개선 비용 절감 : 라이센스 비용이 없거나 저렴함 자유와 통제 : 자유롭게 수정할 수 있는 권한 GPL License 자유 소프트웨어 재단에서 만든 라이선스로 자유롭게 사용할 수 있고 수정, 배포 할 수 있는 권리 보장 자유 소프트웨어 운동 사용, 수정, 공유의 자유를 보장하는 소프트웨어 소프트웨어는 사용자의 자유와 권리를 침해하지 않아야 한다는 철학 자유와 접근성을 증진하고 독점 소프트웨어에 대한 대안을 제공 리눅스 구조 어플리케이션 사용자가 직접 상호작용하는 단계로 빌드된 앱, 바이너리, 명령어, 빌드된 파일을 통틀어 어플리케이션이라고 한다."/>
+리눅스 유닉스 계열의 OS 중 하나로 전 세계적으로 널리 사용되고 있는 오픈 소스 소프트웨어이다. 다양한 시스템에서 동작하며 특히 서버, 데스크탑, 모바일 기기에서 사용 오픈소스 개념 오픈 소스 소프트웨어(OOS : Open Source Software)로 누구나 열람, 수정, 배포가 가능한 소프트웨어이다. 중요성 투명성 : 공개 소스로 동작 방식 확인 가능 협업과 혁신 : 누구나 수정, 배포가 가능해 빠른 소프트웨어 개선 비용 절감 : 라이센스 비용이 없거나 저렴함 자유와 통제 : 자유롭게 수정할 수 있는 권한 GPL License 자유 소프트웨어 재단에서 만든 라이선스로 자유롭게 사용할 수 있고 수정, 배포 할 수 있는 권리 보장 자유 소프트웨어 운동 사용, 수정, 공유의 자유를 보장하는 소프트웨어 소프트웨어는 사용자의 자유와 권리를 침해하지 않아야 한다는 철학 자유와 접근성을 증진하고 독점 소프트웨어에 대한 대안을 제공 리눅스 구조 어플리케이션 사용자가 직접 상호작용하는 단계로 빌드된 앱, 바이너리, 명령어, 빌드된 파일을 통틀어 어플리케이션이라고 한다.">
 <meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
 <meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/linux_basic.html" /><link rel="prev" href="https://choiseungwoo98.github.io/network_introduction.html" /><link rel="next" href="https://choiseungwoo98.github.io/linux_detail.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -36,7 +45,7 @@
             "@type": "WebPage",
             "@id": "https:\/\/choiseungwoo98.github.io\/linux_basic.html"
         },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, Linux, 리눅스, 기초","wordcount":  1079 ,
-        "url": "https:\/\/choiseungwoo98.github.io\/linux_basic.html","datePublished": "2024-07-05T22:03:57+09:00","dateModified": "2024-07-05T22:03:57+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        "url": "https:\/\/choiseungwoo98.github.io\/linux_basic.html","datePublished": "2024-07-05T22:03:57+09:00","dateModified": "2024-07-09T00:42:35+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
                 "@type": "Person",
@@ -394,7 +403,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2024-07-05</span>
+                <span>Updated on 2024-07-09</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
@@ -422,7 +431,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://github.com/ChoiSeungWoo98" target="_blank">개발 기록</a></span></div>
         </div>
     </footer></div>

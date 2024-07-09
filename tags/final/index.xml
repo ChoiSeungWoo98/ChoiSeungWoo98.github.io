@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>final - Tag - 승우의 개발 일기🧑🏻‍💻</title>
+        <title>Final - Tag - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/tags/final.html</link>
-        <description>final - Tag - 승우의 개발 일기🧑🏻‍💻</description>
+        <description>Final - Tag - 승우의 개발 일기🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 22 Jul 2023 18:37:42 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/final.html" rel="self" type="application/rss+xml" /><item>
     <title>[Java] final 사용법</title>
     <link>https://choiseungwoo98.github.io/final.html</link>

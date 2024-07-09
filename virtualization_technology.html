@@ -4,23 +4,33 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>가상화 기술 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="가상화 기술" />
-<meta property="og:description" content="어제 어수선한 분위기 속에 첫날이 마무리되고
+        <title>가상화 기술 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:url" content="https://choiseungwoo98.github.io/virtualization_technology.html">
+  <meta property="og:site_name" content="승우의 개발 일기🧑🏻‍💻">
+  <meta property="og:title" content="가상화 기술">
+  <meta property="og:description" content="어제 어수선한 분위기 속에 첫날이 마무리되고
 두번째 수업이 진행되었습니다.
 오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
-가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://choiseungwoo98.github.io/virtualization_technology.html" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-07-03T18:03:57+09:00" />
-<meta property="article:modified_time" content="2024-07-03T18:03:57+09:00" />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png"/>
+가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-03T18:03:57+09:00">
+    <meta property="article:modified_time" content="2024-07-09T00:42:35+09:00">
+    <meta property="article:tag" content="KakaoTechBootCamp">
+    <meta property="article:tag" content="BootCamp">
+    <meta property="article:tag" content="가상화기술">
+    <meta property="article:tag" content="IaaS">
+    <meta property="article:tag" content="PaaS">
+    <meta property="article:tag" content="SaaS">
+    <meta property="og:image" content="https://choiseungwoo98.github.io/logo.png">
 
-<meta name="twitter:title" content="가상화 기술"/>
-<meta name="twitter:description" content="어제 어수선한 분위기 속에 첫날이 마무리되고
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png">
+  <meta name="twitter:title" content="가상화 기술">
+  <meta name="twitter:description" content="어제 어수선한 분위기 속에 첫날이 마무리되고
 두번째 수업이 진행되었습니다.
 오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
-가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다."/>
+가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다.">
 <meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
 <meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/virtualization_technology.html" /><link rel="prev" href="https://choiseungwoo98.github.io/cloud_ot.html" /><link rel="next" href="https://choiseungwoo98.github.io/cloud_architecture.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -34,7 +44,7 @@
             "@type": "WebPage",
             "@id": "https:\/\/choiseungwoo98.github.io\/virtualization_technology.html"
         },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, 가상화기술, IaaS, PaaS, SaaS","wordcount":  233 ,
-        "url": "https:\/\/choiseungwoo98.github.io\/virtualization_technology.html","datePublished": "2024-07-03T18:03:57+09:00","dateModified": "2024-07-03T18:03:57+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        "url": "https:\/\/choiseungwoo98.github.io\/virtualization_technology.html","datePublished": "2024-07-03T18:03:57+09:00","dateModified": "2024-07-09T00:42:35+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
                 "@type": "Person",
@@ -193,7 +203,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2024-07-03</span>
+                <span>Updated on 2024-07-09</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
@@ -221,7 +231,7 @@
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://github.com/ChoiSeungWoo98" target="_blank">개발 기록</a></span></div>
         </div>
     </footer></div>

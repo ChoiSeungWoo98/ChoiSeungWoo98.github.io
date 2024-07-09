@@ -4,23 +4,31 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>[Java] Spring Boot, Websocket &#43; STOMP 사용하기 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="[Java] Spring Boot, Websocket &#43; STOMP 사용하기" />
-<meta property="og:description" content=" 일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?
+        <title>[Java] Spring Boot, Websocket &#43; STOMP 사용하기 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:url" content="https://choiseungwoo98.github.io/websocket.html">
+  <meta property="og:site_name" content="승우의 개발 일기🧑🏻‍💻">
+  <meta property="og:title" content="[Java] Spring Boot, Websocket &#43; STOMP 사용하기">
+  <meta property="og:description" content=" 일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?
 같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.
 Web Socket을 사용한 코드 게시물은 추후에 작성하겠습니다!! 아래 코드는 첨부했습니다!
-포스트 작성 시 참고한 링크 코드 " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://choiseungwoo98.github.io/websocket.html" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-05-06T19:29:42+09:00" />
-<meta property="article:modified_time" content="2023-08-19T16:10:12+09:00" />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png"/>
+포스트 작성 시 참고한 링크 코드 ">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-05-06T19:29:42+09:00">
+    <meta property="article:modified_time" content="2023-08-19T16:10:12+09:00">
+    <meta property="article:tag" content="WebSocket">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Spring-Boot">
+    <meta property="article:tag" content="웹소켓">
+    <meta property="og:image" content="https://choiseungwoo98.github.io/logo.png">
 
-<meta name="twitter:title" content="[Java] Spring Boot, Websocket &#43; STOMP 사용하기"/>
-<meta name="twitter:description" content=" 일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png">
+  <meta name="twitter:title" content="[Java] Spring Boot, Websocket &#43; STOMP 사용하기">
+  <meta name="twitter:description" content=" 일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?
 같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.
 Web Socket을 사용한 코드 게시물은 추후에 작성하겠습니다!! 아래 코드는 첨부했습니다!
-포스트 작성 시 참고한 링크 코드 "/>
+포스트 작성 시 참고한 링크 코드 ">
 <meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
 <meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/websocket.html" /><link rel="prev" href="https://choiseungwoo98.github.io/servereventtoclient.html" /><link rel="next" href="https://choiseungwoo98.github.io/differencebetweenjdkandjre.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -164,7 +172,7 @@ Web Socket을 사용한 코드 게시물은 추후에 작성하겠습니다!! �
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://github.com/ChoiSeungWoo98" target="_blank">개발 기록</a></span></div>
         </div>
     </footer></div>

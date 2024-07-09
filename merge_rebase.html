@@ -4,27 +4,34 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>[Git] Merge와 Rebase 차이 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="[Git] Merge와 Rebase 차이" />
-<meta property="og:description" content="프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.
-현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&hellip;
+        <title>[Git] Merge와 Rebase 차이 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:url" content="https://choiseungwoo98.github.io/merge_rebase.html">
+  <meta property="og:site_name" content="승우의 개발 일기🧑🏻‍💻">
+  <meta property="og:title" content="[Git] Merge와 Rebase 차이">
+  <meta property="og:description" content="프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.
+현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다…
 어떻게 해야 history를 잘 관리 할 수 있는지 궁금하였고 사수의 도움으로 rebase하는 것을 알게 되었다.
 rebase 를 알고 사용하고 있지만 merge와 rebase의 차이점을 명확하게 알고 싶어 찾아보았다.
 들어가기 앞서 merge와 rebase의 차이를 알아보기 전에 이것들은 어떤 상황에서 사용하며 사용하면 어떤 일이 일어나는지 부터 간단하게 알아보고자 한다.
-Git이란?" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://choiseungwoo98.github.io/merge_rebase.html" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-03-05T04:30:49+09:00" />
-<meta property="article:modified_time" content="2023-03-05T04:30:49+09:00" />
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png"/>
+Git이란?">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-03-05T04:30:49+09:00">
+    <meta property="article:modified_time" content="2023-03-05T04:30:49+09:00">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="Merge">
+    <meta property="article:tag" content="Rebase">
+    <meta property="og:image" content="https://choiseungwoo98.github.io/logo.png">
 
-<meta name="twitter:title" content="[Git] Merge와 Rebase 차이"/>
-<meta name="twitter:description" content="프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.
-현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&hellip;
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png">
+  <meta name="twitter:title" content="[Git] Merge와 Rebase 차이">
+  <meta name="twitter:description" content="프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.
+현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다…
 어떻게 해야 history를 잘 관리 할 수 있는지 궁금하였고 사수의 도움으로 rebase하는 것을 알게 되었다.
 rebase 를 알고 사용하고 있지만 merge와 rebase의 차이점을 명확하게 알고 싶어 찾아보았다.
 들어가기 앞서 merge와 rebase의 차이를 알아보기 전에 이것들은 어떤 상황에서 사용하며 사용하면 어떤 일이 일어나는지 부터 간단하게 알아보고자 한다.
-Git이란?"/>
+Git이란?">
 <meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
 <meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/merge_rebase.html" /><link rel="prev" href="https://choiseungwoo98.github.io/branch.html" /><link rel="next" href="https://choiseungwoo98.github.io/workflow.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -226,7 +233,7 @@ rebase를 하여 <strong>작업 순서대로 history를 관리하고 불필요�
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://github.com/ChoiSeungWoo98" target="_blank">개발 기록</a></span></div>
         </div>
     </footer></div>

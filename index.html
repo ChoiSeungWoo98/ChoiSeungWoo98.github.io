@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.111.3">
+	<meta name="generator" content="Hugo 0.128.2">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:title" content="승우의 개발 일기🧑🏻‍💻" />
-<meta property="og:description" content="Hugo theme - LoveIt" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://choiseungwoo98.github.io/" /><meta property="og:image" content="https://choiseungwoo98.github.io/logo.png"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png"/>
+        <title>승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:url" content="https://choiseungwoo98.github.io/">
+  <meta property="og:site_name" content="승우의 개발 일기🧑🏻‍💻">
+  <meta property="og:title" content="승우의 개발 일기🧑🏻‍💻">
+  <meta property="og:description" content="Hugo theme - LoveIt">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://choiseungwoo98.github.io/logo.png">
 
-<meta name="twitter:title" content="승우의 개발 일기🧑🏻‍💻"/>
-<meta name="twitter:description" content="Hugo theme - LoveIt"/>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png">
+  <meta name="twitter:title" content="승우의 개발 일기🧑🏻‍💻">
+  <meta name="twitter:description" content="Hugo theme - LoveIt">
 <meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
 <meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="승우의 개발 일기🧑🏻‍💻">
     <link rel="feed" href="/index.xml" type="application/rss+xml" title="승우의 개발 일기🧑🏻‍💻"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -189,6 +192,13 @@
     }
 
 </style><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/docker_basic.html">Docker 기초</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-07-09">2024-07-09</time></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/docker.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Docker</a></span></div><div class="content">기존에 혼자 Docker에 대해 잠깐 공부한 적 있지만 심도있게 다루지는 않았습니다. 카카오 테크 부트캠프를 시작하면서 클라우드 수업을 듣기 시작했고 docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습하고자 합니다.
+Docker 개념 컨테이너 기반의 오픈소스 가상화 플랫폼으로 애플리케이션을 소프트웨어의 실행 환경과 함께 패키징해 손쉽게 배포, 실행 할 수 있도록 도와준다.
+주요 개념 Image : 애플리케이션과 필요한 모든 종속성(라이브러리, 설정 파일 등)을 포함하는 읽기 전용 템플릿, 컨테이너를 만드는데 사용 Container : 이미지를 실행한 상태로 격리된 애플리케이션 실행 환경 제공, 독립적으로 실행되며 호스트 시스템 리소스 공유 Dockerfile : 이미지 정의하는 설정 파일, 이미지를 빌드하는데 필요한 명령어 포함 DockerHub : Docker 이미지 중앙 저장소로 공개 또는 개인 저장소로 사용 가능 동작 방식 Docker Daemon : Docker에 핵심 프로세스로 컨테이너 생성 및 관리 Client : 사용자와 데몬 간의 인터페이스 역할 수행 이미지 생성 : Dockerfile을 이용해 이미지 생성, 각 명령어는 새로운 레이어 생성 컨테이너 실행 : 이미지를 사용해 컨테이너 실행, 이미지의 읽기 전용 레이어 위에 쓰기 가능한 레이어 추가 최적화 방법 다단계 빌드 사용 : 여러 단계에 걸쳐 빌드해 중간 산출물을 제거를 통해 불필요한 빌드 단계와 종속성을 제거하여 경량화 캐시 활용 : Dockerfile 명령어 순서를 최적화하여 빌드 속도 개선 불필요한 파일 제거 : 이미지에 포함되지 않아도 되는 파일을 .</div><div class="post-footer">
+        <a href="/docker_basic.html">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp.html">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp.html">BootCamp</a>,&nbsp;<a href="/tags/docker.html">Docker</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/linux_detail.html">Linux 심화</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-07-09">2024-07-09</time></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/linux.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Linux</a></span></div><div class="content">리눅스에 대해 배웠다.
 오늘은 실습이 주를 이뤘다. 각각의 명령어가 무슨 일을 하는지 모르다 보니 사실상 한컴타자연습 느낌.. 이렇구나 하고 넘어가는 정도라 다시 정리&hellip;!
@@ -227,64 +237,6 @@ CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리,
 클라우드 아키텍처 애플리케이션을 실행할 기반이 되는 온라인 플랫폼을 제공할 목적으로 클라우드 구축에 필수적인 모든 구성 요소 및 기능을 연결하는 방식 서비스를 구축할 때, 클라우드 서비스의 다양한 기능들을 이용하여 인프라 구축 그림을 그리는 것 클라우드 아키텍처를 그리기 위한 배경지식들 OS(Operating System) 하드웨어를 사용하기 위해 필요한 소프트웨어이다. Ex : Windows, Mac, Linux 등 파일시스템 운영 체제에서 HD, SSD 또는 USB 플래시 드라이브와 같은 저장 장치에 있는 파일을 구성하고 관리하는 데 사용하는 구조이다.</div><div class="post-footer">
         <a href="/cloud_architecture.html">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp.html">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp.html">BootCamp</a>,&nbsp;<a href="/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98.html">클라우드아키텍처</a>,&nbsp;<a href="/tags/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98.html">아키텍처</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/virtualization_technology.html">가상화 기술</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-07-03">2024-07-03</time></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/%EA%B0%80%EC%83%81%ED%99%94.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>가상화</a></span></div><div class="content">어제 어수선한 분위기 속에 첫날이 마무리되고
-두번째 수업이 진행되었습니다.
-오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
-가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다.</div><div class="post-footer">
-        <a href="/virtualization_technology.html">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp.html">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp.html">BootCamp</a>,&nbsp;<a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0.html">가상화기술</a>,&nbsp;<a href="/tags/iaas.html">IaaS</a>,&nbsp;<a href="/tags/paas.html">PaaS</a>,&nbsp;<a href="/tags/saas.html">SaaS</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/cloud_ot.html">부트캠프 시작(클라우드 OT)</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-07-02">2024-07-02</time></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>클라우드</a></span></div><div class="content">어제 OT를 잘 마치고 오늘 첫번째 수업 날 입니다!
-오늘은 별다른 수업 없이 ZEP에 접속하고 노션(단체, 개인 목표를 작성)을 만들었습니다. 진도를 나가지 않아 엄청 어수선한 분위기 속에 어떻게 되련지&hellip;. 아침에 말씀해주셨던 부분 중 일부분을 찾아보고 작성하였습니다.
-쿠버네티스 컨테이너화 된 애플리케이션의 자동화(Deploy, Scaling 등을 제공) 하는 시스템 쿠버네티스를 운영하기 위한 서버가 따로 필요하다. 항상 쿠버네티스가 솔루션인가는 고민해볼 필요가 있다. 서버의 이중화는 반드시 필요한가? 정답은 없는 부분이라 섣부르게 답변하기 어렵지만 내 생각을 정리하자면 반드시 필요하지는 않다고 생각한다.</div><div class="post-footer">
-        <a href="/cloud_ot.html">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp.html">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp.html">BootCamp</a>,&nbsp;<a href="/tags/%EC%84%9C%EB%B2%84%EC%9D%B4%EC%A4%91%ED%99%94.html">서버이중화</a>,&nbsp;<a href="/tags/%EC%95%88%EC%A0%95%EC%84%B1vs%ED%9A%A8%EC%9C%A8%EC%84%B1.html">안정성vs효율성</a>,&nbsp;<a href="/tags/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4.html">쿠버네티스</a>,&nbsp;<a href="/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B2%BD%ED%97%98.html">클라우드경험</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/string_method.html">String_Method</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-08-20">2023-08-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/java.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div><div class="content">커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘의 질문! String 클래스의 메서드는 무엇이 있을까?
-오늘은 해당 질문에 대한 답변을 정리해보려 한다.
-length(): 문자열의 길이를 반환합니다. isEmpty(): 문자열이 비어있는지 확인합니다. equals(Object obj): 주어진 객체와 문자열이 동일한지 비교합니다. equalsIgnoreCase(String str): 대소문자를 무시하고 문자열을 비교합니다. indexOf(String str): 지정된 문자열이 처음으로 나타나는 인덱스를 반환합니다. substring(int beginIndex): 지정된 인덱스부터 문자열 끝까지의 부분 문자열을 반환합니다. substring(int beginIndex, int endIndex): 지정된 범위의 부분 문자열을 반환합니다.</div><div class="post-footer">
-        <a href="/string_method.html">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java-basic.html">Java-Basic</a>,&nbsp;<a href="/tags/java.html">Java</a>,&nbsp;<a href="/tags/string.html">String</a>,&nbsp;<a href="/tags/method.html">Method</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/stringreverser.html">[Java] 문자열을 반전 시키는 가장 좋은 방법</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-08-20">2023-08-20</time></span>&nbsp;<span class="post-category">included in <a href="/categories/java.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div><div class="content">커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘의 질문! 문자열을 반전 시키는 가장 좋은 방법은 무엇인가?
-오늘은 해당 질문에 대한 답변을 정리해보려 한다.
-문자열을 반전 시키는 가장 좋은 방법이란 문자열을 반전 시키는 방법은 정말 많이 있다.
-예를 들어 반복문을 사용하는 방법, 라이브러리 함수를 이용하는 방법, 재귀함수를 이용하는 방법 등 정말 다양한 방법이 있다.
-이 중에서 효율이 좋다고 생각하는 방법 1가지에 대해 알아보고자 한다.
-StringBuilder를 사용해 문자열 반전 시키기 자바에서 문자열을 반전 시키는 가장 일반적인 방법으로 StringBuilder의 reverse() 메서드를 사용하는 방법이다.</div><div class="post-footer">
-        <a href="/stringreverser.html">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java-basic.html">Java-Basic</a>,&nbsp;<a href="/tags/java.html">Java</a>,&nbsp;<a href="/tags/string.html">String</a>,&nbsp;<a href="/tags/reverse.html">Reverse</a>,&nbsp;<a href="/tags/reversestring.html">ReverseString</a>,&nbsp;<a href="/tags/stringbuilder.html">StringBuilder</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/string.html">[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-08-19">2023-08-19</time></span>&nbsp;<span class="post-category">included in <a href="/categories/java.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div><div class="content">커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
-오늘은 여러가지 질문 중 String에 대해 알아보고자 한다. String은 기본 데이터 타입인지? 문자열을 조작하는 클래스는 무엇이 있는지?
-String은 무엇인가? 기본 자료형(int, float, char, boolean)처럼 자주 사용되는 class이다.
-String은 이 기본 자료형들과는 다르게 참조 자료형 class이다.
-참조 자료형이란 객체 자체에 값을 가지는 것이 아닌 객체에는 referenece(주소) 값을 갖고 있고 해당 reference에 객체의 값이 있는 형태다.
-String은 기본 데이터 타입인가? 위에서도 말씀 드렸지만 String은 기본 데이터 타입이 아닌 참조 자료형 클래스 이다.</div><div class="post-footer">
-        <a href="/string.html">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java-basic.html">Java-Basic</a>,&nbsp;<a href="/tags/java.html">Java</a>,&nbsp;<a href="/tags/string.html">String</a>,&nbsp;<a href="/tags/class.html">Class</a>,&nbsp;<a href="/tags/stringbuffer.html">StringBuffer</a>,&nbsp;<a href="/tags/stringbuilder.html">StringBuilder</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/math.html">[Java] Math 클래스</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-08-19">2023-08-19</time></span>&nbsp;<span class="post-category">included in <a href="/categories/java.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div><div class="content">커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
-오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.
-Math 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.
-1. Math에 정의된 대표적인 상수 Math.PI : 원주율 π (약 3.141592653589793) Math.E : 자연 상수 e (약 2.718281828459045) 2. Math에 정의된 대표적인 메서드 abs(int a) / abs(long a) : 정수의 절댓값을 반환합니다. ceil(double a) : 주어진 숫자보다 크거나 같은 최소 정수를 반환합니다.</div><div class="post-footer">
-        <a href="/math.html">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java-basic.html">Java-Basic</a>,&nbsp;<a href="/tags/java.html">Java</a>,&nbsp;<a href="/tags/math.html">Math</a>,&nbsp;<a href="/tags/class.html">Class</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/naming.html">[Java] 자바 네이밍 규칙(Java Naming Convention)</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-08-19">2023-08-19</time></span>&nbsp;<span class="post-category">included in <a href="/categories/java.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div><div class="content">프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.
-그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!
-오늘 정리할 네이밍 규칙은 Java 이다.
-1. 네이밍 규칙이란? 프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다. 이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다. 2. 네이밍 규칙을 사용하면 따라오는 효과 가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다.</div><div class="post-footer">
-        <a href="/naming.html">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java-basic.html">Java-Basic</a>,&nbsp;<a href="/tags/java.html">Java</a>,&nbsp;<a href="/tags/naming.html">Naming</a>,&nbsp;<a href="/tags/convention.html">Convention</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -293,9 +245,17 @@ Math 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 �
                     <span class="page-link">
                         <a href="/page/2.html">2</a>
                     </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/3.html">3</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/4.html">4</a>
+                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://github.com/ChoiSeungWoo98" target="_blank">개발 기록</a></span></div>
         </div>
     </footer></div>
