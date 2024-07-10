@@ -2,17 +2,16 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://choiseungwoo98.github.io/tags/bootcamp.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/docker.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories/docker.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/docker_basic.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/dockerfile_basic.html</loc><lastmod>2024-07-09T16:16:44&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/posts.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/bootcamp.html</loc><lastmod>2024-07-10T17:25:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories.html</loc><lastmod>2024-07-10T17:25:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/docker.html</loc><lastmod>2024-07-10T17:25:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/docker.html</loc><lastmod>2024-07-10T17:25:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/dockerfile_basic.html</loc><lastmod>2024-07-10T17:25:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</loc><lastmod>2024-07-10T17:25:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html</loc><lastmod>2024-07-10T17:25:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/posts.html</loc><lastmod>2024-07-10T17:25:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags.html</loc><lastmod>2024-07-10T17:25:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/</loc><lastmod>2024-07-10T17:25:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/cgroup.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/chroot.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/categories/linux.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -21,6 +20,7 @@
             <loc>https://choiseungwoo98.github.io/tags/overlayfs.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/uds.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/docker_basic.html</loc><lastmod>2024-07-09T17:47:22&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/linux.html</loc><lastmod>2024-07-09T00:42:35&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/linux_basic.html</loc><lastmod>2024-07-09T00:42:35&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/%EA%B8%B0%EC%B4%88.html</loc><lastmod>2024-07-09T00:42:35&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
