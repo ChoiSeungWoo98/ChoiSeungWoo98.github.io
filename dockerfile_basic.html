@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Dockerfile 기초 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:url" content="https://choiseungwoo98.github.io/dockerfile_basic.html">
+  <meta property="og:site_name" content="승우의 개발 일기🧑🏻‍💻">
+  <meta property="og:title" content="Dockerfile 기초">
+  <meta property="og:description" content="어제는 도커의 개념과 동작 방식에 대해 정리하였습니다. 오늘은 docker를 실질적으로 사용해보면서 필요한 내용을 정리해보고자 합니다.
+Dockerfile 개념 이미지 생성 목적으로 작성되는 파일
+특징 환경 일관성 : 개발, 테스트, 운영 등 모든 환경에서 동일한 설정 유지 이식성 : 다양한 운영체제에서 동일하게 동작 자동화 : CI/CD 파이프라인 과정에서 빌드 및 배포 과정 자동화 반복 가능성 : 동일한 방식으로 이미지를 빌드해 반복 가능한 환경 제공 확장성 : 마이크로 아키텍처를 이용해 쉽게 확장 지시자 Dockerfile 만들기 이미지 크기 최적화 멀티 스테이지 빌드 사용 : 불필요한 빌드 종속성 제거 불필요한 파일 제외 : .">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-09T16:16:44+09:00">
+    <meta property="article:modified_time" content="2024-07-09T16:16:44+09:00">
+    <meta property="article:tag" content="KakaoTechBootCamp">
+    <meta property="article:tag" content="BootCamp">
+    <meta property="article:tag" content="Docker">
+    <meta property="og:image" content="https://choiseungwoo98.github.io/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png">
+  <meta name="twitter:title" content="Dockerfile 기초">
+  <meta name="twitter:description" content="어제는 도커의 개념과 동작 방식에 대해 정리하였습니다. 오늘은 docker를 실질적으로 사용해보면서 필요한 내용을 정리해보고자 합니다.
+Dockerfile 개념 이미지 생성 목적으로 작성되는 파일
+특징 환경 일관성 : 개발, 테스트, 운영 등 모든 환경에서 동일한 설정 유지 이식성 : 다양한 운영체제에서 동일하게 동작 자동화 : CI/CD 파이프라인 과정에서 빌드 및 배포 과정 자동화 반복 가능성 : 동일한 방식으로 이미지를 빌드해 반복 가능한 환경 제공 확장성 : 마이크로 아키텍처를 이용해 쉽게 확장 지시자 Dockerfile 만들기 이미지 크기 최적화 멀티 스테이지 빌드 사용 : 불필요한 빌드 종속성 제거 불필요한 파일 제외 : .">
+<meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
+<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/dockerfile_basic.html" /><link rel="prev" href="https://choiseungwoo98.github.io/linux_detail.html" /><link rel="next" href="https://choiseungwoo98.github.io/docker_basic.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Dockerfile 기초",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/choiseungwoo98.github.io\/dockerfile_basic.html"
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, Docker","wordcount":  941 ,
+        "url": "https:\/\/choiseungwoo98.github.io\/dockerfile_basic.html","datePublished": "2024-07-09T16:16:44+09:00","dateModified": "2024-07-09T16:16:44+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
+                "@type": "Person",
+                "name": "choiseU"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Dockerfile 기초</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/docker.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Docker</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-09">2024-07-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;941 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#dockerfile">Dockerfile</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#개념">개념</a></li>
+            <li><a href="#특징">특징</a></li>
+            <li><a href="#지시자">지시자</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#dockerfile-만들기">Dockerfile 만들기</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#이미지-크기-최적화">이미지 크기 최적화</a></li>
+            <li><a href="#레이어-캐싱-활용">레이어 캐싱 활용</a></li>
+            <li><a href="#보안-고려">보안 고려</a></li>
+            <li><a href="#성능-최적화">성능 최적화</a></li>
+            <li><a href="#유지-관리-용이성">유지 관리 용이성</a></li>
+            <li><a href="#유지-관리-용이성-1">유지 관리 용이성</a></li>
+            <li><a href="#환경-변수-사용">환경 변수 사용</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#dorkerfile-deepdive">Dorkerfile DeepDive</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#multi-stage-build">Multi-Stage Build</a></li>
+            <li><a href="#layer-caching">Layer Caching</a></li>
+            <li><a href="#최적화">최적화</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#docker-저장소">Docker 저장소</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#docker-hub">Docker Hub</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#오늘의-실습">오늘의 실습</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>어제는 도커의 개념과 동작 방식에 대해 정리하였습니다.
+오늘은 docker를 실질적으로 사용해보면서 필요한 내용을 정리해보고자 합니다.</p>
+</blockquote>
+<h2 id="dockerfile">Dockerfile</h2>
+<hr>
+<h4 id="개념">개념</h4>
+<p>이미지 생성 목적으로 작성되는 파일</p>
+<h4 id="특징">특징</h4>
+<ul>
+<li>환경 일관성 : 개발, 테스트, 운영 등 모든 환경에서 동일한 설정 유지</li>
+<li>이식성 : 다양한 운영체제에서 동일하게 동작</li>
+<li>자동화 : CI/CD 파이프라인 과정에서 빌드 및 배포 과정 자동화</li>
+<li>반복 가능성 : 동일한 방식으로 이미지를 빌드해 반복 가능한 환경 제공</li>
+<li>확장성 : 마이크로 아키텍처를 이용해 쉽게 확장</li>
+</ul>
+<h4 id="지시자">지시자</h4>
+<img style="margin-left: 60px; width: 500px;" src="/img/posts/docker/dockerfile-지시자.png">
+<img style="margin-left: 60px; width: 500px;" src="/img/posts/docker/dockerfile-지시자2.png">
+<div style="height: 50px;"></div>
+<h2 id="dockerfile-만들기">Dockerfile 만들기</h2>
+<hr>
+<h4 id="이미지-크기-최적화">이미지 크기 최적화</h4>
+<ul>
+<li>멀티 스테이지 빌드 사용 : 불필요한 빌드 종속성 제거</li>
+<li>불필요한 파일 제외 : .dockerignore을 사용해 빌드에 포함되지 않아도 되는 파일 제외</li>
+<li>불필요한 패키지 설치 X</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> golang:1.16 as builder WORKDIR /app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> . .<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> go build -o myapp<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> alpine-latest</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> --from<span class="o">=</span>builder /app/myapp . CMD <span class="o">[</span><span class="s2">&#34;./myapp&#34;</span><span class="o">]</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="레이어-캐싱-활용">레이어 캐싱 활용</h4>
+<ul>
+<li>변경이 적은 레이어 위에 변경이 잦은 레이어 위치 : 자주 변경되는 파일보다 덜 변경되는 파일을 추가해 빌드 캐시 최대한 활용</li>
+<li>OverayFS(Upperdir, Lowerdir, Workdir, Merged)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">COPY</span> package*.json ./ RUN npm install<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> . .<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="보안-고려">보안 고려</h4>
+<ul>
+<li>최소 권한 원칙 : 루트 권한이 아닌 사용자로 애플리케이션 실행</li>
+<li>최신 베이스 이미지 사용 : 보안 패치가 적용된 상태 유지</li>
+<li>비밀 정보 제외 : 환경 변수나 소스 코드에 비밀 정보가 포함되지 않도록 주의</li>
+</ul>
+<h4 id="성능-최적화">성능 최적화</h4>
+<ul>
+<li>적절한 베이스 이미지 선택 : 필요에 맞는 가장 작은 베이스 이미지 선택</li>
+<li>의존성 최소화 : 필요한 라이브러리, 도구만 설치</li>
+</ul>
+<h4 id="유지-관리-용이성">유지 관리 용이성</h4>
+<ul>
+<li>명확하고 일관된 Dockerfile 작성 : 주석 추가 및 지사자의 목적을 설명하고 일관된 코드 스타일 유지</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="c"># 베이스 이미지 설정</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> node:14</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 작업 디렉토리 설정</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 의존성 설치</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> package*.json ./ RUN npm install<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 애플리케이션 소스 코드 복사</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> . .<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 컨테이너 시작 명령어</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;npm&#34;</span><span class="p">,</span> <span class="s2">&#34;start&#34;</span><span class="p">]</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="유지-관리-용이성-1">유지 관리 용이성</h4>
+<ul>
+<li>명확하고 일관된 Dockerfile 작성 : 주석 추가 및 지사자의 목적을 설명하고 일관된 코드 스타일 유지</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="c"># 베이스 이미지 설정</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> node:14</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 작업 디렉토리 설정</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 의존성 설치</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> package*.json ./ RUN npm install<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 애플리케이션 소스 코드 복사</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> . .<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 컨테이너 시작 명령어</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;npm&#34;</span><span class="p">,</span> <span class="s2">&#34;start&#34;</span><span class="p">]</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="환경-변수-사용">환경 변수 사용</h4>
+<ul>
+<li>ENV 지시자나 ARG 지시자를 사용해 환경 변수 설정
+<ul>
+<li>ARG
+<ul>
+<li>Docker build 시간에 사용되는 변수로 빌드 할 때만 유효하며 컨테이너가 실행될 때는 사용 불가</li>
+<li>사용방법
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> alpine</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ARG</span> MY_ARG<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> <span class="nb">echo</span> <span class="s2">&#34;Build-time argument: </span><span class="nv">$MY_ARG</span><span class="s2">&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ENV</span> <span class="nv">MY_ENV</span><span class="o">=</span><span class="nv">$MY_ARG</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ARG</span> <span class="nv">DEFAULT_ARG</span><span class="o">=</span>default_value
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">RUN</span> <span class="nb">echo</span> <span class="s2">&#34;Default argument: </span><span class="nv">$DEFAULT_ARG</span><span class="s2">&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="sb">```</span>shell<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>docker build --build-arg <span class="nv">MY_ARG</span><span class="o">=</span>my_value -t my_image .<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 빌드할 때 MY_ARG의 값을 넘겨준다.</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>docker build --build-arg <span class="nv">MY_ARG</span><span class="o">=</span>my_value -t my_image .<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>ENV : 컨테이너 실행 시간에 사용할 환경 변수
+<ul>
+<li>사용방법
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="c"># ENV 사용 예시</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> alpine</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ENV</span> <span class="nv">MY_ENV</span><span class="o">=</span>my_value
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">RUN</span> <span class="nb">echo</span> <span class="s2">&#34;Environment variable: </span><span class="nv">$MY_ENV</span><span class="s2">&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ENV</span> <span class="nv">MY_ENV</span><span class="o">=</span>another_value
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">RUN</span> <span class="nb">echo</span> <span class="s2">&#34;Overridden environment variable: </span><span class="nv">$MY_ENV</span><span class="s2">&#34;</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">docker run -e <span class="nv">MY_ENV</span><span class="o">=</span>runtime_value my_image
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="dorkerfile-deepdive">Dorkerfile DeepDive</h2>
+<hr>
+<h4 id="multi-stage-build">Multi-Stage Build</h4>
+<ul>
+<li>Dockerfile 작성 시 여러 단계를 사용해 이미지를 빌드하는 기법</li>
+<li>빌드에만 필요한 툴, 라이브러리 또는 불필요한 파일, 도구는 최종 이미지에서 제거해 보안 강화 및 크기 감소 효과</li>
+<li>여러 단계로 빌드를 나누어 관리 용이</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="c"># Go 언어 이미지를 기반으로 설정 (golang:1.16)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> golang:1.16 AS builder</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 작업 디렉토리 설정 (/app).</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 소스 코드 복사.</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> . .<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 애플리케이션 빌드 (go build).</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> go build -o myapp .<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 경량의 Alpine Linux 이미지를 기반으로 설정</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> alpine:latest</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 작업 디렉토리 설정 (/app).</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># builder 스테이지에서 빌드된 애플리케이션 복사.</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> --from<span class="o">=</span>builder /app/myapp .<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Expose port 8080</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 8080</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 애플리케이션 실행 (CMD [&#34;./myapp&#34;]).</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;./myapp&#34;</span><span class="p">]</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="layer-caching">Layer Caching</h4>
+<ul>
+<li>이전에 빌드된 레이어를 캐시하여 빌드 속도 향상시키는 기술</li>
+<li>각 레이어가 해시를 사용해 동일한 명령어와 결과를 생성하면 이전에 빌드된 레이어 재사용</li>
+<li>Dockerfile에 명령어가 변경되면 그 이후 모든 레이어 다시 빌드</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="c"># Node.js 이미지를 기반으로 설정.</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> node:14</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#  package.json 파일을 복사. 이 레이어는 종속성을 설치하는 데 사용됩니다.</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> package.json /app/<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 작업 디렉토리 설정 (/app).</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 종속성을 설치. package.json이 변경되지 않으면 이 레이어는 캐시됩니다.</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm install<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 나머지 소스 코드를 복사. 이 명령어가 변경되면 이후 레이어는 다시 빌드됩니다.</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> . /app<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 애플리케이션을 빌드.</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm run build<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 애플리케이션 시작</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;npm&#34;</span><span class="p">,</span> <span class="s2">&#34;start&#34;</span><span class="p">]</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="최적화">최적화</h4>
+<p>이전에 작성해 놓은 부분 참고 <a href="https://choiseungwoo98.github.io/docker_basic.html#%ec%b5%9c%ec%a0%81%ed%99%94-%eb%b0%a9%eb%b2%95" target="_blank" rel="noopener noreffer ">Docker 개론</a></p>
+<div style="height: 50px;"></div>
+<h2 id="docker-저장소">Docker 저장소</h2>
+<hr>
+<h4 id="docker-hub">Docker Hub</h4>
+<ul>
+<li>이미지 호스팅 서비스 : 개인이 이미지를 만들어 배포 가능, 공식 저장소의 소프트웨어 포함</li>
+<li>Docker Local Registry : 로컬 환경에서 관리 및 사용 가능</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="오늘의-실습">오늘의 실습</h2>
+<hr>
+<ul>
+<li>dockerfile을 통해 이미지를 만들고 Docker Hub에 repository 생성하기 및 내려받기</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 테스트 폴더 생성</span>
+</span></span><span class="line"><span class="cl">mkdir dockerfile-test
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Dockerfile 파일, 간단한 테스트용 Python 파일, 필요한 패키지와 버전을 명시하는 requirements 파일 생성</span>
+</span></span><span class="line"><span class="cl">touch Dockerfile app.py requirements.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 파일 내용 수정(상황에 맞게 작성)</span>
+</span></span><span class="line"><span class="cl">cat Dockerfile
+</span></span><span class="line"><span class="cl"><span class="c1"># Docker 로그인</span>
+</span></span><span class="line"><span class="cl">docker login
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 이미지 빌드</span>
+</span></span><span class="line"><span class="cl">docker -f Dockerfile -t <span class="o">{</span>user-name<span class="o">}</span>/<span class="o">{</span>repo-name<span class="o">}</span> .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 내 레포지토리에 이미지 생성</span>
+</span></span><span class="line"><span class="cl">docker push <span class="o">{</span>user-name<span class="o">}</span>/<span class="o">{</span>repo-name<span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 실행 및 컨테이너 접속</span>
+</span></span><span class="line"><span class="cl">docker run -it <span class="o">{</span>Container<span class="o">}</span> /bin/bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Docker 객체에 대한 자세한 정보 출력</span>
+</span></span><span class="line"><span class="cl">docker inspect <span class="o">{</span>Container_id or name<span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 이미지 실행 반복적으로</span>
+</span></span><span class="line"><span class="cl">docker run -d <span class="o">{</span>image<span class="o">}</span> sleep infinity
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 실행되고 있는 컨테이너의 모든 아이디 값 가져오기</span>
+</span></span><span class="line"><span class="cl">docker ps -q
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 실행되고 있는 컨테이너 전체 종료</span>
+</span></span><span class="line"><span class="cl">docker stop <span class="k">$(</span>docker ps -q<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 생성한 레포지토리에서 이미지 내려받기</span>
+</span></span><span class="line"><span class="cl">docker pull <span class="o">{</span>user-name<span class="o">}</span>/<span class="o">{</span>repo-name<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 50px;"></div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-07-09</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/dockerfile_basic.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/dockerfile_basic.html" data-title="Dockerfile 기초" data-hashtags="KakaoTechBootCamp,BootCamp,Docker"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/dockerfile_basic.html" data-hashtag="KakaoTechBootCamp"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/dockerfile_basic.html" data-title="Dockerfile 기초"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/dockerfile_basic.html" data-title="Dockerfile 기초"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/dockerfile_basic.html" data-title="Dockerfile 기초"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp.html">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp.html">BootCamp</a>,&nbsp;<a href="/tags/docker.html">Docker</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/linux_detail.html" class="prev" rel="prev" title="Linux 심화"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Linux 심화</a>
+            <a href="/docker_basic.html" class="next" rel="next" title="Docker 기초">Docker 기초<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://github.com/ChoiSeungWoo98" target="_blank">개발 기록</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"ChoiSeungWoo98/blog-comments"}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
