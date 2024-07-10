@@ -15,8 +15,8 @@ Docker 개념 컨테이너 기반의 오픈소스 가상화 플랫폼으로 애�
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-07-08T16:16:44+09:00">
-    <meta property="article:modified_time" content="2024-07-09T17:47:22+09:00">
+    <meta property="article:published_time" content="2024-07-09T22:16:44+09:00">
+    <meta property="article:modified_time" content="2024-07-10T17:28:17+09:00">
     <meta property="article:tag" content="KakaoTechBootCamp">
     <meta property="article:tag" content="BootCamp">
     <meta property="article:tag" content="Docker">
@@ -31,7 +31,7 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
 Docker 개념 컨테이너 기반의 오픈소스 가상화 플랫폼으로 애플리케이션을 소프트웨어의 실행 환경과 함께 패키징해 손쉽게 배포, 실행 할 수 있도록 도와준다.
 주요 개념 Image : 애플리케이션과 필요한 모든 종속성(라이브러리, 설정 파일 등)을 포함하는 읽기 전용 템플릿, 컨테이너를 만드는데 사용 Container : 이미지를 실행한 상태로 격리된 애플리케이션 실행 환경 제공, 독립적으로 실행되며 호스트 시스템 리소스 공유 Dockerfile : 이미지 정의하는 설정 파일, 이미지를 빌드하는데 필요한 명령어 포함 DockerHub : Docker 이미지 중앙 저장소로 공개 또는 개인 저장소로 사용 가능 동작 방식 Docker Daemon : Docker에 핵심 프로세스로 컨테이너 생성 및 관리 Client : 사용자와 데몬 간의 인터페이스 역할 수행 이미지 생성 : Dockerfile을 이용해 이미지 생성, 각 명령어는 새로운 레이어 생성 컨테이너 실행 : 이미지를 사용해 컨테이너 실행, 이미지의 읽기 전용 레이어 위에 쓰기 가능한 레이어 추가 최적화 방법 다단계 빌드 사용 : 여러 단계에 걸쳐 빌드해 중간 산출물을 제거를 통해 불필요한 빌드 단계와 종속성을 제거하여 경량화 캐시 활용 : Dockerfile 명령어 순서를 최적화하여 빌드 속도 개선 불필요한 파일 제거 : 이미지에 포함되지 않아도 되는 파일을 .">
 <meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
-<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/docker_basic.html" /><link rel="prev" href="https://choiseungwoo98.github.io/linux_basic.html" /><link rel="next" href="https://choiseungwoo98.github.io/linux_detail.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/docker_basic.html" /><link rel="prev" href="https://choiseungwoo98.github.io/linux_detail.html" /><link rel="next" href="https://choiseungwoo98.github.io/dockerfile_basic.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -43,7 +43,7 @@ Docker 개념 컨테이너 기반의 오픈소스 가상화 플랫폼으로 애�
             "@type": "WebPage",
             "@id": "https:\/\/choiseungwoo98.github.io\/docker_basic.html"
         },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, Docker","wordcount":  462 ,
-        "url": "https:\/\/choiseungwoo98.github.io\/docker_basic.html","datePublished": "2024-07-08T16:16:44+09:00","dateModified": "2024-07-09T17:47:22+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        "url": "https:\/\/choiseungwoo98.github.io\/docker_basic.html","datePublished": "2024-07-09T22:16:44+09:00","dateModified": "2024-07-10T17:28:17+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
                 "@type": "Person",
@@ -116,7 +116,7 @@ Docker 개념 컨테이너 기반의 오픈소스 가상화 플랫폼으로 애�
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker 기초</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/docker.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Docker</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-08">2024-07-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;462 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-09">2024-07-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;462 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -249,7 +249,7 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2024-07-09</span>
+                <span>Updated on 2024-07-10</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
@@ -268,8 +268,8 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
         </section>
     </div>
 
-    <div class="post-nav"><a href="/linux_basic.html" class="prev" rel="prev" title="Linux 기초"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Linux 기초</a>
-            <a href="/linux_detail.html" class="next" rel="next" title="Linux 심화">Linux 심화<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/linux_detail.html" class="prev" rel="prev" title="Linux 심화"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Linux 심화</a>
+            <a href="/dockerfile_basic.html" class="next" rel="next" title="Dockerfile 기초">Dockerfile 기초<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.

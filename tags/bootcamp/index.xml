@@ -3,10 +3,10 @@
         <title>BootCamp - Tag - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/tags/bootcamp.html</link>
         <description>BootCamp - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 09 Jul 2024 16:16:44 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/bootcamp.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 10 Jul 2024 16:16:44 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/bootcamp.html" rel="self" type="application/rss+xml" /><item>
     <title>Dockerfile 기초</title>
     <link>https://choiseungwoo98.github.io/dockerfile_basic.html</link>
-    <pubDate>Tue, 09 Jul 2024 16:16:44 &#43;0900</pubDate>
+    <pubDate>Wed, 10 Jul 2024 16:16:44 &#43;0900</pubDate>
     <author>choiseU</author>
     <guid>https://choiseungwoo98.github.io/dockerfile_basic.html</guid>
     <description><![CDATA[어제는 도커의 개념과 동작 방식에 대해 정리하였습니다.
@@ -17,7 +17,7 @@ Dockerfile 개념 이미지 생성 목적으로 작성되는 파일
 <item>
     <title>Docker 기초</title>
     <link>https://choiseungwoo98.github.io/docker_basic.html</link>
-    <pubDate>Mon, 08 Jul 2024 16:16:44 &#43;0900</pubDate>
+    <pubDate>Tue, 09 Jul 2024 22:16:44 &#43;0900</pubDate>
     <author>choiseU</author>
     <guid>https://choiseungwoo98.github.io/docker_basic.html</guid>
     <description><![CDATA[기존에 혼자 Docker에 대해 잠깐 공부한 적 있지만 심도있게 다루지는 않았습니다.
