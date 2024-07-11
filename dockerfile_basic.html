@@ -599,19 +599,19 @@ Dockerfile 개념 이미지 생성 목적으로 작성되는 파일
 </span></span><span class="line"><span class="cl">docker login
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 이미지 빌드</span>
-</span></span><span class="line"><span class="cl">docker -f Dockerfile -t <span class="o">{</span>user-name<span class="o">}</span>/<span class="o">{</span>repo-name<span class="o">}</span> .
+</span></span><span class="line"><span class="cl">docker -f Dockerfile -t &lt;user-name&gt;/&lt;repo-name&gt; .
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 내 레포지토리에 이미지 생성</span>
-</span></span><span class="line"><span class="cl">docker push <span class="o">{</span>user-name<span class="o">}</span>/<span class="o">{</span>repo-name<span class="o">}</span>
+</span></span><span class="line"><span class="cl">docker push &lt;user-name&gt;/&lt;repo-name&gt;
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 실행 및 컨테이너 접속</span>
-</span></span><span class="line"><span class="cl">docker run -it <span class="o">{</span>Container<span class="o">}</span> /bin/bash
+</span></span><span class="line"><span class="cl">docker run -it &lt;Container&gt; /bin/bash
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Docker 객체에 대한 자세한 정보 출력</span>
-</span></span><span class="line"><span class="cl">docker inspect <span class="o">{</span>Container_id or name<span class="o">}</span>
+</span></span><span class="line"><span class="cl">docker inspect &lt;Container_id or name&gt;
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 이미지 실행 반복적으로</span>
-</span></span><span class="line"><span class="cl">docker run -d <span class="o">{</span>image<span class="o">}</span> sleep infinity
+</span></span><span class="line"><span class="cl">docker run -d &lt;image&gt; sleep infinity
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 실행되고 있는 컨테이너의 모든 아이디 값 가져오기</span>
 </span></span><span class="line"><span class="cl">docker ps -q
@@ -620,7 +620,7 @@ Dockerfile 개념 이미지 생성 목적으로 작성되는 파일
 </span></span><span class="line"><span class="cl">docker stop <span class="k">$(</span>docker ps -q<span class="k">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 생성한 레포지토리에서 이미지 내려받기</span>
-</span></span><span class="line"><span class="cl">docker pull <span class="o">{</span>user-name<span class="o">}</span>/<span class="o">{</span>repo-name<span class="o">}</span>
+</span></span><span class="line"><span class="cl">docker pull &lt;user-name&gt;/&lt;repo-name&gt;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><div style="height: 50px;"></div>

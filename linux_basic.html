@@ -44,7 +44,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/choiseungwoo98.github.io\/linux_basic.html"
-        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, Linux, 리눅스, 기초","wordcount":  1079 ,
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, Linux, 리눅스, 기초","wordcount":  1076 ,
         "url": "https:\/\/choiseungwoo98.github.io\/linux_basic.html","datePublished": "2024-07-05T22:03:57+09:00","dateModified": "2024-07-09T00:42:35+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
@@ -118,7 +118,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Linux 기초</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/linux.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Linux</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-05">2024-07-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1079 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-05">2024-07-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1076 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -359,44 +359,44 @@
 <hr>
 <ul>
 <li>sudo : root(다른 사용자)의 명령 실행(sudo apt-get update)</li>
-<li>su : 사용자 변경(su {userName})</li>
-<li>adduser : 사용자 추가(adduser {userName})</li>
-<li>cat : 파일 내용 출력, 파일 연결 후 출력(cat {fileName})</li>
-<li>usermod : 사용자 속성 변경(usermod -aG {groupName} {userName})</li>
-<li>addgroup : 새로운 그룹 추가(addgroup {groupName})</li>
-<li>vim : 강력한 텍스트 편집기(vim {fileName})</li>
+<li>su : 사용자 변경(su <userName>)</li>
+<li>adduser : 사용자 추가(adduser <userName>)</li>
+<li>cat : 파일 내용 출력, 파일 연결 후 출력(cat <fileName>)</li>
+<li>usermod : 사용자 속성 변경(usermod -aG <groupName> <userName>)</li>
+<li>addgroup : 새로운 그룹 추가(addgroup <groupName>)</li>
+<li>vim : 강력한 텍스트 편집기(vim <fileName>)</li>
 <li>echo : 문자열 출력(echo &ldquo;Hello world!&rdquo;)</li>
 <li>cd(change Directory) : 디렉토리 변경(cd ..)</li>
-<li>chmod : 권한 변경(chmod {775 : 권한} {fileName})</li>
+<li>chmod : 권한 변경(chmod &lt;775 : 권한&gt; <fileName>)</li>
 <li>ls -al(ll) : 자세한 내용을 포함한 목록 표시</li>
 <li>ls : 디렉토리 내용 나열</li>
-<li>mv : 파일, 디렉토리 이름 변경 혹은 이동(mv {temp2 : 기존이름} {temp : 바꿀 이름})</li>
-<li>rm : 파일, 디렉토리 삭제(rm {fileName})</li>
+<li>mv : 파일, 디렉토리 이름 변경 혹은 이동(mv &lt;temp2 : 기존이름&gt; &lt;temp : 바꿀 이름&gt;)</li>
+<li>rm : 파일, 디렉토리 삭제(rm <fileName>)</li>
 <li>bash : bash 셀 실행</li>
 <li>exit : 현재 스크립트 종료</li>
 <li>passwd : 사용자 비밀번호 변경</li>
 <li>shadow : /etc/shadow 파일에 저장된 암호화된 비밀번호 관리</li>
 <li>hosts : /etc/hosts 파일 관리</li>
-<li>apt-get : 데비안 기반 시스템에서 패키지 관리(apt-get {install : 동작} {fileName})</li>
-<li>export : 셸 환경 변수 설정(export PATH=$PATH:{/new/path})</li>
+<li>apt-get : 데비안 기반 시스템에서 패키지 관리(apt-get &lt;install : 동작&gt; <fileName>)</li>
+<li>export : 셸 환경 변수 설정(export PATH=$PATH:&lt;/new/path&gt;)</li>
 <li>lsblk : 블록 장치 목록 표시</li>
 <li>df -TH : 파일 시스템의 디스크 공간 사용량 표사</li>
-<li>mkdir : 디렉토리 생성(mkdir {directoryName})</li>
-<li>rmdir : 빈 디렉토리 삭제(rmdir {directoryName})</li>
-<li>touch : 빈 파일 생성 or 기존 파일 타임 스탬프 변경(touch {fileName})</li>
-<li>head : 파일의 처음 몇 줄 출력(head {fileName})</li>
-<li>tail : 파일의 마지막 몇 줄 출력(tail {fileName})</li>
+<li>mkdir : 디렉토리 생성(mkdir <directoryName>)</li>
+<li>rmdir : 빈 디렉토리 삭제(rmdir <directoryName>)</li>
+<li>touch : 빈 파일 생성 or 기존 파일 타임 스탬프 변경(touch <fileName>)</li>
+<li>head : 파일의 처음 몇 줄 출력(head <fileName>)</li>
+<li>tail : 파일의 마지막 몇 줄 출력(tail <fileName>)</li>
 <li>pwd : 현재 경로 출력</li>
 <li>whoami : 현재 사용자 이름 출력</li>
 <li>top : 실시간 시스템 상태 모니터링</li>
 <li>df -h : 디스크 사용량을 읽기 쉽게 표시</li>
-<li>du -h : 디렉토리 사용량을 읽기 쉽게 표시(du -h {directoryName})</li>
+<li>du -h : 디렉토리 사용량을 읽기 쉽게 표시(du -h <directoryName>)</li>
 <li>ping : 네트워크 연결 상태 체크(ping <a href="https://www.google.com" target="_blank" rel="noopener noreffer ">www.google.com</a>)</li>
 <li>curl : 데이터 전송 및 가져오기(curl <a href="https://www.google.com" target="_blank" rel="noopener noreffer ">www.google.com</a>)</li>
 <li>ifconfig : 네트워크 인터페이스 구성 표시 및 변경</li>
 <li>ps : 현재 실행중인 프로세스 목록 표시</li>
-<li>find : 파일 시스템에서 파일과 디렉토리 검색(find {path} -name {fileName})</li>
-<li>service : 서비스 시작, 중지, 재시작, 상태 확인 등을 수행(service {serviceName} {start / stop / restart / status / &ndash;status-all})</li>
+<li>find : 파일 시스템에서 파일과 디렉토리 검색(find <path> -name <fileName>)</li>
+<li>service : 서비스 시작, 중지, 재시작, 상태 확인 등을 수행(service <serviceName> &lt;start / stop / restart / status / &ndash;status-all&gt;)</li>
 <li>ip addr : 네트워크 인터페이스와 IP 주소 관리 및 사용</li>
 </ul>
 </div><div class="post-footer" id="post-footer">
