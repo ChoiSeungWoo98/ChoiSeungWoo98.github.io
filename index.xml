@@ -3,9 +3,20 @@
         <title>승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/</link>
         <description>Hugo theme - LoveIt</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 10 Jul 2024 16:16:44 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 11 Jul 2024 13:13:32 &#43;0900</lastBuildDate>
             <atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Docker_conpose</title>
+    <link>https://choiseungwoo98.github.io/docker_conpose.html</link>
+    <pubDate>Thu, 11 Jul 2024 13:13:32 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/docker_conpose.html</guid>
+    <description><![CDATA[오늘은 docker compose에 대해 배웠습니다.
+이론이 많지는 않았지만
+앞으로 자주 사용할 것이란 생각이 들어 실습까지 다시 진행하며 복습하겠습니다.
+Docker compose 개념 여러 Docker Continer를 정의하고 실행할 수 있도록 도와주는 도구 docker-compose.yaml 파일을 사용해 서비스, 네트워크, 볼륨 등을 정의 기능 멀티 컨테이너 애플리케이션 정의 : docker-compose-yaml 파일을 통해 여러 컨테이너 정의 서비스 간 의존성 관리 : 여러 컨테이너 간의 의존성을 정의하고, 필요한 순서에 따라 컨테이너 시작 일관된 개발 환경 제공 : 동일한 docker-compose.]]></description>
+</item>
+<item>
     <title>Dockerfile 기초</title>
     <link>https://choiseungwoo98.github.io/dockerfile_basic.html</link>
     <pubDate>Wed, 10 Jul 2024 16:16:44 &#43;0900</pubDate>
@@ -102,16 +113,6 @@ CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리,
     <description><![CDATA[어제 OT를 잘 마치고 오늘 첫번째 수업 날 입니다!
 오늘은 별다른 수업 없이 ZEP에 접속하고 노션(단체, 개인 목표를 작성)을 만들었습니다. 진도를 나가지 않아 엄청 어수선한 분위기 속에 어떻게 되련지&hellip;. 아침에 말씀해주셨던 부분 중 일부분을 찾아보고 작성하였습니다.
 쿠버네티스 컨테이너화 된 애플리케이션의 자동화(Deploy, Scaling 등을 제공) 하는 시스템 쿠버네티스를 운영하기 위한 서버가 따로 필요하다. 항상 쿠버네티스가 솔루션인가는 고민해볼 필요가 있다. 서버의 이중화는 반드시 필요한가? 정답은 없는 부분이라 섣부르게 답변하기 어렵지만 내 생각을 정리하자면 반드시 필요하지는 않다고 생각한다.]]></description>
-</item>
-<item>
-    <title>String_Method</title>
-    <link>https://choiseungwoo98.github.io/string_method.html</link>
-    <pubDate>Sun, 20 Aug 2023 02:35:44 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/string_method.html</guid>
-    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘의 질문! String 클래스의 메서드는 무엇이 있을까?
-오늘은 해당 질문에 대한 답변을 정리해보려 한다.
-length(): 문자열의 길이를 반환합니다. isEmpty(): 문자열이 비어있는지 확인합니다. equals(Object obj): 주어진 객체와 문자열이 동일한지 비교합니다. equalsIgnoreCase(String str): 대소문자를 무시하고 문자열을 비교합니다. indexOf(String str): 지정된 문자열이 처음으로 나타나는 인덱스를 반환합니다. substring(int beginIndex): 지정된 인덱스부터 문자열 끝까지의 부분 문자열을 반환합니다. substring(int beginIndex, int endIndex): 지정된 범위의 부분 문자열을 반환합니다.]]></description>
 </item>
 </channel>
 </rss>
