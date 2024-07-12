@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>도커 이론 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:url" content="https://choiseungwoo98.github.io/docker_etc.html">
+        <title>Docker 이론 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:url" content="https://choiseungwoo98.github.io/docker_etc.html">
   <meta property="og:site_name" content="승우의 개발 일기🧑🏻‍💻">
-  <meta property="og:title" content="도커 이론">
+  <meta property="og:title" content="Docker 이론">
   <meta property="og:description" content="오늘은 실습보다 이론위주의 수업이었다.
 도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.
 Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 없이 실행시키는 모드 특징 시스템 전체에 대한 권한 없이 사용할 수 있어 잠재적 보안 위험을 낮출 수 있다. 모두 일반 사용자 권한으로 시스템 자원에 대한 접근 제한 Linux Capabilities 개념 리눅스 커널에서 제공하는 기능으로 시스템 관리 권한을 세분화하여 특정 작업에 대해 권한을 부여할 수 있다. 특징 컨테이너 생성 시 필요한 권한만 부여해 보안성 향상 Privileged : 컨테이너가 호스트 시스템의 모든 권한을 갖고 있음.">
@@ -14,7 +14,7 @@ Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 �
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-07-12T14:25:27+09:00">
-    <meta property="article:modified_time" content="2024-07-12T14:25:27+09:00">
+    <meta property="article:modified_time" content="2024-07-12T16:22:09+09:00">
     <meta property="article:tag" content="KakaoTechBootCamp">
     <meta property="article:tag" content="BootCamp">
     <meta property="article:tag" content="Docker">
@@ -23,7 +23,7 @@ Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 �
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png">
-  <meta name="twitter:title" content="도커 이론">
+  <meta name="twitter:title" content="Docker 이론">
   <meta name="twitter:description" content="오늘은 실습보다 이론위주의 수업이었다.
 도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.
 Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 없이 실행시키는 모드 특징 시스템 전체에 대한 권한 없이 사용할 수 있어 잠재적 보안 위험을 낮출 수 있다. 모두 일반 사용자 권한으로 시스템 자원에 대한 접근 제한 Linux Capabilities 개념 리눅스 커널에서 제공하는 기능으로 시스템 관리 권한을 세분화하여 특정 작업에 대해 권한을 부여할 수 있다. 특징 컨테이너 생성 시 필요한 권한만 부여해 보안성 향상 Privileged : 컨테이너가 호스트 시스템의 모든 권한을 갖고 있음.">
@@ -34,13 +34,13 @@ Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 �
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "도커 이론",
+        "headline": "Docker 이론",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/choiseungwoo98.github.io\/docker_etc.html"
-        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, Docker, security","wordcount":  314 ,
-        "url": "https:\/\/choiseungwoo98.github.io\/docker_etc.html","datePublished": "2024-07-12T14:25:27+09:00","dateModified": "2024-07-12T14:25:27+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, Docker, security","wordcount":  670 ,
+        "url": "https:\/\/choiseungwoo98.github.io\/docker_etc.html","datePublished": "2024-07-12T14:25:27+09:00","dateModified": "2024-07-12T16:22:09+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
                 "@type": "Person",
@@ -111,10 +111,10 @@ Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 �
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">도커 이론</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker 이론</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/docker.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Docker</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-12">2024-07-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;314 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-12">2024-07-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;670 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -145,6 +145,18 @@ Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 �
       </ul>
     </li>
     <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#reverse-shell">Reverse Shell</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#개념">개념</a></li>
+            <li><a href="#작동-원리">작동 원리</a></li>
+            <li><a href="#방어-방법">방어 방법</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#linux-root-디렉토리-정보">Linux root 디렉토리 정보</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -210,7 +222,7 @@ Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 �
 <ul>
 <li>Docker 이미지는 여러 레이어로 구성되며, 취약점 발견 시 해당 레이어만 업데이트 해 보안성 유지</li>
 <li>이미지 전체를 다시 빌드할 필요 없이 특정 레이어만 업데이트 할 수 있어 효율적이다.</li>
-<li>AppArmor : 리눅스 커널에서 제공하는 보안 모듈로 애플리케이션 접근할 수 있는 자원을 제어</li>
+<li>AppArmor : 리눅스 커널에서 제공하는 보안 모듈로 애플리케이션 접근할 수 있는 자원을 제어(강제적 접근 제한 chmod, chown, setuid 등보다 더 로우한 거)</li>
 <li>Seccomp : 리눅스 커널에서 제공하는 보안 기능으로 시스템 콜을 필터링해 애플리케이션을 실행할 수 있는 시스템 콜 제한</li>
 </ul>
 </li>
@@ -237,6 +249,96 @@ Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 �
 <li>CAP_SYS_PTRACE : 다른프로세스추적</li>
 </ul>
 <div style="height: 50px;"></div>
+<h2 id="reverse-shell">Reverse Shell</h2>
+<hr>
+<h4 id="개념">개념</h4>
+<ul>
+<li>공격자가 타겟 시스템에 접속하여 원격으로 명령을 실행할 수 있도록 하는 공격 기법 중 하나</li>
+<li>외부에서 내부로 접속을 가능하게 해 방화벽을 우회하는 데 사용</li>
+</ul>
+<h4 id="작동-원리">작동 원리</h4>
+<ul>
+<li>공격자 준비 : 자신의 시스템에서 특정 포트를 열어 리스닝 상태로 대기(공격자 시스템)</li>
+<li>타겟 시스템 접속 : 타겟 시스템에 악성 코드 또는 스크립트를 실행시켜, 시스템으로 연결(타겟 시스템에서 공격 시스템 연결)</li>
+<li>연결 수립 : 연결을 통해 타겟 시스템에서 명령을 실행할 수 있는 쉘에 접근</li>
+<li>명령 실행 : 공격자가 타겟 시스템에서 원하는 명령을 실행</li>
+</ul>
+<h4 id="방어-방법">방어 방법</h4>
+<ul>
+<li>방화벽 설정 강화 : 내부에서 외부로의 불필요한 연결 제한, 중요한 시스템에서는 허용된 IP와 포트만 외부로 연결 설정</li>
+<li>네트워크 모니터링 : 이상한 네트워크 트래픽을 감지하기 위해 네트워크 트래픽을 지속적으로 모니터링</li>
+<li>IDS/IPS 사용 : 침입 탐지 시스템(IDS)이나 침입 방지 시스템(IPS)을 사용하여 의심스러운 활동을 실시간으로 탐지 및 차단합니다.</li>
+<li>보안 패치 적용 : 시스템과 애플리케이션의 보안 패치를 최신 상태로 유지하여 악성 코드가 실행될 수 있는 취약점을 최소화합니다.</li>
+<li>사용자 교육 : 소셜 엔지니어링 공격을 통해 리버스 셸이 설치될 수 있으므로, 사용자에게 피싱 이메일과 같은 공격 방법에 대한 교육 실시</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="linux-root-디렉토리-정보">Linux root 디렉토리 정보</h2>
+<hr>
+<ul>
+<li>
+<p>/proc : 시스템 상태, 하드웨어 정보, 프로세스 정보 등이 포함</p>
+<ul>
+<li>/proc/cpuinfo : CPU 정보</li>
+<li>/proc/meminfo : 메모리 상태</li>
+</ul>
+</li>
+<li>
+<p>/etc : 시스템 및 애플리케이션의 설정 파일들이 저장</p>
+<ul>
+<li>/etc/passwd : 사용자 계정 정보</li>
+<li>/etc/fstab : 파일 시스템 마운트 정보</li>
+<li>/etc/hosts : 호스트명과 IP 매핑 정보</li>
+</ul>
+</li>
+<li>
+<p>/bin : 시스템 부팅과 기본 운영에 필요한 실행 파일들이 저장</p>
+<ul>
+<li>ls, cp, mv, rm 등의 명령어 위치</li>
+</ul>
+</li>
+<li>
+<p>/sbin : 시스템 관리와 관련된 명령어들이 위치</p>
+<ul>
+<li>reboot, ifconfig, iptables 등의 명령어가 포함</li>
+</ul>
+</li>
+<li>
+<p>/usr : 사용자 애플리케이션, 라이브러리, 헤더 파일 저장</p>
+<ul>
+<li>/usr/bin : 일반 사용자 명령어</li>
+<li>/usr/sbin : 시스템 관리자 명령어 위치</li>
+<li>/usr/lib : 라이브러리 파일 포함</li>
+</ul>
+</li>
+<li>
+<p>/var : 로그 파일, 스풀 디렉토리, 캐시 파일 등이 포함</p>
+<ul>
+<li>/var/log : 로그 파일</li>
+<li>/var/spool : 프린터와 메일 스풀 파일들이 저장</li>
+</ul>
+</li>
+<li>
+<p>/home : 각 사용자별 개인 파일과 설정 파일 저장</p>
+<ul>
+<li>사용자 user1의 홈 디렉토리는 /home/user1</li>
+</ul>
+</li>
+<li>
+<p>/tmp : 시스템 사용 중 임시로 생성되는 파일들이 위치, 시스템 재부팅 시 대부분의 파일이 삭제됨.</p>
+</li>
+<li>
+<p>/dev : 시스템 하드웨어와의 인터페이스를 제공하는 파일들이 포함</p>
+<ul>
+<li>/dev/sda1 : 첫 번째 하드 디스크의 첫 번째 파티션을 나타냄</li>
+</ul>
+</li>
+<li>
+<p>/lib : 커널 모듈과 공유 라이브러리 파일들이 포함</p>
+<ul>
+<li>/lib/modules : 커널 모듈 위치</li>
+</ul>
+</li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -248,7 +350,7 @@ Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 �
                             <a class="link-to-markdown" href="/docker_etc.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/docker_etc.html" data-title="도커 이론" data-hashtags="KakaoTechBootCamp,BootCamp,Docker,security"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/docker_etc.html" data-hashtag="KakaoTechBootCamp"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/docker_etc.html" data-title="도커 이론"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/docker_etc.html" data-title="도커 이론"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/docker_etc.html" data-title="도커 이론"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/docker_etc.html" data-title="Docker 이론" data-hashtags="KakaoTechBootCamp,BootCamp,Docker,security"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/docker_etc.html" data-hashtag="KakaoTechBootCamp"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/docker_etc.html" data-title="Docker 이론"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/docker_etc.html" data-title="Docker 이론"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/docker_etc.html" data-title="Docker 이론"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
