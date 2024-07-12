@@ -3,7 +3,17 @@
         <title>Docker - Category - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/categories/docker.html</link>
         <description>Docker - Category - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 11 Jul 2024 13:13:32 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/docker.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 12 Jul 2024 14:25:27 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/docker.html" rel="self" type="application/rss+xml" /><item>
+    <title>도커 이론</title>
+    <link>https://choiseungwoo98.github.io/docker_etc.html</link>
+    <pubDate>Fri, 12 Jul 2024 14:25:27 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/docker_etc.html</guid>
+    <description><![CDATA[오늘은 실습보다 이론위주의 수업이었다.
+도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.
+Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 없이 실행시키는 모드 특징 시스템 전체에 대한 권한 없이 사용할 수 있어 잠재적 보안 위험을 낮출 수 있다. 모두 일반 사용자 권한으로 시스템 자원에 대한 접근 제한 Linux Capabilities 개념 리눅스 커널에서 제공하는 기능으로 시스템 관리 권한을 세분화하여 특정 작업에 대해 권한을 부여할 수 있다. 특징 컨테이너 생성 시 필요한 권한만 부여해 보안성 향상 Privileged : 컨테이너가 호스트 시스템의 모든 권한을 갖고 있음.]]></description>
+</item>
+<item>
     <title>Docker_conpose</title>
     <link>https://choiseungwoo98.github.io/docker_conpose.html</link>
     <pubDate>Thu, 11 Jul 2024 13:13:32 &#43;0900</pubDate>

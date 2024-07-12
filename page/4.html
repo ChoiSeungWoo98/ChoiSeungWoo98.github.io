@@ -192,6 +192,14 @@
     }
 
 </style><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/websocket.html">[Java] Spring Boot, Websocket + STOMP 사용하기</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-05-06">2023-05-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/websocket.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>WebSocket</a></span></div><div class="content"> 일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?
+같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.
+Web Socket을 사용한 코드 게시물은 추후에 작성하겠습니다!! 아래 코드는 첨부했습니다!
+포스트 작성 시 참고한 링크 코드 </div><div class="post-footer">
+        <a href="/websocket.html">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/websocket.html">WebSocket</a>,&nbsp;<a href="/tags/java.html">Java</a>,&nbsp;<a href="/tags/spring-boot.html">Spring-Boot</a>,&nbsp;<a href="/tags/%EC%9B%B9%EC%86%8C%EC%BC%93.html">웹소켓</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/servereventtoclient.html">[Java] 서버에서 클라이언트로 이벤트를 보내는 4가지 방법</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-05-06">2023-05-06</time></span>&nbsp;<span class="post-category">included in <a href="/categories/websocket.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>WebSocket</a></span></div><div class="content">일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?
 같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.
@@ -238,12 +246,6 @@ Git이란?</div><div class="post-footer">
 브랜치 사용법 메인 브랜치에서 자신의 작업 전용 브랜치를 만듦 각자 작업을 진행한 후, 작업이 끝난 사람은 메인 브랜치에 자신의 브랜치의 변경 사항을 적용 다른 사람의 작업에 영향을 받지 않고 독립적으로 특정 작업을 수행하고 그 결과를 하나로 모음 브랜치로 그 작업의 기록을 중간 중간에 남기게 되므로 문제가 발생했을 경우 원인이 되는 작업을 찾아내거나 그에 따른 대책을 세우기 쉬워짐 Code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # 브랜치 생성 # git branch branchName $ git branch myWork-1 # 브랜치 이동 # switch 혹은 checkout 둘 다 가능 # git switch branchName $ git switch myWork-1 # 브랜치 생성 및 이동 # git checkout -b branch_name # git switch -c branch_name $ git switch -c myWork-2 # 현재 브랜치 확인 $ git branch # 브랜치 삭제 # git branch -d branchName $ git branch -d myWork-1 포스트 작성 시 참고한 링크 브랜치란?</div><div class="post-footer">
         <a href="/branch.html">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/git.html">Git</a>,&nbsp;<a href="/tags/branch.html">Branch</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/configuration_management.html">[형상관리] 형상관리란 SVN? GIT?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-03-04">2023-03-04</time></span>&nbsp;<span class="post-category">included in <a href="/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>형상관리</a></span></div><div class="content">현재 가장 많이 사용하고 있는 형상관리도구 git에 대해 공부를 하다가 문득 궁금한 것이 생겼다. Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠한 차이가 있을까? 그래서 한번 각각의 형산관리 도구에 대해 알아보고 장단점은 무엇인지 알아보고자 한다.
-형상관리?? 소프트웨어 구성 관리(Software Configuration Management) 또는 형상관리는 소프트웨어의 변경사항을 체계적으로 추적하고 통제 하는 것 일반적으로 단순 버전관리 기반의 소프트웨어 운용을 좀 더 포괄적인 학술 분야의 형태로 넓히는 근간 소프트웨어의 소스 코드, 개발 환경, 빌드 구조 등 전반적인 환경 전반적인 내역에 대한 관리 체계를 정의 형상 관리는 포괄적인 개념, 통상적으로 버전관리, 소스관리 등으로 불립니다.</div><div class="post-footer">
-        <a href="/configuration_management.html">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC.html">형상관리</a>,&nbsp;<a href="/tags/git.html">Git</a>,&nbsp;<a href="/tags/svn.html">SVN</a>,&nbsp;<a href="/tags/cvs.html">CVS</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

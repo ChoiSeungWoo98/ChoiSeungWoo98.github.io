@@ -3,7 +3,17 @@
         <title>KakaoTechBootCamp - Category - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html</link>
         <description>KakaoTechBootCamp - Category - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 11 Jul 2024 13:13:32 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 12 Jul 2024 14:25:27 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html" rel="self" type="application/rss+xml" /><item>
+    <title>도커 이론</title>
+    <link>https://choiseungwoo98.github.io/docker_etc.html</link>
+    <pubDate>Fri, 12 Jul 2024 14:25:27 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/docker_etc.html</guid>
+    <description><![CDATA[오늘은 실습보다 이론위주의 수업이었다.
+도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.
+Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 없이 실행시키는 모드 특징 시스템 전체에 대한 권한 없이 사용할 수 있어 잠재적 보안 위험을 낮출 수 있다. 모두 일반 사용자 권한으로 시스템 자원에 대한 접근 제한 Linux Capabilities 개념 리눅스 커널에서 제공하는 기능으로 시스템 관리 권한을 세분화하여 특정 작업에 대해 권한을 부여할 수 있다. 특징 컨테이너 생성 시 필요한 권한만 부여해 보안성 향상 Privileged : 컨테이너가 호스트 시스템의 모든 권한을 갖고 있음.]]></description>
+</item>
+<item>
     <title>Docker_conpose</title>
     <link>https://choiseungwoo98.github.io/docker_conpose.html</link>
     <pubDate>Thu, 11 Jul 2024 13:13:32 &#43;0900</pubDate>
@@ -101,16 +111,6 @@ CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리,
 두번째 수업이 진행되었습니다.
 오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
 가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다.]]></description>
-</item>
-<item>
-    <title>부트캠프 시작(클라우드 OT)</title>
-    <link>https://choiseungwoo98.github.io/cloud_ot.html</link>
-    <pubDate>Tue, 02 Jul 2024 22:03:57 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/cloud_ot.html</guid>
-    <description><![CDATA[어제 OT를 잘 마치고 오늘 첫번째 수업 날 입니다!
-오늘은 별다른 수업 없이 ZEP에 접속하고 노션(단체, 개인 목표를 작성)을 만들었습니다. 진도를 나가지 않아 엄청 어수선한 분위기 속에 어떻게 되련지&hellip;. 아침에 말씀해주셨던 부분 중 일부분을 찾아보고 작성하였습니다.
-쿠버네티스 컨테이너화 된 애플리케이션의 자동화(Deploy, Scaling 등을 제공) 하는 시스템 쿠버네티스를 운영하기 위한 서버가 따로 필요하다. 항상 쿠버네티스가 솔루션인가는 고민해볼 필요가 있다. 서버의 이중화는 반드시 필요한가? 정답은 없는 부분이라 섣부르게 답변하기 어렵지만 내 생각을 정리하자면 반드시 필요하지는 않다고 생각한다.]]></description>
 </item>
 </channel>
 </rss>
