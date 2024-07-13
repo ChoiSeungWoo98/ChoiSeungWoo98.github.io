@@ -3,9 +3,23 @@
         <title>승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/</link>
         <description>Hugo theme - LoveIt</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 12 Jul 2024 18:25:27 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 13 Jul 2024 16:42:04 &#43;0900</lastBuildDate>
             <atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>네트워크 도메인, 네임서버, HTTPs</title>
+    <link>https://choiseungwoo98.github.io/network_basic_2.html</link>
+    <pubDate>Sat, 13 Jul 2024 16:42:04 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/network_basic_2.html</guid>
+    <description><![CDATA[오늘은 주말이라 강좌로 올라와있는
+네트워크 개념 잡기를 수강하고 정리하고자 한다.
+도메인 IP는 숫자로만 이루어져 기억하기 어렵기 때문에 이름을 부여한 것
+IP 인터넷에 연결되어 있는 장치(컴퓨터, 스마트폰 등)을 식별할 수 있는 주소(Ex. 172.217.161.206)
+웹사이트 ip 주소 가져오는 방법 : nslookup google.com
+네임 스페이스 도메인 이름을 계층적으로 구성하여 네트워크 상의 자원을 고유하게 식별 및 관리
+포트포워딩 외부 네트워크에서 특정 포트를 통해 들어오는 트래픽을 내부 네트워크의 특정 장치나 포트로 전달하는 네트워크 설정]]></description>
+</item>
+<item>
     <title>Docker 이론</title>
     <link>https://choiseungwoo98.github.io/docker_etc.html</link>
     <pubDate>Fri, 12 Jul 2024 14:25:27 &#43;0900</pubDate>
@@ -73,10 +87,10 @@ CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리,
 </item>
 <item>
     <title>네트워크 개념</title>
-    <link>https://choiseungwoo98.github.io/network_introduction.html</link>
+    <link>https://choiseungwoo98.github.io/network_basic_1.html</link>
     <pubDate>Thu, 04 Jul 2024 22:03:57 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/network_introduction.html</guid>
+    <guid>https://choiseungwoo98.github.io/network_basic_1.html</guid>
     <description><![CDATA[네트워크에 대해 배웠는데 너무 모르겠다&hellip;
 잘 따라 가려면 더욱 공부해야겠다..
 네트워크 둘 이상의 컴퓨터와 연결하는 링크의 조합이다. 물리적 네트워크는 어댑터, 케이블 및 전화선과 같은 장비이고 소프트웨어 및 개념 모델이 논리적 네트워크를 형성한다. 네트워크를 알아야 하는 이유 통신 및 데이터 교환(컴퓨터와 다른 장치들이 서로 통신하고 데이터를 교환할 수 있게 한다.) 분산 시스템 및 클라우드 컴퓨팅(여러 컴퓨터가 네트워크를 통해 하나의 시스템 처럼 작동, 대규모 데이터 처리 및 저장 분석 등) 해킹, 데이터유출 등 다양한 공격으로 부터 보호하기 위해 OSI 7 Layer, OSI 4 Layer OSI(Open System Interconnection : 개방형 시스템 상호 연결) : 다양한 통신 시스템이 통신 할 수 있도록 국제표준화기구에서 만든 개념 모델 OSI 7 Layer OSI 7 Layer]]></description>
@@ -102,17 +116,6 @@ CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리,
 두번째 수업이 진행되었습니다.
 오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
 클라우드 아키텍처 애플리케이션을 실행할 기반이 되는 온라인 플랫폼을 제공할 목적으로 클라우드 구축에 필수적인 모든 구성 요소 및 기능을 연결하는 방식 서비스를 구축할 때, 클라우드 서비스의 다양한 기능들을 이용하여 인프라 구축 그림을 그리는 것 클라우드 아키텍처를 그리기 위한 배경지식들 OS(Operating System) 하드웨어를 사용하기 위해 필요한 소프트웨어이다. Ex : Windows, Mac, Linux 등 파일시스템 운영 체제에서 HD, SSD 또는 USB 플래시 드라이브와 같은 저장 장치에 있는 파일을 구성하고 관리하는 데 사용하는 구조이다.]]></description>
-</item>
-<item>
-    <title>가상화 기술</title>
-    <link>https://choiseungwoo98.github.io/virtualization_technology.html</link>
-    <pubDate>Wed, 03 Jul 2024 18:03:57 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/virtualization_technology.html</guid>
-    <description><![CDATA[어제 어수선한 분위기 속에 첫날이 마무리되고
-두번째 수업이 진행되었습니다.
-오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
-가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다.]]></description>
 </item>
 </channel>
 </rss>
