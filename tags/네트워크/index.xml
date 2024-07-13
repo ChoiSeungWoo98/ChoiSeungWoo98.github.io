@@ -3,7 +3,19 @@
         <title>네트워크 - Tag - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.html</link>
         <description>네트워크 - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 13 Jul 2024 16:42:04 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 13 Jul 2024 22:42:04 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.html" rel="self" type="application/rss+xml" /><item>
+    <title>네트워크 복습</title>
+    <link>https://choiseungwoo98.github.io/network_review.html</link>
+    <pubDate>Sat, 13 Jul 2024 22:42:04 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/network_review.html</guid>
+    <description><![CDATA[오늘은 주말이라 여태까지 배운 네트워크에 대해
+정리하면서 복습을 진행해보고자 한다.
+다시 기억하기 위해 화이팅!
+네트워크 둘 이상의 컴퓨터와 연결하는 링크의 조합 물리적 네트워크, 논리적 네트워크 형성 물리적 네트워크 : 어댑터, 케이블, 전화선 논리적 네트워크 : 소프트웨어, 개념 모델 OSI 7, 4 Layer OSI(Open System Interconnection : 개방형 시스템 상호 연결) 다양한 통신 시스템이 통신 할 수 있도록 국제 표준화 기구에서 만든 개념 모델
+OSI 7 Layer 응용 프로그램 계층(Application Layer) : 사용자가 사용하는 응용 프로그램과 인터페이스 제공 프레젠테이션 계층(Presentation Layer) : 데이터 형식 변환 밑 표준화 데이터 형식 변환 : 컴퓨터 시스템 간 데이터 송수신 시 공통된 형식으로 변환(Ex.]]></description>
+</item>
+<item>
     <title>네트워크 도메인, HTTPs</title>
     <link>https://choiseungwoo98.github.io/network_basic_2.html</link>
     <pubDate>Sat, 13 Jul 2024 16:42:04 &#43;0900</pubDate>
@@ -16,18 +28,6 @@ IP 인터넷에 연결되어 있는 장치(컴퓨터, 스마트폰 등)을 식�
 웹사이트 ip 주소 가져오는 방법 : nslookup google.com
 네임 스페이스 도메인 이름을 계층적으로 구성하여 네트워크 상의 자원을 고유하게 식별 및 관리
 포트포워딩 외부 네트워크에서 특정 포트를 통해 들어오는 트래픽을 내부 네트워크의 특정 장치나 포트로 전달하는 네트워크 설정]]></description>
-</item>
-<item>
-    <title>네트워크 복습</title>
-    <link>https://choiseungwoo98.github.io/network_review.html</link>
-    <pubDate>Sat, 13 Jul 2024 16:42:04 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/network_review.html</guid>
-    <description><![CDATA[오늘은 주말이라 여태까지 배운 네트워크에 대해
-정리하면서 복습을 진행해보고자 한다.
-다시 기억하기 위해 화이팅!
-네트워크 둘 이상의 컴퓨터와 연결하는 링크의 조합 물리적 네트워크, 논리적 네트워크 형성 물리적 네트워크 : 어댑터, 케이블, 전화선 논리적 네트워크 : 소프트웨어, 개념 모델 OSI 7, 4 Layer OSI(Open System Interconnection : 개방형 시스템 상호 연결) 다양한 통신 시스템이 통신 할 수 있도록 국제 표준화 기구에서 만든 개념 모델
-OSI 7 Layer 응용 프로그램 계층(Application Layer) : 사용자가 사용하는 응용 프로그램과 인터페이스 제공 프레젠테이션 계층(Presentation Layer) : 데이터 형식 변환 밑 표준화 데이터 형식 변환 : 컴퓨터 시스템 간 데이터 송수신 시 공통된 형식으로 변환(Ex.]]></description>
 </item>
 <item>
     <title>네트워크 개념</title>
