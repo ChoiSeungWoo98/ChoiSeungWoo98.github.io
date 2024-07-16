@@ -10,12 +10,12 @@
   <meta property="og:description" content="오늘은 AWS 첫번째 실습 시간이다.
 IAM에 대해 공부 후
 S3를 통해 제어하는 실습
-IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 웹 서비스 사용자 및 그룹을 생성해 리소스 권한 관리 IAM User Aws 리소스에 접근하기 위해 생성되는 개별 엔티티 고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행 IAM Group 공통적인 권한을 부여하기 위해 사요되는 논리적 단위 사용자별 권한을 할당하는 대신 그룹에 권한 할당 IAM 정책(Policy) AWS 리소스에 대한 접근 권한을 정의하는 JSON 문서 권한을 세부적으로 제어 보안과 권한 관리를 위해 필수적인 구성 요소 관리형 정책(Managed Policies) 미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계">
+IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 웹 서비스 사용자 및 그룹을 생성해 리소스 권한 관리 IAM User Aws 리소스에 접근하기 위해 생성되는 개별 엔터티 고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행 IAM Group 공통적인 권한을 부여하기 위해 사요되는 논리적 단위 사용자별 권한을 할당하는 대신 그룹에 권한 할당 실습 IAM User 생성 IAM User Group 생성 생성한 유저 로그인 후 권한 확인 IAM 정책(Policy) AWS 리소스에 대한 접근 권한을 정의하는 JSON 문서 권한을 세부적으로 제어 보안과 권한 관리를 위해 필수적인 구성 요소 관리형 정책(Managed Policies) 미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-07-15T15:01:46+09:00">
-    <meta property="article:modified_time" content="2024-07-15T15:01:46+09:00">
+    <meta property="article:modified_time" content="2024-07-17T00:47:23+09:00">
     <meta property="article:tag" content="KakaoTechBootCamp">
     <meta property="article:tag" content="BootCamp">
     <meta property="article:tag" content="AWS">
@@ -29,7 +29,7 @@ IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 �
   <meta name="twitter:description" content="오늘은 AWS 첫번째 실습 시간이다.
 IAM에 대해 공부 후
 S3를 통해 제어하는 실습
-IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 웹 서비스 사용자 및 그룹을 생성해 리소스 권한 관리 IAM User Aws 리소스에 접근하기 위해 생성되는 개별 엔티티 고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행 IAM Group 공통적인 권한을 부여하기 위해 사요되는 논리적 단위 사용자별 권한을 할당하는 대신 그룹에 권한 할당 IAM 정책(Policy) AWS 리소스에 대한 접근 권한을 정의하는 JSON 문서 권한을 세부적으로 제어 보안과 권한 관리를 위해 필수적인 구성 요소 관리형 정책(Managed Policies) 미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계">
+IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 웹 서비스 사용자 및 그룹을 생성해 리소스 권한 관리 IAM User Aws 리소스에 접근하기 위해 생성되는 개별 엔터티 고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행 IAM Group 공통적인 권한을 부여하기 위해 사요되는 논리적 단위 사용자별 권한을 할당하는 대신 그룹에 권한 할당 실습 IAM User 생성 IAM User Group 생성 생성한 유저 로그인 후 권한 확인 IAM 정책(Policy) AWS 리소스에 대한 접근 권한을 정의하는 JSON 문서 권한을 세부적으로 제어 보안과 권한 관리를 위해 필수적인 구성 요소 관리형 정책(Managed Policies) 미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계">
 <meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
 <meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/iam_and_s3.html" /><link rel="prev" href="https://choiseungwoo98.github.io/basic.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -42,8 +42,8 @@ IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 �
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/choiseungwoo98.github.io\/iam_and_s3.html"
-        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, AWS, IAM, S#","wordcount":  264 ,
-        "url": "https:\/\/choiseungwoo98.github.io\/iam_and_s3.html","datePublished": "2024-07-15T15:01:46+09:00","dateModified": "2024-07-15T15:01:46+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, AWS, IAM, S#","wordcount":  375 ,
+        "url": "https:\/\/choiseungwoo98.github.io\/iam_and_s3.html","datePublished": "2024-07-15T15:01:46+09:00","dateModified": "2024-07-17T00:47:23+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
                 "@type": "Person",
@@ -116,7 +116,7 @@ IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 �
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">AWS IAM을 이용한 S3 실습</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/aws.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>AWS</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-15">2024-07-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;264 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-15">2024-07-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;375 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -131,6 +131,7 @@ IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 �
           <ul>
             <li><a href="#iam-user">IAM User</a></li>
             <li><a href="#iam-group">IAM Group</a></li>
+            <li><a href="#실습">실습</a></li>
           </ul>
         </li>
       </ul>
@@ -142,11 +143,22 @@ IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 �
             <li><a href="#관리형-정책managed-policies">관리형 정책(Managed Policies)</a></li>
             <li><a href="#인라인-정책inline-policies">인라인 정책(Inline Policies)</a></li>
             <li><a href="#구성요소">구성요소</a></li>
+            <li><a href="#실습-1">실습</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#실습">실습</a></li>
+    <li><a href="#iam-역할role">IAM 역할(Role)</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#정책-종류">정책 종류</a></li>
+            <li><a href="#사용-방식">사용 방식</a></li>
+            <li><a href="#실습-2">실습</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><blockquote>
@@ -162,7 +174,7 @@ S3를 통해 제어하는 실습</p>
 </ul>
 <h4 id="iam-user">IAM User</h4>
 <ul>
-<li>Aws 리소스에 접근하기 위해 생성되는 개별 엔티티</li>
+<li>Aws 리소스에 접근하기 위해 생성되는 개별 엔터티</li>
 <li>고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행</li>
 </ul>
 <h4 id="iam-group">IAM Group</h4>
@@ -170,6 +182,12 @@ S3를 통해 제어하는 실습</p>
 <li>공통적인 권한을 부여하기 위해 사요되는 논리적 단위</li>
 <li>사용자별 권한을 할당하는 대신 그룹에 권한 할당</li>
 </ul>
+<h4 id="실습">실습</h4>
+<ol>
+<li>IAM User 생성</li>
+<li>IAM User Group 생성</li>
+<li>생성한 유저 로그인 후 권한 확인</li>
+</ol>
 <div style="height: 50px;"></div>
 <h2 id="iam-정책policy">IAM 정책(Policy)</h2>
 <hr>
@@ -182,7 +200,7 @@ S3를 통해 제어하는 실습</p>
 <p>미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계</p>
 <h4 id="인라인-정책inline-policies">인라인 정책(Inline Policies)</h4>
 <p>특정 사용자, 그룹 또는 역할에 직접 연결된 정책<br>
-다른 엔티티와 공유되지 않고 연결된 엔티티 삭제 시 정책도 삭제<br>
+다른 엔터티와 공유되지 않고 연결된 엔터티 삭제 시 정책도 삭제<br>
 권한을 좀 더 세밀하게 제어하고자 할 때 사용</p>
 <h4 id="구성요소">구성요소</h4>
 <ul>
@@ -192,18 +210,34 @@ S3를 통해 제어하는 실습</p>
 <li>Resource : 작업이 적용되는 리소스 정의</li>
 <li>Condition : 조건을 추가해 세부적인 적용 제어</li>
 </ul>
-<div style="height: 50px;"></div>
-<h2 id="실습">실습</h2>
-<hr>
+<h4 id="실습-1">실습</h4>
 <ol>
-<li>IAM User 생성</li>
-<li>IAM User Group 생성</li>
-<li>생성한 유저 로그인 후 권한 확인</li>
 <li>정책 추가</li>
 <li>버킷 생성</li>
 <li>권한 정책 연결 후 테스트</li>
-<li>서버 접속 후 s3 테스트</li>
 </ol>
+<div style="height: 50px;"></div>
+<h2 id="iam-역할role">IAM 역할(Role)</h2>
+<hr>
+<ul>
+<li>역할(Role) : 특정 AWS 서비스나 다른 계정의 사용자등이 AWS 리소스에 접근할 수 있도록 임시 보안 자격 증명을 제공</li>
+<li>정책(Policy) : 권한을 정의하는 JSON 문서</li>
+<li>신뢰정책(Trust Policy) : 역할을 맡을 수 있는 엔터티 정의 정책</li>
+<li>역할 전환(Role Assumption) : 역할을 맡는 과정</li>
+</ul>
+<h4 id="정책-종류">정책 종류</h4>
+<ul>
+<li>권한 정책(Permission Policy) : 역할을 맡은 엔터티가 수행할 수 있는 작업 정의</li>
+<li>신뢰 정책(Trust Policy) : 어떤 엔터티가 역할을 맡을 수 있는지 정의</li>
+</ul>
+<h4 id="사용-방식">사용 방식</h4>
+<ul>
+<li>AWS 서비스 간의 권한 부여 : EC2 인스턴스가 S3 버킷에 접근 가능하도록 역할 사용</li>
+<li>계정 간 권한 부여 : 사용자가 다른 AWS 계정의 리소스에 접근 할 수 있도록 역할 사용</li>
+<li>단기 자격 증명 : 임시 자격 증명을 사용해 특정 기간 동안 접근 권한 부여</li>
+</ul>
+<h4 id="실습-2">실습</h4>
+<hr>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -248,7 +282,7 @@ S3를 통해 제어하는 실습</p>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2024-07-15</span>
+                <span>Updated on 2024-07-17</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"><span>
