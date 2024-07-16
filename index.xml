@@ -3,9 +3,21 @@
         <title>승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/</link>
         <description>Hugo theme - LoveIt</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 14 Jul 2024 09:53:35 &#43;0900</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</lastBuildDate>
             <atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>AWS와 LB 실습</title>
+    <link>https://choiseungwoo98.github.io/basic.html</link>
+    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/basic.html</guid>
+    <description><![CDATA[오늘은 AWS 첫번째 실습 시간이다.
+EC2에서 VPC를 사용하고 public이랑 private를 열어
+public은 LB를 테스트하고
+private은 NAT를 이용한 인터넷 연결을 실습했다.
+CSP(Cloud Service Provider) 클라우드 컴퓨팅 서비스를 제공하는 회사(Ex. AWS, Azure, GCP, NCP 등) 인프라 서비스(IaaS), 플랫폼 서비스(PaaS), 소프트웨어 서비스(SaaS) 제공 AWS(Amazon Web Services) 아마존에서 제공하는 클라우드 컴퓨팅 플랫폼 현재 높은 점유율로 클라우드 시장에서 강세를 보이고 있다. 클라우드 컴퓨팅 내용 온프레미스(On-premise) 환경과 반대의 의미로 많이 사용 IT 인프라를 조직 내부에 직접 설치하고 운영하는 방식 장점 비용 절감 : 필요한 만큼 컴퓨팅 자원과 스토리지 대여를 통해 비용 절감 속도와 민첩성 : 시스템 자체에 대한 확정을지원하는 클라우드 특성상 빠르게 확장을 진행 할 수 있다.]]></description>
+</item>
+<item>
     <title>네트워크 복습</title>
     <link>https://choiseungwoo98.github.io/network_review.html</link>
     <pubDate>Sat, 13 Jul 2024 22:42:04 &#43;0900</pubDate>
@@ -106,17 +118,6 @@ CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리,
     <description><![CDATA[네트워크에 대해 배웠는데 너무 모르겠다&hellip;
 잘 따라 가려면 더욱 공부해야겠다..
 네트워크 둘 이상의 컴퓨터와 연결하는 링크의 조합이다. 물리적 네트워크는 어댑터, 케이블 및 전화선과 같은 장비이고 소프트웨어 및 개념 모델이 논리적 네트워크를 형성한다. 네트워크를 알아야 하는 이유 통신 및 데이터 교환(컴퓨터와 다른 장치들이 서로 통신하고 데이터를 교환할 수 있게 한다.) 분산 시스템 및 클라우드 컴퓨팅(여러 컴퓨터가 네트워크를 통해 하나의 시스템 처럼 작동, 대규모 데이터 처리 및 저장 분석 등) 해킹, 데이터유출 등 다양한 공격으로 부터 보호하기 위해 OSI 7 Layer, OSI 4 Layer OSI(Open System Interconnection : 개방형 시스템 상호 연결) : 다양한 통신 시스템이 통신 할 수 있도록 국제표준화기구에서 만든 개념 모델 OSI 7 Layer OSI 7 Layer]]></description>
-</item>
-<item>
-    <title>클라우드 개념</title>
-    <link>https://choiseungwoo98.github.io/cloud_introduction.html</link>
-    <pubDate>Wed, 03 Jul 2024 22:03:57 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/cloud_introduction.html</guid>
-    <description><![CDATA[어제 어수선한 분위기 속에 첫날이 마무리되고
-두번째 수업이 진행되었습니다.
-오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.
-클라우드 개념 컴퓨터 네트워크를 통해 인터넷 상에서 데이터 저장, 컴퓨팅 파워, 소프트웨어 등을 제공하는 기술이다. 즉, 인터넷 상에서 여러 리소스를 내가 원할 때 원하는 만큼 제공한다. 리소스 제공 통째로 빌려주는 방법 쉬운 방법이나, 내가 원하는 리소스랑 다를 수 있다. 원하는 리소스가 8코어 16기가 인데 16코어 32기가 서버가 존재한 경우 오버스펙이 된다.]]></description>
 </item>
 </channel>
 </rss>

@@ -3,10 +3,34 @@
         <title>Tags - Tag - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/tags.html</link>
         <description>Tags - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 13 Jul 2024 22:42:04 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags.html" rel="self" type="application/rss+xml" /><item>
+    <title>AWS</title>
+    <link>https://choiseungwoo98.github.io/tags/aws.html</link>
+    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://choiseungwoo98.github.io/tags/aws.html</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>BootCamp</title>
+    <link>https://choiseungwoo98.github.io/tags/bootcamp.html</link>
+    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://choiseungwoo98.github.io/tags/bootcamp.html</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Ec2</title>
+    <link>https://choiseungwoo98.github.io/tags/ec2.html</link>
+    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://choiseungwoo98.github.io/tags/ec2.html</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>KakaoTechBootCamp</title>
     <link>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</link>
-    <pubDate>Sat, 13 Jul 2024 22:42:04 &#43;0900</pubDate>
+    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</guid>
     <description><![CDATA[]]></description>
@@ -25,14 +49,6 @@
     <pubDate>Sat, 13 Jul 2024 22:42:04 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://choiseungwoo98.github.io/tags/%EB%B3%B5%EC%8A%B5.html</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>BootCamp</title>
-    <link>https://choiseungwoo98.github.io/tags/bootcamp.html</link>
-    <pubDate>Fri, 12 Jul 2024 14:25:27 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://choiseungwoo98.github.io/tags/bootcamp.html</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -65,22 +81,6 @@
     <pubDate>Mon, 08 Jul 2024 22:32:35 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://choiseungwoo98.github.io/tags/chroot.html</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>NameSpace</title>
-    <link>https://choiseungwoo98.github.io/tags/namespace.html</link>
-    <pubDate>Mon, 08 Jul 2024 22:32:35 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://choiseungwoo98.github.io/tags/namespace.html</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>OverlayFS</title>
-    <link>https://choiseungwoo98.github.io/tags/overlayfs.html</link>
-    <pubDate>Mon, 08 Jul 2024 22:32:35 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://choiseungwoo98.github.io/tags/overlayfs.html</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

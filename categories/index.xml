@@ -3,10 +3,18 @@
         <title>Categories - Category - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/categories.html</link>
         <description>Categories - Category - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 13 Jul 2024 22:42:04 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories.html" rel="self" type="application/rss+xml" /><item>
+    <title>AWS</title>
+    <link>https://choiseungwoo98.github.io/categories/aws.html</link>
+    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://choiseungwoo98.github.io/categories/aws.html</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>KakaoTechBootCamp</title>
     <link>https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html</link>
-    <pubDate>Sat, 13 Jul 2024 22:42:04 &#43;0900</pubDate>
+    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html</guid>
     <description><![CDATA[]]></description>
@@ -73,14 +81,6 @@
     <pubDate>Sun, 05 Mar 2023 04:39:34 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://choiseungwoo98.github.io/categories/git.html</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>형상관리</title>
-    <link>https://choiseungwoo98.github.io/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC.html</link>
-    <pubDate>Sat, 04 Mar 2023 22:47:36 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://choiseungwoo98.github.io/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC.html</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

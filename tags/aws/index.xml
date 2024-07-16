@@ -1,18 +1,19 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>AWS - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/aws/</link>
+        <link>https://choiseungwoo98.github.io/tags/aws.html</link>
         <description>AWS - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 07 Jul 2024 23:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/aws/" rel="self" type="application/rss+xml" /><item>
-    <title>AWS 기초 실습</title>
-    <link>https://choiseungwoo98.github.io/aws%EA%B8%B0%EC%B4%88/</link>
-    <pubDate>Sun, 07 Jul 2024 23:03:57 &#43;0900</pubDate>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/aws.html" rel="self" type="application/rss+xml" /><item>
+    <title>AWS와 LB 실습</title>
+    <link>https://choiseungwoo98.github.io/basic.html</link>
+    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
     <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/aws%EA%B8%B0%EC%B4%88/</guid>
-    <description><![CDATA[ 오늘은 AWS 개인미션 실습을 진행해보고자 한다.
-가장 기초적인 vm, storage, db를 생성해보고 사용해보는 미션이었다.
-AWS에서 EC2, S3, RDS를 이용해서 각각 AM, Storage, DB를 만들어 보고자 한다.
-VM(Virtual Machine : 가삼 머신) ]]></description>
+    <guid>https://choiseungwoo98.github.io/basic.html</guid>
+    <description><![CDATA[오늘은 AWS 첫번째 실습 시간이다.
+EC2에서 VPC를 사용하고 public이랑 private를 열어
+public은 LB를 테스트하고
+private은 NAT를 이용한 인터넷 연결을 실습했다.
+CSP(Cloud Service Provider) 클라우드 컴퓨팅 서비스를 제공하는 회사(Ex. AWS, Azure, GCP, NCP 등) 인프라 서비스(IaaS), 플랫폼 서비스(PaaS), 소프트웨어 서비스(SaaS) 제공 AWS(Amazon Web Services) 아마존에서 제공하는 클라우드 컴퓨팅 플랫폼 현재 높은 점유율로 클라우드 시장에서 강세를 보이고 있다. 클라우드 컴퓨팅 내용 온프레미스(On-premise) 환경과 반대의 의미로 많이 사용 IT 인프라를 조직 내부에 직접 설치하고 운영하는 방식 장점 비용 절감 : 필요한 만큼 컴퓨팅 자원과 스토리지 대여를 통해 비용 절감 속도와 민첩성 : 시스템 자체에 대한 확정을지원하는 클라우드 특성상 빠르게 확장을 진행 할 수 있다.]]></description>
 </item>
 </channel>
 </rss>

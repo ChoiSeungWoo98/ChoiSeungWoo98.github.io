@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>AWS와 LB 실습 - 승우의 개발 일기🧑🏻‍💻</title><meta name="Description" content="Hugo theme - LoveIt"><meta property="og:url" content="https://choiseungwoo98.github.io/basic.html">
+  <meta property="og:site_name" content="승우의 개발 일기🧑🏻‍💻">
+  <meta property="og:title" content="AWS와 LB 실습">
+  <meta property="og:description" content="오늘은 AWS 첫번째 실습 시간이다.
+EC2에서 VPC를 사용하고 public이랑 private를 열어
+public은 LB를 테스트하고
+private은 NAT를 이용한 인터넷 연결을 실습했다.
+CSP(Cloud Service Provider) 클라우드 컴퓨팅 서비스를 제공하는 회사(Ex. AWS, Azure, GCP, NCP 등) 인프라 서비스(IaaS), 플랫폼 서비스(PaaS), 소프트웨어 서비스(SaaS) 제공 AWS(Amazon Web Services) 아마존에서 제공하는 클라우드 컴퓨팅 플랫폼 현재 높은 점유율로 클라우드 시장에서 강세를 보이고 있다. 클라우드 컴퓨팅 내용 온프레미스(On-premise) 환경과 반대의 의미로 많이 사용 IT 인프라를 조직 내부에 직접 설치하고 운영하는 방식 장점 비용 절감 : 필요한 만큼 컴퓨팅 자원과 스토리지 대여를 통해 비용 절감 속도와 민첩성 : 시스템 자체에 대한 확정을지원하는 클라우드 특성상 빠르게 확장을 진행 할 수 있다.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-15T15:01:46+09:00">
+    <meta property="article:modified_time" content="2024-07-15T15:01:46+09:00">
+    <meta property="article:tag" content="KakaoTechBootCamp">
+    <meta property="article:tag" content="BootCamp">
+    <meta property="article:tag" content="AWS">
+    <meta property="article:tag" content="Ec2">
+    <meta property="og:image" content="https://choiseungwoo98.github.io/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://choiseungwoo98.github.io/logo.png">
+  <meta name="twitter:title" content="AWS와 LB 실습">
+  <meta name="twitter:description" content="오늘은 AWS 첫번째 실습 시간이다.
+EC2에서 VPC를 사용하고 public이랑 private를 열어
+public은 LB를 테스트하고
+private은 NAT를 이용한 인터넷 연결을 실습했다.
+CSP(Cloud Service Provider) 클라우드 컴퓨팅 서비스를 제공하는 회사(Ex. AWS, Azure, GCP, NCP 등) 인프라 서비스(IaaS), 플랫폼 서비스(PaaS), 소프트웨어 서비스(SaaS) 제공 AWS(Amazon Web Services) 아마존에서 제공하는 클라우드 컴퓨팅 플랫폼 현재 높은 점유율로 클라우드 시장에서 강세를 보이고 있다. 클라우드 컴퓨팅 내용 온프레미스(On-premise) 환경과 반대의 의미로 많이 사용 IT 인프라를 조직 내부에 직접 설치하고 운영하는 방식 장점 비용 절감 : 필요한 만큼 컴퓨팅 자원과 스토리지 대여를 통해 비용 절감 속도와 민첩성 : 시스템 자체에 대한 확정을지원하는 클라우드 특성상 빠르게 확장을 진행 할 수 있다.">
+<meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
+<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/basic.html" /><link rel="prev" href="https://choiseungwoo98.github.io/network_review.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "AWS와 LB 실습",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/choiseungwoo98.github.io\/basic.html"
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, AWS, ec2","wordcount":  602 ,
+        "url": "https:\/\/choiseungwoo98.github.io\/basic.html","datePublished": "2024-07-15T15:01:46+09:00","dateModified": "2024-07-15T15:01:46+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
+                "@type": "Person",
+                "name": "choiseU"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="auto" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/categories/documentation/"> Docs </a><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="승우의 개발 일기🧑🏻‍💻"><span class="header-title-pre">🧑🏻‍💻</span>승우는 개발자</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/categories/documentation/" title="">Docs</a><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="https://github.com/ChoiSeungWoo98" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">AWS와 LB 실습</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/aws.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>AWS</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-15">2024-07-15</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;602 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#cspcloud-service-provider">CSP(Cloud Service Provider)</a></li>
+    <li><a href="#awsamazon-web-services">AWS(Amazon Web Services)</a></li>
+    <li><a href="#클라우드-컴퓨팅">클라우드 컴퓨팅</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#내용">내용</a></li>
+            <li><a href="#장점">장점</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#azavailability-zone">AZ(Availability Zone)</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#내용-1">내용</a></li>
+            <li><a href="#region">Region</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#vpcvirtual-private-cloud">VPC(Virtual Private Cloud)</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#내용-2">내용</a></li>
+            <li><a href="#이점">이점</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#vpc-요소">VPC 요소</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#서브넷">서브넷</a></li>
+            <li><a href="#라우팅-테이블">라우팅 테이블</a></li>
+            <li><a href="#보안-그룹">보안 그룹</a></li>
+            <li><a href="#인터넷-게이트웨이">인터넷 게이트웨이</a></li>
+            <li><a href="#natnetwork-address-translation-게이트웨어">NAT(Network Address Translation) 게이트웨어</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#aws-ec2elastic-cloud-computer">AWS EC2(Elastic Cloud Computer)</a></li>
+    <li><a href="#lbload-balancer">LB(Load Balancer)</a></li>
+    <li><a href="#실습">실습</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>오늘은 AWS 첫번째 실습 시간이다.<br>
+EC2에서 VPC를 사용하고 public이랑 private를 열어<br>
+public은 LB를 테스트하고<br>
+private은 NAT를 이용한 인터넷 연결을 실습했다.</p>
+</blockquote>
+<h2 id="cspcloud-service-provider">CSP(Cloud Service Provider)</h2>
+<hr>
+<ul>
+<li>클라우드 컴퓨팅 서비스를 제공하는 회사(Ex. AWS, Azure, GCP, NCP 등)</li>
+<li>인프라 서비스(IaaS), 플랫폼 서비스(PaaS), 소프트웨어 서비스(SaaS) 제공</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="awsamazon-web-services">AWS(Amazon Web Services)</h2>
+<hr>
+<ul>
+<li>아마존에서 제공하는 클라우드 컴퓨팅 플랫폼</li>
+<li>현재 높은 점유율로 클라우드 시장에서 강세를 보이고 있다.</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="클라우드-컴퓨팅">클라우드 컴퓨팅</h2>
+<hr>
+<h4 id="내용">내용</h4>
+<ul>
+<li>온프레미스(On-premise) 환경과 반대의 의미로 많이 사용
+<ul>
+<li>IT 인프라를 조직 내부에 직접 설치하고 운영하는 방식</li>
+</ul>
+</li>
+</ul>
+<h4 id="장점">장점</h4>
+<ul>
+<li>비용 절감 : 필요한 만큼 컴퓨팅 자원과 스토리지 대여를 통해 비용 절감</li>
+<li>속도와 민첩성 : 시스템 자체에 대한 확정을지원하는 클라우드 특성상 빠르게 확장을 진행 할 수 있다.</li>
+<li>글로벌 서비스 : 특정 지역에 한정되는 온프레미스와 달리 전세계적인 데이터 센터를 통해 사용</li>
+<li>탄력성 : 모든 CSP에서는 리소스 사용량 증가로 인한 서비스 장애 방지를 위해 탄력적으로 사용 가능한 리소스 조절</li>
+<li>보안 : 네트워크 방화벽, WAF 등을 통해 강력한 보안 유지</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="azavailability-zone">AZ(Availability Zone)</h2>
+<hr>
+<h4 id="내용-1">내용</h4>
+<ul>
+<li>하나의 Region 내에 위치한 데이터 센터 그룹</li>
+<li>고가용성과 내결함성을 위해 여러 AZ에 걸쳐 앱 배포</li>
+</ul>
+<h4 id="region">Region</h4>
+<ul>
+<li>지리적으로 분리되어 여러 위치로 구분</li>
+<li>리전끼리 통신 시 별도 비용이 추가될 수 있다.</li>
+<li>글로벌 서비스 특성상 빠른 서비스를 제공하기 위해 여러 리전에 걸쳐 앱 배포</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="vpcvirtual-private-cloud">VPC(Virtual Private Cloud)</h2>
+<hr>
+<h4 id="내용-2">내용</h4>
+<ul>
+<li>개인 네트워크를 구성하는 요소</li>
+<li>서브넷, 라우팅 테이블, 보안 그룹, 인터넷 게이트웨이, NAT 게이트웨이</li>
+</ul>
+<h4 id="이점">이점</h4>
+<ul>
+<li>격리성 : 격리된 환경에서 구성하기 때문에 다른 네트워크에 간섭을 받지 않는다.</li>
+<li>보안성 : 세부적인 보안 설정 가능</li>
+<li>확장성 : 필요에 따라 서브넷 추가 구성, 라우팅 테이블, 보안 그룹 등 쉽게 추가</li>
+<li>유연성 : 요구에 따라 온프레미스와 혼합해 하이브리드 클라우드 구성</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="vpc-요소">VPC 요소</h2>
+<hr>
+<h4 id="서브넷">서브넷</h4>
+<ul>
+<li>실제 VM이 올라갈 네트워크 대역을 설정</li>
+<li>private와 public은 인터넷 게이트웨이 유무와 라우팅 테이블에 인터넷 게이트웨이 추가 여부</li>
+<li>private는 NAT 게이트웨이를 통하지 않는 이상 인터넷 통신 불가 public은 기본적으로 가능</li>
+</ul>
+<h4 id="라우팅-테이블">라우팅 테이블</h4>
+<ul>
+<li>서브넷에서 사용되는 네트워크 네비게이션 같은 존재</li>
+<li>CIDR 기반으로 동작, 각각의 대역에 대해 경로 설정 가능</li>
+</ul>
+<h4 id="보안-그룹">보안 그룹</h4>
+<ul>
+<li>ACL(Access Control List)처럼 출발 IP, Port에 따라 출입 여부 결정</li>
+<li>아웃바운드는 보통 통신의 원활함을 위해 열어두는 편</li>
+<li>인바운드는 접속 및 통신용 포트를 제외한 나머지 통제</li>
+</ul>
+<h4 id="인터넷-게이트웨이">인터넷 게이트웨이</h4>
+<ul>
+<li>퍼블릭 서브넷을 결정하는 요소</li>
+<li>라우팅 테이블과 조합하여 특정 대역만 인터넷이 가능하도록 설정(대부분 관리 비용이 때문에 다 열어둔다.)</li>
+</ul>
+<h4 id="natnetwork-address-translation-게이트웨어">NAT(Network Address Translation) 게이트웨어</h4>
+<ul>
+<li>private에서도 인터넷 사용 가능</li>
+<li>모든 경로를 다 열지 않고 특정 포트만 보안 그룹을 통해 연다.</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="aws-ec2elastic-cloud-computer">AWS EC2(Elastic Cloud Computer)</h2>
+<hr>
+<ul>
+<li>UTM을 통해 VM을 생성하던 것과 비슷한 구조</li>
+<li>CPU, Memory, 저장소 용량 등을 미리 정하고 생성</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="lbload-balancer">LB(Load Balancer)</h2>
+<hr>
+<ul>
+<li>AWS에서 네트워크 트래픽을 여러 대상으로 분산시켜 가용성과 탄력성을 높이는 서비스</li>
+<li>ALB(Application Load Balance)
+<ul>
+<li>HTTP 및 HTTPS 트래픽에 최적화된 7 단계 로드 밸런서</li>
+<li>CloudWatch와 통합되어 다양한 지표와 로그 모니터링</li>
+</ul>
+</li>
+<li>NLB(Network Load Balancer)
+<ul>
+<li>고성능을 요구하는 TCP, UDP 및 TLS 트래픽에 최적화된 4계층 로드 밸런서</li>
+<li>매우 낮은 지연 시간, 고가용성</li>
+</ul>
+</li>
+<li>CLB(Classic Load Balancer)
+<ul>
+<li>구형 로드 밸런서로 4계층 + 7계층 로드 밸런서</li>
+<li>설정이 간단하고 직관적</li>
+</ul>
+</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="실습">실습</h2>
+<p>LB 생성 순서</p>
+<ol>
+<li>VPC 생성</li>
+<li>서브넷 생성(여러개)</li>
+<li>공통 보안 그룹 생성</li>
+<li>인터넷 게이트웨이 생성</li>
+<li>nat 게이트웨이 생성</li>
+<li>인스턴스 생성(여러개)</li>
+<li>라우팅 테이블 생성(public, private)</li>
+<li>LB 생성
+<ul>
+<li>타겟 그룹 생성</li>
+</ul>
+</li>
+</ol>
+<hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 양쪽 서버에서 똑같이 진행</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 퍼블릭 서버 접속</span>
+</span></span><span class="line"><span class="cl">ssh -i &lt;key 파일 명&gt; &lt;OS 명&gt;@&lt;ip 주소&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 파이썬 실행을 위한 다운로드</span>
+</span></span><span class="line"><span class="cl">sudo apt<span class="o">(</span>yum<span class="o">)</span> update <span class="o">&amp;&amp;</span> sudo apt<span class="o">(</span>yum<span class="o">)</span> install -y python3-flask
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 파이썬 파일 작성</span>
+</span></span><span class="line"><span class="cl">vi app.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 파일 실행</span>
+</span></span><span class="line"><span class="cl">sudo python3 app.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># LB DNS를 활용해 접근</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># private 접근 하기</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># public 서버에 접근 한 후 tem 파일 복사 후 파일 생성</span>
+</span></span><span class="line"><span class="cl">vi key.tem
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># private 접속 - 같은 네트워크 대역이라 접속이 가능하다.</span>
+</span></span><span class="line"><span class="cl">ssh -i key.tem &lt;OS&gt;@&lt;IPv4&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># private 접속 후 apt(yum) update</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 인터넷 연결이 없기 때문에 update 되지 않음</span>
+</span></span><span class="line"><span class="cl">sudo apt<span class="o">(</span>yum<span class="o">)</span> update
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># NAT 연결 후 인터넷 연결 테스트</span>
+</span></span><span class="line"><span class="cl">sudo apt<span class="o">(</span>yum<span class="o">)</span> update
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-07-15</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/basic.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/basic.html" data-title="AWS와 LB 실습" data-hashtags="KakaoTechBootCamp,BootCamp,AWS,ec2"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/basic.html" data-hashtag="KakaoTechBootCamp"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/basic.html" data-title="AWS와 LB 실습"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/basic.html" data-title="AWS와 LB 실습"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/basic.html" data-title="AWS와 LB 실습"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp.html">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp.html">BootCamp</a>,&nbsp;<a href="/tags/aws.html">AWS</a>,&nbsp;<a href="/tags/ec2.html">Ec2</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/network_review.html" class="prev" rel="prev" title="네트워크 복습"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>네트워크 복습</a></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://github.com/ChoiSeungWoo98" target="_blank">개발 기록</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"Comment","lightTheme":"github-light","repo":"ChoiSeungWoo98/blog-comments"}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
