@@ -192,6 +192,14 @@
     }
 
 </style><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/iam_and_s3.html">AWS IAM을 이용한 S3 실습</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-07-15">2024-07-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/aws.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>AWS</a></span></div><div class="content">오늘은 AWS 첫번째 실습 시간이다.
+IAM에 대해 공부 후
+S3를 통해 제어하는 실습
+IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 웹 서비스 사용자 및 그룹을 생성해 리소스 권한 관리 IAM User Aws 리소스에 접근하기 위해 생성되는 개별 엔티티 고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행 IAM Group 공통적인 권한을 부여하기 위해 사요되는 논리적 단위 사용자별 권한을 할당하는 대신 그룹에 권한 할당 IAM 정책(Policy) AWS 리소스에 대한 접근 권한을 정의하는 JSON 문서 권한을 세부적으로 제어 보안과 권한 관리를 위해 필수적인 구성 요소 관리형 정책(Managed Policies) 미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계</div><div class="post-footer">
+        <a href="/iam_and_s3.html">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp.html">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp.html">BootCamp</a>,&nbsp;<a href="/tags/aws.html">AWS</a>,&nbsp;<a href="/tags/iam.html">IAM</a>,&nbsp;<a href=""></a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/basic.html">AWS와 LB 실습</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-07-15">2024-07-15</time></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/aws.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>AWS</a></span></div><div class="content">오늘은 AWS 첫번째 실습 시간이다.
 EC2에서 VPC를 사용하고 public이랑 private를 열어
@@ -235,14 +243,6 @@ Docker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 �
 Docker compose 개념 여러 Docker Continer를 정의하고 실행할 수 있도록 도와주는 도구 docker-compose.yaml 파일을 사용해 서비스, 네트워크, 볼륨 등을 정의 기능 멀티 컨테이너 애플리케이션 정의 : docker-compose-yaml 파일을 통해 여러 컨테이너 정의 서비스 간 의존성 관리 : 여러 컨테이너 간의 의존성을 정의하고, 필요한 순서에 따라 컨테이너 시작 일관된 개발 환경 제공 : 동일한 docker-compose.</div><div class="post-footer">
         <a href="/docker_conpose.html">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp.html">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp.html">BootCamp</a>,&nbsp;<a href="/tags/docker.html">Docker</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/dockerfile_basic.html">Dockerfile 기초</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-publish">published on <time datetime="2024-07-10">2024-07-10</time></span>&nbsp;<span class="post-category">included in <a href="/categories/kakaotechbootcamp.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>KakaoTechBootCamp</a>&nbsp;<a href="/categories/docker.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Docker</a></span></div><div class="content">어제는 도커의 개념과 동작 방식에 대해 정리하였습니다.
-오늘은 docker를 실질적으로 사용해보면서 필요한 내용을 정리해보고자 합니다.
-Dockerfile 개념 이미지 생성 목적으로 작성되는 파일
-특징 환경 일관성 : 개발, 테스트, 운영 등 모든 환경에서 동일한 설정 유지 이식성 : 다양한 운영체제에서 동일하게 동작 자동화 : CI/CD 파이프라인 과정에서 빌드 및 배포 과정 자동화 반복 가능성 : 동일한 방식으로 이미지를 빌드해 반복 가능한 환경 제공 확장성 : 마이크로 아키텍처를 이용해 쉽게 확장 지시자 Dockerfile 만들기 이미지 크기 최적화 멀티 스테이지 빌드 사용 : 불필요한 빌드 종속성 제거 불필요한 파일 제외 : .</div><div class="post-footer">
-        <a href="/dockerfile_basic.html">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp.html">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp.html">BootCamp</a>,&nbsp;<a href="/tags/docker.html">Docker</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -259,7 +259,7 @@ Dockerfile 개념 이미지 생성 목적으로 작성되는 파일
                     <span class="page-link" aria-hidden="true">&hellip;</span>
                 </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/5.html">5</a>
+                        <a href="/page/6.html">6</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">

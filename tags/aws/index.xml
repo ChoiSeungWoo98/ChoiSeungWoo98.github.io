@@ -4,6 +4,17 @@
         <link>https://choiseungwoo98.github.io/tags/aws.html</link>
         <description>AWS - Tag - 승우의 개발 일기🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/aws.html" rel="self" type="application/rss+xml" /><item>
+    <title>AWS IAM을 이용한 S3 실습</title>
+    <link>https://choiseungwoo98.github.io/iam_and_s3.html</link>
+    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/iam_and_s3.html</guid>
+    <description><![CDATA[오늘은 AWS 첫번째 실습 시간이다.
+IAM에 대해 공부 후
+S3를 통해 제어하는 실습
+IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 웹 서비스 사용자 및 그룹을 생성해 리소스 권한 관리 IAM User Aws 리소스에 접근하기 위해 생성되는 개별 엔티티 고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행 IAM Group 공통적인 권한을 부여하기 위해 사요되는 논리적 단위 사용자별 권한을 할당하는 대신 그룹에 권한 할당 IAM 정책(Policy) AWS 리소스에 대한 접근 권한을 정의하는 JSON 문서 권한을 세부적으로 제어 보안과 권한 관리를 위해 필수적인 구성 요소 관리형 정책(Managed Policies) 미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계]]></description>
+</item>
+<item>
     <title>AWS와 LB 실습</title>
     <link>https://choiseungwoo98.github.io/basic.html</link>
     <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>

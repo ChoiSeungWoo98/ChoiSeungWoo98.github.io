@@ -6,6 +6,17 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</lastBuildDate>
             <atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>AWS IAM을 이용한 S3 실습</title>
+    <link>https://choiseungwoo98.github.io/iam_and_s3.html</link>
+    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
+    <author>choiseU</author>
+    <guid>https://choiseungwoo98.github.io/iam_and_s3.html</guid>
+    <description><![CDATA[오늘은 AWS 첫번째 실습 시간이다.
+IAM에 대해 공부 후
+S3를 통해 제어하는 실습
+IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 웹 서비스 사용자 및 그룹을 생성해 리소스 권한 관리 IAM User Aws 리소스에 접근하기 위해 생성되는 개별 엔티티 고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행 IAM Group 공통적인 권한을 부여하기 위해 사요되는 논리적 단위 사용자별 권한을 할당하는 대신 그룹에 권한 할당 IAM 정책(Policy) AWS 리소스에 대한 접근 권한을 정의하는 JSON 문서 권한을 세부적으로 제어 보안과 권한 관리를 위해 필수적인 구성 요소 관리형 정책(Managed Policies) 미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계]]></description>
+</item>
+<item>
     <title>AWS와 LB 실습</title>
     <link>https://choiseungwoo98.github.io/basic.html</link>
     <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
@@ -108,16 +119,6 @@ CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리,
 하다보면 외워지겠지&hellip;
 일단 정리정리..
 리눅스 유닉스 계열의 OS 중 하나로 전 세계적으로 널리 사용되고 있는 오픈 소스 소프트웨어이다. 다양한 시스템에서 동작하며 특히 서버, 데스크탑, 모바일 기기에서 사용 오픈소스 개념 오픈 소스 소프트웨어(OOS : Open Source Software)로 누구나 열람, 수정, 배포가 가능한 소프트웨어이다. 중요성 투명성 : 공개 소스로 동작 방식 확인 가능 협업과 혁신 : 누구나 수정, 배포가 가능해 빠른 소프트웨어 개선 비용 절감 : 라이센스 비용이 없거나 저렴함 자유와 통제 : 자유롭게 수정할 수 있는 권한 GPL License 자유 소프트웨어 재단에서 만든 라이선스로 자유롭게 사용할 수 있고 수정, 배포 할 수 있는 권리 보장 자유 소프트웨어 운동 사용, 수정, 공유의 자유를 보장하는 소프트웨어 소프트웨어는 사용자의 자유와 권리를 침해하지 않아야 한다는 철학 자유와 접근성을 증진하고 독점 소프트웨어에 대한 대안을 제공 리눅스 구조 어플리케이션 사용자가 직접 상호작용하는 단계로 빌드된 앱, 바이너리, 명령어, 빌드된 파일을 통틀어 어플리케이션이라고 한다.]]></description>
-</item>
-<item>
-    <title>네트워크 개념</title>
-    <link>https://choiseungwoo98.github.io/network_basic_1.html</link>
-    <pubDate>Thu, 04 Jul 2024 22:03:57 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/network_basic_1.html</guid>
-    <description><![CDATA[네트워크에 대해 배웠는데 너무 모르겠다&hellip;
-잘 따라 가려면 더욱 공부해야겠다..
-네트워크 둘 이상의 컴퓨터와 연결하는 링크의 조합이다. 물리적 네트워크는 어댑터, 케이블 및 전화선과 같은 장비이고 소프트웨어 및 개념 모델이 논리적 네트워크를 형성한다. 네트워크를 알아야 하는 이유 통신 및 데이터 교환(컴퓨터와 다른 장치들이 서로 통신하고 데이터를 교환할 수 있게 한다.) 분산 시스템 및 클라우드 컴퓨팅(여러 컴퓨터가 네트워크를 통해 하나의 시스템 처럼 작동, 대규모 데이터 처리 및 저장 분석 등) 해킹, 데이터유출 등 다양한 공격으로 부터 보호하기 위해 OSI 7 Layer, OSI 4 Layer OSI(Open System Interconnection : 개방형 시스템 상호 연결) : 다양한 통신 시스템이 통신 할 수 있도록 국제표준화기구에서 만든 개념 모델 OSI 7 Layer OSI 7 Layer]]></description>
 </item>
 </channel>
 </rss>
