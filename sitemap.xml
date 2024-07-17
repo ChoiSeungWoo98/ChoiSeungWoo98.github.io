@@ -2,20 +2,24 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://choiseungwoo98.github.io/tags/aws.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories/aws.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/aws.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/aws.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/lambda_and_efs.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/bootcamp.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/ebs.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/efs.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/lambda.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/posts.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags.html</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/</loc><lastmod>2024-07-17T11:42:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/iam_and_s3.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/basic.html</loc><lastmod>2024-07-16T23:31:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/bootcamp.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/ec2.html</loc><lastmod>2024-07-16T23:31:50&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/basic.html</loc><lastmod>2024-07-17T01:02:59&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/ec2.html</loc><lastmod>2024-07-17T01:02:59&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/iam.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/posts.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/s%23.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/s3.html</loc><lastmod>2024-07-17T00:58:36&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.html</loc><lastmod>2024-07-14T03:42:18&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.html</loc><lastmod>2024-07-14T03:42:18&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/network_review.html</loc><lastmod>2024-07-14T03:42:18&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -27,7 +31,7 @@
             <loc>https://choiseungwoo98.github.io/tags/security.html</loc><lastmod>2024-07-12T20:43:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/docker_conpose.html</loc><lastmod>2024-07-11T15:17:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/dockerfile_basic.html</loc><lastmod>2024-07-11T15:17:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/docker_basic.html</loc><lastmod>2024-07-10T17:31:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/docker_basic.html</loc><lastmod>2024-07-10T17:31:17&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/cgroup.html</loc><lastmod>2024-07-11T15:17:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/chroot.html</loc><lastmod>2024-07-11T15:17:11&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/categories/linux.html</loc><lastmod>2024-07-14T14:27:26&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>

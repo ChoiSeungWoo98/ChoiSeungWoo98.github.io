@@ -20,7 +20,7 @@ IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 �
     <meta property="article:tag" content="BootCamp">
     <meta property="article:tag" content="AWS">
     <meta property="article:tag" content="IAM">
-    <meta property="article:tag" content="S#">
+    <meta property="article:tag" content="S3">
     <meta property="og:image" content="https://choiseungwoo98.github.io/logo.png">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -31,7 +31,7 @@ IAM에 대해 공부 후
 S3를 통해 제어하는 실습
 IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 웹 서비스 사용자 및 그룹을 생성해 리소스 권한 관리 IAM User Aws 리소스에 접근하기 위해 생성되는 개별 엔터티 고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행 IAM Group 공통적인 권한을 부여하기 위해 사요되는 논리적 단위 사용자별 권한을 할당하는 대신 그룹에 권한 할당 실습 IAM User 생성 IAM User Group 생성 생성한 유저 로그인 후 권한 확인 IAM 정책(Policy) AWS 리소스에 대한 접근 권한을 정의하는 JSON 문서 권한을 세부적으로 제어 보안과 권한 관리를 위해 필수적인 구성 요소 관리형 정책(Managed Policies) 미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계">
 <meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
-<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/iam_and_s3.html" /><link rel="prev" href="https://choiseungwoo98.github.io/basic.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/iam_and_s3.html" /><link rel="prev" href="https://choiseungwoo98.github.io/basic.html" /><link rel="next" href="https://choiseungwoo98.github.io/lambda_and_efs.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -42,7 +42,7 @@ IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 �
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/choiseungwoo98.github.io\/iam_and_s3.html"
-        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, AWS, IAM, S#","wordcount":  375 ,
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "KakaoTechBootCamp, BootCamp, AWS, IAM, S3","wordcount":  375 ,
         "url": "https:\/\/choiseungwoo98.github.io\/iam_and_s3.html","datePublished": "2024-07-15T15:01:46+09:00","dateModified": "2024-07-17T00:58:36+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
@@ -289,19 +289,20 @@ S3를 통해 제어하는 실습</p>
                             <a class="link-to-markdown" href="/iam_and_s3.md" target="_blank">Read Markdown</a>
                         </span></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/iam_and_s3.html" data-title="AWS IAM을 이용한 S3 실습" data-hashtags="KakaoTechBootCamp,BootCamp,AWS,IAM,S#"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/iam_and_s3.html" data-hashtag="KakaoTechBootCamp"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/iam_and_s3.html" data-title="AWS IAM을 이용한 S3 실습"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/iam_and_s3.html" data-title="AWS IAM을 이용한 S3 실습"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/iam_and_s3.html" data-title="AWS IAM을 이용한 S3 실습"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://choiseungwoo98.github.io/iam_and_s3.html" data-title="AWS IAM을 이용한 S3 실습" data-hashtags="KakaoTechBootCamp,BootCamp,AWS,IAM,S3"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://choiseungwoo98.github.io/iam_and_s3.html" data-hashtag="KakaoTechBootCamp"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://choiseungwoo98.github.io/iam_and_s3.html" data-title="AWS IAM을 이용한 S3 실습"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://choiseungwoo98.github.io/iam_and_s3.html" data-title="AWS IAM을 이용한 S3 실습"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://choiseungwoo98.github.io/iam_and_s3.html" data-title="AWS IAM을 이용한 S3 실습"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp.html">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp.html">BootCamp</a>,&nbsp;<a href="/tags/aws.html">AWS</a>,&nbsp;<a href="/tags/iam.html">IAM</a>,&nbsp;<a href=""></a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kakaotechbootcamp.html">KakaoTechBootCamp</a>,&nbsp;<a href="/tags/bootcamp.html">BootCamp</a>,&nbsp;<a href="/tags/aws.html">AWS</a>,&nbsp;<a href="/tags/iam.html">IAM</a>,&nbsp;<a href="/tags/s3.html">S3</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/basic.html" class="prev" rel="prev" title="AWS와 LB 실습"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>AWS와 LB 실습</a></div>
+    <div class="post-nav"><a href="/basic.html" class="prev" rel="prev" title="AWS와 LB 실습"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>AWS와 LB 실습</a>
+            <a href="/lambda_and_efs.html" class="next" rel="next" title="aws에 EBS, Lambda와 efs">aws에 EBS, Lambda와 efs<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
