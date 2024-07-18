@@ -2,23 +2,23 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://choiseungwoo98.github.io/tags/ansible.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/aws.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories/aws.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/bootcamp.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/iac.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/iac_terraform_ansible.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/posts.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/terraform.html</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/</loc><lastmod>2024-07-18T09:54:15&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/lambda_and_efs.html</loc><lastmod>2024-07-17T23:57:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/ebs.html</loc><lastmod>2024-07-17T23:57:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/efs.html</loc><lastmod>2024-07-17T23:57:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://choiseungwoo98.github.io/tags/lambda.html</loc><lastmod>2024-07-17T23:57:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/ansible.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/aws.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/aws.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/bootcamp.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/iac.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/iac_terraform_ansible.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/categories/kakaotechbootcamp.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/posts.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/terraform.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/lambda_and_efs.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/ebs.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/efs.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://choiseungwoo98.github.io/tags/lambda.html</loc><lastmod>2024-07-18T14:10:56&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/iam_and_s3.html</loc><lastmod>2024-07-17T23:57:00&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/basic.html</loc><lastmod>2024-07-17T01:02:59&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://choiseungwoo98.github.io/tags/ec2.html</loc><lastmod>2024-07-17T01:02:59&#43;09:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
