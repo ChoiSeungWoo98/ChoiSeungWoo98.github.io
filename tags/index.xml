@@ -3,10 +3,18 @@
         <title>Tags - Tag - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/tags.html</link>
         <description>Tags - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 17 Jul 2024 11:42:15 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Jul 2024 09:54:15 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags.html" rel="self" type="application/rss+xml" /><item>
+    <title>Ansible</title>
+    <link>https://choiseungwoo98.github.io/tags/ansible.html</link>
+    <pubDate>Thu, 18 Jul 2024 09:54:15 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://choiseungwoo98.github.io/tags/ansible.html</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>AWS</title>
     <link>https://choiseungwoo98.github.io/tags/aws.html</link>
-    <pubDate>Wed, 17 Jul 2024 11:42:15 &#43;0900</pubDate>
+    <pubDate>Thu, 18 Jul 2024 09:54:15 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://choiseungwoo98.github.io/tags/aws.html</guid>
     <description><![CDATA[]]></description>
@@ -14,9 +22,33 @@
 <item>
     <title>BootCamp</title>
     <link>https://choiseungwoo98.github.io/tags/bootcamp.html</link>
-    <pubDate>Wed, 17 Jul 2024 11:42:15 &#43;0900</pubDate>
+    <pubDate>Thu, 18 Jul 2024 09:54:15 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://choiseungwoo98.github.io/tags/bootcamp.html</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>IaC</title>
+    <link>https://choiseungwoo98.github.io/tags/iac.html</link>
+    <pubDate>Thu, 18 Jul 2024 09:54:15 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://choiseungwoo98.github.io/tags/iac.html</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>KakaoTechBootCamp</title>
+    <link>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</link>
+    <pubDate>Thu, 18 Jul 2024 09:54:15 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Terraform</title>
+    <link>https://choiseungwoo98.github.io/tags/terraform.html</link>
+    <pubDate>Thu, 18 Jul 2024 09:54:15 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://choiseungwoo98.github.io/tags/terraform.html</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -36,14 +68,6 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>KakaoTechBootCamp</title>
-    <link>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</link>
-    <pubDate>Wed, 17 Jul 2024 11:42:15 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://choiseungwoo98.github.io/tags/kakaotechbootcamp.html</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
     <title>Lambda</title>
     <link>https://choiseungwoo98.github.io/tags/lambda.html</link>
     <pubDate>Wed, 17 Jul 2024 11:42:15 &#43;0900</pubDate>
@@ -57,30 +81,6 @@
     <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://choiseungwoo98.github.io/tags/ec2.html</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>IAM</title>
-    <link>https://choiseungwoo98.github.io/tags/iam.html</link>
-    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://choiseungwoo98.github.io/tags/iam.html</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>S3</title>
-    <link>https://choiseungwoo98.github.io/tags/s3.html</link>
-    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://choiseungwoo98.github.io/tags/s3.html</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>네트워크</title>
-    <link>https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.html</link>
-    <pubDate>Sat, 13 Jul 2024 22:42:04 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC.html</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
