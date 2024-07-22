@@ -1,154 +1,58 @@
-# AWS와 LB 실습
+# Basic
 
-> 오늘은 AWS 첫번째 실습 시간이다.  
-> EC2에서 VPC를 사용하고 public이랑 private를 열어  
-> public은 LB를 테스트하고  
-> private은 NAT를 이용한 인터넷 연결을 실습했다.
+> 오늘은 드디어 그 유명한 쿠버네티스!!!  
+> 쿠버만 잘해도 반은 간다는데  
+> 화이팅! 부셔보자!!!  
 
-## CSP(Cloud Service Provider)
-*** 
-- 클라우드 컴퓨팅 서비스를 제공하는 회사(Ex. AWS, Azure, GCP, NCP 등)
-- 인프라 서비스(IaaS), 플랫폼 서비스(PaaS), 소프트웨어 서비스(SaaS) 제공
-
-<div style="height: 50px;"></div>
-
-## AWS(Amazon Web Services)
-*** 
-- 아마존에서 제공하는 클라우드 컴퓨팅 플랫폼
-- 현재 높은 점유율로 클라우드 시장에서 강세를 보이고 있다.
-
-<div style="height: 50px;"></div>
-
-## 클라우드 컴퓨팅
+## Kubenetes(K8S)
 ***
-#### 내용
-- 온프레미스(On-premise) 환경과 반대의 의미로 많이 사용
-  - IT 인프라를 조직 내부에 직접 설치하고 운영하는 방식
-#### 장점
-- 비용 절감 : 필요한 만큼 컴퓨팅 자원과 스토리지 대여를 통해 비용 절감
-- 속도와 민첩성 : 시스템 자체에 대한 확정을지원하는 클라우드 특성상 빠르게 확장을 진행 할 수 있다.
-- 글로벌 서비스 : 특정 지역에 한정되는 온프레미스와 달리 전세계적인 데이터 센터를 통해 사용
-- 탄력성 : 모든 CSP에서는 리소스 사용량 증가로 인한 서비스 장애 방지를 위해 탄력적으로 사용 가능한 리소스 조절
-- 보안 : 네트워크 방화벽, WAF 등을 통해 강력한 보안 유지
+#### 설명
+- 컨테이너화된 애플리케이션 배포, 확장 및 관리를 자동화 하는 오픈소스 시스템
+- 대규모 애플리케이션을 신뢰성 있고 효율적인 운영을 도움
 
-<div style="height: 50px;"></div>
+#### 특징
+- 서비스 디스커버리 및 로드 밸런싱 : DNS 혹은 자체 IP를 사용해 컨테이너 노출(컨테이너에 트랙픽이 많으면 로드밸런싱 후 배포하여 안정적으로 운영 가능)
+- 스토리지 오케스트레이션 : 로컬저장소, 클라우드 공급자 등과 같이 원하는 저장소 시스템 사용 가능
+- 자동화된 롤아웃, 롤백 : 배포된 컨테이너의 원하는 상태 서술 및 현재 원하는 상태로 변경
+- 자동화된 빈패킹 : 컨테이너 노드에 맞춰 리소스를 가장 잘 사용할 수 있도록 지원 
+- 자동화된 복구 : 실패한 컨테이너를 다시 시작, 교체하며 사용자가 정의한 상태 이외에는 지속적으로 복구 가능
+- 시크릿과 구성관리 : 암초, OAuth 토큰, SSH 키와 같은 중요한 정보를 저장 및 관리(컨테이너 이미지 재구성하지 않고 시크릿 및 애플리케이션 구성을 배포 및 업데이트)
 
-## AZ(Availability Zone)
-***
-#### 내용
-- 하나의 Region 내에 위치한 데이터 센터 그룹
-- 고가용성과 내결함성을 위해 여러 AZ에 걸쳐 앱 배포
+<img style="margin-left: 60px; width: 500px;" src="/img/posts/kubenetes/kubenetes.png">
 
-#### Region
-- 지리적으로 분리되어 여러 위치로 구분
-- 리전끼리 통신 시 별도 비용이 추가될 수 있다.
-- 글로벌 서비스 특성상 빠른 서비스를 제공하기 위해 여러 리전에 걸쳐 앱 배포
+#### 핵심 개념
+- cluster : 여러 대의 머신(노드)으로 구성된 그룹(마스터 노드와 여러 워커 노드로 구성)
+- node : 클러스터 구성요소가 되는 물리적 또는 가상머신
+- pod : k8s가 생성하고 관리할 수 있는 배포 가능한 가장 작은 단워(하나 이상의 컨테이너 그룹)
+- replicaset : 동일한 포드의 복제본을 일정하게 유지해 가용성 보장 시 사용되는 리소스(Deploment 사용 권장)
+- deployment : 파드와 레플리카셋에 대한 선언적 업데이트 제공
+- statefulset :  관리하는 데 사용되는 워크로드, 파드 순서 및 고유성 보장(Deployment와 다르게 동자성 유지)
+- Daemonset : 모든 노드가 파드의 사본을 실행(모든 노드에서 클러스터 스토리지, 로그 수집, 노드 모니터링 데몬 실행)
+- Job : 하나 이상의 파드를 생성하고 종료될 때 까지 계속 파드 실행 시도
+- Cronjob : 반복 일정에 따라 Job 생성
+- Namespace : 클러스터 내에 리소스를 논리적으로 분리
 
-<div style="height: 50px;"></div>
+<img style="margin-left: 60px; width: 500px;" src="/img/posts/kubenetes/cluster_node.png">
 
-
-## VPC(Virtual Private Cloud)
-***
-#### 내용
-- 개인 네트워크를 구성하는 요소
-- 서브넷, 라우팅 테이블, 보안 그룹, 인터넷 게이트웨이, NAT 게이트웨이
-
-#### 이점
-- 격리성 : 격리된 환경에서 구성하기 때문에 다른 네트워크에 간섭을 받지 않는다.
-- 보안성 : 세부적인 보안 설정 가능
-- 확장성 : 필요에 따라 서브넷 추가 구성, 라우팅 테이블, 보안 그룹 등 쉽게 추가
-- 유연성 : 요구에 따라 온프레미스와 혼합해 하이브리드 클라우드 구성
-
-<div style="height: 50px;"></div>
-
-## VPC 요소
-***
-#### 서브넷
-- 실제 VM이 올라갈 네트워크 대역을 설정
-- private와 public은 인터넷 게이트웨이 유무와 라우팅 테이블에 인터넷 게이트웨이 추가 여부
-- private는 NAT 게이트웨이를 통하지 않는 이상 인터넷 통신 불가 public은 기본적으로 가능
-
-#### 라우팅 테이블
-- 서브넷에서 사용되는 네트워크 네비게이션 같은 존재
-- CIDR 기반으로 동작, 각각의 대역에 대해 경로 설정 가능
-
-#### 보안 그룹
-- ACL(Access Control List)처럼 출발 IP, Port에 따라 출입 여부 결정
-- 아웃바운드는 보통 통신의 원활함을 위해 열어두는 편
-- 인바운드는 접속 및 통신용 포트를 제외한 나머지 통제
-
-#### 인터넷 게이트웨이
-- 퍼블릭 서브넷을 결정하는 요소
-- 라우팅 테이블과 조합하여 특정 대역만 인터넷이 가능하도록 설정(대부분 관리 비용이 때문에 다 열어둔다.)
-
-#### NAT(Network Address Translation) 게이트웨어
-- private에서도 인터넷 사용 가능
-- 모든 경로를 다 열지 않고 특정 포트만 보안 그룹을 통해 연다.
-
-<div style="height: 50px;"></div>
-
-## AWS EC2(Elastic Cloud Computer)
-***
-- UTM을 통해 VM을 생성하던 것과 비슷한 구조
-- CPU, Memory, 저장소 용량 등을 미리 정하고 생성
-
-<div style="height: 50px;"></div>
-
-## LB(Load Balancer)
-***
-- AWS에서 네트워크 트래픽을 여러 대상으로 분산시켜 가용성과 탄력성을 높이는 서비스
-- ALB(Application Load Balance)
-  - HTTP 및 HTTPS 트래픽에 최적화된 7 단계 로드 밸런서
-  - CloudWatch와 통합되어 다양한 지표와 로그 모니터링 
-- NLB(Network Load Balancer)
-  - 고성능을 요구하는 TCP, UDP 및 TLS 트래픽에 최적화된 4계층 로드 밸런서
-  - 매우 낮은 지연 시간, 고가용성
-- CLB(Classic Load Balancer)
-  - 구형 로드 밸런서로 4계층 + 7계층 로드 밸런서
-  - 설정이 간단하고 직관적
-
-<div style="height: 50px;"></div>
-
-## 실습
-***
-LB 생성 순서
-1. VPC 생성
-2. 서브넷 생성(여러개)
-3. 공통 보안 그룹 생성
-4. 인터넷 게이트웨이 생성
-5. nat 게이트웨이 생성
-6. 인스턴스 생성(여러개)
-7. 라우팅 테이블 생성(public, private)
-8. LB 생성
-   - 타겟 그룹 생성
-
+#### 실습
+- UTM 3개 생성 후 각각 접속
 ```shell
-# 양쪽 서버에서 똑같이 진행
-# 퍼블릭 서버 접속
-ssh -i <key 파일 명> <OS 명>@<ip 주소>
+# 쿠버네티스 설치
+sudo snap install microk8s --classic --channel=1.30
 
-# 파이썬 실행을 위한 다운로드
-sudo apt(yum) update && sudo apt(yum) install -y python3-flask
+# 설치 확인
+microk8s kubectl get pods -A
 
-# 파이썬 파일 작성
-vi app.py
+# alias 등록
+alias kubectl='microk8s kubectl'
 
-# 파일 실행
-sudo python3 app.py
+# 2번 생성해서 각각 접속
+microk8s add-node
 
-# LB DNS를 활용해 접근
+#연결 정보 확인
+microk8s kubectl get pods -A -o wide
 
-# private 접근 하기
-# public 서버에 접근 한 후 tem 파일 복사 후 파일 생성
-vi key.tem
-
-# private 접속 - 같은 네트워크 대역이라 접속이 가능하다.
-ssh -i key.tem <OS>@<IPv4>
-
-# private 접속 후 apt(yum) update
-# 인터넷 연결이 없기 때문에 update 되지 않음
-sudo apt(yum) update
-
-# NAT 연결 후 인터넷 연결 테스트
-sudo apt(yum) update
 ```
+
+<div style="height: 100px;"></div>
+

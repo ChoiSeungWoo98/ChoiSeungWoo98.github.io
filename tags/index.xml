@@ -3,7 +3,31 @@
         <title>Tags - Tag - 승우의 개발 일기🧑🏻‍💻</title>
         <link>https://choiseungwoo98.github.io/tags.html</link>
         <description>Tags - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Jul 2024 09:54:15 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags.html" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Jul 2024 21:27:45 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags.html" rel="self" type="application/rss+xml" /><item>
+    <title>Final</title>
+    <link>https://choiseungwoo98.github.io/tags/final.html</link>
+    <pubDate>Mon, 22 Jul 2024 21:27:45 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://choiseungwoo98.github.io/tags/final.html</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Java</title>
+    <link>https://choiseungwoo98.github.io/tags/java.html</link>
+    <pubDate>Mon, 22 Jul 2024 21:27:45 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://choiseungwoo98.github.io/tags/java.html</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Java-Basic</title>
+    <link>https://choiseungwoo98.github.io/tags/java-basic.html</link>
+    <pubDate>Mon, 22 Jul 2024 21:27:45 &#43;0900</pubDate>
+    <author>Author</author>
+    <guid>https://choiseungwoo98.github.io/tags/java-basic.html</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Ansible</title>
     <link>https://choiseungwoo98.github.io/tags/ansible.html</link>
     <pubDate>Thu, 18 Jul 2024 09:54:15 &#43;0900</pubDate>
@@ -57,30 +81,6 @@
     <pubDate>Wed, 17 Jul 2024 11:42:15 &#43;0900</pubDate>
     <author>Author</author>
     <guid>https://choiseungwoo98.github.io/tags/ebs.html</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>EFS</title>
-    <link>https://choiseungwoo98.github.io/tags/efs.html</link>
-    <pubDate>Wed, 17 Jul 2024 11:42:15 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://choiseungwoo98.github.io/tags/efs.html</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Lambda</title>
-    <link>https://choiseungwoo98.github.io/tags/lambda.html</link>
-    <pubDate>Wed, 17 Jul 2024 11:42:15 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://choiseungwoo98.github.io/tags/lambda.html</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Ec2</title>
-    <link>https://choiseungwoo98.github.io/tags/ec2.html</link>
-    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
-    <author>Author</author>
-    <guid>https://choiseungwoo98.github.io/tags/ec2.html</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
