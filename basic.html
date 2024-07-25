@@ -10,7 +10,7 @@
   <meta property="og:description" content="오늘은 드디어 그 유명한 쿠버네티스!!!
 쿠버만 잘해도 반은 간다는데
 화이팅! 부셔보자!!!
-Kubenetes(K8S) 설명 컨테이너화된 애플리케이션 배포, 확장 및 관리를 자동화 하는 오픈소스 시스템 대규모 애플리케이션을 신뢰성 있고 효율적인 운영을 도움 특징 서비스 디스커버리 및 로드 밸런싱 : DNS 혹은 자체 IP를 사용해 컨테이너 노출(컨테이너에 트랙픽이 많으면 로드밸런싱 후 배포하여 안정적으로 운영 가능) 스토리지 오케스트레이션 : 로컬저장소, 클라우드 공급자 등과 같이 원하는 저장소 시스템 사용 가능 자동화된 롤아웃, 롤백 : 배포된 컨테이너의 원하는 상태 서술 및 현재 원하는 상태로 변경 자동화된 빈패킹 : 컨테이너 노드에 맞춰 리소스를 가장 잘 사용할 수 있도록 지원 자동화된 복구 : 실패한 컨테이너를 다시 시작, 교체하며 사용자가 정의한 상태 이외에는 지속적으로 복구 가능 시크릿과 구성관리 : 암초, OAuth 토큰, SSH 키와 같은 중요한 정보를 저장 및 관리(컨테이너 이미지 재구성하지 않고 시크릿 및 애플리케이션 구성을 배포 및 업데이트) 핵심 개념 cluster : 여러 대의 머신(노드)으로 구성된 그룹(마스터 노드와 여러 워커 노드로 구성) node : 클러스터 구성요소가 되는 물리적 또는 가상머신 pod : k8s가 생성하고 관리할 수 있는 배포 가능한 가장 작은 단워(하나 이상의 컨테이너 그룹) replicaset : 동일한 포드의 복제본을 일정하게 유지해 가용성 보장 시 사용되는 리소스(Deploment 사용 권장) deployment : 파드와 레플리카셋에 대한 선언적 업데이트 제공 statefulset : 관리하는 데 사용되는 워크로드, 파드 순서 및 고유성 보장(Deployment와 다르게 동자성 유지) Daemonset : 모든 노드가 파드의 사본을 실행(모든 노드에서 클러스터 스토리지, 로그 수집, 노드 모니터링 데몬 실행) Job : 하나 이상의 파드를 생성하고 종료될 때 까지 계속 파드 실행 시도 Cronjob : 반복 일정에 따라 Job 생성 Namespace : 클러스터 내에 리소스를 논리적으로 분리 실습 UTM 3개 생성 후 각각 접속 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 쿠버네티스 설치 sudo snap install microk8s --classic --channel=1.">
+Kubenetes(K8S) 설명 컨테이너화된 애플리케이션 배포, 확장 및 관리를 자동화 하는 오픈소스 시스템 대규모 애플리케이션을 신뢰성 있고 효율적인 운영을 도움 특징 서비스 디스커버리 및 로드 밸런싱 : DNS 혹은 자체 IP를 사용해 컨테이너 노출(컨테이너에 트랙픽이 많으면 로드밸런싱 후 배포하여 안정적으로 운영 가능) 스토리지 오케스트레이션 : 로컬저장소, 클라우드 공급자 등과 같이 원하는 저장소 시스템 사용 가능 자동화된 롤아웃, 롤백 : 배포된 컨테이너의 원하는 상태 서술 및 현재 원하는 상태로 변경 자동화된 빈패킹 : 컨테이너 노드에 맞춰 리소스를 가장 잘 사용할 수 있도록 지원 자동화된 복구 : 실패한 컨테이너를 다시 시작, 교체하며 사용자가 정의한 상태 이외에는 지속적으로 복구 가능 시크릿과 구성관리 : 암초, OAuth 토큰, SSH 키와 같은 중요한 정보를 저장 및 관리(컨테이너 이미지 재구성하지 않고 시크릿 및 애플리케이션 구성을 배포 및 업데이트) 핵심 개념 cluster : 여러 대의 머신(노드)으로 구성된 그룹(마스터 노드와 여러 워커 노드로 구성) node : 클러스터 구성요소가 되는 물리적 또는 가상머신 pod : k8s가 생성하고 관리할 수 있는 배포 가능한 가장 작은 단워(하나 이상의 컨테이너 그룹) replicaset : 동일한 포드의 복제본을 일정하게 유지해 가용성 보장 시 사용되는 리소스(Deploment 사용 권장) deployment : 파드와 레플리카셋에 대한 선언적 업데이트 제공 statefulset : 관리하는 데 사용되는 워크로드, 파드 순서 및 고유성 보장(Deployment와 다르게 동자성 유지) Daemonset : 모든 노드가 파드의 사본을 실행(모든 노드에서 클러스터 스토리지, 로그 수집, 노드 모니터링 데몬 실행) Job : 하나 이상의 파드를 생성하고 종료될 때 까지 계속 파드 실행 시도 Cronjob : 반복 일정에 따라 Job 생성 Namespace : 클러스터 내에 리소스를 논리적으로 분리 실습 실습 1 UTM 3개 생성 후 각각 접속 1 2 3 4 5 6 7 8 9 10 11 # 쿠버네티스 설치 sudo snap install microk8s --classic --channel=1.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -27,7 +27,7 @@ Kubenetes(K8S) 설명 컨테이너화된 애플리케이션 배포, 확장 및 �
   <meta name="twitter:description" content="오늘은 드디어 그 유명한 쿠버네티스!!!
 쿠버만 잘해도 반은 간다는데
 화이팅! 부셔보자!!!
-Kubenetes(K8S) 설명 컨테이너화된 애플리케이션 배포, 확장 및 관리를 자동화 하는 오픈소스 시스템 대규모 애플리케이션을 신뢰성 있고 효율적인 운영을 도움 특징 서비스 디스커버리 및 로드 밸런싱 : DNS 혹은 자체 IP를 사용해 컨테이너 노출(컨테이너에 트랙픽이 많으면 로드밸런싱 후 배포하여 안정적으로 운영 가능) 스토리지 오케스트레이션 : 로컬저장소, 클라우드 공급자 등과 같이 원하는 저장소 시스템 사용 가능 자동화된 롤아웃, 롤백 : 배포된 컨테이너의 원하는 상태 서술 및 현재 원하는 상태로 변경 자동화된 빈패킹 : 컨테이너 노드에 맞춰 리소스를 가장 잘 사용할 수 있도록 지원 자동화된 복구 : 실패한 컨테이너를 다시 시작, 교체하며 사용자가 정의한 상태 이외에는 지속적으로 복구 가능 시크릿과 구성관리 : 암초, OAuth 토큰, SSH 키와 같은 중요한 정보를 저장 및 관리(컨테이너 이미지 재구성하지 않고 시크릿 및 애플리케이션 구성을 배포 및 업데이트) 핵심 개념 cluster : 여러 대의 머신(노드)으로 구성된 그룹(마스터 노드와 여러 워커 노드로 구성) node : 클러스터 구성요소가 되는 물리적 또는 가상머신 pod : k8s가 생성하고 관리할 수 있는 배포 가능한 가장 작은 단워(하나 이상의 컨테이너 그룹) replicaset : 동일한 포드의 복제본을 일정하게 유지해 가용성 보장 시 사용되는 리소스(Deploment 사용 권장) deployment : 파드와 레플리카셋에 대한 선언적 업데이트 제공 statefulset : 관리하는 데 사용되는 워크로드, 파드 순서 및 고유성 보장(Deployment와 다르게 동자성 유지) Daemonset : 모든 노드가 파드의 사본을 실행(모든 노드에서 클러스터 스토리지, 로그 수집, 노드 모니터링 데몬 실행) Job : 하나 이상의 파드를 생성하고 종료될 때 까지 계속 파드 실행 시도 Cronjob : 반복 일정에 따라 Job 생성 Namespace : 클러스터 내에 리소스를 논리적으로 분리 실습 UTM 3개 생성 후 각각 접속 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 쿠버네티스 설치 sudo snap install microk8s --classic --channel=1.">
+Kubenetes(K8S) 설명 컨테이너화된 애플리케이션 배포, 확장 및 관리를 자동화 하는 오픈소스 시스템 대규모 애플리케이션을 신뢰성 있고 효율적인 운영을 도움 특징 서비스 디스커버리 및 로드 밸런싱 : DNS 혹은 자체 IP를 사용해 컨테이너 노출(컨테이너에 트랙픽이 많으면 로드밸런싱 후 배포하여 안정적으로 운영 가능) 스토리지 오케스트레이션 : 로컬저장소, 클라우드 공급자 등과 같이 원하는 저장소 시스템 사용 가능 자동화된 롤아웃, 롤백 : 배포된 컨테이너의 원하는 상태 서술 및 현재 원하는 상태로 변경 자동화된 빈패킹 : 컨테이너 노드에 맞춰 리소스를 가장 잘 사용할 수 있도록 지원 자동화된 복구 : 실패한 컨테이너를 다시 시작, 교체하며 사용자가 정의한 상태 이외에는 지속적으로 복구 가능 시크릿과 구성관리 : 암초, OAuth 토큰, SSH 키와 같은 중요한 정보를 저장 및 관리(컨테이너 이미지 재구성하지 않고 시크릿 및 애플리케이션 구성을 배포 및 업데이트) 핵심 개념 cluster : 여러 대의 머신(노드)으로 구성된 그룹(마스터 노드와 여러 워커 노드로 구성) node : 클러스터 구성요소가 되는 물리적 또는 가상머신 pod : k8s가 생성하고 관리할 수 있는 배포 가능한 가장 작은 단워(하나 이상의 컨테이너 그룹) replicaset : 동일한 포드의 복제본을 일정하게 유지해 가용성 보장 시 사용되는 리소스(Deploment 사용 권장) deployment : 파드와 레플리카셋에 대한 선언적 업데이트 제공 statefulset : 관리하는 데 사용되는 워크로드, 파드 순서 및 고유성 보장(Deployment와 다르게 동자성 유지) Daemonset : 모든 노드가 파드의 사본을 실행(모든 노드에서 클러스터 스토리지, 로그 수집, 노드 모니터링 데몬 실행) Job : 하나 이상의 파드를 생성하고 종료될 때 까지 계속 파드 실행 시도 Cronjob : 반복 일정에 따라 Job 생성 Namespace : 클러스터 내에 리소스를 논리적으로 분리 실습 실습 1 UTM 3개 생성 후 각각 접속 1 2 3 4 5 6 7 8 9 10 11 # 쿠버네티스 설치 sudo snap install microk8s --classic --channel=1.">
 <meta name="application-name" content="승우의 개발 일기🧑🏻‍💻">
 <meta name="apple-mobile-web-app-title" content="승우의 개발 일기🧑🏻‍💻"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://choiseungwoo98.github.io/basic.html" /><link rel="prev" href="https://choiseungwoo98.github.io/iac_terraform_ansible.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -40,7 +40,7 @@ Kubenetes(K8S) 설명 컨테이너화된 애플리케이션 배포, 확장 및 �
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/choiseungwoo98.github.io\/basic.html"
-        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "Java-Basic, Java, final","wordcount":  308 ,
+        },"image": ["https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"],"genre": "posts","keywords": "Java-Basic, Java, final","wordcount":  463 ,
         "url": "https:\/\/choiseungwoo98.github.io\/basic.html","datePublished": "2024-07-22T21:27:45+09:00","dateModified": "2024-07-23T00:11:41+09:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "seungwoo","logo": "https:\/\/choiseungwoo98.github.io\/img\/profile\/%EC%95%BC%EA%B7%BC%EA%B3%B0.png"},"author": {
@@ -114,8 +114,8 @@ Kubenetes(K8S) 설명 컨테이너화된 애플리케이션 배포, 확장 및 �
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Basic</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>choiseU</a></span>&nbsp;<span class="post-category">included in <a href="/categories/java.html"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-22">2024-07-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;308 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-07-22">2024-07-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;463 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -131,6 +131,9 @@ Kubenetes(K8S) 설명 컨테이너화된 애플리케이션 배포, 확장 및 �
             <li><a href="#특징">특징</a></li>
             <li><a href="#핵심-개념">핵심 개념</a></li>
             <li><a href="#실습">실습</a></li>
+            <li><a href="#실습-1">실습 1</a></li>
+            <li><a href="#실습-2">실습 2</a></li>
+            <li><a href="#실습-3">실습 3</a></li>
           </ul>
         </li>
       </ul>
@@ -174,8 +177,41 @@ Kubenetes(K8S) 설명 컨테이너화된 애플리케이션 배포, 확장 및 �
 </ul>
 <img style="margin-left: 60px; width: 500px;" src="/img/posts/kubenetes/cluster_node.png">
 <h4 id="실습">실습</h4>
+<h4 id="실습-1">실습 1</h4>
 <ul>
 <li>UTM 3개 생성 후 각각 접속</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 쿠버네티스 설치</span>
+</span></span><span class="line"><span class="cl">sudo snap install microk8s --classic --channel<span class="o">=</span>1.30
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># alias 등록</span>
+</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">kubectl</span><span class="o">=</span><span class="s1">&#39;microk8s kubectl&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2번 생성해서 각각 접속</span>
+</span></span><span class="line"><span class="cl">microk8s add-node
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Worker Node 연결 정보 확인</span>
+</span></span><span class="line"><span class="cl">kubectl get nodes
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="실습-2">실습 2</h4>
+<ul>
+<li>Master에서 워커 노드로 분배해주기 때문에 별도 config 설정이 없다면 master에서 하지 못한다.</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -195,20 +231,54 @@ Kubenetes(K8S) 설명 컨테이너화된 애플리케이션 배포, 확장 및 �
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 쿠버네티스 설치</span>
-</span></span><span class="line"><span class="cl">sudo snap install microk8s --classic --channel<span class="o">=</span>1.30
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 테스트 폴더 생성 및 접속</span>
+</span></span><span class="line"><span class="cl">mkdir kubenetes <span class="o">&amp;&amp;</span> <span class="nb">cd</span> kubenetes
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 설치 확인</span>
-</span></span><span class="line"><span class="cl">microk8s kubectl get pods -A
+</span></span><span class="line"><span class="cl"><span class="c1"># pod, Replicaset, Deployment, Job, CornJob, Daemonset 생성</span>
+</span></span><span class="line"><span class="cl">vi &lt;파일명&gt;.yml
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># alias 등록</span>
-</span></span><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">kubectl</span><span class="o">=</span><span class="s1">&#39;microk8s kubectl&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 생성한 파일 실행</span>
+</span></span><span class="line"><span class="cl">kubectl apply -f &lt;파일명&gt;
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 2번 생성해서 각각 접속</span>
-</span></span><span class="line"><span class="cl">microk8s add-node
+</span></span><span class="line"><span class="cl"><span class="c1"># 생성한 정보 확인</span>
+</span></span><span class="line"><span class="cl">kubectl get &lt;리소스&gt; -A -o wide
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#연결 정보 확인</span>
-</span></span><span class="line"><span class="cl">microk8s kubectl get pods -A -o wide
+</span></span><span class="line"><span class="cl"><span class="c1"># 생성 안될 때 확인</span>
+</span></span><span class="line"><span class="cl">kubectl describe pod &lt;pod 이름&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="실습-3">실습 3</h4>
+<ul>
+<li>kubectl 명령어 익히기</li>
+<li>차이점 비교
+<ul>
+<li>Create vs Apply
+<ul>
+<li>Create : 리소스 새로 생성시 사용, 이미 존재하는 리소스를 업데이트하지 않음</li>
+<li>Apply : 리소스를 생성 혹은 업데이트시 사용, 변경 사항을 클러스터에 적용 시 유용</li>
+</ul>
+</li>
+<li>Log vs Describe
+<ul>
+<li>Log : Pod 로그를 출력해 디버깅 정보 제공</li>
+<li>Describe : 리소스 상태와 이벤트를 포함한 상세 정보 출력</li>
+</ul>
+</li>
+<li>patch vs edit
+<ul>
+<li>patch : 리소스를 Json이나 Yml 패치 형식으로 부분 업데이트 시 사용</li>
+<li>edit : 리소스를 직접 편집 시 사용, 편집 후 저장 시 변경사항 적용</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 테스트 폴더 생성 및 접속</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><div style="height: 100px;"></div>
