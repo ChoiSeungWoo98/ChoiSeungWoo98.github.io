@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>IaC on Hugo Theme Stack Starter</title>
+        <link>https://demo.stack.jimmycai.com/tags/iac/</link>
+        <description>Recent content in IaC on Hugo Theme Stack Starter</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 18 Jul 2024 09:54:15 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/iac/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>IaC 기초 및 Terraform, Ansible</title>
+        <link>https://demo.stack.jimmycai.com/p/iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</link>
+        <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/p/iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;오늘은 배포 자동화에 대해 배웠다.&lt;br&gt;
+거의 대부분의 프로젝트가 자동화를 사용하는 만큼 집중해서 잘 들어야지   &lt;br&gt;
+잊지 않기 위해 복습 또 복습&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;iacinfrastructure-as-code&#34;&gt;IaC(Infrastructure As Code)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;서버, 네트워크, DB, 애플리케이션 구성 등 IT 인프라를 수동 관리 대신 코드로 정의하고 관리하는 방식&lt;/li&gt;
+&lt;li&gt;프로그래밍 언어, 구성 파일을 사용하여 인프라 자동 배포 및 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;자동화, 일관성 : 수동 오류를 줄이고 배포, 관리의 일관성 유지&lt;/li&gt;
+&lt;li&gt;버전 관리 : 변경 이력 추적 및 복구 가능&lt;/li&gt;
+&lt;li&gt;재사용성 : 코드 모듈화 및 템플릿화 를 통해 재사용성을 높여 비용 절감&lt;/li&gt;
+&lt;li&gt;협업 : Devops 문화의 핵심 요소&lt;/li&gt;
+&lt;li&gt;가시성, 투명성 : 모든 설정을 명시적으로 정의해, 인프라 구성 상태를 명확히 파악&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;구현-방식&#34;&gt;구현 방식
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;선언적 접근 방식 : 원하는 최종 상태 정의, 시스템 자동 구성(Terraform, AWS CloudFormation 등), 간결한 설정으로 이해가 쉽고 필요한 설정만 변경&lt;/li&gt;
+&lt;li&gt;명령적 접근 방식 : 수행할 명령어 순서 명시 및 인프라 설정을 위한 단계별 명령 작성(Ansible, Chef 등), 세부적인 제어 가능, 복잡한 논리와 조건 처리를 쉽게 구현&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;도구&#34;&gt;도구
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Terraform : 클라우드 인프라를 코드로 정의하는 오픈소스 도구&lt;/li&gt;
+&lt;li&gt;AWS CloudFormation : AWS 리소스 템플릿으로 정의하여 배포&lt;/li&gt;
+&lt;li&gt;Ansible : 서버 구성 및 애플리케이션 배포 자동화 도구, YAML 포맷의 플레이북 사용&lt;/li&gt;
+&lt;li&gt;Kubernetes : 컨테이너화된 애플리케이션 배포, 스케일링, 운영 자동화, Yaml 파일을 통해 클러스터 상태 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;워크플로우&#34;&gt;워크플로우
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;계획 : 요구사항 분석 및 인프라 구조 설계&lt;/li&gt;
+&lt;li&gt;코드 작성 : 인프라를 코드로 정의&lt;/li&gt;
+&lt;li&gt;버전 관리 : 작성된 코드를 Git 등의 버전 관리 시스템에 저장 및 이력 관리&lt;/li&gt;
+&lt;li&gt;테스트 : 테스트 환경에서 코드 실행 및 결과 검증&lt;/li&gt;
+&lt;li&gt;적용 : 검증된 코드를 실제 환경에 배포&lt;/li&gt;
+&lt;li&gt;모니터링, 관리 : 배포된 인프라 모니터링 및 수정, 업데이트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;장점&#34;&gt;장점
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;신속한 배포 : 자동화된 프로세스를 통해 신속하게 배포&lt;/li&gt;
+&lt;li&gt;효율성 : 반복적인 작업을 자동화&lt;/li&gt;
+&lt;li&gt;일관성 : 모든 환경에서 동일한 설정 적용&lt;/li&gt;
+&lt;li&gt;복구 능력 : 코드 기반 인프라는 장애 시 빠르게 복구 가능&lt;/li&gt;
+&lt;li&gt;확장성 : 필요에 따라 쉽게 확장 및 축소 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;terraform&#34;&gt;Terraform
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;인프라를 코드로 관리하는 도구, HashiCorp에서 개발&lt;/li&gt;
+&lt;li&gt;인프라를 선언적으로 정의 및 관리&lt;/li&gt;
+&lt;li&gt;대부분 인프라를 테라폼해서 배포, 진짜 중요한 사업인 경우 손으로 배포&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-1&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;프로바이더 : AWS, Azure, GCP 등 다양한 클라우드 서비스 제공자 지원&lt;/li&gt;
+&lt;li&gt;인프라 코드화 : JSON과 유사한 HCL(HashiCorp Configuration Language) 사용&lt;/li&gt;
+&lt;li&gt;실행 계획 : 변경사항 적용 전 계획 미리 확인&lt;/li&gt;
+&lt;li&gt;모듈화 : 재사용 가능한 모듈 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;워크플로우-1&#34;&gt;워크플로우
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;init : 프로젝트 디렉토리 초기화 및 필요한 플러그인 다운로드&lt;/li&gt;
+&lt;li&gt;plan : 변경 사항 시뮬레이션 및 계획서 제출&lt;/li&gt;
+&lt;li&gt;apply : 계획된 변경 사항 실제 인프라 적용&lt;/li&gt;
+&lt;li&gt;state : 인프라 상태 확인 및 관리&lt;/li&gt;
+&lt;li&gt;destroy : 인프라 자원 제거&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;예제&#34;&gt;예제
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# CSP 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;provider &lt;span class=&#34;s2&#34;&gt;&amp;#34;aws&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# 할당 지역 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;region&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ap-northeast-2&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 변수 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;variable &lt;span class=&#34;s2&#34;&gt;&amp;#34;instance_count&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# 기본 값 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# CSP 내부에서 사용할 리소스 명칭&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;resource &lt;span class=&#34;s2&#34;&gt;&amp;#34;aws_instance&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;example&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;ami&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-123456&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;instance_type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;t2.micro&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 오브젝트의 특정 항목을 파일로 출력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;output &lt;span class=&#34;s2&#34;&gt;&amp;#34;instance_ip&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; aws_instance.example.public_ip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;ansible&#34;&gt;Ansible
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;IT 자동화 도구로 서버 구성 관리, 애플리케이션 배포, 작업 자동화 지원&lt;/li&gt;
+&lt;li&gt;원격에서 수백, 수천대 까지 명령어를 한번에 실행해 모든 자동화 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-2&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Agentless : SSH를 통해 연결 진행&lt;/li&gt;
+&lt;li&gt;모듈 기반 : 모듈을 통해 다양한 작업 수행&lt;/li&gt;
+&lt;li&gt;YAML : 가독성 높은 YAML 포맷 사용&lt;/li&gt;
+&lt;li&gt;확장성 : 커뮤니티 모듈 및 플러그인을 통해 기능 확장 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;구성요소&#34;&gt;구성요소
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Inventory : 관리할 호스트 목록 정의&lt;/li&gt;
+&lt;li&gt;Playbook : 작업 정의서(YAML 포맷 사용), 실질적인 명령 수행 부분&lt;/li&gt;
+&lt;li&gt;Modules : 특정 작업을 수행하는 코드 블록&lt;/li&gt;
+&lt;li&gt;Roles : 관련 작업을 그룹화하여 재사용&lt;/li&gt;
+&lt;li&gt;Tasks : 실행할 작업 정의&lt;/li&gt;
+&lt;li&gt;Handlers : 특정 조건에 따라 실행되느 작업&lt;/li&gt;
+&lt;li&gt;Templates : Jinja2 템플릿을 통해 설정 파일 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;워크플로우-2&#34;&gt;워크플로우
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;인벤토리 작성 : 호스트 목록 작성&lt;/li&gt;
+&lt;li&gt;플레이북 작성 : 수행할 작업을 정의한 YAML 파일 작성&lt;/li&gt;
+&lt;li&gt;작업 실행 : 플레이북 실행&lt;/li&gt;
+&lt;li&gt;상태 확인 : 호스트 상태 및 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;실습&#34;&gt;실습
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;유저 생성(AdminstratorAccess)&lt;/li&gt;
+&lt;li&gt;액세스키 생성(CLI)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 액세스 키 등록&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 액세스키, 비밀 액세스 키, 리전, 타입 - json 추천 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aws configure
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 설정 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat ~/.aws/credentials
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# main.tf 파일 생성 후 붙여넣기(키 위치 밑 ip 변경)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi main.tf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 현재 디렉토리에 있는 Terraform 구성 파일 초기화 및 필요한 플러그인, 모듈 다운로드&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;terraform init
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 현재 구성 파일 기반으로 실행 계획 생성 및 적용될 변경 사항 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;terraform plan
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 실행 계획을 실제로 적용하여 인프라 생성 혹은 업데이트&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;terraform apply
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# hosts.ini 파일에 문구 추가&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[webservers]&amp;#34;&lt;/span&gt; &amp;gt; hosts.ini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Terraform 출력 값에서 인스턴스 IP를 json 형식으로 가져와 hosts.ini 파일에 적용&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;terraform output -json instance_ips &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;.[]&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; hosts.ini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# playbook.yml 파일 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi playbook.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ansible.cfg 파일 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi ansible.cfg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# hosts.ini 파일을 인벤토리로 사용하여 Ansible 플레이북 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ansible-playbook -i hosts.ini playbook.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ssh 접속&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -i &amp;lt;key&amp;gt; &amp;lt;os&amp;gt;@&amp;lt;ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 실행 중인 모든 프로세서 중 nginx 필터링&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ps -ef &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Terraform 구성을 기반으로 인프라를 제거&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;terraform destroy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

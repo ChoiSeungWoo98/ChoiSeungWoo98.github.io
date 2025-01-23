@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>SaaS on Hugo Theme Stack Starter</title>
+        <link>https://demo.stack.jimmycai.com/tags/saas/</link>
+        <description>Recent content in SaaS on Hugo Theme Stack Starter</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 03 Jul 2024 18:03:57 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/saas/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>가상화 기술</title>
+        <link>https://demo.stack.jimmycai.com/p/%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</link>
+        <pubDate>Wed, 03 Jul 2024 18:03:57 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/p/%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;어제 어수선한 분위기 속에 첫날이 마무리되고&lt;br&gt;
+두번째 수업이 진행되었습니다.&lt;br&gt;
+오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;가상화-기술&#34;&gt;가상화 기술
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider)
+&lt;ul&gt;
+&lt;li&gt;각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등)&lt;/li&gt;
+&lt;li&gt;기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등&lt;/li&gt;
+&lt;li&gt;AWS, GCP, Kakao Cloud 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;플랫폼 기반 서비스(PaaS : Platform as a Service)
+&lt;ul&gt;
+&lt;li&gt;본인 애플리케이션을 쉽게 업로드하여 서비스 활용&lt;/li&gt;
+&lt;li&gt;가상화된 자원을 자동으로 할당받아 애플리케이션이 실행&lt;/li&gt;
+&lt;li&gt;Heroku, Vercel, Netlify, 카페24 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;솔루션 기반 서비스(SaaS : Software as a Service)
+&lt;ul&gt;
+&lt;li&gt;사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공&lt;/li&gt;
+&lt;li&gt;사용량에 따른 과금 정책이 대부분&lt;/li&gt;
+&lt;li&gt;구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+    &lt;summary style=&#34;margin-left: 60px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;가상화 기술&lt;/summary&gt;
+    &lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/cloud/가상화기술.png&#34;&gt;
+&lt;/details&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;집중적으로-공부해야하는-가상화-기술&#34;&gt;집중적으로 공부해야하는 가상화 기술
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;대부분의 기업이 IaaS를 통해 SaaS를 출시한다.
+&lt;ul&gt;
+&lt;li&gt;IaaS를 하는 기업은 대기업 위주이며(네이버 클라우드, 카카오 클라우드 등)&lt;/li&gt;
+&lt;li&gt;대부분의 클라우드는 IaaS를 이용해 SaaS를 개발한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;클라우드 시장
+&lt;ul&gt;
+&lt;li&gt;보통 Iaas, PaaS, SaaS로 나누어 보고 IaaS 시장에서 가장 많이 사용되는 서비스는 현재 AWS다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;IaaS를 만든다는 뜻
+&lt;ul&gt;
+&lt;li&gt;openStack 등의 솔루션을 통해 각 리소스를 가상화하고 서비스를 만드는것&lt;/li&gt;
+&lt;li&gt;여기에 흥미가 있다면 C/C++/Python 등을 공부하여 openStack을 활용해보는 것이 좋다.&lt;/li&gt;
+&lt;li&gt;다만, 현재로써는 석박사 과정이 필수이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;자주-사용하는-기능&#34;&gt;자주 사용하는 기능
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;가장 기본적으로 Network를 아용하여 네트워크 구조 세팅&lt;/li&gt;
+&lt;li&gt;세팅된 Network 위에 Compute를 이용한 서버 구축&lt;/li&gt;
+&lt;li&gt;Database를 이용한 애플리케이션 DB 연결&lt;/li&gt;
+&lt;li&gt;Storage를 이용하여 애플리케이션에서 나오는 로그와 같은 파일 저장&lt;/li&gt;
+&lt;li&gt;그 외로 Security를 통해 보안 강화, AI를 통해 AI 서비스 붙이기&lt;br&gt;
+즉, 이외에는 필요한 것들을 찾아 붙이는 방식&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

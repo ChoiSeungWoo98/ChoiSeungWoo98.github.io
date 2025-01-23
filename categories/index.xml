@@ -6,26 +6,114 @@
         <description>Recent content in Categories on Hugo Theme Stack Starter</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Syntax</title>
-        <link>https://demo.stack.jimmycai.com/categories/syntax/</link>
-        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+        <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Java</title>
+        <link>https://demo.stack.jimmycai.com/categories/java/</link>
+        <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/syntax/</guid>
+        <guid>https://demo.stack.jimmycai.com/categories/java/</guid>
         <description></description>
         </item>
         <item>
-        <title>Themes</title>
-        <link>https://demo.stack.jimmycai.com/categories/themes/</link>
-        <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+        <title>AWS</title>
+        <link>https://demo.stack.jimmycai.com/categories/aws/</link>
+        <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/themes/</guid>
+        <guid>https://demo.stack.jimmycai.com/categories/aws/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>KakaoTechBootCamp</title>
+        <link>https://demo.stack.jimmycai.com/categories/kakaotechbootcamp/</link>
+        <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/categories/kakaotechbootcamp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>네트워크</title>
+        <link>https://demo.stack.jimmycai.com/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</link>
+        <pubDate>Sat, 13 Jul 2024 22:42:04 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Docker</title>
+        <link>https://demo.stack.jimmycai.com/categories/docker/</link>
+        <pubDate>Fri, 12 Jul 2024 14:25:27 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/categories/docker/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux</title>
+        <link>https://demo.stack.jimmycai.com/categories/linux/</link>
+        <pubDate>Mon, 08 Jul 2024 22:32:35 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/categories/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>클라우드</title>
+        <link>https://demo.stack.jimmycai.com/categories/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</link>
+        <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/categories/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>가상화</title>
+        <link>https://demo.stack.jimmycai.com/categories/%EA%B0%80%EC%83%81%ED%99%94/</link>
+        <pubDate>Wed, 03 Jul 2024 18:03:57 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/categories/%EA%B0%80%EC%83%81%ED%99%94/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>WebSocket</title>
+        <link>https://demo.stack.jimmycai.com/categories/websocket/</link>
+        <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/categories/websocket/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Git</title>
+        <link>https://demo.stack.jimmycai.com/categories/git/</link>
+        <pubDate>Sun, 05 Mar 2023 04:39:34 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/categories/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>형상관리</title>
+        <link>https://demo.stack.jimmycai.com/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC/</link>
+        <pubDate>Sat, 04 Mar 2023 22:47:36 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Blog</title>
+        <link>https://demo.stack.jimmycai.com/categories/blog/</link>
+        <pubDate>Sat, 04 Mar 2023 14:16:49 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/categories/blog/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Diary</title>
+        <link>https://demo.stack.jimmycai.com/categories/diary/</link>
+        <pubDate>Wed, 01 Mar 2023 21:50:49 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/categories/diary/</guid>
         <description></description>
         </item>
         <item>
         <title>Example Category</title>
         <link>https://demo.stack.jimmycai.com/categories/example-category/</link>
-        <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://demo.stack.jimmycai.com/categories/example-category/</guid>
         <description></description>

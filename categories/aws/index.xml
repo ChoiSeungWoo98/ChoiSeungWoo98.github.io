@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>AWS on Hugo Theme Stack Starter</title>
+        <link>https://demo.stack.jimmycai.com/categories/aws/</link>
+        <description>Recent content in AWS on Hugo Theme Stack Starter</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 18 Jul 2024 09:54:15 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/categories/aws/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>IaC 기초 및 Terraform, Ansible</title>
+        <link>https://demo.stack.jimmycai.com/p/iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</link>
+        <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/p/iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;오늘은 배포 자동화에 대해 배웠다.&lt;br&gt;
+거의 대부분의 프로젝트가 자동화를 사용하는 만큼 집중해서 잘 들어야지   &lt;br&gt;
+잊지 않기 위해 복습 또 복습&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;iacinfrastructure-as-code&#34;&gt;IaC(Infrastructure As Code)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;서버, 네트워크, DB, 애플리케이션 구성 등 IT 인프라를 수동 관리 대신 코드로 정의하고 관리하는 방식&lt;/li&gt;
+&lt;li&gt;프로그래밍 언어, 구성 파일을 사용하여 인프라 자동 배포 및 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;자동화, 일관성 : 수동 오류를 줄이고 배포, 관리의 일관성 유지&lt;/li&gt;
+&lt;li&gt;버전 관리 : 변경 이력 추적 및 복구 가능&lt;/li&gt;
+&lt;li&gt;재사용성 : 코드 모듈화 및 템플릿화 를 통해 재사용성을 높여 비용 절감&lt;/li&gt;
+&lt;li&gt;협업 : Devops 문화의 핵심 요소&lt;/li&gt;
+&lt;li&gt;가시성, 투명성 : 모든 설정을 명시적으로 정의해, 인프라 구성 상태를 명확히 파악&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;구현-방식&#34;&gt;구현 방식
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;선언적 접근 방식 : 원하는 최종 상태 정의, 시스템 자동 구성(Terraform, AWS CloudFormation 등), 간결한 설정으로 이해가 쉽고 필요한 설정만 변경&lt;/li&gt;
+&lt;li&gt;명령적 접근 방식 : 수행할 명령어 순서 명시 및 인프라 설정을 위한 단계별 명령 작성(Ansible, Chef 등), 세부적인 제어 가능, 복잡한 논리와 조건 처리를 쉽게 구현&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;도구&#34;&gt;도구
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Terraform : 클라우드 인프라를 코드로 정의하는 오픈소스 도구&lt;/li&gt;
+&lt;li&gt;AWS CloudFormation : AWS 리소스 템플릿으로 정의하여 배포&lt;/li&gt;
+&lt;li&gt;Ansible : 서버 구성 및 애플리케이션 배포 자동화 도구, YAML 포맷의 플레이북 사용&lt;/li&gt;
+&lt;li&gt;Kubernetes : 컨테이너화된 애플리케이션 배포, 스케일링, 운영 자동화, Yaml 파일을 통해 클러스터 상태 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;워크플로우&#34;&gt;워크플로우
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;계획 : 요구사항 분석 및 인프라 구조 설계&lt;/li&gt;
+&lt;li&gt;코드 작성 : 인프라를 코드로 정의&lt;/li&gt;
+&lt;li&gt;버전 관리 : 작성된 코드를 Git 등의 버전 관리 시스템에 저장 및 이력 관리&lt;/li&gt;
+&lt;li&gt;테스트 : 테스트 환경에서 코드 실행 및 결과 검증&lt;/li&gt;
+&lt;li&gt;적용 : 검증된 코드를 실제 환경에 배포&lt;/li&gt;
+&lt;li&gt;모니터링, 관리 : 배포된 인프라 모니터링 및 수정, 업데이트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;장점&#34;&gt;장점
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;신속한 배포 : 자동화된 프로세스를 통해 신속하게 배포&lt;/li&gt;
+&lt;li&gt;효율성 : 반복적인 작업을 자동화&lt;/li&gt;
+&lt;li&gt;일관성 : 모든 환경에서 동일한 설정 적용&lt;/li&gt;
+&lt;li&gt;복구 능력 : 코드 기반 인프라는 장애 시 빠르게 복구 가능&lt;/li&gt;
+&lt;li&gt;확장성 : 필요에 따라 쉽게 확장 및 축소 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;terraform&#34;&gt;Terraform
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;인프라를 코드로 관리하는 도구, HashiCorp에서 개발&lt;/li&gt;
+&lt;li&gt;인프라를 선언적으로 정의 및 관리&lt;/li&gt;
+&lt;li&gt;대부분 인프라를 테라폼해서 배포, 진짜 중요한 사업인 경우 손으로 배포&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-1&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;프로바이더 : AWS, Azure, GCP 등 다양한 클라우드 서비스 제공자 지원&lt;/li&gt;
+&lt;li&gt;인프라 코드화 : JSON과 유사한 HCL(HashiCorp Configuration Language) 사용&lt;/li&gt;
+&lt;li&gt;실행 계획 : 변경사항 적용 전 계획 미리 확인&lt;/li&gt;
+&lt;li&gt;모듈화 : 재사용 가능한 모듈 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;워크플로우-1&#34;&gt;워크플로우
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;init : 프로젝트 디렉토리 초기화 및 필요한 플러그인 다운로드&lt;/li&gt;
+&lt;li&gt;plan : 변경 사항 시뮬레이션 및 계획서 제출&lt;/li&gt;
+&lt;li&gt;apply : 계획된 변경 사항 실제 인프라 적용&lt;/li&gt;
+&lt;li&gt;state : 인프라 상태 확인 및 관리&lt;/li&gt;
+&lt;li&gt;destroy : 인프라 자원 제거&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;예제&#34;&gt;예제
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# CSP 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;provider &lt;span class=&#34;s2&#34;&gt;&amp;#34;aws&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# 할당 지역 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;region&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ap-northeast-2&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 변수 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;variable &lt;span class=&#34;s2&#34;&gt;&amp;#34;instance_count&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;# 기본 값 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# CSP 내부에서 사용할 리소스 명칭&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;resource &lt;span class=&#34;s2&#34;&gt;&amp;#34;aws_instance&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;example&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;ami&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ami-123456&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;instance_type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;t2.micro&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 오브젝트의 특정 항목을 파일로 출력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;output &lt;span class=&#34;s2&#34;&gt;&amp;#34;instance_ip&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nv&#34;&gt;value&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; aws_instance.example.public_ip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;ansible&#34;&gt;Ansible
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;IT 자동화 도구로 서버 구성 관리, 애플리케이션 배포, 작업 자동화 지원&lt;/li&gt;
+&lt;li&gt;원격에서 수백, 수천대 까지 명령어를 한번에 실행해 모든 자동화 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-2&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Agentless : SSH를 통해 연결 진행&lt;/li&gt;
+&lt;li&gt;모듈 기반 : 모듈을 통해 다양한 작업 수행&lt;/li&gt;
+&lt;li&gt;YAML : 가독성 높은 YAML 포맷 사용&lt;/li&gt;
+&lt;li&gt;확장성 : 커뮤니티 모듈 및 플러그인을 통해 기능 확장 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;구성요소&#34;&gt;구성요소
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Inventory : 관리할 호스트 목록 정의&lt;/li&gt;
+&lt;li&gt;Playbook : 작업 정의서(YAML 포맷 사용), 실질적인 명령 수행 부분&lt;/li&gt;
+&lt;li&gt;Modules : 특정 작업을 수행하는 코드 블록&lt;/li&gt;
+&lt;li&gt;Roles : 관련 작업을 그룹화하여 재사용&lt;/li&gt;
+&lt;li&gt;Tasks : 실행할 작업 정의&lt;/li&gt;
+&lt;li&gt;Handlers : 특정 조건에 따라 실행되느 작업&lt;/li&gt;
+&lt;li&gt;Templates : Jinja2 템플릿을 통해 설정 파일 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;워크플로우-2&#34;&gt;워크플로우
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;인벤토리 작성 : 호스트 목록 작성&lt;/li&gt;
+&lt;li&gt;플레이북 작성 : 수행할 작업을 정의한 YAML 파일 작성&lt;/li&gt;
+&lt;li&gt;작업 실행 : 플레이북 실행&lt;/li&gt;
+&lt;li&gt;상태 확인 : 호스트 상태 및 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;실습&#34;&gt;실습
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;유저 생성(AdminstratorAccess)&lt;/li&gt;
+&lt;li&gt;액세스키 생성(CLI)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 액세스 키 등록&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 액세스키, 비밀 액세스 키, 리전, 타입 - json 추천 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aws configure
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 설정 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat ~/.aws/credentials
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# main.tf 파일 생성 후 붙여넣기(키 위치 밑 ip 변경)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi main.tf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 현재 디렉토리에 있는 Terraform 구성 파일 초기화 및 필요한 플러그인, 모듈 다운로드&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;terraform init
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 현재 구성 파일 기반으로 실행 계획 생성 및 적용될 변경 사항 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;terraform plan
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 실행 계획을 실제로 적용하여 인프라 생성 혹은 업데이트&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;terraform apply
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# hosts.ini 파일에 문구 추가&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;[webservers]&amp;#34;&lt;/span&gt; &amp;gt; hosts.ini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Terraform 출력 값에서 인스턴스 IP를 json 형식으로 가져와 hosts.ini 파일에 적용&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;terraform output -json instance_ips &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq -r &lt;span class=&#34;s1&#34;&gt;&amp;#39;.[]&amp;#39;&lt;/span&gt; &amp;gt;&amp;gt; hosts.ini
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# playbook.yml 파일 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi playbook.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ansible.cfg 파일 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi ansible.cfg
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# hosts.ini 파일을 인벤토리로 사용하여 Ansible 플레이북 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ansible-playbook -i hosts.ini playbook.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ssh 접속&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -i &amp;lt;key&amp;gt; &amp;lt;os&amp;gt;@&amp;lt;ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 실행 중인 모든 프로세서 중 nginx 필터링&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ps -ef &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Terraform 구성을 기반으로 인프라를 제거&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;terraform destroy
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>aws에 EBS, Lambda와 efs</title>
+        <link>https://demo.stack.jimmycai.com/p/aws%EC%97%90-ebs-lambda%EC%99%80-efs/</link>
+        <pubDate>Wed, 17 Jul 2024 11:42:15 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/p/aws%EC%97%90-ebs-lambda%EC%99%80-efs/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;오늘은 EBS, 람다와 EFS에 대해 배웠다 &lt;br&gt;
+잊지 않기 위해 복습 또 복습&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ebselastic-block-storage&#34;&gt;EBS(Elastic Block Storage)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS 블록 스토리지 서비스로 EC2 인스턴스에 사용되는 지속적인 스토리지&lt;/li&gt;
+&lt;li&gt;DB, 파일 시스템, 로그 스토리지, 애플리케이션 데이터 등 사용&lt;/li&gt;
+&lt;li&gt;데이터를 블록 단위로 저장하며 개별적으로 다루어 질 수 있다.&lt;/li&gt;
+&lt;li&gt;지속성이 보장되며 중지 또는 종료해도 데이터 유지&lt;/li&gt;
+&lt;li&gt;주로 자주 접근하지 않는 데이터를 저렴하게 저장할 때 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;탄력성 : 필요에 따라 크기 조정, 스냅샷을 통해 백업 및 복원 가능(용량을 늘리는 건 쉬우나 줄이는 건 힘들어 충분히 고려 후 증설)&lt;/li&gt;
+&lt;li&gt;고성능 : 다양한 선능 옵션 제공&lt;/li&gt;
+&lt;li&gt;내구성 : 데이터 복제 및 높은 가용성 제공&lt;/li&gt;
+&lt;li&gt;보안 : IAM 정책을 통한 접근 제어 가능&lt;/li&gt;
+&lt;li&gt;스냅샷 : 볼륨의 시점 복사본 생성 가능 S3에 저장되며 복구 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습볼륨-확장&#34;&gt;실습(볼륨 확장)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;인스턴스 생성&lt;/li&gt;
+&lt;li&gt;보안 그룹 권한 변경&lt;/li&gt;
+&lt;li&gt;볼륨 늘림&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 인스턴스 접근&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -i &amp;lt;aws key&amp;gt; &amp;lt;os&amp;gt;@&amp;lt;ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 루트 권한으로 변경&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo su
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 파일 시스템 디스크 사용량 노출&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;df -hT
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 시스템 블록 장치 나열&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lsblk
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 지정된 파티션의 크기 확장&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;growpart /dev/xvda &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# XFS 파일 시스템 크기 확장&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;xfs_growfs /dev/xvda1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 증설 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lsblk
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;aws-efselastic-filesystem&#34;&gt;AWS EFS(Elastic FileSystem)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;여러 EC2 인스턴스가 동시에 데이터를 읽고 쓰며, 파일 시스템의 확장성과 고가용성 보장&lt;/li&gt;
+&lt;li&gt;같은 VPC 내에서 여러 인스턴스가 같은 파일 시스템에 접근해 읽기, 쓰기 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-1&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;확장성 : 파일 시스템 크기 자동 조절 및 필요에 따른 확장, 축소 가능&lt;/li&gt;
+&lt;li&gt;고가용성 및 내구성 : 여러 가용 영역(AZ)에 데이터 자동 복제해 높은 가용성 및 내구성 제공&lt;/li&gt;
+&lt;li&gt;동시 엑세스 : 여러 EC2 인스턴스에서 동시에 엑세스 할 수 있으며 공유 파일 시스템이 필요한 워크 로드에 적합&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습볼륨-확장-1&#34;&gt;실습(볼륨 확장)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;EFS 생성&lt;/li&gt;
+&lt;li&gt;보안그룹 수정&lt;/li&gt;
+&lt;li&gt;연결&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 인스턴스 접근&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -i &amp;lt;aws key&amp;gt; &amp;lt;os&amp;gt;@&amp;lt;ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 루트 권한으로 변경&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo su
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ip 복사&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /mnt 디렉토리 안에 efs 폴더 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /mnt &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; mkdir efs
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 복사한 ip 주소 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;df -hT &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep efs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;aws-s3simple-storage-serive&#34;&gt;AWS S3(Simple Storage Serive)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;객체 스토리지 서비스로 데이터를 객체 단위로 저장&lt;/li&gt;
+&lt;li&gt;객체는 파일 데이터와 메타 데이터로 구성되며 인터넷을 통해 접근 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-2&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;내구성 및 가용성 : S3는 99.99% 내구성 제공 및 여러 가용 영역의 복제되어 높은 가용성 보장&lt;/li&gt;
+&lt;li&gt;확장성 : 거의 무한대로 확장 가능&lt;/li&gt;
+&lt;li&gt;보안 : 데이터 암호화 후 저정 및 전송하며 IAM 정책, 버킷 정책, ACL을 통해 엑세서 권한 제어&lt;/li&gt;
+&lt;li&gt;비용과 효율성 : 저장한 데이터 양과 사용한 리소스에 따라 지용 지불&lt;/li&gt;
+&lt;li&gt;데이터 관리 기능 : 버전 관리, 수명 주기 정책, 객체 잠금, 이벤트 알림 등 데이터를 효울적으로 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;사용-예시&#34;&gt;사용 예시
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;중요한 데이터 백업 및 복원에 사용&lt;/li&gt;
+&lt;li&gt;오랫동안 보관해야 하지만 자주 접근하지 않는 데이터의 아카이빙에 적합&lt;/li&gt;
+&lt;li&gt;정적 웹 사이트 호스팅에 사용&lt;/li&gt;
+&lt;li&gt;미디어 콘텐츠 저장 후 배포 시 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습볼륨-확장-2&#34;&gt;실습(볼륨 확장)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;S3 생성(모든 퍼블릭 허용)&lt;/li&gt;
+&lt;li&gt;권한 추가&lt;/li&gt;
+&lt;li&gt;파일 업로드&lt;/li&gt;
+&lt;li&gt;url 클릭 후 확인&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;aws-lambda&#34;&gt;AWS Lambda
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;서버를 프로비저닝하거나 관리할 필요 없이 코드를 실행 할 수 있는 컴퓨팅 서비스&lt;/li&gt;
+&lt;li&gt;코드를 업로드하고 실행 조건을 설정하면, 나머지 인프라 관리는 AWS에서 자동으로 처리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-3&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;서버를 프로비저닝, 관리, 확장할 필요가 없이 AWS에서 모든 인프라 관리&lt;/li&gt;
+&lt;li&gt;Lambda 함수는 요청에 따라 자동 확장&lt;/li&gt;
+&lt;li&gt;다양한 프로그래밍 언어 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;사용-예시-1&#34;&gt;사용 예시
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;파일 업로드 이벤트 발생 시 트리거하여 파일 처리&lt;/li&gt;
+&lt;li&gt;실시간 데이터 처리 및 로그 분석, 필터링, 알람 트리거 수행&lt;/li&gt;
+&lt;li&gt;백업, 보고서 생성, 시스템 유지보수 작업 자동화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습볼륨-확장-3&#34;&gt;실습(볼륨 확장)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Lambda 생성&lt;/li&gt;
+&lt;li&gt;코드 수정&lt;/li&gt;
+&lt;li&gt;테스트 클릭 및 모니터링 로그 확인&lt;/li&gt;
+&lt;li&gt;트리거 추가&lt;/li&gt;
+&lt;li&gt;파일 업로드&lt;/li&gt;
+&lt;li&gt;모니터링 확인&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;aws-cloudwatch&#34;&gt;AWS CloudWatch
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;인프라와 애플리케이션의 상태를 모니터링하고 관리하는 서비스&lt;/li&gt;
+&lt;li&gt;다양한 AWS 서비스와 통합되어 메트릭 수집, 경보 설정, 로그 모니터링 및 분석&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-4&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;EC2, RDS, S3, DynamoDB 등 다양한 AWS 서비스에서 메트릭 자동 수집&lt;/li&gt;
+&lt;li&gt;특정 조건 충족 시 알람 생성해 SNS 및 함수 트리거, auto Scaling 조치&lt;/li&gt;
+&lt;li&gt;대시보드를 사용해 모니터링&lt;/li&gt;
+&lt;li&gt;시스템 이벤트 감지 및 지정된 대상으로 알림 전송&lt;/li&gt;
+&lt;li&gt;임계값 초과 시 경보 설정 및 자동 대응 조치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습볼륨-확장-4&#34;&gt;실습(볼륨 확장)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;IAM 역할 생성(AWSLambdaBasicExecutionRole, CloudWatchEventsFullAccess)&lt;/li&gt;
+&lt;li&gt;lambda 생성&lt;/li&gt;
+&lt;li&gt;구성 - 권한 - 편집 - 역할 변경&lt;/li&gt;
+&lt;li&gt;이벤트 브리지 규칙 생성(aws , cloudWatch, Alarm, kakao)&lt;/li&gt;
+&lt;li&gt;cloudWatch 대시보드 - 경보상태 - 경보 생성&lt;/li&gt;
+&lt;li&gt;지표 선택 - 인스턴스 - cpu - 지표  선택&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>AWS IAM을 이용한 S3 실습</title>
+        <link>https://demo.stack.jimmycai.com/p/aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/</link>
+        <pubDate>Mon, 15 Jul 2024 15:01:46 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/p/aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;오늘은 AWS 첫번째 실습 시간이다.&lt;br&gt;
+IAM에 대해 공부 후&lt;br&gt;
+S3를 통해 제어하는 실습&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;iam&#34;&gt;IAM
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;클라우드 서비스에서 사용자의 리소스 접근을 제어하는 웹 서비스&lt;/li&gt;
+&lt;li&gt;사용자 및 그룹을 생성해 리소스 권한 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;iam-user&#34;&gt;IAM User
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Aws 리소스에 접근하기 위해 생성되는 개별 엔터티&lt;/li&gt;
+&lt;li&gt;고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;iam-group&#34;&gt;IAM Group
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;공통적인 권한을 부여하기 위해 사요되는 논리적 단위&lt;/li&gt;
+&lt;li&gt;사용자별 권한을 할당하는 대신 그룹에 권한 할당&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습&#34;&gt;실습
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;IAM User 생성&lt;/li&gt;
+&lt;li&gt;IAM User Group 생성&lt;/li&gt;
+&lt;li&gt;생성한 유저 로그인 후 권한 확인&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;iam-정책policy&#34;&gt;IAM 정책(Policy)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS 리소스에 대한 접근 권한을 정의하는 JSON 문서&lt;/li&gt;
+&lt;li&gt;권한을 세부적으로 제어&lt;/li&gt;
+&lt;li&gt;보안과 권한 관리를 위해 필수적인 구성 요소&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;관리형-정책managed-policies&#34;&gt;관리형 정책(Managed Policies)
+&lt;/h4&gt;&lt;p&gt;미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계&lt;/p&gt;
+&lt;h4 id=&#34;인라인-정책inline-policies&#34;&gt;인라인 정책(Inline Policies)
+&lt;/h4&gt;&lt;p&gt;특정 사용자, 그룹 또는 역할에 직접 연결된 정책&lt;br&gt;
+다른 엔터티와 공유되지 않고 연결된 엔터티 삭제 시 정책도 삭제&lt;br&gt;
+권한을 좀 더 세밀하게 제어하고자 할 때 사용&lt;/p&gt;
+&lt;h4 id=&#34;구성요소&#34;&gt;구성요소
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;statement : 정책의 주요 내용이 포함된 부분, 다중 statement 가능&lt;/li&gt;
+&lt;li&gt;Effect : 권한 효과를 정의(허용 혹은 거부)&lt;/li&gt;
+&lt;li&gt;Action : 허용, 거부할 작업 정의&lt;/li&gt;
+&lt;li&gt;Resource : 작업이 적용되는 리소스 정의&lt;/li&gt;
+&lt;li&gt;Condition : 조건을 추가해 세부적인 적용 제어&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습-1&#34;&gt;실습
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;정책 추가&lt;/li&gt;
+&lt;li&gt;버킷 생성&lt;/li&gt;
+&lt;li&gt;권한 정책 연결 후 테스트&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;iam-역할role&#34;&gt;IAM 역할(Role)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;역할(Role) : 특정 AWS 서비스나 다른 계정의 사용자등이 AWS 리소스에 접근할 수 있도록 임시 보안 자격 증명을 제공&lt;/li&gt;
+&lt;li&gt;정책(Policy) : 권한을 정의하는 JSON 문서&lt;/li&gt;
+&lt;li&gt;신뢰정책(Trust Policy) : 역할을 맡을 수 있는 엔터티 정의 정책&lt;/li&gt;
+&lt;li&gt;역할 전환(Role Assumption) : 역할을 맡는 과정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;정책-종류&#34;&gt;정책 종류
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;권한 정책(Permission Policy) : 역할을 맡은 엔터티가 수행할 수 있는 작업 정의&lt;/li&gt;
+&lt;li&gt;신뢰 정책(Trust Policy) : 어떤 엔터티가 역할을 맡을 수 있는지 정의&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;사용-방식&#34;&gt;사용 방식
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;AWS 서비스 간의 권한 부여 : EC2 인스턴스가 S3 버킷에 접근 가능하도록 역할 사용&lt;/li&gt;
+&lt;li&gt;계정 간 권한 부여 : 사용자가 다른 AWS 계정의 리소스에 접근 할 수 있도록 역할 사용&lt;/li&gt;
+&lt;li&gt;단기 자격 증명 : 임시 자격 증명을 사용해 특정 기간 동안 접근 권한 부여&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습-2&#34;&gt;실습
+&lt;/h4&gt;&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 인스턴스 접속&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -i &amp;lt;key&amp;gt; &amp;lt;os&amp;gt;@&amp;lt;ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# aws 설치 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;asw --version
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# S3에 파일 업로드&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aws s3 cp &amp;lt;파일명&amp;gt; s3://&amp;lt;버킷이름&amp;gt;/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# S3에 업로드된 파일 내려받기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aws s3 cp &amp;lt;파일명&amp;gt; s3://&amp;lt;버킷이름&amp;gt;/&amp;lt;버킷내 파일명&amp;gt; &amp;lt;로컬 파일명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# S3에 업로드된 파일 리스트&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aws s3 ls &amp;lt;파일명&amp;gt; s3://&amp;lt;버킷이름&amp;gt;/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# S3에 업로드된 파일 삭제&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aws s3 rm &amp;lt;파일명&amp;gt; s3://&amp;lt;버킷이름&amp;gt;/&amp;lt;버킷내 파일명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>AWS와 LB 실습</title>
+        <link>https://demo.stack.jimmycai.com/p/aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</link>
+        <pubDate>Mon, 15 Jul 2024 15:01:46 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/p/aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;오늘은 AWS 첫번째 실습 시간이다.&lt;br&gt;
+EC2에서 VPC를 사용하고 public이랑 private를 열어&lt;br&gt;
+public은 LB를 테스트하고&lt;br&gt;
+private은 NAT를 이용한 인터넷 연결을 실습했다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;cspcloud-service-provider&#34;&gt;CSP(Cloud Service Provider)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;클라우드 컴퓨팅 서비스를 제공하는 회사(Ex. AWS, Azure, GCP, NCP 등)&lt;/li&gt;
+&lt;li&gt;인프라 서비스(IaaS), 플랫폼 서비스(PaaS), 소프트웨어 서비스(SaaS) 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;awsamazon-web-services&#34;&gt;AWS(Amazon Web Services)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;아마존에서 제공하는 클라우드 컴퓨팅 플랫폼&lt;/li&gt;
+&lt;li&gt;현재 높은 점유율로 클라우드 시장에서 강세를 보이고 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;클라우드-컴퓨팅&#34;&gt;클라우드 컴퓨팅
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;내용&#34;&gt;내용
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;온프레미스(On-premise) 환경과 반대의 의미로 많이 사용
+&lt;ul&gt;
+&lt;li&gt;IT 인프라를 조직 내부에 직접 설치하고 운영하는 방식&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;장점&#34;&gt;장점
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;비용 절감 : 필요한 만큼 컴퓨팅 자원과 스토리지 대여를 통해 비용 절감&lt;/li&gt;
+&lt;li&gt;속도와 민첩성 : 시스템 자체에 대한 확정을지원하는 클라우드 특성상 빠르게 확장을 진행 할 수 있다.&lt;/li&gt;
+&lt;li&gt;글로벌 서비스 : 특정 지역에 한정되는 온프레미스와 달리 전세계적인 데이터 센터를 통해 사용&lt;/li&gt;
+&lt;li&gt;탄력성 : 모든 CSP에서는 리소스 사용량 증가로 인한 서비스 장애 방지를 위해 탄력적으로 사용 가능한 리소스 조절&lt;/li&gt;
+&lt;li&gt;보안 : 네트워크 방화벽, WAF 등을 통해 강력한 보안 유지&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;azavailability-zone&#34;&gt;AZ(Availability Zone)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;내용-1&#34;&gt;내용
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;하나의 Region 내에 위치한 데이터 센터 그룹&lt;/li&gt;
+&lt;li&gt;고가용성과 내결함성을 위해 여러 AZ에 걸쳐 앱 배포&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;region&#34;&gt;Region
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;지리적으로 분리되어 여러 위치로 구분&lt;/li&gt;
+&lt;li&gt;리전끼리 통신 시 별도 비용이 추가될 수 있다.&lt;/li&gt;
+&lt;li&gt;글로벌 서비스 특성상 빠른 서비스를 제공하기 위해 여러 리전에 걸쳐 앱 배포&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;vpcvirtual-private-cloud&#34;&gt;VPC(Virtual Private Cloud)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;내용-2&#34;&gt;내용
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;개인 네트워크를 구성하는 요소&lt;/li&gt;
+&lt;li&gt;서브넷, 라우팅 테이블, 보안 그룹, 인터넷 게이트웨이, NAT 게이트웨이&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;이점&#34;&gt;이점
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;격리성 : 격리된 환경에서 구성하기 때문에 다른 네트워크에 간섭을 받지 않는다.&lt;/li&gt;
+&lt;li&gt;보안성 : 세부적인 보안 설정 가능&lt;/li&gt;
+&lt;li&gt;확장성 : 필요에 따라 서브넷 추가 구성, 라우팅 테이블, 보안 그룹 등 쉽게 추가&lt;/li&gt;
+&lt;li&gt;유연성 : 요구에 따라 온프레미스와 혼합해 하이브리드 클라우드 구성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;vpc-요소&#34;&gt;VPC 요소
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;서브넷&#34;&gt;서브넷
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;실제 VM이 올라갈 네트워크 대역을 설정&lt;/li&gt;
+&lt;li&gt;private와 public은 인터넷 게이트웨이 유무와 라우팅 테이블에 인터넷 게이트웨이 추가 여부&lt;/li&gt;
+&lt;li&gt;private는 NAT 게이트웨이를 통하지 않는 이상 인터넷 통신 불가 public은 기본적으로 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;라우팅-테이블&#34;&gt;라우팅 테이블
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;서브넷에서 사용되는 네트워크 네비게이션 같은 존재&lt;/li&gt;
+&lt;li&gt;CIDR 기반으로 동작, 각각의 대역에 대해 경로 설정 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;보안-그룹&#34;&gt;보안 그룹
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;ACL(Access Control List)처럼 출발 IP, Port에 따라 출입 여부 결정&lt;/li&gt;
+&lt;li&gt;아웃바운드는 보통 통신의 원활함을 위해 열어두는 편&lt;/li&gt;
+&lt;li&gt;인바운드는 접속 및 통신용 포트를 제외한 나머지 통제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;인터넷-게이트웨이&#34;&gt;인터넷 게이트웨이
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;퍼블릭 서브넷을 결정하는 요소&lt;/li&gt;
+&lt;li&gt;라우팅 테이블과 조합하여 특정 대역만 인터넷이 가능하도록 설정(대부분 관리 비용이 때문에 다 열어둔다.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;natnetwork-address-translation-게이트웨어&#34;&gt;NAT(Network Address Translation) 게이트웨어
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;private에서도 인터넷 사용 가능&lt;/li&gt;
+&lt;li&gt;모든 경로를 다 열지 않고 특정 포트만 보안 그룹을 통해 연다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;aws-ec2elastic-cloud-computer&#34;&gt;AWS EC2(Elastic Cloud Computer)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;UTM을 통해 VM을 생성하던 것과 비슷한 구조&lt;/li&gt;
+&lt;li&gt;CPU, Memory, 저장소 용량 등을 미리 정하고 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;lbload-balancer&#34;&gt;LB(Load Balancer)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS에서 네트워크 트래픽을 여러 대상으로 분산시켜 가용성과 탄력성을 높이는 서비스&lt;/li&gt;
+&lt;li&gt;ALB(Application Load Balance)
+&lt;ul&gt;
+&lt;li&gt;HTTP 및 HTTPS 트래픽에 최적화된 7 단계 로드 밸런서&lt;/li&gt;
+&lt;li&gt;CloudWatch와 통합되어 다양한 지표와 로그 모니터링&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NLB(Network Load Balancer)
+&lt;ul&gt;
+&lt;li&gt;고성능을 요구하는 TCP, UDP 및 TLS 트래픽에 최적화된 4계층 로드 밸런서&lt;/li&gt;
+&lt;li&gt;매우 낮은 지연 시간, 고가용성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CLB(Classic Load Balancer)
+&lt;ul&gt;
+&lt;li&gt;구형 로드 밸런서로 4계층 + 7계층 로드 밸런서&lt;/li&gt;
+&lt;li&gt;설정이 간단하고 직관적&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;실습&#34;&gt;실습
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;LB 생성 순서&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;VPC 생성&lt;/li&gt;
+&lt;li&gt;서브넷 생성(여러개)&lt;/li&gt;
+&lt;li&gt;공통 보안 그룹 생성&lt;/li&gt;
+&lt;li&gt;인터넷 게이트웨이 생성&lt;/li&gt;
+&lt;li&gt;nat 게이트웨이 생성&lt;/li&gt;
+&lt;li&gt;인스턴스 생성(여러개)&lt;/li&gt;
+&lt;li&gt;라우팅 테이블 생성(public, private)&lt;/li&gt;
+&lt;li&gt;LB 생성
+&lt;ul&gt;
+&lt;li&gt;타겟 그룹 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 양쪽 서버에서 똑같이 진행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 퍼블릭 서버 접속&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -i &amp;lt;key 파일 명&amp;gt; &amp;lt;OS 명&amp;gt;@&amp;lt;ip 주소&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 파이썬 실행을 위한 다운로드&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;yum&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;yum&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; install -y python3-flask
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 파이썬 파일 작성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi app.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 파일 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo python3 app.py
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# LB DNS를 활용해 접근&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# private 접근 하기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# public 서버에 접근 한 후 tem 파일 복사 후 파일 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi key.tem
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# private 접속 - 같은 네트워크 대역이라 접속이 가능하다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -i key.tem &amp;lt;OS&amp;gt;@&amp;lt;IPv4&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# private 접속 후 apt(yum) update&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 인터넷 연결이 없기 때문에 update 되지 않음&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;yum&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# NAT 연결 후 인터넷 연결 테스트&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;yum&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

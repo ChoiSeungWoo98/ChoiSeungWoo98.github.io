@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>WebSocket on Hugo Theme Stack Starter</title>
+        <link>https://demo.stack.jimmycai.com/categories/websocket/</link>
+        <description>Recent content in WebSocket on Hugo Theme Stack Starter</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 06 May 2023 19:29:42 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/categories/websocket/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[Java] Spring Boot, Websocket &#43; STOMP 사용하기</title>
+        <link>https://demo.stack.jimmycai.com/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
+        <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?&lt;br&gt;
+같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;web-socket을-사용한-코드&#34;&gt;Web Socket을 사용한 코드
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;게시물은 추후에 작성하겠습니다!! 아래 코드는 첨부했습니다!&lt;/p&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChoiSeungWoo98/webSocket-example&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;코드&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Java] 서버에서 클라이언트로 이벤트를 보내는 4가지 방법</title>
+        <link>https://demo.stack.jimmycai.com/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</link>
+        <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?&lt;br&gt;
+같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;서버에서-클라이언트로-이벤트를-보내는-4가지-방법&#34;&gt;서버에서 클라이언트로 이벤트를 보내는 4가지 방법
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;1-polling&#34;&gt;1. Polling
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;클라이언트가 평벙한 http request를 서버로 계속 날려서 이벤트 내용을 받는 방법&lt;/li&gt;
+&lt;li&gt;가장 쉬운 방법이지만 클라이언트가 지속적으로 request를 보내야 하기 때문에 클라이언트가 많아 질 수록 서버 부담이 급증&lt;/li&gt;
+&lt;li&gt;실시간으로 정보를 응답 받는 것이 아닌 반복해서 request를 보내는 사이에 바뀐 내용을 받아오는 방식&lt;/li&gt;
+&lt;li&gt;http 오버헤드가 발생한다는 큰 단점. 하지만 일정 시간 갱신되는 서버 데이터의 경우 유용.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+    &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Polling 방식&lt;/summary&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/java/webSocket/Polling.png&#34;&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;2-long-polling&#34;&gt;2. Long Polling
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;서버 측에서 접속을 열어두는 시간을 길게하는 빙식&lt;/li&gt;
+&lt;li&gt;클라이언트가 서버에 http request를 날리면 서버에서 응답해야할 이벤트가 발생하면 그 순간 응답을 하는 방식&lt;/li&gt;
+&lt;li&gt;응답을 받은 클라이언트는 바로 http request를 날려 다음 이벤트 대기&lt;/li&gt;
+&lt;li&gt;polling 방식보다 서버 부담은 줄지만 이벤트 발생 간격이 좁다면 polling이랑 다르지 않음&lt;/li&gt;
+&lt;li&gt;다수의 클라이언트에게 동시에 이벤트가 발생될 경우 클라이언트가 바로 접속을 시도하면서 서버 부담이 급증&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+    &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Long Polling 방식&lt;/summary&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/java/webSocket/Long_Polling.png&#34;&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;3-websocket&#34;&gt;3. WebSocket
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;양방향 채널을 이용해 채팅방 처럼 양방향 통신하는 방식&lt;/li&gt;
+&lt;li&gt;기존 http요청 응답 방식은 요청한 클라이언트에 응답만 가능했지만, ws 프로토콜을 통해 웹소켓 포트에 접속해 있는 모든 클라이언트에 이벤트 응답 가능&lt;/li&gt;
+&lt;li&gt;최초 접속이 일반 http request를 통해 handshaeking 과정을 통해 이루어 지기 때문에, 기존 80, 443포트로 접속하므로 추가 방화벽을 열지 않아도 가능&lt;/li&gt;
+&lt;li&gt;http 규격인 CORS 적용이나 인증등의 과정을 기존과 동일하다는 장점&lt;/li&gt;
+&lt;li&gt;단, websocket 프로토콜을 처리하기 위한 전이중 연결과 새로운 웹소켓 서버 필요&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+    &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;WebSocket 방식&lt;/summary&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/java/webSocket/WebSocket.png&#34;&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;4-sseserver-sent-events&#34;&gt;4. SSE(Server-Sent-Events)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;HTML5 표준안이며 어느정도 웹소켓의 역할을 하면서 가벼움&lt;/li&gt;
+&lt;li&gt;WebSocket과 같이 양방향이 아닌 server -&amp;gt; client 단방향이기 때문에 서버에서 이벤트나 메시지를 client로 push 하는 작업에 유용&lt;/li&gt;
+&lt;li&gt;양방향이 아니라 요청 시 ajax로 쉽게 이용&lt;/li&gt;
+&lt;li&gt;재접속 처리 같은 대부분이 저수준 처리가 자동 지원&lt;/li&gt;
+&lt;li&gt;IE는 기본 미지원이지만, polyFill을 이용할 경우 IE를 포함한 크로스브라우징 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+    &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;SSE(Server-Sent Event) 방식&lt;/summary&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/java/webSocket/Server-Sent-Events.png&#34;&gt;
+&lt;/details&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;websocket--stomp를-이용하여-서버와-양방향-통신&#34;&gt;WebSocket + Stomp를 이용하여 서버와 양방향 통신
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ChoiSeungWoo98.github.io/websocket/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;다음 게시물은 WebSocket과 Stomp를 이용하여 서버와 양방향 통신을 하는 방법에 대해 스몰 모듈 프로젝트를 만들고자 한다.&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://inpa.tistory.com/entry/WEB-%F0%9F%93%9A-Polling-Long-Polling-Server-Sent-Event-WebSocket-%EC%9A%94%EC%95%BD-%EC%A0%95%EB%A6%AC&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;서버에서 클라이언트로 이벤트를 보내는 4가지 방법&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

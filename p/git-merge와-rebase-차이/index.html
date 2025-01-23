@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.\n현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&hellip;\n어떻게 해야 history를 잘 관리 할 수 있는지 궁금하였고 사수의 도움으로 rebase하는 것을 알게 되었다.\nrebase 를 알고 사용하고 있지만 merge와 rebase의 차이점을 명확하게 알고 싶어 찾아보았다.\n들어가기 앞서 merge와 rebase의 차이를 알아보기 전에 이것들은 어떤 상황에서 사용하며 사용하면 어떤 일이 일어나는지 부터 간단하게 알아보고자 한다.\nGit이란?\n형상 관리 도구 중 하나이며 소스코드를 효과적으로 관리할 수 있게 해주는 공개 소프트웨어이다.\n">
+<title>[Git] Merge와 Rebase 차이</title>
+
+<link rel='canonical' href='https://demo.stack.jimmycai.com/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="[Git] Merge와 Rebase 차이">
+<meta property='og:description' content=" 프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.\n현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&hellip;\n어떻게 해야 history를 잘 관리 할 수 있는지 궁금하였고 사수의 도움으로 rebase하는 것을 알게 되었다.\nrebase 를 알고 사용하고 있지만 merge와 rebase의 차이점을 명확하게 알고 싶어 찾아보았다.\n들어가기 앞서 merge와 rebase의 차이를 알아보기 전에 이것들은 어떤 상황에서 사용하며 사용하면 어떤 일이 일어나는지 부터 간단하게 알아보고자 한다.\nGit이란?\n형상 관리 도구 중 하나이며 소스코드를 효과적으로 관리할 수 있게 해주는 공개 소프트웨어이다.\n">
+<meta property='og:url' content='https://demo.stack.jimmycai.com/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/'>
+<meta property='og:site_name' content='Hugo Theme Stack Starter'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Git' /><meta property='article:tag' content='Merge' /><meta property='article:tag' content='Rebase' /><meta property='article:published_time' content='2023-03-05T04:30:49&#43;09:00'/><meta property='article:modified_time' content='2023-03-05T04:30:49&#43;09:00'/>
+<meta name="twitter:title" content="[Git] Merge와 Rebase 차이">
+<meta name="twitter:description" content=" 프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.\n현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&hellip;\n어떻게 해야 history를 잘 관리 할 수 있는지 궁금하였고 사수의 도움으로 rebase하는 것을 알게 되었다.\nrebase 를 알고 사용하고 있지만 merge와 rebase의 차이점을 명확하게 알고 싶어 찾아보았다.\n들어가기 앞서 merge와 rebase의 차이를 알아보기 전에 이것들은 어떤 상황에서 사용하며 사용하면 어떤 일이 일어나는지 부터 간단하게 알아보고자 한다.\nGit이란?\n형상 관리 도구 중 하나이며 소스코드를 효과적으로 관리할 수 있게 해주는 공개 소프트웨어이다.\n">
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_c68a00bbf16dac8.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Hugo Theme Stack Starter</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>다크 모드</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">목차</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#들어가기-앞서">들어가기 앞서</a></li>
+    <li><a href="#merge-rebase">merge? rebase?</a></li>
+    <li><a href="#merge와-rebase의-특징">merge와 rebase의 특징</a></li>
+    <li><a href="#rebase를-사용하는-이유">rebase를 사용하는 이유</a></li>
+    <li><a href="#rebase-사용-시-유의점">rebase 사용 시 유의점</a></li>
+    <li><a href="#포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/git/" >
+                Git
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/">[Git] Merge와 Rebase 차이</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">3월 05, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 분 정도
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.<br>
+현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&hellip;<br>
+어떻게 해야 history를 잘 관리 할 수 있는지 궁금하였고 사수의 도움으로 rebase하는 것을 알게 되었다.<br>
+rebase 를 알고 사용하고 있지만 merge와 rebase의 차이점을 명확하게 알고 싶어 찾아보았다.</p>
+</blockquote>
+<h2 id="들어가기-앞서">들어가기 앞서
+</h2><hr>
+<p>merge와 rebase의 차이를 알아보기 전에 이것들은 어떤 상황에서 사용하며 사용하면 어떤 일이 일어나는지 부터 간단하게 알아보고자 한다.<br>
+<a class="link" href="https://ChoiSeungWoo98.github.io/%ED%98%95%EC%82%B0%EA%B4%80%EB%A6%AC%EB%9E%80/"  target="_blank" rel="noopener"
+    >Git이란?</a><br>
+형상 관리 도구 중 하나이며 소스코드를 효과적으로 관리할 수 있게 해주는 공개 소프트웨어이다.</p>
+<p><a class="link" href="https://ChoiSeungWoo98.github.io/branch%EB%9E%80/"  target="_blank" rel="noopener"
+    >branch란?</a><br>
+Software 개발 시 다양한 개발자들이 동일한 프로젝트 위에서 개발, 유지보수 등의 업무를 하는 경우가 많다.<br>
+이때 하나의 프로젝트 에서 동시에 작업하게 되면 여러가지 문제가 발생한다.<br>
+이 것을 해결하기 위해 각각 완전히 독립된 브랜치 생성하여 동시에 코드 개발 및 수정 할 수 있게 도와준다.</p>
+<div style="height: 50px;"></div>
+<h2 id="merge-rebase">merge? rebase?
+</h2><hr>
+<p>merge는 <strong>분기된 branch를 다른 branch로 합치는 과정</strong>이고<br>
+rebase는 <strong>branch의 base를 옮긴다</strong>는 개념의 차이가 있다.</p>
+<div style="height: 50px;"></div>
+<h2 id="merge와-rebase의-특징">merge와 rebase의 특징
+</h2><hr>
+<p>merge</p>
+<ul>
+<li>병합을 하면 합쳐진 브랜치의 커밋 메시지가 중복으로 쌓임.</li>
+<li>커밋 순서를 변경되지 않음.</li>
+<li>존재하는 브랜치가 변경되지 않음.</li>
+<li>새로운 merge commit을 생성.</li>
+</ul>
+<details>
+    <summary style="margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;">git merge</summary>
+    <img style="margin-left: 30px; width: 500px;" src="/img/posts/형상관리/git/merge.png">
+</details>
+<p>rebase</p>
+<ul>
+<li>병합을 하면 브랜치의 커밋 메시지가 시간 순서대로 합침.</li>
+<li>히스토리를 깔끔하게 유지하기 위해 사용.</li>
+<li>분기된 브랜치를 마스터 브랜치 끝에 위치 시켜, master 브랜치를 재배치(rebase) 하는 것을 말함.</li>
+<li>즉, rebase는 어떤 특정 브랜치의 커밋 이력을 base로 재정렬되면서 해쉬 ID가 바뀜</li>
+</ul>
+<details>
+    <summary style="margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;">git rebase</summary>
+    <img style="margin-left: 30px; width: 500px;" src="/img/posts/형상관리/git/rebase.png">
+</details>
+<div style="height: 50px;"></div>
+<h2 id="rebase를-사용하는-이유">rebase를 사용하는 이유
+</h2><p>하나의 프로젝트의 많은 개발자들이 활발하게 작업을 진행하게 되면 많은 브랜치가 생기고<br>
+master브랜치로 merge만 한다면 엄청나게 복잡한 git history를 볼 수 있을 것이다.<br>
+rebase를 하여 <strong>작업 순서대로 history를 관리하고 불필요한 병합 커밋을 제거</strong>할 수 있다.</p>
+<details>
+    <summary style="color: rgba(113, 187, 222, 1); cursor: pointer;">merge와 rebase history 비교</summary>
+    <img src="/img/posts/형상관리/git/merge_disadvantage.png">
+</details>
+<h2 id="rebase-사용-시-유의점">rebase 사용 시 유의점
+</h2><p>여러 사람이 사용하고 활발하게 커밋이 일어나는 브랜치라고 한다면, Rebase를 하는 것은 자칫 위험할 수 있습니다.<br>
+왜냐하면 파생된 브랜치에서 이미 새로운 커밋이 발생하고 작업이 기록되고 있는데<br>
+이전 기준 브랜치로 base를 변경해버리면 파생브랜치로 작업하고 있던 작업자들의 커밋 히스토리가 변경되어 버리기 때문입니다.
+각 작업자들은 자신의 커밋을 다시 반영하거나 재작업을 해야 할 수도 있습니다.<br>
+따라서 혼자 작업하는 브랜치나 작업하는 사람이 적어 문제상황이 발생할 확률이 적은 경우에만 주의깊게 사용해야 합니다.</p>
+<div style="height: 50px;"></div>
+<h2 id="포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크
+</h2><ul>
+<li><a class="link" href="https://dongminyoon.tistory.com/9"  target="_blank" rel="noopener"
+    >merge와 rebase 차이</a></li>
+<li><a class="link" href="https://readystory.tistory.com/151"  target="_blank" rel="noopener"
+    >rebase 사용 시 유의사항</a></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/git/">Git</a>
+        
+            <a href="/tags/merge/">Merge</a>
+        
+            <a href="/tags/rebase/">Rebase</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">관련 글</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/git-workflow-%EC%9E%91%EC%97%85-%EB%B0%A9%EC%8B%9D/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Git] Workflow? 작업 방식?</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Git] branch가 자세히 뭘까?</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Hugo Theme Stack Starter
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

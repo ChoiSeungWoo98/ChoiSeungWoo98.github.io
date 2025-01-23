@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Class on Hugo Theme Stack Starter</title>
+        <link>https://demo.stack.jimmycai.com/tags/class/</link>
+        <description>Recent content in Class on Hugo Theme Stack Starter</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 19 Aug 2023 18:11:51 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/class/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</title>
+        <link>https://demo.stack.jimmycai.com/p/java-string%EC%9D%80-%EA%B8%B0%EB%B3%B8-%ED%83%80%EC%9E%85%EC%9D%B8%EA%B0%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-stringbuffer-stringbuilder/</link>
+        <pubDate>Sat, 19 Aug 2023 18:11:51 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/p/java-string%EC%9D%80-%EA%B8%B0%EB%B3%B8-%ED%83%80%EC%9E%85%EC%9D%B8%EA%B0%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-stringbuffer-stringbuilder/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
+오늘은 여러가지 질문 중 String에 대해 알아보고자 한다.
+String은 기본 데이터 타입인지?
+문자열을 조작하는 클래스는 무엇이 있는지?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;string은-무엇인가&#34;&gt;String은 무엇인가?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;기본 자료형(int, float, char, boolean)처럼 자주 사용되는 class이다.&lt;br&gt;
+String은 이 기본 자료형들과는 다르게 참조 자료형 class이다.&lt;br&gt;
+참조 자료형이란 객체 자체에 값을 가지는 것이 아닌 객체에는 referenece(주소) 값을 갖고 있고 해당 reference에 객체의 값이 있는 형태다.&lt;/p&gt;
+&lt;h2 id=&#34;string은-기본-데이터-타입인가&#34;&gt;String은 기본 데이터 타입인가?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;위에서도 말씀 드렸지만 String은 기본 데이터 타입이 아닌 참조 자료형 클래스 이다.&lt;br&gt;
+기본 타입과 달리 heap 영역에 생성된다.&lt;/p&gt;
+&lt;h3 id=&#34;1-문자열-생성-및-비교&#34;&gt;1. 문자열 생성 및 비교
+&lt;/h3&gt;&lt;p&gt;아래와 같이 문자열을 리터럴로 생성한다면 literalName이라는 변수는 스택 영역에 저장되고 문자열인 &amp;ldquo;최승우&amp;quot;는 힙 영역에 String 객체로 생성된다.&lt;br&gt;
+literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장된다.&lt;br&gt;
+따라서 문자열 리터럴이 동일한 경우 같은 주소 값을 저장하게 돼 ==와 .equals 상관 없이 같다고 나온다.&lt;br&gt;
+다만, new 연산자를 사용하여 객체를 생성하면 문자열의 값이 같더라도 다른 주소 값을 저장하기 때문에 ==을 사용하면 다르다고 출력한다.&lt;br&gt;
+따라서 저장된 값을 비교하고 싶으면 equals()를 사용해야 한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;StringTest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;literalName&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;최승우&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;newName&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;최승우&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;literalName&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;newName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// false&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;literalName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;equals&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;newName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;));&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;2-가변성을-갖고-있는-stringbuilder와-stringbuffer&#34;&gt;2. 가변성을 갖고 있는 StringBuilder와 StringBuffer
+&lt;/h3&gt;&lt;p&gt;들어가기 앞서, String은 불변속성을 갖는다.&lt;br&gt;
+만약, 아래와 같이 sayHello라는 변수에 안녕!이라는 값을 리터럴로 생성하면 힙 영역에 String 객체로 생성하고,&lt;br&gt;
+그 이후 &amp;quot; 승우야!&amp;ldquo;라는 값을 추가하게 되면 해당 객체에 &amp;ldquo;안녕 승우야!&amp;rdquo; 라는 값으로 변경했다고 생각할 수 있다.&lt;/p&gt;
+&lt;p&gt;하지만 기존에 &amp;ldquo;안녕!&amp;ldquo;이 들어가 있던 객체를 참조하던 sayHello 변수는 힙 영역에 &amp;ldquo;안녕 승우야!&amp;ldquo;의 값을 갖고 있는 객체를 새로 생성한 후 해당 주소 값을 바라보고 있도록 변경된 것이고&lt;br&gt;
+처음 생성되었던 &amp;ldquo;안녕!&amp;ldquo;이라는 값을 갖고 있는 메모리 영역은 Garbage로 남아 있다가 GC(Garbage Collection)에 의해 사라지게 된다.&lt;/p&gt;
+&lt;p&gt;이는, String 클래스는 불변하며 문자열을 수정하는 시점에 새로운 String 인스턴스가 생성된다는 것을 의미한다.&lt;br&gt;
+이 처럼 String은 불변하기 때문에 빈번한 수정이 있는 경우 힙 메모리 영역에 많은 Garbage가 쌓이므로 성능의 치명적인 영향을 끼친다.&lt;/p&gt;
+&lt;p&gt;그래서 가변성을 갖고 있는  StringBuilder와 StringBuffer 클래스를 도입했다.&lt;/p&gt;
+&lt;p&gt;이 두 클래스는 .append(), .delete()를 이용하여 동일 객체내에서 문자열을 변경하는 것이 가능하다.&lt;br&gt;
+문자열의 추가, 수정, 삭제가 빈번하게 발생하는 경우 이 두가지 클래스를 사용하는 것이 적합하다.&lt;/p&gt;
+&lt;h3 id=&#34;3-stringbuffer-stringbuilder의-차이점&#34;&gt;3. StringBuffer, StringBuilder의 차이점
+&lt;/h3&gt;&lt;p&gt;가장 큰 차이점은 동기화 유무 이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Buffer는 동기화 키워드를 지원하여 멀티 쓰레드 환경에서 안전하다는 점(thread-safe)&lt;br&gt;
+참고로 String도 불변성을 갖기 때문에 멀티 쓰레드 환경에서의 안성정을 갖고 있다.&lt;/li&gt;
+&lt;li&gt;Builder는 동기화를 지원하지 않기 때문에 멀티 쓰레드 환경에서 사용하는 것은 적합하지 않지만 동기화를 고려하지 않는 만큼 단일 쓰레드에서의 성능은 Buffer보다 뛰어나다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-정리&#34;&gt;4. 정리
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;간단히 정리하면, String은 불변성으로 인해 안전하고 쓰기 쉽지만 문자열을 자주 조작하는 경우 오버헤드가 발생할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;StringBuilder는 가변성으로 인해 자주 조작하는 경우 효율적이고, 단일 스레드 환경에서 사용하기 적합합니다.&lt;/li&gt;
+&lt;li&gt;StringBuffer는 StringBuilder와 유사하게 가변성을 제공하면서 멀티스레드 환경에서도 안전하게 사용할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;따라서 단일 스레드 환경에서는 StringBuilder를, 멀티스레드 환경에서는 StringBuffer를 선호하는 것이 좋습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;문자열 연산이 적고 멀티 쓰레드인 경우 : String&lt;br&gt;
+문자열 연산이 많고 멀티 쓰레드인 경우 : StringBuffer&lt;br&gt;
+문자열 연산이 많고 단일 쓰레드이거나 동기화를 고려하지 않아도 되는 경우 : StringBuilder&lt;/p&gt;
+&lt;div style=&#34;height: 100px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mimah.tistory.com/entry/Java-%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C%EC%9D%98-String-%ED%83%80%EC%9E%85&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;String 클래스&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ifuwanna.tistory.com/221&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;문자열 조작 클래&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Java] Math 클래스</title>
+        <link>https://demo.stack.jimmycai.com/p/java-math-%ED%81%B4%EB%9E%98%EC%8A%A4/</link>
+        <pubDate>Sat, 19 Aug 2023 17:49:27 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/p/java-math-%ED%81%B4%EB%9E%98%EC%8A%A4/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
+오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;math-클래스란&#34;&gt;Math 클래스란?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.&lt;/p&gt;
+&lt;h3 id=&#34;1-math에-정의된-대표적인-상수&#34;&gt;1. Math에 정의된 대표적인 상수
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Math.PI : 원주율 π (약 3.141592653589793)&lt;/li&gt;
+&lt;li&gt;Math.E : 자연 상수 e (약 2.718281828459045)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-math에-정의된-대표적인-메서드&#34;&gt;2. Math에 정의된 대표적인 메서드
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;abs(int a) / abs(long a) : 정수의 절댓값을 반환합니다.&lt;/li&gt;
+&lt;li&gt;ceil(double a) : 주어진 숫자보다 크거나 같은 최소 정수를 반환합니다.&lt;/li&gt;
+&lt;li&gt;floor(double a) : 주어진 숫자보다 작거나 같은 최대 정수를 반환합니다.&lt;/li&gt;
+&lt;li&gt;round(float a) / round(double a) : 주어진 숫자를 반올림하여 long 형태로 반환합니다.&lt;/li&gt;
+&lt;li&gt;min(int a, int b) / min(long a, long b) : 두 정수 중 작은 값을 반환합니다.&lt;/li&gt;
+&lt;li&gt;max(int a, int b) / max(long a, long b) : 두 정수 중 큰 값을 반환합니다.&lt;/li&gt;
+&lt;li&gt;sqrt(double a) : 주어진 숫자의 제곱근을 반환합니다.&lt;/li&gt;
+&lt;li&gt;pow(double a, double b) : a의 b승을 반환합니다.&lt;/li&gt;
+&lt;li&gt;sin(double a), cos(double a), tan(double a) : 삼각 함수 값들을 반환합니다.&lt;/li&gt;
+&lt;li&gt;random() : 0 이상 1 미만의 난수를 반환합니다. (0.0 &amp;lt;= x &amp;lt; 1.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-각-메서드-사용-및-결과&#34;&gt;3. 각 메서드 사용 및 결과
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Math.abs(-1.5) : 1.5&lt;/li&gt;
+&lt;li&gt;Math.ceil(-1.5) : -1.0&lt;/li&gt;
+&lt;li&gt;Math.floor(-1.5) : -2.0&lt;/li&gt;
+&lt;li&gt;Math.round(-1.5) : -2&lt;/li&gt;
+&lt;li&gt;Math.min(-1.5, 3.0) : -1.5&lt;/li&gt;
+&lt;li&gt;Math.max(-1.5, 3.0) : 3.0&lt;/li&gt;
+&lt;li&gt;Math.sqrt(-1.5) : NaN (Not a Number : 제곱근이 실수 범위 내에 없기 때문에 이 경우 허수와 관련된 복소수 연산이 필요하며 Math 클래스에서는 지원하지 않음)&lt;/li&gt;
+&lt;li&gt;Math.sqrt(4) : 2.0&lt;/li&gt;
+&lt;li&gt;Math.pow(-1.5, 2.0): 2.25&lt;/li&gt;
+&lt;li&gt;Math.sin(-1.5): -0.9974949866040544&lt;/li&gt;
+&lt;li&gt;Math.cos(-1.5): 0.0707372016677029&lt;/li&gt;
+&lt;li&gt;Math.tan(-1.5): -14.101419947171719&lt;/li&gt;
+&lt;li&gt;Math.random(): [0.0, 1.0) 범위의 난수 (실행할 때마다 값이 달라집니다)&lt;/li&gt;
+&lt;li&gt;Math.random() * 100 : 0 ~ 99 까지 랜덤으로 1가지의 수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 100px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.tcpschool.com/java/java_api_math&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Math 클래스&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

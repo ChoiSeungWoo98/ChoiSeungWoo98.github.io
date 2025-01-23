@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>서버이중화 on Hugo Theme Stack Starter</title>
+        <link>https://demo.stack.jimmycai.com/tags/%EC%84%9C%EB%B2%84%EC%9D%B4%EC%A4%91%ED%99%94/</link>
+        <description>Recent content in 서버이중화 on Hugo Theme Stack Starter</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 02 Jul 2024 22:03:57 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/%EC%84%9C%EB%B2%84%EC%9D%B4%EC%A4%91%ED%99%94/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>부트캠프 시작(클라우드 OT)</title>
+        <link>https://demo.stack.jimmycai.com/p/%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84-%EC%8B%9C%EC%9E%91%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-ot/</link>
+        <pubDate>Tue, 02 Jul 2024 22:03:57 +0900</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/p/%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84-%EC%8B%9C%EC%9E%91%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-ot/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;어제 OT를 잘 마치고 오늘 첫번째 수업 날 입니다!&lt;br&gt;
+오늘은 별다른 수업 없이 ZEP에 접속하고 노션(단체, 개인 목표를 작성)을 만들었습니다.
+진도를 나가지 않아 엄청 어수선한 분위기 속에 어떻게 되련지&amp;hellip;.
+아침에 말씀해주셨던 부분 중 일부분을 찾아보고 작성하였습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;쿠버네티스&#34;&gt;쿠버네티스
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;컨테이너화 된 애플리케이션의 자동화(Deploy, Scaling 등을 제공) 하는 시스템&lt;/li&gt;
+&lt;li&gt;쿠버네티스를 운영하기 위한 서버가 따로 필요하다.&lt;/li&gt;
+&lt;li&gt;항상 쿠버네티스가 솔루션인가는 고민해볼 필요가 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;서버의-이중화는-반드시-필요한가&#34;&gt;서버의 이중화는 반드시 필요한가?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;정답은 없는 부분이라 섣부르게 답변하기 어렵지만 내 생각을 정리하자면 반드시 필요하지는 않다고 생각한다.&lt;br&gt;
+주식, 게임과 같은 실시간 서비스거나 트래픽이 많은 대규모 어플리케이션을 운영하는 경우 필요하다고 생각하지만. &lt;br&gt;
+사내에서 인트라넷, 비즈니스에 큰 영향이 가지 않는 경우 이중화를 하게 되면 비용적인 문제가 발생할 수 있다고 생각한다.&lt;br&gt;
+따라서, 서비스의 특징과 상황을 고려하여 이중화를 진행해야 한다고 생각합니다.&lt;/p&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;안정성-vs-효율&#34;&gt;안정성 vs 효율
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;개발자는 항상 기로에 놓이는 것 같습니다.&lt;br&gt;
+새로운 기술을 채택하여 효율적으로 작업하거나 기존의 기술을 채택하여 안정적으로 작업하거나&lt;br&gt;
+이것도 마찬가지로 정답은 없지만 그때그때 상황에 맞게 사용할 수 있도록 소통 및 판단하는 능력이 중요할 것 같습니다.&lt;/p&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;나한테-이득이-되는-경험&#34;&gt;나한테 이득이 되는 경험
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;서비스 운영&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;도메인 붙인 서비스&lt;/li&gt;
+&lt;li&gt;리소스 모터링(스케일인 / 스케일아웃)&lt;/li&gt;
+&lt;li&gt;개인정보처리방침과 이용약관 이해하고 회원가입&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;데이터 관리&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;db를 클라우드에 깔기&lt;/li&gt;
+&lt;li&gt;백업 자동화&lt;/li&gt;
+&lt;li&gt;데이터베이스 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;애플리케이션 보안&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Token 기반으로 api가 동작하도록 만들어보기&lt;/li&gt;
+&lt;li&gt;가장 쉬운 방법 세션, 토큰, key(하드하게 넣으면 탈취 당할 수 있음, 파일을 따로 둔다.)&lt;/li&gt;
+&lt;li&gt;api 파라미터를 조작하여 다른 계정의 데이터를 가져올 수 없게 만들기&lt;/li&gt;
+&lt;li&gt;주요 3rd Party Key들을 보관할 때. 하드코딩 말고 밖으로 배서 관리하기 Vault을 통해 관리하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;클라우드-엔지니어가-알고-있으면-좋은-것들추후에-포스트로-작성-예정&#34;&gt;클라우드 엔지니어가 알고 있으면 좋은 것들(추후에 포스트로 작성 예정)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;쿠버네티스&lt;/li&gt;
+&lt;li&gt;네트워크 -&amp;gt; 20240704 작성&lt;/li&gt;
+&lt;li&gt;리눅스&lt;/li&gt;
+&lt;li&gt;보안&lt;/li&gt;
+&lt;li&gt;장애 대응 프로세서&lt;/li&gt;
+&lt;li&gt;HA(고가용성)&lt;/li&gt;
+&lt;li&gt;Absible&lt;/li&gt;
+&lt;li&gt;Terraform&lt;/li&gt;
+&lt;li&gt;온프레미스 방식&lt;/li&gt;
+&lt;li&gt;ssh&lt;/li&gt;
+&lt;li&gt;sre&lt;/li&gt;
+&lt;li&gt;kisa&lt;/li&gt;
+&lt;li&gt;MongoDB Atlas(몽고 디비를 클라우드 서비스로 제공)&lt;/li&gt;
+&lt;li&gt;session&lt;/li&gt;
+&lt;li&gt;token&lt;/li&gt;
+&lt;li&gt;GIB&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
