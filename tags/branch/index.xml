@@ -1,18 +1,62 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Branch - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/branch.html</link>
-        <description>Branch - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Mar 2023 00:40:51 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/branch.html" rel="self" type="application/rss+xml" /><item>
-    <title>[Git] branch가 자세히 뭘까?</title>
-    <link>https://choiseungwoo98.github.io/branch.html</link>
-    <pubDate>Sun, 05 Mar 2023 00:40:51 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/branch.html</guid>
-    <description><![CDATA[브랜치?? 여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능이 바로 브랜치(Branch) 이다.
-각자 독립적인 작업 영역(저장소) 안에서 마음대로 소스코드를 변경할 수 있다.
-이렇게 분리된 작업 영역에서 변경된 내용은 나중에 원래의 버전과 비교해서 하나의 새로운 버전으로 만들어 낼 수 있다.
-브랜치 사용법 메인 브랜치에서 자신의 작업 전용 브랜치를 만듦 각자 작업을 진행한 후, 작업이 끝난 사람은 메인 브랜치에 자신의 브랜치의 변경 사항을 적용 다른 사람의 작업에 영향을 받지 않고 독립적으로 특정 작업을 수행하고 그 결과를 하나로 모음 브랜치로 그 작업의 기록을 중간 중간에 남기게 되므로 문제가 발생했을 경우 원인이 되는 작업을 찾아내거나 그에 따른 대책을 세우기 쉬워짐 Code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # 브랜치 생성 # git branch branchName $ git branch myWork-1 # 브랜치 이동 # switch 혹은 checkout 둘 다 가능 # git switch branchName $ git switch myWork-1 # 브랜치 생성 및 이동 # git checkout -b branch_name # git switch -c branch_name $ git switch -c myWork-2 # 현재 브랜치 확인 $ git branch # 브랜치 삭제 # git branch -d branchName $ git branch -d myWork-1 포스트 작성 시 참고한 링크 브랜치란?]]></description>
-</item>
-</channel>
+        <title>Branch on My New Hugo Site</title>
+        <link>https://example.org/tags/branch/</link>
+        <description>Recent content in Branch on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 05 Mar 2023 00:40:51 +0900</lastBuildDate><atom:link href="https://example.org/tags/branch/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[Git] branch가 자세히 뭘까?</title>
+        <link>https://example.org/posts/configuration_management/git/branch/</link>
+        <pubDate>Sun, 05 Mar 2023 00:40:51 +0900</pubDate>
+        
+        <guid>https://example.org/posts/configuration_management/git/branch/</guid>
+        <description>&lt;h2 id=&#34;브랜치&#34;&gt;브랜치??
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;여러 개발자들이 &lt;strong&gt;동시에 다양한 작업을 할 수 있게 만들어 주는 기능&lt;/strong&gt;이 바로 브랜치(Branch) 이다.&lt;br&gt;
+각자 &lt;strong&gt;독립적인 작업 영역(저장소) 안에서 마음대로 소스코드를 변경&lt;/strong&gt;할 수 있다.&lt;br&gt;
+이렇게 분리된 작업 영역에서 &lt;strong&gt;변경된 내용은 나중에 원래의 버전과 비교해서 하나의 새로운 버전으로 만들어&lt;/strong&gt; 낼 수 있다.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;브랜치-사용법&#34;&gt;브랜치 사용법
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;메인 브랜치에서 자신의 작업 전용 브랜치를 만듦&lt;/li&gt;
+&lt;li&gt;각자 작업을 진행한 후, 작업이 끝난 사람은 메인 브랜치에 자신의 브랜치의 변경 사항을 적용&lt;/li&gt;
+&lt;li&gt;다른 사람의 작업에 영향을 받지 않고 독립적으로 특정 작업을 수행하고 그 결과를 하나로 모음&lt;/li&gt;
+&lt;li&gt;브랜치로 그 작업의 기록을 중간 중간에 남기게 되므로 문제가 발생했을 경우 원인이 되는 작업을 찾아내거나 그에 따른 대책을 세우기 쉬워짐&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;code&#34;&gt;Code
+&lt;/h2&gt;&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 브랜치 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git branch branchName&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git branch myWork-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 브랜치 이동&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# switch 혹은 checkout 둘 다 가능&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git switch branchName&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git switch myWork-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 브랜치 생성 및 이동&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git checkout -b branch_name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git switch -c branch_name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git switch -c myWork-2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 현재 브랜치 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git branch
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 브랜치 삭제&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git branch -d branchName&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git branch -d myWork-1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://backlog.com/git-tutorial/kr/stepup/stepup1_1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;브랜치란?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

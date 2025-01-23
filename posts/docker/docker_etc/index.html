@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 오늘은 실습보다 이론위주의 수업이었다.\n도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.\nDocker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 없이 실행시키는 모드 특징 시스템 전체에 대한 권한 없이 사용할 수 있어 잠재적 보안 위험을 낮출 수 있다. 모두 일반 사용자 권한으로 시스템 자원에 대한 접근 제한 Linux Capabilities 개념 리눅스 커널에서 제공하는 기능으로 시스템 관리 권한을 세분화하여 특정 작업에 대해 권한을 부여할 수 있다. 특징 컨테이너 생성 시 필요한 권한만 부여해 보안성 향상 Privileged : 컨테이너가 호스트 시스템의 모든 권한을 갖고 있음.(보안 취약) Share Namespace 개념 리눅스 커널의 기능으로 프로세스와 자원(PID, 네트워크, IPC 등)을 격리 시킬 수 있다. 특징 Docker에서는 컨테이너 마다 별도의 네임스페이스를 할당해 다른 컨테이너나 호스트와 격리한다. PID Namespace : 호스트의 프로세스를 볼 수 있음, 프로세스 ID를 격리하여 각 컨테이너가 다른 프로세스를 보지 못하게 한다. IPC Namespace : 호스트의 , 인터이페스 통신을 격리한다. Network Namespace : 호스트의 , 네트워크 인터페이스를 격리해 컨테이너 간 네트워크 충돌을 방지한다. 추가적인 내용 리눅스 심화 Security Layer 개념 리눅스 커널에서 제공하는 보안 메커니즘으로 Docker 이미지에서 보안 패치를 적용한 레이어이다. 시스템 호출 제어와 프로그램 동작 제한을 통해 보안을 강화하는데 사용 특징 Docker 이미지는 여러 레이어로 구성되며, 취약점 발견 시 해당 레이어만 업데이트 해 보안성 유지 이미지 전체를 다시 빌드할 필요 없이 특정 레이어만 업데이트 할 수 있어 효율적이다. AppArmor : 리눅스 커널에서 제공하는 보안 모듈로 애플리케이션 접근할 수 있는 자원을 제어(강제적 접근 제한 chmod, chown, setuid 등보다 더 로우한 거) Seccomp : 리눅스 커널에서 제공하는 보안 기능으로 시스템 콜을 필터링해 애플리케이션을 실행할 수 있는 시스템 콜 제한 Privileged Container와 UnPrivileged Container Privileged Container 컨테이너는 Host에서 독립된 namespace 영역을 가지고 있어 시스템의 주요자원에 접근할 수 있는 권한이 없음 Privileged 옵션으로 Container를 생성하면 Host의 리눅스 커널 기능을 모두 사용할 수 있고 모든 Host 주요 자원에 접근할 수 있음 UnPrivileged Container 시스템 주요 자원에 접근할 수 있는 권한이 부족해 네트워크 인터페이스 활성화/비활성화나 IP주소의 변경 불가능 Capabilities 모든 권한을 열어주게 되면, 보안적으로 위험할 수 있어 세분화하여 권한을 관리 CAP_NET_ADMIN : 네트워크설정변경 CAP_SYS_ADMIN : 시스템관리작업 CAP_SYS_PTRACE : 다른프로세스추적 Reverse Shell 개념 공격자가 타겟 시스템에 접속하여 원격으로 명령을 실행할 수 있도록 하는 공격 기법 중 하나 외부에서 내부로 접속을 가능하게 해 방화벽을 우회하는 데 사용 작동 원리 공격자 준비 : 자신의 시스템에서 특정 포트를 열어 리스닝 상태로 대기(공격자 시스템) 타겟 시스템 접속 : 타겟 시스템에 악성 코드 또는 스크립트를 실행시켜, 시스템으로 연결(타겟 시스템에서 공격 시스템 연결) 연결 수립 : 연결을 통해 타겟 시스템에서 명령을 실행할 수 있는 쉘에 접근 명령 실행 : 공격자가 타겟 시스템에서 원하는 명령을 실행 방어 방법 방화벽 설정 강화 : 내부에서 외부로의 불필요한 연결 제한, 중요한 시스템에서는 허용된 IP와 포트만 외부로 연결 설정 네트워크 모니터링 : 이상한 네트워크 트래픽을 감지하기 위해 네트워크 트래픽을 지속적으로 모니터링 IDS/IPS 사용 : 침입 탐지 시스템(IDS)이나 침입 방지 시스템(IPS)을 사용하여 의심스러운 활동을 실시간으로 탐지 및 차단합니다. 보안 패치 적용 : 시스템과 애플리케이션의 보안 패치를 최신 상태로 유지하여 악성 코드가 실행될 수 있는 취약점을 최소화합니다. 사용자 교육 : 소셜 엔지니어링 공격을 통해 리버스 셸이 설치될 수 있으므로, 사용자에게 피싱 이메일과 같은 공격 방법에 대한 교육 실시 Linux root 디렉토리 정보 /proc : 시스템 상태, 하드웨어 정보, 프로세스 정보 등이 포함\n">
+<title>Docker 이론</title>
+
+<link rel='canonical' href='https://example.org/posts/docker/docker_etc/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Docker 이론">
+<meta property='og:description' content=" 오늘은 실습보다 이론위주의 수업이었다.\n도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.\nDocker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 없이 실행시키는 모드 특징 시스템 전체에 대한 권한 없이 사용할 수 있어 잠재적 보안 위험을 낮출 수 있다. 모두 일반 사용자 권한으로 시스템 자원에 대한 접근 제한 Linux Capabilities 개념 리눅스 커널에서 제공하는 기능으로 시스템 관리 권한을 세분화하여 특정 작업에 대해 권한을 부여할 수 있다. 특징 컨테이너 생성 시 필요한 권한만 부여해 보안성 향상 Privileged : 컨테이너가 호스트 시스템의 모든 권한을 갖고 있음.(보안 취약) Share Namespace 개념 리눅스 커널의 기능으로 프로세스와 자원(PID, 네트워크, IPC 등)을 격리 시킬 수 있다. 특징 Docker에서는 컨테이너 마다 별도의 네임스페이스를 할당해 다른 컨테이너나 호스트와 격리한다. PID Namespace : 호스트의 프로세스를 볼 수 있음, 프로세스 ID를 격리하여 각 컨테이너가 다른 프로세스를 보지 못하게 한다. IPC Namespace : 호스트의 , 인터이페스 통신을 격리한다. Network Namespace : 호스트의 , 네트워크 인터페이스를 격리해 컨테이너 간 네트워크 충돌을 방지한다. 추가적인 내용 리눅스 심화 Security Layer 개념 리눅스 커널에서 제공하는 보안 메커니즘으로 Docker 이미지에서 보안 패치를 적용한 레이어이다. 시스템 호출 제어와 프로그램 동작 제한을 통해 보안을 강화하는데 사용 특징 Docker 이미지는 여러 레이어로 구성되며, 취약점 발견 시 해당 레이어만 업데이트 해 보안성 유지 이미지 전체를 다시 빌드할 필요 없이 특정 레이어만 업데이트 할 수 있어 효율적이다. AppArmor : 리눅스 커널에서 제공하는 보안 모듈로 애플리케이션 접근할 수 있는 자원을 제어(강제적 접근 제한 chmod, chown, setuid 등보다 더 로우한 거) Seccomp : 리눅스 커널에서 제공하는 보안 기능으로 시스템 콜을 필터링해 애플리케이션을 실행할 수 있는 시스템 콜 제한 Privileged Container와 UnPrivileged Container Privileged Container 컨테이너는 Host에서 독립된 namespace 영역을 가지고 있어 시스템의 주요자원에 접근할 수 있는 권한이 없음 Privileged 옵션으로 Container를 생성하면 Host의 리눅스 커널 기능을 모두 사용할 수 있고 모든 Host 주요 자원에 접근할 수 있음 UnPrivileged Container 시스템 주요 자원에 접근할 수 있는 권한이 부족해 네트워크 인터페이스 활성화/비활성화나 IP주소의 변경 불가능 Capabilities 모든 권한을 열어주게 되면, 보안적으로 위험할 수 있어 세분화하여 권한을 관리 CAP_NET_ADMIN : 네트워크설정변경 CAP_SYS_ADMIN : 시스템관리작업 CAP_SYS_PTRACE : 다른프로세스추적 Reverse Shell 개념 공격자가 타겟 시스템에 접속하여 원격으로 명령을 실행할 수 있도록 하는 공격 기법 중 하나 외부에서 내부로 접속을 가능하게 해 방화벽을 우회하는 데 사용 작동 원리 공격자 준비 : 자신의 시스템에서 특정 포트를 열어 리스닝 상태로 대기(공격자 시스템) 타겟 시스템 접속 : 타겟 시스템에 악성 코드 또는 스크립트를 실행시켜, 시스템으로 연결(타겟 시스템에서 공격 시스템 연결) 연결 수립 : 연결을 통해 타겟 시스템에서 명령을 실행할 수 있는 쉘에 접근 명령 실행 : 공격자가 타겟 시스템에서 원하는 명령을 실행 방어 방법 방화벽 설정 강화 : 내부에서 외부로의 불필요한 연결 제한, 중요한 시스템에서는 허용된 IP와 포트만 외부로 연결 설정 네트워크 모니터링 : 이상한 네트워크 트래픽을 감지하기 위해 네트워크 트래픽을 지속적으로 모니터링 IDS/IPS 사용 : 침입 탐지 시스템(IDS)이나 침입 방지 시스템(IPS)을 사용하여 의심스러운 활동을 실시간으로 탐지 및 차단합니다. 보안 패치 적용 : 시스템과 애플리케이션의 보안 패치를 최신 상태로 유지하여 악성 코드가 실행될 수 있는 취약점을 최소화합니다. 사용자 교육 : 소셜 엔지니어링 공격을 통해 리버스 셸이 설치될 수 있으므로, 사용자에게 피싱 이메일과 같은 공격 방법에 대한 교육 실시 Linux root 디렉토리 정보 /proc : 시스템 상태, 하드웨어 정보, 프로세스 정보 등이 포함\n">
+<meta property='og:url' content='https://example.org/posts/docker/docker_etc/'>
+<meta property='og:site_name' content='My New Hugo Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='KakaoTechBootCamp' /><meta property='article:tag' content='BootCamp' /><meta property='article:tag' content='Docker' /><meta property='article:tag' content='security' /><meta property='article:published_time' content='2024-07-12T14:25:27&#43;09:00'/><meta property='article:modified_time' content='2024-07-12T14:25:27&#43;09:00'/>
+<meta name="twitter:title" content="Docker 이론">
+<meta name="twitter:description" content=" 오늘은 실습보다 이론위주의 수업이었다.\n도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.\nDocker Security Rootless Mode 개념 Docker를 실행할 때 관리자 권한 없이 실행시키는 모드 특징 시스템 전체에 대한 권한 없이 사용할 수 있어 잠재적 보안 위험을 낮출 수 있다. 모두 일반 사용자 권한으로 시스템 자원에 대한 접근 제한 Linux Capabilities 개념 리눅스 커널에서 제공하는 기능으로 시스템 관리 권한을 세분화하여 특정 작업에 대해 권한을 부여할 수 있다. 특징 컨테이너 생성 시 필요한 권한만 부여해 보안성 향상 Privileged : 컨테이너가 호스트 시스템의 모든 권한을 갖고 있음.(보안 취약) Share Namespace 개념 리눅스 커널의 기능으로 프로세스와 자원(PID, 네트워크, IPC 등)을 격리 시킬 수 있다. 특징 Docker에서는 컨테이너 마다 별도의 네임스페이스를 할당해 다른 컨테이너나 호스트와 격리한다. PID Namespace : 호스트의 프로세스를 볼 수 있음, 프로세스 ID를 격리하여 각 컨테이너가 다른 프로세스를 보지 못하게 한다. IPC Namespace : 호스트의 , 인터이페스 통신을 격리한다. Network Namespace : 호스트의 , 네트워크 인터페이스를 격리해 컨테이너 간 네트워크 충돌을 방지한다. 추가적인 내용 리눅스 심화 Security Layer 개념 리눅스 커널에서 제공하는 보안 메커니즘으로 Docker 이미지에서 보안 패치를 적용한 레이어이다. 시스템 호출 제어와 프로그램 동작 제한을 통해 보안을 강화하는데 사용 특징 Docker 이미지는 여러 레이어로 구성되며, 취약점 발견 시 해당 레이어만 업데이트 해 보안성 유지 이미지 전체를 다시 빌드할 필요 없이 특정 레이어만 업데이트 할 수 있어 효율적이다. AppArmor : 리눅스 커널에서 제공하는 보안 모듈로 애플리케이션 접근할 수 있는 자원을 제어(강제적 접근 제한 chmod, chown, setuid 등보다 더 로우한 거) Seccomp : 리눅스 커널에서 제공하는 보안 기능으로 시스템 콜을 필터링해 애플리케이션을 실행할 수 있는 시스템 콜 제한 Privileged Container와 UnPrivileged Container Privileged Container 컨테이너는 Host에서 독립된 namespace 영역을 가지고 있어 시스템의 주요자원에 접근할 수 있는 권한이 없음 Privileged 옵션으로 Container를 생성하면 Host의 리눅스 커널 기능을 모두 사용할 수 있고 모든 Host 주요 자원에 접근할 수 있음 UnPrivileged Container 시스템 주요 자원에 접근할 수 있는 권한이 부족해 네트워크 인터페이스 활성화/비활성화나 IP주소의 변경 불가능 Capabilities 모든 권한을 열어주게 되면, 보안적으로 위험할 수 있어 세분화하여 권한을 관리 CAP_NET_ADMIN : 네트워크설정변경 CAP_SYS_ADMIN : 시스템관리작업 CAP_SYS_PTRACE : 다른프로세스추적 Reverse Shell 개념 공격자가 타겟 시스템에 접속하여 원격으로 명령을 실행할 수 있도록 하는 공격 기법 중 하나 외부에서 내부로 접속을 가능하게 해 방화벽을 우회하는 데 사용 작동 원리 공격자 준비 : 자신의 시스템에서 특정 포트를 열어 리스닝 상태로 대기(공격자 시스템) 타겟 시스템 접속 : 타겟 시스템에 악성 코드 또는 스크립트를 실행시켜, 시스템으로 연결(타겟 시스템에서 공격 시스템 연결) 연결 수립 : 연결을 통해 타겟 시스템에서 명령을 실행할 수 있는 쉘에 접근 명령 실행 : 공격자가 타겟 시스템에서 원하는 명령을 실행 방어 방법 방화벽 설정 강화 : 내부에서 외부로의 불필요한 연결 제한, 중요한 시스템에서는 허용된 IP와 포트만 외부로 연결 설정 네트워크 모니터링 : 이상한 네트워크 트래픽을 감지하기 위해 네트워크 트래픽을 지속적으로 모니터링 IDS/IPS 사용 : 침입 탐지 시스템(IDS)이나 침입 방지 시스템(IPS)을 사용하여 의심스러운 활동을 실시간으로 탐지 및 차단합니다. 보안 패치 적용 : 시스템과 애플리케이션의 보안 패치를 최신 상태로 유지하여 악성 코드가 실행될 수 있는 취약점을 최소화합니다. 사용자 교육 : 소셜 엔지니어링 공격을 통해 리버스 셸이 설치될 수 있으므로, 사용자에게 피싱 이메일과 같은 공격 방법에 대한 교육 실시 Linux root 디렉토리 정보 /proc : 시스템 상태, 하드웨어 정보, 프로세스 정보 등이 포함\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My New Hugo Site</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/kakaotechbootcamp/" >
+                KakaoTechBootCamp
+            </a>
+        
+            <a href="/categories/docker/" >
+                Docker
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/docker/docker_etc/">Docker 이론</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 12, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    4 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>오늘은 실습보다 이론위주의 수업이었다.<br>
+도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.</p>
+</blockquote>
+<h2 id="docker-security">Docker Security
+</h2><hr>
+<h4 id="rootless-mode">Rootless Mode
+</h4><ul>
+<li>개념
+<ul>
+<li>Docker를 실행할 때 관리자 권한 없이 실행시키는 모드</li>
+</ul>
+</li>
+<li>특징
+<ul>
+<li>시스템 전체에 대한 권한 없이 사용할 수 있어 잠재적 보안 위험을 낮출 수 있다.</li>
+<li>모두 일반 사용자 권한으로 시스템 자원에 대한 접근 제한</li>
+</ul>
+</li>
+</ul>
+<h4 id="linux-capabilities">Linux Capabilities
+</h4><ul>
+<li>개념
+<ul>
+<li>리눅스 커널에서 제공하는 기능으로 시스템 관리 권한을 세분화하여 특정 작업에 대해 권한을 부여할 수 있다.</li>
+</ul>
+</li>
+<li>특징
+<ul>
+<li>컨테이너 생성 시 필요한 권한만 부여해 보안성 향상</li>
+<li>Privileged : 컨테이너가 호스트 시스템의 모든 권한을 갖고 있음.(보안 취약)</li>
+</ul>
+</li>
+</ul>
+<h4 id="share-namespace">Share Namespace
+</h4><ul>
+<li>개념
+<ul>
+<li>리눅스 커널의 기능으로 프로세스와 자원(PID, 네트워크, IPC 등)을 격리 시킬 수 있다.</li>
+</ul>
+</li>
+<li>특징
+<ul>
+<li>Docker에서는 컨테이너 마다 별도의 네임스페이스를 할당해 다른 컨테이너나 호스트와 격리한다.</li>
+<li>PID Namespace : 호스트의 프로세스를 볼 수 있음, 프로세스 ID를 격리하여 각 컨테이너가 다른 프로세스를 보지 못하게 한다.</li>
+<li>IPC Namespace : 호스트의 , 인터이페스 통신을 격리한다.</li>
+<li>Network Namespace : 호스트의 , 네트워크 인터페이스를 격리해 컨테이너 간 네트워크 충돌을 방지한다.</li>
+<li>추가적인 내용 <a class="link" href="https://choiseungwoo98.github.io/linux_detail.html#namespace"  target="_blank" rel="noopener"
+    >리눅스 심화</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="security-layer">Security Layer
+</h4><ul>
+<li>개념
+<ul>
+<li>리눅스 커널에서 제공하는 보안 메커니즘으로 Docker 이미지에서 보안 패치를 적용한 레이어이다.</li>
+<li>시스템 호출 제어와 프로그램 동작 제한을 통해 보안을 강화하는데 사용</li>
+</ul>
+</li>
+<li>특징
+<ul>
+<li>Docker 이미지는 여러 레이어로 구성되며, 취약점 발견 시 해당 레이어만 업데이트 해 보안성 유지</li>
+<li>이미지 전체를 다시 빌드할 필요 없이 특정 레이어만 업데이트 할 수 있어 효율적이다.</li>
+<li>AppArmor : 리눅스 커널에서 제공하는 보안 모듈로 애플리케이션 접근할 수 있는 자원을 제어(강제적 접근 제한 chmod, chown, setuid 등보다 더 로우한 거)</li>
+<li>Seccomp : 리눅스 커널에서 제공하는 보안 기능으로 시스템 콜을 필터링해 애플리케이션을 실행할 수 있는 시스템 콜 제한</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="privileged-container와-unprivileged-container">Privileged Container와 UnPrivileged Container
+</h2><hr>
+<h4 id="privileged-container">Privileged Container
+</h4><ul>
+<li>컨테이너는 Host에서 독립된 namespace 영역을 가지고 있어 시스템의 주요자원에 접근할 수 있는 권한이 없음</li>
+<li>Privileged 옵션으로 Container를 생성하면 Host의 리눅스 커널 기능을 모두 사용할 수 있고 모든 Host 주요 자원에 접근할 수 있음</li>
+</ul>
+<h4 id="unprivileged-container">UnPrivileged Container
+</h4><ul>
+<li>시스템 주요 자원에 접근할 수 있는 권한이 부족해 네트워크 인터페이스 활성화/비활성화나 IP주소의 변경 불가능</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="capabilities">Capabilities
+</h2><hr>
+<ul>
+<li>모든 권한을 열어주게 되면, 보안적으로 위험할 수 있어 세분화하여 권한을 관리</li>
+<li>CAP_NET_ADMIN : 네트워크설정변경</li>
+<li>CAP_SYS_ADMIN : 시스템관리작업</li>
+<li>CAP_SYS_PTRACE : 다른프로세스추적</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="reverse-shell">Reverse Shell
+</h2><hr>
+<h4 id="개념">개념
+</h4><ul>
+<li>공격자가 타겟 시스템에 접속하여 원격으로 명령을 실행할 수 있도록 하는 공격 기법 중 하나</li>
+<li>외부에서 내부로 접속을 가능하게 해 방화벽을 우회하는 데 사용</li>
+</ul>
+<h4 id="작동-원리">작동 원리
+</h4><ul>
+<li>공격자 준비 : 자신의 시스템에서 특정 포트를 열어 리스닝 상태로 대기(공격자 시스템)</li>
+<li>타겟 시스템 접속 : 타겟 시스템에 악성 코드 또는 스크립트를 실행시켜, 시스템으로 연결(타겟 시스템에서 공격 시스템 연결)</li>
+<li>연결 수립 : 연결을 통해 타겟 시스템에서 명령을 실행할 수 있는 쉘에 접근</li>
+<li>명령 실행 : 공격자가 타겟 시스템에서 원하는 명령을 실행</li>
+</ul>
+<h4 id="방어-방법">방어 방법
+</h4><ul>
+<li>방화벽 설정 강화 : 내부에서 외부로의 불필요한 연결 제한, 중요한 시스템에서는 허용된 IP와 포트만 외부로 연결 설정</li>
+<li>네트워크 모니터링 : 이상한 네트워크 트래픽을 감지하기 위해 네트워크 트래픽을 지속적으로 모니터링</li>
+<li>IDS/IPS 사용 : 침입 탐지 시스템(IDS)이나 침입 방지 시스템(IPS)을 사용하여 의심스러운 활동을 실시간으로 탐지 및 차단합니다.</li>
+<li>보안 패치 적용 : 시스템과 애플리케이션의 보안 패치를 최신 상태로 유지하여 악성 코드가 실행될 수 있는 취약점을 최소화합니다.</li>
+<li>사용자 교육 : 소셜 엔지니어링 공격을 통해 리버스 셸이 설치될 수 있으므로, 사용자에게 피싱 이메일과 같은 공격 방법에 대한 교육 실시</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="linux-root-디렉토리-정보">Linux root 디렉토리 정보
+</h2><hr>
+<ul>
+<li>
+<p>/proc : 시스템 상태, 하드웨어 정보, 프로세스 정보 등이 포함</p>
+<ul>
+<li>/proc/cpuinfo : CPU 정보</li>
+<li>/proc/meminfo : 메모리 상태</li>
+</ul>
+</li>
+<li>
+<p>/etc : 시스템 및 애플리케이션의 설정 파일들이 저장</p>
+<ul>
+<li>/etc/passwd : 사용자 계정 정보</li>
+<li>/etc/fstab : 파일 시스템 마운트 정보</li>
+<li>/etc/hosts : 호스트명과 IP 매핑 정보</li>
+</ul>
+</li>
+<li>
+<p>/bin : 시스템 부팅과 기본 운영에 필요한 실행 파일들이 저장</p>
+<ul>
+<li>ls, cp, mv, rm 등의 명령어 위치</li>
+</ul>
+</li>
+<li>
+<p>/sbin : 시스템 관리와 관련된 명령어들이 위치</p>
+<ul>
+<li>reboot, ifconfig, iptables 등의 명령어가 포함</li>
+</ul>
+</li>
+<li>
+<p>/usr : 사용자 애플리케이션, 라이브러리, 헤더 파일 저장</p>
+<ul>
+<li>/usr/bin : 일반 사용자 명령어</li>
+<li>/usr/sbin : 시스템 관리자 명령어 위치</li>
+<li>/usr/lib : 라이브러리 파일 포함</li>
+</ul>
+</li>
+<li>
+<p>/var : 로그 파일, 스풀 디렉토리, 캐시 파일 등이 포함</p>
+<ul>
+<li>/var/log : 로그 파일</li>
+<li>/var/spool : 프린터와 메일 스풀 파일들이 저장</li>
+</ul>
+</li>
+<li>
+<p>/home : 각 사용자별 개인 파일과 설정 파일 저장</p>
+<ul>
+<li>사용자 user1의 홈 디렉토리는 /home/user1</li>
+</ul>
+</li>
+<li>
+<p>/tmp : 시스템 사용 중 임시로 생성되는 파일들이 위치, 시스템 재부팅 시 대부분의 파일이 삭제됨.</p>
+</li>
+<li>
+<p>/dev : 시스템 하드웨어와의 인터페이스를 제공하는 파일들이 포함</p>
+<ul>
+<li>/dev/sda1 : 첫 번째 하드 디스크의 첫 번째 파티션을 나타냄</li>
+</ul>
+</li>
+<li>
+<p>/lib : 커널 모듈과 공유 라이브러리 파일들이 포함</p>
+<ul>
+<li>/lib/modules : 커널 모듈 위치</li>
+</ul>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/kakaotechbootcamp/">KakaoTechBootCamp</a>
+        
+            <a href="/tags/bootcamp/">BootCamp</a>
+        
+            <a href="/tags/docker/">Docker</a>
+        
+            <a href="/tags/security/">Security</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/docker/docker_conpose/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker_conpose</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/dockerfile_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Dockerfile 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/docker_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/linux/linux_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/network/network_basic_1/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">네트워크 개념</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 My New Hugo Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

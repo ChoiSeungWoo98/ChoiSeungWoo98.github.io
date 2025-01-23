@@ -1,18 +1,252 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Convention - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/convention.html</link>
-        <description>Convention - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 16:03:49 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/convention.html" rel="self" type="application/rss+xml" /><item>
-    <title>[Java] 자바 네이밍 규칙(Java Naming Convention)</title>
-    <link>https://choiseungwoo98.github.io/naming.html</link>
-    <pubDate>Sat, 19 Aug 2023 16:03:49 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/naming.html</guid>
-    <description><![CDATA[프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.
-그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!
-오늘 정리할 네이밍 규칙은 Java 이다.
-1. 네이밍 규칙이란? 프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다. 이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다. 2. 네이밍 규칙을 사용하면 따라오는 효과 가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다.]]></description>
-</item>
-</channel>
+        <title>Convention on My New Hugo Site</title>
+        <link>https://example.org/tags/convention/</link>
+        <description>Recent content in Convention on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 19 Aug 2023 16:03:49 +0900</lastBuildDate><atom:link href="https://example.org/tags/convention/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[Java] 자바 네이밍 규칙(Java Naming Convention)</title>
+        <link>https://example.org/posts/java/basic/naming/</link>
+        <pubDate>Sat, 19 Aug 2023 16:03:49 +0900</pubDate>
+        
+        <guid>https://example.org/posts/java/basic/naming/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.&lt;br&gt;
+그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!&lt;br&gt;
+오늘 정리할 네이밍 규칙은 Java 이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-네이밍-규칙이란&#34;&gt;1. 네이밍 규칙이란?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다.&lt;/li&gt;
+&lt;li&gt;이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-네이밍-규칙을-사용하면-따라오는-효과&#34;&gt;2. 네이밍 규칙을 사용하면 따라오는 효과
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다.&lt;/li&gt;
+&lt;li&gt;일관성 유지 : 일관된 네이밍 규칙을 따르면 코드가 전체적으로 일관성 있어 다양한 파일과 모듈 간의 이동과 이해를 용이하게 만든다.&lt;/li&gt;
+&lt;li&gt;버그 감소 : 명확한 이름을 사용하면 변수나 함수의 역할을 파악하기 쉬워지므로 실수나 버그 발생 가능성이 줄어든다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-자바-네이밍-규칙&#34;&gt;3. 자바 네이밍 규칙
+&lt;/h2&gt;&lt;h3 id=&#34;1-공통-규칙&#34;&gt;1. 공통 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;대소문자가 구분되어야 하고 길이에 제한이 없다.&lt;/li&gt;
+&lt;li&gt;예약어는 사용하면 안된다.(ex : class, import, char, break 등···)&lt;/li&gt;
+&lt;li&gt;숫자로 시작하면 안된다.&lt;/li&gt;
+&lt;li&gt;특수문자는 &amp;lsquo;_&amp;rsquo;(언더바)와 &amp;lsquo;$&amp;rsquo;(달러 기호)만 사용 가능하다.&lt;/li&gt;
+&lt;li&gt;파스칼 표기법과 카멜 표기법을 사용한다.&lt;/li&gt;
+&lt;li&gt;파스칼 표기법 : 모든 단어의 첫 번째 문자는 대문자이며 나머지는 소문자로 작성한다. (ex : PasclaCase )&lt;/li&gt;
+&lt;li&gt;카멜 표기법 : 최초로 사용되는 단어는 모두 소문자로 작성하고 그 이후 첫번째 문자는 대문자 나머지는 소문자로 작성한다. (ex : camelCase)&lt;/li&gt;
+&lt;li&gt;반의어는 반드시 대응하는 개념으로 사용해야 한다. (&lt;a class=&#34;link&#34; href=&#34;#%eb%b0%98%ec%9d%98%ec%96%b4&#34; &gt;반의어 종류 보러가기&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-패키지-명명-규칙&#34;&gt;2. 패키지 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;소문자로 시작(모든 소문자를 권장)&lt;/li&gt;
+&lt;li&gt;가급적 한던어 사용 권장&lt;/li&gt;
+&lt;li&gt;표준 패턴 권장(com.(회사명 / 팀 이름).프로젝트명.상위패키지.하위패키지.클래스)&lt;/li&gt;
+&lt;li&gt;ex : com.choi.management.user.controller&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-클래스-명명-규칙&#34;&gt;3. 클래스 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;파스칼 표기법 사용&lt;/li&gt;
+&lt;li&gt;명사 시작&lt;/li&gt;
+&lt;li&gt;ex : UserController&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-인터페이스-명명-규칙&#34;&gt;4. 인터페이스 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스랑 비슷한 명명 규칙을 갖고있다.&lt;/li&gt;
+&lt;li&gt;복수형 개념인 경우 복수형을 작성해준다.&lt;/li&gt;
+&lt;li&gt;축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다.&lt;/li&gt;
+&lt;li&gt;특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용&lt;/li&gt;
+&lt;li&gt;형용사 사용 할 수 있다.(Runnable, Remote 등…)&lt;/li&gt;
+&lt;li&gt;ex : ConvertUserToMemberHandler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-인터페이스-명명-규칙&#34;&gt;5. 인터페이스 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스랑 비슷한 명명 규칙을 갖고있다.&lt;/li&gt;
+&lt;li&gt;복수형 개념인 경우 복수형을 작성해준다.&lt;/li&gt;
+&lt;li&gt;축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다.&lt;/li&gt;
+&lt;li&gt;특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용&lt;/li&gt;
+&lt;li&gt;형용사 사용(Runnable, Remote 등···)&lt;/li&gt;
+&lt;li&gt;ex : ConvertUserToMemberHandler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-메서드-명명-규칙&#34;&gt;6. 메서드 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;카멜 표기법 사용한다.&lt;/li&gt;
+&lt;li&gt;동사로 시작한다.&lt;/li&gt;
+&lt;li&gt;ex : sendMessage(String message)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;7-변수-명명-규칙&#34;&gt;7. 변수 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;카멜 표기법 사용한다.&lt;/li&gt;
+&lt;li&gt;명확한 이름으로 작성한다.&lt;/li&gt;
+&lt;li&gt;boolean으로 가져올 때는 앞에 is를 붙인다.&lt;/li&gt;
+&lt;li&gt;ex : userName, isChecked&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;8-상수-명명-규칙&#34;&gt;8. 상수 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;전부 대문자료 표기한다.&lt;/li&gt;
+&lt;li&gt;스네이크 케이스를 사용한다.(Snake Case : 단어와 단어 사이를 언더바(&amp;rsquo;_&amp;rsquo;)로 구분)&lt;/li&gt;
+&lt;li&gt;ex : PI, MAX_COUNT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Score&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// final 변수 선언과 초기화(최대 점수 : 100점)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 만약 초기화를 비어둔다면 추후에 초기화가 불가능 하다...(반드시 선언과 동시에 초기화 해주자!!)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 자바 명명 규칙은 나중에 게시물로 상세하게 작성해보겠다! 오늘 사용하는 상수는 대문자로! 단어와 단어 사이는 언더바를 이용한다!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 컴파일 에러가 발생&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 60;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;final 메서드&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;오버라이딩 방지&lt;/li&gt;
+&lt;li&gt;안정성 확보(의도하지 않은 동작 변경 방지, 일관성 유지)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Exam&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 시험의 최대 점수는 final로 선언하고 name은 변수로 선언&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setName&lt;/span&gt;(String name) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 최대 점수 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getMaxScore&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; MAX_SCORE;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MathExam&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; Exam {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 가져오기 메서드 오버라이딩 가능&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;이름 : &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; name);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 컴파일 에러 발생(최대 점수 가져오기 메서드를 오버라이딩 불가)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getMaxScore&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// ...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;final 클래스&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;상속이 불가능&lt;/li&gt;
+&lt;li&gt;메서드 오버라이딩이 불가능&lt;/li&gt;
+&lt;li&gt;해당 클래스를 변경하지 못하기 때문에 보안성 및 안정성이 강화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Exam&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 시험의 최대 점수는 final로 선언하고 name은 변수로 선언&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setName&lt;/span&gt;(String name) {스
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 최대 점수 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getMaxScore&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; MAX_SCORE;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 아래의 코드는 컴파일 에러 발생&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MathExam&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; Exam {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// ...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;반의어&#34;&gt;반의어
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;돌아가기(&lt;a class=&#34;link&#34; href=&#34;#1-%ea%b3%b5%ed%86%b5-%ea%b7%9c%ec%b9%99&#34; &gt;자바 네이밍 공통 규칙 보러가기&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;get / set : 가져오다. / 할당하다.&lt;br&gt;
+(ex : getAge() / setAge() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;add / delete : 추가하다. / 제거하다.&lt;br&gt;
+(ex : addUser() / deleteUser() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;insert / delete : 삽입 / 삭제&lt;br&gt;
+(ex : insertUser() / deleteUser() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;min / max : 최소 / 최대&lt;br&gt;
+(ex : minCnt() / maxCnt() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;show / hide : 보이다 / 숨기다&lt;br&gt;
+(ex : showMove() / hideMove() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;start / stop : 시동 / 정지&lt;br&gt;
+(ex : startMethod() / stopMethod() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;suspend / resume : 일시 정지 / 재개하다&lt;br&gt;
+(ex : suspendMove() / resumeMove() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;increment / decrement : 증가 / 감소&lt;br&gt;
+(ex : incrementViews() / decrementViews() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;create / destroy : 창조하다. / 파괴하다.&lt;br&gt;
+(ex : createMap() / destroyMap() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;next / previous : 다음 / 이전&lt;br&gt;
+(ex : nextUser() / previousUser() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;open / close : 열다 / 닫다&lt;br&gt;
+(ex : openFile() / closeFile() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://thalals.tistory.com/325&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;자바 네이밍 규칙 - 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://dkswnkk.tistory.com/539&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;자바 네이밍 규칙 - 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

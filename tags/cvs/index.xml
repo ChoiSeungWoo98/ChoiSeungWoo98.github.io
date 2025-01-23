@@ -1,16 +1,111 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>CVS - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/cvs.html</link>
-        <description>CVS - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 04 Mar 2023 22:47:36 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/cvs.html" rel="self" type="application/rss+xml" /><item>
-    <title>[형상관리] 형상관리란 SVN? GIT?</title>
-    <link>https://choiseungwoo98.github.io/configuration_management.html</link>
-    <pubDate>Sat, 04 Mar 2023 22:47:36 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/configuration_management.html</guid>
-    <description><![CDATA[현재 가장 많이 사용하고 있는 형상관리도구 git에 대해 공부를 하다가 문득 궁금한 것이 생겼다. Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠한 차이가 있을까? 그래서 한번 각각의 형산관리 도구에 대해 알아보고 장단점은 무엇인지 알아보고자 한다.
-형상관리?? 소프트웨어 구성 관리(Software Configuration Management) 또는 형상관리는 소프트웨어의 변경사항을 체계적으로 추적하고 통제 하는 것 일반적으로 단순 버전관리 기반의 소프트웨어 운용을 좀 더 포괄적인 학술 분야의 형태로 넓히는 근간 소프트웨어의 소스 코드, 개발 환경, 빌드 구조 등 전반적인 환경 전반적인 내역에 대한 관리 체계를 정의 형상 관리는 포괄적인 개념, 통상적으로 버전관리, 소스관리 등으로 불립니다.]]></description>
-</item>
-</channel>
+        <title>CVS on My New Hugo Site</title>
+        <link>https://example.org/tags/cvs/</link>
+        <description>Recent content in CVS on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 04 Mar 2023 22:47:36 +0900</lastBuildDate><atom:link href="https://example.org/tags/cvs/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[형상관리] 형상관리란 SVN? GIT?</title>
+        <link>https://example.org/posts/configuration_management/configuration_management/</link>
+        <pubDate>Sat, 04 Mar 2023 22:47:36 +0900</pubDate>
+        
+        <guid>https://example.org/posts/configuration_management/configuration_management/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;현재 가장 많이 사용하고 있는 형상관리도구 git에 대해 공부를 하다가 문득 궁금한 것이 생겼다.
+Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠한 차이가 있을까?
+그래서 한번 각각의 형산관리 도구에 대해 알아보고 장단점은 무엇인지 알아보고자 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;형상관리&#34;&gt;형상관리??
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;소프트웨어 구성 관리(Software Configuration Management)&lt;/strong&gt; 또는 &lt;strong&gt;형상관리&lt;/strong&gt;는 소프트웨어의 &lt;strong&gt;변경사항을 체계적으로 추적하고 통제&lt;/strong&gt; 하는 것&lt;/li&gt;
+&lt;li&gt;일반적으로 단순 버전관리 기반의 소프트웨어 운용을 좀 더 포괄적인 학술 분야의 형태로 넓히는 근간&lt;/li&gt;
+&lt;li&gt;소프트웨어의 &lt;strong&gt;소스 코드, 개발 환경, 빌드 구조 등 전반적인 환경 전반적인 내역&lt;/strong&gt;에 대한 관리 체계를 정의&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;형상 관리는 포괄적인 개념, 통상적으로 버전관리, 소스관리 등으로 불립니다. 즉, 정보를 여러 버전을 관리하는 것&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;변경관리--버전관리--형상관리&#34;&gt;변경관리 / 버전관리 / 형상관리
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;변경관리, 버전관리, 형상관리. 표면적인 의미로 보면 거의 비슷하지만 이들은 제어 및 지원 범위에서 차이가 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;변경 관리 : 소스코드 변경 사항에 대한 관리&lt;/li&gt;
+&lt;li&gt;버전 관리 : 변경사항을 ‘버전’이란 개념을 통해 관리.&lt;/li&gt;
+&lt;li&gt;형상 관리 : 위의 개념을 포함해 프로젝트와 관련된 모든 변경사항을 관리.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;포함관계를 포함하자면&lt;br&gt;
+&lt;strong&gt;변경관리 ⊆ 버전관리 ⊆ 형상관리&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;버전-관리-시스템&#34;&gt;버전 관리 시스템?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;형상관리 중에서 &lt;strong&gt;문서, 소스코드 등을 버전을 관리&lt;/strong&gt;해주는 버전관리시스템이다.&lt;br&gt;
+통상적으로 &lt;strong&gt;&amp;ldquo;형상관리 ≒ 버전관리&amp;rdquo;&lt;/strong&gt; 임을 인지하고 접근하는 것이 이해하기 쉽다.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;버전-관리형상-관리를-위한-도구와-특징&#34;&gt;버전 관리(형상 관리)를 위한 도구와 특징
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;CVS(Concurrent Version System)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;90년에 출시된 무료 서버-클라이언트 형상관리 시스템&lt;/li&gt;
+&lt;li&gt;파일 전체를 저장하는 것이 아니라 변경사항만을 저장&lt;/li&gt;
+&lt;li&gt;변경사항만 저장하기 때문에 용량을 적게 차지하지만 속도가 상대적으로 느림&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Perforce(P4D)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;빠른 속도, 빠른 Merge가 가능하며 큰 리소스 관리에 좋음&lt;/li&gt;
+&lt;li&gt;유료이고 파일명이 바뀌면 히스토리 추적이 곤란&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SVN (Subversion)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;형상관리/소스관리 툴의 일종&lt;/li&gt;
+&lt;li&gt;중앙관리만 지원&lt;/li&gt;
+&lt;li&gt;다른 사용자의 커밋과 엉키지 않으며, 커밋 실패 시 롤백 기능을 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Git&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;분산형 버전관리 시스템&lt;/li&gt;
+&lt;li&gt;Repository의 완전한 복사본을 로컬에 저장할 수 있음&lt;/li&gt;
+&lt;li&gt;처리속도가 빠르지만 대용량 코드 관리에 부적절&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;가장-많이-사용하는-svn과-git-비교&#34;&gt;가장 많이 사용하는 SVN과 Git 비교
+&lt;/h2&gt;&lt;p&gt;SVN (Subversion)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SVN은 보통 대부분의 기능을 완성해놓고 &lt;strong&gt;소스를 중앙 저장소에 commit&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;commit의 이미 자체가 중앙 저장소에 해당 기능을 공개한다는 의미.&lt;/li&gt;
+&lt;li&gt;개발자가 자신만의 &lt;strong&gt;version history를 가질 수 없음&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;commit한 내용에 실수가 있을 시에 다른 개발자에게 바로 영향을 미치게 되는 단점&lt;/strong&gt;도 있다.&lt;/li&gt;
+&lt;li&gt;저장소를 한개만 두는 것의 단점은 만약 &lt;strong&gt;데이터가 소실되었을때 복구가 어려움&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Git&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;개발자가 &lt;strong&gt;자신만의 commit history를 가질 수 있고&lt;/strong&gt;, 개발자와 서버의 저장소는 &lt;strong&gt;독립적으로 관리&lt;/strong&gt;가 가능.&lt;/li&gt;
+&lt;li&gt;commit한 내용에 &lt;strong&gt;실수가 있더라도 이 바로 서버에 영향을 미치지 않음&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;개발자는 commit 하다가 자신이 원하는 순간에 서버에 변경 내역(commit history)을 보낼 수 있음.&lt;/li&gt;
+&lt;li&gt;서버의 통합 관리자는 관리자가 원하는 순간에 각 개발자의 commit history를 가져올 수 있음.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;svn과-git-차이점&#34;&gt;SVN과 Git 차이점
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;git은 로컬 저장소가 있으므로 &lt;strong&gt;네트워크에 접근할 필요가 없기 때문에 빠름&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;svn은 &lt;strong&gt;commit 하는 순간 저장소를 공유하는 모든 개발자들이 보게&lt;/strong&gt; 된다. &lt;!-- raw HTML omitted --&gt;git은 내 로컬 저장소에서 마음껏 개발하고 정리하여 &lt;strong&gt;필요할 때 원격 저장소로 올림&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;git의 경우 원격 저장소 서버가 잠시 끊기더라도 &lt;strong&gt;버전 컨트롤이 가능&lt;/strong&gt; &lt;!-- raw HTML omitted --&gt;svn은 서버가 끊기는 순간 &lt;strong&gt;버전 컨트롤도 같이 끊김&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;원격 저장소가 사라지면 svn은 &lt;strong&gt;복구 불가&lt;/strong&gt;,&lt;!-- raw HTML omitted --&gt;git은 로컬 저장소에 사본을 들고 있다면 &lt;strong&gt;복구 가능&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;svn은 &lt;strong&gt;저장소가 하나&lt;/strong&gt;,&lt;!-- raw HTML omitted --&gt;git은 로컬 저장소/원격 저장소로 &lt;strong&gt;저장소를 분산&lt;/strong&gt;해서 관리&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://kurukurucoding.tistory.com/68&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;형상관리란 - 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sujinnaljin.medium.com/software-engineering-%ED%98%95%EC%83%81-%EA%B4%80%EB%A6%AC%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-932d14f6f341&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;형상관리란 - 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://s-yeonjuu.tistory.com/53&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SVN, GIT 차이점&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,99 +1,823 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Java-Basic - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/java-basic.html</link>
-        <description>Java-Basic - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Jul 2024 21:27:45 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/java-basic.html" rel="self" type="application/rss+xml" /><item>
-    <title>Basic</title>
-    <link>https://choiseungwoo98.github.io/basic.html</link>
-    <pubDate>Mon, 22 Jul 2024 21:27:45 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/basic.html</guid>
-    <description><![CDATA[오늘은 드디어 그 유명한 쿠버네티스!!!
-쿠버만 잘해도 반은 간다는데
-화이팅! 부셔보자!!!
-Kubenetes(K8S) 설명 컨테이너화된 애플리케이션 배포, 확장 및 관리를 자동화 하는 오픈소스 시스템 대규모 애플리케이션을 신뢰성 있고 효율적인 운영을 도움 특징 서비스 디스커버리 및 로드 밸런싱 : DNS 혹은 자체 IP를 사용해 컨테이너 노출(컨테이너에 트랙픽이 많으면 로드밸런싱 후 배포하여 안정적으로 운영 가능) 스토리지 오케스트레이션 : 로컬저장소, 클라우드 공급자 등과 같이 원하는 저장소 시스템 사용 가능 자동화된 롤아웃, 롤백 : 배포된 컨테이너의 원하는 상태 서술 및 현재 원하는 상태로 변경 자동화된 빈패킹 : 컨테이너 노드에 맞춰 리소스를 가장 잘 사용할 수 있도록 지원 자동화된 복구 : 실패한 컨테이너를 다시 시작, 교체하며 사용자가 정의한 상태 이외에는 지속적으로 복구 가능 시크릿과 구성관리 : 암초, OAuth 토큰, SSH 키와 같은 중요한 정보를 저장 및 관리(컨테이너 이미지 재구성하지 않고 시크릿 및 애플리케이션 구성을 배포 및 업데이트) 핵심 개념 cluster : 여러 대의 머신(노드)으로 구성된 그룹(마스터 노드와 여러 워커 노드로 구성) node : 클러스터 구성요소가 되는 물리적 또는 가상머신 pod : k8s가 생성하고 관리할 수 있는 배포 가능한 가장 작은 단워(하나 이상의 컨테이너 그룹) replicaset : 동일한 포드의 복제본을 일정하게 유지해 가용성 보장 시 사용되는 리소스(Deploment 사용 권장) deployment : 파드와 레플리카셋에 대한 선언적 업데이트 제공 statefulset : 관리하는 데 사용되는 워크로드, 파드 순서 및 고유성 보장(Deployment와 다르게 동자성 유지) Daemonset : 모든 노드가 파드의 사본을 실행(모든 노드에서 클러스터 스토리지, 로그 수집, 노드 모니터링 데몬 실행) Job : 하나 이상의 파드를 생성하고 종료될 때 까지 계속 파드 실행 시도 Cronjob : 반복 일정에 따라 Job 생성 Namespace : 클러스터 내에 리소스를 논리적으로 분리 실습 실습 1 UTM 3개 생성 후 각각 접속 1 2 3 4 5 6 7 8 9 10 11 # 쿠버네티스 설치 sudo snap install microk8s --classic --channel=1.]]></description>
-</item>
-<item>
-    <title>String_Method</title>
-    <link>https://choiseungwoo98.github.io/string_method.html</link>
-    <pubDate>Sun, 20 Aug 2023 02:35:44 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/string_method.html</guid>
-    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘의 질문! String 클래스의 메서드는 무엇이 있을까?
-오늘은 해당 질문에 대한 답변을 정리해보려 한다.
-length(): 문자열의 길이를 반환합니다. isEmpty(): 문자열이 비어있는지 확인합니다. equals(Object obj): 주어진 객체와 문자열이 동일한지 비교합니다. equalsIgnoreCase(String str): 대소문자를 무시하고 문자열을 비교합니다. indexOf(String str): 지정된 문자열이 처음으로 나타나는 인덱스를 반환합니다. substring(int beginIndex): 지정된 인덱스부터 문자열 끝까지의 부분 문자열을 반환합니다. substring(int beginIndex, int endIndex): 지정된 범위의 부분 문자열을 반환합니다.]]></description>
-</item>
-<item>
-    <title>[Java] 문자열을 반전 시키는 가장 좋은 방법</title>
-    <link>https://choiseungwoo98.github.io/stringreverser.html</link>
-    <pubDate>Sun, 20 Aug 2023 01:22:51 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/stringreverser.html</guid>
-    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. 오늘의 질문! 문자열을 반전 시키는 가장 좋은 방법은 무엇인가?
-오늘은 해당 질문에 대한 답변을 정리해보려 한다.
-문자열을 반전 시키는 가장 좋은 방법이란 문자열을 반전 시키는 방법은 정말 많이 있다.
-예를 들어 반복문을 사용하는 방법, 라이브러리 함수를 이용하는 방법, 재귀함수를 이용하는 방법 등 정말 다양한 방법이 있다.
-이 중에서 효율이 좋다고 생각하는 방법 1가지에 대해 알아보고자 한다.
-StringBuilder를 사용해 문자열 반전 시키기 자바에서 문자열을 반전 시키는 가장 일반적인 방법으로 StringBuilder의 reverse() 메서드를 사용하는 방법이다.]]></description>
-</item>
-<item>
-    <title>[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</title>
-    <link>https://choiseungwoo98.github.io/string.html</link>
-    <pubDate>Sat, 19 Aug 2023 18:11:51 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/string.html</guid>
-    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
-오늘은 여러가지 질문 중 String에 대해 알아보고자 한다. String은 기본 데이터 타입인지? 문자열을 조작하는 클래스는 무엇이 있는지?
-String은 무엇인가? 기본 자료형(int, float, char, boolean)처럼 자주 사용되는 class이다.
-String은 이 기본 자료형들과는 다르게 참조 자료형 class이다.
-참조 자료형이란 객체 자체에 값을 가지는 것이 아닌 객체에는 referenece(주소) 값을 갖고 있고 해당 reference에 객체의 값이 있는 형태다.
-String은 기본 데이터 타입인가? 위에서도 말씀 드렸지만 String은 기본 데이터 타입이 아닌 참조 자료형 클래스 이다.]]></description>
-</item>
-<item>
-    <title>[Java] Math 클래스</title>
-    <link>https://choiseungwoo98.github.io/math.html</link>
-    <pubDate>Sat, 19 Aug 2023 17:49:27 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/math.html</guid>
-    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
-오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.
-Math 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.
-1. Math에 정의된 대표적인 상수 Math.PI : 원주율 π (약 3.141592653589793) Math.E : 자연 상수 e (약 2.718281828459045) 2. Math에 정의된 대표적인 메서드 abs(int a) / abs(long a) : 정수의 절댓값을 반환합니다. ceil(double a) : 주어진 숫자보다 크거나 같은 최소 정수를 반환합니다.]]></description>
-</item>
-<item>
-    <title>[Java] 자바 네이밍 규칙(Java Naming Convention)</title>
-    <link>https://choiseungwoo98.github.io/naming.html</link>
-    <pubDate>Sat, 19 Aug 2023 16:03:49 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/naming.html</guid>
-    <description><![CDATA[프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.
-그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!
-오늘 정리할 네이밍 규칙은 Java 이다.
-1. 네이밍 규칙이란? 프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다. 이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다. 2. 네이밍 규칙을 사용하면 따라오는 효과 가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다.]]></description>
-</item>
-<item>
-    <title>[Java] final 사용법</title>
-    <link>https://choiseungwoo98.github.io/final.html</link>
-    <pubDate>Sat, 22 Jul 2023 18:37:42 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/final.html</guid>
-    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
-오늘은 여러가지 질문 중 final에 대해 알아보고자 한다.
-java에서 final 키워드란 뭘까? 1. final 의미 자바에서 final은 변수, 메서드, 클래스에 사용되는 키워드로서 불변성을 나타낸다. final로 선언된 요소는 한번 초가화하면 그 값을 변경할 수 없다. 예를 들면 정보처리기사라는 시험의 점수는 고정되어 있다! 시험을 보는 사람마다 점수가 다르게 선정된다면 혼란을 야기할듯.. 다만, 시험보는 사람의 수험번호와 같은 경우 모든 사람이 다를 것이다.]]></description>
-</item>
-<item>
-    <title>[Java] JDK와 JRE의 차이 그리고 JIT, JVM</title>
-    <link>https://choiseungwoo98.github.io/differencebetweenjdkandjre.html</link>
-    <pubDate>Fri, 21 Jul 2023 19:29:42 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/differencebetweenjdkandjre.html</guid>
-    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
-8개월 동안 회사에서 프로젝트를 여러개 진행하면서 다양한 기술을 사용해봤다.
-하지만 기초 및 이론 공부는 굉장히 소홀했었다..
-기초가 단단하지 않으면 나의 개발 스펙트럼도 짧아 질것 같아서 하나하나 정리해보려 한다.
-요즘 다시 괜찮아져서 블로그도 다시 시작&hellip; 화이팅..!
-들어가기 앞서 오늘은 자바 플랫폼에 대해 알아보고자 한다. JDK, JRE, JVM은 자바 플랫폼의 3대 구성요소이다. 오늘은 JDK, JRE, JVM에 추가로 JIT까지 알아보고자 한다. 이미지를 먼저 확인 후 본격적으로 들어가보자.]]></description>
-</item>
-</channel>
+        <title>Java-Basic on My New Hugo Site</title>
+        <link>https://example.org/tags/java-basic/</link>
+        <description>Recent content in Java-Basic on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://example.org/tags/java-basic/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Basic</title>
+        <link>https://example.org/posts/kubenetes/basic/</link>
+        <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
+        
+        <guid>https://example.org/posts/kubenetes/basic/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;오늘은 드디어 그 유명한 쿠버네티스!!!&lt;br&gt;
+쿠버만 잘해도 반은 간다는데&lt;br&gt;
+화이팅! 부셔보자!!!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;kubenetesk8s&#34;&gt;Kubenetes(K8S)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;설명&#34;&gt;설명
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;컨테이너화된 애플리케이션 배포, 확장 및 관리를 자동화 하는 오픈소스 시스템&lt;/li&gt;
+&lt;li&gt;대규모 애플리케이션을 신뢰성 있고 효율적인 운영을 도움&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;서비스 디스커버리 및 로드 밸런싱 : DNS 혹은 자체 IP를 사용해 컨테이너 노출(컨테이너에 트랙픽이 많으면 로드밸런싱 후 배포하여 안정적으로 운영 가능)&lt;/li&gt;
+&lt;li&gt;스토리지 오케스트레이션 : 로컬저장소, 클라우드 공급자 등과 같이 원하는 저장소 시스템 사용 가능&lt;/li&gt;
+&lt;li&gt;자동화된 롤아웃, 롤백 : 배포된 컨테이너의 원하는 상태 서술 및 현재 원하는 상태로 변경&lt;/li&gt;
+&lt;li&gt;자동화된 빈패킹 : 컨테이너 노드에 맞춰 리소스를 가장 잘 사용할 수 있도록 지원&lt;/li&gt;
+&lt;li&gt;자동화된 복구 : 실패한 컨테이너를 다시 시작, 교체하며 사용자가 정의한 상태 이외에는 지속적으로 복구 가능&lt;/li&gt;
+&lt;li&gt;시크릿과 구성관리 : 암초, OAuth 토큰, SSH 키와 같은 중요한 정보를 저장 및 관리(컨테이너 이미지 재구성하지 않고 시크릿 및 애플리케이션 구성을 배포 및 업데이트)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;핵심-개념&#34;&gt;핵심 개념
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;cluster : 여러 대의 머신(노드)으로 구성된 그룹(마스터 노드와 여러 워커 노드로 구성)&lt;/li&gt;
+&lt;li&gt;node : 클러스터 구성요소가 되는 물리적 또는 가상머신&lt;/li&gt;
+&lt;li&gt;pod : k8s가 생성하고 관리할 수 있는 배포 가능한 가장 작은 단워(하나 이상의 컨테이너 그룹)&lt;/li&gt;
+&lt;li&gt;replicaset : 동일한 포드의 복제본을 일정하게 유지해 가용성 보장 시 사용되는 리소스(Deploment 사용 권장)&lt;/li&gt;
+&lt;li&gt;deployment : 파드와 레플리카셋에 대한 선언적 업데이트 제공&lt;/li&gt;
+&lt;li&gt;statefulset :  관리하는 데 사용되는 워크로드, 파드 순서 및 고유성 보장(Deployment와 다르게 동자성 유지)&lt;/li&gt;
+&lt;li&gt;Daemonset : 모든 노드가 파드의 사본을 실행(모든 노드에서 클러스터 스토리지, 로그 수집, 노드 모니터링 데몬 실행)&lt;/li&gt;
+&lt;li&gt;Job : 하나 이상의 파드를 생성하고 종료될 때 까지 계속 파드 실행 시도&lt;/li&gt;
+&lt;li&gt;Cronjob : 반복 일정에 따라 Job 생성&lt;/li&gt;
+&lt;li&gt;Namespace : 클러스터 내에 리소스를 논리적으로 분리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h4 id=&#34;실습&#34;&gt;실습
+&lt;/h4&gt;&lt;h4 id=&#34;실습-1&#34;&gt;실습 1
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;UTM 3개 생성 후 각각 접속&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 쿠버네티스 설치&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo snap install microk8s --classic --channel&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1.30
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# alias 등록&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;alias kubectl&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;microk8s kubectl&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 2번 생성해서 각각 접속&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;microk8s add-node
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Worker Node 연결 정보 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl get nodes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;실습-2&#34;&gt;실습 2
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Master에서 워커 노드로 분배해주기 때문에 별도 config 설정이 없다면 master에서 하지 못한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 테스트 폴더 생성 및 접속&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir kubenetes &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cd kubenetes
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# pod, Replicaset, Deployment, Job, CornJob, Daemonset 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vi &amp;lt;파일명&amp;gt;.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 생성한 파일 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl apply -f &amp;lt;파일명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 생성한 정보 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl get &amp;lt;리소스&amp;gt; -A -o wide
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 생성 안될 때 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;kubectl describe pod &amp;lt;pod 이름&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;실습-3&#34;&gt;실습 3
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;kubectl 명령어 익히기&lt;/li&gt;
+&lt;li&gt;차이점 비교
+&lt;ul&gt;
+&lt;li&gt;Create vs Apply
+&lt;ul&gt;
+&lt;li&gt;Create : 리소스 새로 생성시 사용, 이미 존재하는 리소스를 업데이트하지 않음&lt;/li&gt;
+&lt;li&gt;Apply : 리소스를 생성 혹은 업데이트시 사용, 변경 사항을 클러스터에 적용 시 유용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Log vs Describe
+&lt;ul&gt;
+&lt;li&gt;Log : Pod 로그를 출력해 디버깅 정보 제공&lt;/li&gt;
+&lt;li&gt;Describe : 리소스 상태와 이벤트를 포함한 상세 정보 출력&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;patch vs edit
+&lt;ul&gt;
+&lt;li&gt;patch : 리소스를 Json이나 Yml 패치 형식으로 부분 업데이트 시 사용&lt;/li&gt;
+&lt;li&gt;edit : 리소스를 직접 편집 시 사용, 편집 후 저장 시 변경사항 적용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 테스트 폴더 생성 및 접속&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+</description>
+        </item>
+        <item>
+        <title>String_Method</title>
+        <link>https://example.org/posts/java/class/string_method/</link>
+        <pubDate>Sun, 20 Aug 2023 02:35:44 +0900</pubDate>
+        
+        <guid>https://example.org/posts/java/class/string_method/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. &lt;br&gt;
+오늘의 질문! String 클래스의 메서드는 무엇이 있을까?&lt;br&gt;
+오늘은 해당 질문에 대한 답변을 정리해보려 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;length(): 문자열의 길이를 반환합니다.&lt;/li&gt;
+&lt;li&gt;isEmpty(): 문자열이 비어있는지 확인합니다.&lt;/li&gt;
+&lt;li&gt;equals(Object obj): 주어진 객체와 문자열이 동일한지 비교합니다.&lt;/li&gt;
+&lt;li&gt;equalsIgnoreCase(String str): 대소문자를 무시하고 문자열을 비교합니다.&lt;/li&gt;
+&lt;li&gt;indexOf(String str): 지정된 문자열이 처음으로 나타나는 인덱스를 반환합니다.&lt;/li&gt;
+&lt;li&gt;substring(int beginIndex): 지정된 인덱스부터 문자열 끝까지의 부분 문자열을 반환합니다.&lt;/li&gt;
+&lt;li&gt;substring(int beginIndex, int endIndex): 지정된 범위의 부분 문자열을 반환합니다.&lt;/li&gt;
+&lt;li&gt;split(String regex): 정규식을 기준으로 문자열을 나누어 배열로 반환합니다.&lt;/li&gt;
+&lt;li&gt;toUpperCase(): 문자열의 모든 문자를 대문자로 변환합니다.&lt;/li&gt;
+&lt;li&gt;toLowerCase(): 문자열의 모든 문자를 소문자로 변환합니다.&lt;/li&gt;
+&lt;li&gt;trim(): 문자열의 앞뒤 공백을 제거합니다.&lt;/li&gt;
+&lt;li&gt;replace(char oldChar, char newChar): 지정된 문자를 새로운 문자로 치환합니다.&lt;/li&gt;
+&lt;li&gt;charAt(int index): 지정된 인덱스에 위치한 문자를 반환합니다.&lt;/li&gt;
+&lt;li&gt;contains(CharSequence sequence): 주어진 문자열 또는 문자 시퀀스를 포함하는지 확인합니다.&lt;/li&gt;
+&lt;li&gt;matches(String regex): 정규식과 일치하는지 확인합니다.&lt;/li&gt;
+&lt;li&gt;concat(String str): 다른 문자열을 현재 문자열에 연결합니다.&lt;/li&gt;
+&lt;li&gt;startsWith(String prefix): 주어진 접두어로 시작하는지 확인합니다.&lt;/li&gt;
+&lt;li&gt;endsWith(String suffix): 주어진 접미어로 끝나는지 확인합니다.&lt;/li&gt;
+&lt;li&gt;compareTo(String anotherString): 다른 문자열과의 사전 순서 비교를 수행합니다.&lt;/li&gt;
+&lt;li&gt;compareToIgnoreCase(String str): 대소문자를 무시하고 사전 순서 비교를 수행합니다.&lt;/li&gt;
+&lt;li&gt;format(String format, Object&amp;hellip; args): 지정된 포맷으로 문자열을 생성합니다.&lt;/li&gt;
+&lt;li&gt;valueOf(primitive data type): 기본 데이터 타입의 값을 문자열로 변환합니다.&lt;/li&gt;
+&lt;li&gt;getBytes(): 문자열을 바이트 배열로 변환합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;문자열 메서드&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Java] 문자열을 반전 시키는 가장 좋은 방법</title>
+        <link>https://example.org/posts/java/basic/stringreverser/</link>
+        <pubDate>Sun, 20 Aug 2023 01:22:51 +0900</pubDate>
+        
+        <guid>https://example.org/posts/java/basic/stringreverser/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. &lt;br&gt;
+오늘의 질문! 문자열을 반전 시키는 가장 좋은 방법은 무엇인가?&lt;br&gt;
+오늘은 해당 질문에 대한 답변을 정리해보려 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;문자열을-반전-시키는-가장-좋은-방법이란&#34;&gt;문자열을 반전 시키는 가장 좋은 방법이란
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;문자열을 반전 시키는 방법은 정말 많이 있다.&lt;br&gt;
+예를 들어 반복문을 사용하는 방법, 라이브러리 함수를 이용하는 방법, 재귀함수를 이용하는 방법 등 정말 다양한 방법이 있다.&lt;br&gt;
+이 중에서 효율이 좋다고 생각하는 방법 1가지에 대해 알아보고자 한다.&lt;/p&gt;
+&lt;h2 id=&#34;stringbuilder를-사용해-문자열-반전-시키기&#34;&gt;StringBuilder를 사용해 문자열 반전 시키기
+&lt;/h2&gt;&lt;p&gt;자바에서 문자열을 반전 시키는 가장 일반적인 방법으로 StringBuilder의 reverse() 메서드를 사용하는 방법이다.&lt;br&gt;
+이 방법은 가장 효율적인 방법 중 하나입니다.&lt;br&gt;
+문자열은 불변 객체이기 때문에 문자열을 직접 수정을 시도하면 매번 힙 영역의 새로운 문자열 객체를 생성하게 된다.&lt;br&gt;
+이는 매번 Garbage가 쌓여 메모리 효율을 떨어트릴 수 있으며 StringBuilder를 사용하면 이러한 비 효율성을 줄여줄 수 있다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;reverseString&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    String origin &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello World&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    String reverse &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; StringBuilder(origin).&lt;span style=&#34;color:#a6e22e&#34;&gt;reverse&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(reverse);  &lt;span style=&#34;color:#75715e&#34;&gt;// 출력: &amp;#34;dlroW olleH&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://velog.io/@sudong/%EA%B8%B0%EC%88%A0%EB%A9%B4%EC%A0%91%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EB%B0%98%EC%A0%84%EC%8B%9C%ED%82%A4%EB%8A%94-%EA%B0%80%EC%9E%A5-%EC%A2%8B%EC%9D%80-%EB%B0%A9%EB%B2%95&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;자바 문자열 반전&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</title>
+        <link>https://example.org/posts/java/class/string/</link>
+        <pubDate>Sat, 19 Aug 2023 18:11:51 +0900</pubDate>
+        
+        <guid>https://example.org/posts/java/class/string/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
+오늘은 여러가지 질문 중 String에 대해 알아보고자 한다.
+String은 기본 데이터 타입인지?
+문자열을 조작하는 클래스는 무엇이 있는지?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;string은-무엇인가&#34;&gt;String은 무엇인가?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;기본 자료형(int, float, char, boolean)처럼 자주 사용되는 class이다.&lt;br&gt;
+String은 이 기본 자료형들과는 다르게 참조 자료형 class이다.&lt;br&gt;
+참조 자료형이란 객체 자체에 값을 가지는 것이 아닌 객체에는 referenece(주소) 값을 갖고 있고 해당 reference에 객체의 값이 있는 형태다.&lt;/p&gt;
+&lt;h2 id=&#34;string은-기본-데이터-타입인가&#34;&gt;String은 기본 데이터 타입인가?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;위에서도 말씀 드렸지만 String은 기본 데이터 타입이 아닌 참조 자료형 클래스 이다.&lt;br&gt;
+기본 타입과 달리 heap 영역에 생성된다.&lt;/p&gt;
+&lt;h3 id=&#34;1-문자열-생성-및-비교&#34;&gt;1. 문자열 생성 및 비교
+&lt;/h3&gt;&lt;p&gt;아래와 같이 문자열을 리터럴로 생성한다면 literalName이라는 변수는 스택 영역에 저장되고 문자열인 &amp;ldquo;최승우&amp;quot;는 힙 영역에 String 객체로 생성된다.&lt;br&gt;
+literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장된다.&lt;br&gt;
+따라서 문자열 리터럴이 동일한 경우 같은 주소 값을 저장하게 돼 ==와 .equals 상관 없이 같다고 나온다.&lt;br&gt;
+다만, new 연산자를 사용하여 객체를 생성하면 문자열의 값이 같더라도 다른 주소 값을 저장하기 때문에 ==을 사용하면 다르다고 출력한다.&lt;br&gt;
+따라서 저장된 값을 비교하고 싶으면 equals()를 사용해야 한다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;StringTest&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        String literalName &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;최승우&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        String newName &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; String(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;최승우&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(literalName &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; newName); &lt;span style=&#34;color:#75715e&#34;&gt;// false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(literalName.&lt;span style=&#34;color:#a6e22e&#34;&gt;equals&lt;/span&gt;(newName)); &lt;span style=&#34;color:#75715e&#34;&gt;// true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-가변성을-갖고-있는-stringbuilder와-stringbuffer&#34;&gt;2. 가변성을 갖고 있는 StringBuilder와 StringBuffer
+&lt;/h3&gt;&lt;p&gt;들어가기 앞서, String은 불변속성을 갖는다.&lt;br&gt;
+만약, 아래와 같이 sayHello라는 변수에 안녕!이라는 값을 리터럴로 생성하면 힙 영역에 String 객체로 생성하고,&lt;br&gt;
+그 이후 &amp;quot; 승우야!&amp;ldquo;라는 값을 추가하게 되면 해당 객체에 &amp;ldquo;안녕 승우야!&amp;rdquo; 라는 값으로 변경했다고 생각할 수 있다.&lt;/p&gt;
+&lt;p&gt;하지만 기존에 &amp;ldquo;안녕!&amp;ldquo;이 들어가 있던 객체를 참조하던 sayHello 변수는 힙 영역에 &amp;ldquo;안녕 승우야!&amp;ldquo;의 값을 갖고 있는 객체를 새로 생성한 후 해당 주소 값을 바라보고 있도록 변경된 것이고&lt;br&gt;
+처음 생성되었던 &amp;ldquo;안녕!&amp;ldquo;이라는 값을 갖고 있는 메모리 영역은 Garbage로 남아 있다가 GC(Garbage Collection)에 의해 사라지게 된다.&lt;/p&gt;
+&lt;p&gt;이는, String 클래스는 불변하며 문자열을 수정하는 시점에 새로운 String 인스턴스가 생성된다는 것을 의미한다.&lt;br&gt;
+이 처럼 String은 불변하기 때문에 빈번한 수정이 있는 경우 힙 메모리 영역에 많은 Garbage가 쌓이므로 성능의 치명적인 영향을 끼친다.&lt;/p&gt;
+&lt;p&gt;그래서 가변성을 갖고 있는  StringBuilder와 StringBuffer 클래스를 도입했다.&lt;/p&gt;
+&lt;p&gt;이 두 클래스는 .append(), .delete()를 이용하여 동일 객체내에서 문자열을 변경하는 것이 가능하다.&lt;br&gt;
+문자열의 추가, 수정, 삭제가 빈번하게 발생하는 경우 이 두가지 클래스를 사용하는 것이 적합하다.&lt;/p&gt;
+&lt;h3 id=&#34;3-stringbuffer-stringbuilder의-차이점&#34;&gt;3. StringBuffer, StringBuilder의 차이점
+&lt;/h3&gt;&lt;p&gt;가장 큰 차이점은 동기화 유무 이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Buffer는 동기화 키워드를 지원하여 멀티 쓰레드 환경에서 안전하다는 점(thread-safe)&lt;br&gt;
+참고로 String도 불변성을 갖기 때문에 멀티 쓰레드 환경에서의 안성정을 갖고 있다.&lt;/li&gt;
+&lt;li&gt;Builder는 동기화를 지원하지 않기 때문에 멀티 쓰레드 환경에서 사용하는 것은 적합하지 않지만 동기화를 고려하지 않는 만큼 단일 쓰레드에서의 성능은 Buffer보다 뛰어나다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-정리&#34;&gt;4. 정리
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;간단히 정리하면, String은 불변성으로 인해 안전하고 쓰기 쉽지만 문자열을 자주 조작하는 경우 오버헤드가 발생할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;StringBuilder는 가변성으로 인해 자주 조작하는 경우 효율적이고, 단일 스레드 환경에서 사용하기 적합합니다.&lt;/li&gt;
+&lt;li&gt;StringBuffer는 StringBuilder와 유사하게 가변성을 제공하면서 멀티스레드 환경에서도 안전하게 사용할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;따라서 단일 스레드 환경에서는 StringBuilder를, 멀티스레드 환경에서는 StringBuffer를 선호하는 것이 좋습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;문자열 연산이 적고 멀티 쓰레드인 경우 : String&lt;br&gt;
+문자열 연산이 많고 멀티 쓰레드인 경우 : StringBuffer&lt;br&gt;
+문자열 연산이 많고 단일 쓰레드이거나 동기화를 고려하지 않아도 되는 경우 : StringBuilder&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mimah.tistory.com/entry/Java-%EC%9E%90%EB%B0%94%EC%97%90%EC%84%9C%EC%9D%98-String-%ED%83%80%EC%9E%85&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;String 클래스&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://ifuwanna.tistory.com/221&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;문자열 조작 클래&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Java] Math 클래스</title>
+        <link>https://example.org/posts/java/class/math/</link>
+        <pubDate>Sat, 19 Aug 2023 17:49:27 +0900</pubDate>
+        
+        <guid>https://example.org/posts/java/class/math/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
+오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;math-클래스란&#34;&gt;Math 클래스란?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.&lt;/p&gt;
+&lt;h3 id=&#34;1-math에-정의된-대표적인-상수&#34;&gt;1. Math에 정의된 대표적인 상수
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Math.PI : 원주율 π (약 3.141592653589793)&lt;/li&gt;
+&lt;li&gt;Math.E : 자연 상수 e (약 2.718281828459045)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-math에-정의된-대표적인-메서드&#34;&gt;2. Math에 정의된 대표적인 메서드
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;abs(int a) / abs(long a) : 정수의 절댓값을 반환합니다.&lt;/li&gt;
+&lt;li&gt;ceil(double a) : 주어진 숫자보다 크거나 같은 최소 정수를 반환합니다.&lt;/li&gt;
+&lt;li&gt;floor(double a) : 주어진 숫자보다 작거나 같은 최대 정수를 반환합니다.&lt;/li&gt;
+&lt;li&gt;round(float a) / round(double a) : 주어진 숫자를 반올림하여 long 형태로 반환합니다.&lt;/li&gt;
+&lt;li&gt;min(int a, int b) / min(long a, long b) : 두 정수 중 작은 값을 반환합니다.&lt;/li&gt;
+&lt;li&gt;max(int a, int b) / max(long a, long b) : 두 정수 중 큰 값을 반환합니다.&lt;/li&gt;
+&lt;li&gt;sqrt(double a) : 주어진 숫자의 제곱근을 반환합니다.&lt;/li&gt;
+&lt;li&gt;pow(double a, double b) : a의 b승을 반환합니다.&lt;/li&gt;
+&lt;li&gt;sin(double a), cos(double a), tan(double a) : 삼각 함수 값들을 반환합니다.&lt;/li&gt;
+&lt;li&gt;random() : 0 이상 1 미만의 난수를 반환합니다. (0.0 &amp;lt;= x &amp;lt; 1.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-각-메서드-사용-및-결과&#34;&gt;3. 각 메서드 사용 및 결과
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Math.abs(-1.5) : 1.5&lt;/li&gt;
+&lt;li&gt;Math.ceil(-1.5) : -1.0&lt;/li&gt;
+&lt;li&gt;Math.floor(-1.5) : -2.0&lt;/li&gt;
+&lt;li&gt;Math.round(-1.5) : -2&lt;/li&gt;
+&lt;li&gt;Math.min(-1.5, 3.0) : -1.5&lt;/li&gt;
+&lt;li&gt;Math.max(-1.5, 3.0) : 3.0&lt;/li&gt;
+&lt;li&gt;Math.sqrt(-1.5) : NaN (Not a Number : 제곱근이 실수 범위 내에 없기 때문에 이 경우 허수와 관련된 복소수 연산이 필요하며 Math 클래스에서는 지원하지 않음)&lt;/li&gt;
+&lt;li&gt;Math.sqrt(4) : 2.0&lt;/li&gt;
+&lt;li&gt;Math.pow(-1.5, 2.0): 2.25&lt;/li&gt;
+&lt;li&gt;Math.sin(-1.5): -0.9974949866040544&lt;/li&gt;
+&lt;li&gt;Math.cos(-1.5): 0.0707372016677029&lt;/li&gt;
+&lt;li&gt;Math.tan(-1.5): -14.101419947171719&lt;/li&gt;
+&lt;li&gt;Math.random(): [0.0, 1.0) 범위의 난수 (실행할 때마다 값이 달라집니다)&lt;/li&gt;
+&lt;li&gt;Math.random() * 100 : 0 ~ 99 까지 랜덤으로 1가지의 수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.tcpschool.com/java/java_api_math&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Math 클래스&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Java] 자바 네이밍 규칙(Java Naming Convention)</title>
+        <link>https://example.org/posts/java/basic/naming/</link>
+        <pubDate>Sat, 19 Aug 2023 16:03:49 +0900</pubDate>
+        
+        <guid>https://example.org/posts/java/basic/naming/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.&lt;br&gt;
+그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!&lt;br&gt;
+오늘 정리할 네이밍 규칙은 Java 이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-네이밍-규칙이란&#34;&gt;1. 네이밍 규칙이란?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다.&lt;/li&gt;
+&lt;li&gt;이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-네이밍-규칙을-사용하면-따라오는-효과&#34;&gt;2. 네이밍 규칙을 사용하면 따라오는 효과
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다.&lt;/li&gt;
+&lt;li&gt;일관성 유지 : 일관된 네이밍 규칙을 따르면 코드가 전체적으로 일관성 있어 다양한 파일과 모듈 간의 이동과 이해를 용이하게 만든다.&lt;/li&gt;
+&lt;li&gt;버그 감소 : 명확한 이름을 사용하면 변수나 함수의 역할을 파악하기 쉬워지므로 실수나 버그 발생 가능성이 줄어든다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-자바-네이밍-규칙&#34;&gt;3. 자바 네이밍 규칙
+&lt;/h2&gt;&lt;h3 id=&#34;1-공통-규칙&#34;&gt;1. 공통 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;대소문자가 구분되어야 하고 길이에 제한이 없다.&lt;/li&gt;
+&lt;li&gt;예약어는 사용하면 안된다.(ex : class, import, char, break 등···)&lt;/li&gt;
+&lt;li&gt;숫자로 시작하면 안된다.&lt;/li&gt;
+&lt;li&gt;특수문자는 &amp;lsquo;_&amp;rsquo;(언더바)와 &amp;lsquo;$&amp;rsquo;(달러 기호)만 사용 가능하다.&lt;/li&gt;
+&lt;li&gt;파스칼 표기법과 카멜 표기법을 사용한다.&lt;/li&gt;
+&lt;li&gt;파스칼 표기법 : 모든 단어의 첫 번째 문자는 대문자이며 나머지는 소문자로 작성한다. (ex : PasclaCase )&lt;/li&gt;
+&lt;li&gt;카멜 표기법 : 최초로 사용되는 단어는 모두 소문자로 작성하고 그 이후 첫번째 문자는 대문자 나머지는 소문자로 작성한다. (ex : camelCase)&lt;/li&gt;
+&lt;li&gt;반의어는 반드시 대응하는 개념으로 사용해야 한다. (&lt;a class=&#34;link&#34; href=&#34;#%eb%b0%98%ec%9d%98%ec%96%b4&#34; &gt;반의어 종류 보러가기&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-패키지-명명-규칙&#34;&gt;2. 패키지 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;소문자로 시작(모든 소문자를 권장)&lt;/li&gt;
+&lt;li&gt;가급적 한던어 사용 권장&lt;/li&gt;
+&lt;li&gt;표준 패턴 권장(com.(회사명 / 팀 이름).프로젝트명.상위패키지.하위패키지.클래스)&lt;/li&gt;
+&lt;li&gt;ex : com.choi.management.user.controller&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-클래스-명명-규칙&#34;&gt;3. 클래스 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;파스칼 표기법 사용&lt;/li&gt;
+&lt;li&gt;명사 시작&lt;/li&gt;
+&lt;li&gt;ex : UserController&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-인터페이스-명명-규칙&#34;&gt;4. 인터페이스 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스랑 비슷한 명명 규칙을 갖고있다.&lt;/li&gt;
+&lt;li&gt;복수형 개념인 경우 복수형을 작성해준다.&lt;/li&gt;
+&lt;li&gt;축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다.&lt;/li&gt;
+&lt;li&gt;특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용&lt;/li&gt;
+&lt;li&gt;형용사 사용 할 수 있다.(Runnable, Remote 등…)&lt;/li&gt;
+&lt;li&gt;ex : ConvertUserToMemberHandler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-인터페이스-명명-규칙&#34;&gt;5. 인터페이스 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;클래스랑 비슷한 명명 규칙을 갖고있다.&lt;/li&gt;
+&lt;li&gt;복수형 개념인 경우 복수형을 작성해준다.&lt;/li&gt;
+&lt;li&gt;축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다.&lt;/li&gt;
+&lt;li&gt;특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용&lt;/li&gt;
+&lt;li&gt;형용사 사용(Runnable, Remote 등···)&lt;/li&gt;
+&lt;li&gt;ex : ConvertUserToMemberHandler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6-메서드-명명-규칙&#34;&gt;6. 메서드 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;카멜 표기법 사용한다.&lt;/li&gt;
+&lt;li&gt;동사로 시작한다.&lt;/li&gt;
+&lt;li&gt;ex : sendMessage(String message)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;7-변수-명명-규칙&#34;&gt;7. 변수 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;카멜 표기법 사용한다.&lt;/li&gt;
+&lt;li&gt;명확한 이름으로 작성한다.&lt;/li&gt;
+&lt;li&gt;boolean으로 가져올 때는 앞에 is를 붙인다.&lt;/li&gt;
+&lt;li&gt;ex : userName, isChecked&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;8-상수-명명-규칙&#34;&gt;8. 상수 명명 규칙
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;전부 대문자료 표기한다.&lt;/li&gt;
+&lt;li&gt;스네이크 케이스를 사용한다.(Snake Case : 단어와 단어 사이를 언더바(&amp;rsquo;_&amp;rsquo;)로 구분)&lt;/li&gt;
+&lt;li&gt;ex : PI, MAX_COUNT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Score&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// final 변수 선언과 초기화(최대 점수 : 100점)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 만약 초기화를 비어둔다면 추후에 초기화가 불가능 하다...(반드시 선언과 동시에 초기화 해주자!!)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 자바 명명 규칙은 나중에 게시물로 상세하게 작성해보겠다! 오늘 사용하는 상수는 대문자로! 단어와 단어 사이는 언더바를 이용한다!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 컴파일 에러가 발생&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 60;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;final 메서드&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;오버라이딩 방지&lt;/li&gt;
+&lt;li&gt;안정성 확보(의도하지 않은 동작 변경 방지, 일관성 유지)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Exam&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 시험의 최대 점수는 final로 선언하고 name은 변수로 선언&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setName&lt;/span&gt;(String name) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 최대 점수 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getMaxScore&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; MAX_SCORE;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MathExam&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; Exam {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 가져오기 메서드 오버라이딩 가능&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;이름 : &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; name);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 컴파일 에러 발생(최대 점수 가져오기 메서드를 오버라이딩 불가)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getMaxScore&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// ...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;final 클래스&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;상속이 불가능&lt;/li&gt;
+&lt;li&gt;메서드 오버라이딩이 불가능&lt;/li&gt;
+&lt;li&gt;해당 클래스를 변경하지 못하기 때문에 보안성 및 안정성이 강화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Exam&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 시험의 최대 점수는 final로 선언하고 name은 변수로 선언&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setName&lt;/span&gt;(String name) {스
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 최대 점수 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getMaxScore&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; MAX_SCORE;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 아래의 코드는 컴파일 에러 발생&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MathExam&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; Exam {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// ...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;반의어&#34;&gt;반의어
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;돌아가기(&lt;a class=&#34;link&#34; href=&#34;#1-%ea%b3%b5%ed%86%b5-%ea%b7%9c%ec%b9%99&#34; &gt;자바 네이밍 공통 규칙 보러가기&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;get / set : 가져오다. / 할당하다.&lt;br&gt;
+(ex : getAge() / setAge() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;add / delete : 추가하다. / 제거하다.&lt;br&gt;
+(ex : addUser() / deleteUser() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;insert / delete : 삽입 / 삭제&lt;br&gt;
+(ex : insertUser() / deleteUser() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;min / max : 최소 / 최대&lt;br&gt;
+(ex : minCnt() / maxCnt() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;show / hide : 보이다 / 숨기다&lt;br&gt;
+(ex : showMove() / hideMove() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;start / stop : 시동 / 정지&lt;br&gt;
+(ex : startMethod() / stopMethod() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;suspend / resume : 일시 정지 / 재개하다&lt;br&gt;
+(ex : suspendMove() / resumeMove() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;increment / decrement : 증가 / 감소&lt;br&gt;
+(ex : incrementViews() / decrementViews() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;create / destroy : 창조하다. / 파괴하다.&lt;br&gt;
+(ex : createMap() / destroyMap() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;next / previous : 다음 / 이전&lt;br&gt;
+(ex : nextUser() / previousUser() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;open / close : 열다 / 닫다&lt;br&gt;
+(ex : openFile() / closeFile() )&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://thalals.tistory.com/325&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;자바 네이밍 규칙 - 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://dkswnkk.tistory.com/539&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;자바 네이밍 규칙 - 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Java] final 사용법</title>
+        <link>https://example.org/posts/java/basic/final/</link>
+        <pubDate>Sat, 22 Jul 2023 18:37:42 +0900</pubDate>
+        
+        <guid>https://example.org/posts/java/basic/final/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
+오늘은 여러가지 질문 중 final에 대해 알아보고자 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;java에서-final-키워드란-뭘까&#34;&gt;java에서 final 키워드란 뭘까?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;1-final-의미&#34;&gt;1. final 의미
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;자바에서 final은 변수, 메서드, 클래스에 사용되는 키워드로서 불변성을 나타낸다.&lt;/li&gt;
+&lt;li&gt;final로 선언된 요소는 한번 초가화하면 그 값을 변경할 수 없다.&lt;/li&gt;
+&lt;li&gt;예를 들면 정보처리기사라는 시험의 점수는 고정되어 있다! 시험을 보는 사람마다 점수가 다르게 선정된다면 혼란을 야기할듯..&lt;/li&gt;
+&lt;li&gt;다만, 시험보는 사람의 수험번호와 같은 경우 모든 사람이 다를 것이다.&lt;/li&gt;
+&lt;li&gt;이와 같은 경우 각각의 점수를 final로 이름을 변수로 선언하는 것이 바람직하다!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-final-종류&#34;&gt;2. final 종류
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;final 변수&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;값 변경 불가능&lt;/li&gt;
+&lt;li&gt;컴파일 시간 상수(final 변수는 컴파일 시간에 값을 결정하므로, 값을 바로 인라인하여 코드 삽입 가능)&lt;/li&gt;
+&lt;li&gt;인스턴스와 정적 변수에 적용 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Score&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// final 변수 선언과 초기화(최대 점수 : 100점)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 만약 초기화를 비어둔다면 추후에 초기화가 불가능 하다...(반드시 선언과 동시에 초기화 해주자!!)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 자바 명명 규칙은 나중에 게시물로 상세하게 작성해보겠다! 오늘 사용하는 상수는 대문자로! 단어와 단어 사이는 언더바를 이용한다!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 컴파일 에러가 발생&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 60;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;final 메서드&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;오버라이딩 방지&lt;/li&gt;
+&lt;li&gt;안정성 확보(의도하지 않은 동작 변경 방지, 일관성 유지)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Exam&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 시험의 최대 점수는 final로 선언하고 name은 변수로 선언&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setName&lt;/span&gt;(String name) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// 최대 점수 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getMaxScore&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; MAX_SCORE;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MathExam&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; Exam {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 가져오기 메서드 오버라이딩 가능&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;이름 : &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; name);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 컴파일 에러 발생(최대 점수 가져오기 메서드를 오버라이딩 불가)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getMaxScore&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// ...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;final 클래스&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;상속이 불가능&lt;/li&gt;
+&lt;li&gt;메서드 오버라이딩이 불가능&lt;/li&gt;
+&lt;li&gt;해당 클래스를 변경하지 못하기 때문에 보안성 및 안정성이 강화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Exam&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 시험의 최대 점수는 final로 선언하고 name은 변수로 선언&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;final&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; MAX_SCORE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setName&lt;/span&gt;(String name) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 이름 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getName&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 최대 점수 가져오기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getMaxScore&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; MAX_SCORE;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 아래의 코드는 컴파일 에러 발생&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MathExam&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; Exam {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// ...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://advenoh.tistory.com/13&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;자바에서 final에 대한 이해&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Java] JDK와 JRE의 차이 그리고 JIT, JVM</title>
+        <link>https://example.org/posts/java/basic/differencebetweenjdkandjre/</link>
+        <pubDate>Fri, 21 Jul 2023 19:29:42 +0900</pubDate>
+        
+        <guid>https://example.org/posts/java/basic/differencebetweenjdkandjre/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
+8개월 동안 회사에서 프로젝트를 여러개 진행하면서 다양한 기술을 사용해봤다.&lt;br&gt;
+하지만 기초 및 이론 공부는 굉장히 소홀했었다..&lt;br&gt;
+기초가 단단하지 않으면 나의 개발 스펙트럼도 짧아 질것 같아서 하나하나 정리해보려 한다.&lt;br&gt;
+요즘 다시 괜찮아져서 블로그도 다시 시작&amp;hellip; 화이팅..!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;들어가기-앞서&#34;&gt;들어가기 앞서
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;오늘은 자바 플랫폼에 대해 알아보고자 한다.&lt;/li&gt;
+&lt;li&gt;JDK, JRE, JVM은 자바 플랫폼의 3대 구성요소이다.&lt;/li&gt;
+&lt;li&gt;오늘은 JDK, JRE, JVM에 추가로 JIT까지 알아보고자 한다.&lt;/li&gt;
+&lt;li&gt;이미지를 먼저 확인 후 본격적으로 들어가보자..!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;jdkjava-development-kit--자바-개발-키트&#34;&gt;JDK(Java Development Kit : 자바 개발 키트)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;1-jdk는-무엇일까&#34;&gt;1. JDK는 무엇일까?
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Java를 사용하기 위해 모든 기능을 갖춘 SDK(Software Development Kit)&lt;/li&gt;
+&lt;li&gt;JRE를 포함한 컴파일러(javac)와 jdb, javadoc 같은 도구를 포함&lt;/li&gt;
+&lt;li&gt;즉, 프로그램을 생성하고 컴파일 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;2-jdk-종류&#34;&gt;2. JDK 종류
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Java SE(Java Standard Edition)
+&lt;ul&gt;
+&lt;li&gt;표준 에디션의 자바 플랫폼, 자바 언어의 핵심 기능 제공&lt;/li&gt;
+&lt;li&gt;주요패키지 java.lang.*, java.io.*, java.util.*, java.awt.*, java.rmi.*, java.net.*&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Java EE(Java Enterprise Edition)
+&lt;ul&gt;
+&lt;li&gt;Java SE에 웹 애플리케이션 서버에서 동작하는 기능을 추가한 플랫폼&lt;/li&gt;
+&lt;li&gt;즉, 서버측 개발을 하기 위해 필요(JSP, Servlet, JDBC 등 기업용 애플리케이션 개발에 필요한 다양한 플랫폼)&lt;/li&gt;
+&lt;li&gt;이 스펙에 따라 제품을 구현한 것이 WAS로 부름&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Java ME(Java Micro Edition)
+&lt;ul&gt;
+&lt;li&gt;임베디드 기기들에서 구동되기 위한 환경을 제공하는 API를 모아둔 플랫폼&lt;/li&gt;
+&lt;li&gt;제한된 자원을 가진 휴대전화, PDA(소형 전자 기기) 등에서 Java 프로그래밍 언어를 지원하기 위해 만든 플랫폼&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;3-jdk-기본-도구&#34;&gt;3. JDK 기본 도구
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;javac : 자바 컴파일러(자바 소스파일 =&amp;gt; 바이트 코드)&lt;/li&gt;
+&lt;li&gt;java : javac가 만든 클래스 파일을 해석 및 실행&lt;/li&gt;
+&lt;li&gt;jdb : 자바 디버깅 툴&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;jrejava-runtime-environment--자바-런타임-환경&#34;&gt;JRE(Java Runtime Environment : 자바 런타임 환경)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;1-jre는-무엇일까&#34;&gt;1. JRE는 무엇일까?
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;자바로 만든 애플리케이션을 실행할 수 있는 런타임 환경 구축&lt;/li&gt;
+&lt;li&gt;JVM과 핵심 라이브러리 및 자바 런타임 환경에서 사용하는 프로퍼티 세팅이나 리소스 파일 제공&lt;/li&gt;
+&lt;li&gt;JDK와 달리 개발하는데 필요한 툴은 제공되지 않는다.&lt;/li&gt;
+&lt;li&gt;클래스 로더, 클래스 라이브러리를 통해 작성한 코드를 라이브러리와 결합 후 JVM에 넘겨 실행&lt;/li&gt;
+&lt;li&gt;JRE는 특별한 기능을 수행하기 보단 JVM이 원할하게 잘 작동할 수 있도록 환경에 맞춰주는 역할&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;2-jre-구성요소&#34;&gt;2. JRE 구성요소
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;JVM(Java Virtual Machine) : 자바 가상 머신으로 아래 따로 다루겠습니다.&lt;/li&gt;
+&lt;li&gt;Java Class Libraries : 개발하면서 자주 사용하는 여러 유용한 기능들을 모아놓은 클래스 집합 라이브러리&lt;/li&gt;
+&lt;li&gt;Java Class Loader : JVM이 동작하다가 클래스 파일을 참조하는 순간 동적으로 읽어 JVM에 링크되고 메모리에 로딩하는 역할&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;jvmjava-virtual-machine--자바-가상-머신&#34;&gt;JVM(Java Virtual Machine : 자바 가상 머신)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;1-jvm은-무엇일까&#34;&gt;1. JVM은 무엇일까?
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;자바 프로그램이 어느 기기, 운영체제 상에서도 실행될 수 있도록 만듦(WORA : 한 번 쓰고 모든 곳에서 실행한다)&lt;/li&gt;
+&lt;li&gt;메모리를 효율적으로 관리 및 최적화(Garbage Collection)&lt;/li&gt;
+&lt;li&gt;JVM은 단독으로 사용이 불가, 최소 배포 단위는 JRE이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;2-가비지-컬렉션garbage-collection&#34;&gt;2. 가비지 컬렉션(Garbage Collection)?
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;JVM이 메모리를 관리하는 프로세스&lt;/li&gt;
+&lt;li&gt;사용하지 않는 메모리를 지속적으로 찾아 제거해 효육적인 메모리 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;jitjust-in-time-compilation-방식&#34;&gt;JIT(Just In Time Compilation) 방식
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;1-jit는-무엇일까&#34;&gt;1. JIT는 무엇일까?
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;프로그램을 실제 실행하는 시점에 기계어로 번역하는 컴파일 기법&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;2-컴파일-기법&#34;&gt;2. 컴파일 기법
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;컴파일 기법에는 인터프리터 방식와 컴파일러 방식로 나뉨&lt;/li&gt;
+&lt;li&gt;인터프리터 방식는 코드를 한 줄씩 중간 코드인 바이트 코드로 변환 후 실행&lt;/li&gt;
+&lt;li&gt;컴파일링 방식는 코드 실행 전, 소스 코드를 한번에 기계어로 변환 후 실행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;3-java-컴파일-기법&#34;&gt;3. Java 컴파일 기법
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;자바는 컴파일러 방식을 사용한다&lt;/li&gt;
+&lt;li&gt;Java Compiler를 통해 Byte Code로 변환되고 다시 기계어로 변환된다. 이 과정이 있기 때문에 느리다 평가가 존재한다.&lt;/li&gt;
+&lt;li&gt;이러한 단점을 극복하기 위해 JIT 방식이 채택되었다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h3 id=&#34;4-jit-방식&#34;&gt;4. JIT 방식
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;자주 쓸만한 코드들을 기계어로 변환 시켜놓고 저장 후 이미 변환된 기계어 코드를 재사용하는 방식&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pythontoomuchinformation.tistory.com/277&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JDK(Java Development Kit)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.itworld.co.kr/news/110768&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JRE(Java Development Kit)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://m.blog.naver.com/goreng2/221770110714&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JVM(Java Virtual Machine)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://medium.com/@lazysoul/jit-just-in-time-16bb63f3ae26&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;JIT(Just In Time Compilation)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

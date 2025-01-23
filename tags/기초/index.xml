@@ -1,19 +1,253 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>기초 - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/%EA%B8%B0%EC%B4%88.html</link>
-        <description>기초 - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/%EA%B8%B0%EC%B4%88.html" rel="self" type="application/rss+xml" /><item>
-    <title>Linux 기초</title>
-    <link>https://choiseungwoo98.github.io/linux_basic.html</link>
-    <pubDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/linux_basic.html</guid>
-    <description><![CDATA[리눅스에 대해 배웠다.
-처음 알게된 명령어도 많았지만
-하다보면 외워지겠지&hellip;
-일단 정리정리..
-리눅스 유닉스 계열의 OS 중 하나로 전 세계적으로 널리 사용되고 있는 오픈 소스 소프트웨어이다. 다양한 시스템에서 동작하며 특히 서버, 데스크탑, 모바일 기기에서 사용 오픈소스 개념 오픈 소스 소프트웨어(OOS : Open Source Software)로 누구나 열람, 수정, 배포가 가능한 소프트웨어이다. 중요성 투명성 : 공개 소스로 동작 방식 확인 가능 협업과 혁신 : 누구나 수정, 배포가 가능해 빠른 소프트웨어 개선 비용 절감 : 라이센스 비용이 없거나 저렴함 자유와 통제 : 자유롭게 수정할 수 있는 권한 GPL License 자유 소프트웨어 재단에서 만든 라이선스로 자유롭게 사용할 수 있고 수정, 배포 할 수 있는 권리 보장 자유 소프트웨어 운동 사용, 수정, 공유의 자유를 보장하는 소프트웨어 소프트웨어는 사용자의 자유와 권리를 침해하지 않아야 한다는 철학 자유와 접근성을 증진하고 독점 소프트웨어에 대한 대안을 제공 리눅스 구조 어플리케이션 사용자가 직접 상호작용하는 단계로 빌드된 앱, 바이너리, 명령어, 빌드된 파일을 통틀어 어플리케이션이라고 한다.]]></description>
-</item>
-</channel>
+        <title>기초 on My New Hugo Site</title>
+        <link>https://example.org/tags/%EA%B8%B0%EC%B4%88/</link>
+        <description>Recent content in 기초 on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 05 Jul 2024 22:03:57 +0900</lastBuildDate><atom:link href="https://example.org/tags/%EA%B8%B0%EC%B4%88/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux 기초</title>
+        <link>https://example.org/posts/linux/linux_basic/</link>
+        <pubDate>Fri, 05 Jul 2024 22:03:57 +0900</pubDate>
+        
+        <guid>https://example.org/posts/linux/linux_basic/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;리눅스에 대해 배웠다.&lt;br&gt;
+처음 알게된 명령어도 많았지만&lt;br&gt;
+하다보면 외워지겠지&amp;hellip;&lt;br&gt;
+일단 정리정리..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;리눅스&#34;&gt;리눅스
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;유닉스 계열의 OS 중 하나로 전 세계적으로 널리 사용되고 있는 오픈 소스 소프트웨어이다.&lt;/li&gt;
+&lt;li&gt;다양한 시스템에서 동작하며 특히 서버, 데스크탑, 모바일 기기에서 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;오픈소스&#34;&gt;오픈소스
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;개념
+&lt;ul&gt;
+&lt;li&gt;오픈 소스 소프트웨어(OOS : Open Source Software)로 누구나 열람, 수정, 배포가 가능한 소프트웨어이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;중요성
+&lt;ul&gt;
+&lt;li&gt;투명성 : 공개 소스로 동작 방식 확인 가능&lt;/li&gt;
+&lt;li&gt;협업과 혁신 : 누구나 수정, 배포가 가능해 빠른 소프트웨어 개선&lt;/li&gt;
+&lt;li&gt;비용 절감 : 라이센스 비용이 없거나 저렴함&lt;/li&gt;
+&lt;li&gt;자유와 통제 : 자유롭게 수정할 수 있는 권한&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;gpl-license&#34;&gt;GPL License
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;자유 소프트웨어 재단에서 만든 라이선스로 자유롭게 사용할 수 있고 수정, 배포 할 수 있는 권리 보장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;자유-소프트웨어-운동&#34;&gt;자유 소프트웨어 운동
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;사용, 수정, 공유의 자유를 보장하는 소프트웨어&lt;/li&gt;
+&lt;li&gt;소프트웨어는 사용자의 자유와 권리를 침해하지 않아야 한다는 철학&lt;/li&gt;
+&lt;li&gt;자유와 접근성을 증진하고 독점 소프트웨어에 대한 대안을 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;리눅스-구조&#34;&gt;리눅스 구조
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;어플리케이션
+&lt;ul&gt;
+&lt;li&gt;사용자가 직접 상호작용하는 단계로 빌드된 앱, 바이너리, 명령어, 빌드된 파일을 통틀어 어플리케이션이라고 한다.&lt;/li&gt;
+&lt;li&gt;주요 기능
+&lt;ul&gt;
+&lt;li&gt;사용자가 상호작용할 수 있는 인터페이스 제공&lt;/li&gt;
+&lt;li&gt;커널을 통한 시스템 리소스(CPU, Memory, I/O 장치 등)을 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;쉘
+&lt;ul&gt;
+&lt;li&gt;어플리케이션이 커널에서 사용하는 명령어를 가려주고 쉘을 사용해 스크립트도 만들 수 있다.&lt;/li&gt;
+&lt;li&gt;주요 기능
+&lt;ul&gt;
+&lt;li&gt;명령어 해석 : 사용자가 입력한 명령어 해석, 실행하기 위해 시스템 콜&lt;/li&gt;
+&lt;li&gt;스크립트 실행 : 쉘 스크립트를 통해 여러 명령어 조합이나 여러 명령어를 일괄 실행&lt;/li&gt;
+&lt;li&gt;환경 관리 : 환경 변수 설정 및 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;커널
+&lt;ul&gt;
+&lt;li&gt;OS의 핵심 부분으로 하드웨어와 상호작용하는 단계&lt;/li&gt;
+&lt;li&gt;주요 기능
+&lt;ul&gt;
+&lt;li&gt;프로세스 관리 : 프로세스 생성, 스케줄링, 종료 등을 관리&lt;/li&gt;
+&lt;li&gt;메모리 관리 : 가상 메모리, 페이징, 스왑 메모리등을 통해 효율적인 메모리 관리&lt;/li&gt;
+&lt;li&gt;가상 메모리  : 보조기억장치를 이용해 실제 사용 가능한 메모리보다 더 많은 메모리를 사용가능하게 하는 기법&lt;/li&gt;
+&lt;li&gt;페이징  : 메모리를 좀 더 효율적으로 사용하기 위해 고안된 기법으로 메모리를 일정 크기만큼 잘라서 사용하는 기법&lt;/li&gt;
+&lt;li&gt;스왑 메모리  : 실제로 사용하지 않는 나머지 부분(페이지)을 보조기억장치의 특정 영역(스왑 영역)으로 옮겨서 공간을 확보하는 기법&lt;/li&gt;
+&lt;li&gt;파일 시스템 관리 : 파일의 저장, 접근, 조작을 지원하는 파일 시스템 관리&lt;/li&gt;
+&lt;li&gt;장치 관리 : 하드웨어 장치와의 상호작용을 관리하고 장치 드라이버를 통한 추상화&lt;/li&gt;
+&lt;li&gt;보안및접근제어 : 사용자와 시스템 자원 간의 보안정책을 관리하고 적용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;하드웨어
+&lt;ul&gt;
+&lt;li&gt;물리적인 컴퓨터 구성요소로 CPU, Memory, SSD, HDD, Network Interface 등&lt;/li&gt;
+&lt;li&gt;직접 통제하지 않고 커널의 추상화를 통해 관리할 수 있도록 간접적으로 접근&lt;/li&gt;
+&lt;li&gt;주요 기능
+&lt;ul&gt;
+&lt;li&gt;CPU: 명령어 처리 및 프로그램을 실행&lt;/li&gt;
+&lt;li&gt;Memory: 실행 중인 프로그램과 데이터를 저장&lt;/li&gt;
+&lt;li&gt;저장 장치: 데이터를 (반)영구적으로 저장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;대표적인-linux-배포판&#34;&gt;대표적인 Linux 배포판
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu
+&lt;ul&gt;
+&lt;li&gt;Debian 계열중에 가장 유명한 배포판&lt;/li&gt;
+&lt;li&gt;쉬운 설계 및 직관적인 GUI 제공&lt;/li&gt;
+&lt;li&gt;방대한 레퍼런스&lt;/li&gt;
+&lt;li&gt;2년 단위의 버전 출시 및 5년간 유지보수로 보안성이 강하고 안정적&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CentOS
+&lt;ul&gt;
+&lt;li&gt;RHEL(RedHat Enterprise Linux)계열로 안정성과 보안이 뛰어나 주로 기업에서 많이 사용하는 OS&lt;/li&gt;
+&lt;li&gt;방대한 레퍼런스&lt;/li&gt;
+&lt;li&gt;CentOS 7까지는 무료였으나 CentOS 8부터는 유료로 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Arch Linux
+&lt;ul&gt;
+&lt;li&gt;경량화, 커스터마이징에 특화된 OS&lt;/li&gt;
+&lt;li&gt;자체 용량이 굉장히 작다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;패키지-매니저&#34;&gt;패키지 매니저
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;APT
+&lt;ul&gt;
+&lt;li&gt;Demian 계열에서 주로 사용하는 패키지 매니저
+&lt;ul&gt;
+&lt;li&gt;Demian : 여러 파생 배포판의 기반(Ex : Ubuntu, Linux Mint 등)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;패키지 설치 시 의존성 패키지도 자동 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;YUM/DNF
+&lt;ul&gt;
+&lt;li&gt;RHEL 계열에서 주로 사용하는 패키지
+&lt;ul&gt;
+&lt;li&gt;RHEL(Red Hat Enterprise Linux) : 레드햇이 개발한 상용 리눅스 배포판, 주로 기업환경에서 사용되며 고성능, 안정성, 보안, 지원 서비스 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;플러그인 시스템을 통해 기능 확장 가능&lt;/li&gt;
+&lt;li&gt;YUM보다 DNF를 사용하는 추세&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;권한-및-소유자&#34;&gt;권한 및 소유자
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 파일 및 디렉토리는 사용자(User)와 그룹(Group)에 의해 소유(Ex : colton:KTB 라면 colton과 KTB에 속한 그룹의 소유)&lt;/li&gt;
+&lt;li&gt;사용자와 그룹 말고도 접근 권한을 지정 할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;R(Read) : 읽기 권한, cat으로 파일 내용 확인 가능&lt;/li&gt;
+&lt;li&gt;W(Write) : 쓰기 권한, vim, echo, sed 명령어 등으로 수정 가능&lt;/li&gt;
+&lt;li&gt;X(eXecute) : 실행 권한, sh, bash에 의해 실행될 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;파일의 부여할 수 있는 권한은 Bit로 관리되며 Read 4, Write 2, Execute 1로 설정&lt;/li&gt;
+&lt;li&gt;한 파일이 갖는 모든 권한은 User, Group, Others(Ex : 754 라면 유저는 모든 권한, 그룹은 읽기 및 실행, 그 외는 읽기의 권한)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;디렉토리-구조&#34;&gt;디렉토리 구조
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Root Directory(/) : 시스템의 모든 디렉토리는 루트 하위에서 관리&lt;/li&gt;
+&lt;li&gt;bin(/bin) : 사용자 명령어가 저장되는 디렉토리(ls, cd, mv, rm, bash 등)&lt;/li&gt;
+&lt;li&gt;lib(/lib) : 시스템, 어플리케이션의 공유 라이브러리가 저장&lt;/li&gt;
+&lt;li&gt;usr(/usr) : 앞서 설명한 디렉토리들이 모두 포함(앞선 디렉토리가 바라보고 있음)&lt;/li&gt;
+&lt;li&gt;dev(/dev) : 장치 파일들이 저장되는 디렉토리(터미널, 널 장치 등 포함), 모든 장치가 파일 형태로 표시&lt;/li&gt;
+&lt;li&gt;etc(/etc) : 전반적인 시스템 설정 파일이 저장, 사용자 계정 정보, 암호정보, 호스트 네임/IP 매핑 파일 등&lt;/li&gt;
+&lt;li&gt;opt(/opt) : CLI 보다 GUI에서 자주 사용되는 디렉토리, 설치 매니저를 통해 설치된 어플리케이션이 주로 포함&lt;/li&gt;
+&lt;li&gt;proc(/proc) : 커널과 프로세스에 대한 가상 파일 시스템 저장(/proc/cpuinfo : CPU 정보, /proc/meminfo : 메모리 정보), 시스템 상태와 커널 정보등을 제공하며 동적으로 생성되는 파일들로 구성&lt;/li&gt;
+&lt;li&gt;home(/home) : 개인 디렉토리가 저장되는 위치, 기본적으로 권한과 소유자가 해당 유저에 맞게 설정&lt;/li&gt;
+&lt;li&gt;root(/root) : root 계정의 홈 디렉토리&lt;/li&gt;
+&lt;li&gt;tmp(/tmp) : 삭제되어도 문제 없는 파일이나 디렉토리와 같은 임시파일을 저장하는 디렉토리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;명령어-정리&#34;&gt;명령어 정리
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;sudo : root(다른 사용자)의 명령 실행(sudo apt-get update)&lt;/li&gt;
+&lt;li&gt;su : 사용자 변경(su &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;adduser : 사용자 추가(adduser &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;cat : 파일 내용 출력, 파일 연결 후 출력(cat &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;usermod : 사용자 속성 변경(usermod -aG &lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;addgroup : 새로운 그룹 추가(addgroup &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;vim : 강력한 텍스트 편집기(vim &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;echo : 문자열 출력(echo &amp;ldquo;Hello world!&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;cd(change Directory) : 디렉토리 변경(cd ..)&lt;/li&gt;
+&lt;li&gt;chmod : 권한 변경(chmod &amp;lt;775 : 권한&amp;gt; &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;ls -al(ll) : 자세한 내용을 포함한 목록 표시&lt;/li&gt;
+&lt;li&gt;ls : 디렉토리 내용 나열&lt;/li&gt;
+&lt;li&gt;mv : 파일, 디렉토리 이름 변경 혹은 이동(mv &amp;lt;temp2 : 기존이름&amp;gt; &amp;lt;temp : 바꿀 이름&amp;gt;)&lt;/li&gt;
+&lt;li&gt;rm : 파일, 디렉토리 삭제(rm &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;bash : bash 셀 실행&lt;/li&gt;
+&lt;li&gt;exit : 현재 스크립트 종료&lt;/li&gt;
+&lt;li&gt;passwd : 사용자 비밀번호 변경&lt;/li&gt;
+&lt;li&gt;shadow : /etc/shadow 파일에 저장된 암호화된 비밀번호 관리&lt;/li&gt;
+&lt;li&gt;hosts : /etc/hosts 파일 관리&lt;/li&gt;
+&lt;li&gt;apt-get : 데비안 기반 시스템에서 패키지 관리(apt-get &amp;lt;install : 동작&amp;gt; &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;export : 셸 환경 변수 설정(export PATH=$PATH:&amp;lt;/new/path&amp;gt;)&lt;/li&gt;
+&lt;li&gt;lsblk : 블록 장치 목록 표시&lt;/li&gt;
+&lt;li&gt;df -TH : 파일 시스템의 디스크 공간 사용량 표사&lt;/li&gt;
+&lt;li&gt;mkdir : 디렉토리 생성(mkdir &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;rmdir : 빈 디렉토리 삭제(rmdir &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;touch : 빈 파일 생성 or 기존 파일 타임 스탬프 변경(touch &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;head : 파일의 처음 몇 줄 출력(head &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;tail : 파일의 마지막 몇 줄 출력(tail &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;pwd : 현재 경로 출력&lt;/li&gt;
+&lt;li&gt;whoami : 현재 사용자 이름 출력&lt;/li&gt;
+&lt;li&gt;top : 실시간 시스템 상태 모니터링&lt;/li&gt;
+&lt;li&gt;df -h : 디스크 사용량을 읽기 쉽게 표시&lt;/li&gt;
+&lt;li&gt;du -h : 디렉토리 사용량을 읽기 쉽게 표시(du -h &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;ping : 네트워크 연결 상태 체크(ping &lt;a class=&#34;link&#34; href=&#34;https://www.google.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.google.com&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;curl : 데이터 전송 및 가져오기(curl &lt;a class=&#34;link&#34; href=&#34;https://www.google.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.google.com&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;ifconfig : 네트워크 인터페이스 구성 표시 및 변경&lt;/li&gt;
+&lt;li&gt;ps : 현재 실행중인 프로세스 목록 표시&lt;/li&gt;
+&lt;li&gt;find : 파일 시스템에서 파일과 디렉토리 검색(find &lt;!-- raw HTML omitted --&gt; -name &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;service : 서비스 시작, 중지, 재시작, 상태 확인 등을 수행(service &lt;!-- raw HTML omitted --&gt; &amp;lt;start / stop / restart / status / &amp;ndash;status-all&amp;gt;)&lt;/li&gt;
+&lt;li&gt;ip addr : 네트워크 인터페이스와 IP 주소 관리 및 사용&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

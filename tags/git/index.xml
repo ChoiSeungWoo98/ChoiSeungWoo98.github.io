@@ -1,55 +1,406 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Git - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/git.html</link>
-        <description>Git - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 05 Mar 2023 04:39:34 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/git.html" rel="self" type="application/rss+xml" /><item>
-    <title>[Git] Workflow? 작업 방식?</title>
-    <link>https://choiseungwoo98.github.io/workflow.html</link>
-    <pubDate>Sun, 05 Mar 2023 04:39:34 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/workflow.html</guid>
-    <description><![CDATA[workflow는 어떤 것이 있고 어떤 방법론이 있는지 조사해보자고 마음을 먹어 작성하게되었다.
-WorkFlow?? Git은 브랜치로 작업을 관리한다.
-팀에서 브랜치를 어떻게 사용할 지에 대한 규칙을 Workflow라고 한다.
-Git에서 대표적인 Workflow는 Git flow, Github flow, Gitlab flow가 있다.
-Git flow 브랜치의 역할이 명확하고 대규모 프로젝트에 적합.
-2개의 메인 브랜치, 3개의 보조 브랜치로 나뉨.
-Main Branch
-master 제품으로 출시하는 브랜치 실제 배포 중이 상용 버전 develop 다음 출시 버전을 개발하는 브랜치 실제 작동 중인 버전의 다음 버전을 개발하기 위한 메인 스트림 Serve Branch]]></description>
-</item>
-<item>
-    <title>[Git] Merge와 Rebase 차이</title>
-    <link>https://choiseungwoo98.github.io/merge_rebase.html</link>
-    <pubDate>Sun, 05 Mar 2023 04:30:49 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/merge_rebase.html</guid>
-    <description><![CDATA[프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.
-현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&hellip;
-어떻게 해야 history를 잘 관리 할 수 있는지 궁금하였고 사수의 도움으로 rebase하는 것을 알게 되었다.
-rebase 를 알고 사용하고 있지만 merge와 rebase의 차이점을 명확하게 알고 싶어 찾아보았다.
-들어가기 앞서 merge와 rebase의 차이를 알아보기 전에 이것들은 어떤 상황에서 사용하며 사용하면 어떤 일이 일어나는지 부터 간단하게 알아보고자 한다.
-Git이란?]]></description>
-</item>
-<item>
-    <title>[Git] branch가 자세히 뭘까?</title>
-    <link>https://choiseungwoo98.github.io/branch.html</link>
-    <pubDate>Sun, 05 Mar 2023 00:40:51 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/branch.html</guid>
-    <description><![CDATA[브랜치?? 여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능이 바로 브랜치(Branch) 이다.
-각자 독립적인 작업 영역(저장소) 안에서 마음대로 소스코드를 변경할 수 있다.
-이렇게 분리된 작업 영역에서 변경된 내용은 나중에 원래의 버전과 비교해서 하나의 새로운 버전으로 만들어 낼 수 있다.
-브랜치 사용법 메인 브랜치에서 자신의 작업 전용 브랜치를 만듦 각자 작업을 진행한 후, 작업이 끝난 사람은 메인 브랜치에 자신의 브랜치의 변경 사항을 적용 다른 사람의 작업에 영향을 받지 않고 독립적으로 특정 작업을 수행하고 그 결과를 하나로 모음 브랜치로 그 작업의 기록을 중간 중간에 남기게 되므로 문제가 발생했을 경우 원인이 되는 작업을 찾아내거나 그에 따른 대책을 세우기 쉬워짐 Code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # 브랜치 생성 # git branch branchName $ git branch myWork-1 # 브랜치 이동 # switch 혹은 checkout 둘 다 가능 # git switch branchName $ git switch myWork-1 # 브랜치 생성 및 이동 # git checkout -b branch_name # git switch -c branch_name $ git switch -c myWork-2 # 현재 브랜치 확인 $ git branch # 브랜치 삭제 # git branch -d branchName $ git branch -d myWork-1 포스트 작성 시 참고한 링크 브랜치란?]]></description>
-</item>
-<item>
-    <title>[형상관리] 형상관리란 SVN? GIT?</title>
-    <link>https://choiseungwoo98.github.io/configuration_management.html</link>
-    <pubDate>Sat, 04 Mar 2023 22:47:36 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/configuration_management.html</guid>
-    <description><![CDATA[현재 가장 많이 사용하고 있는 형상관리도구 git에 대해 공부를 하다가 문득 궁금한 것이 생겼다. Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠한 차이가 있을까? 그래서 한번 각각의 형산관리 도구에 대해 알아보고 장단점은 무엇인지 알아보고자 한다.
-형상관리?? 소프트웨어 구성 관리(Software Configuration Management) 또는 형상관리는 소프트웨어의 변경사항을 체계적으로 추적하고 통제 하는 것 일반적으로 단순 버전관리 기반의 소프트웨어 운용을 좀 더 포괄적인 학술 분야의 형태로 넓히는 근간 소프트웨어의 소스 코드, 개발 환경, 빌드 구조 등 전반적인 환경 전반적인 내역에 대한 관리 체계를 정의 형상 관리는 포괄적인 개념, 통상적으로 버전관리, 소스관리 등으로 불립니다.]]></description>
-</item>
-</channel>
+        <title>Git on My New Hugo Site</title>
+        <link>https://example.org/tags/git/</link>
+        <description>Recent content in Git on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 05 Mar 2023 04:39:34 +0900</lastBuildDate><atom:link href="https://example.org/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[Git] Workflow? 작업 방식?</title>
+        <link>https://example.org/posts/configuration_management/git/workflow/</link>
+        <pubDate>Sun, 05 Mar 2023 04:39:34 +0900</pubDate>
+        
+        <guid>https://example.org/posts/configuration_management/git/workflow/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;workflow는 어떤 것이 있고 어떤 방법론이 있는지 조사해보자고 마음을 먹어 작성하게되었다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;workflow&#34;&gt;WorkFlow??
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;Git은 브랜치로 작업을 관리한다.&lt;br&gt;
+팀에서 브랜치를 어떻게 사용할 지에 대한 규칙을 Workflow라고 한다.&lt;br&gt;
+Git에서 대표적인 Workflow는 &lt;code&gt;Git flow&lt;/code&gt;, &lt;code&gt;Github flow&lt;/code&gt;, &lt;code&gt;Gitlab flow&lt;/code&gt;가 있다.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;git-flow&#34;&gt;Git flow
+&lt;/h2&gt;&lt;p&gt;브랜치의 역할이 명확하고 &lt;strong&gt;대규모 프로젝트에 적합&lt;/strong&gt;.&lt;br&gt;
+2개의 메인 브랜치, 3개의 보조 브랜치로 나뉨.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;master
+&lt;ul&gt;
+&lt;li&gt;제품으로 출시하는 브랜치&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;실제 배포 중&lt;/strong&gt;이 상용 버전&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;develop
+&lt;ul&gt;
+&lt;li&gt;다음 출시 버전을 개발하는 브랜치&lt;/li&gt;
+&lt;li&gt;실제 작동 중인 버전의 &lt;strong&gt;다음 버전을 개발&lt;/strong&gt;하기 위한 메인 스트림&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;feature
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;기능을 개발&lt;/strong&gt;하는 브랜치&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;develop에서 뻗어 나와 develop으로&lt;/strong&gt; 합쳐짐&lt;/li&gt;
+&lt;li&gt;실제 개발을 할때 &lt;strong&gt;가장 많이 쓰이는&lt;/strong&gt; 브랜치&lt;/li&gt;
+&lt;li&gt;기능 별 브랜치 생성 후 개발 완료 시 develop 병합&lt;/li&gt;
+&lt;li&gt;자유로운 브랜치명, 서버에 올리지 않고 &lt;strong&gt;local에서 작업&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;release
+&lt;ul&gt;
+&lt;li&gt;새로운 &lt;strong&gt;버전을 배포&lt;/strong&gt;하기 위한 브랜치(QA 용도)&lt;/li&gt;
+&lt;li&gt;develop에서 뻗어나와 develop으로 합쳐지거나 배포 준비 완료 시 master로 합쳐짐&lt;/li&gt;
+&lt;li&gt;주로 &lt;strong&gt;버그를 수정하는 디버깅만 커밋&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;release-* 라는 이름을 사용&lt;/li&gt;
+&lt;li&gt;master에 병합했다면 develop에도 병합해 내용 일치시킴&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;hotfix
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;상용 제품에서 버그 발생 시 처리&lt;/strong&gt;하는 브랜치&lt;/li&gt;
+&lt;li&gt;master에서 뻗어 나와 버그 수정 후 master와 develop으로 병합&lt;/li&gt;
+&lt;li&gt;버그 픽스를 위한 브랜치로 &lt;strong&gt;다버깅만 커밋하며, 보통 일회성 사용&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ol&gt;
+&lt;li&gt;개인 작업은 develop에서 feature 브랜치를 따서 작업한다.&lt;/li&gt;
+&lt;li&gt;개인 작업이 끝나면 develop에 병합한다.&lt;/li&gt;
+&lt;li&gt;develop브랜치에서 배포 준비가 끝나면 release 브랜치로 분할한다.&lt;/li&gt;
+&lt;li&gt;release 브랜치에서 디버깅하고 문제가 없으면 master와 develop 브랜치에 합친다.&lt;/li&gt;
+&lt;li&gt;master브랜치를 배포한다.&lt;/li&gt;
+&lt;li&gt;만약 배포 버전에서 문제가 생겨 급하게 수정해야 하면 hotfix 브랜치를 따서 작업한다.&lt;/li&gt;
+&lt;li&gt;hotfix에서 버그픽스가 끝나면 master와 develop에 합친다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;github-flow&#34;&gt;Github flow
+&lt;/h2&gt;&lt;p&gt;하나의 메인 브랜치인 &lt;strong&gt;master 브랜치를 중점으로 운용하며 pull request을 활용&lt;/strong&gt;한 방식 &lt;br&gt;
+master 브랜치는 &lt;strong&gt;항상 최신 버전 유지 및 안정적&lt;/strong&gt;이어야 함 &lt;br&gt;
+브랜치의 용도가 명확하게 분류되어 있지 않아 브랜치 생성 시 &lt;strong&gt;브랜치 명을 명확하게 작성&lt;/strong&gt; &lt;br&gt;
+일반적으로 feature 브랜치의 작업은 local 저장소가 아닌 &lt;strong&gt;원격 저장소에 저장&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;개인 작업은 &lt;strong&gt;feature 브랜치에서 작업하며 작업이 끝나면 pull request를 생성&lt;/strong&gt;한다.&lt;/li&gt;
+&lt;li&gt;pull request에서 &lt;strong&gt;코드 리뷰 후에 문제가 없으면 master로 병합&lt;/strong&gt;한다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;master에 병합하면 바로 배포 작업을 수행&lt;/strong&gt;한다. (CI 자동화 권장)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;gitlab-flow&#34;&gt;Gitlab flow
+&lt;/h2&gt;&lt;p&gt;master, develop(production) 2개의 메인 브랜치로 관리&lt;br&gt;
+항상 최신 버전의 버전을 유지하지 않아도 됨&lt;br&gt;
+&lt;strong&gt;배포 버전과 개발 버전을 따로 둘 수 있다&lt;/strong&gt;는 장점&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;develop 브랜치는 github flow의 develop브랜치와 같은 역할을 한다.&lt;/li&gt;
+&lt;li&gt;master 브랜치는 배포 버전이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ol&gt;
+&lt;li&gt;개인 개발은 &lt;strong&gt;feature 브랜치에서 작업하고 완료 시 merge&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;develop 브랜치가 &lt;strong&gt;배포되기 적합하다고 판단되면 master브랜치로 merge&lt;/strong&gt;한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;centralized-workflow&#34;&gt;Centralized Workflow
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;단일 중앙 저장소를 사용하며 &lt;strong&gt;master 브랜치 하나만 사용&lt;/strong&gt;&lt;br&gt;
+팀 구성원들은 중앙 저장소를 복제하여 로컬 저장소를 만들고, &lt;strong&gt;변경 내용을 커밋하고 언제든 중앙 저장소와 동기화 진행&lt;/strong&gt;&lt;br&gt;
+중앙 저장소의 커밋이 기준이 되므로, 변경 사항을 푸시할 때, 저장소의 커밋과 &lt;strong&gt;충돌난다면 Git은 푸시를 거부&lt;/strong&gt;&lt;br&gt;
+이 때 &lt;strong&gt;중앙 저장소의 변경 내용을 가져와 자신의 변경 내용과 병합하거나 재배열하여 충돌 해결 후 푸시&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;중앙 저장소를 클론하려 로컬 저장소 생성&lt;/li&gt;
+&lt;li&gt;커밋 이력을 중앙 저장소에 푸시&lt;/li&gt;
+&lt;li&gt;다른 개발자가 중앙 저장소로 푸시할 때 최신 커밋을 반영되어 있지 않으면 푸시 거부&lt;/li&gt;
+&lt;li&gt;push 할 때는 항상 최신 커밋 이력을 포함해서 올려야함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Git에 특징인 &lt;strong&gt;분산 버전 관리의 이점을 사용할 수 없지만 최소한의 명령어로 협업 가능&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;feature-branch-workflow&#34;&gt;Feature Branch Workflow
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;기능 별 브랜치를 만들어 작업&lt;/strong&gt; 하는 것&lt;br&gt;
+master 브랜치에 손대지 않기 때문에 다른 기능 브랜치를 얼마든지 올려도 된다. 이는 로컬 저장소 백업 역할 수행&lt;br&gt;
+master 브랜치는 &lt;strong&gt;항상 버그 프리 상태로 유지하며, 병합 시 권한을 가진 사용자가 pull request 적용&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;중앙 저장소를 클론한 로컬 저장소에 &lt;strong&gt;작업 브랜치 생성&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;작업 브랜치에서 작업 후 커밋 생성 및 &lt;strong&gt;원격 저장소로 푸시(브랜치와 같이)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pull requst를 남겨 팀에게 작업 완료 사실을 알림&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;담당자가 &lt;strong&gt;작업 내용을 검증&lt;/strong&gt;하고 수정이 필요하다 판단되면 해당 내역을 알려줌&lt;/li&gt;
+&lt;li&gt;해당 부분을 &lt;strong&gt;수정 후 푸시&lt;/strong&gt;(pr은 다시 올리지 않아도 수정 내용이 전부 표시)&lt;/li&gt;
+&lt;li&gt;담당자가 검증 후 pr을 수용하기로 결정 되었다면 &lt;strong&gt;병합 진행&lt;/strong&gt;(병함은 아무나 가능)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;브랜치를 이용하면 안전하게 새 기능을 개발 할 수 있을 뿐만 아니라,&lt;br&gt;
+pull request를 이용해서 브랜치에 대한 팀 구성원들의 토론 참여를 이끌어냄&lt;br&gt;
+pull request는 코드 리뷰의 시작점&lt;br&gt;
+코드 리뷰를 진행하면 &lt;a class=&#34;link&#34; href=&#34;https://naver.github.io/hackday-conventions-java/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;컨벤션&lt;/a&gt;을 맞출 수 있음&lt;br&gt;
+개발 중 막히는 부분이 pr을 통해 의견을 주고 받아 팀 구성원의 도움을 받을 수 있음.
+큰 규모의 프로젝트를 관리할 때는 Gitflow Workflow를 사용해 기능 개발, 릴리스, 유지보수를 위해 좀 더 엄격한 워크플로우를 유지.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;forking-workflow&#34;&gt;Forking Workflow
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;하나의 중앙 저장소를 이용하는 것이 아니라, 개개인마다 &lt;strong&gt;서로 다른 원격 저장소를 운영&lt;/strong&gt;&lt;br&gt;
+자신의 &lt;strong&gt;원격 저장소에 푸시&lt;/strong&gt;하고 그 내용을 &lt;strong&gt;공식 저장소의 프로젝트 관리자에게 풀 리퀘스트&lt;/strong&gt;를 보냄&lt;br&gt;
+&lt;strong&gt;관리자는 공식 저장소에 푸시 권한을 주지 않고도 다른 개발자의 커밋을 수용&lt;/strong&gt;
+프로젝트와 직접 관련이 없는 제 3자뿐만 아니라, &lt;strong&gt;아주 큰 규모의 분산된 팀에서도 안전하게 협업&lt;/strong&gt;하기에 좋은 방법.&lt;br&gt;
+특히, 오픈소스 프로젝트에서 많이 사용하는 방식&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;ul&gt;
+&lt;li&gt;공식 저장소를 fork해 나의 원격 저장소 생성&lt;/li&gt;
+&lt;li&gt;다른 개발자들은 나의 원격 저장소에 푸시 할 수 없음.&lt;/li&gt;
+&lt;li&gt;fork한 원격 저장소를 clone해 작업 수행&lt;/li&gt;
+&lt;li&gt;내 원격 저장소에 push하고 작업분을 반영 할 수 있는 프로젝트 관리자에게 pr을 보냄.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;다른 워크플로우에서는 공식 저장소에 브랜치를 푸시해서 팀 구성원들이 공유했다면, Forking Workflow에서는 나의 브랜치를 다른 참여자들이 자신의 로컬 저장소로 내려 받아 참고하고 병합&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://velog.io/@pond1029/Git-Workflow&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git Workflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://lhy.kr/git-workflow&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;다양한 Workflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gogojuni.dev/centralized-workflow/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;centralized-workflow 이미지&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gogojuni.dev/feature-branch-workflow/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;feature-branch-workflow 이미지&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gogojuni.dev/forking-workflow/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;forking-workflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Git] Merge와 Rebase 차이</title>
+        <link>https://example.org/posts/configuration_management/git/merge_rebase/</link>
+        <pubDate>Sun, 05 Mar 2023 04:30:49 +0900</pubDate>
+        
+        <guid>https://example.org/posts/configuration_management/git/merge_rebase/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.&lt;br&gt;
+현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&amp;hellip;&lt;br&gt;
+어떻게 해야 history를 잘 관리 할 수 있는지 궁금하였고 사수의 도움으로 rebase하는 것을 알게 되었다.&lt;br&gt;
+rebase 를 알고 사용하고 있지만 merge와 rebase의 차이점을 명확하게 알고 싶어 찾아보았다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;들어가기-앞서&#34;&gt;들어가기 앞서
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;merge와 rebase의 차이를 알아보기 전에 이것들은 어떤 상황에서 사용하며 사용하면 어떤 일이 일어나는지 부터 간단하게 알아보고자 한다.&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://ChoiSeungWoo98.github.io/%ED%98%95%EC%82%B0%EA%B4%80%EB%A6%AC%EB%9E%80/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Git이란?&lt;/a&gt;&lt;br&gt;
+형상 관리 도구 중 하나이며 소스코드를 효과적으로 관리할 수 있게 해주는 공개 소프트웨어이다.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ChoiSeungWoo98.github.io/branch%EB%9E%80/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;branch란?&lt;/a&gt;&lt;br&gt;
+Software 개발 시 다양한 개발자들이 동일한 프로젝트 위에서 개발, 유지보수 등의 업무를 하는 경우가 많다.&lt;br&gt;
+이때 하나의 프로젝트 에서 동시에 작업하게 되면 여러가지 문제가 발생한다.&lt;br&gt;
+이 것을 해결하기 위해 각각 완전히 독립된 브랜치 생성하여 동시에 코드 개발 및 수정 할 수 있게 도와준다.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;merge-rebase&#34;&gt;merge? rebase?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;merge는 &lt;strong&gt;분기된 branch를 다른 branch로 합치는 과정&lt;/strong&gt;이고&lt;br&gt;
+rebase는 &lt;strong&gt;branch의 base를 옮긴다&lt;/strong&gt;는 개념의 차이가 있다.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;merge와-rebase의-특징&#34;&gt;merge와 rebase의 특징
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;merge&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;병합을 하면 합쳐진 브랜치의 커밋 메시지가 중복으로 쌓임.&lt;/li&gt;
+&lt;li&gt;커밋 순서를 변경되지 않음.&lt;/li&gt;
+&lt;li&gt;존재하는 브랜치가 변경되지 않음.&lt;/li&gt;
+&lt;li&gt;새로운 merge commit을 생성.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;rebase&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;병합을 하면 브랜치의 커밋 메시지가 시간 순서대로 합침.&lt;/li&gt;
+&lt;li&gt;히스토리를 깔끔하게 유지하기 위해 사용.&lt;/li&gt;
+&lt;li&gt;분기된 브랜치를 마스터 브랜치 끝에 위치 시켜, master 브랜치를 재배치(rebase) 하는 것을 말함.&lt;/li&gt;
+&lt;li&gt;즉, rebase는 어떤 특정 브랜치의 커밋 이력을 base로 재정렬되면서 해쉬 ID가 바뀜&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;rebase를-사용하는-이유&#34;&gt;rebase를 사용하는 이유
+&lt;/h2&gt;&lt;p&gt;하나의 프로젝트의 많은 개발자들이 활발하게 작업을 진행하게 되면 많은 브랜치가 생기고&lt;br&gt;
+master브랜치로 merge만 한다면 엄청나게 복잡한 git history를 볼 수 있을 것이다.&lt;br&gt;
+rebase를 하여 &lt;strong&gt;작업 순서대로 history를 관리하고 불필요한 병합 커밋을 제거&lt;/strong&gt;할 수 있다.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;rebase-사용-시-유의점&#34;&gt;rebase 사용 시 유의점
+&lt;/h2&gt;&lt;p&gt;여러 사람이 사용하고 활발하게 커밋이 일어나는 브랜치라고 한다면, Rebase를 하는 것은 자칫 위험할 수 있습니다.&lt;br&gt;
+왜냐하면 파생된 브랜치에서 이미 새로운 커밋이 발생하고 작업이 기록되고 있는데&lt;br&gt;
+이전 기준 브랜치로 base를 변경해버리면 파생브랜치로 작업하고 있던 작업자들의 커밋 히스토리가 변경되어 버리기 때문입니다.
+각 작업자들은 자신의 커밋을 다시 반영하거나 재작업을 해야 할 수도 있습니다.&lt;br&gt;
+따라서 혼자 작업하는 브랜치나 작업하는 사람이 적어 문제상황이 발생할 확률이 적은 경우에만 주의깊게 사용해야 합니다.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://dongminyoon.tistory.com/9&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;merge와 rebase 차이&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://readystory.tistory.com/151&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;rebase 사용 시 유의사항&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Git] branch가 자세히 뭘까?</title>
+        <link>https://example.org/posts/configuration_management/git/branch/</link>
+        <pubDate>Sun, 05 Mar 2023 00:40:51 +0900</pubDate>
+        
+        <guid>https://example.org/posts/configuration_management/git/branch/</guid>
+        <description>&lt;h2 id=&#34;브랜치&#34;&gt;브랜치??
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;여러 개발자들이 &lt;strong&gt;동시에 다양한 작업을 할 수 있게 만들어 주는 기능&lt;/strong&gt;이 바로 브랜치(Branch) 이다.&lt;br&gt;
+각자 &lt;strong&gt;독립적인 작업 영역(저장소) 안에서 마음대로 소스코드를 변경&lt;/strong&gt;할 수 있다.&lt;br&gt;
+이렇게 분리된 작업 영역에서 &lt;strong&gt;변경된 내용은 나중에 원래의 버전과 비교해서 하나의 새로운 버전으로 만들어&lt;/strong&gt; 낼 수 있다.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;브랜치-사용법&#34;&gt;브랜치 사용법
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;메인 브랜치에서 자신의 작업 전용 브랜치를 만듦&lt;/li&gt;
+&lt;li&gt;각자 작업을 진행한 후, 작업이 끝난 사람은 메인 브랜치에 자신의 브랜치의 변경 사항을 적용&lt;/li&gt;
+&lt;li&gt;다른 사람의 작업에 영향을 받지 않고 독립적으로 특정 작업을 수행하고 그 결과를 하나로 모음&lt;/li&gt;
+&lt;li&gt;브랜치로 그 작업의 기록을 중간 중간에 남기게 되므로 문제가 발생했을 경우 원인이 되는 작업을 찾아내거나 그에 따른 대책을 세우기 쉬워짐&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;code&#34;&gt;Code
+&lt;/h2&gt;&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 브랜치 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git branch branchName&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git branch myWork-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 브랜치 이동&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# switch 혹은 checkout 둘 다 가능&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git switch branchName&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git switch myWork-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 브랜치 생성 및 이동&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git checkout -b branch_name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git switch -c branch_name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git switch -c myWork-2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 현재 브랜치 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git branch
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 브랜치 삭제&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# git branch -d branchName&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git branch -d myWork-1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://backlog.com/git-tutorial/kr/stepup/stepup1_1.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;브랜치란?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[형상관리] 형상관리란 SVN? GIT?</title>
+        <link>https://example.org/posts/configuration_management/configuration_management/</link>
+        <pubDate>Sat, 04 Mar 2023 22:47:36 +0900</pubDate>
+        
+        <guid>https://example.org/posts/configuration_management/configuration_management/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;현재 가장 많이 사용하고 있는 형상관리도구 git에 대해 공부를 하다가 문득 궁금한 것이 생겼다.
+Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠한 차이가 있을까?
+그래서 한번 각각의 형산관리 도구에 대해 알아보고 장단점은 무엇인지 알아보고자 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;형상관리&#34;&gt;형상관리??
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;소프트웨어 구성 관리(Software Configuration Management)&lt;/strong&gt; 또는 &lt;strong&gt;형상관리&lt;/strong&gt;는 소프트웨어의 &lt;strong&gt;변경사항을 체계적으로 추적하고 통제&lt;/strong&gt; 하는 것&lt;/li&gt;
+&lt;li&gt;일반적으로 단순 버전관리 기반의 소프트웨어 운용을 좀 더 포괄적인 학술 분야의 형태로 넓히는 근간&lt;/li&gt;
+&lt;li&gt;소프트웨어의 &lt;strong&gt;소스 코드, 개발 환경, 빌드 구조 등 전반적인 환경 전반적인 내역&lt;/strong&gt;에 대한 관리 체계를 정의&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;형상 관리는 포괄적인 개념, 통상적으로 버전관리, 소스관리 등으로 불립니다. 즉, 정보를 여러 버전을 관리하는 것&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;변경관리--버전관리--형상관리&#34;&gt;변경관리 / 버전관리 / 형상관리
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;변경관리, 버전관리, 형상관리. 표면적인 의미로 보면 거의 비슷하지만 이들은 제어 및 지원 범위에서 차이가 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;변경 관리 : 소스코드 변경 사항에 대한 관리&lt;/li&gt;
+&lt;li&gt;버전 관리 : 변경사항을 ‘버전’이란 개념을 통해 관리.&lt;/li&gt;
+&lt;li&gt;형상 관리 : 위의 개념을 포함해 프로젝트와 관련된 모든 변경사항을 관리.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;포함관계를 포함하자면&lt;br&gt;
+&lt;strong&gt;변경관리 ⊆ 버전관리 ⊆ 형상관리&lt;/strong&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;버전-관리-시스템&#34;&gt;버전 관리 시스템?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;형상관리 중에서 &lt;strong&gt;문서, 소스코드 등을 버전을 관리&lt;/strong&gt;해주는 버전관리시스템이다.&lt;br&gt;
+통상적으로 &lt;strong&gt;&amp;ldquo;형상관리 ≒ 버전관리&amp;rdquo;&lt;/strong&gt; 임을 인지하고 접근하는 것이 이해하기 쉽다.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;버전-관리형상-관리를-위한-도구와-특징&#34;&gt;버전 관리(형상 관리)를 위한 도구와 특징
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;CVS(Concurrent Version System)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;90년에 출시된 무료 서버-클라이언트 형상관리 시스템&lt;/li&gt;
+&lt;li&gt;파일 전체를 저장하는 것이 아니라 변경사항만을 저장&lt;/li&gt;
+&lt;li&gt;변경사항만 저장하기 때문에 용량을 적게 차지하지만 속도가 상대적으로 느림&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Perforce(P4D)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;빠른 속도, 빠른 Merge가 가능하며 큰 리소스 관리에 좋음&lt;/li&gt;
+&lt;li&gt;유료이고 파일명이 바뀌면 히스토리 추적이 곤란&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SVN (Subversion)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;형상관리/소스관리 툴의 일종&lt;/li&gt;
+&lt;li&gt;중앙관리만 지원&lt;/li&gt;
+&lt;li&gt;다른 사용자의 커밋과 엉키지 않으며, 커밋 실패 시 롤백 기능을 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Git&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;분산형 버전관리 시스템&lt;/li&gt;
+&lt;li&gt;Repository의 완전한 복사본을 로컬에 저장할 수 있음&lt;/li&gt;
+&lt;li&gt;처리속도가 빠르지만 대용량 코드 관리에 부적절&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;가장-많이-사용하는-svn과-git-비교&#34;&gt;가장 많이 사용하는 SVN과 Git 비교
+&lt;/h2&gt;&lt;p&gt;SVN (Subversion)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SVN은 보통 대부분의 기능을 완성해놓고 &lt;strong&gt;소스를 중앙 저장소에 commit&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;commit의 이미 자체가 중앙 저장소에 해당 기능을 공개한다는 의미.&lt;/li&gt;
+&lt;li&gt;개발자가 자신만의 &lt;strong&gt;version history를 가질 수 없음&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;commit한 내용에 실수가 있을 시에 다른 개발자에게 바로 영향을 미치게 되는 단점&lt;/strong&gt;도 있다.&lt;/li&gt;
+&lt;li&gt;저장소를 한개만 두는 것의 단점은 만약 &lt;strong&gt;데이터가 소실되었을때 복구가 어려움&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Git&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;개발자가 &lt;strong&gt;자신만의 commit history를 가질 수 있고&lt;/strong&gt;, 개발자와 서버의 저장소는 &lt;strong&gt;독립적으로 관리&lt;/strong&gt;가 가능.&lt;/li&gt;
+&lt;li&gt;commit한 내용에 &lt;strong&gt;실수가 있더라도 이 바로 서버에 영향을 미치지 않음&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;개발자는 commit 하다가 자신이 원하는 순간에 서버에 변경 내역(commit history)을 보낼 수 있음.&lt;/li&gt;
+&lt;li&gt;서버의 통합 관리자는 관리자가 원하는 순간에 각 개발자의 commit history를 가져올 수 있음.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;svn과-git-차이점&#34;&gt;SVN과 Git 차이점
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;git은 로컬 저장소가 있으므로 &lt;strong&gt;네트워크에 접근할 필요가 없기 때문에 빠름&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;svn은 &lt;strong&gt;commit 하는 순간 저장소를 공유하는 모든 개발자들이 보게&lt;/strong&gt; 된다. &lt;!-- raw HTML omitted --&gt;git은 내 로컬 저장소에서 마음껏 개발하고 정리하여 &lt;strong&gt;필요할 때 원격 저장소로 올림&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;git의 경우 원격 저장소 서버가 잠시 끊기더라도 &lt;strong&gt;버전 컨트롤이 가능&lt;/strong&gt; &lt;!-- raw HTML omitted --&gt;svn은 서버가 끊기는 순간 &lt;strong&gt;버전 컨트롤도 같이 끊김&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;원격 저장소가 사라지면 svn은 &lt;strong&gt;복구 불가&lt;/strong&gt;,&lt;!-- raw HTML omitted --&gt;git은 로컬 저장소에 사본을 들고 있다면 &lt;strong&gt;복구 가능&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;svn은 &lt;strong&gt;저장소가 하나&lt;/strong&gt;,&lt;!-- raw HTML omitted --&gt;git은 로컬 저장소/원격 저장소로 &lt;strong&gt;저장소를 분산&lt;/strong&gt;해서 관리&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://kurukurucoding.tistory.com/68&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;형상관리란 - 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://sujinnaljin.medium.com/software-engineering-%ED%98%95%EC%83%81-%EA%B4%80%EB%A6%AC%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC-932d14f6f341&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;형상관리란 - 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://s-yeonjuu.tistory.com/53&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SVN, GIT 차이점&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 오늘은 EBS, 람다와 EFS에 대해 배웠다 잊지 않기 위해 복습 또 복습&hellip;\nEBS(Elastic Block Storage) AWS 블록 스토리지 서비스로 EC2 인스턴스에 사용되는 지속적인 스토리지 DB, 파일 시스템, 로그 스토리지, 애플리케이션 데이터 등 사용 데이터를 블록 단위로 저장하며 개별적으로 다루어 질 수 있다. 지속성이 보장되며 중지 또는 종료해도 데이터 유지 주로 자주 접근하지 않는 데이터를 저렴하게 저장할 때 사용한다. 특징 탄력성 : 필요에 따라 크기 조정, 스냅샷을 통해 백업 및 복원 가능(용량을 늘리는 건 쉬우나 줄이는 건 힘들어 충분히 고려 후 증설) 고성능 : 다양한 선능 옵션 제공 내구성 : 데이터 복제 및 높은 가용성 제공 보안 : IAM 정책을 통한 접근 제어 가능 스냅샷 : 볼륨의 시점 복사본 생성 가능 S3에 저장되며 복구 가능 실습(볼륨 확장) 인스턴스 생성 보안 그룹 권한 변경 볼륨 늘림 # 인스턴스 접근 ssh -i &lt;aws key&gt; &lt;os&gt;@&lt;ip&gt; # 루트 권한으로 변경 sudo su # 파일 시스템 디스크 사용량 노출 df -hT # 시스템 블록 장치 나열 lsblk # 지정된 파티션의 크기 확장 growpart /dev/xvda 1 # XFS 파일 시스템 크기 확장 xfs_growfs /dev/xvda1 # 증설 확인 lsblk AWS EFS(Elastic FileSystem) 여러 EC2 인스턴스가 동시에 데이터를 읽고 쓰며, 파일 시스템의 확장성과 고가용성 보장 같은 VPC 내에서 여러 인스턴스가 같은 파일 시스템에 접근해 읽기, 쓰기 가능 특징 확장성 : 파일 시스템 크기 자동 조절 및 필요에 따른 확장, 축소 가능 고가용성 및 내구성 : 여러 가용 영역(AZ)에 데이터 자동 복제해 높은 가용성 및 내구성 제공 동시 엑세스 : 여러 EC2 인스턴스에서 동시에 엑세스 할 수 있으며 공유 파일 시스템이 필요한 워크 로드에 적합 실습(볼륨 확장) EFS 생성 보안그룹 수정 연결 # 인스턴스 접근 ssh -i &lt;aws key&gt; &lt;os&gt;@&lt;ip&gt; # 루트 권한으로 변경 sudo su # ip 복사 # /mnt 디렉토리 안에 efs 폴더 생성 cd /mnt &amp;&amp; mkdir efs # 복사한 ip 주소 입력 # 확인 df -hT | grep efs AWS S3(Simple Storage Serive) 객체 스토리지 서비스로 데이터를 객체 단위로 저장 객체는 파일 데이터와 메타 데이터로 구성되며 인터넷을 통해 접근 가능 특징 내구성 및 가용성 : S3는 99.99% 내구성 제공 및 여러 가용 영역의 복제되어 높은 가용성 보장 확장성 : 거의 무한대로 확장 가능 보안 : 데이터 암호화 후 저정 및 전송하며 IAM 정책, 버킷 정책, ACL을 통해 엑세서 권한 제어 비용과 효율성 : 저장한 데이터 양과 사용한 리소스에 따라 지용 지불 데이터 관리 기능 : 버전 관리, 수명 주기 정책, 객체 잠금, 이벤트 알림 등 데이터를 효울적으로 관리 사용 예시 중요한 데이터 백업 및 복원에 사용 오랫동안 보관해야 하지만 자주 접근하지 않는 데이터의 아카이빙에 적합 정적 웹 사이트 호스팅에 사용 미디어 콘텐츠 저장 후 배포 시 사용 실습(볼륨 확장) S3 생성(모든 퍼블릭 허용) 권한 추가 파일 업로드 url 클릭 후 확인 AWS Lambda 서버를 프로비저닝하거나 관리할 필요 없이 코드를 실행 할 수 있는 컴퓨팅 서비스 코드를 업로드하고 실행 조건을 설정하면, 나머지 인프라 관리는 AWS에서 자동으로 처리 특징 서버를 프로비저닝, 관리, 확장할 필요가 없이 AWS에서 모든 인프라 관리 Lambda 함수는 요청에 따라 자동 확장 다양한 프로그래밍 언어 지원 사용 예시 파일 업로드 이벤트 발생 시 트리거하여 파일 처리 실시간 데이터 처리 및 로그 분석, 필터링, 알람 트리거 수행 백업, 보고서 생성, 시스템 유지보수 작업 자동화 실습(볼륨 확장) Lambda 생성 코드 수정 테스트 클릭 및 모니터링 로그 확인 트리거 추가 파일 업로드 모니터링 확인 AWS CloudWatch 인프라와 애플리케이션의 상태를 모니터링하고 관리하는 서비스 다양한 AWS 서비스와 통합되어 메트릭 수집, 경보 설정, 로그 모니터링 및 분석 특징 EC2, RDS, S3, DynamoDB 등 다양한 AWS 서비스에서 메트릭 자동 수집 특정 조건 충족 시 알람 생성해 SNS 및 함수 트리거, auto Scaling 조치 대시보드를 사용해 모니터링 시스템 이벤트 감지 및 지정된 대상으로 알림 전송 임계값 초과 시 경보 설정 및 자동 대응 조치 실습(볼륨 확장) IAM 역할 생성(AWSLambdaBasicExecutionRole, CloudWatchEventsFullAccess) lambda 생성 구성 - 권한 - 편집 - 역할 변경 이벤트 브리지 규칙 생성(aws , cloudWatch, Alarm, kakao) cloudWatch 대시보드 - 경보상태 - 경보 생성 지표 선택 - 인스턴스 - cpu - 지표 선택 ">
+<title>aws에 EBS, Lambda와 efs</title>
+
+<link rel='canonical' href='https://example.org/posts/cloud/aws/lambda_and_efs/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="aws에 EBS, Lambda와 efs">
+<meta property='og:description' content=" 오늘은 EBS, 람다와 EFS에 대해 배웠다 잊지 않기 위해 복습 또 복습&hellip;\nEBS(Elastic Block Storage) AWS 블록 스토리지 서비스로 EC2 인스턴스에 사용되는 지속적인 스토리지 DB, 파일 시스템, 로그 스토리지, 애플리케이션 데이터 등 사용 데이터를 블록 단위로 저장하며 개별적으로 다루어 질 수 있다. 지속성이 보장되며 중지 또는 종료해도 데이터 유지 주로 자주 접근하지 않는 데이터를 저렴하게 저장할 때 사용한다. 특징 탄력성 : 필요에 따라 크기 조정, 스냅샷을 통해 백업 및 복원 가능(용량을 늘리는 건 쉬우나 줄이는 건 힘들어 충분히 고려 후 증설) 고성능 : 다양한 선능 옵션 제공 내구성 : 데이터 복제 및 높은 가용성 제공 보안 : IAM 정책을 통한 접근 제어 가능 스냅샷 : 볼륨의 시점 복사본 생성 가능 S3에 저장되며 복구 가능 실습(볼륨 확장) 인스턴스 생성 보안 그룹 권한 변경 볼륨 늘림 # 인스턴스 접근 ssh -i &lt;aws key&gt; &lt;os&gt;@&lt;ip&gt; # 루트 권한으로 변경 sudo su # 파일 시스템 디스크 사용량 노출 df -hT # 시스템 블록 장치 나열 lsblk # 지정된 파티션의 크기 확장 growpart /dev/xvda 1 # XFS 파일 시스템 크기 확장 xfs_growfs /dev/xvda1 # 증설 확인 lsblk AWS EFS(Elastic FileSystem) 여러 EC2 인스턴스가 동시에 데이터를 읽고 쓰며, 파일 시스템의 확장성과 고가용성 보장 같은 VPC 내에서 여러 인스턴스가 같은 파일 시스템에 접근해 읽기, 쓰기 가능 특징 확장성 : 파일 시스템 크기 자동 조절 및 필요에 따른 확장, 축소 가능 고가용성 및 내구성 : 여러 가용 영역(AZ)에 데이터 자동 복제해 높은 가용성 및 내구성 제공 동시 엑세스 : 여러 EC2 인스턴스에서 동시에 엑세스 할 수 있으며 공유 파일 시스템이 필요한 워크 로드에 적합 실습(볼륨 확장) EFS 생성 보안그룹 수정 연결 # 인스턴스 접근 ssh -i &lt;aws key&gt; &lt;os&gt;@&lt;ip&gt; # 루트 권한으로 변경 sudo su # ip 복사 # /mnt 디렉토리 안에 efs 폴더 생성 cd /mnt &amp;&amp; mkdir efs # 복사한 ip 주소 입력 # 확인 df -hT | grep efs AWS S3(Simple Storage Serive) 객체 스토리지 서비스로 데이터를 객체 단위로 저장 객체는 파일 데이터와 메타 데이터로 구성되며 인터넷을 통해 접근 가능 특징 내구성 및 가용성 : S3는 99.99% 내구성 제공 및 여러 가용 영역의 복제되어 높은 가용성 보장 확장성 : 거의 무한대로 확장 가능 보안 : 데이터 암호화 후 저정 및 전송하며 IAM 정책, 버킷 정책, ACL을 통해 엑세서 권한 제어 비용과 효율성 : 저장한 데이터 양과 사용한 리소스에 따라 지용 지불 데이터 관리 기능 : 버전 관리, 수명 주기 정책, 객체 잠금, 이벤트 알림 등 데이터를 효울적으로 관리 사용 예시 중요한 데이터 백업 및 복원에 사용 오랫동안 보관해야 하지만 자주 접근하지 않는 데이터의 아카이빙에 적합 정적 웹 사이트 호스팅에 사용 미디어 콘텐츠 저장 후 배포 시 사용 실습(볼륨 확장) S3 생성(모든 퍼블릭 허용) 권한 추가 파일 업로드 url 클릭 후 확인 AWS Lambda 서버를 프로비저닝하거나 관리할 필요 없이 코드를 실행 할 수 있는 컴퓨팅 서비스 코드를 업로드하고 실행 조건을 설정하면, 나머지 인프라 관리는 AWS에서 자동으로 처리 특징 서버를 프로비저닝, 관리, 확장할 필요가 없이 AWS에서 모든 인프라 관리 Lambda 함수는 요청에 따라 자동 확장 다양한 프로그래밍 언어 지원 사용 예시 파일 업로드 이벤트 발생 시 트리거하여 파일 처리 실시간 데이터 처리 및 로그 분석, 필터링, 알람 트리거 수행 백업, 보고서 생성, 시스템 유지보수 작업 자동화 실습(볼륨 확장) Lambda 생성 코드 수정 테스트 클릭 및 모니터링 로그 확인 트리거 추가 파일 업로드 모니터링 확인 AWS CloudWatch 인프라와 애플리케이션의 상태를 모니터링하고 관리하는 서비스 다양한 AWS 서비스와 통합되어 메트릭 수집, 경보 설정, 로그 모니터링 및 분석 특징 EC2, RDS, S3, DynamoDB 등 다양한 AWS 서비스에서 메트릭 자동 수집 특정 조건 충족 시 알람 생성해 SNS 및 함수 트리거, auto Scaling 조치 대시보드를 사용해 모니터링 시스템 이벤트 감지 및 지정된 대상으로 알림 전송 임계값 초과 시 경보 설정 및 자동 대응 조치 실습(볼륨 확장) IAM 역할 생성(AWSLambdaBasicExecutionRole, CloudWatchEventsFullAccess) lambda 생성 구성 - 권한 - 편집 - 역할 변경 이벤트 브리지 규칙 생성(aws , cloudWatch, Alarm, kakao) cloudWatch 대시보드 - 경보상태 - 경보 생성 지표 선택 - 인스턴스 - cpu - 지표 선택 ">
+<meta property='og:url' content='https://example.org/posts/cloud/aws/lambda_and_efs/'>
+<meta property='og:site_name' content='My New Hugo Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='KakaoTechBootCamp' /><meta property='article:tag' content='BootCamp' /><meta property='article:tag' content='AWS' /><meta property='article:tag' content='Lambda' /><meta property='article:tag' content='EFS' /><meta property='article:tag' content='EBS' /><meta property='article:published_time' content='2024-07-17T11:42:15&#43;09:00'/><meta property='article:modified_time' content='2024-07-17T11:42:15&#43;09:00'/>
+<meta name="twitter:title" content="aws에 EBS, Lambda와 efs">
+<meta name="twitter:description" content=" 오늘은 EBS, 람다와 EFS에 대해 배웠다 잊지 않기 위해 복습 또 복습&hellip;\nEBS(Elastic Block Storage) AWS 블록 스토리지 서비스로 EC2 인스턴스에 사용되는 지속적인 스토리지 DB, 파일 시스템, 로그 스토리지, 애플리케이션 데이터 등 사용 데이터를 블록 단위로 저장하며 개별적으로 다루어 질 수 있다. 지속성이 보장되며 중지 또는 종료해도 데이터 유지 주로 자주 접근하지 않는 데이터를 저렴하게 저장할 때 사용한다. 특징 탄력성 : 필요에 따라 크기 조정, 스냅샷을 통해 백업 및 복원 가능(용량을 늘리는 건 쉬우나 줄이는 건 힘들어 충분히 고려 후 증설) 고성능 : 다양한 선능 옵션 제공 내구성 : 데이터 복제 및 높은 가용성 제공 보안 : IAM 정책을 통한 접근 제어 가능 스냅샷 : 볼륨의 시점 복사본 생성 가능 S3에 저장되며 복구 가능 실습(볼륨 확장) 인스턴스 생성 보안 그룹 권한 변경 볼륨 늘림 # 인스턴스 접근 ssh -i &lt;aws key&gt; &lt;os&gt;@&lt;ip&gt; # 루트 권한으로 변경 sudo su # 파일 시스템 디스크 사용량 노출 df -hT # 시스템 블록 장치 나열 lsblk # 지정된 파티션의 크기 확장 growpart /dev/xvda 1 # XFS 파일 시스템 크기 확장 xfs_growfs /dev/xvda1 # 증설 확인 lsblk AWS EFS(Elastic FileSystem) 여러 EC2 인스턴스가 동시에 데이터를 읽고 쓰며, 파일 시스템의 확장성과 고가용성 보장 같은 VPC 내에서 여러 인스턴스가 같은 파일 시스템에 접근해 읽기, 쓰기 가능 특징 확장성 : 파일 시스템 크기 자동 조절 및 필요에 따른 확장, 축소 가능 고가용성 및 내구성 : 여러 가용 영역(AZ)에 데이터 자동 복제해 높은 가용성 및 내구성 제공 동시 엑세스 : 여러 EC2 인스턴스에서 동시에 엑세스 할 수 있으며 공유 파일 시스템이 필요한 워크 로드에 적합 실습(볼륨 확장) EFS 생성 보안그룹 수정 연결 # 인스턴스 접근 ssh -i &lt;aws key&gt; &lt;os&gt;@&lt;ip&gt; # 루트 권한으로 변경 sudo su # ip 복사 # /mnt 디렉토리 안에 efs 폴더 생성 cd /mnt &amp;&amp; mkdir efs # 복사한 ip 주소 입력 # 확인 df -hT | grep efs AWS S3(Simple Storage Serive) 객체 스토리지 서비스로 데이터를 객체 단위로 저장 객체는 파일 데이터와 메타 데이터로 구성되며 인터넷을 통해 접근 가능 특징 내구성 및 가용성 : S3는 99.99% 내구성 제공 및 여러 가용 영역의 복제되어 높은 가용성 보장 확장성 : 거의 무한대로 확장 가능 보안 : 데이터 암호화 후 저정 및 전송하며 IAM 정책, 버킷 정책, ACL을 통해 엑세서 권한 제어 비용과 효율성 : 저장한 데이터 양과 사용한 리소스에 따라 지용 지불 데이터 관리 기능 : 버전 관리, 수명 주기 정책, 객체 잠금, 이벤트 알림 등 데이터를 효울적으로 관리 사용 예시 중요한 데이터 백업 및 복원에 사용 오랫동안 보관해야 하지만 자주 접근하지 않는 데이터의 아카이빙에 적합 정적 웹 사이트 호스팅에 사용 미디어 콘텐츠 저장 후 배포 시 사용 실습(볼륨 확장) S3 생성(모든 퍼블릭 허용) 권한 추가 파일 업로드 url 클릭 후 확인 AWS Lambda 서버를 프로비저닝하거나 관리할 필요 없이 코드를 실행 할 수 있는 컴퓨팅 서비스 코드를 업로드하고 실행 조건을 설정하면, 나머지 인프라 관리는 AWS에서 자동으로 처리 특징 서버를 프로비저닝, 관리, 확장할 필요가 없이 AWS에서 모든 인프라 관리 Lambda 함수는 요청에 따라 자동 확장 다양한 프로그래밍 언어 지원 사용 예시 파일 업로드 이벤트 발생 시 트리거하여 파일 처리 실시간 데이터 처리 및 로그 분석, 필터링, 알람 트리거 수행 백업, 보고서 생성, 시스템 유지보수 작업 자동화 실습(볼륨 확장) Lambda 생성 코드 수정 테스트 클릭 및 모니터링 로그 확인 트리거 추가 파일 업로드 모니터링 확인 AWS CloudWatch 인프라와 애플리케이션의 상태를 모니터링하고 관리하는 서비스 다양한 AWS 서비스와 통합되어 메트릭 수집, 경보 설정, 로그 모니터링 및 분석 특징 EC2, RDS, S3, DynamoDB 등 다양한 AWS 서비스에서 메트릭 자동 수집 특정 조건 충족 시 알람 생성해 SNS 및 함수 트리거, auto Scaling 조치 대시보드를 사용해 모니터링 시스템 이벤트 감지 및 지정된 대상으로 알림 전송 임계값 초과 시 경보 설정 및 자동 대응 조치 실습(볼륨 확장) IAM 역할 생성(AWSLambdaBasicExecutionRole, CloudWatchEventsFullAccess) lambda 생성 구성 - 권한 - 편집 - 역할 변경 이벤트 브리지 규칙 생성(aws , cloudWatch, Alarm, kakao) cloudWatch 대시보드 - 경보상태 - 경보 생성 지표 선택 - 인스턴스 - cpu - 지표 선택 ">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My New Hugo Site</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/kakaotechbootcamp/" >
+                KakaoTechBootCamp
+            </a>
+        
+            <a href="/categories/aws/" >
+                AWS
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/cloud/aws/lambda_and_efs/">aws에 EBS, Lambda와 efs</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 17, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>오늘은 EBS, 람다와 EFS에 대해 배웠다 <br>
+잊지 않기 위해 복습 또 복습&hellip;</p>
+</blockquote>
+<h2 id="ebselastic-block-storage">EBS(Elastic Block Storage)
+</h2><hr>
+<ul>
+<li>AWS 블록 스토리지 서비스로 EC2 인스턴스에 사용되는 지속적인 스토리지</li>
+<li>DB, 파일 시스템, 로그 스토리지, 애플리케이션 데이터 등 사용</li>
+<li>데이터를 블록 단위로 저장하며 개별적으로 다루어 질 수 있다.</li>
+<li>지속성이 보장되며 중지 또는 종료해도 데이터 유지</li>
+<li>주로 자주 접근하지 않는 데이터를 저렴하게 저장할 때 사용한다.</li>
+</ul>
+<h4 id="특징">특징
+</h4><ul>
+<li>탄력성 : 필요에 따라 크기 조정, 스냅샷을 통해 백업 및 복원 가능(용량을 늘리는 건 쉬우나 줄이는 건 힘들어 충분히 고려 후 증설)</li>
+<li>고성능 : 다양한 선능 옵션 제공</li>
+<li>내구성 : 데이터 복제 및 높은 가용성 제공</li>
+<li>보안 : IAM 정책을 통한 접근 제어 가능</li>
+<li>스냅샷 : 볼륨의 시점 복사본 생성 가능 S3에 저장되며 복구 가능</li>
+</ul>
+<h4 id="실습볼륨-확장">실습(볼륨 확장)
+</h4><ol>
+<li>인스턴스 생성</li>
+<li>보안 그룹 권한 변경</li>
+<li>볼륨 늘림</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 인스턴스 접근</span>
+</span></span><span style="display:flex;"><span>ssh -i &lt;aws key&gt; &lt;os&gt;@&lt;ip&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 루트 권한으로 변경</span>
+</span></span><span style="display:flex;"><span>sudo su
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 파일 시스템 디스크 사용량 노출</span>
+</span></span><span style="display:flex;"><span>df -hT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 시스템 블록 장치 나열</span>
+</span></span><span style="display:flex;"><span>lsblk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 지정된 파티션의 크기 확장</span>
+</span></span><span style="display:flex;"><span>growpart /dev/xvda <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># XFS 파일 시스템 크기 확장</span>
+</span></span><span style="display:flex;"><span>xfs_growfs /dev/xvda1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 증설 확인</span>
+</span></span><span style="display:flex;"><span>lsblk
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h2 id="aws-efselastic-filesystem">AWS EFS(Elastic FileSystem)
+</h2><hr>
+<ul>
+<li>여러 EC2 인스턴스가 동시에 데이터를 읽고 쓰며, 파일 시스템의 확장성과 고가용성 보장</li>
+<li>같은 VPC 내에서 여러 인스턴스가 같은 파일 시스템에 접근해 읽기, 쓰기 가능</li>
+</ul>
+<h4 id="특징-1">특징
+</h4><ul>
+<li>확장성 : 파일 시스템 크기 자동 조절 및 필요에 따른 확장, 축소 가능</li>
+<li>고가용성 및 내구성 : 여러 가용 영역(AZ)에 데이터 자동 복제해 높은 가용성 및 내구성 제공</li>
+<li>동시 엑세스 : 여러 EC2 인스턴스에서 동시에 엑세스 할 수 있으며 공유 파일 시스템이 필요한 워크 로드에 적합</li>
+</ul>
+<h4 id="실습볼륨-확장-1">실습(볼륨 확장)
+</h4><ol>
+<li>EFS 생성</li>
+<li>보안그룹 수정</li>
+<li>연결</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 인스턴스 접근</span>
+</span></span><span style="display:flex;"><span>ssh -i &lt;aws key&gt; &lt;os&gt;@&lt;ip&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 루트 권한으로 변경</span>
+</span></span><span style="display:flex;"><span>sudo su
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ip 복사</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># /mnt 디렉토리 안에 efs 폴더 생성</span>
+</span></span><span style="display:flex;"><span>cd /mnt <span style="color:#f92672">&amp;&amp;</span> mkdir efs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 복사한 ip 주소 입력</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 확인</span>
+</span></span><span style="display:flex;"><span>df -hT | grep efs
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h2 id="aws-s3simple-storage-serive">AWS S3(Simple Storage Serive)
+</h2><hr>
+<ul>
+<li>객체 스토리지 서비스로 데이터를 객체 단위로 저장</li>
+<li>객체는 파일 데이터와 메타 데이터로 구성되며 인터넷을 통해 접근 가능</li>
+</ul>
+<h4 id="특징-2">특징
+</h4><ul>
+<li>내구성 및 가용성 : S3는 99.99% 내구성 제공 및 여러 가용 영역의 복제되어 높은 가용성 보장</li>
+<li>확장성 : 거의 무한대로 확장 가능</li>
+<li>보안 : 데이터 암호화 후 저정 및 전송하며 IAM 정책, 버킷 정책, ACL을 통해 엑세서 권한 제어</li>
+<li>비용과 효율성 : 저장한 데이터 양과 사용한 리소스에 따라 지용 지불</li>
+<li>데이터 관리 기능 : 버전 관리, 수명 주기 정책, 객체 잠금, 이벤트 알림 등 데이터를 효울적으로 관리</li>
+</ul>
+<h4 id="사용-예시">사용 예시
+</h4><ul>
+<li>중요한 데이터 백업 및 복원에 사용</li>
+<li>오랫동안 보관해야 하지만 자주 접근하지 않는 데이터의 아카이빙에 적합</li>
+<li>정적 웹 사이트 호스팅에 사용</li>
+<li>미디어 콘텐츠 저장 후 배포 시 사용</li>
+</ul>
+<h4 id="실습볼륨-확장-2">실습(볼륨 확장)
+</h4><ol>
+<li>S3 생성(모든 퍼블릭 허용)</li>
+<li>권한 추가</li>
+<li>파일 업로드</li>
+<li>url 클릭 후 확인</li>
+</ol>
+<!-- raw HTML omitted -->
+<h2 id="aws-lambda">AWS Lambda
+</h2><hr>
+<ul>
+<li>서버를 프로비저닝하거나 관리할 필요 없이 코드를 실행 할 수 있는 컴퓨팅 서비스</li>
+<li>코드를 업로드하고 실행 조건을 설정하면, 나머지 인프라 관리는 AWS에서 자동으로 처리</li>
+</ul>
+<h4 id="특징-3">특징
+</h4><ul>
+<li>서버를 프로비저닝, 관리, 확장할 필요가 없이 AWS에서 모든 인프라 관리</li>
+<li>Lambda 함수는 요청에 따라 자동 확장</li>
+<li>다양한 프로그래밍 언어 지원</li>
+</ul>
+<h4 id="사용-예시-1">사용 예시
+</h4><ul>
+<li>파일 업로드 이벤트 발생 시 트리거하여 파일 처리</li>
+<li>실시간 데이터 처리 및 로그 분석, 필터링, 알람 트리거 수행</li>
+<li>백업, 보고서 생성, 시스템 유지보수 작업 자동화</li>
+</ul>
+<h4 id="실습볼륨-확장-3">실습(볼륨 확장)
+</h4><ol>
+<li>Lambda 생성</li>
+<li>코드 수정</li>
+<li>테스트 클릭 및 모니터링 로그 확인</li>
+<li>트리거 추가</li>
+<li>파일 업로드</li>
+<li>모니터링 확인</li>
+</ol>
+<!-- raw HTML omitted -->
+<h2 id="aws-cloudwatch">AWS CloudWatch
+</h2><hr>
+<ul>
+<li>인프라와 애플리케이션의 상태를 모니터링하고 관리하는 서비스</li>
+<li>다양한 AWS 서비스와 통합되어 메트릭 수집, 경보 설정, 로그 모니터링 및 분석</li>
+</ul>
+<h4 id="특징-4">특징
+</h4><ul>
+<li>EC2, RDS, S3, DynamoDB 등 다양한 AWS 서비스에서 메트릭 자동 수집</li>
+<li>특정 조건 충족 시 알람 생성해 SNS 및 함수 트리거, auto Scaling 조치</li>
+<li>대시보드를 사용해 모니터링</li>
+<li>시스템 이벤트 감지 및 지정된 대상으로 알림 전송</li>
+<li>임계값 초과 시 경보 설정 및 자동 대응 조치</li>
+</ul>
+<h4 id="실습볼륨-확장-4">실습(볼륨 확장)
+</h4><ol>
+<li>IAM 역할 생성(AWSLambdaBasicExecutionRole, CloudWatchEventsFullAccess)</li>
+<li>lambda 생성</li>
+<li>구성 - 권한 - 편집 - 역할 변경</li>
+<li>이벤트 브리지 규칙 생성(aws , cloudWatch, Alarm, kakao)</li>
+<li>cloudWatch 대시보드 - 경보상태 - 경보 생성</li>
+<li>지표 선택 - 인스턴스 - cpu - 지표  선택</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/kakaotechbootcamp/">KakaoTechBootCamp</a>
+        
+            <a href="/tags/bootcamp/">BootCamp</a>
+        
+            <a href="/tags/aws/">AWS</a>
+        
+            <a href="/tags/lambda/">Lambda</a>
+        
+            <a href="/tags/efs/">EFS</a>
+        
+            <a href="/tags/ebs/">EBS</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/cloud/aws/iam_and_s3/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">AWS IAM을 이용한 S3 실습</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/cloud/aws/basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">AWS와 LB 실습</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/docker_etc/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker 이론</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/docker_conpose/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker_conpose</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/dockerfile_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Dockerfile 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 My New Hugo Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

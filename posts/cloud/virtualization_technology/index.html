@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 어제 어수선한 분위기 속에 첫날이 마무리되고\n두번째 수업이 진행되었습니다.\n오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.\n가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다. 집중적으로 공부해야하는 가상화 기술 대부분의 기업이 IaaS를 통해 SaaS를 출시한다. IaaS를 하는 기업은 대기업 위주이며(네이버 클라우드, 카카오 클라우드 등) 대부분의 클라우드는 IaaS를 이용해 SaaS를 개발한다. 클라우드 시장 보통 Iaas, PaaS, SaaS로 나누어 보고 IaaS 시장에서 가장 많이 사용되는 서비스는 현재 AWS다. IaaS를 만든다는 뜻 openStack 등의 솔루션을 통해 각 리소스를 가상화하고 서비스를 만드는것 여기에 흥미가 있다면 C/C++/Python 등을 공부하여 openStack을 활용해보는 것이 좋다. 다만, 현재로써는 석박사 과정이 필수이다. 자주 사용하는 기능 가장 기본적으로 Network를 아용하여 네트워크 구조 세팅 세팅된 Network 위에 Compute를 이용한 서버 구축 Database를 이용한 애플리케이션 DB 연결 Storage를 이용하여 애플리케이션에서 나오는 로그와 같은 파일 저장 그 외로 Security를 통해 보안 강화, AI를 통해 AI 서비스 붙이기\n즉, 이외에는 필요한 것들을 찾아 붙이는 방식 ">
+<title>가상화 기술</title>
+
+<link rel='canonical' href='https://example.org/posts/cloud/virtualization_technology/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="가상화 기술">
+<meta property='og:description' content=" 어제 어수선한 분위기 속에 첫날이 마무리되고\n두번째 수업이 진행되었습니다.\n오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.\n가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다. 집중적으로 공부해야하는 가상화 기술 대부분의 기업이 IaaS를 통해 SaaS를 출시한다. IaaS를 하는 기업은 대기업 위주이며(네이버 클라우드, 카카오 클라우드 등) 대부분의 클라우드는 IaaS를 이용해 SaaS를 개발한다. 클라우드 시장 보통 Iaas, PaaS, SaaS로 나누어 보고 IaaS 시장에서 가장 많이 사용되는 서비스는 현재 AWS다. IaaS를 만든다는 뜻 openStack 등의 솔루션을 통해 각 리소스를 가상화하고 서비스를 만드는것 여기에 흥미가 있다면 C/C++/Python 등을 공부하여 openStack을 활용해보는 것이 좋다. 다만, 현재로써는 석박사 과정이 필수이다. 자주 사용하는 기능 가장 기본적으로 Network를 아용하여 네트워크 구조 세팅 세팅된 Network 위에 Compute를 이용한 서버 구축 Database를 이용한 애플리케이션 DB 연결 Storage를 이용하여 애플리케이션에서 나오는 로그와 같은 파일 저장 그 외로 Security를 통해 보안 강화, AI를 통해 AI 서비스 붙이기\n즉, 이외에는 필요한 것들을 찾아 붙이는 방식 ">
+<meta property='og:url' content='https://example.org/posts/cloud/virtualization_technology/'>
+<meta property='og:site_name' content='My New Hugo Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='KakaoTechBootCamp' /><meta property='article:tag' content='BootCamp' /><meta property='article:tag' content='가상화기술' /><meta property='article:tag' content='IaaS' /><meta property='article:tag' content='PaaS' /><meta property='article:tag' content='SaaS' /><meta property='article:published_time' content='2024-07-03T18:03:57&#43;09:00'/><meta property='article:modified_time' content='2024-07-03T18:03:57&#43;09:00'/>
+<meta name="twitter:title" content="가상화 기술">
+<meta name="twitter:description" content=" 어제 어수선한 분위기 속에 첫날이 마무리되고\n두번째 수업이 진행되었습니다.\n오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.\n가상화 기술 클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider) 각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등) 기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등 AWS, GCP, Kakao Cloud 등 플랫폼 기반 서비스(PaaS : Platform as a Service) 본인 애플리케이션을 쉽게 업로드하여 서비스 활용 가상화된 자원을 자동으로 할당받아 애플리케이션이 실행 Heroku, Vercel, Netlify, 카페24 등 솔루션 기반 서비스(SaaS : Software as a Service) 사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공 사용량에 따른 과금 정책이 대부분 구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다. 집중적으로 공부해야하는 가상화 기술 대부분의 기업이 IaaS를 통해 SaaS를 출시한다. IaaS를 하는 기업은 대기업 위주이며(네이버 클라우드, 카카오 클라우드 등) 대부분의 클라우드는 IaaS를 이용해 SaaS를 개발한다. 클라우드 시장 보통 Iaas, PaaS, SaaS로 나누어 보고 IaaS 시장에서 가장 많이 사용되는 서비스는 현재 AWS다. IaaS를 만든다는 뜻 openStack 등의 솔루션을 통해 각 리소스를 가상화하고 서비스를 만드는것 여기에 흥미가 있다면 C/C++/Python 등을 공부하여 openStack을 활용해보는 것이 좋다. 다만, 현재로써는 석박사 과정이 필수이다. 자주 사용하는 기능 가장 기본적으로 Network를 아용하여 네트워크 구조 세팅 세팅된 Network 위에 Compute를 이용한 서버 구축 Database를 이용한 애플리케이션 DB 연결 Storage를 이용하여 애플리케이션에서 나오는 로그와 같은 파일 저장 그 외로 Security를 통해 보안 강화, AI를 통해 AI 서비스 붙이기\n즉, 이외에는 필요한 것들을 찾아 붙이는 방식 ">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My New Hugo Site</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/kakaotechbootcamp/" >
+                KakaoTechBootCamp
+            </a>
+        
+            <a href="/categories/%EA%B0%80%EC%83%81%ED%99%94/" >
+                가상화
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/cloud/virtualization_technology/">가상화 기술</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 03, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>어제 어수선한 분위기 속에 첫날이 마무리되고<br>
+두번째 수업이 진행되었습니다.<br>
+오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.</p>
+</blockquote>
+<h2 id="가상화-기술">가상화 기술
+</h2><hr>
+<ul>
+<li>클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider)
+<ul>
+<li>각종 자원들을 가상화하여 서비스 제공(서버, 네트워크, 스토리지 등)</li>
+<li>기본 기능 : Compute, Network, Storage, Container, Database, Security, Ai 등</li>
+<li>AWS, GCP, Kakao Cloud 등</li>
+</ul>
+</li>
+<li>플랫폼 기반 서비스(PaaS : Platform as a Service)
+<ul>
+<li>본인 애플리케이션을 쉽게 업로드하여 서비스 활용</li>
+<li>가상화된 자원을 자동으로 할당받아 애플리케이션이 실행</li>
+<li>Heroku, Vercel, Netlify, 카페24 등</li>
+</ul>
+</li>
+<li>솔루션 기반 서비스(SaaS : Software as a Service)
+<ul>
+<li>사용자의 니즈가 반영된 애플리케이션이 가상화된 자원을 할당받아 곧바로 서비스 제공</li>
+<li>사용량에 따른 과금 정책이 대부분</li>
+<li>구글 드라이브, 드롭박스, 네이버 MyBox등 대부분의 서비스가 여기에 속한다.</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="집중적으로-공부해야하는-가상화-기술">집중적으로 공부해야하는 가상화 기술
+</h2><hr>
+<ul>
+<li>대부분의 기업이 IaaS를 통해 SaaS를 출시한다.
+<ul>
+<li>IaaS를 하는 기업은 대기업 위주이며(네이버 클라우드, 카카오 클라우드 등)</li>
+<li>대부분의 클라우드는 IaaS를 이용해 SaaS를 개발한다.</li>
+</ul>
+</li>
+<li>클라우드 시장
+<ul>
+<li>보통 Iaas, PaaS, SaaS로 나누어 보고 IaaS 시장에서 가장 많이 사용되는 서비스는 현재 AWS다.</li>
+</ul>
+</li>
+<li>IaaS를 만든다는 뜻
+<ul>
+<li>openStack 등의 솔루션을 통해 각 리소스를 가상화하고 서비스를 만드는것</li>
+<li>여기에 흥미가 있다면 C/C++/Python 등을 공부하여 openStack을 활용해보는 것이 좋다.</li>
+<li>다만, 현재로써는 석박사 과정이 필수이다.</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="자주-사용하는-기능">자주 사용하는 기능
+</h2><hr>
+<ul>
+<li>가장 기본적으로 Network를 아용하여 네트워크 구조 세팅</li>
+<li>세팅된 Network 위에 Compute를 이용한 서버 구축</li>
+<li>Database를 이용한 애플리케이션 DB 연결</li>
+<li>Storage를 이용하여 애플리케이션에서 나오는 로그와 같은 파일 저장</li>
+<li>그 외로 Security를 통해 보안 강화, AI를 통해 AI 서비스 붙이기<br>
+즉, 이외에는 필요한 것들을 찾아 붙이는 방식</li>
+</ul>
+<!-- raw HTML omitted -->
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/kakaotechbootcamp/">KakaoTechBootCamp</a>
+        
+            <a href="/tags/bootcamp/">BootCamp</a>
+        
+            <a href="/tags/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0/">가상화기술</a>
+        
+            <a href="/tags/iaas/">IaaS</a>
+        
+            <a href="/tags/paas/">PaaS</a>
+        
+            <a href="/tags/saas/">SaaS</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/cloud/cloud_ot/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">부트캠프 시작(클라우드 OT)</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 My New Hugo Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

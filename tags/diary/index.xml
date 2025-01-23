@@ -1,21 +1,26 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Diary - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/diary.html</link>
-        <description>Diary - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 Mar 2023 21:50:49 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/diary.html" rel="self" type="application/rss+xml" /><item>
-    <title>[Diary] 깃 블로그를 작성하기 전 다짐</title>
-    <link>https://choiseungwoo98.github.io/first-posts.html</link>
-    <pubDate>Wed, 01 Mar 2023 21:50:49 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/first-posts.html</guid>
-    <description><![CDATA[처음 써보는 깃 블로그 게시글 입니다.
-저는 이제 현업 3개월차 주주주주주주주주주주주니어 백엔드 개발자 입니다. :)
-블로그를 쓰려고 다짐한 이유는 제가 느끼는 것들과 공부한 부분을 글로 적고
-제 방식대로 이해하고 공부하기 위해 블로그를 작성 하자고 다짐하였습니다.
-앞으로 꾸준하고 열심히 적고 배우는 개발자가 되도록 노력하겠습니다.
-절대 이 마음 변치 않고 발전하는 개발자가 될 수 있도록!!
-화이팅!!!!!!]]></description>
-</item>
-</channel>
+        <title>Diary on My New Hugo Site</title>
+        <link>https://example.org/tags/diary/</link>
+        <description>Recent content in Diary on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 01 Mar 2023 21:50:49 +0900</lastBuildDate><atom:link href="https://example.org/tags/diary/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[Diary] 깃 블로그를 작성하기 전 다짐</title>
+        <link>https://example.org/posts/diary/first-posts/</link>
+        <pubDate>Wed, 01 Mar 2023 21:50:49 +0900</pubDate>
+        
+        <guid>https://example.org/posts/diary/first-posts/</guid>
+        <description>&lt;p&gt;처음 써보는 깃 블로그 게시글 입니다.&lt;br&gt;
+저는 이제 현업 3개월차 주주주주주주주주주주주니어 백엔드 개발자 입니다. :)&lt;br&gt;
+블로그를 쓰려고 다짐한 이유는 제가 느끼는 것들과 공부한 부분을 글로 적고&lt;br&gt;
+제 방식대로 이해하고 공부하기 위해 블로그를 작성 하자고 다짐하였습니다.&lt;br&gt;
+앞으로 꾸준하고 열심히 적고 배우는 개발자가 되도록 노력하겠습니다.&lt;br&gt;
+절대 이 마음 변치 않고 발전하는 개발자가 될 수 있도록!!&lt;br&gt;
+화이팅!!!!!!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

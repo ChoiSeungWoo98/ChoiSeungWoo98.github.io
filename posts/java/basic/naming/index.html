@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.\n그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!\n오늘 정리할 네이밍 규칙은 Java 이다.\n1. 네이밍 규칙이란? 프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다. 이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다. 2. 네이밍 규칙을 사용하면 따라오는 효과 가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다. 일관성 유지 : 일관된 네이밍 규칙을 따르면 코드가 전체적으로 일관성 있어 다양한 파일과 모듈 간의 이동과 이해를 용이하게 만든다. 버그 감소 : 명확한 이름을 사용하면 변수나 함수의 역할을 파악하기 쉬워지므로 실수나 버그 발생 가능성이 줄어든다. 3. 자바 네이밍 규칙 1. 공통 규칙 대소문자가 구분되어야 하고 길이에 제한이 없다. 예약어는 사용하면 안된다.(ex : class, import, char, break 등···) 숫자로 시작하면 안된다. 특수문자는 &lsquo;_&rsquo;(언더바)와 &lsquo;$&rsquo;(달러 기호)만 사용 가능하다. 파스칼 표기법과 카멜 표기법을 사용한다. 파스칼 표기법 : 모든 단어의 첫 번째 문자는 대문자이며 나머지는 소문자로 작성한다. (ex : PasclaCase ) 카멜 표기법 : 최초로 사용되는 단어는 모두 소문자로 작성하고 그 이후 첫번째 문자는 대문자 나머지는 소문자로 작성한다. (ex : camelCase) 반의어는 반드시 대응하는 개념으로 사용해야 한다. (반의어 종류 보러가기) 2. 패키지 명명 규칙 소문자로 시작(모든 소문자를 권장) 가급적 한던어 사용 권장 표준 패턴 권장(com.(회사명 / 팀 이름).프로젝트명.상위패키지.하위패키지.클래스) ex : com.choi.management.user.controller 3. 클래스 명명 규칙 파스칼 표기법 사용 명사 시작 ex : UserController 4. 인터페이스 명명 규칙 클래스랑 비슷한 명명 규칙을 갖고있다. 복수형 개념인 경우 복수형을 작성해준다. 축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다. 특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용 형용사 사용 할 수 있다.(Runnable, Remote 등…) ex : ConvertUserToMemberHandler 5. 인터페이스 명명 규칙 클래스랑 비슷한 명명 규칙을 갖고있다. 복수형 개념인 경우 복수형을 작성해준다. 축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다. 특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용 형용사 사용(Runnable, Remote 등···) ex : ConvertUserToMemberHandler 6. 메서드 명명 규칙 카멜 표기법 사용한다. 동사로 시작한다. ex : sendMessage(String message) 7. 변수 명명 규칙 카멜 표기법 사용한다. 명확한 이름으로 작성한다. boolean으로 가져올 때는 앞에 is를 붙인다. ex : userName, isChecked 8. 상수 명명 규칙 전부 대문자료 표기한다. 스네이크 케이스를 사용한다.(Snake Case : 단어와 단어 사이를 언더바(&rsquo;_&rsquo;)로 구분) ex : PI, MAX_COUNT public class Score() { // final 변수 선언과 초기화(최대 점수 : 100점) // 만약 초기화를 비어둔다면 추후에 초기화가 불가능 하다...(반드시 선언과 동시에 초기화 해주자!!) // 자바 명명 규칙은 나중에 게시물로 상세하게 작성해보겠다! 오늘 사용하는 상수는 대문자로! 단어와 단어 사이는 언더바를 이용한다! final int MAX_SCORE = 100; // 컴파일 에러가 발생 MAX_SCORE = 60; } final 메서드 오버라이딩 방지 안정성 확보(의도하지 않은 동작 변경 방지, 일관성 유지) final class Exam { // 시험의 최대 점수는 final로 선언하고 name은 변수로 선언 private final int MAX_SCORE = 100; private String name; // 이름 입력 public setName(String name) { this.name = name; } // 이름 가져오기 public String getName() { return name; } // 최대 점수 가져오기 public final String getMaxScore() { return MAX_SCORE; } } class MathExam extends Exam { // 이름 가져오기 메서드 오버라이딩 가능 public String getName() { System.out.println(&#34;이름 : &#34; + name); return name; } // 컴파일 에러 발생(최대 점수 가져오기 메서드를 오버라이딩 불가) public final String getMaxScore() { // ... } } final 클래스 상속이 불가능 메서드 오버라이딩이 불가능 해당 클래스를 변경하지 못하기 때문에 보안성 및 안정성이 강화 final class Exam { // 시험의 최대 점수는 final로 선언하고 name은 변수로 선언 private final int MAX_SCORE = 100; private String name; // 이름 입력 public setName(String name) {스 this.name = name; } // 이름 가져오기 public String getName() { return name; } // 최대 점수 가져오기 public String getMaxScore() { return MAX_SCORE; } } // 아래의 코드는 컴파일 에러 발생 class MathExam extends Exam { // ... } 반의어 돌아가기(자바 네이밍 공통 규칙 보러가기)\n">
+<title>[Java] 자바 네이밍 규칙(Java Naming Convention)</title>
+
+<link rel='canonical' href='https://example.org/posts/java/basic/naming/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="[Java] 자바 네이밍 규칙(Java Naming Convention)">
+<meta property='og:description' content=" 프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.\n그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!\n오늘 정리할 네이밍 규칙은 Java 이다.\n1. 네이밍 규칙이란? 프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다. 이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다. 2. 네이밍 규칙을 사용하면 따라오는 효과 가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다. 일관성 유지 : 일관된 네이밍 규칙을 따르면 코드가 전체적으로 일관성 있어 다양한 파일과 모듈 간의 이동과 이해를 용이하게 만든다. 버그 감소 : 명확한 이름을 사용하면 변수나 함수의 역할을 파악하기 쉬워지므로 실수나 버그 발생 가능성이 줄어든다. 3. 자바 네이밍 규칙 1. 공통 규칙 대소문자가 구분되어야 하고 길이에 제한이 없다. 예약어는 사용하면 안된다.(ex : class, import, char, break 등···) 숫자로 시작하면 안된다. 특수문자는 &lsquo;_&rsquo;(언더바)와 &lsquo;$&rsquo;(달러 기호)만 사용 가능하다. 파스칼 표기법과 카멜 표기법을 사용한다. 파스칼 표기법 : 모든 단어의 첫 번째 문자는 대문자이며 나머지는 소문자로 작성한다. (ex : PasclaCase ) 카멜 표기법 : 최초로 사용되는 단어는 모두 소문자로 작성하고 그 이후 첫번째 문자는 대문자 나머지는 소문자로 작성한다. (ex : camelCase) 반의어는 반드시 대응하는 개념으로 사용해야 한다. (반의어 종류 보러가기) 2. 패키지 명명 규칙 소문자로 시작(모든 소문자를 권장) 가급적 한던어 사용 권장 표준 패턴 권장(com.(회사명 / 팀 이름).프로젝트명.상위패키지.하위패키지.클래스) ex : com.choi.management.user.controller 3. 클래스 명명 규칙 파스칼 표기법 사용 명사 시작 ex : UserController 4. 인터페이스 명명 규칙 클래스랑 비슷한 명명 규칙을 갖고있다. 복수형 개념인 경우 복수형을 작성해준다. 축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다. 특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용 형용사 사용 할 수 있다.(Runnable, Remote 등…) ex : ConvertUserToMemberHandler 5. 인터페이스 명명 규칙 클래스랑 비슷한 명명 규칙을 갖고있다. 복수형 개념인 경우 복수형을 작성해준다. 축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다. 특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용 형용사 사용(Runnable, Remote 등···) ex : ConvertUserToMemberHandler 6. 메서드 명명 규칙 카멜 표기법 사용한다. 동사로 시작한다. ex : sendMessage(String message) 7. 변수 명명 규칙 카멜 표기법 사용한다. 명확한 이름으로 작성한다. boolean으로 가져올 때는 앞에 is를 붙인다. ex : userName, isChecked 8. 상수 명명 규칙 전부 대문자료 표기한다. 스네이크 케이스를 사용한다.(Snake Case : 단어와 단어 사이를 언더바(&rsquo;_&rsquo;)로 구분) ex : PI, MAX_COUNT public class Score() { // final 변수 선언과 초기화(최대 점수 : 100점) // 만약 초기화를 비어둔다면 추후에 초기화가 불가능 하다...(반드시 선언과 동시에 초기화 해주자!!) // 자바 명명 규칙은 나중에 게시물로 상세하게 작성해보겠다! 오늘 사용하는 상수는 대문자로! 단어와 단어 사이는 언더바를 이용한다! final int MAX_SCORE = 100; // 컴파일 에러가 발생 MAX_SCORE = 60; } final 메서드 오버라이딩 방지 안정성 확보(의도하지 않은 동작 변경 방지, 일관성 유지) final class Exam { // 시험의 최대 점수는 final로 선언하고 name은 변수로 선언 private final int MAX_SCORE = 100; private String name; // 이름 입력 public setName(String name) { this.name = name; } // 이름 가져오기 public String getName() { return name; } // 최대 점수 가져오기 public final String getMaxScore() { return MAX_SCORE; } } class MathExam extends Exam { // 이름 가져오기 메서드 오버라이딩 가능 public String getName() { System.out.println(&#34;이름 : &#34; + name); return name; } // 컴파일 에러 발생(최대 점수 가져오기 메서드를 오버라이딩 불가) public final String getMaxScore() { // ... } } final 클래스 상속이 불가능 메서드 오버라이딩이 불가능 해당 클래스를 변경하지 못하기 때문에 보안성 및 안정성이 강화 final class Exam { // 시험의 최대 점수는 final로 선언하고 name은 변수로 선언 private final int MAX_SCORE = 100; private String name; // 이름 입력 public setName(String name) {스 this.name = name; } // 이름 가져오기 public String getName() { return name; } // 최대 점수 가져오기 public String getMaxScore() { return MAX_SCORE; } } // 아래의 코드는 컴파일 에러 발생 class MathExam extends Exam { // ... } 반의어 돌아가기(자바 네이밍 공통 규칙 보러가기)\n">
+<meta property='og:url' content='https://example.org/posts/java/basic/naming/'>
+<meta property='og:site_name' content='My New Hugo Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Java-Basic' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='Naming' /><meta property='article:tag' content='Convention' /><meta property='article:published_time' content='2023-08-19T16:03:49&#43;09:00'/><meta property='article:modified_time' content='2023-08-19T16:03:49&#43;09:00'/>
+<meta name="twitter:title" content="[Java] 자바 네이밍 규칙(Java Naming Convention)">
+<meta name="twitter:description" content=" 프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.\n그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!\n오늘 정리할 네이밍 규칙은 Java 이다.\n1. 네이밍 규칙이란? 프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다. 이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다. 2. 네이밍 규칙을 사용하면 따라오는 효과 가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다. 일관성 유지 : 일관된 네이밍 규칙을 따르면 코드가 전체적으로 일관성 있어 다양한 파일과 모듈 간의 이동과 이해를 용이하게 만든다. 버그 감소 : 명확한 이름을 사용하면 변수나 함수의 역할을 파악하기 쉬워지므로 실수나 버그 발생 가능성이 줄어든다. 3. 자바 네이밍 규칙 1. 공통 규칙 대소문자가 구분되어야 하고 길이에 제한이 없다. 예약어는 사용하면 안된다.(ex : class, import, char, break 등···) 숫자로 시작하면 안된다. 특수문자는 &lsquo;_&rsquo;(언더바)와 &lsquo;$&rsquo;(달러 기호)만 사용 가능하다. 파스칼 표기법과 카멜 표기법을 사용한다. 파스칼 표기법 : 모든 단어의 첫 번째 문자는 대문자이며 나머지는 소문자로 작성한다. (ex : PasclaCase ) 카멜 표기법 : 최초로 사용되는 단어는 모두 소문자로 작성하고 그 이후 첫번째 문자는 대문자 나머지는 소문자로 작성한다. (ex : camelCase) 반의어는 반드시 대응하는 개념으로 사용해야 한다. (반의어 종류 보러가기) 2. 패키지 명명 규칙 소문자로 시작(모든 소문자를 권장) 가급적 한던어 사용 권장 표준 패턴 권장(com.(회사명 / 팀 이름).프로젝트명.상위패키지.하위패키지.클래스) ex : com.choi.management.user.controller 3. 클래스 명명 규칙 파스칼 표기법 사용 명사 시작 ex : UserController 4. 인터페이스 명명 규칙 클래스랑 비슷한 명명 규칙을 갖고있다. 복수형 개념인 경우 복수형을 작성해준다. 축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다. 특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용 형용사 사용 할 수 있다.(Runnable, Remote 등…) ex : ConvertUserToMemberHandler 5. 인터페이스 명명 규칙 클래스랑 비슷한 명명 규칙을 갖고있다. 복수형 개념인 경우 복수형을 작성해준다. 축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다. 특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용 형용사 사용(Runnable, Remote 등···) ex : ConvertUserToMemberHandler 6. 메서드 명명 규칙 카멜 표기법 사용한다. 동사로 시작한다. ex : sendMessage(String message) 7. 변수 명명 규칙 카멜 표기법 사용한다. 명확한 이름으로 작성한다. boolean으로 가져올 때는 앞에 is를 붙인다. ex : userName, isChecked 8. 상수 명명 규칙 전부 대문자료 표기한다. 스네이크 케이스를 사용한다.(Snake Case : 단어와 단어 사이를 언더바(&rsquo;_&rsquo;)로 구분) ex : PI, MAX_COUNT public class Score() { // final 변수 선언과 초기화(최대 점수 : 100점) // 만약 초기화를 비어둔다면 추후에 초기화가 불가능 하다...(반드시 선언과 동시에 초기화 해주자!!) // 자바 명명 규칙은 나중에 게시물로 상세하게 작성해보겠다! 오늘 사용하는 상수는 대문자로! 단어와 단어 사이는 언더바를 이용한다! final int MAX_SCORE = 100; // 컴파일 에러가 발생 MAX_SCORE = 60; } final 메서드 오버라이딩 방지 안정성 확보(의도하지 않은 동작 변경 방지, 일관성 유지) final class Exam { // 시험의 최대 점수는 final로 선언하고 name은 변수로 선언 private final int MAX_SCORE = 100; private String name; // 이름 입력 public setName(String name) { this.name = name; } // 이름 가져오기 public String getName() { return name; } // 최대 점수 가져오기 public final String getMaxScore() { return MAX_SCORE; } } class MathExam extends Exam { // 이름 가져오기 메서드 오버라이딩 가능 public String getName() { System.out.println(&#34;이름 : &#34; + name); return name; } // 컴파일 에러 발생(최대 점수 가져오기 메서드를 오버라이딩 불가) public final String getMaxScore() { // ... } } final 클래스 상속이 불가능 메서드 오버라이딩이 불가능 해당 클래스를 변경하지 못하기 때문에 보안성 및 안정성이 강화 final class Exam { // 시험의 최대 점수는 final로 선언하고 name은 변수로 선언 private final int MAX_SCORE = 100; private String name; // 이름 입력 public setName(String name) {스 this.name = name; } // 이름 가져오기 public String getName() { return name; } // 최대 점수 가져오기 public String getMaxScore() { return MAX_SCORE; } } // 아래의 코드는 컴파일 에러 발생 class MathExam extends Exam { // ... } 반의어 돌아가기(자바 네이밍 공통 규칙 보러가기)\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My New Hugo Site</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/java/" >
+                Java
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/java/basic/naming/">[Java] 자바 네이밍 규칙(Java Naming Convention)</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 19, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    4 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.<br>
+그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!<br>
+오늘 정리할 네이밍 규칙은 Java 이다.</p>
+</blockquote>
+<h2 id="1-네이밍-규칙이란">1. 네이밍 규칙이란?
+</h2><hr>
+<ul>
+<li>프로그래밍에서 변수, 함수, 클래스, 상수, 패키지 등의 작성할 때 따르는 규칙이다.</li>
+<li>이러한 규칙을 따르면 코드의 가독성이 좋아지고 일관석 있게 작성할 수 있다.</li>
+</ul>
+<h2 id="2-네이밍-규칙을-사용하면-따라오는-효과">2. 네이밍 규칙을 사용하면 따라오는 효과
+</h2><hr>
+<ul>
+<li>가독성 향상 : 의미 있는 단어를 사용해 코드의 의도를 쉽게 알 수 있고, 유지보수나 협업에 도움이 된다.</li>
+<li>일관성 유지 : 일관된 네이밍 규칙을 따르면 코드가 전체적으로 일관성 있어 다양한 파일과 모듈 간의 이동과 이해를 용이하게 만든다.</li>
+<li>버그 감소 : 명확한 이름을 사용하면 변수나 함수의 역할을 파악하기 쉬워지므로 실수나 버그 발생 가능성이 줄어든다.</li>
+</ul>
+<h2 id="3-자바-네이밍-규칙">3. 자바 네이밍 규칙
+</h2><h3 id="1-공통-규칙">1. 공통 규칙
+</h3><hr>
+<ul>
+<li>대소문자가 구분되어야 하고 길이에 제한이 없다.</li>
+<li>예약어는 사용하면 안된다.(ex : class, import, char, break 등···)</li>
+<li>숫자로 시작하면 안된다.</li>
+<li>특수문자는 &lsquo;_&rsquo;(언더바)와 &lsquo;$&rsquo;(달러 기호)만 사용 가능하다.</li>
+<li>파스칼 표기법과 카멜 표기법을 사용한다.</li>
+<li>파스칼 표기법 : 모든 단어의 첫 번째 문자는 대문자이며 나머지는 소문자로 작성한다. (ex : PasclaCase )</li>
+<li>카멜 표기법 : 최초로 사용되는 단어는 모두 소문자로 작성하고 그 이후 첫번째 문자는 대문자 나머지는 소문자로 작성한다. (ex : camelCase)</li>
+<li>반의어는 반드시 대응하는 개념으로 사용해야 한다. (<a class="link" href="#%eb%b0%98%ec%9d%98%ec%96%b4" >반의어 종류 보러가기</a>)</li>
+</ul>
+<h3 id="2-패키지-명명-규칙">2. 패키지 명명 규칙
+</h3><hr>
+<ul>
+<li>소문자로 시작(모든 소문자를 권장)</li>
+<li>가급적 한던어 사용 권장</li>
+<li>표준 패턴 권장(com.(회사명 / 팀 이름).프로젝트명.상위패키지.하위패키지.클래스)</li>
+<li>ex : com.choi.management.user.controller</li>
+</ul>
+<h3 id="3-클래스-명명-규칙">3. 클래스 명명 규칙
+</h3><hr>
+<ul>
+<li>파스칼 표기법 사용</li>
+<li>명사 시작</li>
+<li>ex : UserController</li>
+</ul>
+<h3 id="4-인터페이스-명명-규칙">4. 인터페이스 명명 규칙
+</h3><hr>
+<ul>
+<li>클래스랑 비슷한 명명 규칙을 갖고있다.</li>
+<li>복수형 개념인 경우 복수형을 작성해준다.</li>
+<li>축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다.</li>
+<li>특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용</li>
+<li>형용사 사용 할 수 있다.(Runnable, Remote 등…)</li>
+<li>ex : ConvertUserToMemberHandler</li>
+</ul>
+<h3 id="5-인터페이스-명명-규칙">5. 인터페이스 명명 규칙
+</h3><hr>
+<ul>
+<li>클래스랑 비슷한 명명 규칙을 갖고있다.</li>
+<li>복수형 개념인 경우 복수형을 작성해준다.</li>
+<li>축약어, 약어는 가급적 작성하지 않고 의미있는 단어로만 작성한다.</li>
+<li>특별한 접두사나 접미사를 사용하지 않고 파스칼 표기법 사용</li>
+<li>형용사 사용(Runnable, Remote 등···)</li>
+<li>ex : ConvertUserToMemberHandler</li>
+</ul>
+<h3 id="6-메서드-명명-규칙">6. 메서드 명명 규칙
+</h3><hr>
+<ul>
+<li>카멜 표기법 사용한다.</li>
+<li>동사로 시작한다.</li>
+<li>ex : sendMessage(String message)</li>
+</ul>
+<h3 id="7-변수-명명-규칙">7. 변수 명명 규칙
+</h3><hr>
+<ul>
+<li>카멜 표기법 사용한다.</li>
+<li>명확한 이름으로 작성한다.</li>
+<li>boolean으로 가져올 때는 앞에 is를 붙인다.</li>
+<li>ex : userName, isChecked</li>
+</ul>
+<h3 id="8-상수-명명-규칙">8. 상수 명명 규칙
+</h3><hr>
+<ul>
+<li>전부 대문자료 표기한다.</li>
+<li>스네이크 케이스를 사용한다.(Snake Case : 단어와 단어 사이를 언더바(&rsquo;_&rsquo;)로 구분)</li>
+<li>ex : PI, MAX_COUNT</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Score</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// final 변수 선언과 초기화(최대 점수 : 100점)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 만약 초기화를 비어둔다면 추후에 초기화가 불가능 하다...(반드시 선언과 동시에 초기화 해주자!!)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 자바 명명 규칙은 나중에 게시물로 상세하게 작성해보겠다! 오늘 사용하는 상수는 대문자로! 단어와 단어 사이는 언더바를 이용한다!</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> MAX_SCORE <span style="color:#f92672">=</span> 100;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 컴파일 에러가 발생</span>
+</span></span><span style="display:flex;"><span>    MAX_SCORE <span style="color:#f92672">=</span> 60;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="2">
+<li>final 메서드</li>
+</ol>
+<ul>
+<li>오버라이딩 방지</li>
+<li>안정성 확보(의도하지 않은 동작 변경 방지, 일관성 유지)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Exam</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 시험의 최대 점수는 final로 선언하고 name은 변수로 선언</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> MAX_SCORE <span style="color:#f92672">=</span> 100;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> String name;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 이름 입력</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">setName</span>(String name) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 이름 가져오기</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> name;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 최대 점수 가져오기</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> String <span style="color:#a6e22e">getMaxScore</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> MAX_SCORE;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MathExam</span> <span style="color:#66d9ef">extends</span> Exam {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 이름 가져오기 메서드 오버라이딩 가능</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;이름 : &#34;</span> <span style="color:#f92672">+</span> name);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> name;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 컴파일 에러 발생(최대 점수 가져오기 메서드를 오버라이딩 불가)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">final</span> String <span style="color:#a6e22e">getMaxScore</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="3">
+<li>final 클래스</li>
+</ol>
+<ul>
+<li>상속이 불가능</li>
+<li>메서드 오버라이딩이 불가능</li>
+<li>해당 클래스를 변경하지 못하기 때문에 보안성 및 안정성이 강화</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Exam</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 시험의 최대 점수는 final로 선언하고 name은 변수로 선언</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> MAX_SCORE <span style="color:#f92672">=</span> 100;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String name;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 이름 입력</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">setName</span>(String name) {스
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 이름 가져오기</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> name;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 최대 점수 가져오기</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getMaxScore</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> MAX_SCORE;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 아래의 코드는 컴파일 에러 발생</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MathExam</span> <span style="color:#66d9ef">extends</span> Exam {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ...</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="반의어">반의어
+</h2><ul>
+<li>
+<p>돌아가기(<a class="link" href="#1-%ea%b3%b5%ed%86%b5-%ea%b7%9c%ec%b9%99" >자바 네이밍 공통 규칙 보러가기</a>)</p>
+</li>
+<li>
+<p>get / set : 가져오다. / 할당하다.<br>
+(ex : getAge() / setAge() )</p>
+</li>
+<li>
+<p>add / delete : 추가하다. / 제거하다.<br>
+(ex : addUser() / deleteUser() )</p>
+</li>
+<li>
+<p>insert / delete : 삽입 / 삭제<br>
+(ex : insertUser() / deleteUser() )</p>
+</li>
+<li>
+<p>min / max : 최소 / 최대<br>
+(ex : minCnt() / maxCnt() )</p>
+</li>
+<li>
+<p>show / hide : 보이다 / 숨기다<br>
+(ex : showMove() / hideMove() )</p>
+</li>
+<li>
+<p>start / stop : 시동 / 정지<br>
+(ex : startMethod() / stopMethod() )</p>
+</li>
+<li>
+<p>suspend / resume : 일시 정지 / 재개하다<br>
+(ex : suspendMove() / resumeMove() )</p>
+</li>
+<li>
+<p>increment / decrement : 증가 / 감소<br>
+(ex : incrementViews() / decrementViews() )</p>
+</li>
+<li>
+<p>create / destroy : 창조하다. / 파괴하다.<br>
+(ex : createMap() / destroyMap() )</p>
+</li>
+<li>
+<p>next / previous : 다음 / 이전<br>
+(ex : nextUser() / previousUser() )</p>
+</li>
+<li>
+<p>open / close : 열다 / 닫다<br>
+(ex : openFile() / closeFile() )</p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크
+</h2><ul>
+<li><a class="link" href="https://thalals.tistory.com/325"  target="_blank" rel="noopener"
+    >자바 네이밍 규칙 - 1</a></li>
+<li><a class="link" href="https://dkswnkk.tistory.com/539"  target="_blank" rel="noopener"
+    >자바 네이밍 규칙 - 2</a></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java-basic/">Java-Basic</a>
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/naming/">Naming</a>
+        
+            <a href="/tags/convention/">Convention</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/java/basic/final/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Java] final 사용법</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/java/basic/differencebetweenjdkandjre/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Java] JDK와 JRE의 차이 그리고 JIT, JVM</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/java/websocket/websocket/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Java] Spring Boot, Websocket &#43; STOMP 사용하기</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/java/websocket/servereventtoclient/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Java] 서버에서 클라이언트로 이벤트를 보내는 4가지 방법</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 My New Hugo Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

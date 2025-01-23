@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 오늘은 AWS 첫번째 실습 시간이다.\nEC2에서 VPC를 사용하고 public이랑 private를 열어\npublic은 LB를 테스트하고\nprivate은 NAT를 이용한 인터넷 연결을 실습했다.\nCSP(Cloud Service Provider) 클라우드 컴퓨팅 서비스를 제공하는 회사(Ex. AWS, Azure, GCP, NCP 등) 인프라 서비스(IaaS), 플랫폼 서비스(PaaS), 소프트웨어 서비스(SaaS) 제공 AWS(Amazon Web Services) 아마존에서 제공하는 클라우드 컴퓨팅 플랫폼 현재 높은 점유율로 클라우드 시장에서 강세를 보이고 있다. 클라우드 컴퓨팅 내용 온프레미스(On-premise) 환경과 반대의 의미로 많이 사용 IT 인프라를 조직 내부에 직접 설치하고 운영하는 방식 장점 비용 절감 : 필요한 만큼 컴퓨팅 자원과 스토리지 대여를 통해 비용 절감 속도와 민첩성 : 시스템 자체에 대한 확정을지원하는 클라우드 특성상 빠르게 확장을 진행 할 수 있다. 글로벌 서비스 : 특정 지역에 한정되는 온프레미스와 달리 전세계적인 데이터 센터를 통해 사용 탄력성 : 모든 CSP에서는 리소스 사용량 증가로 인한 서비스 장애 방지를 위해 탄력적으로 사용 가능한 리소스 조절 보안 : 네트워크 방화벽, WAF 등을 통해 강력한 보안 유지 AZ(Availability Zone) 내용 하나의 Region 내에 위치한 데이터 센터 그룹 고가용성과 내결함성을 위해 여러 AZ에 걸쳐 앱 배포 Region 지리적으로 분리되어 여러 위치로 구분 리전끼리 통신 시 별도 비용이 추가될 수 있다. 글로벌 서비스 특성상 빠른 서비스를 제공하기 위해 여러 리전에 걸쳐 앱 배포 VPC(Virtual Private Cloud) 내용 개인 네트워크를 구성하는 요소 서브넷, 라우팅 테이블, 보안 그룹, 인터넷 게이트웨이, NAT 게이트웨이 이점 격리성 : 격리된 환경에서 구성하기 때문에 다른 네트워크에 간섭을 받지 않는다. 보안성 : 세부적인 보안 설정 가능 확장성 : 필요에 따라 서브넷 추가 구성, 라우팅 테이블, 보안 그룹 등 쉽게 추가 유연성 : 요구에 따라 온프레미스와 혼합해 하이브리드 클라우드 구성 VPC 요소 서브넷 실제 VM이 올라갈 네트워크 대역을 설정 private와 public은 인터넷 게이트웨이 유무와 라우팅 테이블에 인터넷 게이트웨이 추가 여부 private는 NAT 게이트웨이를 통하지 않는 이상 인터넷 통신 불가 public은 기본적으로 가능 라우팅 테이블 서브넷에서 사용되는 네트워크 네비게이션 같은 존재 CIDR 기반으로 동작, 각각의 대역에 대해 경로 설정 가능 보안 그룹 ACL(Access Control List)처럼 출발 IP, Port에 따라 출입 여부 결정 아웃바운드는 보통 통신의 원활함을 위해 열어두는 편 인바운드는 접속 및 통신용 포트를 제외한 나머지 통제 인터넷 게이트웨이 퍼블릭 서브넷을 결정하는 요소 라우팅 테이블과 조합하여 특정 대역만 인터넷이 가능하도록 설정(대부분 관리 비용이 때문에 다 열어둔다.) NAT(Network Address Translation) 게이트웨어 private에서도 인터넷 사용 가능 모든 경로를 다 열지 않고 특정 포트만 보안 그룹을 통해 연다. AWS EC2(Elastic Cloud Computer) UTM을 통해 VM을 생성하던 것과 비슷한 구조 CPU, Memory, 저장소 용량 등을 미리 정하고 생성 LB(Load Balancer) AWS에서 네트워크 트래픽을 여러 대상으로 분산시켜 가용성과 탄력성을 높이는 서비스 ALB(Application Load Balance) HTTP 및 HTTPS 트래픽에 최적화된 7 단계 로드 밸런서 CloudWatch와 통합되어 다양한 지표와 로그 모니터링 NLB(Network Load Balancer) 고성능을 요구하는 TCP, UDP 및 TLS 트래픽에 최적화된 4계층 로드 밸런서 매우 낮은 지연 시간, 고가용성 CLB(Classic Load Balancer) 구형 로드 밸런서로 4계층 + 7계층 로드 밸런서 설정이 간단하고 직관적 실습 LB 생성 순서\n">
+<title>AWS와 LB 실습</title>
+
+<link rel='canonical' href='https://example.org/posts/cloud/aws/basic/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="AWS와 LB 실습">
+<meta property='og:description' content=" 오늘은 AWS 첫번째 실습 시간이다.\nEC2에서 VPC를 사용하고 public이랑 private를 열어\npublic은 LB를 테스트하고\nprivate은 NAT를 이용한 인터넷 연결을 실습했다.\nCSP(Cloud Service Provider) 클라우드 컴퓨팅 서비스를 제공하는 회사(Ex. AWS, Azure, GCP, NCP 등) 인프라 서비스(IaaS), 플랫폼 서비스(PaaS), 소프트웨어 서비스(SaaS) 제공 AWS(Amazon Web Services) 아마존에서 제공하는 클라우드 컴퓨팅 플랫폼 현재 높은 점유율로 클라우드 시장에서 강세를 보이고 있다. 클라우드 컴퓨팅 내용 온프레미스(On-premise) 환경과 반대의 의미로 많이 사용 IT 인프라를 조직 내부에 직접 설치하고 운영하는 방식 장점 비용 절감 : 필요한 만큼 컴퓨팅 자원과 스토리지 대여를 통해 비용 절감 속도와 민첩성 : 시스템 자체에 대한 확정을지원하는 클라우드 특성상 빠르게 확장을 진행 할 수 있다. 글로벌 서비스 : 특정 지역에 한정되는 온프레미스와 달리 전세계적인 데이터 센터를 통해 사용 탄력성 : 모든 CSP에서는 리소스 사용량 증가로 인한 서비스 장애 방지를 위해 탄력적으로 사용 가능한 리소스 조절 보안 : 네트워크 방화벽, WAF 등을 통해 강력한 보안 유지 AZ(Availability Zone) 내용 하나의 Region 내에 위치한 데이터 센터 그룹 고가용성과 내결함성을 위해 여러 AZ에 걸쳐 앱 배포 Region 지리적으로 분리되어 여러 위치로 구분 리전끼리 통신 시 별도 비용이 추가될 수 있다. 글로벌 서비스 특성상 빠른 서비스를 제공하기 위해 여러 리전에 걸쳐 앱 배포 VPC(Virtual Private Cloud) 내용 개인 네트워크를 구성하는 요소 서브넷, 라우팅 테이블, 보안 그룹, 인터넷 게이트웨이, NAT 게이트웨이 이점 격리성 : 격리된 환경에서 구성하기 때문에 다른 네트워크에 간섭을 받지 않는다. 보안성 : 세부적인 보안 설정 가능 확장성 : 필요에 따라 서브넷 추가 구성, 라우팅 테이블, 보안 그룹 등 쉽게 추가 유연성 : 요구에 따라 온프레미스와 혼합해 하이브리드 클라우드 구성 VPC 요소 서브넷 실제 VM이 올라갈 네트워크 대역을 설정 private와 public은 인터넷 게이트웨이 유무와 라우팅 테이블에 인터넷 게이트웨이 추가 여부 private는 NAT 게이트웨이를 통하지 않는 이상 인터넷 통신 불가 public은 기본적으로 가능 라우팅 테이블 서브넷에서 사용되는 네트워크 네비게이션 같은 존재 CIDR 기반으로 동작, 각각의 대역에 대해 경로 설정 가능 보안 그룹 ACL(Access Control List)처럼 출발 IP, Port에 따라 출입 여부 결정 아웃바운드는 보통 통신의 원활함을 위해 열어두는 편 인바운드는 접속 및 통신용 포트를 제외한 나머지 통제 인터넷 게이트웨이 퍼블릭 서브넷을 결정하는 요소 라우팅 테이블과 조합하여 특정 대역만 인터넷이 가능하도록 설정(대부분 관리 비용이 때문에 다 열어둔다.) NAT(Network Address Translation) 게이트웨어 private에서도 인터넷 사용 가능 모든 경로를 다 열지 않고 특정 포트만 보안 그룹을 통해 연다. AWS EC2(Elastic Cloud Computer) UTM을 통해 VM을 생성하던 것과 비슷한 구조 CPU, Memory, 저장소 용량 등을 미리 정하고 생성 LB(Load Balancer) AWS에서 네트워크 트래픽을 여러 대상으로 분산시켜 가용성과 탄력성을 높이는 서비스 ALB(Application Load Balance) HTTP 및 HTTPS 트래픽에 최적화된 7 단계 로드 밸런서 CloudWatch와 통합되어 다양한 지표와 로그 모니터링 NLB(Network Load Balancer) 고성능을 요구하는 TCP, UDP 및 TLS 트래픽에 최적화된 4계층 로드 밸런서 매우 낮은 지연 시간, 고가용성 CLB(Classic Load Balancer) 구형 로드 밸런서로 4계층 + 7계층 로드 밸런서 설정이 간단하고 직관적 실습 LB 생성 순서\n">
+<meta property='og:url' content='https://example.org/posts/cloud/aws/basic/'>
+<meta property='og:site_name' content='My New Hugo Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='KakaoTechBootCamp' /><meta property='article:tag' content='BootCamp' /><meta property='article:tag' content='AWS' /><meta property='article:tag' content='ec2' /><meta property='article:published_time' content='2024-07-15T15:01:46&#43;09:00'/><meta property='article:modified_time' content='2024-07-15T15:01:46&#43;09:00'/>
+<meta name="twitter:title" content="AWS와 LB 실습">
+<meta name="twitter:description" content=" 오늘은 AWS 첫번째 실습 시간이다.\nEC2에서 VPC를 사용하고 public이랑 private를 열어\npublic은 LB를 테스트하고\nprivate은 NAT를 이용한 인터넷 연결을 실습했다.\nCSP(Cloud Service Provider) 클라우드 컴퓨팅 서비스를 제공하는 회사(Ex. AWS, Azure, GCP, NCP 등) 인프라 서비스(IaaS), 플랫폼 서비스(PaaS), 소프트웨어 서비스(SaaS) 제공 AWS(Amazon Web Services) 아마존에서 제공하는 클라우드 컴퓨팅 플랫폼 현재 높은 점유율로 클라우드 시장에서 강세를 보이고 있다. 클라우드 컴퓨팅 내용 온프레미스(On-premise) 환경과 반대의 의미로 많이 사용 IT 인프라를 조직 내부에 직접 설치하고 운영하는 방식 장점 비용 절감 : 필요한 만큼 컴퓨팅 자원과 스토리지 대여를 통해 비용 절감 속도와 민첩성 : 시스템 자체에 대한 확정을지원하는 클라우드 특성상 빠르게 확장을 진행 할 수 있다. 글로벌 서비스 : 특정 지역에 한정되는 온프레미스와 달리 전세계적인 데이터 센터를 통해 사용 탄력성 : 모든 CSP에서는 리소스 사용량 증가로 인한 서비스 장애 방지를 위해 탄력적으로 사용 가능한 리소스 조절 보안 : 네트워크 방화벽, WAF 등을 통해 강력한 보안 유지 AZ(Availability Zone) 내용 하나의 Region 내에 위치한 데이터 센터 그룹 고가용성과 내결함성을 위해 여러 AZ에 걸쳐 앱 배포 Region 지리적으로 분리되어 여러 위치로 구분 리전끼리 통신 시 별도 비용이 추가될 수 있다. 글로벌 서비스 특성상 빠른 서비스를 제공하기 위해 여러 리전에 걸쳐 앱 배포 VPC(Virtual Private Cloud) 내용 개인 네트워크를 구성하는 요소 서브넷, 라우팅 테이블, 보안 그룹, 인터넷 게이트웨이, NAT 게이트웨이 이점 격리성 : 격리된 환경에서 구성하기 때문에 다른 네트워크에 간섭을 받지 않는다. 보안성 : 세부적인 보안 설정 가능 확장성 : 필요에 따라 서브넷 추가 구성, 라우팅 테이블, 보안 그룹 등 쉽게 추가 유연성 : 요구에 따라 온프레미스와 혼합해 하이브리드 클라우드 구성 VPC 요소 서브넷 실제 VM이 올라갈 네트워크 대역을 설정 private와 public은 인터넷 게이트웨이 유무와 라우팅 테이블에 인터넷 게이트웨이 추가 여부 private는 NAT 게이트웨이를 통하지 않는 이상 인터넷 통신 불가 public은 기본적으로 가능 라우팅 테이블 서브넷에서 사용되는 네트워크 네비게이션 같은 존재 CIDR 기반으로 동작, 각각의 대역에 대해 경로 설정 가능 보안 그룹 ACL(Access Control List)처럼 출발 IP, Port에 따라 출입 여부 결정 아웃바운드는 보통 통신의 원활함을 위해 열어두는 편 인바운드는 접속 및 통신용 포트를 제외한 나머지 통제 인터넷 게이트웨이 퍼블릭 서브넷을 결정하는 요소 라우팅 테이블과 조합하여 특정 대역만 인터넷이 가능하도록 설정(대부분 관리 비용이 때문에 다 열어둔다.) NAT(Network Address Translation) 게이트웨어 private에서도 인터넷 사용 가능 모든 경로를 다 열지 않고 특정 포트만 보안 그룹을 통해 연다. AWS EC2(Elastic Cloud Computer) UTM을 통해 VM을 생성하던 것과 비슷한 구조 CPU, Memory, 저장소 용량 등을 미리 정하고 생성 LB(Load Balancer) AWS에서 네트워크 트래픽을 여러 대상으로 분산시켜 가용성과 탄력성을 높이는 서비스 ALB(Application Load Balance) HTTP 및 HTTPS 트래픽에 최적화된 7 단계 로드 밸런서 CloudWatch와 통합되어 다양한 지표와 로그 모니터링 NLB(Network Load Balancer) 고성능을 요구하는 TCP, UDP 및 TLS 트래픽에 최적화된 4계층 로드 밸런서 매우 낮은 지연 시간, 고가용성 CLB(Classic Load Balancer) 구형 로드 밸런서로 4계층 + 7계층 로드 밸런서 설정이 간단하고 직관적 실습 LB 생성 순서\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My New Hugo Site</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/kakaotechbootcamp/" >
+                KakaoTechBootCamp
+            </a>
+        
+            <a href="/categories/aws/" >
+                AWS
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/cloud/aws/basic/">AWS와 LB 실습</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 15, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>오늘은 AWS 첫번째 실습 시간이다.<br>
+EC2에서 VPC를 사용하고 public이랑 private를 열어<br>
+public은 LB를 테스트하고<br>
+private은 NAT를 이용한 인터넷 연결을 실습했다.</p>
+</blockquote>
+<h2 id="cspcloud-service-provider">CSP(Cloud Service Provider)
+</h2><hr>
+<ul>
+<li>클라우드 컴퓨팅 서비스를 제공하는 회사(Ex. AWS, Azure, GCP, NCP 등)</li>
+<li>인프라 서비스(IaaS), 플랫폼 서비스(PaaS), 소프트웨어 서비스(SaaS) 제공</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="awsamazon-web-services">AWS(Amazon Web Services)
+</h2><hr>
+<ul>
+<li>아마존에서 제공하는 클라우드 컴퓨팅 플랫폼</li>
+<li>현재 높은 점유율로 클라우드 시장에서 강세를 보이고 있다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="클라우드-컴퓨팅">클라우드 컴퓨팅
+</h2><hr>
+<h4 id="내용">내용
+</h4><ul>
+<li>온프레미스(On-premise) 환경과 반대의 의미로 많이 사용
+<ul>
+<li>IT 인프라를 조직 내부에 직접 설치하고 운영하는 방식</li>
+</ul>
+</li>
+</ul>
+<h4 id="장점">장점
+</h4><ul>
+<li>비용 절감 : 필요한 만큼 컴퓨팅 자원과 스토리지 대여를 통해 비용 절감</li>
+<li>속도와 민첩성 : 시스템 자체에 대한 확정을지원하는 클라우드 특성상 빠르게 확장을 진행 할 수 있다.</li>
+<li>글로벌 서비스 : 특정 지역에 한정되는 온프레미스와 달리 전세계적인 데이터 센터를 통해 사용</li>
+<li>탄력성 : 모든 CSP에서는 리소스 사용량 증가로 인한 서비스 장애 방지를 위해 탄력적으로 사용 가능한 리소스 조절</li>
+<li>보안 : 네트워크 방화벽, WAF 등을 통해 강력한 보안 유지</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="azavailability-zone">AZ(Availability Zone)
+</h2><hr>
+<h4 id="내용-1">내용
+</h4><ul>
+<li>하나의 Region 내에 위치한 데이터 센터 그룹</li>
+<li>고가용성과 내결함성을 위해 여러 AZ에 걸쳐 앱 배포</li>
+</ul>
+<h4 id="region">Region
+</h4><ul>
+<li>지리적으로 분리되어 여러 위치로 구분</li>
+<li>리전끼리 통신 시 별도 비용이 추가될 수 있다.</li>
+<li>글로벌 서비스 특성상 빠른 서비스를 제공하기 위해 여러 리전에 걸쳐 앱 배포</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="vpcvirtual-private-cloud">VPC(Virtual Private Cloud)
+</h2><hr>
+<h4 id="내용-2">내용
+</h4><ul>
+<li>개인 네트워크를 구성하는 요소</li>
+<li>서브넷, 라우팅 테이블, 보안 그룹, 인터넷 게이트웨이, NAT 게이트웨이</li>
+</ul>
+<h4 id="이점">이점
+</h4><ul>
+<li>격리성 : 격리된 환경에서 구성하기 때문에 다른 네트워크에 간섭을 받지 않는다.</li>
+<li>보안성 : 세부적인 보안 설정 가능</li>
+<li>확장성 : 필요에 따라 서브넷 추가 구성, 라우팅 테이블, 보안 그룹 등 쉽게 추가</li>
+<li>유연성 : 요구에 따라 온프레미스와 혼합해 하이브리드 클라우드 구성</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="vpc-요소">VPC 요소
+</h2><hr>
+<h4 id="서브넷">서브넷
+</h4><ul>
+<li>실제 VM이 올라갈 네트워크 대역을 설정</li>
+<li>private와 public은 인터넷 게이트웨이 유무와 라우팅 테이블에 인터넷 게이트웨이 추가 여부</li>
+<li>private는 NAT 게이트웨이를 통하지 않는 이상 인터넷 통신 불가 public은 기본적으로 가능</li>
+</ul>
+<h4 id="라우팅-테이블">라우팅 테이블
+</h4><ul>
+<li>서브넷에서 사용되는 네트워크 네비게이션 같은 존재</li>
+<li>CIDR 기반으로 동작, 각각의 대역에 대해 경로 설정 가능</li>
+</ul>
+<h4 id="보안-그룹">보안 그룹
+</h4><ul>
+<li>ACL(Access Control List)처럼 출발 IP, Port에 따라 출입 여부 결정</li>
+<li>아웃바운드는 보통 통신의 원활함을 위해 열어두는 편</li>
+<li>인바운드는 접속 및 통신용 포트를 제외한 나머지 통제</li>
+</ul>
+<h4 id="인터넷-게이트웨이">인터넷 게이트웨이
+</h4><ul>
+<li>퍼블릭 서브넷을 결정하는 요소</li>
+<li>라우팅 테이블과 조합하여 특정 대역만 인터넷이 가능하도록 설정(대부분 관리 비용이 때문에 다 열어둔다.)</li>
+</ul>
+<h4 id="natnetwork-address-translation-게이트웨어">NAT(Network Address Translation) 게이트웨어
+</h4><ul>
+<li>private에서도 인터넷 사용 가능</li>
+<li>모든 경로를 다 열지 않고 특정 포트만 보안 그룹을 통해 연다.</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="aws-ec2elastic-cloud-computer">AWS EC2(Elastic Cloud Computer)
+</h2><hr>
+<ul>
+<li>UTM을 통해 VM을 생성하던 것과 비슷한 구조</li>
+<li>CPU, Memory, 저장소 용량 등을 미리 정하고 생성</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="lbload-balancer">LB(Load Balancer)
+</h2><hr>
+<ul>
+<li>AWS에서 네트워크 트래픽을 여러 대상으로 분산시켜 가용성과 탄력성을 높이는 서비스</li>
+<li>ALB(Application Load Balance)
+<ul>
+<li>HTTP 및 HTTPS 트래픽에 최적화된 7 단계 로드 밸런서</li>
+<li>CloudWatch와 통합되어 다양한 지표와 로그 모니터링</li>
+</ul>
+</li>
+<li>NLB(Network Load Balancer)
+<ul>
+<li>고성능을 요구하는 TCP, UDP 및 TLS 트래픽에 최적화된 4계층 로드 밸런서</li>
+<li>매우 낮은 지연 시간, 고가용성</li>
+</ul>
+</li>
+<li>CLB(Classic Load Balancer)
+<ul>
+<li>구형 로드 밸런서로 4계층 + 7계층 로드 밸런서</li>
+<li>설정이 간단하고 직관적</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<h2 id="실습">실습
+</h2><hr>
+<p>LB 생성 순서</p>
+<ol>
+<li>VPC 생성</li>
+<li>서브넷 생성(여러개)</li>
+<li>공통 보안 그룹 생성</li>
+<li>인터넷 게이트웨이 생성</li>
+<li>nat 게이트웨이 생성</li>
+<li>인스턴스 생성(여러개)</li>
+<li>라우팅 테이블 생성(public, private)</li>
+<li>LB 생성
+<ul>
+<li>타겟 그룹 생성</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 양쪽 서버에서 똑같이 진행</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 퍼블릭 서버 접속</span>
+</span></span><span style="display:flex;"><span>ssh -i &lt;key 파일 명&gt; &lt;OS 명&gt;@&lt;ip 주소&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 파이썬 실행을 위한 다운로드</span>
+</span></span><span style="display:flex;"><span>sudo apt<span style="color:#f92672">(</span>yum<span style="color:#f92672">)</span> update <span style="color:#f92672">&amp;&amp;</span> sudo apt<span style="color:#f92672">(</span>yum<span style="color:#f92672">)</span> install -y python3-flask
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 파이썬 파일 작성</span>
+</span></span><span style="display:flex;"><span>vi app.py
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 파일 실행</span>
+</span></span><span style="display:flex;"><span>sudo python3 app.py
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># LB DNS를 활용해 접근</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># private 접근 하기</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># public 서버에 접근 한 후 tem 파일 복사 후 파일 생성</span>
+</span></span><span style="display:flex;"><span>vi key.tem
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># private 접속 - 같은 네트워크 대역이라 접속이 가능하다.</span>
+</span></span><span style="display:flex;"><span>ssh -i key.tem &lt;OS&gt;@&lt;IPv4&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># private 접속 후 apt(yum) update</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 인터넷 연결이 없기 때문에 update 되지 않음</span>
+</span></span><span style="display:flex;"><span>sudo apt<span style="color:#f92672">(</span>yum<span style="color:#f92672">)</span> update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># NAT 연결 후 인터넷 연결 테스트</span>
+</span></span><span style="display:flex;"><span>sudo apt<span style="color:#f92672">(</span>yum<span style="color:#f92672">)</span> update
+</span></span></code></pre></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/kakaotechbootcamp/">KakaoTechBootCamp</a>
+        
+            <a href="/tags/bootcamp/">BootCamp</a>
+        
+            <a href="/tags/aws/">AWS</a>
+        
+            <a href="/tags/ec2/">Ec2</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/cloud/aws/iam_and_s3/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">AWS IAM을 이용한 S3 실습</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/docker_etc/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker 이론</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/docker_conpose/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker_conpose</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/dockerfile_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Dockerfile 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/docker_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 My New Hugo Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

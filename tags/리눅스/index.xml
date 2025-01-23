@@ -1,29 +1,603 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>리눅스 - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4.html</link>
-        <description>리눅스 - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 08 Jul 2024 22:32:35 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/%EB%A6%AC%EB%88%85%EC%8A%A4.html" rel="self" type="application/rss+xml" /><item>
-    <title>Linux 심화</title>
-    <link>https://choiseungwoo98.github.io/linux_detail.html</link>
-    <pubDate>Mon, 08 Jul 2024 22:32:35 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/linux_detail.html</guid>
-    <description><![CDATA[리눅스에 대해 배웠다.
-오늘은 실습이 주를 이뤘다. 각각의 명령어가 무슨 일을 하는지 모르다 보니 사실상 한컴타자연습 느낌.. 이렇구나 하고 넘어가는 정도라 다시 정리&hellip;!
-CGroup(Control Group) 개념 프로세서가 사용하는 자원(CPU, 메모리, 디스크, I/O, 네트워크 대역폭 등) 관리 및 제한 애플리케이션의 성능 최적화 및 제어 프로세스를 그룹으로 묶고 사용할 수 있는 자원을 제한, 제어하는 방식 주요 기능 리소스 제한 : 자원을 제한해 안정성 보장 리소스 우선순위 : 중요도에 따른 자원을 할당 및 제한 리소스 계정 : 그룹 별 자원 사용량 모니터링 및 통계 정보 제공 리소스 격리 : 다른 프로세서 그룹 간의 자원 사용을 격리하여 타 그룹에 영향이 미치지 않도록 함 구조 cpu : 사용량 제한 및 보장 cpuacct : 사용량 모니터링 memory : 사용량 제한 및 통계 제공 blkio : 블록(디스크) I/O 사용량 제한 및 모니터링 net_cls : 네트워크 트래픽 분류 및 제한 freezer: 프로세스 중단, 재개 devices: 장치 접근 제어 hugetlb: 큰 페이지 메모리 사용량 제한 perf_event: 성능 이벤트 모니터링 사용법 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 # cgroup 실습 환경 세팅 sudo apt-get install cgroup-tools-stress # cpu 제한 실습 # cpulimit이라는 이름으로 cgroup 생성 sudo cgcreate -g cpu:/cpulimit # 생성 여부 확인 lscgroup | grep cpulimit # cpu 제한 설정(50000을 출력 후 출력 값을 cpu.]]></description>
-</item>
-<item>
-    <title>Linux 기초</title>
-    <link>https://choiseungwoo98.github.io/linux_basic.html</link>
-    <pubDate>Fri, 05 Jul 2024 22:03:57 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/linux_basic.html</guid>
-    <description><![CDATA[리눅스에 대해 배웠다.
-처음 알게된 명령어도 많았지만
-하다보면 외워지겠지&hellip;
-일단 정리정리..
-리눅스 유닉스 계열의 OS 중 하나로 전 세계적으로 널리 사용되고 있는 오픈 소스 소프트웨어이다. 다양한 시스템에서 동작하며 특히 서버, 데스크탑, 모바일 기기에서 사용 오픈소스 개념 오픈 소스 소프트웨어(OOS : Open Source Software)로 누구나 열람, 수정, 배포가 가능한 소프트웨어이다. 중요성 투명성 : 공개 소스로 동작 방식 확인 가능 협업과 혁신 : 누구나 수정, 배포가 가능해 빠른 소프트웨어 개선 비용 절감 : 라이센스 비용이 없거나 저렴함 자유와 통제 : 자유롭게 수정할 수 있는 권한 GPL License 자유 소프트웨어 재단에서 만든 라이선스로 자유롭게 사용할 수 있고 수정, 배포 할 수 있는 권리 보장 자유 소프트웨어 운동 사용, 수정, 공유의 자유를 보장하는 소프트웨어 소프트웨어는 사용자의 자유와 권리를 침해하지 않아야 한다는 철학 자유와 접근성을 증진하고 독점 소프트웨어에 대한 대안을 제공 리눅스 구조 어플리케이션 사용자가 직접 상호작용하는 단계로 빌드된 앱, 바이너리, 명령어, 빌드된 파일을 통틀어 어플리케이션이라고 한다.]]></description>
-</item>
-</channel>
+        <title>리눅스 on My New Hugo Site</title>
+        <link>https://example.org/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/</link>
+        <description>Recent content in 리눅스 on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 08 Jul 2024 22:32:35 +0900</lastBuildDate><atom:link href="https://example.org/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux 심화</title>
+        <link>https://example.org/posts/linux/linux_detail/</link>
+        <pubDate>Mon, 08 Jul 2024 22:32:35 +0900</pubDate>
+        
+        <guid>https://example.org/posts/linux/linux_detail/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;리눅스에 대해 배웠다.&lt;br&gt;
+오늘은 실습이 주를 이뤘다.
+각각의 명령어가 무슨 일을 하는지 모르다 보니
+사실상 한컴타자연습 느낌..
+이렇구나 하고 넘어가는 정도라 다시 정리&amp;hellip;!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;cgroupcontrol-group&#34;&gt;CGroup(Control Group)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;개념&#34;&gt;개념
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;프로세서가 사용하는 자원(CPU, 메모리, 디스크, I/O, 네트워크 대역폭 등) 관리 및 제한&lt;/li&gt;
+&lt;li&gt;애플리케이션의 성능 최적화 및 제어&lt;/li&gt;
+&lt;li&gt;프로세스를 그룹으로 묶고 사용할 수 있는 자원을 제한, 제어하는 방식&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;주요-기능&#34;&gt;주요 기능
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;리소스 제한 : 자원을 제한해 안정성 보장&lt;/li&gt;
+&lt;li&gt;리소스 우선순위 : 중요도에 따른 자원을 할당 및 제한&lt;/li&gt;
+&lt;li&gt;리소스 계정 : 그룹 별 자원 사용량 모니터링 및 통계 정보 제공&lt;/li&gt;
+&lt;li&gt;리소스 격리 : 다른 프로세서 그룹 간의 자원 사용을 격리하여 타 그룹에 영향이 미치지 않도록 함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;구조&#34;&gt;구조
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;cpu : 사용량 제한 및 보장
+&lt;ul&gt;
+&lt;li&gt;cpuacct : 사용량 모니터링&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;memory : 사용량 제한 및 통계 제공&lt;/li&gt;
+&lt;li&gt;blkio : 블록(디스크) I/O 사용량 제한 및 모니터링&lt;/li&gt;
+&lt;li&gt;net_cls : 네트워크 트래픽 분류 및 제한&lt;/li&gt;
+&lt;li&gt;freezer: 프로세스 중단, 재개&lt;/li&gt;
+&lt;li&gt;devices: 장치 접근 제어&lt;/li&gt;
+&lt;li&gt;hugetlb: 큰 페이지 메모리 사용량 제한&lt;/li&gt;
+&lt;li&gt;perf_event: 성능 이벤트 모니터링&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;사용법&#34;&gt;사용법
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# cgroup 실습 환경 세팅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install cgroup-tools-stress
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# cpu 제한 실습&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# cpulimit이라는 이름으로 cgroup 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo cgcreate -g cpu:/cpulimit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 생성 여부 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lscgroup | grep cpulimit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# cpu 제한 설정(50000을 출력 후 출력 값을 cpu.max 파일에 기록)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#ae81ff&#34;&gt;50000&lt;/span&gt; | sudo tee /sys/fs/cgroup/cpulimit/cpu.max
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# cpu 실행(cgroup의 cpu 서브시스템을 사용하는데 stress 도구를 사용해 부하를 준다)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# cpulitmit을 실행하는데 cpu는 2개 vm(메모리 작업)은 1개를 작업 시작하고 30초 후 작업 종료 이 과정을 백그라운드에서 실행하고 작업 상태를 실시간으로 보여줘&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo cgexec -g cpu:/cpulimit stress --cpu &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; --vm &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; --timeout 30s &amp;amp; top
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# cgroup 삭제&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo cgdelete -g cpu:/cpulimit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# memory 제한 실습&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# memorylimit 이름의 그룹 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo cgcreate -g memory:/memorylimit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 512MB로 메모리 제한 설정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#66d9ef&#34;&gt;$((&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;512&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1024&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1024&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;))&lt;/span&gt; | sudo tee /sys/fs/cgroup/memorylimit/memory.max
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 메모리 시스템 부하 주기 및 0.5초 마다 memory.current 파일 내용 출력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo eegexec -g memory:/memorylimit stress --vm-byte 1024M --vm &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; --timeout 30s &amp;amp; watch -n 0.5 cat /sys/fs/cgroup/memorylimit/memory.current
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# cgroup 삭제&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo cgdelete -g memory:/memorylimit
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;namespace&#34;&gt;NameSpace
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;개념-1&#34;&gt;개념
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;프로세스가 시스템 리소스를 격리하여 독립된 환경에서 실행되도록 하는 기술&lt;/li&gt;
+&lt;li&gt;컨테이너 기술에서 중요하게 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;종류&#34;&gt;종류
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Mount Namespace : 파일 시스템 마운트를 격리하여 각각 독립적인 파일 시스템 트리를 갖고 있다.&lt;/li&gt;
+&lt;li&gt;Process ID Namespace : 프로세스 ID 격리하고 독립된 프로세스 ID 공간을 가지므로, 네임스페이스 마다 동일한 PID를 가질수 있다.&lt;/li&gt;
+&lt;li&gt;Network Namespace(net) : 네트워크 장치, IP 주소, 포트 번호 등을 격리하여 독립적인 네트워크 스택을 가지며 네임스페이스 간 장치를 독립적으로 사용 가능&lt;/li&gt;
+&lt;li&gt;User Namespace : 사용자와 그룹 ID를 격리하여 비루트 사용자가 네임스페이스 내에 루트 권한을 가질수 있다.&lt;/li&gt;
+&lt;li&gt;IPC Namespace(ipc) : 프로세스간 통신(메시지, 큐, 세마포어, 공유 메모리 등)을 격리하여 타 네임스페이스와 충돌 없이 사용 가능하다.&lt;/li&gt;
+&lt;li&gt;UTS Namespace(uts) : 호스트와 도메인 이름을 격리하여 독립적으로 사용 가능, 이는 컨테이너화 된 시스템 식별 정보를 별도 설정하기 유용하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;사용법-1&#34;&gt;사용법
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Namespace 실습 환경 세팅&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get update
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt-get install -y util-linux
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 새 마운트 네임스페이스 에서 관리자 권한으로 새로운 bash 셸 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo unshare --mount /bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 셸 안에 /mnt/test 디렉토리 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir /mnt/test
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# tmpfs 타임의 임시 파일 시스템을 /mnt/test 에 마운트(운영체제에서 파일 시스템을 특정 디렉토리에 연결하여 사용할 수있도록 하는 과정)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mount -t tmpfs none /mnt/test
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;Hello from Mount Namespace&amp;#34;라는 텍스트를 /mnt/test/hello.txt 파일에 작성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello from Mount Namespace&amp;#34;&lt;/span&gt; &amp;gt; /mnt/test/hello.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 방금 작성 hello.txt의 내용 출력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat /mnt/test/hello.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 새롭게 만든 마운트 네임스페이스(현재 셸) 종료&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;exit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 호스트 네임스페이스에서 /mnt/test 디렉토리의 내용 나열&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls /mnt/test
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# PID Namespace 실습&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# PID 네임 스페이스 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo unshare -pid -fork /bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 생성된 PID 네임 스페이스 안에 실행 중인 모든 프로세스 출력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ps -none
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 현재 bash 쉘의 프로세스 id 출력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo $$
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#PID 네임 스페이스 bash 쉘 종료&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;exit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 기존 PID 네임스페이스로 위 동작과 동일&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ps -e
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo $$
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# User(UID, GID) Namespace 실습&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# USER 네임 스페이스 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo unshare --user /bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 현재 id 정보 출력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;id
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# root_test_file이라는 이름으로 빈 파일 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch /root_test_file
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 생성한 빈 파일 정보 출력 및 나가기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls -l /root_test_file
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;exit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 관리자 권한으로 root_test_file 삭제&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo rm /root_test_file
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# UTS Namespace&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 현재 시스템 호스트명 출력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hostname
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 새로운 UTS 네임스페이스 생성 후 bash 쉘 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo unshare --uts /bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 새로운 UTS 안에 호스트 명을 kakao로 변경 후 출력 후 나가기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hostname kakao
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hostname
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;exit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 기존 호스트 네임 출력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hostname
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;chrootchange-root&#34;&gt;Chroot(Change Root)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;개념-2&#34;&gt;개념
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;특정 디렉토리를 시스템의 루트 디렉토리로 설정하여 그 안에서 실행되는 프로그램이 해당 디렉토리를 루트로 인식(chroot jail)&lt;/li&gt;
+&lt;li&gt;시스템 일부를 격리하여 제한된 환경에서 테스트나 보안 목적으로 사용&lt;/li&gt;
+&lt;li&gt;특정 디렉토리를 빠져나가지 못하기 때문에 감옥 이라고도 부른다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;주요-기능-1&#34;&gt;주요 기능
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;보안 : 사용자가 시스템의 다른 부분에 접근하지 못하도록 한다.&lt;/li&gt;
+&lt;li&gt;테스트 : 새로운 소프트웨어나 설정을 격리된 환경에서 테스트&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;사용법-2&#34;&gt;사용법
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# /mychroot 디렉토리 아래에 여러 디렉토리를 한번에 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo mkdir -p /mychroot/&amp;lt;bin,lib,lib64,dev,etc,proc,sys&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# /bin 디렉토리의 모든 파일과 /bin/bash, /bin/ls, /bin/cat이 의존하는 모든 라이브러리 파일을 디렉토리 구조를 유지한 채 /mychroot로 복사&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo cp /bin/* /mychroot/bin/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; lib in &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;ldd /bin/bash /bin/ls /bin/cat | grep -o &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/lib[^ ]*&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; sudo cp --parents &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;$lib&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; /mychroot; &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# mychroot 환경에서 proc, sys, dev를 사용할 수 있도록 마운트 하는 작업을 수행한다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo mount -t proc proc /mychroot/proc
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo mount -t sysfs sys /mychroot/sys
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo mount --bind /dev /mychroot/dev
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# mychroot 디렉토리로 변경하고 쉘을 실행해 root 인 것처럼 동작하게 하는 작업&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo chroot /mychroot /bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 현재 루트 디렉토리의 내용 나열&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls /
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# /etc/kakao에 파일 저장 후 출력 및 쉘 종료&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello from chroot&amp;#34;&lt;/span&gt; &amp;gt; /etc/kakao
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat /etc/kakao
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;exit
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 마운트한 proc, sys, dev를 언마운트 한 후 mychroot 디렉토리 및 하위 모든 내용 삭제&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo umount /mychroot/proc
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo umount /mychroot/sys
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo umount /mychroot/dev
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo rm -rf /mychroot
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;udsunix-domain-socket&#34;&gt;UDS(Unix Domain Socket)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;개념-3&#34;&gt;개념
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;동일한 컴퓨터 내의 프로세스 간 통신(Inter-Process Communication, IPC)를 위한 매커니즘 중 하나&lt;/li&gt;
+&lt;li&gt;TCP/IP 네트워크 소켓과 유사하지만 로컬 파일 시스템을 통해 통신&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;주요-특징&#34;&gt;주요 특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;로컬 통신 : 호스트 내에세 실행되는 프로세스 간의 통신을 지원해 네트워크 소켓에 비해 성능 우수&lt;/li&gt;
+&lt;li&gt;파일 시스템을 이용한 주소 지정 : 파일 시스템 경로를 사용해 소켓을 식별하며 /tmp/mysocket과 같은 파일 경로 사용&lt;/li&gt;
+&lt;li&gt;데이터 전송 속도 : 네트워크 계층을 거치지 않아 빠른 데이터 전송 가능(네트워크 스택의 오버헤드를 줄이기 때문)&lt;/li&gt;
+&lt;li&gt;보안 : 파일 시스템 권한 설정을 통해 접근 제어, 특정 사용자나 프로세스만 소켓에 접근하도록 제한&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;사용법-3&#34;&gt;사용법
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python3&#34; data-lang=&#34;python3&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# file name : server.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; socket
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SOCKET_FILE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/tmp/mysocket&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;path&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;exists(SOCKET_FILE):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;remove(SOCKET_FILE)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;server &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; socket&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;socket(socket&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;AF_UNIX, socket&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SOCK_STREAM)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;bind(SOCKET_FILE)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;listen(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;서버가 클라이언트를 기다리고 있습니다...&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conn, addr &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; server&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;accept()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;클라이언트 연결 수락&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; conn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;recv(&lt;span style=&#34;color:#ae81ff&#34;&gt;1024&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; data:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;클라이언트로부터 받은 데이터:&amp;#34;&lt;/span&gt;, data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;decode())
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    conn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sendall(data)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;close()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python3&#34; data-lang=&#34;python3&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# file name : client.py&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; socket
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SOCKET_FILE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/tmp/mysocket&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;client &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; socket&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;socket(socket&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;AF_UNIX, socket&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SOCK_STREAM)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;client&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;connect(SOCKET_FILE)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;message &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;안녕하세요, 서버!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;client&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sendall(message&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;encode())
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; client&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;recv(&lt;span style=&#34;color:#ae81ff&#34;&gt;1024&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;서버로부터 받은 데이터:&amp;#34;&lt;/span&gt;, data&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;decode())
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;client&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;close()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 하나의 터미널에서 작업 시 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python3 server.py &amp;amp;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python3 client.py
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;overlayfs&#34;&gt;OverlayFS
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;개념-4&#34;&gt;개념
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;여러 디렉토리를 하나의 계층적 파일 시스템으로 병합 후 제공&lt;/li&gt;
+&lt;li&gt;읽기 전용 파일 시스템에 쓰기 가능한 레이어를 추가해 기본 파일 시스템을 변경 없이 수정, 추가 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;주요-특징-1&#34;&gt;주요 특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;파일 시스템 계층화 : 읽기 전용 및 쓰기 가능한 계층을 병합 후 사용&lt;/li&gt;
+&lt;li&gt;스냅샷 및 버전관리 : 파일 시스템의 상태를 스냅샷으로 저장 필요 시 복원&lt;/li&gt;
+&lt;li&gt;컨테이너 : Docker와 같은 컨테이너 기술에서 이미지 레이어링을 위해 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;구조-1&#34;&gt;구조
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Lowerdir : 읽기 전용 파일 시스템&lt;/li&gt;
+&lt;li&gt;Upperdir : 쓰기 전용 파일 시스템&lt;/li&gt;
+&lt;li&gt;Workdir : Lowerdir과 Upperdir의 변경사항 추적을 위한 디렉토리, Docker에서 해당 디렉토리가 없으면 동작x&lt;/li&gt;
+&lt;li&gt;Merged : Lowerdir과 Upperdir을 합쳐서 만든 현재 상태의 파일 시스템 디렉토리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;작동방식&#34;&gt;작동방식
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;새로운 파일 생성 : Upperdir에 파일 생성&lt;/li&gt;
+&lt;li&gt;기존 파일 읽기 : 파일이 Upperdir에 있으면 Upperdir에서 읽고 없으면 Lowerdir에서 읽음&lt;/li&gt;
+&lt;li&gt;기존 파일 수정 : 파일이 Upperdir에 없으면 Lowerdir에서 Upperdir로 복사 후 수정&lt;/li&gt;
+&lt;li&gt;파일 삭제 : 파일이 Upperdir에 있으면 삭제, Lowerdir에 있으면 Upperdir에 삭제 마커 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;사용법-4&#34;&gt;사용법
+&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo mkdir -p /lower /upper /work /merged
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# /lower, /upper, /work, /merged 디렉토리를 생성합니다. (필요시 부모 디렉토리도 함께 생성)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Lowerdir 입니다&amp;#34;&lt;/span&gt; | sudo tee /lower/lowerfile.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;Lowerdir 입니다&amp;#34;라는 문자열을 /lower/lowerfile.txt 파일에 씁니다. (파일이 없으면 생성)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Upperdir 입니다&amp;#34;&lt;/span&gt; | sudo tee /upper/upperfile.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;Upperdir 입니다&amp;#34;라는 문자열을 /upper/upperfile.txt 파일에 씁니다. (파일이 없으면 생성)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo mount -t overlay overlay -o lowerdir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/lower,upperdir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/upper,workdir&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/work /merged
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# lowerdir로 /lower, upperdir로 /upper, workdir로 /work를 사용하여 /merged에 overlay 파일 시스템을 마운트합니다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls /merged
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# /merged 디렉토리의 내용을 나열합니다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt;&amp;gt; merged에서 lowerfile.txt와 upperfile.txt 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat /merged/lowerfile.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# /merged 디렉토리 안의 lowerfile.txt 파일의 내용을 출력합니다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat /merged/upperfile.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# /merged 디렉토리 안의 upperfile.txt 파일의 내용을 출력합니다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Mergeddir 입니다&amp;#34;&lt;/span&gt; | sudo tee /merged/mergedfile.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;#34;Mergeddir 입니다&amp;#34;라는 문자열을 /merged/mergedfile.txt 파일에 씁니다. (파일이 없으면 생성)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls /upper
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# /upper 디렉토리의 내용을 나열합니다. (mergedfile.txt가 여기에 나타납니다)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo umount /merged
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# /merged 디렉토리에 마운트된 파일 시스템을 언마운트합니다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo rm -rf /lower /upper /merged /work
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# /lower, /upper, /merged, /work 디렉토리와 그 안의 모든 파일을 강제로 삭제합니다.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Linux 기초</title>
+        <link>https://example.org/posts/linux/linux_basic/</link>
+        <pubDate>Fri, 05 Jul 2024 22:03:57 +0900</pubDate>
+        
+        <guid>https://example.org/posts/linux/linux_basic/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;리눅스에 대해 배웠다.&lt;br&gt;
+처음 알게된 명령어도 많았지만&lt;br&gt;
+하다보면 외워지겠지&amp;hellip;&lt;br&gt;
+일단 정리정리..&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;리눅스&#34;&gt;리눅스
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;유닉스 계열의 OS 중 하나로 전 세계적으로 널리 사용되고 있는 오픈 소스 소프트웨어이다.&lt;/li&gt;
+&lt;li&gt;다양한 시스템에서 동작하며 특히 서버, 데스크탑, 모바일 기기에서 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;오픈소스&#34;&gt;오픈소스
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;개념
+&lt;ul&gt;
+&lt;li&gt;오픈 소스 소프트웨어(OOS : Open Source Software)로 누구나 열람, 수정, 배포가 가능한 소프트웨어이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;중요성
+&lt;ul&gt;
+&lt;li&gt;투명성 : 공개 소스로 동작 방식 확인 가능&lt;/li&gt;
+&lt;li&gt;협업과 혁신 : 누구나 수정, 배포가 가능해 빠른 소프트웨어 개선&lt;/li&gt;
+&lt;li&gt;비용 절감 : 라이센스 비용이 없거나 저렴함&lt;/li&gt;
+&lt;li&gt;자유와 통제 : 자유롭게 수정할 수 있는 권한&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;gpl-license&#34;&gt;GPL License
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;자유 소프트웨어 재단에서 만든 라이선스로 자유롭게 사용할 수 있고 수정, 배포 할 수 있는 권리 보장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;자유-소프트웨어-운동&#34;&gt;자유 소프트웨어 운동
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;사용, 수정, 공유의 자유를 보장하는 소프트웨어&lt;/li&gt;
+&lt;li&gt;소프트웨어는 사용자의 자유와 권리를 침해하지 않아야 한다는 철학&lt;/li&gt;
+&lt;li&gt;자유와 접근성을 증진하고 독점 소프트웨어에 대한 대안을 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;리눅스-구조&#34;&gt;리눅스 구조
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;어플리케이션
+&lt;ul&gt;
+&lt;li&gt;사용자가 직접 상호작용하는 단계로 빌드된 앱, 바이너리, 명령어, 빌드된 파일을 통틀어 어플리케이션이라고 한다.&lt;/li&gt;
+&lt;li&gt;주요 기능
+&lt;ul&gt;
+&lt;li&gt;사용자가 상호작용할 수 있는 인터페이스 제공&lt;/li&gt;
+&lt;li&gt;커널을 통한 시스템 리소스(CPU, Memory, I/O 장치 등)을 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;쉘
+&lt;ul&gt;
+&lt;li&gt;어플리케이션이 커널에서 사용하는 명령어를 가려주고 쉘을 사용해 스크립트도 만들 수 있다.&lt;/li&gt;
+&lt;li&gt;주요 기능
+&lt;ul&gt;
+&lt;li&gt;명령어 해석 : 사용자가 입력한 명령어 해석, 실행하기 위해 시스템 콜&lt;/li&gt;
+&lt;li&gt;스크립트 실행 : 쉘 스크립트를 통해 여러 명령어 조합이나 여러 명령어를 일괄 실행&lt;/li&gt;
+&lt;li&gt;환경 관리 : 환경 변수 설정 및 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;커널
+&lt;ul&gt;
+&lt;li&gt;OS의 핵심 부분으로 하드웨어와 상호작용하는 단계&lt;/li&gt;
+&lt;li&gt;주요 기능
+&lt;ul&gt;
+&lt;li&gt;프로세스 관리 : 프로세스 생성, 스케줄링, 종료 등을 관리&lt;/li&gt;
+&lt;li&gt;메모리 관리 : 가상 메모리, 페이징, 스왑 메모리등을 통해 효율적인 메모리 관리&lt;/li&gt;
+&lt;li&gt;가상 메모리  : 보조기억장치를 이용해 실제 사용 가능한 메모리보다 더 많은 메모리를 사용가능하게 하는 기법&lt;/li&gt;
+&lt;li&gt;페이징  : 메모리를 좀 더 효율적으로 사용하기 위해 고안된 기법으로 메모리를 일정 크기만큼 잘라서 사용하는 기법&lt;/li&gt;
+&lt;li&gt;스왑 메모리  : 실제로 사용하지 않는 나머지 부분(페이지)을 보조기억장치의 특정 영역(스왑 영역)으로 옮겨서 공간을 확보하는 기법&lt;/li&gt;
+&lt;li&gt;파일 시스템 관리 : 파일의 저장, 접근, 조작을 지원하는 파일 시스템 관리&lt;/li&gt;
+&lt;li&gt;장치 관리 : 하드웨어 장치와의 상호작용을 관리하고 장치 드라이버를 통한 추상화&lt;/li&gt;
+&lt;li&gt;보안및접근제어 : 사용자와 시스템 자원 간의 보안정책을 관리하고 적용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;하드웨어
+&lt;ul&gt;
+&lt;li&gt;물리적인 컴퓨터 구성요소로 CPU, Memory, SSD, HDD, Network Interface 등&lt;/li&gt;
+&lt;li&gt;직접 통제하지 않고 커널의 추상화를 통해 관리할 수 있도록 간접적으로 접근&lt;/li&gt;
+&lt;li&gt;주요 기능
+&lt;ul&gt;
+&lt;li&gt;CPU: 명령어 처리 및 프로그램을 실행&lt;/li&gt;
+&lt;li&gt;Memory: 실행 중인 프로그램과 데이터를 저장&lt;/li&gt;
+&lt;li&gt;저장 장치: 데이터를 (반)영구적으로 저장&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;대표적인-linux-배포판&#34;&gt;대표적인 Linux 배포판
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Ubuntu
+&lt;ul&gt;
+&lt;li&gt;Debian 계열중에 가장 유명한 배포판&lt;/li&gt;
+&lt;li&gt;쉬운 설계 및 직관적인 GUI 제공&lt;/li&gt;
+&lt;li&gt;방대한 레퍼런스&lt;/li&gt;
+&lt;li&gt;2년 단위의 버전 출시 및 5년간 유지보수로 보안성이 강하고 안정적&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CentOS
+&lt;ul&gt;
+&lt;li&gt;RHEL(RedHat Enterprise Linux)계열로 안정성과 보안이 뛰어나 주로 기업에서 많이 사용하는 OS&lt;/li&gt;
+&lt;li&gt;방대한 레퍼런스&lt;/li&gt;
+&lt;li&gt;CentOS 7까지는 무료였으나 CentOS 8부터는 유료로 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Arch Linux
+&lt;ul&gt;
+&lt;li&gt;경량화, 커스터마이징에 특화된 OS&lt;/li&gt;
+&lt;li&gt;자체 용량이 굉장히 작다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;패키지-매니저&#34;&gt;패키지 매니저
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;APT
+&lt;ul&gt;
+&lt;li&gt;Demian 계열에서 주로 사용하는 패키지 매니저
+&lt;ul&gt;
+&lt;li&gt;Demian : 여러 파생 배포판의 기반(Ex : Ubuntu, Linux Mint 등)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;패키지 설치 시 의존성 패키지도 자동 설치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;YUM/DNF
+&lt;ul&gt;
+&lt;li&gt;RHEL 계열에서 주로 사용하는 패키지
+&lt;ul&gt;
+&lt;li&gt;RHEL(Red Hat Enterprise Linux) : 레드햇이 개발한 상용 리눅스 배포판, 주로 기업환경에서 사용되며 고성능, 안정성, 보안, 지원 서비스 제공&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;플러그인 시스템을 통해 기능 확장 가능&lt;/li&gt;
+&lt;li&gt;YUM보다 DNF를 사용하는 추세&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;권한-및-소유자&#34;&gt;권한 및 소유자
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 파일 및 디렉토리는 사용자(User)와 그룹(Group)에 의해 소유(Ex : colton:KTB 라면 colton과 KTB에 속한 그룹의 소유)&lt;/li&gt;
+&lt;li&gt;사용자와 그룹 말고도 접근 권한을 지정 할 수 있다.
+&lt;ul&gt;
+&lt;li&gt;R(Read) : 읽기 권한, cat으로 파일 내용 확인 가능&lt;/li&gt;
+&lt;li&gt;W(Write) : 쓰기 권한, vim, echo, sed 명령어 등으로 수정 가능&lt;/li&gt;
+&lt;li&gt;X(eXecute) : 실행 권한, sh, bash에 의해 실행될 수 있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;파일의 부여할 수 있는 권한은 Bit로 관리되며 Read 4, Write 2, Execute 1로 설정&lt;/li&gt;
+&lt;li&gt;한 파일이 갖는 모든 권한은 User, Group, Others(Ex : 754 라면 유저는 모든 권한, 그룹은 읽기 및 실행, 그 외는 읽기의 권한)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;디렉토리-구조&#34;&gt;디렉토리 구조
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Root Directory(/) : 시스템의 모든 디렉토리는 루트 하위에서 관리&lt;/li&gt;
+&lt;li&gt;bin(/bin) : 사용자 명령어가 저장되는 디렉토리(ls, cd, mv, rm, bash 등)&lt;/li&gt;
+&lt;li&gt;lib(/lib) : 시스템, 어플리케이션의 공유 라이브러리가 저장&lt;/li&gt;
+&lt;li&gt;usr(/usr) : 앞서 설명한 디렉토리들이 모두 포함(앞선 디렉토리가 바라보고 있음)&lt;/li&gt;
+&lt;li&gt;dev(/dev) : 장치 파일들이 저장되는 디렉토리(터미널, 널 장치 등 포함), 모든 장치가 파일 형태로 표시&lt;/li&gt;
+&lt;li&gt;etc(/etc) : 전반적인 시스템 설정 파일이 저장, 사용자 계정 정보, 암호정보, 호스트 네임/IP 매핑 파일 등&lt;/li&gt;
+&lt;li&gt;opt(/opt) : CLI 보다 GUI에서 자주 사용되는 디렉토리, 설치 매니저를 통해 설치된 어플리케이션이 주로 포함&lt;/li&gt;
+&lt;li&gt;proc(/proc) : 커널과 프로세스에 대한 가상 파일 시스템 저장(/proc/cpuinfo : CPU 정보, /proc/meminfo : 메모리 정보), 시스템 상태와 커널 정보등을 제공하며 동적으로 생성되는 파일들로 구성&lt;/li&gt;
+&lt;li&gt;home(/home) : 개인 디렉토리가 저장되는 위치, 기본적으로 권한과 소유자가 해당 유저에 맞게 설정&lt;/li&gt;
+&lt;li&gt;root(/root) : root 계정의 홈 디렉토리&lt;/li&gt;
+&lt;li&gt;tmp(/tmp) : 삭제되어도 문제 없는 파일이나 디렉토리와 같은 임시파일을 저장하는 디렉토리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;명령어-정리&#34;&gt;명령어 정리
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;sudo : root(다른 사용자)의 명령 실행(sudo apt-get update)&lt;/li&gt;
+&lt;li&gt;su : 사용자 변경(su &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;adduser : 사용자 추가(adduser &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;cat : 파일 내용 출력, 파일 연결 후 출력(cat &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;usermod : 사용자 속성 변경(usermod -aG &lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;addgroup : 새로운 그룹 추가(addgroup &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;vim : 강력한 텍스트 편집기(vim &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;echo : 문자열 출력(echo &amp;ldquo;Hello world!&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;cd(change Directory) : 디렉토리 변경(cd ..)&lt;/li&gt;
+&lt;li&gt;chmod : 권한 변경(chmod &amp;lt;775 : 권한&amp;gt; &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;ls -al(ll) : 자세한 내용을 포함한 목록 표시&lt;/li&gt;
+&lt;li&gt;ls : 디렉토리 내용 나열&lt;/li&gt;
+&lt;li&gt;mv : 파일, 디렉토리 이름 변경 혹은 이동(mv &amp;lt;temp2 : 기존이름&amp;gt; &amp;lt;temp : 바꿀 이름&amp;gt;)&lt;/li&gt;
+&lt;li&gt;rm : 파일, 디렉토리 삭제(rm &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;bash : bash 셀 실행&lt;/li&gt;
+&lt;li&gt;exit : 현재 스크립트 종료&lt;/li&gt;
+&lt;li&gt;passwd : 사용자 비밀번호 변경&lt;/li&gt;
+&lt;li&gt;shadow : /etc/shadow 파일에 저장된 암호화된 비밀번호 관리&lt;/li&gt;
+&lt;li&gt;hosts : /etc/hosts 파일 관리&lt;/li&gt;
+&lt;li&gt;apt-get : 데비안 기반 시스템에서 패키지 관리(apt-get &amp;lt;install : 동작&amp;gt; &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;export : 셸 환경 변수 설정(export PATH=$PATH:&amp;lt;/new/path&amp;gt;)&lt;/li&gt;
+&lt;li&gt;lsblk : 블록 장치 목록 표시&lt;/li&gt;
+&lt;li&gt;df -TH : 파일 시스템의 디스크 공간 사용량 표사&lt;/li&gt;
+&lt;li&gt;mkdir : 디렉토리 생성(mkdir &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;rmdir : 빈 디렉토리 삭제(rmdir &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;touch : 빈 파일 생성 or 기존 파일 타임 스탬프 변경(touch &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;head : 파일의 처음 몇 줄 출력(head &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;tail : 파일의 마지막 몇 줄 출력(tail &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;pwd : 현재 경로 출력&lt;/li&gt;
+&lt;li&gt;whoami : 현재 사용자 이름 출력&lt;/li&gt;
+&lt;li&gt;top : 실시간 시스템 상태 모니터링&lt;/li&gt;
+&lt;li&gt;df -h : 디스크 사용량을 읽기 쉽게 표시&lt;/li&gt;
+&lt;li&gt;du -h : 디렉토리 사용량을 읽기 쉽게 표시(du -h &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;ping : 네트워크 연결 상태 체크(ping &lt;a class=&#34;link&#34; href=&#34;https://www.google.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.google.com&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;curl : 데이터 전송 및 가져오기(curl &lt;a class=&#34;link&#34; href=&#34;https://www.google.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;www.google.com&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;ifconfig : 네트워크 인터페이스 구성 표시 및 변경&lt;/li&gt;
+&lt;li&gt;ps : 현재 실행중인 프로세스 목록 표시&lt;/li&gt;
+&lt;li&gt;find : 파일 시스템에서 파일과 디렉토리 검색(find &lt;!-- raw HTML omitted --&gt; -name &lt;!-- raw HTML omitted --&gt;)&lt;/li&gt;
+&lt;li&gt;service : 서비스 시작, 중지, 재시작, 상태 확인 등을 수행(service &lt;!-- raw HTML omitted --&gt; &amp;lt;start / stop / restart / status / &amp;ndash;status-all&amp;gt;)&lt;/li&gt;
+&lt;li&gt;ip addr : 네트워크 인터페이스와 IP 주소 관리 및 사용&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

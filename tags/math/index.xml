@@ -1,18 +1,67 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Math - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/math.html</link>
-        <description>Math - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 19 Aug 2023 17:49:27 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/math.html" rel="self" type="application/rss+xml" /><item>
-    <title>[Java] Math 클래스</title>
-    <link>https://choiseungwoo98.github.io/math.html</link>
-    <pubDate>Sat, 19 Aug 2023 17:49:27 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/math.html</guid>
-    <description><![CDATA[커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.
-오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.
-Math 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.
-1. Math에 정의된 대표적인 상수 Math.PI : 원주율 π (약 3.141592653589793) Math.E : 자연 상수 e (약 2.718281828459045) 2. Math에 정의된 대표적인 메서드 abs(int a) / abs(long a) : 정수의 절댓값을 반환합니다. ceil(double a) : 주어진 숫자보다 크거나 같은 최소 정수를 반환합니다.]]></description>
-</item>
-</channel>
+        <title>Math on My New Hugo Site</title>
+        <link>https://example.org/tags/math/</link>
+        <description>Recent content in Math on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 19 Aug 2023 17:49:27 +0900</lastBuildDate><atom:link href="https://example.org/tags/math/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[Java] Math 클래스</title>
+        <link>https://example.org/posts/java/class/math/</link>
+        <pubDate>Sat, 19 Aug 2023 17:49:27 +0900</pubDate>
+        
+        <guid>https://example.org/posts/java/class/math/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
+오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;math-클래스란&#34;&gt;Math 클래스란?
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.&lt;/p&gt;
+&lt;h3 id=&#34;1-math에-정의된-대표적인-상수&#34;&gt;1. Math에 정의된 대표적인 상수
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Math.PI : 원주율 π (약 3.141592653589793)&lt;/li&gt;
+&lt;li&gt;Math.E : 자연 상수 e (약 2.718281828459045)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-math에-정의된-대표적인-메서드&#34;&gt;2. Math에 정의된 대표적인 메서드
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;abs(int a) / abs(long a) : 정수의 절댓값을 반환합니다.&lt;/li&gt;
+&lt;li&gt;ceil(double a) : 주어진 숫자보다 크거나 같은 최소 정수를 반환합니다.&lt;/li&gt;
+&lt;li&gt;floor(double a) : 주어진 숫자보다 작거나 같은 최대 정수를 반환합니다.&lt;/li&gt;
+&lt;li&gt;round(float a) / round(double a) : 주어진 숫자를 반올림하여 long 형태로 반환합니다.&lt;/li&gt;
+&lt;li&gt;min(int a, int b) / min(long a, long b) : 두 정수 중 작은 값을 반환합니다.&lt;/li&gt;
+&lt;li&gt;max(int a, int b) / max(long a, long b) : 두 정수 중 큰 값을 반환합니다.&lt;/li&gt;
+&lt;li&gt;sqrt(double a) : 주어진 숫자의 제곱근을 반환합니다.&lt;/li&gt;
+&lt;li&gt;pow(double a, double b) : a의 b승을 반환합니다.&lt;/li&gt;
+&lt;li&gt;sin(double a), cos(double a), tan(double a) : 삼각 함수 값들을 반환합니다.&lt;/li&gt;
+&lt;li&gt;random() : 0 이상 1 미만의 난수를 반환합니다. (0.0 &amp;lt;= x &amp;lt; 1.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-각-메서드-사용-및-결과&#34;&gt;3. 각 메서드 사용 및 결과
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Math.abs(-1.5) : 1.5&lt;/li&gt;
+&lt;li&gt;Math.ceil(-1.5) : -1.0&lt;/li&gt;
+&lt;li&gt;Math.floor(-1.5) : -2.0&lt;/li&gt;
+&lt;li&gt;Math.round(-1.5) : -2&lt;/li&gt;
+&lt;li&gt;Math.min(-1.5, 3.0) : -1.5&lt;/li&gt;
+&lt;li&gt;Math.max(-1.5, 3.0) : 3.0&lt;/li&gt;
+&lt;li&gt;Math.sqrt(-1.5) : NaN (Not a Number : 제곱근이 실수 범위 내에 없기 때문에 이 경우 허수와 관련된 복소수 연산이 필요하며 Math 클래스에서는 지원하지 않음)&lt;/li&gt;
+&lt;li&gt;Math.sqrt(4) : 2.0&lt;/li&gt;
+&lt;li&gt;Math.pow(-1.5, 2.0): 2.25&lt;/li&gt;
+&lt;li&gt;Math.sin(-1.5): -0.9974949866040544&lt;/li&gt;
+&lt;li&gt;Math.cos(-1.5): 0.0707372016677029&lt;/li&gt;
+&lt;li&gt;Math.tan(-1.5): -14.101419947171719&lt;/li&gt;
+&lt;li&gt;Math.random(): [0.0, 1.0) 범위의 난수 (실행할 때마다 값이 달라집니다)&lt;/li&gt;
+&lt;li&gt;Math.random() * 100 : 0 ~ 99 까지 랜덤으로 1가지의 수&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.tcpschool.com/java/java_api_math&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Math 클래스&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

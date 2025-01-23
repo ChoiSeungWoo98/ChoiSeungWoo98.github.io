@@ -1,18 +1,113 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>S3 - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/s3.html</link>
-        <description>S3 - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/s3.html" rel="self" type="application/rss+xml" /><item>
-    <title>AWS IAM을 이용한 S3 실습</title>
-    <link>https://choiseungwoo98.github.io/iam_and_s3.html</link>
-    <pubDate>Mon, 15 Jul 2024 15:01:46 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/iam_and_s3.html</guid>
-    <description><![CDATA[오늘은 AWS 첫번째 실습 시간이다.
-IAM에 대해 공부 후
-S3를 통해 제어하는 실습
-IAM 클라우드 서비스에서 사용자의 리소스 접근을 제어하는 웹 서비스 사용자 및 그룹을 생성해 리소스 권한 관리 IAM User Aws 리소스에 접근하기 위해 생성되는 개별 엔터티 고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행 IAM Group 공통적인 권한을 부여하기 위해 사요되는 논리적 단위 사용자별 권한을 할당하는 대신 그룹에 권한 할당 실습 IAM User 생성 IAM User Group 생성 생성한 유저 로그인 후 권한 확인 IAM 정책(Policy) AWS 리소스에 대한 접근 권한을 정의하는 JSON 문서 권한을 세부적으로 제어 보안과 권한 관리를 위해 필수적인 구성 요소 관리형 정책(Managed Policies) 미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계]]></description>
-</item>
-</channel>
+        <title>S3 on My New Hugo Site</title>
+        <link>https://example.org/tags/s3/</link>
+        <description>Recent content in S3 on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 15 Jul 2024 15:01:46 +0900</lastBuildDate><atom:link href="https://example.org/tags/s3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AWS IAM을 이용한 S3 실습</title>
+        <link>https://example.org/posts/cloud/aws/iam_and_s3/</link>
+        <pubDate>Mon, 15 Jul 2024 15:01:46 +0900</pubDate>
+        
+        <guid>https://example.org/posts/cloud/aws/iam_and_s3/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;오늘은 AWS 첫번째 실습 시간이다.&lt;br&gt;
+IAM에 대해 공부 후&lt;br&gt;
+S3를 통해 제어하는 실습&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;iam&#34;&gt;IAM
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;클라우드 서비스에서 사용자의 리소스 접근을 제어하는 웹 서비스&lt;/li&gt;
+&lt;li&gt;사용자 및 그룹을 생성해 리소스 권한 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;iam-user&#34;&gt;IAM User
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Aws 리소스에 접근하기 위해 생성되는 개별 엔터티&lt;/li&gt;
+&lt;li&gt;고유한 자격 증명(로그인 정보)과 함께 제공, 권한을 부여받아 작업 수행&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;iam-group&#34;&gt;IAM Group
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;공통적인 권한을 부여하기 위해 사요되는 논리적 단위&lt;/li&gt;
+&lt;li&gt;사용자별 권한을 할당하는 대신 그룹에 권한 할당&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습&#34;&gt;실습
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;IAM User 생성&lt;/li&gt;
+&lt;li&gt;IAM User Group 생성&lt;/li&gt;
+&lt;li&gt;생성한 유저 로그인 후 권한 확인&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;iam-정책policy&#34;&gt;IAM 정책(Policy)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS 리소스에 대한 접근 권한을 정의하는 JSON 문서&lt;/li&gt;
+&lt;li&gt;권한을 세부적으로 제어&lt;/li&gt;
+&lt;li&gt;보안과 권한 관리를 위해 필수적인 구성 요소&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;관리형-정책managed-policies&#34;&gt;관리형 정책(Managed Policies)
+&lt;/h4&gt;&lt;p&gt;미리 정의된 정책으로 사용자가 쉽게 권한을 부여할 수 있도록 설계&lt;/p&gt;
+&lt;h4 id=&#34;인라인-정책inline-policies&#34;&gt;인라인 정책(Inline Policies)
+&lt;/h4&gt;&lt;p&gt;특정 사용자, 그룹 또는 역할에 직접 연결된 정책&lt;br&gt;
+다른 엔터티와 공유되지 않고 연결된 엔터티 삭제 시 정책도 삭제&lt;br&gt;
+권한을 좀 더 세밀하게 제어하고자 할 때 사용&lt;/p&gt;
+&lt;h4 id=&#34;구성요소&#34;&gt;구성요소
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;statement : 정책의 주요 내용이 포함된 부분, 다중 statement 가능&lt;/li&gt;
+&lt;li&gt;Effect : 권한 효과를 정의(허용 혹은 거부)&lt;/li&gt;
+&lt;li&gt;Action : 허용, 거부할 작업 정의&lt;/li&gt;
+&lt;li&gt;Resource : 작업이 적용되는 리소스 정의&lt;/li&gt;
+&lt;li&gt;Condition : 조건을 추가해 세부적인 적용 제어&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습-1&#34;&gt;실습
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;정책 추가&lt;/li&gt;
+&lt;li&gt;버킷 생성&lt;/li&gt;
+&lt;li&gt;권한 정책 연결 후 테스트&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;iam-역할role&#34;&gt;IAM 역할(Role)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;역할(Role) : 특정 AWS 서비스나 다른 계정의 사용자등이 AWS 리소스에 접근할 수 있도록 임시 보안 자격 증명을 제공&lt;/li&gt;
+&lt;li&gt;정책(Policy) : 권한을 정의하는 JSON 문서&lt;/li&gt;
+&lt;li&gt;신뢰정책(Trust Policy) : 역할을 맡을 수 있는 엔터티 정의 정책&lt;/li&gt;
+&lt;li&gt;역할 전환(Role Assumption) : 역할을 맡는 과정&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;정책-종류&#34;&gt;정책 종류
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;권한 정책(Permission Policy) : 역할을 맡은 엔터티가 수행할 수 있는 작업 정의&lt;/li&gt;
+&lt;li&gt;신뢰 정책(Trust Policy) : 어떤 엔터티가 역할을 맡을 수 있는지 정의&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;사용-방식&#34;&gt;사용 방식
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;AWS 서비스 간의 권한 부여 : EC2 인스턴스가 S3 버킷에 접근 가능하도록 역할 사용&lt;/li&gt;
+&lt;li&gt;계정 간 권한 부여 : 사용자가 다른 AWS 계정의 리소스에 접근 할 수 있도록 역할 사용&lt;/li&gt;
+&lt;li&gt;단기 자격 증명 : 임시 자격 증명을 사용해 특정 기간 동안 접근 권한 부여&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습-2&#34;&gt;실습
+&lt;/h4&gt;&lt;hr&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 인스턴스 접속&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh -i &amp;lt;key&amp;gt; &amp;lt;os&amp;gt;@&amp;lt;ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# aws 설치 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;asw --version
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# S3에 파일 업로드&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;aws s3 cp &amp;lt;파일명&amp;gt; s3://&amp;lt;버킷이름&amp;gt;/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# S3에 업로드된 파일 내려받기&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;aws s3 cp &amp;lt;파일명&amp;gt; s3://&amp;lt;버킷이름&amp;gt;/&amp;lt;버킷내 파일명&amp;gt; &amp;lt;로컬 파일명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# S3에 업로드된 파일 리스트&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;aws s3 ls &amp;lt;파일명&amp;gt; s3://&amp;lt;버킷이름&amp;gt;/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# S3에 업로드된 파일 삭제&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;aws s3 rm &amp;lt;파일명&amp;gt; s3://&amp;lt;버킷이름&amp;gt;/&amp;lt;버킷내 파일명&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 오늘은 주말이라 강좌로 올라와있는\n네트워크 개념 잡기를 수강하고 정리하고자 한다.\n도메인 IP는 숫자로만 이루어져 기억하기 어렵기 때문에 이름을 부여한 것\nIP 인터넷에 연결되어 있는 장치(컴퓨터, 스마트폰 등)을 식별할 수 있는 주소(Ex. 172.217.161.206)\n웹사이트 ip 주소 가져오는 방법 : nslookup google.com\n네임 스페이스 도메인 이름을 계층적으로 구성하여 네트워크 상의 자원을 고유하게 식별 및 관리\n포트포워딩 외부 네트워크에서 특정 포트를 통해 들어오는 트래픽을 내부 네트워크의 특정 장치나 포트로 전달하는 네트워크 설정\nHTTPs, SSL HTTPs(Hypertext Transfer Protocol Over Secure Socket Layer) HTTP는 암호화되지 않은 방법으로 데이터를 전송하기 때문에 보안이 매우 취약하다. 이것을 보안하기 위해 탄생한 것 HTTP : HTML을 전송하기 위한 통신 규약 Hypertext : 문서와 문서가 링크로 연결 체계 HTTPs : 보안이 강화된 HTTP SSL(Secure Sockets Layer) 인터넷 통신의 보안을 강화하기 위해 사용되는 암호화 프로토콜로 서버간 전송되는 데이트를 암호화해 제 3자가 도청 및 변조하지 못하도록 한 것\nHTTP가 SSL을 사용해 HTTPs가 되었다.\n">
+<title>네트워크 도메인, HTTPs</title>
+
+<link rel='canonical' href='https://example.org/posts/network/network_basic_2/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="네트워크 도메인, HTTPs">
+<meta property='og:description' content=" 오늘은 주말이라 강좌로 올라와있는\n네트워크 개념 잡기를 수강하고 정리하고자 한다.\n도메인 IP는 숫자로만 이루어져 기억하기 어렵기 때문에 이름을 부여한 것\nIP 인터넷에 연결되어 있는 장치(컴퓨터, 스마트폰 등)을 식별할 수 있는 주소(Ex. 172.217.161.206)\n웹사이트 ip 주소 가져오는 방법 : nslookup google.com\n네임 스페이스 도메인 이름을 계층적으로 구성하여 네트워크 상의 자원을 고유하게 식별 및 관리\n포트포워딩 외부 네트워크에서 특정 포트를 통해 들어오는 트래픽을 내부 네트워크의 특정 장치나 포트로 전달하는 네트워크 설정\nHTTPs, SSL HTTPs(Hypertext Transfer Protocol Over Secure Socket Layer) HTTP는 암호화되지 않은 방법으로 데이터를 전송하기 때문에 보안이 매우 취약하다. 이것을 보안하기 위해 탄생한 것 HTTP : HTML을 전송하기 위한 통신 규약 Hypertext : 문서와 문서가 링크로 연결 체계 HTTPs : 보안이 강화된 HTTP SSL(Secure Sockets Layer) 인터넷 통신의 보안을 강화하기 위해 사용되는 암호화 프로토콜로 서버간 전송되는 데이트를 암호화해 제 3자가 도청 및 변조하지 못하도록 한 것\nHTTP가 SSL을 사용해 HTTPs가 되었다.\n">
+<meta property='og:url' content='https://example.org/posts/network/network_basic_2/'>
+<meta property='og:site_name' content='My New Hugo Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='KakaoTechBootCamp' /><meta property='article:tag' content='네트워크' /><meta property='article:published_time' content='2024-07-13T16:42:04&#43;09:00'/><meta property='article:modified_time' content='2024-07-13T16:42:04&#43;09:00'/>
+<meta name="twitter:title" content="네트워크 도메인, HTTPs">
+<meta name="twitter:description" content=" 오늘은 주말이라 강좌로 올라와있는\n네트워크 개념 잡기를 수강하고 정리하고자 한다.\n도메인 IP는 숫자로만 이루어져 기억하기 어렵기 때문에 이름을 부여한 것\nIP 인터넷에 연결되어 있는 장치(컴퓨터, 스마트폰 등)을 식별할 수 있는 주소(Ex. 172.217.161.206)\n웹사이트 ip 주소 가져오는 방법 : nslookup google.com\n네임 스페이스 도메인 이름을 계층적으로 구성하여 네트워크 상의 자원을 고유하게 식별 및 관리\n포트포워딩 외부 네트워크에서 특정 포트를 통해 들어오는 트래픽을 내부 네트워크의 특정 장치나 포트로 전달하는 네트워크 설정\nHTTPs, SSL HTTPs(Hypertext Transfer Protocol Over Secure Socket Layer) HTTP는 암호화되지 않은 방법으로 데이터를 전송하기 때문에 보안이 매우 취약하다. 이것을 보안하기 위해 탄생한 것 HTTP : HTML을 전송하기 위한 통신 규약 Hypertext : 문서와 문서가 링크로 연결 체계 HTTPs : 보안이 강화된 HTTP SSL(Secure Sockets Layer) 인터넷 통신의 보안을 강화하기 위해 사용되는 암호화 프로토콜로 서버간 전송되는 데이트를 암호화해 제 3자가 도청 및 변조하지 못하도록 한 것\nHTTP가 SSL을 사용해 HTTPs가 되었다.\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My New Hugo Site</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/kakaotechbootcamp/" >
+                KakaoTechBootCamp
+            </a>
+        
+            <a href="/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/" >
+                네트워크
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/network/network_basic_2/">네트워크 도메인, HTTPs</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 13, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>오늘은 주말이라 강좌로 올라와있는<br>
+네트워크 개념 잡기를 수강하고 정리하고자 한다.</p>
+</blockquote>
+<h2 id="도메인">도메인
+</h2><hr>
+<p>IP는 숫자로만 이루어져 기억하기 어렵기 때문에 이름을 부여한 것</p>
+<h4 id="ip">IP
+</h4><p>인터넷에 연결되어 있는 장치(컴퓨터, 스마트폰 등)을 식별할 수 있는 주소(Ex. 172.217.161.206)<br>
+웹사이트 ip 주소 가져오는 방법 : nslookup google.com</p>
+<h4 id="네임-스페이스">네임 스페이스
+</h4><p>도메인 이름을 계층적으로 구성하여 네트워크 상의 자원을 고유하게 식별 및 관리</p>
+<h4 id="포트포워딩">포트포워딩
+</h4><p>외부 네트워크에서 특정 포트를 통해 들어오는 트래픽을 내부 네트워크의 특정 장치나 포트로 전달하는 네트워크 설정</p>
+<!-- raw HTML omitted -->
+<h2 id="https-ssl">HTTPs, SSL
+</h2><hr>
+<h4 id="httpshypertext-transfer-protocol-over-secure-socket-layer">HTTPs(Hypertext Transfer Protocol Over Secure Socket Layer)
+</h4><ul>
+<li>HTTP는 암호화되지 않은 방법으로 데이터를 전송하기 때문에 보안이 매우 취약하다. 이것을 보안하기 위해 탄생한 것
+<ul>
+<li>HTTP : HTML을 전송하기 위한 통신 규약
+<ul>
+<li>Hypertext : 문서와 문서가 링크로 연결 체계</li>
+</ul>
+</li>
+<li>HTTPs : 보안이 강화된 HTTP</li>
+</ul>
+</li>
+</ul>
+<h4 id="sslsecure-sockets-layer">SSL(Secure Sockets Layer)
+</h4><p>인터넷 통신의 보안을 강화하기 위해 사용되는 암호화 프로토콜로 서버간 전송되는 데이트를 암호화해 제 3자가 도청 및 변조하지 못하도록 한 것<br>
+HTTP가 SSL을 사용해 HTTPs가 되었다.</p>
+<h4 id="tlstransport-layer-security">TLS(Transport Layer Security)
+</h4><p>SSL의 후속 버전으로 인터넷 통신의 보안을 강화하기 위해 사용되는 암호화 프로토콜(사실상 SSL이랑 같음)</p>
+<!-- raw HTML omitted -->
+<h2 id="https-ssl-디지털-인증서">HTTPs, SSL 디지털 인증서
+</h2><hr>
+<h4 id="대칭키">대칭키
+</h4><p>암복호화에 동일한 키를 사용하는 방식으로 송수신자자가 동일한 키를 공유해 통신의 기밀성을 유지한다.<br>
+대칭키를 수신자에게 전송할 때 대칭키가 유출될 수도 있는 치명적인 단점이 있다.</p>
+<h4 id="공개키">공개키
+</h4><p>비대칭 암호화 방식 중 한 종류로 두 개의 키(공개키, 비밀키)를 사용해 데이터 암복호화 수행<br>
+공개키로 암호화 후 전송하면 수신자는 비밀키로 복호화한다.<br>
+반대로 비밀키로 암호화 하면 공개키로 복호화를 해야하는데 이것은 공개키를 갖고 있는 사람 모두가 복호화 할 수 있어 암호화에 의미가 없지만<br>
+비밀키를 갖고 있는 사람이 암호화 했다는 것을 검증하는 것이라 신원을 확인 할 수 있다.</p>
+<h4 id="ssl-통신-과정">SSL 통신 과정
+</h4><ul>
+<li>악수(Handshake) : 클라이언트와 서버가 안전한 통신을 설정하기 위해 필요한 매개변수를 협상하는 과정
+<ul>
+<li>클라이언트 헬로 : 클라이언트가 서버 접속을 시도하고 메시지를 보낸다.(SSL/TLS 버전, 암호화 방식 등)</li>
+<li>서버 헬로 : 메시지 수신 및 응답(SSL/TLS 버전, 암호화 방식 등)</li>
+<li>서버 인증 및 키 교환 : 서버가 클라이언트에게 인증서를 보낸다.(CA에서 발급된 공개키를 포함, 메시지도 보낼 수 있다.)</li>
+<li>클라이언트 인증 및 키 교환 : 서버 인증서 검증, 프리마스터 시크릿을 생성하고 서버 공개키를 암호화하여 서버로 보낸다.
+<ul>
+<li>프리마스터 시크릿 :</li>
+</ul>
+</li>
+<li>세션 키 생성 : 자신의 무작위 데이터와 프리마스터 시크릿을 사용한 동일한 세션키 생성</li>
+<li>암호화 통신 시작 : 클라이 언트는 핸드셰이크 완료라는 메시지를 보내고 서버는 핸드셰이크 완료 메시지로 응답(메시지는 세션키로 암호화 된다.)</li>
+</ul>
+</li>
+<li>데이터 전송(Data Transfer) : 클리이언트와 서버는 세션 키를 사용하여 데이터를 암호화하여 안전하게 주고 받을 수 있다.</li>
+<li>세션 종료(Session Termination) : 통신이 끝나면 클라이언트와 서버는 SSL 연결 종료
+<ul>
+<li>종료 요청 : 클라이언트 또는 서버가 연결을 종료하고자 하면 종료 요청 메시지를 보낸다.(메시지는 세션키로 암호화 된다.)</li>
+<li>연결 종료 : 연결을 정상적으로 종료 후 사용된 세션 키와 관련 데이터 폐기</li>
+</ul>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/kakaotechbootcamp/">KakaoTechBootCamp</a>
+        
+            <a href="/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/">네트워크</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/network/network_basic_1/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">네트워크 개념</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/docker_etc/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker 이론</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/docker_conpose/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker_conpose</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/dockerfile_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Dockerfile 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/docker_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 My New Hugo Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

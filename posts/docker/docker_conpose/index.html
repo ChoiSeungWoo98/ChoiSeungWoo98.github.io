@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 오늘은 docker compose에 대해 배웠습니다.\n이론이 많지는 않았지만\n앞으로 자주 사용할 것이란 생각이 들어 실습까지 다시 진행하며 복습하겠습니다.\nDocker compose 개념 여러 Docker Continer를 정의하고 실행할 수 있도록 도와주는 도구 docker-compose.yaml 파일을 사용해 서비스, 네트워크, 볼륨 등을 정의 기능 멀티 컨테이너 애플리케이션 정의 : docker-compose-yaml 파일을 통해 여러 컨테이너 정의 서비스 간 의존성 관리 : 여러 컨테이너 간의 의존성을 정의하고, 필요한 순서에 따라 컨테이너 시작 일관된 개발 환경 제공 : 동일한 docker-compose.yaml 파일을 사용해 로컬 개발환경과 프로덕션 환경을 일관되게 설정 간편한 실행 및 종료 : docker compose up / down을 사용해 한번에 시작 및 종료 가능 기능 설명 build context : Dockerfile이 있는 디렉토리 지정 dockerfile : Dockerfile 경로 지정 image : 기존에 존재하는 이미지를 사용할 때 사용할 이미지 지정 ports : 호스트와 컨테이너 간의 포트 매핑 지정 environment : 컨테이너 내에서 사용할 환경 변수 지정 volumes : 호스트와 컨테이너 간의 파일 시스템 마운트를 지정 depends_on : 컨테이너 간의 의존성 지정(Ex : db 서비스 시작 후 web 서비스 시작) networks : 서비스가 연결될 네트워크 지정 restart : 컨테이너 재시작 정책 (전역)volumes : 네트워크 정의, 서비스에서 네트워크 사용 전 전역에 정의 (전역)networks : 서비스에서 네트워크 사용 전 전역에 정의 실습 # 이미지를 내려받는다 docker pull &lt;이미지명&gt; # Docker 이미지를 백그라운드에 무한히 실행되는 컨테이너 시작 docker run -d &lt;이미지명&gt; sleep infinity # 실행한 이미지 접속 docker exec &lt;컨테이너명&gt; /bin/bash # Docker 내부 파일 로컬에 복사 docker cp &lt;컨테이너명&gt;:/&lt;복사할 파일명&gt; &lt;복사할 위치&gt; # Docker compose를 백그라운드로 실행 docker compose -f &lt;실행할 yaml명&gt; up -d # 현재 디렉토리의 Docker-compose.yaml로 정의된 모든 컨테이너 표시 docker compose ps -a # Docker compose 종료 docker compose down ">
+<title>Docker_conpose</title>
+
+<link rel='canonical' href='https://example.org/posts/docker/docker_conpose/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Docker_conpose">
+<meta property='og:description' content=" 오늘은 docker compose에 대해 배웠습니다.\n이론이 많지는 않았지만\n앞으로 자주 사용할 것이란 생각이 들어 실습까지 다시 진행하며 복습하겠습니다.\nDocker compose 개념 여러 Docker Continer를 정의하고 실행할 수 있도록 도와주는 도구 docker-compose.yaml 파일을 사용해 서비스, 네트워크, 볼륨 등을 정의 기능 멀티 컨테이너 애플리케이션 정의 : docker-compose-yaml 파일을 통해 여러 컨테이너 정의 서비스 간 의존성 관리 : 여러 컨테이너 간의 의존성을 정의하고, 필요한 순서에 따라 컨테이너 시작 일관된 개발 환경 제공 : 동일한 docker-compose.yaml 파일을 사용해 로컬 개발환경과 프로덕션 환경을 일관되게 설정 간편한 실행 및 종료 : docker compose up / down을 사용해 한번에 시작 및 종료 가능 기능 설명 build context : Dockerfile이 있는 디렉토리 지정 dockerfile : Dockerfile 경로 지정 image : 기존에 존재하는 이미지를 사용할 때 사용할 이미지 지정 ports : 호스트와 컨테이너 간의 포트 매핑 지정 environment : 컨테이너 내에서 사용할 환경 변수 지정 volumes : 호스트와 컨테이너 간의 파일 시스템 마운트를 지정 depends_on : 컨테이너 간의 의존성 지정(Ex : db 서비스 시작 후 web 서비스 시작) networks : 서비스가 연결될 네트워크 지정 restart : 컨테이너 재시작 정책 (전역)volumes : 네트워크 정의, 서비스에서 네트워크 사용 전 전역에 정의 (전역)networks : 서비스에서 네트워크 사용 전 전역에 정의 실습 # 이미지를 내려받는다 docker pull &lt;이미지명&gt; # Docker 이미지를 백그라운드에 무한히 실행되는 컨테이너 시작 docker run -d &lt;이미지명&gt; sleep infinity # 실행한 이미지 접속 docker exec &lt;컨테이너명&gt; /bin/bash # Docker 내부 파일 로컬에 복사 docker cp &lt;컨테이너명&gt;:/&lt;복사할 파일명&gt; &lt;복사할 위치&gt; # Docker compose를 백그라운드로 실행 docker compose -f &lt;실행할 yaml명&gt; up -d # 현재 디렉토리의 Docker-compose.yaml로 정의된 모든 컨테이너 표시 docker compose ps -a # Docker compose 종료 docker compose down ">
+<meta property='og:url' content='https://example.org/posts/docker/docker_conpose/'>
+<meta property='og:site_name' content='My New Hugo Site'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='KakaoTechBootCamp' /><meta property='article:tag' content='BootCamp' /><meta property='article:tag' content='Docker' /><meta property='article:published_time' content='2024-07-11T13:13:32&#43;09:00'/><meta property='article:modified_time' content='2024-07-11T13:13:32&#43;09:00'/>
+<meta name="twitter:title" content="Docker_conpose">
+<meta name="twitter:description" content=" 오늘은 docker compose에 대해 배웠습니다.\n이론이 많지는 않았지만\n앞으로 자주 사용할 것이란 생각이 들어 실습까지 다시 진행하며 복습하겠습니다.\nDocker compose 개념 여러 Docker Continer를 정의하고 실행할 수 있도록 도와주는 도구 docker-compose.yaml 파일을 사용해 서비스, 네트워크, 볼륨 등을 정의 기능 멀티 컨테이너 애플리케이션 정의 : docker-compose-yaml 파일을 통해 여러 컨테이너 정의 서비스 간 의존성 관리 : 여러 컨테이너 간의 의존성을 정의하고, 필요한 순서에 따라 컨테이너 시작 일관된 개발 환경 제공 : 동일한 docker-compose.yaml 파일을 사용해 로컬 개발환경과 프로덕션 환경을 일관되게 설정 간편한 실행 및 종료 : docker compose up / down을 사용해 한번에 시작 및 종료 가능 기능 설명 build context : Dockerfile이 있는 디렉토리 지정 dockerfile : Dockerfile 경로 지정 image : 기존에 존재하는 이미지를 사용할 때 사용할 이미지 지정 ports : 호스트와 컨테이너 간의 포트 매핑 지정 environment : 컨테이너 내에서 사용할 환경 변수 지정 volumes : 호스트와 컨테이너 간의 파일 시스템 마운트를 지정 depends_on : 컨테이너 간의 의존성 지정(Ex : db 서비스 시작 후 web 서비스 시작) networks : 서비스가 연결될 네트워크 지정 restart : 컨테이너 재시작 정책 (전역)volumes : 네트워크 정의, 서비스에서 네트워크 사용 전 전역에 정의 (전역)networks : 서비스에서 네트워크 사용 전 전역에 정의 실습 # 이미지를 내려받는다 docker pull &lt;이미지명&gt; # Docker 이미지를 백그라운드에 무한히 실행되는 컨테이너 시작 docker run -d &lt;이미지명&gt; sleep infinity # 실행한 이미지 접속 docker exec &lt;컨테이너명&gt; /bin/bash # Docker 내부 파일 로컬에 복사 docker cp &lt;컨테이너명&gt;:/&lt;복사할 파일명&gt; &lt;복사할 위치&gt; # Docker compose를 백그라운드로 실행 docker compose -f &lt;실행할 yaml명&gt; up -d # 현재 디렉토리의 Docker-compose.yaml로 정의된 모든 컨테이너 표시 docker compose ps -a # Docker compose 종료 docker compose down ">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My New Hugo Site</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/kakaotechbootcamp/" >
+                KakaoTechBootCamp
+            </a>
+        
+            <a href="/categories/docker/" >
+                Docker
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/docker/docker_conpose/">Docker_conpose</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 11, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>오늘은 docker compose에 대해 배웠습니다.<br>
+이론이 많지는 않았지만<br>
+앞으로 자주 사용할 것이란 생각이 들어 실습까지 다시 진행하며 복습하겠습니다.</p>
+</blockquote>
+<h2 id="docker-compose">Docker compose
+</h2><hr>
+<h4 id="개념">개념
+</h4><ul>
+<li>여러 Docker Continer를 정의하고 실행할 수 있도록 도와주는 도구</li>
+<li>docker-compose.yaml 파일을 사용해 서비스, 네트워크, 볼륨 등을 정의</li>
+</ul>
+<h4 id="기능">기능
+</h4><ul>
+<li>멀티 컨테이너 애플리케이션 정의 : docker-compose-yaml 파일을 통해 여러 컨테이너 정의</li>
+<li>서비스 간 의존성 관리 : 여러 컨테이너 간의 의존성을 정의하고, 필요한 순서에 따라 컨테이너 시작</li>
+<li>일관된 개발 환경 제공 : 동일한 docker-compose.yaml 파일을 사용해 로컬 개발환경과 프로덕션 환경을 일관되게 설정</li>
+<li>간편한 실행 및 종료 : docker compose up / down을 사용해 한번에 시작 및 종료 가능</li>
+</ul>
+<h4 id="기능-설명">기능 설명
+</h4><ul>
+<li>build
+<ul>
+<li>context : Dockerfile이 있는 디렉토리 지정</li>
+<li>dockerfile : Dockerfile 경로 지정</li>
+</ul>
+</li>
+<li>image : 기존에 존재하는 이미지를 사용할 때 사용할 이미지 지정</li>
+<li>ports : 호스트와 컨테이너 간의 포트 매핑 지정</li>
+<li>environment : 컨테이너 내에서 사용할 환경 변수 지정</li>
+<li>volumes : 호스트와 컨테이너 간의 파일 시스템 마운트를 지정</li>
+<li>depends_on : 컨테이너 간의 의존성 지정(Ex : db 서비스 시작 후 web 서비스 시작)</li>
+<li>networks : 서비스가 연결될 네트워크 지정</li>
+<li>restart : 컨테이너 재시작 정책</li>
+<li>(전역)volumes : 네트워크 정의, 서비스에서 네트워크 사용 전 전역에 정의</li>
+<li>(전역)networks : 서비스에서 네트워크 사용 전 전역에 정의</li>
+</ul>
+<h4 id="실습">실습
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 이미지를 내려받는다</span>
+</span></span><span style="display:flex;"><span>docker pull &lt;이미지명&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Docker 이미지를 백그라운드에 무한히 실행되는 컨테이너 시작</span>
+</span></span><span style="display:flex;"><span>docker run -d &lt;이미지명&gt; sleep infinity
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 실행한 이미지 접속</span>
+</span></span><span style="display:flex;"><span>docker exec &lt;컨테이너명&gt; /bin/bash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Docker 내부 파일 로컬에 복사</span>
+</span></span><span style="display:flex;"><span>docker cp &lt;컨테이너명&gt;:/&lt;복사할 파일명&gt; &lt;복사할 위치&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Docker compose를 백그라운드로 실행</span>
+</span></span><span style="display:flex;"><span>docker compose -f &lt;실행할 yaml명&gt; up -d
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 현재 디렉토리의 Docker-compose.yaml로 정의된 모든 컨테이너 표시</span>
+</span></span><span style="display:flex;"><span>docker compose ps -a
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Docker compose 종료</span>
+</span></span><span style="display:flex;"><span>docker compose down
+</span></span></code></pre></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/kakaotechbootcamp/">KakaoTechBootCamp</a>
+        
+            <a href="/tags/bootcamp/">BootCamp</a>
+        
+            <a href="/tags/docker/">Docker</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/docker/dockerfile_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Dockerfile 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/docker/docker_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/linux/linux_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/network/network_basic_1/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">네트워크 개념</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/cloud/cloud_introduction/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">클라우드 개념</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 My New Hugo Site
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

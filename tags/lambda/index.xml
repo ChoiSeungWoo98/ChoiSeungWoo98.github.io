@@ -1,16 +1,179 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Lambda - Tag - 승우의 개발 일기🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/tags/lambda.html</link>
-        <description>Lambda - Tag - 승우의 개발 일기🧑🏻‍💻</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 17 Jul 2024 11:42:15 &#43;0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/lambda.html" rel="self" type="application/rss+xml" /><item>
-    <title>aws에 EBS, Lambda와 efs</title>
-    <link>https://choiseungwoo98.github.io/lambda_and_efs.html</link>
-    <pubDate>Wed, 17 Jul 2024 11:42:15 &#43;0900</pubDate>
-    <author>choiseU</author>
-    <guid>https://choiseungwoo98.github.io/lambda_and_efs.html</guid>
-    <description><![CDATA[오늘은 EBS, 람다와 EFS에 대해 배웠다 잊지 않기 위해 복습 또 복습&hellip;
-EBS(Elastic Block Storage) AWS 블록 스토리지 서비스로 EC2 인스턴스에 사용되는 지속적인 스토리지 DB, 파일 시스템, 로그 스토리지, 애플리케이션 데이터 등 사용 데이터를 블록 단위로 저장하며 개별적으로 다루어 질 수 있다. 지속성이 보장되며 중지 또는 종료해도 데이터 유지 주로 자주 접근하지 않는 데이터를 저렴하게 저장할 때 사용한다. 특징 탄력성 : 필요에 따라 크기 조정, 스냅샷을 통해 백업 및 복원 가능(용량을 늘리는 건 쉬우나 줄이는 건 힘들어 충분히 고려 후 증설) 고성능 : 다양한 선능 옵션 제공 내구성 : 데이터 복제 및 높은 가용성 제공 보안 : IAM 정책을 통한 접근 제어 가능 스냅샷 : 볼륨의 시점 복사본 생성 가능 S3에 저장되며 복구 가능 실습(볼륨 확장) 인스턴스 생성 보안 그룹 권한 변경 볼륨 늘림 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 # 인스턴스 접근 ssh -i &lt;aws key&gt; &lt;os&gt;@&lt;ip&gt; # 루트 권한으로 변경 sudo su # 파일 시스템 디스크 사용량 노출 df -hT # 시스템 블록 장치 나열 lsblk # 지정된 파티션의 크기 확장 growpart /dev/xvda 1 # XFS 파일 시스템 크기 확장 xfs_growfs /dev/xvda1 # 증설 확인 lsblk AWS EFS(Elastic FileSystem) 여러 EC2 인스턴스가 동시에 데이터를 읽고 쓰며, 파일 시스템의 확장성과 고가용성 보장 같은 VPC 내에서 여러 인스턴스가 같은 파일 시스템에 접근해 읽기, 쓰기 가능 특징 확장성 : 파일 시스템 크기 자동 조절 및 필요에 따른 확장, 축소 가능 고가용성 및 내구성 : 여러 가용 영역(AZ)에 데이터 자동 복제해 높은 가용성 및 내구성 제공 동시 엑세스 : 여러 EC2 인스턴스에서 동시에 엑세스 할 수 있으며 공유 파일 시스템이 필요한 워크 로드에 적합 실습(볼륨 확장) EFS 생성 보안그룹 수정 연결 1 2 3 4 5 6 7 8 9 10 11 12 13 # 인스턴스 접근 ssh -i &lt;aws key&gt; &lt;os&gt;@&lt;ip&gt; # 루트 권한으로 변경 sudo su # ip 복사 # /mnt 디렉토리 안에 efs 폴더 생성 cd /mnt &amp;&amp; mkdir efs # 복사한 ip 주소 입력 # 확인 df -hT | grep efs AWS S3(Simple Storage Serive) 객체 스토리지 서비스로 데이터를 객체 단위로 저장 객체는 파일 데이터와 메타 데이터로 구성되며 인터넷을 통해 접근 가능 특징 내구성 및 가용성 : S3는 99.]]></description>
-</item>
-</channel>
+        <title>Lambda on My New Hugo Site</title>
+        <link>https://example.org/tags/lambda/</link>
+        <description>Recent content in Lambda on My New Hugo Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 17 Jul 2024 11:42:15 +0900</lastBuildDate><atom:link href="https://example.org/tags/lambda/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>aws에 EBS, Lambda와 efs</title>
+        <link>https://example.org/posts/cloud/aws/lambda_and_efs/</link>
+        <pubDate>Wed, 17 Jul 2024 11:42:15 +0900</pubDate>
+        
+        <guid>https://example.org/posts/cloud/aws/lambda_and_efs/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;오늘은 EBS, 람다와 EFS에 대해 배웠다 &lt;br&gt;
+잊지 않기 위해 복습 또 복습&amp;hellip;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ebselastic-block-storage&#34;&gt;EBS(Elastic Block Storage)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS 블록 스토리지 서비스로 EC2 인스턴스에 사용되는 지속적인 스토리지&lt;/li&gt;
+&lt;li&gt;DB, 파일 시스템, 로그 스토리지, 애플리케이션 데이터 등 사용&lt;/li&gt;
+&lt;li&gt;데이터를 블록 단위로 저장하며 개별적으로 다루어 질 수 있다.&lt;/li&gt;
+&lt;li&gt;지속성이 보장되며 중지 또는 종료해도 데이터 유지&lt;/li&gt;
+&lt;li&gt;주로 자주 접근하지 않는 데이터를 저렴하게 저장할 때 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;탄력성 : 필요에 따라 크기 조정, 스냅샷을 통해 백업 및 복원 가능(용량을 늘리는 건 쉬우나 줄이는 건 힘들어 충분히 고려 후 증설)&lt;/li&gt;
+&lt;li&gt;고성능 : 다양한 선능 옵션 제공&lt;/li&gt;
+&lt;li&gt;내구성 : 데이터 복제 및 높은 가용성 제공&lt;/li&gt;
+&lt;li&gt;보안 : IAM 정책을 통한 접근 제어 가능&lt;/li&gt;
+&lt;li&gt;스냅샷 : 볼륨의 시점 복사본 생성 가능 S3에 저장되며 복구 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습볼륨-확장&#34;&gt;실습(볼륨 확장)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;인스턴스 생성&lt;/li&gt;
+&lt;li&gt;보안 그룹 권한 변경&lt;/li&gt;
+&lt;li&gt;볼륨 늘림&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 인스턴스 접근&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh -i &amp;lt;aws key&amp;gt; &amp;lt;os&amp;gt;@&amp;lt;ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 루트 권한으로 변경&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo su
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 파일 시스템 디스크 사용량 노출&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df -hT
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 시스템 블록 장치 나열&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lsblk
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 지정된 파티션의 크기 확장&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;growpart /dev/xvda &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# XFS 파일 시스템 크기 확장&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xfs_growfs /dev/xvda1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 증설 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;lsblk
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;aws-efselastic-filesystem&#34;&gt;AWS EFS(Elastic FileSystem)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;여러 EC2 인스턴스가 동시에 데이터를 읽고 쓰며, 파일 시스템의 확장성과 고가용성 보장&lt;/li&gt;
+&lt;li&gt;같은 VPC 내에서 여러 인스턴스가 같은 파일 시스템에 접근해 읽기, 쓰기 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-1&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;확장성 : 파일 시스템 크기 자동 조절 및 필요에 따른 확장, 축소 가능&lt;/li&gt;
+&lt;li&gt;고가용성 및 내구성 : 여러 가용 영역(AZ)에 데이터 자동 복제해 높은 가용성 및 내구성 제공&lt;/li&gt;
+&lt;li&gt;동시 엑세스 : 여러 EC2 인스턴스에서 동시에 엑세스 할 수 있으며 공유 파일 시스템이 필요한 워크 로드에 적합&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습볼륨-확장-1&#34;&gt;실습(볼륨 확장)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;EFS 생성&lt;/li&gt;
+&lt;li&gt;보안그룹 수정&lt;/li&gt;
+&lt;li&gt;연결&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 인스턴스 접근&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh -i &amp;lt;aws key&amp;gt; &amp;lt;os&amp;gt;@&amp;lt;ip&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 루트 권한으로 변경&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo su
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ip 복사&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# /mnt 디렉토리 안에 efs 폴더 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd /mnt &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; mkdir efs
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 복사한 ip 주소 입력&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df -hT | grep efs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;aws-s3simple-storage-serive&#34;&gt;AWS S3(Simple Storage Serive)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;객체 스토리지 서비스로 데이터를 객체 단위로 저장&lt;/li&gt;
+&lt;li&gt;객체는 파일 데이터와 메타 데이터로 구성되며 인터넷을 통해 접근 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-2&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;내구성 및 가용성 : S3는 99.99% 내구성 제공 및 여러 가용 영역의 복제되어 높은 가용성 보장&lt;/li&gt;
+&lt;li&gt;확장성 : 거의 무한대로 확장 가능&lt;/li&gt;
+&lt;li&gt;보안 : 데이터 암호화 후 저정 및 전송하며 IAM 정책, 버킷 정책, ACL을 통해 엑세서 권한 제어&lt;/li&gt;
+&lt;li&gt;비용과 효율성 : 저장한 데이터 양과 사용한 리소스에 따라 지용 지불&lt;/li&gt;
+&lt;li&gt;데이터 관리 기능 : 버전 관리, 수명 주기 정책, 객체 잠금, 이벤트 알림 등 데이터를 효울적으로 관리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;사용-예시&#34;&gt;사용 예시
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;중요한 데이터 백업 및 복원에 사용&lt;/li&gt;
+&lt;li&gt;오랫동안 보관해야 하지만 자주 접근하지 않는 데이터의 아카이빙에 적합&lt;/li&gt;
+&lt;li&gt;정적 웹 사이트 호스팅에 사용&lt;/li&gt;
+&lt;li&gt;미디어 콘텐츠 저장 후 배포 시 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습볼륨-확장-2&#34;&gt;실습(볼륨 확장)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;S3 생성(모든 퍼블릭 허용)&lt;/li&gt;
+&lt;li&gt;권한 추가&lt;/li&gt;
+&lt;li&gt;파일 업로드&lt;/li&gt;
+&lt;li&gt;url 클릭 후 확인&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;aws-lambda&#34;&gt;AWS Lambda
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;서버를 프로비저닝하거나 관리할 필요 없이 코드를 실행 할 수 있는 컴퓨팅 서비스&lt;/li&gt;
+&lt;li&gt;코드를 업로드하고 실행 조건을 설정하면, 나머지 인프라 관리는 AWS에서 자동으로 처리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-3&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;서버를 프로비저닝, 관리, 확장할 필요가 없이 AWS에서 모든 인프라 관리&lt;/li&gt;
+&lt;li&gt;Lambda 함수는 요청에 따라 자동 확장&lt;/li&gt;
+&lt;li&gt;다양한 프로그래밍 언어 지원&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;사용-예시-1&#34;&gt;사용 예시
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;파일 업로드 이벤트 발생 시 트리거하여 파일 처리&lt;/li&gt;
+&lt;li&gt;실시간 데이터 처리 및 로그 분석, 필터링, 알람 트리거 수행&lt;/li&gt;
+&lt;li&gt;백업, 보고서 생성, 시스템 유지보수 작업 자동화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습볼륨-확장-3&#34;&gt;실습(볼륨 확장)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;Lambda 생성&lt;/li&gt;
+&lt;li&gt;코드 수정&lt;/li&gt;
+&lt;li&gt;테스트 클릭 및 모니터링 로그 확인&lt;/li&gt;
+&lt;li&gt;트리거 추가&lt;/li&gt;
+&lt;li&gt;파일 업로드&lt;/li&gt;
+&lt;li&gt;모니터링 확인&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;aws-cloudwatch&#34;&gt;AWS CloudWatch
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;인프라와 애플리케이션의 상태를 모니터링하고 관리하는 서비스&lt;/li&gt;
+&lt;li&gt;다양한 AWS 서비스와 통합되어 메트릭 수집, 경보 설정, 로그 모니터링 및 분석&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;특징-4&#34;&gt;특징
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;EC2, RDS, S3, DynamoDB 등 다양한 AWS 서비스에서 메트릭 자동 수집&lt;/li&gt;
+&lt;li&gt;특정 조건 충족 시 알람 생성해 SNS 및 함수 트리거, auto Scaling 조치&lt;/li&gt;
+&lt;li&gt;대시보드를 사용해 모니터링&lt;/li&gt;
+&lt;li&gt;시스템 이벤트 감지 및 지정된 대상으로 알림 전송&lt;/li&gt;
+&lt;li&gt;임계값 초과 시 경보 설정 및 자동 대응 조치&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;실습볼륨-확장-4&#34;&gt;실습(볼륨 확장)
+&lt;/h4&gt;&lt;ol&gt;
+&lt;li&gt;IAM 역할 생성(AWSLambdaBasicExecutionRole, CloudWatchEventsFullAccess)&lt;/li&gt;
+&lt;li&gt;lambda 생성&lt;/li&gt;
+&lt;li&gt;구성 - 권한 - 편집 - 역할 변경&lt;/li&gt;
+&lt;li&gt;이벤트 브리지 규칙 생성(aws , cloudWatch, Alarm, kakao)&lt;/li&gt;
+&lt;li&gt;cloudWatch 대시보드 - 경보상태 - 경보 생성&lt;/li&gt;
+&lt;li&gt;지표 선택 - 인스턴스 - cpu - 지표  선택&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
