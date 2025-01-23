@@ -1,146 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>JRE on My New Hugo Site</title>
-        <link>https://example.org/tags/jre/</link>
-        <description>Recent content in JRE on My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Fri, 21 Jul 2023 19:29:42 +0900</lastBuildDate><atom:link href="https://example.org/tags/jre/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>[Java] JDK와 JRE의 차이 그리고 JIT, JVM</title>
-        <link>https://example.org/posts/java/basic/differencebetweenjdkandjre/</link>
-        <pubDate>Fri, 21 Jul 2023 19:29:42 +0900</pubDate>
-        
-        <guid>https://example.org/posts/java/basic/differencebetweenjdkandjre/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
-8개월 동안 회사에서 프로젝트를 여러개 진행하면서 다양한 기술을 사용해봤다.&lt;br&gt;
-하지만 기초 및 이론 공부는 굉장히 소홀했었다..&lt;br&gt;
-기초가 단단하지 않으면 나의 개발 스펙트럼도 짧아 질것 같아서 하나하나 정리해보려 한다.&lt;br&gt;
-요즘 다시 괜찮아져서 블로그도 다시 시작&amp;hellip; 화이팅..!&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;들어가기-앞서&#34;&gt;들어가기 앞서
-&lt;/h2&gt;&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;오늘은 자바 플랫폼에 대해 알아보고자 한다.&lt;/li&gt;
-&lt;li&gt;JDK, JRE, JVM은 자바 플랫폼의 3대 구성요소이다.&lt;/li&gt;
-&lt;li&gt;오늘은 JDK, JRE, JVM에 추가로 JIT까지 알아보고자 한다.&lt;/li&gt;
-&lt;li&gt;이미지를 먼저 확인 후 본격적으로 들어가보자..!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;jdkjava-development-kit--자바-개발-키트&#34;&gt;JDK(Java Development Kit : 자바 개발 키트)
-&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&#34;1-jdk는-무엇일까&#34;&gt;1. JDK는 무엇일까?
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Java를 사용하기 위해 모든 기능을 갖춘 SDK(Software Development Kit)&lt;/li&gt;
-&lt;li&gt;JRE를 포함한 컴파일러(javac)와 jdb, javadoc 같은 도구를 포함&lt;/li&gt;
-&lt;li&gt;즉, 프로그램을 생성하고 컴파일 할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h3 id=&#34;2-jdk-종류&#34;&gt;2. JDK 종류
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Java SE(Java Standard Edition)
-&lt;ul&gt;
-&lt;li&gt;표준 에디션의 자바 플랫폼, 자바 언어의 핵심 기능 제공&lt;/li&gt;
-&lt;li&gt;주요패키지 java.lang.*, java.io.*, java.util.*, java.awt.*, java.rmi.*, java.net.*&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Java EE(Java Enterprise Edition)
-&lt;ul&gt;
-&lt;li&gt;Java SE에 웹 애플리케이션 서버에서 동작하는 기능을 추가한 플랫폼&lt;/li&gt;
-&lt;li&gt;즉, 서버측 개발을 하기 위해 필요(JSP, Servlet, JDBC 등 기업용 애플리케이션 개발에 필요한 다양한 플랫폼)&lt;/li&gt;
-&lt;li&gt;이 스펙에 따라 제품을 구현한 것이 WAS로 부름&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Java ME(Java Micro Edition)
-&lt;ul&gt;
-&lt;li&gt;임베디드 기기들에서 구동되기 위한 환경을 제공하는 API를 모아둔 플랫폼&lt;/li&gt;
-&lt;li&gt;제한된 자원을 가진 휴대전화, PDA(소형 전자 기기) 등에서 Java 프로그래밍 언어를 지원하기 위해 만든 플랫폼&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h3 id=&#34;3-jdk-기본-도구&#34;&gt;3. JDK 기본 도구
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;javac : 자바 컴파일러(자바 소스파일 =&amp;gt; 바이트 코드)&lt;/li&gt;
-&lt;li&gt;java : javac가 만든 클래스 파일을 해석 및 실행&lt;/li&gt;
-&lt;li&gt;jdb : 자바 디버깅 툴&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;jrejava-runtime-environment--자바-런타임-환경&#34;&gt;JRE(Java Runtime Environment : 자바 런타임 환경)
-&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&#34;1-jre는-무엇일까&#34;&gt;1. JRE는 무엇일까?
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;자바로 만든 애플리케이션을 실행할 수 있는 런타임 환경 구축&lt;/li&gt;
-&lt;li&gt;JVM과 핵심 라이브러리 및 자바 런타임 환경에서 사용하는 프로퍼티 세팅이나 리소스 파일 제공&lt;/li&gt;
-&lt;li&gt;JDK와 달리 개발하는데 필요한 툴은 제공되지 않는다.&lt;/li&gt;
-&lt;li&gt;클래스 로더, 클래스 라이브러리를 통해 작성한 코드를 라이브러리와 결합 후 JVM에 넘겨 실행&lt;/li&gt;
-&lt;li&gt;JRE는 특별한 기능을 수행하기 보단 JVM이 원할하게 잘 작동할 수 있도록 환경에 맞춰주는 역할&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h3 id=&#34;2-jre-구성요소&#34;&gt;2. JRE 구성요소
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;JVM(Java Virtual Machine) : 자바 가상 머신으로 아래 따로 다루겠습니다.&lt;/li&gt;
-&lt;li&gt;Java Class Libraries : 개발하면서 자주 사용하는 여러 유용한 기능들을 모아놓은 클래스 집합 라이브러리&lt;/li&gt;
-&lt;li&gt;Java Class Loader : JVM이 동작하다가 클래스 파일을 참조하는 순간 동적으로 읽어 JVM에 링크되고 메모리에 로딩하는 역할&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;jvmjava-virtual-machine--자바-가상-머신&#34;&gt;JVM(Java Virtual Machine : 자바 가상 머신)
-&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&#34;1-jvm은-무엇일까&#34;&gt;1. JVM은 무엇일까?
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;자바 프로그램이 어느 기기, 운영체제 상에서도 실행될 수 있도록 만듦(WORA : 한 번 쓰고 모든 곳에서 실행한다)&lt;/li&gt;
-&lt;li&gt;메모리를 효율적으로 관리 및 최적화(Garbage Collection)&lt;/li&gt;
-&lt;li&gt;JVM은 단독으로 사용이 불가, 최소 배포 단위는 JRE이다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h3 id=&#34;2-가비지-컬렉션garbage-collection&#34;&gt;2. 가비지 컬렉션(Garbage Collection)?
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;JVM이 메모리를 관리하는 프로세스&lt;/li&gt;
-&lt;li&gt;사용하지 않는 메모리를 지속적으로 찾아 제거해 효육적인 메모리 관리&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;jitjust-in-time-compilation-방식&#34;&gt;JIT(Just In Time Compilation) 방식
-&lt;/h2&gt;&lt;hr&gt;
-&lt;h3 id=&#34;1-jit는-무엇일까&#34;&gt;1. JIT는 무엇일까?
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;프로그램을 실제 실행하는 시점에 기계어로 번역하는 컴파일 기법&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h3 id=&#34;2-컴파일-기법&#34;&gt;2. 컴파일 기법
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;컴파일 기법에는 인터프리터 방식와 컴파일러 방식로 나뉨&lt;/li&gt;
-&lt;li&gt;인터프리터 방식는 코드를 한 줄씩 중간 코드인 바이트 코드로 변환 후 실행&lt;/li&gt;
-&lt;li&gt;컴파일링 방식는 코드 실행 전, 소스 코드를 한번에 기계어로 변환 후 실행&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h3 id=&#34;3-java-컴파일-기법&#34;&gt;3. Java 컴파일 기법
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;자바는 컴파일러 방식을 사용한다&lt;/li&gt;
-&lt;li&gt;Java Compiler를 통해 Byte Code로 변환되고 다시 기계어로 변환된다. 이 과정이 있기 때문에 느리다 평가가 존재한다.&lt;/li&gt;
-&lt;li&gt;이러한 단점을 극복하기 위해 JIT 방식이 채택되었다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h3 id=&#34;4-jit-방식&#34;&gt;4. JIT 방식
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;자주 쓸만한 코드들을 기계어로 변환 시켜놓고 저장 후 이미 변환된 기계어 코드를 재사용하는 방식&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://pythontoomuchinformation.tistory.com/277&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;JDK(Java Development Kit)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.itworld.co.kr/news/110768&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;JRE(Java Development Kit)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://m.blog.naver.com/goreng2/221770110714&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;JVM(Java Virtual Machine)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://medium.com/@lazysoul/jit-just-in-time-16bb63f3ae26&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;JIT(Just In Time Compilation)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>JRE on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/jre/</link>
+    <description>Recent content in JRE on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Jul 2023 19:29:42 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/jre/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Java] JDK와 JRE의 차이 그리고 JIT, JVM</title>
+      <link>http://localhost:1313/posts/java/basic/differencebetweenjdkandjre/</link>
+      <pubDate>Fri, 21 Jul 2023 19:29:42 +0900</pubDate>
+      <guid>http://localhost:1313/posts/java/basic/differencebetweenjdkandjre/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;&#xA;8개월 동안 회사에서 프로젝트를 여러개 진행하면서 다양한 기술을 사용해봤다.&lt;br&gt;&#xA;하지만 기초 및 이론 공부는 굉장히 소홀했었다..&lt;br&gt;&#xA;기초가 단단하지 않으면 나의 개발 스펙트럼도 짧아 질것 같아서 하나하나 정리해보려 한다.&lt;br&gt;&#xA;요즘 다시 괜찮아져서 블로그도 다시 시작&amp;hellip; 화이팅..!&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;들어가기-앞서&#34;&gt;들어가기 앞서&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;오늘은 자바 플랫폼에 대해 알아보고자 한다.&lt;/li&gt;&#xA;&lt;li&gt;JDK, JRE, JVM은 자바 플랫폼의 3대 구성요소이다.&lt;/li&gt;&#xA;&lt;li&gt;오늘은 JDK, JRE, JVM에 추가로 JIT까지 알아보고자 한다.&lt;/li&gt;&#xA;&lt;li&gt;이미지를 먼저 확인 후 본격적으로 들어가보자..!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;jdkjava-development-kit--자바-개발-키트&#34;&gt;JDK(Java Development Kit : 자바 개발 키트)&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-jdk는-무엇일까&#34;&gt;1. JDK는 무엇일까?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Java를 사용하기 위해 모든 기능을 갖춘 SDK(Software Development Kit)&lt;/li&gt;&#xA;&lt;li&gt;JRE를 포함한 컴파일러(javac)와 jdb, javadoc 같은 도구를 포함&lt;/li&gt;&#xA;&lt;li&gt;즉, 프로그램을 생성하고 컴파일 할 수 있다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h3 id=&#34;2-jdk-종류&#34;&gt;2. JDK 종류&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Java SE(Java Standard Edition)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;표준 에디션의 자바 플랫폼, 자바 언어의 핵심 기능 제공&lt;/li&gt;&#xA;&lt;li&gt;주요패키지 java.lang.*, java.io.*, java.util.*, java.awt.*, java.rmi.*, java.net.*&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Java EE(Java Enterprise Edition)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Java SE에 웹 애플리케이션 서버에서 동작하는 기능을 추가한 플랫폼&lt;/li&gt;&#xA;&lt;li&gt;즉, 서버측 개발을 하기 위해 필요(JSP, Servlet, JDBC 등 기업용 애플리케이션 개발에 필요한 다양한 플랫폼)&lt;/li&gt;&#xA;&lt;li&gt;이 스펙에 따라 제품을 구현한 것이 WAS로 부름&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Java ME(Java Micro Edition)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;임베디드 기기들에서 구동되기 위한 환경을 제공하는 API를 모아둔 플랫폼&lt;/li&gt;&#xA;&lt;li&gt;제한된 자원을 가진 휴대전화, PDA(소형 전자 기기) 등에서 Java 프로그래밍 언어를 지원하기 위해 만든 플랫폼&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h3 id=&#34;3-jdk-기본-도구&#34;&gt;3. JDK 기본 도구&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;javac : 자바 컴파일러(자바 소스파일 =&amp;gt; 바이트 코드)&lt;/li&gt;&#xA;&lt;li&gt;java : javac가 만든 클래스 파일을 해석 및 실행&lt;/li&gt;&#xA;&lt;li&gt;jdb : 자바 디버깅 툴&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;jrejava-runtime-environment--자바-런타임-환경&#34;&gt;JRE(Java Runtime Environment : 자바 런타임 환경)&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-jre는-무엇일까&#34;&gt;1. JRE는 무엇일까?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;자바로 만든 애플리케이션을 실행할 수 있는 런타임 환경 구축&lt;/li&gt;&#xA;&lt;li&gt;JVM과 핵심 라이브러리 및 자바 런타임 환경에서 사용하는 프로퍼티 세팅이나 리소스 파일 제공&lt;/li&gt;&#xA;&lt;li&gt;JDK와 달리 개발하는데 필요한 툴은 제공되지 않는다.&lt;/li&gt;&#xA;&lt;li&gt;클래스 로더, 클래스 라이브러리를 통해 작성한 코드를 라이브러리와 결합 후 JVM에 넘겨 실행&lt;/li&gt;&#xA;&lt;li&gt;JRE는 특별한 기능을 수행하기 보단 JVM이 원할하게 잘 작동할 수 있도록 환경에 맞춰주는 역할&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h3 id=&#34;2-jre-구성요소&#34;&gt;2. JRE 구성요소&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;JVM(Java Virtual Machine) : 자바 가상 머신으로 아래 따로 다루겠습니다.&lt;/li&gt;&#xA;&lt;li&gt;Java Class Libraries : 개발하면서 자주 사용하는 여러 유용한 기능들을 모아놓은 클래스 집합 라이브러리&lt;/li&gt;&#xA;&lt;li&gt;Java Class Loader : JVM이 동작하다가 클래스 파일을 참조하는 순간 동적으로 읽어 JVM에 링크되고 메모리에 로딩하는 역할&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;jvmjava-virtual-machine--자바-가상-머신&#34;&gt;JVM(Java Virtual Machine : 자바 가상 머신)&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-jvm은-무엇일까&#34;&gt;1. JVM은 무엇일까?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;자바 프로그램이 어느 기기, 운영체제 상에서도 실행될 수 있도록 만듦(WORA : 한 번 쓰고 모든 곳에서 실행한다)&lt;/li&gt;&#xA;&lt;li&gt;메모리를 효율적으로 관리 및 최적화(Garbage Collection)&lt;/li&gt;&#xA;&lt;li&gt;JVM은 단독으로 사용이 불가, 최소 배포 단위는 JRE이다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h3 id=&#34;2-가비지-컬렉션garbage-collection&#34;&gt;2. 가비지 컬렉션(Garbage Collection)?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;JVM이 메모리를 관리하는 프로세스&lt;/li&gt;&#xA;&lt;li&gt;사용하지 않는 메모리를 지속적으로 찾아 제거해 효육적인 메모리 관리&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;jitjust-in-time-compilation-방식&#34;&gt;JIT(Just In Time Compilation) 방식&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;1-jit는-무엇일까&#34;&gt;1. JIT는 무엇일까?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;프로그램을 실제 실행하는 시점에 기계어로 번역하는 컴파일 기법&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h3 id=&#34;2-컴파일-기법&#34;&gt;2. 컴파일 기법&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;컴파일 기법에는 인터프리터 방식와 컴파일러 방식로 나뉨&lt;/li&gt;&#xA;&lt;li&gt;인터프리터 방식는 코드를 한 줄씩 중간 코드인 바이트 코드로 변환 후 실행&lt;/li&gt;&#xA;&lt;li&gt;컴파일링 방식는 코드 실행 전, 소스 코드를 한번에 기계어로 변환 후 실행&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h3 id=&#34;3-java-컴파일-기법&#34;&gt;3. Java 컴파일 기법&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;자바는 컴파일러 방식을 사용한다&lt;/li&gt;&#xA;&lt;li&gt;Java Compiler를 통해 Byte Code로 변환되고 다시 기계어로 변환된다. 이 과정이 있기 때문에 느리다 평가가 존재한다.&lt;/li&gt;&#xA;&lt;li&gt;이러한 단점을 극복하기 위해 JIT 방식이 채택되었다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h3 id=&#34;4-jit-방식&#34;&gt;4. JIT 방식&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;자주 쓸만한 코드들을 기계어로 변환 시켜놓고 저장 후 이미 변환된 기계어 코드를 재사용하는 방식&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://pythontoomuchinformation.tistory.com/277&#34;&gt;JDK(Java Development Kit)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.itworld.co.kr/news/110768&#34;&gt;JRE(Java Development Kit)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://m.blog.naver.com/goreng2/221770110714&#34;&gt;JVM(Java Virtual Machine)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://medium.com/@lazysoul/jit-just-in-time-16bb63f3ae26&#34;&gt;JIT(Just In Time Compilation)&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
 </rss>

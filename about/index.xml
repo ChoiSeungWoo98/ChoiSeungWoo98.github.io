@@ -1,32 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Abouts on My New Hugo Site</title>
-        <link>https://example.org/about/</link>
-        <description>Recent content in Abouts on My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Thu, 02 Mar 2023 01:04:49 +0800</lastBuildDate><atom:link href="https://example.org/about/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>About</title>
-        <link>https://example.org/about/about/</link>
-        <pubDate>Thu, 02 Mar 2023 01:04:49 +0800</pubDate>
-        
-        <guid>https://example.org/about/about/</guid>
-        <description>&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;👋Introduction&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;🧑🏻‍💻 아직 배울게 많은 주니어 백엔드 엔지니어입니다.&lt;/p&gt;
-&lt;p&gt;👍 사용자 중심의 서비스에 관심이 많습니다.&lt;/p&gt;
-&lt;p&gt;✏️ 많은 것을 배우기 위해 열심히 노력중입니다.&lt;/p&gt;
-&lt;h2 id=&#34;stack&#34;&gt;&lt;strong&gt;⚒️Stack⚒️&lt;/strong&gt;
-&lt;/h2&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;h2 id=&#34;contact&#34;&gt;&lt;strong&gt;✉️Contact&lt;/strong&gt;
-&lt;/h2&gt;&lt;!-- raw HTML omitted --&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>Abouts on My New Hugo Site</title>
+    <link>http://localhost:1313/about/</link>
+    <description>Recent content in Abouts on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Mar 2023 01:04:49 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/about/</link>
+      <pubDate>Thu, 02 Mar 2023 01:04:49 +0800</pubDate>
+      <guid>http://localhost:1313/about/about/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;👋Introduction&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;🧑🏻‍💻 아직 배울게 많은 주니어 백엔드 엔지니어입니다.&lt;/p&gt;&#xA;&lt;p&gt;👍 사용자 중심의 서비스에 관심이 많습니다.&lt;/p&gt;&#xA;&lt;p&gt;✏️ 많은 것을 배우기 위해 열심히 노력중입니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;stack&#34;&gt;&lt;strong&gt;⚒️Stack⚒️&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;h2 id=&#34;contact&#34;&gt;&lt;strong&gt;✉️Contact&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+  </channel>
 </rss>
