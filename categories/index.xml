@@ -7,35 +7,35 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Java</title>
-        <link>https://choiseungwoo98.github.io/categories/java/</link>
+        <title>Kubernetes</title>
+        <link>https://choiseungwoo98.github.io/categories/kubernetes/</link>
         <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/categories/java/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/kubernetes/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>IaC</title>
+        <link>https://choiseungwoo98.github.io/categories/iac/</link>
+        <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/categories/iac/</guid>
         <description></description>
         </item>
         <item>
         <title>AWS</title>
         <link>https://choiseungwoo98.github.io/categories/aws/</link>
-        <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
+        <pubDate>Wed, 17 Jul 2024 11:42:15 +0900</pubDate>
         
         <guid>https://choiseungwoo98.github.io/categories/aws/</guid>
         <description></description>
         </item>
         <item>
-        <title>KakaoTechBootCamp</title>
-        <link>https://choiseungwoo98.github.io/categories/kakaotechbootcamp/</link>
-        <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
-        
-        <guid>https://choiseungwoo98.github.io/categories/kakaotechbootcamp/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>네트워크</title>
-        <link>https://choiseungwoo98.github.io/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</link>
+        <title>Network</title>
+        <link>https://choiseungwoo98.github.io/categories/network/</link>
         <pubDate>Sat, 13 Jul 2024 22:42:04 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/network/</guid>
         <description></description>
         </item>
         <item>
@@ -55,27 +55,43 @@
         <description></description>
         </item>
         <item>
-        <title>클라우드</title>
-        <link>https://choiseungwoo98.github.io/categories/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</link>
+        <title>Architecture</title>
+        <link>https://choiseungwoo98.github.io/categories/architecture/</link>
         <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/categories/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/architecture/</guid>
         <description></description>
         </item>
         <item>
-        <title>가상화</title>
-        <link>https://choiseungwoo98.github.io/categories/%EA%B0%80%EC%83%81%ED%99%94/</link>
+        <title>Cloud</title>
+        <link>https://choiseungwoo98.github.io/categories/cloud/</link>
+        <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/categories/cloud/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Virtualization</title>
+        <link>https://choiseungwoo98.github.io/categories/virtualization/</link>
         <pubDate>Wed, 03 Jul 2024 18:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/categories/%EA%B0%80%EC%83%81%ED%99%94/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/virtualization/</guid>
         <description></description>
         </item>
         <item>
-        <title>WebSocket</title>
-        <link>https://choiseungwoo98.github.io/categories/websocket/</link>
-        <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
+        <title>KakaoTechBootCamp</title>
+        <link>https://choiseungwoo98.github.io/categories/kakaotechbootcamp/</link>
+        <pubDate>Tue, 02 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/categories/websocket/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/kakaotechbootcamp/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Java</title>
+        <link>https://choiseungwoo98.github.io/categories/java/</link>
+        <pubDate>Sun, 20 Aug 2023 02:35:44 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/categories/java/</guid>
         <description></description>
         </item>
         <item>

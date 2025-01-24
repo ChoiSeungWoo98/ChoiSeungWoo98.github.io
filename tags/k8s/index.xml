@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>K8S on My Tech Blog 🧑🏻‍💻</title>
+        <title>K8S on 승우의 성장일지 🧑🏻‍💻</title>
         <link>http://localhost:1313/tags/k8s/</link>
-        <description>Recent content in K8S on My Tech Blog 🧑🏻‍💻</description>
+        <description>Recent content in K8S on 승우의 성장일지 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Fri, 12 Jul 2024 18:25:27 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/k8s/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>쿠버네티스를 배우기 전 도커에 대한 이해</title>
-        <link>http://localhost:1313/p/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EB%A5%BC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%84-%EB%8F%84%EC%BB%A4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4/</link>
+        <title>[Docker] 쿠버네티스를 배우기 전 도커에 대한 이해</title>
+        <link>http://localhost:1313/p/docker-%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EB%A5%BC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%84-%EB%8F%84%EC%BB%A4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4/</link>
         <pubDate>Fri, 12 Jul 2024 18:25:27 +0900</pubDate>
         
-        <guid>http://localhost:1313/p/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EB%A5%BC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%84-%EB%8F%84%EC%BB%A4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4/</guid>
+        <guid>http://localhost:1313/p/docker-%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EB%A5%BC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%84-%EB%8F%84%EC%BB%A4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 실습보다 이론위주의 수업이었다.&lt;br&gt;
 쿠버네티스를 배우기 전 도커에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.&lt;/p&gt;

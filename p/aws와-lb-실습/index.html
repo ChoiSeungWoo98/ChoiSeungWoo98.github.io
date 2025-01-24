@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 오늘은 AWS 첫번째 실습 시간이다.\nEC2에서 VPC를 사용하고 public이랑 private를 열어\npublic은 LB를 테스트하고\nprivate은 NAT를 이용한 인터넷 연결을 실습했다.\n">
 <title>AWS와 LB 실습</title>
 
-<link rel='canonical' href='https://choiseungwoo98.github.io/p/aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/'>
+<link rel='canonical' href='http://localhost:1313/p/aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="AWS와 LB 실습">
 <meta property='og:description' content=" 오늘은 AWS 첫번째 실습 시간이다.\nEC2에서 VPC를 사용하고 public이랑 private를 열어\npublic은 LB를 테스트하고\nprivate은 NAT를 이용한 인터넷 연결을 실습했다.\n">
-<meta property='og:url' content='https://choiseungwoo98.github.io/p/aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/'>
+<meta property='og:url' content='http://localhost:1313/p/aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/'>
 <meta property='og:site_name' content='승우의 성장일지 🧑🏻‍💻'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='KakaoTechBootCamp' /><meta property='article:tag' content='BootCamp' /><meta property='article:tag' content='AWS' /><meta property='article:tag' content='ec2' /><meta property='article:published_time' content='2024-07-15T15:01:46&#43;09:00'/><meta property='article:modified_time' content='2024-07-15T15:01:46&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='AWS' /><meta property='article:tag' content='ec2' /><meta property='article:published_time' content='2024-07-15T15:01:46&#43;09:00'/><meta property='article:modified_time' content='2024-07-15T15:01:46&#43;09:00'/>
 <meta name="twitter:title" content="AWS와 LB 실습">
 <meta name="twitter:description" content=" 오늘은 AWS 첫번째 실습 시간이다.\nEC2에서 VPC를 사용하고 public이랑 private를 열어\npublic은 LB를 테스트하고\nprivate은 NAT를 이용한 인터넷 연결을 실습했다.\n">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -294,10 +294,6 @@
     
     <header class="article-category">
         
-            <a href="/categories/kakaotechbootcamp/" >
-                KakaoTechBootCamp
-            </a>
-        
             <a href="/categories/aws/" >
                 AWS
             </a>
@@ -575,10 +571,6 @@ private은 NAT를 이용한 인터넷 연결을 실습했다.</p>
     
     <section class="article-tags">
         
-            <a href="/tags/kakaotechbootcamp/">KakaoTechBootCamp</a>
-        
-            <a href="/tags/bootcamp/">BootCamp</a>
-        
             <a href="/tags/aws/">AWS</a>
         
             <a href="/tags/ec2/">Ec2</a>
@@ -607,80 +599,6 @@ private은 NAT를 이용한 인터넷 연결을 실습했다.</p>
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">관련 글</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/p/iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">IaC 기초 및 Terraform, Ansible</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/aws%EC%97%90-ebs-lambda%EC%99%80-efs/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">aws에 EBS, Lambda와 efs</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">AWS IAM을 이용한 S3 실습</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/docker-%EC%9D%B4%EB%A1%A0/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Docker 이론</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/docker_conpose/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Docker_conpose</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     
@@ -829,7 +747,7 @@ private은 NAT를 이용한 인터넷 연결을 실습했다.</p>
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.d1b977a2b87aefeb4d739dd3f7981e7255659d11c47ea9b81e3a1eced796adbe.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

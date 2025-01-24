@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Fri, 12 Jul 2024 14:25:27 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Docker 이론</title>
-        <link>https://choiseungwoo98.github.io/p/docker-%EC%9D%B4%EB%A1%A0/</link>
+        <title>[Docker] Docker 이론</title>
+        <link>https://choiseungwoo98.github.io/p/docker-docker-%EC%9D%B4%EB%A1%A0/</link>
         <pubDate>Fri, 12 Jul 2024 14:25:27 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/docker-%EC%9D%B4%EB%A1%A0/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-docker-%EC%9D%B4%EB%A1%A0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 실습보다 이론위주의 수업이었다.&lt;br&gt;
 도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.&lt;/p&gt;
@@ -196,11 +196,11 @@
 </description>
         </item>
         <item>
-        <title>Docker_conpose</title>
-        <link>https://choiseungwoo98.github.io/p/docker_conpose/</link>
+        <title>[Docker] Docker Compose에 대해</title>
+        <link>https://choiseungwoo98.github.io/p/docker-docker-compose%EC%97%90-%EB%8C%80%ED%95%B4/</link>
         <pubDate>Thu, 11 Jul 2024 13:13:32 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/docker_conpose/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-docker-compose%EC%97%90-%EB%8C%80%ED%95%B4/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 docker compose에 대해 배웠습니다.&lt;br&gt;
 이론이 많지는 않았지만&lt;br&gt;
@@ -288,11 +288,11 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>Dockerfile 기초</title>
-        <link>https://choiseungwoo98.github.io/p/dockerfile-%EA%B8%B0%EC%B4%88/</link>
+        <title>[Docker] Dockerfile 기초</title>
+        <link>https://choiseungwoo98.github.io/p/docker-dockerfile-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Wed, 10 Jul 2024 16:16:44 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/dockerfile-%EA%B8%B0%EC%B4%88/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-dockerfile-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제는 도커의 개념과 동작 방식에 대해 정리하였습니다.&lt;br&gt;
 오늘은 docker를 실질적으로 사용해보면서 필요한 내용을 정리해보고자 합니다.&lt;/p&gt;
@@ -749,11 +749,11 @@
 </description>
         </item>
         <item>
-        <title>Docker 기초</title>
-        <link>https://choiseungwoo98.github.io/p/docker-%EA%B8%B0%EC%B4%88/</link>
+        <title>[Docker] Docker 기초</title>
+        <link>https://choiseungwoo98.github.io/p/docker-docker-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Tue, 09 Jul 2024 22:16:44 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/docker-%EA%B8%B0%EC%B4%88/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-docker-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;기존에 혼자 Docker에 대해 잠깐 공부한 적 있지만 심도있게 다루지는 않았습니다.&lt;br&gt;
 카카오 테크 부트캠프를 시작하면서 클라우드 수업을 듣기 시작했고&lt;br&gt;

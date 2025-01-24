@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Wed, 17 Jul 2024 11:42:15 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/lambda/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>aws에 EBS, Lambda와 efs</title>
-        <link>https://choiseungwoo98.github.io/p/aws%EC%97%90-ebs-lambda%EC%99%80-efs/</link>
+        <title>[AWS] aws에 EBS, Lambda와 efs</title>
+        <link>https://choiseungwoo98.github.io/p/aws-aws%EC%97%90-ebs-lambda%EC%99%80-efs/</link>
         <pubDate>Wed, 17 Jul 2024 11:42:15 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/aws%EC%97%90-ebs-lambda%EC%99%80-efs/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws-aws%EC%97%90-ebs-lambda%EC%99%80-efs/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 EBS, 람다와 EFS에 대해 배웠다 &lt;br&gt;
 잊지 않기 위해 복습 또 복습&amp;hellip;&lt;/p&gt;

@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 15 Jul 2024 15:01:46 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/ec2/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>AWS와 LB 실습</title>
-        <link>https://choiseungwoo98.github.io/p/aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</link>
+        <title>[AWS] AWS와 LB 실습</title>
+        <link>https://choiseungwoo98.github.io/p/aws-aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</link>
         <pubDate>Mon, 15 Jul 2024 15:01:46 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws-aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 AWS 첫번째 실습 시간이다.&lt;br&gt;
 EC2에서 VPC를 사용하고 public이랑 private를 열어&lt;br&gt;

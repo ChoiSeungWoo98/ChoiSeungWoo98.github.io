@@ -7,27 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Final</title>
-        <link>https://choiseungwoo98.github.io/tags/final/</link>
+        <title>Kubernetes</title>
+        <link>https://choiseungwoo98.github.io/tags/kubernetes/</link>
         <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/tags/final/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Java</title>
-        <link>https://choiseungwoo98.github.io/tags/java/</link>
-        <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
-        
-        <guid>https://choiseungwoo98.github.io/tags/java/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Java-Basic</title>
-        <link>https://choiseungwoo98.github.io/tags/java-basic/</link>
-        <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
-        
-        <guid>https://choiseungwoo98.github.io/tags/java-basic/</guid>
+        <guid>https://choiseungwoo98.github.io/tags/kubernetes/</guid>
         <description></description>
         </item>
         <item>
@@ -47,27 +31,11 @@
         <description></description>
         </item>
         <item>
-        <title>BootCamp</title>
-        <link>https://choiseungwoo98.github.io/tags/bootcamp/</link>
-        <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
-        
-        <guid>https://choiseungwoo98.github.io/tags/bootcamp/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>IaC</title>
         <link>https://choiseungwoo98.github.io/tags/iac/</link>
         <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
         
         <guid>https://choiseungwoo98.github.io/tags/iac/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>KakaoTechBootCamp</title>
-        <link>https://choiseungwoo98.github.io/tags/kakaotechbootcamp/</link>
-        <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
-        
-        <guid>https://choiseungwoo98.github.io/tags/kakaotechbootcamp/</guid>
         <description></description>
         </item>
         <item>
@@ -127,19 +95,43 @@
         <description></description>
         </item>
         <item>
-        <title>네트워크</title>
-        <link>https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</link>
+        <title>Network</title>
+        <link>https://choiseungwoo98.github.io/tags/network/</link>
         <pubDate>Sat, 13 Jul 2024 22:42:04 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</guid>
+        <guid>https://choiseungwoo98.github.io/tags/network/</guid>
         <description></description>
         </item>
         <item>
-        <title>복습</title>
-        <link>https://choiseungwoo98.github.io/tags/%EB%B3%B5%EC%8A%B5/</link>
+        <title>OSI</title>
+        <link>https://choiseungwoo98.github.io/tags/osi/</link>
         <pubDate>Sat, 13 Jul 2024 22:42:04 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/tags/%EB%B3%B5%EC%8A%B5/</guid>
+        <guid>https://choiseungwoo98.github.io/tags/osi/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Domain</title>
+        <link>https://choiseungwoo98.github.io/tags/domain/</link>
+        <pubDate>Sat, 13 Jul 2024 16:42:04 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/tags/domain/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Https</title>
+        <link>https://choiseungwoo98.github.io/tags/https/</link>
+        <pubDate>Sat, 13 Jul 2024 16:42:04 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/tags/https/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>SSL</title>
+        <link>https://choiseungwoo98.github.io/tags/ssl/</link>
+        <pubDate>Sat, 13 Jul 2024 16:42:04 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/tags/ssl/</guid>
         <description></description>
         </item>
         <item>
@@ -156,6 +148,14 @@
         <pubDate>Fri, 12 Jul 2024 14:25:27 +0900</pubDate>
         
         <guid>https://choiseungwoo98.github.io/tags/security/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Dockerfile</title>
+        <link>https://choiseungwoo98.github.io/tags/dockerfile/</link>
+        <pubDate>Wed, 10 Jul 2024 16:16:44 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/tags/dockerfile/</guid>
         <description></description>
         </item>
         <item>
@@ -223,11 +223,19 @@
         <description></description>
         </item>
         <item>
-        <title>네트워크 개념</title>
-        <link>https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</link>
-        <pubDate>Thu, 04 Jul 2024 22:03:57 +0900</pubDate>
+        <title>Architecture</title>
+        <link>https://choiseungwoo98.github.io/tags/architecture/</link>
+        <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</guid>
+        <guid>https://choiseungwoo98.github.io/tags/architecture/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Cloud</title>
+        <link>https://choiseungwoo98.github.io/tags/cloud/</link>
+        <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/tags/cloud/</guid>
         <description></description>
         </item>
         <item>
@@ -247,27 +255,11 @@
         <description></description>
         </item>
         <item>
-        <title>아키텍처</title>
-        <link>https://choiseungwoo98.github.io/tags/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</link>
-        <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
-        
-        <guid>https://choiseungwoo98.github.io/tags/%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>클라우드개념</title>
         <link>https://choiseungwoo98.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B0%9C%EB%85%90/</link>
         <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
         
         <guid>https://choiseungwoo98.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B0%9C%EB%85%90/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>클라우드아키텍처</title>
-        <link>https://choiseungwoo98.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</link>
-        <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
-        
-        <guid>https://choiseungwoo98.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</guid>
         <description></description>
         </item>
         <item>
@@ -295,11 +287,19 @@
         <description></description>
         </item>
         <item>
-        <title>가상화기술</title>
-        <link>https://choiseungwoo98.github.io/tags/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0/</link>
+        <title>Virtualization</title>
+        <link>https://choiseungwoo98.github.io/tags/virtualization/</link>
         <pubDate>Wed, 03 Jul 2024 18:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/tags/%EA%B0%80%EC%83%81%ED%99%94%EA%B8%B0%EC%88%A0/</guid>
+        <guid>https://choiseungwoo98.github.io/tags/virtualization/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>OT</title>
+        <link>https://choiseungwoo98.github.io/tags/ot/</link>
+        <pubDate>Tue, 02 Jul 2024 22:03:57 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/tags/ot/</guid>
         <description></description>
         </item>
         <item>
@@ -327,11 +327,35 @@
         <description></description>
         </item>
         <item>
+        <title>클라우드</title>
+        <link>https://choiseungwoo98.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</link>
+        <pubDate>Tue, 02 Jul 2024 22:03:57 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>클라우드경험</title>
         <link>https://choiseungwoo98.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B2%BD%ED%97%98/</link>
         <pubDate>Tue, 02 Jul 2024 22:03:57 +0900</pubDate>
         
         <guid>https://choiseungwoo98.github.io/tags/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C%EA%B2%BD%ED%97%98/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Java</title>
+        <link>https://choiseungwoo98.github.io/tags/java/</link>
+        <pubDate>Sun, 20 Aug 2023 02:35:44 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/tags/java/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Java-Basic</title>
+        <link>https://choiseungwoo98.github.io/tags/java-basic/</link>
+        <pubDate>Sun, 20 Aug 2023 02:35:44 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/tags/java-basic/</guid>
         <description></description>
         </item>
         <item>
@@ -412,6 +436,14 @@
         <pubDate>Sat, 19 Aug 2023 16:03:49 +0900</pubDate>
         
         <guid>https://choiseungwoo98.github.io/tags/naming/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Final</title>
+        <link>https://choiseungwoo98.github.io/tags/final/</link>
+        <pubDate>Sat, 22 Jul 2023 18:37:42 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/tags/final/</guid>
         <description></description>
         </item>
         <item>
@@ -540,14 +572,6 @@
         <pubDate>Sat, 04 Mar 2023 14:16:49 +0900</pubDate>
         
         <guid>https://choiseungwoo98.github.io/tags/blog/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>GitBlog</title>
-        <link>https://choiseungwoo98.github.io/tags/gitblog/</link>
-        <pubDate>Sat, 04 Mar 2023 14:16:49 +0900</pubDate>
-        
-        <guid>https://choiseungwoo98.github.io/tags/gitblog/</guid>
         <description></description>
         </item>
         <item>

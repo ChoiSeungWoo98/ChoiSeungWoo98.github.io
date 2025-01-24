@@ -1,138 +1,91 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Kubernetes on My Tech Blog 🧑🏻‍💻</title>
-        <link>http://localhost:1313/tags/kubernetes/</link>
-        <description>Recent content in Kubernetes on My Tech Blog 🧑🏻‍💻</description>
+        <title>Kubernetes on 승우의 성장일지 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/kubernetes/</link>
+        <description>Recent content in Kubernetes on 승우의 성장일지 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 12 Jul 2024 18:25:27 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>쿠버네티스를 배우기 전 도커에 대한 이해</title>
-        <link>http://localhost:1313/p/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EB%A5%BC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%84-%EB%8F%84%EC%BB%A4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4/</link>
-        <pubDate>Fri, 12 Jul 2024 18:25:27 +0900</pubDate>
+        <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[K8S] Kubernetes 기초</title>
+        <link>https://choiseungwoo98.github.io/p/k8s-kubernetes-%EA%B8%B0%EC%B4%88/</link>
+        <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
         
-        <guid>http://localhost:1313/p/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4%EB%A5%BC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%84-%EB%8F%84%EC%BB%A4%EC%97%90-%EB%8C%80%ED%95%9C-%EC%9D%B4%ED%95%B4/</guid>
+        <guid>https://choiseungwoo98.github.io/p/k8s-kubernetes-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
-&lt;p&gt;오늘은 실습보다 이론위주의 수업이었다.&lt;br&gt;
-쿠버네티스를 배우기 전 도커에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.&lt;/p&gt;
+&lt;p&gt;오늘은 드디어 그 유명한 쿠버네티스!!!&lt;br&gt;
+쿠버만 잘해도 반은 간다는데&lt;br&gt;
+화이팅! 부셔보자!!!&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;cricontainer-runtime-interface&#34;&gt;CRI(Container Runtime Interface)
+&lt;h2 id=&#34;kubenetesk8s&#34;&gt;Kubenetes(K8S)
 &lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&#34;개념&#34;&gt;개념
+&lt;h4 id=&#34;설명&#34;&gt;설명
 &lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;Kubernetes에 도입된 개념으로 kubelet이 컨테이너 런타임을 호출할 수 있는 인터페이스, 이를 통해 특정 컨테이너 런타임에 종속되지 않고 유연성을 갖는다.
-&lt;ul&gt;
-&lt;li&gt;High-level Container runtime과 연계되기 위해 필요&lt;/li&gt;
-&lt;li&gt;Kubernetes CRI는 kubelet과 Continer Runtime 사이에 통신을 위해 주요 gRPC 프로토콜 정의&lt;/li&gt;
+&lt;li&gt;컨테이너화된 애플리케이션 배포, 확장 및 관리를 자동화 하는 오픈소스 시스템&lt;/li&gt;
+&lt;li&gt;대규모 애플리케이션을 신뢰성 있고 효율적인 운영을 도움&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Docker는 Dockerd가 CRI를 구현하지 않았기 때문에 Kubelet과 dockerd 사이에 dockerd-shim을 구현하여 이 역할을 대신 담당
-&lt;ul&gt;
-&lt;li&gt;하지만 docker도 container를 기본으로 사용하지 않기 때문에 더이상 dockerd-shim 존재 이유가 없어졌다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
-&lt;h2 id=&#34;ociopen-container-initiative&#34;&gt;OCI(Open Container Initiative)
-&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&#34;개념-1&#34;&gt;개념
+&lt;h4 id=&#34;특징&#34;&gt;특징
 &lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;빠르게 발전하는 Container 기술에 비해 규격이 존재하지 않아 Container Runtime 별로 서로 다른 interface를 가지게 된다.&lt;/li&gt;
-&lt;li&gt;따라서, 컨테이너 런타임 명세와 이미지 명세를 준수하는 표준을 제시해 현재 대부분의 컨테이너 런타임은 이를 따르도록 함&lt;/li&gt;
+&lt;li&gt;서비스 디스커버리 및 로드 밸런싱 : DNS 혹은 자체 IP를 사용해 컨테이너 노출(컨테이너에 트랙픽이 많으면 로드밸런싱 후 배포하여 안정적으로 운영 가능)&lt;/li&gt;
+&lt;li&gt;스토리지 오케스트레이션 : 로컬저장소, 클라우드 공급자 등과 같이 원하는 저장소 시스템 사용 가능&lt;/li&gt;
+&lt;li&gt;자동화된 롤아웃, 롤백 : 배포된 컨테이너의 원하는 상태 서술 및 현재 원하는 상태로 변경&lt;/li&gt;
+&lt;li&gt;자동화된 빈패킹 : 컨테이너 노드에 맞춰 리소스를 가장 잘 사용할 수 있도록 지원&lt;/li&gt;
+&lt;li&gt;자동화된 복구 : 실패한 컨테이너를 다시 시작, 교체하며 사용자가 정의한 상태 이외에는 지속적으로 복구 가능&lt;/li&gt;
+&lt;li&gt;시크릿과 구성관리 : 암초, OAuth 토큰, SSH 키와 같은 중요한 정보를 저장 및 관리(컨테이너 이미지 재구성하지 않고 시크릿 및 애플리케이션 구성을 배포 및 업데이트)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;oci-표준-요구사항&#34;&gt;OCI 표준 요구사항
+&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/kubenetes/kubenetes.png&#34;&gt;
+&lt;h4 id=&#34;핵심-개념&#34;&gt;핵심 개념
 &lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;표준 동작(Standard Operations)
-&lt;ul&gt;
-&lt;li&gt;표준 컨테이너 도구를 이용해 컨테이너 생성, 시작, 정지가 가능해야함&lt;/li&gt;
-&lt;li&gt;표준 파일 시스템 도구를 통해 컨테이너 스냅샷(특정 시점에 대한 상태를 캡처하는 것, 주로 백업, 복구, 테스트 등으로 사용)과 복사가 가능해야함&lt;/li&gt;
-&lt;li&gt;표준 네트워크 도구들을 통해 컨테이너 업로드와 다운로드가 가능해야함&lt;/li&gt;
+&lt;li&gt;cluster : 여러 대의 머신(노드)으로 구성된 그룹(마스터 노드와 여러 워커 노드로 구성)&lt;/li&gt;
+&lt;li&gt;node : 클러스터 구성요소가 되는 물리적 또는 가상머신&lt;/li&gt;
+&lt;li&gt;pod : k8s가 생성하고 관리할 수 있는 배포 가능한 가장 작은 단워(하나 이상의 컨테이너 그룹)&lt;/li&gt;
+&lt;li&gt;replicaset : 동일한 포드의 복제본을 일정하게 유지해 가용성 보장 시 사용되는 리소스(Deploment 사용 권장)&lt;/li&gt;
+&lt;li&gt;deployment : 파드와 레플리카셋에 대한 선언적 업데이트 제공&lt;/li&gt;
+&lt;li&gt;statefulset :  관리하는 데 사용되는 워크로드, 파드 순서 및 고유성 보장(Deployment와 다르게 동자성 유지)&lt;/li&gt;
+&lt;li&gt;Daemonset : 모든 노드가 파드의 사본을 실행(모든 노드에서 클러스터 스토리지, 로그 수집, 노드 모니터링 데몬 실행)&lt;/li&gt;
+&lt;li&gt;Job : 하나 이상의 파드를 생성하고 종료될 때 까지 계속 파드 실행 시도&lt;/li&gt;
+&lt;li&gt;Cronjob : 반복 일정에 따라 Job 생성&lt;/li&gt;
+&lt;li&gt;Namespace : 클러스터 내에 리소스를 논리적으로 분리&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;내용 중립성(Content-agnostic)
-&lt;ul&gt;
-&lt;li&gt;컨테이너가 담고 있는 애플리케이션의 종류 상관 없이 표준 동작들이 동일하게 동작해야함&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;인프라 중립성(Infrastructure-agnostic)
-&lt;ul&gt;
-&lt;li&gt;OCI 자원 인프라라면 종류 상관 없이 실행이 가능해야함&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;자동화를 위한 설계(Designed for Automation)
-&lt;ul&gt;
-&lt;li&gt;컨테이너 내용과 인프라 상관 없이 동일한 동작을 지원해 자동화에 용이&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;산업 수준의 배포(Industry-grade delivery)
-&lt;ul&gt;
-&lt;li&gt;기업 규모에 상관 없이 산업 수준의 배포가 가능해야함&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
-&lt;h2 id=&#34;container-runtime&#34;&gt;Container Runtime
-&lt;/h2&gt;&lt;hr&gt;
-&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;http://localhost:1313/img/posts/docker/Container_Runtime.png&#34;&gt;
-&lt;h4 id=&#34;개념-2&#34;&gt;개념
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;OCI가 만들어질 당시 비공식적 표준 역할을 하던 도커는 컨테이너 런타임의 표준화를 위해 필요한 모든 단계가 아닌 세번 단계인 컨테이너 실행 부분만 표준화&lt;/li&gt;
-&lt;li&gt;실제 컨테이너를 실행하는 저수준 컨테이너 런타임인 OCI 런타임과 이미지 전송 및 관리 압축 풀기 등을 실행하는 고수주 컨테이너 런타임으로 나뉜다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;high-level-container-runtime&#34;&gt;High-Level Container Runtime
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;일반적으로 Container Engine로 불리며 논리적으로 실행, 이미지 전송 및 관리, 실행중인 모니터링 및 관리를 제공하면서 데몬 프로세스로 동작&lt;/li&gt;
-&lt;li&gt;ContainerD는 컨테이너 관리를 위한 고수준 런타임(컨테이너의 생명주기 관리, 이미지 전송 및 저장, 네트워크 인터페이스 설정 등을 포함한 다양한 기능 제공)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;low-level-container-runtime&#34;&gt;Low-Level Container Runtime
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;일반적으로 Container Engine로 불리며, 컨테이너를 실행하는 기능만 제공 및 실행 중인 컨테이너를 관리만 하기 때문에 저수준이라고 불린다.&lt;/li&gt;
-&lt;li&gt;컨테이너는 Linux Namespace와 Cgroup으로 구현
-&lt;ul&gt;
-&lt;li&gt;Namespace : 파일 시스템이나 네트워킹과 같은 시스템 리소스를 가상화&lt;/li&gt;
-&lt;li&gt;Cgroup : 컨테이너 안에서 사용할 수 있는 리소스(cpu, memory 등)의 양을 제한&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
-&lt;h2 id=&#34;kubernetes에서-사용-중단된-docker&#34;&gt;Kubernetes에서 사용 중단된 Docker
-&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&#34;배경&#34;&gt;배경
-&lt;/h4&gt;&lt;p&gt;도커는 CRI를 직접 지원하지 않았기 때문에 쿠버네티스에서 도커와 호환을 위해 Dockershim이라는 중간 계층을 사용하였으나
-Docker의 버전 업데이트를 하면서 의존성에 문제가 생겨 지원을 중단했습니다.&lt;/p&gt;
-&lt;h4 id=&#34;대안&#34;&gt;대안
-&lt;/h4&gt;&lt;p&gt;docker는 CRI를 준수하지 않았지만, OCI는 준수하고 있기 때문에 도커에서 빌드한 이미지들도 OCI 표준을 따르는 다른 컨테이너 런타임(containerd, CRI-O)을 통해 그대로 사용 가능하다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;containerd : Docker 자체도 내부적으로 사용하는 고성능 컨테이너 런타임으로, Kubernetes와 직접 호환됩니다.&lt;/li&gt;
-&lt;li&gt;CRI-O : Kubernetes와의 호환성을 염두에 두고 설계된 경량의 컨테이너 런타임입니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
-&lt;h2 id=&#34;container-layer-실습&#34;&gt;Container Layer 실습
-&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&#34;개념-3&#34;&gt;개념
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;Upper
-&lt;ul&gt;
-&lt;li&gt;컨테이너의 최상위레이어&lt;/li&gt;
-&lt;li&gt;컨테이너에서 발생하는 모든 변경 사항(파일 추가, 수정, 삭제 등) 저장&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Lower
-&lt;ul&gt;
-&lt;li&gt;읽기 전용 레이어&lt;/li&gt;
-&lt;li&gt;베이스 이미지와 부모 이미지 레이어&lt;/li&gt;
-&lt;li&gt;여러개의 Lower 레이어가 있을 수 있음&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Merge
-&lt;ul&gt;
-&lt;li&gt;컨테이너가 실행될 때 사용자에게 보이는 파일 시스템&lt;/li&gt;
-&lt;li&gt;Upper와 Lower 레이어가 결합되어 나타남&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/kubenetes/cluster_node.png&#34;&gt;
 &lt;h4 id=&#34;실습&#34;&gt;실습
-&lt;/h4&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;/h4&gt;&lt;h4 id=&#34;실습-1&#34;&gt;실습 1
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;UTM 3개 생성 후 각각 접속&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 쿠버네티스 설치&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap install microk8s --classic --channel&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1.30
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# alias 등록&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;kubectl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;microk8s kubectl&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2번 생성해서 각각 접속&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;microk8s add-node
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Worker Node 연결 정보 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl get nodes
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;실습-2&#34;&gt;실습 2
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Master에서 워커 노드로 분배해주기 때문에 별도 config 설정이 없다면 master에서 하지 못한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
@@ -148,31 +101,60 @@ Docker의 버전 업데이트를 하면서 의존성에 문제가 생겨 지원�
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# nginx 이미지 내려받기&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker pull nginx
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 테스트 폴더 생성 및 접속&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir kubenetes &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; kubenetes
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 저장된 layerdb의 경로를 확인해본다&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker image inspect nginx &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq &lt;span class=&#34;s1&#34;&gt;&amp;#39;.[].RootFS&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pod, Replicaset, Deployment, Job, CornJob, Daemonset 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi &amp;lt;파일명&amp;gt;.yml
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 맥에서 확인 시 alias 등록 후 접근 가능&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;dockervm&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;docker start dockervm_instance -i || docker run --name=dockervm_instance -it --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 생성한 파일 실행&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl apply -f &amp;lt;파일명&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# dockervm 접근&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;dockervm
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 생성한 정보 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl get &amp;lt;리소스&amp;gt; -A -o wide
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 아래의 경로에 layerdb에 저장된 폴더들을 확인해본다&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/var/lib/docker/image/overlay2/layerdb/sha256
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 확인된 cache-id를 /var/lib/docker/overlay2/ 경로에 접근하여 파일시스템 구조를 확인해본다&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Docker run -it nginx /bin/bash 에 접근하여 파일시스템에 생성된 파일들을 확인해본다&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 생성 안될 때 확인&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl describe pod &amp;lt;pod 이름&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;</description>
+&lt;/div&gt;&lt;h4 id=&#34;실습-3&#34;&gt;실습 3
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;kubectl 명령어 익히기&lt;/li&gt;
+&lt;li&gt;차이점 비교
+&lt;ul&gt;
+&lt;li&gt;Create vs Apply
+&lt;ul&gt;
+&lt;li&gt;Create : 리소스 새로 생성시 사용, 이미 존재하는 리소스를 업데이트하지 않음&lt;/li&gt;
+&lt;li&gt;Apply : 리소스를 생성 혹은 업데이트시 사용, 변경 사항을 클러스터에 적용 시 유용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Log vs Describe
+&lt;ul&gt;
+&lt;li&gt;Log : Pod 로그를 출력해 디버깅 정보 제공&lt;/li&gt;
+&lt;li&gt;Describe : 리소스 상태와 이벤트를 포함한 상세 정보 출력&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;patch vs edit
+&lt;ul&gt;
+&lt;li&gt;patch : 리소스를 Json이나 Yml 패치 형식으로 부분 업데이트 시 사용&lt;/li&gt;
+&lt;li&gt;edit : 리소스를 직접 편집 시 사용, 편집 후 저장 시 변경사항 적용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 테스트 폴더 생성 및 접속&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div style=&#34;height: 100px;&#34;&gt;&lt;/div&gt;
+</description>
         </item>
         
     </channel>

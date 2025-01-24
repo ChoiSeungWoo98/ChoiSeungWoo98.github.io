@@ -6,157 +6,7 @@
         <description>Recent content in Java on 승우의 성장일지 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/java/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Basic</title>
-        <link>https://choiseungwoo98.github.io/p/basic/</link>
-        <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
-        
-        <guid>https://choiseungwoo98.github.io/p/basic/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;오늘은 드디어 그 유명한 쿠버네티스!!!&lt;br&gt;
-쿠버만 잘해도 반은 간다는데&lt;br&gt;
-화이팅! 부셔보자!!!&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;kubenetesk8s&#34;&gt;Kubenetes(K8S)
-&lt;/h2&gt;&lt;hr&gt;
-&lt;h4 id=&#34;설명&#34;&gt;설명
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;컨테이너화된 애플리케이션 배포, 확장 및 관리를 자동화 하는 오픈소스 시스템&lt;/li&gt;
-&lt;li&gt;대규모 애플리케이션을 신뢰성 있고 효율적인 운영을 도움&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;특징&#34;&gt;특징
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;서비스 디스커버리 및 로드 밸런싱 : DNS 혹은 자체 IP를 사용해 컨테이너 노출(컨테이너에 트랙픽이 많으면 로드밸런싱 후 배포하여 안정적으로 운영 가능)&lt;/li&gt;
-&lt;li&gt;스토리지 오케스트레이션 : 로컬저장소, 클라우드 공급자 등과 같이 원하는 저장소 시스템 사용 가능&lt;/li&gt;
-&lt;li&gt;자동화된 롤아웃, 롤백 : 배포된 컨테이너의 원하는 상태 서술 및 현재 원하는 상태로 변경&lt;/li&gt;
-&lt;li&gt;자동화된 빈패킹 : 컨테이너 노드에 맞춰 리소스를 가장 잘 사용할 수 있도록 지원&lt;/li&gt;
-&lt;li&gt;자동화된 복구 : 실패한 컨테이너를 다시 시작, 교체하며 사용자가 정의한 상태 이외에는 지속적으로 복구 가능&lt;/li&gt;
-&lt;li&gt;시크릿과 구성관리 : 암초, OAuth 토큰, SSH 키와 같은 중요한 정보를 저장 및 관리(컨테이너 이미지 재구성하지 않고 시크릿 및 애플리케이션 구성을 배포 및 업데이트)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/kubenetes/kubenetes.png&#34;&gt;
-&lt;h4 id=&#34;핵심-개념&#34;&gt;핵심 개념
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;cluster : 여러 대의 머신(노드)으로 구성된 그룹(마스터 노드와 여러 워커 노드로 구성)&lt;/li&gt;
-&lt;li&gt;node : 클러스터 구성요소가 되는 물리적 또는 가상머신&lt;/li&gt;
-&lt;li&gt;pod : k8s가 생성하고 관리할 수 있는 배포 가능한 가장 작은 단워(하나 이상의 컨테이너 그룹)&lt;/li&gt;
-&lt;li&gt;replicaset : 동일한 포드의 복제본을 일정하게 유지해 가용성 보장 시 사용되는 리소스(Deploment 사용 권장)&lt;/li&gt;
-&lt;li&gt;deployment : 파드와 레플리카셋에 대한 선언적 업데이트 제공&lt;/li&gt;
-&lt;li&gt;statefulset :  관리하는 데 사용되는 워크로드, 파드 순서 및 고유성 보장(Deployment와 다르게 동자성 유지)&lt;/li&gt;
-&lt;li&gt;Daemonset : 모든 노드가 파드의 사본을 실행(모든 노드에서 클러스터 스토리지, 로그 수집, 노드 모니터링 데몬 실행)&lt;/li&gt;
-&lt;li&gt;Job : 하나 이상의 파드를 생성하고 종료될 때 까지 계속 파드 실행 시도&lt;/li&gt;
-&lt;li&gt;Cronjob : 반복 일정에 따라 Job 생성&lt;/li&gt;
-&lt;li&gt;Namespace : 클러스터 내에 리소스를 논리적으로 분리&lt;/li&gt;
-&lt;/ul&gt;
-&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/kubenetes/cluster_node.png&#34;&gt;
-&lt;h4 id=&#34;실습&#34;&gt;실습
-&lt;/h4&gt;&lt;h4 id=&#34;실습-1&#34;&gt;실습 1
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;UTM 3개 생성 후 각각 접속&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 쿠버네티스 설치&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo snap install microk8s --classic --channel&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;1.30
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# alias 등록&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;alias&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;kubectl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;microk8s kubectl&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2번 생성해서 각각 접속&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;microk8s add-node
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Worker Node 연결 정보 확인&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl get nodes
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;실습-2&#34;&gt;실습 2
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;Master에서 워커 노드로 분배해주기 때문에 별도 config 설정이 없다면 master에서 하지 못한다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 테스트 폴더 생성 및 접속&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir kubenetes &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; kubenetes
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# pod, Replicaset, Deployment, Job, CornJob, Daemonset 생성&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;vi &amp;lt;파일명&amp;gt;.yml
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 생성한 파일 실행&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl apply -f &amp;lt;파일명&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 생성한 정보 확인&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl get &amp;lt;리소스&amp;gt; -A -o wide
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 생성 안될 때 확인&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kubectl describe pod &amp;lt;pod 이름&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h4 id=&#34;실습-3&#34;&gt;실습 3
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;kubectl 명령어 익히기&lt;/li&gt;
-&lt;li&gt;차이점 비교
-&lt;ul&gt;
-&lt;li&gt;Create vs Apply
-&lt;ul&gt;
-&lt;li&gt;Create : 리소스 새로 생성시 사용, 이미 존재하는 리소스를 업데이트하지 않음&lt;/li&gt;
-&lt;li&gt;Apply : 리소스를 생성 혹은 업데이트시 사용, 변경 사항을 클러스터에 적용 시 유용&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Log vs Describe
-&lt;ul&gt;
-&lt;li&gt;Log : Pod 로그를 출력해 디버깅 정보 제공&lt;/li&gt;
-&lt;li&gt;Describe : 리소스 상태와 이벤트를 포함한 상세 정보 출력&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;patch vs edit
-&lt;ul&gt;
-&lt;li&gt;patch : 리소스를 Json이나 Yml 패치 형식으로 부분 업데이트 시 사용&lt;/li&gt;
-&lt;li&gt;edit : 리소스를 직접 편집 시 사용, 편집 후 저장 시 변경사항 적용&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 테스트 폴더 생성 및 접속&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;div style=&#34;height: 100px;&#34;&gt;&lt;/div&gt;
-</description>
-        </item>
-        <item>
+        <lastBuildDate>Sun, 20 Aug 2023 02:35:44 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/java/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>String_Method</title>
         <link>https://choiseungwoo98.github.io/p/string_method/</link>
         <pubDate>Sun, 20 Aug 2023 02:35:44 +0900</pubDate>
@@ -1074,6 +924,97 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
     &gt;JVM(Java Virtual Machine)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://medium.com/@lazysoul/jit-just-in-time-16bb63f3ae26&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;JIT(Just In Time Compilation)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Java] Spring Boot, Websocket &#43; STOMP 사용하기</title>
+        <link>https://choiseungwoo98.github.io/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
+        <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?&lt;br&gt;
+같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;web-socket을-사용한-코드&#34;&gt;Web Socket을 사용한 코드
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;게시물은 추후에 작성하겠습니다!! 아래 코드는 첨부했습니다!&lt;/p&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/ChoiSeungWoo98/webSocket-example&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;코드&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>[Java] 서버에서 클라이언트로 이벤트를 보내는 4가지 방법</title>
+        <link>https://choiseungwoo98.github.io/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</link>
+        <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?&lt;br&gt;
+같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;서버에서-클라이언트로-이벤트를-보내는-4가지-방법&#34;&gt;서버에서 클라이언트로 이벤트를 보내는 4가지 방법
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;1-polling&#34;&gt;1. Polling
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;클라이언트가 평벙한 http request를 서버로 계속 날려서 이벤트 내용을 받는 방법&lt;/li&gt;
+&lt;li&gt;가장 쉬운 방법이지만 클라이언트가 지속적으로 request를 보내야 하기 때문에 클라이언트가 많아 질 수록 서버 부담이 급증&lt;/li&gt;
+&lt;li&gt;실시간으로 정보를 응답 받는 것이 아닌 반복해서 request를 보내는 사이에 바뀐 내용을 받아오는 방식&lt;/li&gt;
+&lt;li&gt;http 오버헤드가 발생한다는 큰 단점. 하지만 일정 시간 갱신되는 서버 데이터의 경우 유용.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+    &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Polling 방식&lt;/summary&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/java/webSocket/Polling.png&#34;&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;2-long-polling&#34;&gt;2. Long Polling
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;서버 측에서 접속을 열어두는 시간을 길게하는 빙식&lt;/li&gt;
+&lt;li&gt;클라이언트가 서버에 http request를 날리면 서버에서 응답해야할 이벤트가 발생하면 그 순간 응답을 하는 방식&lt;/li&gt;
+&lt;li&gt;응답을 받은 클라이언트는 바로 http request를 날려 다음 이벤트 대기&lt;/li&gt;
+&lt;li&gt;polling 방식보다 서버 부담은 줄지만 이벤트 발생 간격이 좁다면 polling이랑 다르지 않음&lt;/li&gt;
+&lt;li&gt;다수의 클라이언트에게 동시에 이벤트가 발생될 경우 클라이언트가 바로 접속을 시도하면서 서버 부담이 급증&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+    &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Long Polling 방식&lt;/summary&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/java/webSocket/Long_Polling.png&#34;&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;3-websocket&#34;&gt;3. WebSocket
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;양방향 채널을 이용해 채팅방 처럼 양방향 통신하는 방식&lt;/li&gt;
+&lt;li&gt;기존 http요청 응답 방식은 요청한 클라이언트에 응답만 가능했지만, ws 프로토콜을 통해 웹소켓 포트에 접속해 있는 모든 클라이언트에 이벤트 응답 가능&lt;/li&gt;
+&lt;li&gt;최초 접속이 일반 http request를 통해 handshaeking 과정을 통해 이루어 지기 때문에, 기존 80, 443포트로 접속하므로 추가 방화벽을 열지 않아도 가능&lt;/li&gt;
+&lt;li&gt;http 규격인 CORS 적용이나 인증등의 과정을 기존과 동일하다는 장점&lt;/li&gt;
+&lt;li&gt;단, websocket 프로토콜을 처리하기 위한 전이중 연결과 새로운 웹소켓 서버 필요&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+    &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;WebSocket 방식&lt;/summary&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/java/webSocket/WebSocket.png&#34;&gt;
+&lt;/details&gt;
+&lt;h3 id=&#34;4-sseserver-sent-events&#34;&gt;4. SSE(Server-Sent-Events)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;HTML5 표준안이며 어느정도 웹소켓의 역할을 하면서 가벼움&lt;/li&gt;
+&lt;li&gt;WebSocket과 같이 양방향이 아닌 server -&amp;gt; client 단방향이기 때문에 서버에서 이벤트나 메시지를 client로 push 하는 작업에 유용&lt;/li&gt;
+&lt;li&gt;양방향이 아니라 요청 시 ajax로 쉽게 이용&lt;/li&gt;
+&lt;li&gt;재접속 처리 같은 대부분이 저수준 처리가 자동 지원&lt;/li&gt;
+&lt;li&gt;IE는 기본 미지원이지만, polyFill을 이용할 경우 IE를 포함한 크로스브라우징 가능&lt;/li&gt;
+&lt;/ul&gt;
+&lt;details&gt;
+    &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;SSE(Server-Sent Event) 방식&lt;/summary&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/java/webSocket/Server-Sent-Events.png&#34;&gt;
+&lt;/details&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;websocket--stomp를-이용하여-서버와-양방향-통신&#34;&gt;WebSocket + Stomp를 이용하여 서버와 양방향 통신
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://ChoiSeungWoo98.github.io/websocket/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;다음 게시물은 WebSocket과 Stomp를 이용하여 서버와 양방향 통신을 하는 방법에 대해 스몰 모듈 프로젝트를 만들고자 한다.&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://inpa.tistory.com/entry/WEB-%F0%9F%93%9A-Polling-Long-Polling-Server-Sent-Event-WebSocket-%EC%9A%94%EC%95%BD-%EC%A0%95%EB%A6%AC&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;서버에서 클라이언트로 이벤트를 보내는 4가지 방법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>

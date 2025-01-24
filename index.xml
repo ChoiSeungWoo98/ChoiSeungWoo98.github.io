@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Basic</title>
-        <link>https://choiseungwoo98.github.io/p/basic/</link>
+        <title>[K8S] Kubernetes 기초</title>
+        <link>https://choiseungwoo98.github.io/p/k8s-kubernetes-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/basic/</guid>
+        <guid>https://choiseungwoo98.github.io/p/k8s-kubernetes-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 드디어 그 유명한 쿠버네티스!!!&lt;br&gt;
 쿠버만 잘해도 반은 간다는데&lt;br&gt;
@@ -157,11 +157,11 @@
 </description>
         </item>
         <item>
-        <title>IaC 기초 및 Terraform, Ansible</title>
-        <link>https://choiseungwoo98.github.io/p/iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</link>
+        <title>[IaC] IaC 기초 및 Terraform, Ansible</title>
+        <link>https://choiseungwoo98.github.io/p/iac-iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</link>
         <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</guid>
+        <guid>https://choiseungwoo98.github.io/p/iac-iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 배포 자동화에 대해 배웠다.&lt;br&gt;
 거의 대부분의 프로젝트가 자동화를 사용하는 만큼 집중해서 잘 들어야지   &lt;br&gt;
@@ -413,11 +413,11 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>aws에 EBS, Lambda와 efs</title>
-        <link>https://choiseungwoo98.github.io/p/aws%EC%97%90-ebs-lambda%EC%99%80-efs/</link>
+        <title>[AWS] aws에 EBS, Lambda와 efs</title>
+        <link>https://choiseungwoo98.github.io/p/aws-aws%EC%97%90-ebs-lambda%EC%99%80-efs/</link>
         <pubDate>Wed, 17 Jul 2024 11:42:15 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/aws%EC%97%90-ebs-lambda%EC%99%80-efs/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws-aws%EC%97%90-ebs-lambda%EC%99%80-efs/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 EBS, 람다와 EFS에 대해 배웠다 &lt;br&gt;
 잊지 않기 위해 복습 또 복습&amp;hellip;&lt;/p&gt;
@@ -626,11 +626,11 @@
 </description>
         </item>
         <item>
-        <title>AWS IAM을 이용한 S3 실습</title>
-        <link>https://choiseungwoo98.github.io/p/aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/</link>
+        <title>[AWS] AWS IAM을 이용한 S3 실습</title>
+        <link>https://choiseungwoo98.github.io/p/aws-aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/</link>
         <pubDate>Mon, 15 Jul 2024 15:01:46 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws-aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 AWS 첫번째 실습 시간이다.&lt;br&gt;
 IAM에 대해 공부 후&lt;br&gt;
@@ -751,11 +751,11 @@ S3를 통해 제어하는 실습&lt;/p&gt;
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>AWS와 LB 실습</title>
-        <link>https://choiseungwoo98.github.io/p/aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</link>
+        <title>[AWS] AWS와 LB 실습</title>
+        <link>https://choiseungwoo98.github.io/p/aws-aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</link>
         <pubDate>Mon, 15 Jul 2024 15:01:46 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws-aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 AWS 첫번째 실습 시간이다.&lt;br&gt;
 EC2에서 VPC를 사용하고 public이랑 private를 열어&lt;br&gt;
@@ -967,11 +967,11 @@ private은 NAT를 이용한 인터넷 연결을 실습했다.&lt;/p&gt;
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>네트워크 복습</title>
-        <link>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</link>
+        <title>[Network] 네트워크 복습</title>
+        <link>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</link>
         <pubDate>Sat, 13 Jul 2024 22:42:04 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</guid>
+        <guid>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 주말이라 여태까지 배운 네트워크에 대해&lt;br&gt;
 정리하면서 복습을 진행해보고자 한다.&lt;br&gt;
@@ -1114,11 +1114,11 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>네트워크 도메인, HTTPs</title>
-        <link>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</link>
+        <title>[Network] 네트워크 도메인, HTTPs</title>
+        <link>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</link>
         <pubDate>Sat, 13 Jul 2024 16:42:04 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</guid>
+        <guid>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 주말이라 강좌로 올라와있는&lt;br&gt;
 네트워크 개념 잡기를 수강하고 정리하고자 한다.&lt;/p&gt;
@@ -1192,11 +1192,11 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Docker 이론</title>
-        <link>https://choiseungwoo98.github.io/p/docker-%EC%9D%B4%EB%A1%A0/</link>
+        <title>[Docker] Docker 이론</title>
+        <link>https://choiseungwoo98.github.io/p/docker-docker-%EC%9D%B4%EB%A1%A0/</link>
         <pubDate>Fri, 12 Jul 2024 14:25:27 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/docker-%EC%9D%B4%EB%A1%A0/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-docker-%EC%9D%B4%EB%A1%A0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 실습보다 이론위주의 수업이었다.&lt;br&gt;
 도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.&lt;/p&gt;
@@ -1381,11 +1381,11 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Docker_conpose</title>
-        <link>https://choiseungwoo98.github.io/p/docker_conpose/</link>
+        <title>[Docker] Docker Compose에 대해</title>
+        <link>https://choiseungwoo98.github.io/p/docker-docker-compose%EC%97%90-%EB%8C%80%ED%95%B4/</link>
         <pubDate>Thu, 11 Jul 2024 13:13:32 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/docker_conpose/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-docker-compose%EC%97%90-%EB%8C%80%ED%95%B4/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 docker compose에 대해 배웠습니다.&lt;br&gt;
 이론이 많지는 않았지만&lt;br&gt;
@@ -1473,11 +1473,11 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>Dockerfile 기초</title>
-        <link>https://choiseungwoo98.github.io/p/dockerfile-%EA%B8%B0%EC%B4%88/</link>
+        <title>[Docker] Dockerfile 기초</title>
+        <link>https://choiseungwoo98.github.io/p/docker-dockerfile-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Wed, 10 Jul 2024 16:16:44 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/dockerfile-%EA%B8%B0%EC%B4%88/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-dockerfile-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제는 도커의 개념과 동작 방식에 대해 정리하였습니다.&lt;br&gt;
 오늘은 docker를 실질적으로 사용해보면서 필요한 내용을 정리해보고자 합니다.&lt;/p&gt;
@@ -1934,11 +1934,11 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Docker 기초</title>
-        <link>https://choiseungwoo98.github.io/p/docker-%EA%B8%B0%EC%B4%88/</link>
+        <title>[Docker] Docker 기초</title>
+        <link>https://choiseungwoo98.github.io/p/docker-docker-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Tue, 09 Jul 2024 22:16:44 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/docker-%EA%B8%B0%EC%B4%88/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-docker-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;기존에 혼자 Docker에 대해 잠깐 공부한 적 있지만 심도있게 다루지는 않았습니다.&lt;br&gt;
 카카오 테크 부트캠프를 시작하면서 클라우드 수업을 듣기 시작했고&lt;br&gt;
@@ -2025,11 +2025,11 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
 </description>
         </item>
         <item>
-        <title>Linux 심화</title>
-        <link>https://choiseungwoo98.github.io/p/linux-%EC%8B%AC%ED%99%94/</link>
+        <title>[Linux] Linux 심화</title>
+        <link>https://choiseungwoo98.github.io/p/linux-linux-%EC%8B%AC%ED%99%94/</link>
         <pubDate>Mon, 08 Jul 2024 22:32:35 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/linux-%EC%8B%AC%ED%99%94/</guid>
+        <guid>https://choiseungwoo98.github.io/p/linux-linux-%EC%8B%AC%ED%99%94/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;리눅스에 대해 배웠다.&lt;br&gt;
 오늘은 실습이 주를 이뤘다.
@@ -2643,11 +2643,11 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>Linux 기초</title>
-        <link>https://choiseungwoo98.github.io/p/linux-%EA%B8%B0%EC%B4%88/</link>
+        <title>[Linux] Linux 기초</title>
+        <link>https://choiseungwoo98.github.io/p/linux-linux-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Fri, 05 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/linux-%EA%B8%B0%EC%B4%88/</guid>
+        <guid>https://choiseungwoo98.github.io/p/linux-linux-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;리눅스에 대해 배웠다.&lt;br&gt;
 처음 알게된 명령어도 많았지만&lt;br&gt;
@@ -2885,11 +2885,11 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
 </description>
         </item>
         <item>
-        <title>네트워크 개념</title>
-        <link>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</link>
+        <title>[Network] 네트워크 개념</title>
+        <link>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</link>
         <pubDate>Thu, 04 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</guid>
+        <guid>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;네트워크에 대해 배웠는데 너무 모르겠다&amp;hellip;&lt;br&gt;
 잘 따라 가려면 더욱 공부해야겠다..&lt;/p&gt;
@@ -3238,11 +3238,133 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
 </description>
         </item>
         <item>
-        <title>클라우드 개념</title>
-        <link>https://choiseungwoo98.github.io/p/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B0%9C%EB%85%90/</link>
+        <title>[Infra] 아키텍처</title>
+        <link>https://choiseungwoo98.github.io/p/infra-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</link>
         <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B0%9C%EB%85%90/</guid>
+        <guid>https://choiseungwoo98.github.io/p/infra-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;어제 어수선한 분위기 속에 첫날이 마무리되고&lt;br&gt;
+두번째 수업이 진행되었습니다.&lt;br&gt;
+오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;아키텍처&#34;&gt;아키텍처
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;애플리케이션을 실행할 기반이 되는 온라인 플랫폼을 제공할 목적으로 클라우드 구축에 필수적인 모든 구성 요소 및 기능을 연결하는 방식&lt;/li&gt;
+&lt;li&gt;서비스를 구축할 때, 클라우드 서비스의 다양한 기능들을 이용하여 인프라 구축 그림을 그리는 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;아키텍처를-그리기-위한-배경지식들&#34;&gt;아키텍처를 그리기 위한 배경지식들
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;OS(Operating System)
+&lt;ul&gt;
+&lt;li&gt;하드웨어를 사용하기 위해 필요한 소프트웨어이다.&lt;/li&gt;
+&lt;li&gt;Ex : Windows, Mac, Linux 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;파일시스템
+&lt;ul&gt;
+&lt;li&gt;운영 체제에서 HD, SSD 또는 USB 플래시 드라이브와 같은 저장 장치에 있는 파일을 구성하고 관리하는 데 사용하는 구조이다.&lt;/li&gt;
+&lt;li&gt;클라우드에서도 서버 용량을 붙일 때 HD, SSD로 붙일지 선택하고 Network Block으로 만들어 붙인다. 따라서, VM에 있는 파일시스템 성능과 로컬에 성능은 다를 수 있다.&lt;/li&gt;
+&lt;li&gt;NFS(Network File System), NBD(Network Block Device)와 같은 파일시스템에 대한 가상화도 많이 활용된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;VM (Virtual Machine)
+&lt;ul&gt;
+&lt;li&gt;가상화된 서버&lt;/li&gt;
+&lt;li&gt;보통 OnDemand 형태로 필요한 만큼 사용하거나 1년이나 3년 비용을 미리 할인되 가격으로 내는 Reserved 방식으로 활용한다&lt;/li&gt;
+&lt;li&gt;Spot Instance 형태로 저렴하게 사용 가능 단, 남는 리소스를 잠깐 빌려주는 형태라 강제로 서버가 회수될 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;LB(Load Balancer)
+&lt;ul&gt;
+&lt;li&gt;네트워크 트래픽을 여러 서버로 분산시키는 역할&lt;/li&gt;
+&lt;li&gt;서버 이중화하는 경우 가장 많이 사용한다.&lt;/li&gt;
+&lt;li&gt;이중화를 통해 HA(고가용성)을 책임진다.
+&lt;ul&gt;
+&lt;li&gt;HA : 바람직한 정도로 긴 시간동안 지속적으로 운영이 가능한 시스템이나 컴포넌트를 가리킨다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;LB도 서비스 이기 때문에 느려질 수 있다.&lt;/li&gt;
+&lt;li&gt;트래픽 몰릴 것으로 예상되는 시점에 서버도 늘리지만, LB에 미리 부하를 줘서 LB를 구성하는 서버도 미리 늘려놓는다.&lt;br&gt;
+Pre-Warming 또는 Warm-Up이라고 부릅니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;데이터베이스
+&lt;ul&gt;
+&lt;li&gt;데이터를 저장하고 관리하는 서비스&lt;/li&gt;
+&lt;li&gt;라이센스 규정에 의해 비슷한 서비스를 자체적으로 만들어 공급하는 경우가 많다(Ex : DynamoDB)&lt;/li&gt;
+&lt;li&gt;오픈소스를 운영하는 경우도 있다(Ex : Amazon RDS for MySQL, Elasticache)&lt;/li&gt;
+&lt;li&gt;AWS는 최신 버전을 업데이트 해주지만 많은 클라우스 서비스들이 버전업, 유지보수를 해주지 않는 경우가 많다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CDN (Content Delivery Network)
+&lt;ul&gt;
+&lt;li&gt;자주 바뀌지 않는 리소스들을 캐싱하여 데이터를 전달하는 서비스&lt;/li&gt;
+&lt;li&gt;서버에서 리소스를 전달하면, 그 만큼 서버의 트래픽이 나가는데 이 트래픽을 CDN이 대신 책임져준다면 서버의 부담이 낮아진다.&lt;/li&gt;
+&lt;li&gt;캐싱을 사용해 서버가 리소스를 전달하는 것보다 효율적이다. 따라서, 자주 바뀌지 않는 리소스를 올리는게 좋습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;MSA (Micro Service Architecture)
+&lt;ul&gt;
+&lt;li&gt;작은 독립적인 서비스들로 분할하여 운영하는 아키텍처로 VM이나 Container를 이용하여 운영되어야 한다.&lt;/li&gt;
+&lt;li&gt;보통 VM에 직접 올리는 형태에서 VM에 Container를 올려 운영하다가, 최종적으로는 EKS와 같은 쿠버네티스 시스템을 활용하는 형태로 고도화됩니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;다층구조&#34;&gt;다층구조
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;소프트웨어 애플리케이션을 논리적으로 분리된 여러 계층으로 나누어 구성하는 아키텍처 스타일&lt;/li&gt;
+&lt;li&gt;다층 구조는 보통 프레젠테이션 계층(=프론트엔드 계층), 애플리케이션 계층(=백엔드 계층), 데이터 계층(=데이터베이스 계층)으로 나눈다.(고차원으로 갈수룩 더 다양한 계층이 생길 수 있다.)&lt;/li&gt;
+&lt;li&gt;다층 구조 종류
+&lt;ul&gt;
+&lt;li&gt;1티어 구조
+&lt;ul&gt;
+&lt;li&gt;프론트, 백, DB가 하나의 VM에서 돌고 있는 상황이다.&lt;/li&gt;
+&lt;li&gt;VM이 죽는다면 모든 서버가 죽고 VM을 살리면 모든 서버를 살릴 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2티어 구조
+&lt;ul&gt;
+&lt;li&gt;프론트, 백엔드 서버 구분 없이 하나의 서버에서 DB와 연결된 상황이다.&lt;/li&gt;
+&lt;li&gt;많이 사용되는 아키텍처, 안정성과 관리가 용이하다.&lt;/li&gt;
+&lt;li&gt;단점으로는 백엔드에서 나는 에러가 프론트에서도 난다.(Ex: 404페이지, 500페이지 등)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;3티어 구조
+&lt;ul&gt;
+&lt;li&gt;프론트와 백엔드를 구별하고 백엔드에서 DB에 연결된 상황&lt;/li&gt;
+&lt;li&gt;인프라 운영 노하우가 있고 제품을 이해하고 있으면 가장 나은 방식이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;N티어 구조
+&lt;ul&gt;
+&lt;li&gt;백엔드에 역할을 다양하게 나누어 서로 API 통신하게 만드는 형태&lt;/li&gt;
+&lt;li&gt;대부분의 SaaS가 해당 형태로 운영된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;다층구조 핵심
+&lt;ul&gt;
+&lt;li&gt;비즈니스 상황을 고려하여 티어를 선택&lt;/li&gt;
+&lt;li&gt;애플리케이션이 너무 커져서 모듈로 쪼갠다면 데이터 기반이 보편적이다.(결제 시스템, 유저 시스템 등)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+</description>
+        </item>
+        <item>
+        <title>[Infra] 클라우드 개념</title>
+        <link>https://choiseungwoo98.github.io/p/infra-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B0%9C%EB%85%90/</link>
+        <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
+        
+        <guid>https://choiseungwoo98.github.io/p/infra-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B0%9C%EB%85%90/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제 어수선한 분위기 속에 첫날이 마무리되고&lt;br&gt;
 두번째 수업이 진행되었습니다.&lt;br&gt;
@@ -3412,133 +3534,11 @@ Machine, HVM / Bare-Metal Hypervisor)가 있다.&lt;/li&gt;
 </description>
         </item>
         <item>
-        <title>클라우드 아키텍처</title>
-        <link>https://choiseungwoo98.github.io/p/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</link>
-        <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
-        
-        <guid>https://choiseungwoo98.github.io/p/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;어제 어수선한 분위기 속에 첫날이 마무리되고&lt;br&gt;
-두번째 수업이 진행되었습니다.&lt;br&gt;
-오늘은 클라우드 개론에 대해 배웠고 까먹지 않기 위해 정리해보고자 합니다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;클라우드-아키텍처&#34;&gt;클라우드 아키텍처
-&lt;/h2&gt;&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;애플리케이션을 실행할 기반이 되는 온라인 플랫폼을 제공할 목적으로 클라우드 구축에 필수적인 모든 구성 요소 및 기능을 연결하는 방식&lt;/li&gt;
-&lt;li&gt;서비스를 구축할 때, 클라우드 서비스의 다양한 기능들을 이용하여 인프라 구축 그림을 그리는 것&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
-&lt;h2 id=&#34;클라우드-아키텍처를-그리기-위한-배경지식들&#34;&gt;클라우드 아키텍처를 그리기 위한 배경지식들
-&lt;/h2&gt;&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;OS(Operating System)
-&lt;ul&gt;
-&lt;li&gt;하드웨어를 사용하기 위해 필요한 소프트웨어이다.&lt;/li&gt;
-&lt;li&gt;Ex : Windows, Mac, Linux 등&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;파일시스템
-&lt;ul&gt;
-&lt;li&gt;운영 체제에서 HD, SSD 또는 USB 플래시 드라이브와 같은 저장 장치에 있는 파일을 구성하고 관리하는 데 사용하는 구조이다.&lt;/li&gt;
-&lt;li&gt;클라우드에서도 서버 용량을 붙일 때 HD, SSD로 붙일지 선택하고 Network Block으로 만들어 붙인다. 따라서, VM에 있는 파일시스템 성능과 로컬에 성능은 다를 수 있다.&lt;/li&gt;
-&lt;li&gt;NFS(Network File System), NBD(Network Block Device)와 같은 파일시스템에 대한 가상화도 많이 활용된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;VM (Virtual Machine)
-&lt;ul&gt;
-&lt;li&gt;가상화된 서버&lt;/li&gt;
-&lt;li&gt;보통 OnDemand 형태로 필요한 만큼 사용하거나 1년이나 3년 비용을 미리 할인되 가격으로 내는 Reserved 방식으로 활용한다&lt;/li&gt;
-&lt;li&gt;Spot Instance 형태로 저렴하게 사용 가능 단, 남는 리소스를 잠깐 빌려주는 형태라 강제로 서버가 회수될 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;LB(Load Balancer)
-&lt;ul&gt;
-&lt;li&gt;네트워크 트래픽을 여러 서버로 분산시키는 역할&lt;/li&gt;
-&lt;li&gt;서버 이중화하는 경우 가장 많이 사용한다.&lt;/li&gt;
-&lt;li&gt;이중화를 통해 HA(고가용성)을 책임진다.
-&lt;ul&gt;
-&lt;li&gt;HA : 바람직한 정도로 긴 시간동안 지속적으로 운영이 가능한 시스템이나 컴포넌트를 가리킨다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;LB도 서비스 이기 때문에 느려질 수 있다.&lt;/li&gt;
-&lt;li&gt;트래픽 몰릴 것으로 예상되는 시점에 서버도 늘리지만, LB에 미리 부하를 줘서 LB를 구성하는 서버도 미리 늘려놓는다.&lt;br&gt;
-Pre-Warming 또는 Warm-Up이라고 부릅니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;데이터베이스
-&lt;ul&gt;
-&lt;li&gt;데이터를 저장하고 관리하는 서비스&lt;/li&gt;
-&lt;li&gt;라이센스 규정에 의해 비슷한 서비스를 자체적으로 만들어 공급하는 경우가 많다(Ex : DynamoDB)&lt;/li&gt;
-&lt;li&gt;오픈소스를 운영하는 경우도 있다(Ex : Amazon RDS for MySQL, Elasticache)&lt;/li&gt;
-&lt;li&gt;AWS는 최신 버전을 업데이트 해주지만 많은 클라우스 서비스들이 버전업, 유지보수를 해주지 않는 경우가 많다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;CDN (Content Delivery Network)
-&lt;ul&gt;
-&lt;li&gt;자주 바뀌지 않는 리소스들을 캐싱하여 데이터를 전달하는 서비스&lt;/li&gt;
-&lt;li&gt;서버에서 리소스를 전달하면, 그 만큼 서버의 트래픽이 나가는데 이 트래픽을 CDN이 대신 책임져준다면 서버의 부담이 낮아진다.&lt;/li&gt;
-&lt;li&gt;캐싱을 사용해 서버가 리소스를 전달하는 것보다 효율적이다. 따라서, 자주 바뀌지 않는 리소스를 올리는게 좋습니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;MSA (Micro Service Architecture)
-&lt;ul&gt;
-&lt;li&gt;작은 독립적인 서비스들로 분할하여 운영하는 아키텍처로 VM이나 Container를 이용하여 운영되어야 한다.&lt;/li&gt;
-&lt;li&gt;보통 VM에 직접 올리는 형태에서 VM에 Container를 올려 운영하다가, 최종적으로는 EKS와 같은 쿠버네티스 시스템을 활용하는 형태로 고도화됩니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
-&lt;h2 id=&#34;다층구조&#34;&gt;다층구조
-&lt;/h2&gt;&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;소프트웨어 애플리케이션을 논리적으로 분리된 여러 계층으로 나누어 구성하는 아키텍처 스타일&lt;/li&gt;
-&lt;li&gt;다층 구조는 보통 프레젠테이션 계층(=프론트엔드 계층), 애플리케이션 계층(=백엔드 계층), 데이터 계층(=데이터베이스 계층)으로 나눈다.(고차원으로 갈수룩 더 다양한 계층이 생길 수 있다.)&lt;/li&gt;
-&lt;li&gt;다층 구조 종류
-&lt;ul&gt;
-&lt;li&gt;1티어 구조
-&lt;ul&gt;
-&lt;li&gt;프론트, 백, DB가 하나의 VM에서 돌고 있는 상황이다.&lt;/li&gt;
-&lt;li&gt;VM이 죽는다면 모든 서버가 죽고 VM을 살리면 모든 서버를 살릴 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;2티어 구조
-&lt;ul&gt;
-&lt;li&gt;프론트, 백엔드 서버 구분 없이 하나의 서버에서 DB와 연결된 상황이다.&lt;/li&gt;
-&lt;li&gt;많이 사용되는 아키텍처, 안정성과 관리가 용이하다.&lt;/li&gt;
-&lt;li&gt;단점으로는 백엔드에서 나는 에러가 프론트에서도 난다.(Ex: 404페이지, 500페이지 등)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;3티어 구조
-&lt;ul&gt;
-&lt;li&gt;프론트와 백엔드를 구별하고 백엔드에서 DB에 연결된 상황&lt;/li&gt;
-&lt;li&gt;인프라 운영 노하우가 있고 제품을 이해하고 있으면 가장 나은 방식이다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;N티어 구조
-&lt;ul&gt;
-&lt;li&gt;백엔드에 역할을 다양하게 나누어 서로 API 통신하게 만드는 형태&lt;/li&gt;
-&lt;li&gt;대부분의 SaaS가 해당 형태로 운영된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;다층구조 핵심
-&lt;ul&gt;
-&lt;li&gt;비즈니스 상황을 고려하여 티어를 선택&lt;/li&gt;
-&lt;li&gt;애플리케이션이 너무 커져서 모듈로 쪼갠다면 데이터 기반이 보편적이다.(결제 시스템, 유저 시스템 등)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
-</description>
-        </item>
-        <item>
-        <title>가상화 기술</title>
-        <link>https://choiseungwoo98.github.io/p/%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</link>
+        <title>[Virtualization] 가상화 기술</title>
+        <link>https://choiseungwoo98.github.io/p/virtualization-%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</link>
         <pubDate>Wed, 03 Jul 2024 18:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</guid>
+        <guid>https://choiseungwoo98.github.io/p/virtualization-%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제 어수선한 분위기 속에 첫날이 마무리되고&lt;br&gt;
 두번째 수업이 진행되었습니다.&lt;br&gt;
@@ -3610,11 +3610,11 @@ Pre-Warming 또는 Warm-Up이라고 부릅니다.&lt;/li&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;</description>
         </item>
         <item>
-        <title>부트캠프 시작(클라우드 OT)</title>
-        <link>https://choiseungwoo98.github.io/p/%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84-%EC%8B%9C%EC%9E%91%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-ot/</link>
+        <title>[Diary] 부트캠프 시작(클라우드 OT)</title>
+        <link>https://choiseungwoo98.github.io/p/diary-%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84-%EC%8B%9C%EC%9E%91%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-ot/</link>
         <pubDate>Tue, 02 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84-%EC%8B%9C%EC%9E%91%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-ot/</guid>
+        <guid>https://choiseungwoo98.github.io/p/diary-%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84-%EC%8B%9C%EC%9E%91%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-ot/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제 OT를 잘 마치고 오늘 첫번째 수업 날 입니다!&lt;br&gt;
 오늘은 별다른 수업 없이 ZEP에 접속하고 노션(단체, 개인 목표를 작성)을 만들었습니다.

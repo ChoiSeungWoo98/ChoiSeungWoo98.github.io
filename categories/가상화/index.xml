@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>가상화 on 승우의 성장일지 🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/categories/%EA%B0%80%EC%83%81%ED%99%94/</link>
+        <link>http://localhost:1313/categories/%EA%B0%80%EC%83%81%ED%99%94/</link>
         <description>Recent content in 가상화 on 승우의 성장일지 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 03 Jul 2024 18:03:57 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/%EA%B0%80%EC%83%81%ED%99%94/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Jul 2024 18:03:57 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/%EA%B0%80%EC%83%81%ED%99%94/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>가상화 기술</title>
-        <link>https://choiseungwoo98.github.io/p/%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</link>
+        <link>http://localhost:1313/p/%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</link>
         <pubDate>Wed, 03 Jul 2024 18:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</guid>
+        <guid>http://localhost:1313/p/%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제 어수선한 분위기 속에 첫날이 마무리되고&lt;br&gt;
 두번째 수업이 진행되었습니다.&lt;br&gt;
@@ -44,7 +44,7 @@
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 60px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;가상화 기술&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/cloud/가상화기술.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;http://localhost:1313/img/posts/cloud/가상화기술.png&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;집중적으로-공부해야하는-가상화-기술&#34;&gt;집중적으로 공부해야하는 가상화 기술
