@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>복습 on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/%EB%B3%B5%EC%8A%B5/</link>
-        <description>Recent content in 복습 on Hugo Theme Stack Starter</description>
+        <title>복습 on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/%EB%B3%B5%EC%8A%B5/</link>
+        <description>Recent content in 복습 on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 13 Jul 2024 22:42:04 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/%EB%B3%B5%EC%8A%B5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 13 Jul 2024 22:42:04 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/%EB%B3%B5%EC%8A%B5/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>네트워크 복습</title>
-        <link>https://demo.stack.jimmycai.com/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</link>
+        <link>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</link>
         <pubDate>Sat, 13 Jul 2024 22:42:04 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</guid>
+        <guid>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 주말이라 여태까지 배운 네트워크에 대해&lt;br&gt;
 정리하면서 복습을 진행해보고자 한다.&lt;br&gt;
@@ -33,7 +33,7 @@
 &lt;/h2&gt;&lt;hr&gt;
 &lt;h4 id=&#34;osiopen-system-interconnection--개방형-시스템-상호-연결&#34;&gt;OSI(Open System Interconnection : 개방형 시스템 상호 연결)
 &lt;/h4&gt;&lt;p&gt;다양한 통신 시스템이 통신 할 수 있도록 국제 표준화 기구에서 만든 개념 모델&lt;/p&gt;
-&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/osi_7_layers.png&#34;&gt;
+&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/osi_7_layers.png&#34;&gt;
 &lt;h4 id=&#34;osi-7-layer&#34;&gt;OSI 7 Layer
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;응용 프로그램 계층(Application Layer) : 사용자가 사용하는 응용 프로그램과 인터페이스 제공&lt;/li&gt;
@@ -80,7 +80,7 @@
 &lt;li&gt;네트워크 인터페이스 계층(Network Interface Layer) : 물리적 네트워크 연결 및 데이터 전송 담당&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/osi7_osi4.png&#34;&gt;
+&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/osi7_osi4.png&#34;&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;계층별-장비&#34;&gt;계층별 장비
 &lt;/h2&gt;&lt;hr&gt;

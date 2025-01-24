@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.\n오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.\nMath 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.\n1. Math에 정의된 대표적인 상수 Math.PI : 원주율 π (약 3.141592653589793) Math.E : 자연 상수 e (약 2.718281828459045) 2. Math에 정의된 대표적인 메서드 abs(int a) / abs(long a) : 정수의 절댓값을 반환합니다. ceil(double a) : 주어진 숫자보다 크거나 같은 최소 정수를 반환합니다. floor(double a) : 주어진 숫자보다 작거나 같은 최대 정수를 반환합니다. round(float a) / round(double a) : 주어진 숫자를 반올림하여 long 형태로 반환합니다. min(int a, int b) / min(long a, long b) : 두 정수 중 작은 값을 반환합니다. max(int a, int b) / max(long a, long b) : 두 정수 중 큰 값을 반환합니다. sqrt(double a) : 주어진 숫자의 제곱근을 반환합니다. pow(double a, double b) : a의 b승을 반환합니다. sin(double a), cos(double a), tan(double a) : 삼각 함수 값들을 반환합니다. random() : 0 이상 1 미만의 난수를 반환합니다. (0.0 &lt;= x &lt; 1.0) 3. 각 메서드 사용 및 결과 Math.abs(-1.5) : 1.5 Math.ceil(-1.5) : -1.0 Math.floor(-1.5) : -2.0 Math.round(-1.5) : -2 Math.min(-1.5, 3.0) : -1.5 Math.max(-1.5, 3.0) : 3.0 Math.sqrt(-1.5) : NaN (Not a Number : 제곱근이 실수 범위 내에 없기 때문에 이 경우 허수와 관련된 복소수 연산이 필요하며 Math 클래스에서는 지원하지 않음) Math.sqrt(4) : 2.0 Math.pow(-1.5, 2.0): 2.25 Math.sin(-1.5): -0.9974949866040544 Math.cos(-1.5): 0.0707372016677029 Math.tan(-1.5): -14.101419947171719 Math.random(): [0.0, 1.0) 범위의 난수 (실행할 때마다 값이 달라집니다) Math.random() * 100 : 0 ~ 99 까지 랜덤으로 1가지의 수 포스트 작성 시 참고한 링크 Math 클래스 ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.\n오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.\nMath 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.\n">
 <title>[Java] Math 클래스</title>
 
-<link rel='canonical' href='https://demo.stack.jimmycai.com/p/java-math-%ED%81%B4%EB%9E%98%EC%8A%A4/'>
+<link rel='canonical' href='https://choiseungwoo98.github.io/p/java-math-%ED%81%B4%EB%9E%98%EC%8A%A4/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="[Java] Math 클래스">
-<meta property='og:description' content=" 커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.\n오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.\nMath 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.\n1. Math에 정의된 대표적인 상수 Math.PI : 원주율 π (약 3.141592653589793) Math.E : 자연 상수 e (약 2.718281828459045) 2. Math에 정의된 대표적인 메서드 abs(int a) / abs(long a) : 정수의 절댓값을 반환합니다. ceil(double a) : 주어진 숫자보다 크거나 같은 최소 정수를 반환합니다. floor(double a) : 주어진 숫자보다 작거나 같은 최대 정수를 반환합니다. round(float a) / round(double a) : 주어진 숫자를 반올림하여 long 형태로 반환합니다. min(int a, int b) / min(long a, long b) : 두 정수 중 작은 값을 반환합니다. max(int a, int b) / max(long a, long b) : 두 정수 중 큰 값을 반환합니다. sqrt(double a) : 주어진 숫자의 제곱근을 반환합니다. pow(double a, double b) : a의 b승을 반환합니다. sin(double a), cos(double a), tan(double a) : 삼각 함수 값들을 반환합니다. random() : 0 이상 1 미만의 난수를 반환합니다. (0.0 &lt;= x &lt; 1.0) 3. 각 메서드 사용 및 결과 Math.abs(-1.5) : 1.5 Math.ceil(-1.5) : -1.0 Math.floor(-1.5) : -2.0 Math.round(-1.5) : -2 Math.min(-1.5, 3.0) : -1.5 Math.max(-1.5, 3.0) : 3.0 Math.sqrt(-1.5) : NaN (Not a Number : 제곱근이 실수 범위 내에 없기 때문에 이 경우 허수와 관련된 복소수 연산이 필요하며 Math 클래스에서는 지원하지 않음) Math.sqrt(4) : 2.0 Math.pow(-1.5, 2.0): 2.25 Math.sin(-1.5): -0.9974949866040544 Math.cos(-1.5): 0.0707372016677029 Math.tan(-1.5): -14.101419947171719 Math.random(): [0.0, 1.0) 범위의 난수 (실행할 때마다 값이 달라집니다) Math.random() * 100 : 0 ~ 99 까지 랜덤으로 1가지의 수 포스트 작성 시 참고한 링크 Math 클래스 ">
-<meta property='og:url' content='https://demo.stack.jimmycai.com/p/java-math-%ED%81%B4%EB%9E%98%EC%8A%A4/'>
-<meta property='og:site_name' content='Hugo Theme Stack Starter'>
+<meta property='og:description' content=" 커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.\n오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.\nMath 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.\n">
+<meta property='og:url' content='https://choiseungwoo98.github.io/p/java-math-%ED%81%B4%EB%9E%98%EC%8A%A4/'>
+<meta property='og:site_name' content='Engineer Diary 🧑🏻‍💻'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java-Basic' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='Math' /><meta property='article:tag' content='Class' /><meta property='article:published_time' content='2023-08-19T17:49:27&#43;09:00'/><meta property='article:modified_time' content='2023-08-19T17:49:27&#43;09:00'/>
 <meta name="twitter:title" content="[Java] Math 클래스">
-<meta name="twitter:description" content=" 커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.\n오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.\nMath 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.\n1. Math에 정의된 대표적인 상수 Math.PI : 원주율 π (약 3.141592653589793) Math.E : 자연 상수 e (약 2.718281828459045) 2. Math에 정의된 대표적인 메서드 abs(int a) / abs(long a) : 정수의 절댓값을 반환합니다. ceil(double a) : 주어진 숫자보다 크거나 같은 최소 정수를 반환합니다. floor(double a) : 주어진 숫자보다 작거나 같은 최대 정수를 반환합니다. round(float a) / round(double a) : 주어진 숫자를 반올림하여 long 형태로 반환합니다. min(int a, int b) / min(long a, long b) : 두 정수 중 작은 값을 반환합니다. max(int a, int b) / max(long a, long b) : 두 정수 중 큰 값을 반환합니다. sqrt(double a) : 주어진 숫자의 제곱근을 반환합니다. pow(double a, double b) : a의 b승을 반환합니다. sin(double a), cos(double a), tan(double a) : 삼각 함수 값들을 반환합니다. random() : 0 이상 1 미만의 난수를 반환합니다. (0.0 &lt;= x &lt; 1.0) 3. 각 메서드 사용 및 결과 Math.abs(-1.5) : 1.5 Math.ceil(-1.5) : -1.0 Math.floor(-1.5) : -2.0 Math.round(-1.5) : -2 Math.min(-1.5, 3.0) : -1.5 Math.max(-1.5, 3.0) : 3.0 Math.sqrt(-1.5) : NaN (Not a Number : 제곱근이 실수 범위 내에 없기 때문에 이 경우 허수와 관련된 복소수 연산이 필요하며 Math 클래스에서는 지원하지 않음) Math.sqrt(4) : 2.0 Math.pow(-1.5, 2.0): 2.25 Math.sin(-1.5): -0.9974949866040544 Math.cos(-1.5): 0.0707372016677029 Math.tan(-1.5): -14.101419947171719 Math.random(): [0.0, 1.0) 범위의 난수 (실행할 때마다 값이 달라집니다) Math.random() * 100 : 0 ~ 99 까지 랜덤으로 1가지의 수 포스트 작성 시 참고한 링크 Math 클래스 ">
-    <link rel="shortcut icon" href="/favicon.png" />
+<meta name="twitter:description" content=" 커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.\n오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.\nMath 클래스란? 자바에서 제공되는 유틸리티 클래스로 자주 사용하는 상수들과 함수들을 미리 구현해 놓은 클래스입니다.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
     <body class="
@@ -58,27 +58,27 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_c68a00bbf16dac8.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                        <img src="/img/test_hu_362dab815880df3d.JPG" width="300"
+                            height="400" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
                 </a>
                 
-                    <span class="emoji">🍥</span>
+                    <span class="emoji">📚</span>
                 
             </figure>
             
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Hugo Theme Stack Starter</a></h1>
-            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            <h1 class="site-name"><a href="/">Engineer Diary 🧑🏻‍💻</a></h1>
+            <h2 class="site-description">Hi There I&#39;m Seung Woo :)</h2>
         </div>
     </header><ol class="menu-social">
             
                 <li>
                     <a 
-                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        href='https://github.com/ChoiSeungWoo98'
                         target="_blank"
                         title="GitHub"
                         rel="me"
@@ -88,26 +88,6 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-</svg>
-
-
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://twitter.com'
-                        target="_blank"
-                        title="Twitter"
-                        rel="me"
-                    >
-                        
-                        
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
 </svg>
 
 
@@ -305,7 +285,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">8월 19, 2023</time>
+                <time class="article-time--published">2023년 8월 19일</time>
             </div>
         
 
@@ -551,7 +531,7 @@
         
             2020 - 
         
-        2025 Hugo Theme Stack Starter
+        2025 Engineer Diary 🧑🏻‍💻
     </section>
     
     <section class="powerby">

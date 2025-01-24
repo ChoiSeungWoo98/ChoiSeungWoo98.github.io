@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>네트워크 on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</link>
-        <description>Recent content in 네트워크 on Hugo Theme Stack Starter</description>
+        <title>네트워크 on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</link>
+        <description>Recent content in 네트워크 on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 13 Jul 2024 22:42:04 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 13 Jul 2024 22:42:04 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>네트워크 복습</title>
-        <link>https://demo.stack.jimmycai.com/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</link>
+        <link>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</link>
         <pubDate>Sat, 13 Jul 2024 22:42:04 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</guid>
+        <guid>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 주말이라 여태까지 배운 네트워크에 대해&lt;br&gt;
 정리하면서 복습을 진행해보고자 한다.&lt;br&gt;
@@ -33,7 +33,7 @@
 &lt;/h2&gt;&lt;hr&gt;
 &lt;h4 id=&#34;osiopen-system-interconnection--개방형-시스템-상호-연결&#34;&gt;OSI(Open System Interconnection : 개방형 시스템 상호 연결)
 &lt;/h4&gt;&lt;p&gt;다양한 통신 시스템이 통신 할 수 있도록 국제 표준화 기구에서 만든 개념 모델&lt;/p&gt;
-&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/osi_7_layers.png&#34;&gt;
+&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/osi_7_layers.png&#34;&gt;
 &lt;h4 id=&#34;osi-7-layer&#34;&gt;OSI 7 Layer
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;응용 프로그램 계층(Application Layer) : 사용자가 사용하는 응용 프로그램과 인터페이스 제공&lt;/li&gt;
@@ -80,7 +80,7 @@
 &lt;li&gt;네트워크 인터페이스 계층(Network Interface Layer) : 물리적 네트워크 연결 및 데이터 전송 담당&lt;/li&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/osi7_osi4.png&#34;&gt;
+&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/osi7_osi4.png&#34;&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;계층별-장비&#34;&gt;계층별 장비
 &lt;/h2&gt;&lt;hr&gt;
@@ -155,10 +155,10 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
         </item>
         <item>
         <title>네트워크 도메인, HTTPs</title>
-        <link>https://demo.stack.jimmycai.com/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</link>
+        <link>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</link>
         <pubDate>Sat, 13 Jul 2024 16:42:04 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</guid>
+        <guid>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 주말이라 강좌로 올라와있는&lt;br&gt;
 네트워크 개념 잡기를 수강하고 정리하고자 한다.&lt;/p&gt;
@@ -233,10 +233,10 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
         </item>
         <item>
         <title>네트워크 개념</title>
-        <link>https://demo.stack.jimmycai.com/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</link>
+        <link>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</link>
         <pubDate>Thu, 04 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</guid>
+        <guid>https://choiseungwoo98.github.io/p/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;네트워크에 대해 배웠는데 너무 모르겠다&amp;hellip;&lt;br&gt;
 잘 따라 가려면 더욱 공부해야겠다..&lt;/p&gt;
@@ -263,7 +263,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;OSI 7 Layer&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/osi_7_layers.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/osi_7_layers.png&#34;&gt;
 &lt;/details&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -280,7 +280,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Application Layer&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/application_layer.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/application_layer.png&#34;&gt;
 &lt;/details&gt;
 &lt;ul&gt;
 &lt;li&gt;프레젠테이션 계층(Presentation) - 데이터
@@ -293,7 +293,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Presentation Layer&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/presentation_layer.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/presentation_layer.png&#34;&gt;
 &lt;/details&gt;
 &lt;ul&gt;
 &lt;li&gt;세션 계층(Session) - 데이터
@@ -306,7 +306,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Session Layer&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/session_layer.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/session_layer.png&#34;&gt;
 &lt;/details&gt;
 &lt;ul&gt;
 &lt;li&gt;전송 계층(Transport) - 세그먼트
@@ -320,7 +320,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Transport Layer&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/transport_layer.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/transport_layer.png&#34;&gt;
 &lt;/details&gt;
 &lt;ul&gt;
 &lt;li&gt;네트워크 계층(Network) - 패킷
@@ -334,7 +334,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Network Layer&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/network_layer.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/network_layer.png&#34;&gt;
 &lt;/details&gt;
 &lt;ul&gt;
 &lt;li&gt;데이터 링크 계층(Data Link) - 프레임
@@ -348,7 +348,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Data Link Layer&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/data_link_layer.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/data_link_layer.png&#34;&gt;
 &lt;/details&gt;
 &lt;ul&gt;
 &lt;li&gt;물리 계층(Physical) - 비트
@@ -362,7 +362,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Physical Layer&lt;/summary&gt;
-  &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/physical_layer.png&#34;&gt;
+  &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/physical_layer.png&#34;&gt;
 &lt;/details&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -374,7 +374,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;차이&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/osi7_osi4.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/osi7_osi4.png&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;계층별-장비&#34;&gt;계층별 장비
@@ -450,7 +450,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;실습(WireShark)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/ipv4_header_format.png&#34;&gt;
+&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/ipv4_header_format.png&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;IPv4 구성 및 헤더
 &lt;ul&gt;
@@ -540,7 +540,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/TCP_UDP.png&#34;&gt;
+&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/TCP_UDP.png&#34;&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;http-https&#34;&gt;HTTP, HTTPs
 &lt;/h2&gt;&lt;hr&gt;
@@ -553,7 +553,7 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;캡슐화-동작-방식&#34;&gt;캡슐화 동작 방식
 &lt;/h2&gt;&lt;hr&gt;
-&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/network/캡슐화동작방식.png&#34;&gt;
+&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/network/캡슐화동작방식.png&#34;&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;네트워크-용어-정리&#34;&gt;네트워크 용어 정리
 &lt;/h2&gt;&lt;hr&gt;

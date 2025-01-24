@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Storage on Engineer Diary 🧑🏻‍💻</title>
+        <link>http://localhost:1313/tags/storage/</link>
+        <description>Recent content in Storage on Engineer Diary 🧑🏻‍💻</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 07 Jul 2024 23:03:57 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/storage/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AWS 기초 실습</title>
+        <link>http://localhost:1313/p/aws-%EA%B8%B0%EC%B4%88-%EC%8B%A4%EC%8A%B5/</link>
+        <pubDate>Sun, 07 Jul 2024 23:03:57 +0900</pubDate>
+        
+        <guid>http://localhost:1313/p/aws-%EA%B8%B0%EC%B4%88-%EC%8B%A4%EC%8A%B5/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;오늘은 AWS 개인미션 실습을 진행해보고자 한다.&lt;br&gt;
+가장 기초적인 vm, storage, db를 생성해보고 사용해보는 미션이었다.&lt;br&gt;
+AWS에서 EC2, S3, RDS를 이용해서 각각 AM, Storage, DB를 만들어 보고자 한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;vmvirtual-machine--가삼-머신&#34;&gt;VM(Virtual Machine : 가삼 머신)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;AWS에서 VM`은 EC2에서&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;storage--저장공간&#34;&gt;Storage : 저장공간
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;dbdata-base--데이터-저장소&#34;&gt;DB(Data Base : 데이터 저장소)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;실습-하면서-궁금한-단어-및-내용&#34;&gt;실습 하면서 궁금한 단어 및 내용
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;클라우드 서비스(IaaS : Infrastructure as a Service 혹은 CSP : Cloud Service Provider)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

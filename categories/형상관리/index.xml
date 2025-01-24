@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>형상관리 on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC/</link>
-        <description>Recent content in 형상관리 on Hugo Theme Stack Starter</description>
+        <title>형상관리 on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC/</link>
+        <description>Recent content in 형상관리 on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 04 Mar 2023 22:47:36 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 04 Mar 2023 22:47:36 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[형상관리] 형상관리란 SVN? GIT?</title>
-        <link>https://demo.stack.jimmycai.com/p/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC-%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC%EB%9E%80-svn-git/</link>
+        <link>https://choiseungwoo98.github.io/p/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC-%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC%EB%9E%80-svn-git/</link>
         <pubDate>Sat, 04 Mar 2023 22:47:36 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC-%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC%EB%9E%80-svn-git/</guid>
+        <guid>https://choiseungwoo98.github.io/p/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC-%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC%EB%9E%80-svn-git/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;현재 가장 많이 사용하고 있는 형상관리도구 git에 대해 공부를 하다가 문득 궁금한 것이 생겼다.
 Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠한 차이가 있을까?
@@ -38,11 +38,11 @@ Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠�
 &lt;strong&gt;변경관리 ⊆ 버전관리 ⊆ 형상관리&lt;/strong&gt;&lt;/p&gt;
 &lt;details&gt;
     &lt;summary style=&#34;color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;형상관리&lt;/summary&gt;
-    &lt;img src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/형상관리란.png&#34;&gt;
+    &lt;img src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/형상관리란.png&#34;&gt;
 &lt;/details&gt;
 &lt;details&gt;
     &lt;summary style=&#34;color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;3가지 버전&lt;/summary&gt;
-    &lt;img src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/3가지_관리_사진.jpg&#34;&gt;
+    &lt;img src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/3가지_관리_사진.jpg&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;버전-관리-시스템&#34;&gt;버전 관리 시스템?
@@ -101,7 +101,7 @@ Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠�
 &lt;li&gt;원격 저장소가 사라지면 svn은 &lt;strong&gt;복구 불가&lt;/strong&gt;,&lt;br&gt;git은 로컬 저장소에 사본을 들고 있다면 &lt;strong&gt;복구 가능&lt;/strong&gt;.&lt;/li&gt;
 &lt;li&gt;svn은 &lt;strong&gt;저장소가 하나&lt;/strong&gt;,&lt;br&gt;git은 로컬 저장소/원격 저장소로 &lt;strong&gt;저장소를 분산&lt;/strong&gt;해서 관리&lt;/li&gt;
 &lt;/ol&gt;
-&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/git_svn.jpg&#34;&gt;
+&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/git_svn.jpg&#34;&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
 &lt;/h2&gt;&lt;ul&gt;

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>EBS on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/ebs/</link>
-        <description>Recent content in EBS on Hugo Theme Stack Starter</description>
+        <title>EBS on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/ebs/</link>
+        <description>Recent content in EBS on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 17 Jul 2024 11:42:15 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/ebs/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 17 Jul 2024 11:42:15 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/ebs/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>aws에 EBS, Lambda와 efs</title>
-        <link>https://demo.stack.jimmycai.com/p/aws%EC%97%90-ebs-lambda%EC%99%80-efs/</link>
+        <link>https://choiseungwoo98.github.io/p/aws%EC%97%90-ebs-lambda%EC%99%80-efs/</link>
         <pubDate>Wed, 17 Jul 2024 11:42:15 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/aws%EC%97%90-ebs-lambda%EC%99%80-efs/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws%EC%97%90-ebs-lambda%EC%99%80-efs/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 EBS, 람다와 EFS에 대해 배웠다 &lt;br&gt;
 잊지 않기 위해 복습 또 복습&amp;hellip;&lt;/p&gt;

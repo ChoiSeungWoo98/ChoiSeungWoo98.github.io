@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Git on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/categories/git/</link>
-        <description>Recent content in Git on Hugo Theme Stack Starter</description>
+        <title>Git on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/categories/git/</link>
+        <description>Recent content in Git on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 05 Mar 2023 04:39:34 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/categories/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 05 Mar 2023 04:39:34 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[Git] Workflow? 작업 방식?</title>
-        <link>https://demo.stack.jimmycai.com/p/git-workflow-%EC%9E%91%EC%97%85-%EB%B0%A9%EC%8B%9D/</link>
+        <link>https://choiseungwoo98.github.io/p/git-workflow-%EC%9E%91%EC%97%85-%EB%B0%A9%EC%8B%9D/</link>
         <pubDate>Sun, 05 Mar 2023 04:39:34 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/git-workflow-%EC%9E%91%EC%97%85-%EB%B0%A9%EC%8B%9D/</guid>
+        <guid>https://choiseungwoo98.github.io/p/git-workflow-%EC%9E%91%EC%97%85-%EB%B0%A9%EC%8B%9D/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;workflow는 어떤 것이 있고 어떤 방법론이 있는지 조사해보자고 마음을 먹어 작성하게되었다.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -82,7 +82,7 @@ Git에서 대표적인 Workflow는 &lt;code&gt;Git flow&lt;/code&gt;, &lt;code&g
 &lt;/ol&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Git flow&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/git/git_flow.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/git/git_flow.png&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;github-flow&#34;&gt;Github flow
@@ -99,7 +99,7 @@ master 브랜치는 &lt;strong&gt;항상 최신 버전 유지 및 안정적&lt;/
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Github flow&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/git/github_workflow.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/git/github_workflow.png&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;gitlab-flow&#34;&gt;Gitlab flow
@@ -118,7 +118,7 @@ master 브랜치는 &lt;strong&gt;항상 최신 버전 유지 및 안정적&lt;/
 &lt;/ol&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Gitlab flow&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/git/gitlab_workflow.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/git/gitlab_workflow.png&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;centralized-workflow&#34;&gt;Centralized Workflow
@@ -140,7 +140,7 @@ master 브랜치는 &lt;strong&gt;항상 최신 버전 유지 및 안정적&lt;/
 &lt;p&gt;Git에 특징인 &lt;strong&gt;분산 버전 관리의 이점을 사용할 수 없지만 최소한의 명령어로 협업 가능&lt;/strong&gt;&lt;/p&gt;
 &lt;details&gt;
     &lt;summary style=&#34;color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Centralized Workflow&lt;/summary&gt;
-    &lt;img style=&#34;width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/git/centralized_workflow.png&#34;&gt;
+    &lt;img style=&#34;width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/git/centralized_workflow.png&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;feature-branch-workflow&#34;&gt;Feature Branch Workflow
@@ -169,7 +169,7 @@ pull request는 코드 리뷰의 시작점&lt;br&gt;
 큰 규모의 프로젝트를 관리할 때는 Gitflow Workflow를 사용해 기능 개발, 릴리스, 유지보수를 위해 좀 더 엄격한 워크플로우를 유지.&lt;/p&gt;
 &lt;details&gt;
     &lt;summary style=&#34;color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Feature Branch Workflow&lt;/summary&gt;
-    &lt;img style=&#34;width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/git/feature_branch_workflow.png&#34;&gt;
+    &lt;img style=&#34;width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/git/feature_branch_workflow.png&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;forking-workflow&#34;&gt;Forking Workflow
@@ -192,7 +192,7 @@ pull request는 코드 리뷰의 시작점&lt;br&gt;
 &lt;p&gt;다른 워크플로우에서는 공식 저장소에 브랜치를 푸시해서 팀 구성원들이 공유했다면, Forking Workflow에서는 나의 브랜치를 다른 참여자들이 자신의 로컬 저장소로 내려 받아 참고하고 병합&lt;/p&gt;
 &lt;details&gt;
     &lt;summary style=&#34;color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Forking Workflow&lt;/summary&gt;
-    &lt;img style=&#34;width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/git/forking_workflow.png&#34;&gt;
+    &lt;img style=&#34;width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/git/forking_workflow.png&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
@@ -212,10 +212,10 @@ pull request는 코드 리뷰의 시작점&lt;br&gt;
         </item>
         <item>
         <title>[Git] Merge와 Rebase 차이</title>
-        <link>https://demo.stack.jimmycai.com/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/</link>
+        <link>https://choiseungwoo98.github.io/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/</link>
         <pubDate>Sun, 05 Mar 2023 04:30:49 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/</guid>
+        <guid>https://choiseungwoo98.github.io/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.&lt;br&gt;
 현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&amp;hellip;&lt;br&gt;
@@ -250,7 +250,7 @@ rebase는 &lt;strong&gt;branch의 base를 옮긴다&lt;/strong&gt;는 개념의 
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;git merge&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/git/merge.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/git/merge.png&#34;&gt;
 &lt;/details&gt;
 &lt;p&gt;rebase&lt;/p&gt;
 &lt;ul&gt;
@@ -261,7 +261,7 @@ rebase는 &lt;strong&gt;branch의 base를 옮긴다&lt;/strong&gt;는 개념의 
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;git rebase&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/git/rebase.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/git/rebase.png&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;rebase를-사용하는-이유&#34;&gt;rebase를 사용하는 이유
@@ -270,7 +270,7 @@ master브랜치로 merge만 한다면 엄청나게 복잡한 git history를 볼 
 rebase를 하여 &lt;strong&gt;작업 순서대로 history를 관리하고 불필요한 병합 커밋을 제거&lt;/strong&gt;할 수 있다.&lt;/p&gt;
 &lt;details&gt;
     &lt;summary style=&#34;color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;merge와 rebase history 비교&lt;/summary&gt;
-    &lt;img src=&#34;https://demo.stack.jimmycai.com/img/posts/형상관리/git/merge_disadvantage.png&#34;&gt;
+    &lt;img src=&#34;https://choiseungwoo98.github.io/img/posts/형상관리/git/merge_disadvantage.png&#34;&gt;
 &lt;/details&gt;
 &lt;h2 id=&#34;rebase-사용-시-유의점&#34;&gt;rebase 사용 시 유의점
 &lt;/h2&gt;&lt;p&gt;여러 사람이 사용하고 활발하게 커밋이 일어나는 브랜치라고 한다면, Rebase를 하는 것은 자칫 위험할 수 있습니다.&lt;br&gt;
@@ -290,10 +290,10 @@ rebase를 하여 &lt;strong&gt;작업 순서대로 history를 관리하고 불�
         </item>
         <item>
         <title>[Git] branch가 자세히 뭘까?</title>
-        <link>https://demo.stack.jimmycai.com/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/</link>
+        <link>https://choiseungwoo98.github.io/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/</link>
         <pubDate>Sun, 05 Mar 2023 00:40:51 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/</guid>
+        <guid>https://choiseungwoo98.github.io/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/</guid>
         <description>&lt;h2 id=&#34;브랜치&#34;&gt;브랜치??
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;여러 개발자들이 &lt;strong&gt;동시에 다양한 작업을 할 수 있게 만들어 주는 기능&lt;/strong&gt;이 바로 브랜치(Branch) 이다.&lt;br&gt;

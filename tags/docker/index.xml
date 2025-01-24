@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Docker on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/docker/</link>
-        <description>Recent content in Docker on Hugo Theme Stack Starter</description>
+        <title>Docker on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/docker/</link>
+        <description>Recent content in Docker on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 12 Jul 2024 14:25:27 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/docker/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 12 Jul 2024 14:25:27 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Docker 이론</title>
-        <link>https://demo.stack.jimmycai.com/p/docker-%EC%9D%B4%EB%A1%A0/</link>
+        <link>https://choiseungwoo98.github.io/p/docker-%EC%9D%B4%EB%A1%A0/</link>
         <pubDate>Fri, 12 Jul 2024 14:25:27 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/docker-%EC%9D%B4%EB%A1%A0/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-%EC%9D%B4%EB%A1%A0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 실습보다 이론위주의 수업이었다.&lt;br&gt;
 도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.&lt;/p&gt;
@@ -197,10 +197,10 @@
         </item>
         <item>
         <title>Docker_conpose</title>
-        <link>https://demo.stack.jimmycai.com/p/docker_conpose/</link>
+        <link>https://choiseungwoo98.github.io/p/docker_conpose/</link>
         <pubDate>Thu, 11 Jul 2024 13:13:32 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/docker_conpose/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker_conpose/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 docker compose에 대해 배웠습니다.&lt;br&gt;
 이론이 많지는 않았지만&lt;br&gt;
@@ -289,10 +289,10 @@
         </item>
         <item>
         <title>Dockerfile 기초</title>
-        <link>https://demo.stack.jimmycai.com/p/dockerfile-%EA%B8%B0%EC%B4%88/</link>
+        <link>https://choiseungwoo98.github.io/p/dockerfile-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Wed, 10 Jul 2024 16:16:44 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/dockerfile-%EA%B8%B0%EC%B4%88/</guid>
+        <guid>https://choiseungwoo98.github.io/p/dockerfile-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제는 도커의 개념과 동작 방식에 대해 정리하였습니다.&lt;br&gt;
 오늘은 docker를 실질적으로 사용해보면서 필요한 내용을 정리해보고자 합니다.&lt;/p&gt;
@@ -310,8 +310,8 @@
 &lt;li&gt;확장성 : 마이크로 아키텍처를 이용해 쉽게 확장&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;지시자&#34;&gt;지시자
-&lt;/h4&gt;&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/docker/dockerfile-지시자.png&#34;&gt;
-&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/docker/dockerfile-지시자2.png&#34;&gt;
+&lt;/h4&gt;&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/docker/dockerfile-지시자.png&#34;&gt;
+&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/docker/dockerfile-지시자2.png&#34;&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;dockerfile-만들기&#34;&gt;Dockerfile 만들기
 &lt;/h2&gt;&lt;hr&gt;
@@ -750,10 +750,10 @@
         </item>
         <item>
         <title>Docker 기초</title>
-        <link>https://demo.stack.jimmycai.com/p/docker-%EA%B8%B0%EC%B4%88/</link>
+        <link>https://choiseungwoo98.github.io/p/docker-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Tue, 09 Jul 2024 22:16:44 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/docker-%EA%B8%B0%EC%B4%88/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;기존에 혼자 Docker에 대해 잠깐 공부한 적 있지만 심도있게 다루지는 않았습니다.&lt;br&gt;
 카카오 테크 부트캠프를 시작하면서 클라우드 수업을 듣기 시작했고&lt;br&gt;
@@ -805,7 +805,7 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;가상머신virtual-machine-vs-docker&#34;&gt;가상머신(Virtual Machine) vs Docker
 &lt;/h2&gt;&lt;hr&gt;
-&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/docker/VMvsDocker.png&#34;&gt;
+&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/docker/VMvsDocker.png&#34;&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;docker-탄생-배경&#34;&gt;Docker 탄생 배경
 &lt;/h2&gt;&lt;hr&gt;
@@ -841,10 +841,10 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
         </item>
         <item>
         <title>[Docker] Docker는 뭘까?</title>
-        <link>https://demo.stack.jimmycai.com/p/docker-docker%EB%8A%94-%EB%AD%98%EA%B9%8C/</link>
+        <link>https://choiseungwoo98.github.io/p/docker-docker%EB%8A%94-%EB%AD%98%EA%B9%8C/</link>
         <pubDate>Fri, 17 Mar 2023 01:03:57 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/docker-docker%EB%8A%94-%EB%AD%98%EA%B9%8C/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-docker%EB%8A%94-%EB%AD%98%EA%B9%8C/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;Mysql을 사용하여 프로젝트를 하나 진행 중이었습니다.&lt;br&gt;
 해당 프로젝트가 끝나고 새로운 프로젝트를 진행하게 되었는데,&lt;br&gt;
@@ -853,7 +853,7 @@ Mysql과 MariaDB는 서로 프로토콜, 프로세스 명, 명령어 등을 쉐�
 MySql이 설치되어있는 상황에서 MariaDB를 다운하면 충돌이 발생하고&lt;br&gt;
 MySql을 지우고 다운받을 수 없는 상황이라 동시에 사용하기 위해 Docker로 설치해여 사용하려 합니다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;img src=&#34;https://demo.stack.jimmycai.com/img/posts/docker/docker.png&#34;&gt;
+&lt;img src=&#34;https://choiseungwoo98.github.io/img/posts/docker/docker.png&#34;&gt;
 &lt;h2 id=&#34;docker&#34;&gt;Docker??
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;컨테이너 기반의 오픈소스 가상화 플랫폼&lt;/strong&gt;&lt;/p&gt;
@@ -863,7 +863,7 @@ MySql을 지우고 다운받을 수 없는 상황이라 동시에 사용하기 �
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Linux 커널의 도커 엔진&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/docker/docker_engine.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/docker/docker_engine.png&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;컨테이너&#34;&gt;컨테이너??
@@ -978,9 +978,9 @@ MySql을 지우고 다운받을 수 없는 상황이라 동시에 사용하기 �
 &lt;h2 id=&#34;datagrip-연결&#34;&gt;DataGrip 연결
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;아래 순서대로 진행하면 연결 가능하다!!!&lt;/p&gt;
-&lt;img src=&#34;https://demo.stack.jimmycai.com/img/posts/docker/first.jpg&#34;&gt;
-&lt;img src=&#34;https://demo.stack.jimmycai.com/img/posts/docker/second.jpg&#34;&gt;
-&lt;img src=&#34;https://demo.stack.jimmycai.com/img/posts/docker/third.jpg&#34;&gt;
+&lt;img src=&#34;https://choiseungwoo98.github.io/img/posts/docker/first.jpg&#34;&gt;
+&lt;img src=&#34;https://choiseungwoo98.github.io/img/posts/docker/second.jpg&#34;&gt;
+&lt;img src=&#34;https://choiseungwoo98.github.io/img/posts/docker/third.jpg&#34;&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;포스트-작성-시-참고한-링크&#34;&gt;포스트 작성 시 참고한 링크
 &lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://kplog.tistory.com/288&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

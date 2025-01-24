@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>웹소켓 on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/%EC%9B%B9%EC%86%8C%EC%BC%93/</link>
-        <description>Recent content in 웹소켓 on Hugo Theme Stack Starter</description>
+        <title>웹소켓 on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/%EC%9B%B9%EC%86%8C%EC%BC%93/</link>
+        <description>Recent content in 웹소켓 on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 06 May 2023 19:29:42 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/%EC%9B%B9%EC%86%8C%EC%BC%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 06 May 2023 19:29:42 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/%EC%9B%B9%EC%86%8C%EC%BC%93/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[Java] Spring Boot, Websocket &#43; STOMP 사용하기</title>
-        <link>https://demo.stack.jimmycai.com/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
+        <link>https://choiseungwoo98.github.io/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
         <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?&lt;br&gt;
 같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.&lt;/p&gt;
@@ -29,10 +29,10 @@
         </item>
         <item>
         <title>[Java] 서버에서 클라이언트로 이벤트를 보내는 4가지 방법</title>
-        <link>https://demo.stack.jimmycai.com/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</link>
+        <link>https://choiseungwoo98.github.io/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</link>
         <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?&lt;br&gt;
 같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.&lt;/p&gt;
@@ -48,7 +48,7 @@
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Polling 방식&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/java/webSocket/Polling.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/java/webSocket/Polling.png&#34;&gt;
 &lt;/details&gt;
 &lt;h3 id=&#34;2-long-polling&#34;&gt;2. Long Polling
 &lt;/h3&gt;&lt;ul&gt;
@@ -60,7 +60,7 @@
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;Long Polling 방식&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/java/webSocket/Long_Polling.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/java/webSocket/Long_Polling.png&#34;&gt;
 &lt;/details&gt;
 &lt;h3 id=&#34;3-websocket&#34;&gt;3. WebSocket
 &lt;/h3&gt;&lt;ul&gt;
@@ -72,7 +72,7 @@
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;WebSocket 방식&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/java/webSocket/WebSocket.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/java/webSocket/WebSocket.png&#34;&gt;
 &lt;/details&gt;
 &lt;h3 id=&#34;4-sseserver-sent-events&#34;&gt;4. SSE(Server-Sent-Events)
 &lt;/h3&gt;&lt;ul&gt;
@@ -84,7 +84,7 @@
 &lt;/ul&gt;
 &lt;details&gt;
     &lt;summary style=&#34;margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;&#34;&gt;SSE(Server-Sent Event) 방식&lt;/summary&gt;
-    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/java/webSocket/Server-Sent-Events.png&#34;&gt;
+    &lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/java/webSocket/Server-Sent-Events.png&#34;&gt;
 &lt;/details&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;websocket--stomp를-이용하여-서버와-양방향-통신&#34;&gt;WebSocket + Stomp를 이용하여 서버와 양방향 통신

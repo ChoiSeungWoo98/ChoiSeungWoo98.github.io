@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Naming on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/naming/</link>
-        <description>Recent content in Naming on Hugo Theme Stack Starter</description>
+        <title>Naming on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/naming/</link>
+        <description>Recent content in Naming on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 19 Aug 2023 16:03:49 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/naming/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 19 Aug 2023 16:03:49 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/naming/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[Java] 자바 네이밍 규칙(Java Naming Convention)</title>
-        <link>https://demo.stack.jimmycai.com/p/java-%EC%9E%90%EB%B0%94-%EB%84%A4%EC%9D%B4%EB%B0%8D-%EA%B7%9C%EC%B9%99java-naming-convention/</link>
+        <link>https://choiseungwoo98.github.io/p/java-%EC%9E%90%EB%B0%94-%EB%84%A4%EC%9D%B4%EB%B0%8D-%EA%B7%9C%EC%B9%99java-naming-convention/</link>
         <pubDate>Sat, 19 Aug 2023 16:03:49 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/java-%EC%9E%90%EB%B0%94-%EB%84%A4%EC%9D%B4%EB%B0%8D-%EA%B7%9C%EC%B9%99java-naming-convention/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-%EC%9E%90%EB%B0%94-%EB%84%A4%EC%9D%B4%EB%B0%8D-%EA%B7%9C%EC%B9%99java-naming-convention/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.&lt;br&gt;
 그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!&lt;br&gt;

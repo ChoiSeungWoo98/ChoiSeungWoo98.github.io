@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>OverlayFS on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/overlayfs/</link>
-        <description>Recent content in OverlayFS on Hugo Theme Stack Starter</description>
+        <title>OverlayFS on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/overlayfs/</link>
+        <description>Recent content in OverlayFS on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 08 Jul 2024 22:32:35 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/overlayfs/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 08 Jul 2024 22:32:35 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/overlayfs/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux 심화</title>
-        <link>https://demo.stack.jimmycai.com/p/linux-%EC%8B%AC%ED%99%94/</link>
+        <link>https://choiseungwoo98.github.io/p/linux-%EC%8B%AC%ED%99%94/</link>
         <pubDate>Mon, 08 Jul 2024 22:32:35 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/linux-%EC%8B%AC%ED%99%94/</guid>
+        <guid>https://choiseungwoo98.github.io/p/linux-%EC%8B%AC%ED%99%94/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;리눅스에 대해 배웠다.&lt;br&gt;
 오늘은 실습이 주를 이뤘다.

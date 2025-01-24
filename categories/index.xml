@@ -1,121 +1,121 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/categories/</link>
-        <description>Recent content in Categories on Hugo Theme Stack Starter</description>
+        <title>Categories on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/categories/</link>
+        <description>Recent content in Categories on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Java</title>
-        <link>https://demo.stack.jimmycai.com/categories/java/</link>
+        <link>https://choiseungwoo98.github.io/categories/java/</link>
         <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/java/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/java/</guid>
         <description></description>
         </item>
         <item>
         <title>AWS</title>
-        <link>https://demo.stack.jimmycai.com/categories/aws/</link>
+        <link>https://choiseungwoo98.github.io/categories/aws/</link>
         <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/aws/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/aws/</guid>
         <description></description>
         </item>
         <item>
         <title>KakaoTechBootCamp</title>
-        <link>https://demo.stack.jimmycai.com/categories/kakaotechbootcamp/</link>
+        <link>https://choiseungwoo98.github.io/categories/kakaotechbootcamp/</link>
         <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/kakaotechbootcamp/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/kakaotechbootcamp/</guid>
         <description></description>
         </item>
         <item>
         <title>네트워크</title>
-        <link>https://demo.stack.jimmycai.com/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</link>
+        <link>https://choiseungwoo98.github.io/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</link>
         <pubDate>Sat, 13 Jul 2024 22:42:04 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/</guid>
         <description></description>
         </item>
         <item>
         <title>Docker</title>
-        <link>https://demo.stack.jimmycai.com/categories/docker/</link>
+        <link>https://choiseungwoo98.github.io/categories/docker/</link>
         <pubDate>Fri, 12 Jul 2024 14:25:27 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/docker/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/docker/</guid>
         <description></description>
         </item>
         <item>
         <title>Linux</title>
-        <link>https://demo.stack.jimmycai.com/categories/linux/</link>
+        <link>https://choiseungwoo98.github.io/categories/linux/</link>
         <pubDate>Mon, 08 Jul 2024 22:32:35 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/linux/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/linux/</guid>
         <description></description>
         </item>
         <item>
         <title>클라우드</title>
-        <link>https://demo.stack.jimmycai.com/categories/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</link>
+        <link>https://choiseungwoo98.github.io/categories/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</link>
         <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C/</guid>
         <description></description>
         </item>
         <item>
         <title>가상화</title>
-        <link>https://demo.stack.jimmycai.com/categories/%EA%B0%80%EC%83%81%ED%99%94/</link>
+        <link>https://choiseungwoo98.github.io/categories/%EA%B0%80%EC%83%81%ED%99%94/</link>
         <pubDate>Wed, 03 Jul 2024 18:03:57 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/%EA%B0%80%EC%83%81%ED%99%94/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/%EA%B0%80%EC%83%81%ED%99%94/</guid>
         <description></description>
         </item>
         <item>
         <title>WebSocket</title>
-        <link>https://demo.stack.jimmycai.com/categories/websocket/</link>
+        <link>https://choiseungwoo98.github.io/categories/websocket/</link>
         <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/websocket/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/websocket/</guid>
         <description></description>
         </item>
         <item>
         <title>Git</title>
-        <link>https://demo.stack.jimmycai.com/categories/git/</link>
+        <link>https://choiseungwoo98.github.io/categories/git/</link>
         <pubDate>Sun, 05 Mar 2023 04:39:34 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/git/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/git/</guid>
         <description></description>
         </item>
         <item>
         <title>형상관리</title>
-        <link>https://demo.stack.jimmycai.com/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC/</link>
+        <link>https://choiseungwoo98.github.io/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC/</link>
         <pubDate>Sat, 04 Mar 2023 22:47:36 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC/</guid>
         <description></description>
         </item>
         <item>
         <title>Blog</title>
-        <link>https://demo.stack.jimmycai.com/categories/blog/</link>
+        <link>https://choiseungwoo98.github.io/categories/blog/</link>
         <pubDate>Sat, 04 Mar 2023 14:16:49 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/blog/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/blog/</guid>
         <description></description>
         </item>
         <item>
         <title>Diary</title>
-        <link>https://demo.stack.jimmycai.com/categories/diary/</link>
+        <link>https://choiseungwoo98.github.io/categories/diary/</link>
         <pubDate>Wed, 01 Mar 2023 21:50:49 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/diary/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/diary/</guid>
         <description></description>
         </item>
         <item>
         <title>Example Category</title>
-        <link>https://demo.stack.jimmycai.com/categories/example-category/</link>
+        <link>https://choiseungwoo98.github.io/categories/example-category/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/categories/example-category/</guid>
+        <guid>https://choiseungwoo98.github.io/categories/example-category/</guid>
         <description></description>
         </item>
         

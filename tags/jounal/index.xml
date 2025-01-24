@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Jounal on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/jounal/</link>
-        <description>Recent content in Jounal on Hugo Theme Stack Starter</description>
+        <title>Jounal on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/jounal/</link>
+        <description>Recent content in Jounal on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 01 Mar 2023 21:50:49 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/jounal/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 01 Mar 2023 21:50:49 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/jounal/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[Diary] 깃 블로그를 작성하기 전 다짐</title>
-        <link>https://demo.stack.jimmycai.com/p/diary-%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0-%EC%A0%84-%EB%8B%A4%EC%A7%90/</link>
+        <link>https://choiseungwoo98.github.io/p/diary-%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0-%EC%A0%84-%EB%8B%A4%EC%A7%90/</link>
         <pubDate>Wed, 01 Mar 2023 21:50:49 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/diary-%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0-%EC%A0%84-%EB%8B%A4%EC%A7%90/</guid>
+        <guid>https://choiseungwoo98.github.io/p/diary-%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0-%EC%A0%84-%EB%8B%A4%EC%A7%90/</guid>
         <description>&lt;p&gt;처음 써보는 깃 블로그 게시글 입니다.&lt;br&gt;
 저는 이제 현업 3개월차 주주주주주주주주주주주니어 백엔드 개발자 입니다. :)&lt;br&gt;
 블로그를 쓰려고 다짐한 이유는 제가 느끼는 것들과 공부한 부분을 글로 적고&lt;br&gt;

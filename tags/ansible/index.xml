@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Ansible on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/ansible/</link>
-        <description>Recent content in Ansible on Hugo Theme Stack Starter</description>
+        <title>Ansible on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/ansible/</link>
+        <description>Recent content in Ansible on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 18 Jul 2024 09:54:15 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/ansible/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 18 Jul 2024 09:54:15 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>IaC 기초 및 Terraform, Ansible</title>
-        <link>https://demo.stack.jimmycai.com/p/iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</link>
+        <link>https://choiseungwoo98.github.io/p/iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</link>
         <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</guid>
+        <guid>https://choiseungwoo98.github.io/p/iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 배포 자동화에 대해 배웠다.&lt;br&gt;
 거의 대부분의 프로젝트가 자동화를 사용하는 만큼 집중해서 잘 들어야지   &lt;br&gt;

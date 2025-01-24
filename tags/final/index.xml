@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Final on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/final/</link>
-        <description>Recent content in Final on Hugo Theme Stack Starter</description>
+        <title>Final on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/final/</link>
+        <description>Recent content in Final on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/final/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/final/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Basic</title>
-        <link>https://demo.stack.jimmycai.com/p/basic/</link>
+        <link>https://choiseungwoo98.github.io/p/basic/</link>
         <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/basic/</guid>
+        <guid>https://choiseungwoo98.github.io/p/basic/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 드디어 그 유명한 쿠버네티스!!!&lt;br&gt;
 쿠버만 잘해도 반은 간다는데&lt;br&gt;
@@ -33,7 +33,7 @@
 &lt;li&gt;자동화된 복구 : 실패한 컨테이너를 다시 시작, 교체하며 사용자가 정의한 상태 이외에는 지속적으로 복구 가능&lt;/li&gt;
 &lt;li&gt;시크릿과 구성관리 : 암초, OAuth 토큰, SSH 키와 같은 중요한 정보를 저장 및 관리(컨테이너 이미지 재구성하지 않고 시크릿 및 애플리케이션 구성을 배포 및 업데이트)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/kubenetes/kubenetes.png&#34;&gt;
+&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/kubenetes/kubenetes.png&#34;&gt;
 &lt;h4 id=&#34;핵심-개념&#34;&gt;핵심 개념
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;cluster : 여러 대의 머신(노드)으로 구성된 그룹(마스터 노드와 여러 워커 노드로 구성)&lt;/li&gt;
@@ -47,7 +47,7 @@
 &lt;li&gt;Cronjob : 반복 일정에 따라 Job 생성&lt;/li&gt;
 &lt;li&gt;Namespace : 클러스터 내에 리소스를 논리적으로 분리&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/kubenetes/cluster_node.png&#34;&gt;
+&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/kubenetes/cluster_node.png&#34;&gt;
 &lt;h4 id=&#34;실습&#34;&gt;실습
 &lt;/h4&gt;&lt;h4 id=&#34;실습-1&#34;&gt;실습 1
 &lt;/h4&gt;&lt;ul&gt;
@@ -158,10 +158,10 @@
         </item>
         <item>
         <title>[Java] final 사용법</title>
-        <link>https://demo.stack.jimmycai.com/p/java-final-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
+        <link>https://choiseungwoo98.github.io/p/java-final-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
         <pubDate>Sat, 22 Jul 2023 18:37:42 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/java-final-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-final-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
 오늘은 여러가지 질문 중 final에 대해 알아보고자 한다.&lt;/p&gt;

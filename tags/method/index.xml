@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Method on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/method/</link>
-        <description>Recent content in Method on Hugo Theme Stack Starter</description>
+        <title>Method on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/method/</link>
+        <description>Recent content in Method on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 20 Aug 2023 02:35:44 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/method/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 20 Aug 2023 02:35:44 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/method/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>String_Method</title>
-        <link>https://demo.stack.jimmycai.com/p/string_method/</link>
+        <link>https://choiseungwoo98.github.io/p/string_method/</link>
         <pubDate>Sun, 20 Aug 2023 02:35:44 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/string_method/</guid>
+        <guid>https://choiseungwoo98.github.io/p/string_method/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. &lt;br&gt;
 오늘의 질문! String 클래스의 메서드는 무엇이 있을까?&lt;br&gt;

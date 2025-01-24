@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Linux on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/categories/linux/</link>
-        <description>Recent content in Linux on Hugo Theme Stack Starter</description>
+        <title>Linux on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/categories/linux/</link>
+        <description>Recent content in Linux on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 08 Jul 2024 22:32:35 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 08 Jul 2024 22:32:35 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux 심화</title>
-        <link>https://demo.stack.jimmycai.com/p/linux-%EC%8B%AC%ED%99%94/</link>
+        <link>https://choiseungwoo98.github.io/p/linux-%EC%8B%AC%ED%99%94/</link>
         <pubDate>Mon, 08 Jul 2024 22:32:35 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/linux-%EC%8B%AC%ED%99%94/</guid>
+        <guid>https://choiseungwoo98.github.io/p/linux-%EC%8B%AC%ED%99%94/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;리눅스에 대해 배웠다.&lt;br&gt;
 오늘은 실습이 주를 이뤘다.
@@ -626,10 +626,10 @@
         </item>
         <item>
         <title>Linux 기초</title>
-        <link>https://demo.stack.jimmycai.com/p/linux-%EA%B8%B0%EC%B4%88/</link>
+        <link>https://choiseungwoo98.github.io/p/linux-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Fri, 05 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/linux-%EA%B8%B0%EC%B4%88/</guid>
+        <guid>https://choiseungwoo98.github.io/p/linux-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;리눅스에 대해 배웠다.&lt;br&gt;
 처음 알게된 명령어도 많았지만&lt;br&gt;
@@ -758,7 +758,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/linux/linux배포판.png&#34;&gt;
+&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/linux/linux배포판.png&#34;&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;패키지-매니저&#34;&gt;패키지 매니저
 &lt;/h2&gt;&lt;hr&gt;
@@ -785,7 +785,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://demo.stack.jimmycai.com/img/posts/linux/패키지매니저.png&#34;&gt;
+&lt;img style=&#34;margin-left: 30px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/linux/패키지매니저.png&#34;&gt;
 &lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
 &lt;h2 id=&#34;권한-및-소유자&#34;&gt;권한 및 소유자
 &lt;/h2&gt;&lt;hr&gt;

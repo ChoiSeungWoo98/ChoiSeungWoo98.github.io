@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Security on Hugo Theme Stack Starter</title>
-        <link>https://demo.stack.jimmycai.com/tags/security/</link>
-        <description>Recent content in Security on Hugo Theme Stack Starter</description>
+        <title>Security on Engineer Diary 🧑🏻‍💻</title>
+        <link>https://choiseungwoo98.github.io/tags/security/</link>
+        <description>Recent content in Security on Engineer Diary 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 12 Jul 2024 14:25:27 +0900</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/security/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 12 Jul 2024 14:25:27 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Docker 이론</title>
-        <link>https://demo.stack.jimmycai.com/p/docker-%EC%9D%B4%EB%A1%A0/</link>
+        <link>https://choiseungwoo98.github.io/p/docker-%EC%9D%B4%EB%A1%A0/</link>
         <pubDate>Fri, 12 Jul 2024 14:25:27 +0900</pubDate>
         
-        <guid>https://demo.stack.jimmycai.com/p/docker-%EC%9D%B4%EB%A1%A0/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-%EC%9D%B4%EB%A1%A0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 실습보다 이론위주의 수업이었다.&lt;br&gt;
 도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.&lt;/p&gt;
