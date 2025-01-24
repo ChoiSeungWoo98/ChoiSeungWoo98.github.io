@@ -6,7 +6,7 @@
     <lastmod>2024-07-22T21:27:45+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/kubenetes/basic/</loc>
+    <loc>https://choiseungwoo98.github.io/p/k8s-kubernetes-%EA%B8%B0%EC%B4%88/</loc>
     <lastmod>2024-07-22T21:27:45+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -22,7 +22,7 @@
     <lastmod>2024-07-22T21:27:45+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/</loc>
+    <loc>https://choiseungwoo98.github.io/post/</loc>
     <lastmod>2024-07-22T21:27:45+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -30,7 +30,7 @@
     <lastmod>2024-07-22T21:27:45+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/iac_terraform_ansible/</loc>
+    <loc>https://choiseungwoo98.github.io/p/iac-iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</loc>
     <lastmod>2024-07-18T09:54:15+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -54,7 +54,7 @@
     <lastmod>2024-07-18T09:54:15+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/aws/lambda_and_efs/</loc>
+    <loc>https://choiseungwoo98.github.io/p/aws-aws%EC%97%90-ebs-lambda%EC%99%80-efs/</loc>
     <lastmod>2024-07-17T11:42:15+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -74,11 +74,11 @@
     <lastmod>2024-07-17T11:42:15+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/aws/iam_and_s3/</loc>
+    <loc>https://choiseungwoo98.github.io/p/aws-aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/</loc>
     <lastmod>2024-07-15T15:01:46+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/aws/basic/</loc>
+    <loc>https://choiseungwoo98.github.io/p/aws-aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</loc>
     <lastmod>2024-07-15T15:01:46+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -94,7 +94,7 @@
     <lastmod>2024-07-15T15:01:46+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/network/network_review/</loc>
+    <loc>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</loc>
     <lastmod>2024-07-13T22:42:04+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -110,7 +110,7 @@
     <lastmod>2024-07-13T22:42:04+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/network/network_basic_2/</loc>
+    <loc>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</loc>
     <lastmod>2024-07-13T16:42:04+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -126,7 +126,7 @@
     <lastmod>2024-07-13T16:42:04+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/docker/docker_etc/</loc>
+    <loc>https://choiseungwoo98.github.io/p/docker-docker-%EC%9D%B4%EB%A1%A0/</loc>
     <lastmod>2024-07-12T14:25:27+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -142,11 +142,11 @@
     <lastmod>2024-07-12T14:25:27+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/docker/docker_conpose/</loc>
+    <loc>https://choiseungwoo98.github.io/p/docker-docker-compose%EC%97%90-%EB%8C%80%ED%95%B4/</loc>
     <lastmod>2024-07-11T13:13:32+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/docker/dockerfile_basic/</loc>
+    <loc>https://choiseungwoo98.github.io/p/docker-dockerfile-%EA%B8%B0%EC%B4%88/</loc>
     <lastmod>2024-07-10T16:16:44+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -154,11 +154,11 @@
     <lastmod>2024-07-10T16:16:44+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/docker/docker_basic/</loc>
+    <loc>https://choiseungwoo98.github.io/p/docker-docker-%EA%B8%B0%EC%B4%88/</loc>
     <lastmod>2024-07-09T22:16:44+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/linux/linux_detail/</loc>
+    <loc>https://choiseungwoo98.github.io/p/linux-linux-%EC%8B%AC%ED%99%94/</loc>
     <lastmod>2024-07-08T22:32:35+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -190,7 +190,7 @@
     <lastmod>2024-07-08T22:32:35+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/linux/linux_basic/</loc>
+    <loc>https://choiseungwoo98.github.io/p/linux-linux-%EA%B8%B0%EC%B4%88/</loc>
     <lastmod>2024-07-05T22:03:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -202,15 +202,15 @@
     <lastmod>2024-07-05T22:03:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/network/network_basic_1/</loc>
+    <loc>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</loc>
     <lastmod>2024-07-04T22:03:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/architecture/</loc>
+    <loc>https://choiseungwoo98.github.io/p/infra-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</loc>
     <lastmod>2024-07-03T22:03:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/cloud_introduction/</loc>
+    <loc>https://choiseungwoo98.github.io/p/infra-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B0%9C%EB%85%90/</loc>
     <lastmod>2024-07-03T22:03:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -242,7 +242,7 @@
     <lastmod>2024-07-03T22:03:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/virtualization_technology/</loc>
+    <loc>https://choiseungwoo98.github.io/p/virtualization-%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</loc>
     <lastmod>2024-07-03T18:03:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -266,7 +266,7 @@
     <lastmod>2024-07-03T18:03:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/diary/cloud_ot/</loc>
+    <loc>https://choiseungwoo98.github.io/p/diary-%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84-%EC%8B%9C%EC%9E%91%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-ot/</loc>
     <lastmod>2024-07-02T22:03:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -318,11 +318,11 @@
     <lastmod>2023-08-20T02:35:44+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/java/class/string_method/</loc>
+    <loc>https://choiseungwoo98.github.io/p/string_method/</loc>
     <lastmod>2023-08-20T02:35:44+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/java/basic/stringreverser/</loc>
+    <loc>https://choiseungwoo98.github.io/p/java-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EB%B0%98%EC%A0%84-%EC%8B%9C%ED%82%A4%EB%8A%94-%EA%B0%80%EC%9E%A5-%EC%A2%8B%EC%9D%80-%EB%B0%A9%EB%B2%95/</loc>
     <lastmod>2023-08-20T01:22:51+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -338,7 +338,7 @@
     <lastmod>2023-08-20T01:22:51+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/java/class/string/</loc>
+    <loc>https://choiseungwoo98.github.io/p/java-string%EC%9D%80-%EA%B8%B0%EB%B3%B8-%ED%83%80%EC%9E%85%EC%9D%B8%EA%B0%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-stringbuffer-stringbuilder/</loc>
     <lastmod>2023-08-19T18:11:51+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -350,7 +350,7 @@
     <lastmod>2023-08-19T18:11:51+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/java/class/math/</loc>
+    <loc>https://choiseungwoo98.github.io/p/java-math-%ED%81%B4%EB%9E%98%EC%8A%A4/</loc>
     <lastmod>2023-08-19T17:49:27+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -358,7 +358,7 @@
     <lastmod>2023-08-19T17:49:27+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/java/basic/naming/</loc>
+    <loc>https://choiseungwoo98.github.io/p/java-%EC%9E%90%EB%B0%94-%EB%84%A4%EC%9D%B4%EB%B0%8D-%EA%B7%9C%EC%B9%99java-naming-convention/</loc>
     <lastmod>2023-08-19T16:03:49+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -370,7 +370,7 @@
     <lastmod>2023-08-19T16:03:49+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/java/basic/final/</loc>
+    <loc>https://choiseungwoo98.github.io/p/java-final-%EC%82%AC%EC%9A%A9%EB%B2%95/</loc>
     <lastmod>2023-07-22T18:37:42+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -378,7 +378,7 @@
     <lastmod>2023-07-22T18:37:42+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/java/basic/differencebetweenjdkandjre/</loc>
+    <loc>https://choiseungwoo98.github.io/p/java-jdk%EC%99%80-jre%EC%9D%98-%EC%B0%A8%EC%9D%B4-%EA%B7%B8%EB%A6%AC%EA%B3%A0-jit-jvm/</loc>
     <lastmod>2023-07-21T19:29:42+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -398,11 +398,11 @@
     <lastmod>2023-07-21T19:29:42+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/java/websocket/websocket/</loc>
+    <loc>https://choiseungwoo98.github.io/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</loc>
     <lastmod>2023-05-06T19:29:42+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/java/websocket/servereventtoclient/</loc>
+    <loc>https://choiseungwoo98.github.io/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</loc>
     <lastmod>2023-05-06T19:29:42+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -418,11 +418,11 @@
     <lastmod>2023-05-06T19:29:42+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/infra/docker/docker/</loc>
+    <loc>https://choiseungwoo98.github.io/p/docker-docker%EB%8A%94-%EB%AD%98%EA%B9%8C/</loc>
     <lastmod>2023-03-17T01:03:57+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/configuration_management/git/workflow/</loc>
+    <loc>https://choiseungwoo98.github.io/p/git-workflow-%EC%9E%91%EC%97%85-%EB%B0%A9%EC%8B%9D/</loc>
     <lastmod>2023-03-05T04:39:34+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -438,7 +438,7 @@
     <lastmod>2023-03-05T04:39:34+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/configuration_management/git/merge_rebase/</loc>
+    <loc>https://choiseungwoo98.github.io/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/</loc>
     <lastmod>2023-03-05T04:30:49+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -450,7 +450,7 @@
     <lastmod>2023-03-05T04:30:49+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/configuration_management/git/branch/</loc>
+    <loc>https://choiseungwoo98.github.io/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/</loc>
     <lastmod>2023-03-05T00:40:51+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -458,7 +458,7 @@
     <lastmod>2023-03-05T00:40:51+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/configuration_management/configuration_management/</loc>
+    <loc>https://choiseungwoo98.github.io/p/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC-%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC%EB%9E%80-svn-git/</loc>
     <lastmod>2023-03-04T22:47:36+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -478,7 +478,7 @@
     <lastmod>2023-03-04T22:47:36+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/blog/createdgitblog/create_git_blog/</loc>
+    <loc>https://choiseungwoo98.github.io/p/blog-%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%9C%EB%8A%94-%EB%B0%A9%EB%B2%95/</loc>
     <lastmod>2023-03-04T14:16:49+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
@@ -494,7 +494,7 @@
     <lastmod>2023-03-04T14:16:49+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>
-    <loc>https://choiseungwoo98.github.io/posts/diary/first-posts/</loc>
+    <loc>https://choiseungwoo98.github.io/p/diary-%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0-%EC%A0%84-%EB%8B%A4%EC%A7%90/</loc>
     <lastmod>2023-03-01T21:50:49+09:00</lastmod>
     <changefreq>daily</changefreq>
   </url><url>

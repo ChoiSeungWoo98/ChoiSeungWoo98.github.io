@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sun, 05 Mar 2023 04:39:34 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[Git] Workflow? 작업 방식?</title>
-        <link>https://choiseungwoo98.github.io/posts/configuration_management/git/workflow/</link>
+        <link>https://choiseungwoo98.github.io/p/git-workflow-%EC%9E%91%EC%97%85-%EB%B0%A9%EC%8B%9D/</link>
         <pubDate>Sun, 05 Mar 2023 04:39:34 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/configuration_management/git/workflow/</guid>
+        <guid>https://choiseungwoo98.github.io/p/git-workflow-%EC%9E%91%EC%97%85-%EB%B0%A9%EC%8B%9D/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;workflow는 어떤 것이 있고 어떤 방법론이 있는지 조사해보자고 마음을 먹어 작성하게되었다.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -212,10 +212,10 @@ pull request는 코드 리뷰의 시작점&lt;br&gt;
         </item>
         <item>
         <title>[Git] Merge와 Rebase 차이</title>
-        <link>https://choiseungwoo98.github.io/posts/configuration_management/git/merge_rebase/</link>
+        <link>https://choiseungwoo98.github.io/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/</link>
         <pubDate>Sun, 05 Mar 2023 04:30:49 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/configuration_management/git/merge_rebase/</guid>
+        <guid>https://choiseungwoo98.github.io/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.&lt;br&gt;
 현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&amp;hellip;&lt;br&gt;
@@ -290,10 +290,10 @@ rebase를 하여 &lt;strong&gt;작업 순서대로 history를 관리하고 불�
         </item>
         <item>
         <title>[Git] branch가 자세히 뭘까?</title>
-        <link>https://choiseungwoo98.github.io/posts/configuration_management/git/branch/</link>
+        <link>https://choiseungwoo98.github.io/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/</link>
         <pubDate>Sun, 05 Mar 2023 00:40:51 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/configuration_management/git/branch/</guid>
+        <guid>https://choiseungwoo98.github.io/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/</guid>
         <description>&lt;h2 id=&#34;브랜치&#34;&gt;브랜치??
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;여러 개발자들이 &lt;strong&gt;동시에 다양한 작업을 할 수 있게 만들어 주는 기능&lt;/strong&gt;이 바로 브랜치(Branch) 이다.&lt;br&gt;

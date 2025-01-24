@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sun, 05 Mar 2023 00:40:51 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/branch/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[Git] branch가 자세히 뭘까?</title>
-        <link>https://choiseungwoo98.github.io/posts/configuration_management/git/branch/</link>
+        <link>https://choiseungwoo98.github.io/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/</link>
         <pubDate>Sun, 05 Mar 2023 00:40:51 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/configuration_management/git/branch/</guid>
+        <guid>https://choiseungwoo98.github.io/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/</guid>
         <description>&lt;h2 id=&#34;브랜치&#34;&gt;브랜치??
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;여러 개발자들이 &lt;strong&gt;동시에 다양한 작업을 할 수 있게 만들어 주는 기능&lt;/strong&gt;이 바로 브랜치(Branch) 이다.&lt;br&gt;

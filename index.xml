@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[K8S] Kubernetes 기초</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/kubenetes/basic/</link>
+        <link>https://choiseungwoo98.github.io/p/k8s-kubernetes-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/kubenetes/basic/</guid>
+        <guid>https://choiseungwoo98.github.io/p/k8s-kubernetes-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;img src="https://choiseungwoo98.github.io/img/title-images/kubernetes.png" alt="Featured image of post [K8S] Kubernetes 기초" /&gt;&lt;blockquote&gt;
 &lt;p&gt;오늘은 드디어 그 유명한 쿠버네티스!!!&lt;br&gt;
 쿠버만 잘해도 반은 간다는데&lt;br&gt;
@@ -158,10 +158,10 @@
         </item>
         <item>
         <title>[IaC] IaC 기초 및 Terraform, Ansible</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/iac_terraform_ansible/</link>
+        <link>https://choiseungwoo98.github.io/p/iac-iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</link>
         <pubDate>Thu, 18 Jul 2024 09:54:15 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/iac_terraform_ansible/</guid>
+        <guid>https://choiseungwoo98.github.io/p/iac-iac-%EA%B8%B0%EC%B4%88-%EB%B0%8F-terraform-ansible/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 배포 자동화에 대해 배웠다.&lt;br&gt;
 거의 대부분의 프로젝트가 자동화를 사용하는 만큼 집중해서 잘 들어야지   &lt;br&gt;
@@ -414,10 +414,10 @@
         </item>
         <item>
         <title>[AWS] aws에 EBS, Lambda와 efs</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/aws/lambda_and_efs/</link>
+        <link>https://choiseungwoo98.github.io/p/aws-aws%EC%97%90-ebs-lambda%EC%99%80-efs/</link>
         <pubDate>Wed, 17 Jul 2024 11:42:15 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/aws/lambda_and_efs/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws-aws%EC%97%90-ebs-lambda%EC%99%80-efs/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 EBS, 람다와 EFS에 대해 배웠다 &lt;br&gt;
 잊지 않기 위해 복습 또 복습&amp;hellip;&lt;/p&gt;
@@ -627,10 +627,10 @@
         </item>
         <item>
         <title>[AWS] AWS IAM을 이용한 S3 실습</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/aws/iam_and_s3/</link>
+        <link>https://choiseungwoo98.github.io/p/aws-aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/</link>
         <pubDate>Mon, 15 Jul 2024 15:01:46 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/aws/iam_and_s3/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws-aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 AWS 첫번째 실습 시간이다.&lt;br&gt;
 IAM에 대해 공부 후&lt;br&gt;
@@ -752,10 +752,10 @@ S3를 통해 제어하는 실습&lt;/p&gt;
         </item>
         <item>
         <title>[AWS] AWS와 LB 실습</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/aws/basic/</link>
+        <link>https://choiseungwoo98.github.io/p/aws-aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</link>
         <pubDate>Mon, 15 Jul 2024 15:01:46 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/aws/basic/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws-aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 AWS 첫번째 실습 시간이다.&lt;br&gt;
 EC2에서 VPC를 사용하고 public이랑 private를 열어&lt;br&gt;
@@ -968,10 +968,10 @@ private은 NAT를 이용한 인터넷 연결을 실습했다.&lt;/p&gt;
         </item>
         <item>
         <title>[Network] 네트워크 복습</title>
-        <link>https://choiseungwoo98.github.io/posts/network/network_review/</link>
+        <link>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</link>
         <pubDate>Sat, 13 Jul 2024 22:42:04 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/network/network_review/</guid>
+        <guid>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 주말이라 여태까지 배운 네트워크에 대해&lt;br&gt;
 정리하면서 복습을 진행해보고자 한다.&lt;br&gt;
@@ -1115,10 +1115,10 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
         </item>
         <item>
         <title>[Network] 네트워크 도메인, HTTPs</title>
-        <link>https://choiseungwoo98.github.io/posts/network/network_basic_2/</link>
+        <link>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</link>
         <pubDate>Sat, 13 Jul 2024 16:42:04 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/network/network_basic_2/</guid>
+        <guid>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 주말이라 강좌로 올라와있는&lt;br&gt;
 네트워크 개념 잡기를 수강하고 정리하고자 한다.&lt;/p&gt;
@@ -1193,10 +1193,10 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
         </item>
         <item>
         <title>[Docker] Docker 이론</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/docker/docker_etc/</link>
+        <link>https://choiseungwoo98.github.io/p/docker-docker-%EC%9D%B4%EB%A1%A0/</link>
         <pubDate>Fri, 12 Jul 2024 14:25:27 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/docker/docker_etc/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-docker-%EC%9D%B4%EB%A1%A0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 실습보다 이론위주의 수업이었다.&lt;br&gt;
 도커 보안에 대해 간단하게 설명하고 들었던 것들을 정리하고자 한다.&lt;/p&gt;
@@ -1382,10 +1382,10 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
         </item>
         <item>
         <title>[Docker] Docker Compose에 대해</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/docker/docker_conpose/</link>
+        <link>https://choiseungwoo98.github.io/p/docker-docker-compose%EC%97%90-%EB%8C%80%ED%95%B4/</link>
         <pubDate>Thu, 11 Jul 2024 13:13:32 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/docker/docker_conpose/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-docker-compose%EC%97%90-%EB%8C%80%ED%95%B4/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 docker compose에 대해 배웠습니다.&lt;br&gt;
 이론이 많지는 않았지만&lt;br&gt;
@@ -1474,10 +1474,10 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
         </item>
         <item>
         <title>[Docker] Dockerfile 기초</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/docker/dockerfile_basic/</link>
+        <link>https://choiseungwoo98.github.io/p/docker-dockerfile-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Wed, 10 Jul 2024 16:16:44 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/docker/dockerfile_basic/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-dockerfile-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제는 도커의 개념과 동작 방식에 대해 정리하였습니다.&lt;br&gt;
 오늘은 docker를 실질적으로 사용해보면서 필요한 내용을 정리해보고자 합니다.&lt;/p&gt;
@@ -1935,10 +1935,10 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
         </item>
         <item>
         <title>[Docker] Docker 기초</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/docker/docker_basic/</link>
+        <link>https://choiseungwoo98.github.io/p/docker-docker-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Tue, 09 Jul 2024 22:16:44 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/docker/docker_basic/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-docker-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;기존에 혼자 Docker에 대해 잠깐 공부한 적 있지만 심도있게 다루지는 않았습니다.&lt;br&gt;
 카카오 테크 부트캠프를 시작하면서 클라우드 수업을 듣기 시작했고&lt;br&gt;
@@ -2026,10 +2026,10 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
         </item>
         <item>
         <title>[Linux] Linux 심화</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/linux/linux_detail/</link>
+        <link>https://choiseungwoo98.github.io/p/linux-linux-%EC%8B%AC%ED%99%94/</link>
         <pubDate>Mon, 08 Jul 2024 22:32:35 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/linux/linux_detail/</guid>
+        <guid>https://choiseungwoo98.github.io/p/linux-linux-%EC%8B%AC%ED%99%94/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;리눅스에 대해 배웠다.&lt;br&gt;
 오늘은 실습이 주를 이뤘다.
@@ -2644,10 +2644,10 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
         </item>
         <item>
         <title>[Linux] Linux 기초</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/linux/linux_basic/</link>
+        <link>https://choiseungwoo98.github.io/p/linux-linux-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Fri, 05 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/linux/linux_basic/</guid>
+        <guid>https://choiseungwoo98.github.io/p/linux-linux-%EA%B8%B0%EC%B4%88/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;리눅스에 대해 배웠다.&lt;br&gt;
 처음 알게된 명령어도 많았지만&lt;br&gt;
@@ -2886,10 +2886,10 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
         </item>
         <item>
         <title>[Network] 네트워크 개념</title>
-        <link>https://choiseungwoo98.github.io/posts/network/network_basic_1/</link>
+        <link>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</link>
         <pubDate>Thu, 04 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/network/network_basic_1/</guid>
+        <guid>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;네트워크에 대해 배웠는데 너무 모르겠다&amp;hellip;&lt;br&gt;
 잘 따라 가려면 더욱 공부해야겠다..&lt;/p&gt;
@@ -3239,10 +3239,10 @@ docker는 매우 중요한 부분이라 생각해 다시 정리하면서 복습�
         </item>
         <item>
         <title>[Infra] 아키텍처</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/architecture/</link>
+        <link>https://choiseungwoo98.github.io/p/infra-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</link>
         <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/architecture/</guid>
+        <guid>https://choiseungwoo98.github.io/p/infra-%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제 어수선한 분위기 속에 첫날이 마무리되고&lt;br&gt;
 두번째 수업이 진행되었습니다.&lt;br&gt;
@@ -3361,10 +3361,10 @@ Pre-Warming 또는 Warm-Up이라고 부릅니다.&lt;/li&gt;
         </item>
         <item>
         <title>[Infra] 클라우드 개념</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/cloud_introduction/</link>
+        <link>https://choiseungwoo98.github.io/p/infra-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B0%9C%EB%85%90/</link>
         <pubDate>Wed, 03 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/cloud_introduction/</guid>
+        <guid>https://choiseungwoo98.github.io/p/infra-%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-%EA%B0%9C%EB%85%90/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제 어수선한 분위기 속에 첫날이 마무리되고&lt;br&gt;
 두번째 수업이 진행되었습니다.&lt;br&gt;
@@ -3535,10 +3535,10 @@ Machine, HVM / Bare-Metal Hypervisor)가 있다.&lt;/li&gt;
         </item>
         <item>
         <title>[Virtualization] 가상화 기술</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/virtualization_technology/</link>
+        <link>https://choiseungwoo98.github.io/p/virtualization-%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</link>
         <pubDate>Wed, 03 Jul 2024 18:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/virtualization_technology/</guid>
+        <guid>https://choiseungwoo98.github.io/p/virtualization-%EA%B0%80%EC%83%81%ED%99%94-%EA%B8%B0%EC%88%A0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제 어수선한 분위기 속에 첫날이 마무리되고&lt;br&gt;
 두번째 수업이 진행되었습니다.&lt;br&gt;
@@ -3611,10 +3611,10 @@ Machine, HVM / Bare-Metal Hypervisor)가 있다.&lt;/li&gt;
         </item>
         <item>
         <title>[Diary] 부트캠프 시작(클라우드 OT)</title>
-        <link>https://choiseungwoo98.github.io/posts/diary/cloud_ot/</link>
+        <link>https://choiseungwoo98.github.io/p/diary-%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84-%EC%8B%9C%EC%9E%91%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-ot/</link>
         <pubDate>Tue, 02 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/diary/cloud_ot/</guid>
+        <guid>https://choiseungwoo98.github.io/p/diary-%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84-%EC%8B%9C%EC%9E%91%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C-ot/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;어제 OT를 잘 마치고 오늘 첫번째 수업 날 입니다!&lt;br&gt;
 오늘은 별다른 수업 없이 ZEP에 접속하고 노션(단체, 개인 목표를 작성)을 만들었습니다.
@@ -3694,10 +3694,10 @@ Machine, HVM / Bare-Metal Hypervisor)가 있다.&lt;/li&gt;
         </item>
         <item>
         <title>String_Method</title>
-        <link>https://choiseungwoo98.github.io/posts/java/class/string_method/</link>
+        <link>https://choiseungwoo98.github.io/p/string_method/</link>
         <pubDate>Sun, 20 Aug 2023 02:35:44 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/class/string_method/</guid>
+        <guid>https://choiseungwoo98.github.io/p/string_method/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. &lt;br&gt;
 오늘의 질문! String 클래스의 메서드는 무엇이 있을까?&lt;br&gt;
@@ -3737,10 +3737,10 @@ Machine, HVM / Bare-Metal Hypervisor)가 있다.&lt;/li&gt;
         </item>
         <item>
         <title>[Java] 문자열을 반전 시키는 가장 좋은 방법</title>
-        <link>https://choiseungwoo98.github.io/posts/java/basic/stringreverser/</link>
+        <link>https://choiseungwoo98.github.io/p/java-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EB%B0%98%EC%A0%84-%EC%8B%9C%ED%82%A4%EB%8A%94-%EA%B0%80%EC%9E%A5-%EC%A2%8B%EC%9D%80-%EB%B0%A9%EB%B2%95/</link>
         <pubDate>Sun, 20 Aug 2023 01:22:51 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/basic/stringreverser/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EB%B0%98%EC%A0%84-%EC%8B%9C%ED%82%A4%EB%8A%94-%EA%B0%80%EC%9E%A5-%EC%A2%8B%EC%9D%80-%EB%B0%A9%EB%B2%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. &lt;br&gt;
 오늘의 질문! 문자열을 반전 시키는 가장 좋은 방법은 무엇인가?&lt;br&gt;
@@ -3784,10 +3784,10 @@ Machine, HVM / Bare-Metal Hypervisor)가 있다.&lt;/li&gt;
         </item>
         <item>
         <title>[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</title>
-        <link>https://choiseungwoo98.github.io/posts/java/class/string/</link>
+        <link>https://choiseungwoo98.github.io/p/java-string%EC%9D%80-%EA%B8%B0%EB%B3%B8-%ED%83%80%EC%9E%85%EC%9D%B8%EA%B0%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-stringbuffer-stringbuilder/</link>
         <pubDate>Sat, 19 Aug 2023 18:11:51 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/class/string/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-string%EC%9D%80-%EA%B8%B0%EB%B3%B8-%ED%83%80%EC%9E%85%EC%9D%B8%EA%B0%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-stringbuffer-stringbuilder/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
 오늘은 여러가지 질문 중 String에 대해 알아보고자 한다.
@@ -3869,10 +3869,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] Math 클래스</title>
-        <link>https://choiseungwoo98.github.io/posts/java/class/math/</link>
+        <link>https://choiseungwoo98.github.io/p/java-math-%ED%81%B4%EB%9E%98%EC%8A%A4/</link>
         <pubDate>Sat, 19 Aug 2023 17:49:27 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/class/math/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-math-%ED%81%B4%EB%9E%98%EC%8A%A4/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
 오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.&lt;/p&gt;
@@ -3925,10 +3925,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] 자바 네이밍 규칙(Java Naming Convention)</title>
-        <link>https://choiseungwoo98.github.io/posts/java/basic/naming/</link>
+        <link>https://choiseungwoo98.github.io/p/java-%EC%9E%90%EB%B0%94-%EB%84%A4%EC%9D%B4%EB%B0%8D-%EA%B7%9C%EC%B9%99java-naming-convention/</link>
         <pubDate>Sat, 19 Aug 2023 16:03:49 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/basic/naming/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-%EC%9E%90%EB%B0%94-%EB%84%A4%EC%9D%B4%EB%B0%8D-%EA%B7%9C%EC%B9%99java-naming-convention/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.&lt;br&gt;
 그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!&lt;br&gt;
@@ -4256,10 +4256,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] final 사용법</title>
-        <link>https://choiseungwoo98.github.io/posts/java/basic/final/</link>
+        <link>https://choiseungwoo98.github.io/p/java-final-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
         <pubDate>Sat, 22 Jul 2023 18:37:42 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/basic/final/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-final-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
 오늘은 여러가지 질문 중 final에 대해 알아보고자 한다.&lt;/p&gt;
@@ -4470,10 +4470,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] JDK와 JRE의 차이 그리고 JIT, JVM</title>
-        <link>https://choiseungwoo98.github.io/posts/java/basic/differencebetweenjdkandjre/</link>
+        <link>https://choiseungwoo98.github.io/p/java-jdk%EC%99%80-jre%EC%9D%98-%EC%B0%A8%EC%9D%B4-%EA%B7%B8%EB%A6%AC%EA%B3%A0-jit-jvm/</link>
         <pubDate>Fri, 21 Jul 2023 19:29:42 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/basic/differencebetweenjdkandjre/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-jdk%EC%99%80-jre%EC%9D%98-%EC%B0%A8%EC%9D%B4-%EA%B7%B8%EB%A6%AC%EA%B3%A0-jit-jvm/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
 8개월 동안 회사에서 프로젝트를 여러개 진행하면서 다양한 기술을 사용해봤다.&lt;br&gt;
@@ -4615,10 +4615,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] Spring Boot, Websocket &#43; STOMP 사용하기</title>
-        <link>https://choiseungwoo98.github.io/posts/java/websocket/websocket/</link>
+        <link>https://choiseungwoo98.github.io/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
         <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/websocket/websocket/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?&lt;br&gt;
 같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.&lt;/p&gt;
@@ -4636,10 +4636,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] 서버에서 클라이언트로 이벤트를 보내는 4가지 방법</title>
-        <link>https://choiseungwoo98.github.io/posts/java/websocket/servereventtoclient/</link>
+        <link>https://choiseungwoo98.github.io/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</link>
         <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/websocket/servereventtoclient/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?&lt;br&gt;
 같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.&lt;/p&gt;
@@ -4706,10 +4706,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Docker] Docker는 뭘까?</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/docker/docker/</link>
+        <link>https://choiseungwoo98.github.io/p/docker-docker%EB%8A%94-%EB%AD%98%EA%B9%8C/</link>
         <pubDate>Fri, 17 Mar 2023 01:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/docker/docker/</guid>
+        <guid>https://choiseungwoo98.github.io/p/docker-docker%EB%8A%94-%EB%AD%98%EA%B9%8C/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;Mysql을 사용하여 프로젝트를 하나 진행 중이었습니다.&lt;br&gt;
 해당 프로젝트가 끝나고 새로운 프로젝트를 진행하게 되었는데,&lt;br&gt;
@@ -4858,10 +4858,10 @@ MySql을 지우고 다운받을 수 없는 상황이라 동시에 사용하기 �
         </item>
         <item>
         <title>[Git] Workflow? 작업 방식?</title>
-        <link>https://choiseungwoo98.github.io/posts/configuration_management/git/workflow/</link>
+        <link>https://choiseungwoo98.github.io/p/git-workflow-%EC%9E%91%EC%97%85-%EB%B0%A9%EC%8B%9D/</link>
         <pubDate>Sun, 05 Mar 2023 04:39:34 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/configuration_management/git/workflow/</guid>
+        <guid>https://choiseungwoo98.github.io/p/git-workflow-%EC%9E%91%EC%97%85-%EB%B0%A9%EC%8B%9D/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;workflow는 어떤 것이 있고 어떤 방법론이 있는지 조사해보자고 마음을 먹어 작성하게되었다.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -5062,10 +5062,10 @@ pull request는 코드 리뷰의 시작점&lt;br&gt;
         </item>
         <item>
         <title>[Git] Merge와 Rebase 차이</title>
-        <link>https://choiseungwoo98.github.io/posts/configuration_management/git/merge_rebase/</link>
+        <link>https://choiseungwoo98.github.io/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/</link>
         <pubDate>Sun, 05 Mar 2023 04:30:49 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/configuration_management/git/merge_rebase/</guid>
+        <guid>https://choiseungwoo98.github.io/p/git-merge%EC%99%80-rebase-%EC%B0%A8%EC%9D%B4/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;프로그래밍을 공부 했을 시절 분기되었던 브랜치를 합치는 것 작업을 merge로 만 수행했었다.&lt;br&gt;
 현업에 들어오고 나서 git history가 엉망이 되어가는 것을 직접 목격하였다&amp;hellip;&lt;br&gt;
@@ -5140,10 +5140,10 @@ rebase를 하여 &lt;strong&gt;작업 순서대로 history를 관리하고 불�
         </item>
         <item>
         <title>[Git] branch가 자세히 뭘까?</title>
-        <link>https://choiseungwoo98.github.io/posts/configuration_management/git/branch/</link>
+        <link>https://choiseungwoo98.github.io/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/</link>
         <pubDate>Sun, 05 Mar 2023 00:40:51 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/configuration_management/git/branch/</guid>
+        <guid>https://choiseungwoo98.github.io/p/git-branch%EA%B0%80-%EC%9E%90%EC%84%B8%ED%9E%88-%EB%AD%98%EA%B9%8C/</guid>
         <description>&lt;h2 id=&#34;브랜치&#34;&gt;브랜치??
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;여러 개발자들이 &lt;strong&gt;동시에 다양한 작업을 할 수 있게 만들어 주는 기능&lt;/strong&gt;이 바로 브랜치(Branch) 이다.&lt;br&gt;
@@ -5217,10 +5217,10 @@ rebase를 하여 &lt;strong&gt;작업 순서대로 history를 관리하고 불�
         </item>
         <item>
         <title>[형상관리] 형상관리란 SVN? GIT?</title>
-        <link>https://choiseungwoo98.github.io/posts/configuration_management/configuration_management/</link>
+        <link>https://choiseungwoo98.github.io/p/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC-%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC%EB%9E%80-svn-git/</link>
         <pubDate>Sat, 04 Mar 2023 22:47:36 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/configuration_management/configuration_management/</guid>
+        <guid>https://choiseungwoo98.github.io/p/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC-%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC%EB%9E%80-svn-git/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;현재 가장 많이 사용하고 있는 형상관리도구 git에 대해 공부를 하다가 문득 궁금한 것이 생겼다.
 Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠한 차이가 있을까?
@@ -5325,10 +5325,10 @@ Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠�
         </item>
         <item>
         <title>[Blog] 깃 블로그 만드는 방법</title>
-        <link>https://choiseungwoo98.github.io/posts/blog/createdgitblog/create_git_blog/</link>
+        <link>https://choiseungwoo98.github.io/p/blog-%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%9C%EB%8A%94-%EB%B0%A9%EB%B2%95/</link>
         <pubDate>Sat, 04 Mar 2023 14:16:49 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/blog/createdgitblog/create_git_blog/</guid>
+        <guid>https://choiseungwoo98.github.io/p/blog-%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%9C%EB%8A%94-%EB%B0%A9%EB%B2%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;현업에서 일하기 시작한지 이제 3개월이 지나가고 있는 시점에 공부가 필요하다고 뼈저리게 느끼고 있습니다.&lt;br&gt;
 직장에 다니기 전에 네이버 블로그를 통해 배운 내용을 정리하였지만&lt;br&gt;
@@ -5778,10 +5778,10 @@ ex) &lt;code&gt;blog&lt;/code&gt;, &lt;code&gt;&amp;lt;username&amp;gt;.github.i
         </item>
         <item>
         <title>[Diary] 깃 블로그를 작성하기 전 다짐</title>
-        <link>https://choiseungwoo98.github.io/posts/diary/first-posts/</link>
+        <link>https://choiseungwoo98.github.io/p/diary-%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0-%EC%A0%84-%EB%8B%A4%EC%A7%90/</link>
         <pubDate>Wed, 01 Mar 2023 21:50:49 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/diary/first-posts/</guid>
+        <guid>https://choiseungwoo98.github.io/p/diary-%EA%B9%83-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EC%9E%91%EC%84%B1%ED%95%98%EA%B8%B0-%EC%A0%84-%EB%8B%A4%EC%A7%90/</guid>
         <description>&lt;p&gt;처음 써보는 깃 블로그 게시글 입니다.&lt;br&gt;
 저는 이제 현업 3개월차 주주주주주주주주주주주니어 백엔드 개발자 입니다. :)&lt;br&gt;
 블로그를 쓰려고 다짐한 이유는 제가 느끼는 것들과 공부한 부분을 글로 적고&lt;br&gt;

@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sun, 20 Aug 2023 01:22:51 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/reversestring/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[Java] 문자열을 반전 시키는 가장 좋은 방법</title>
-        <link>https://choiseungwoo98.github.io/posts/java/basic/stringreverser/</link>
+        <link>https://choiseungwoo98.github.io/p/java-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EB%B0%98%EC%A0%84-%EC%8B%9C%ED%82%A4%EB%8A%94-%EA%B0%80%EC%9E%A5-%EC%A2%8B%EC%9D%80-%EB%B0%A9%EB%B2%95/</link>
         <pubDate>Sun, 20 Aug 2023 01:22:51 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/basic/stringreverser/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EB%B0%98%EC%A0%84-%EC%8B%9C%ED%82%A4%EB%8A%94-%EA%B0%80%EC%9E%A5-%EC%A2%8B%EC%9D%80-%EB%B0%A9%EB%B2%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. &lt;br&gt;
 오늘의 질문! 문자열을 반전 시키는 가장 좋은 방법은 무엇인가?&lt;br&gt;

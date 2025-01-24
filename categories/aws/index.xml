@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Wed, 17 Jul 2024 11:42:15 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/aws/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[AWS] aws에 EBS, Lambda와 efs</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/aws/lambda_and_efs/</link>
+        <link>https://choiseungwoo98.github.io/p/aws-aws%EC%97%90-ebs-lambda%EC%99%80-efs/</link>
         <pubDate>Wed, 17 Jul 2024 11:42:15 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/aws/lambda_and_efs/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws-aws%EC%97%90-ebs-lambda%EC%99%80-efs/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 EBS, 람다와 EFS에 대해 배웠다 &lt;br&gt;
 잊지 않기 위해 복습 또 복습&amp;hellip;&lt;/p&gt;
@@ -221,10 +221,10 @@
         </item>
         <item>
         <title>[AWS] AWS IAM을 이용한 S3 실습</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/aws/iam_and_s3/</link>
+        <link>https://choiseungwoo98.github.io/p/aws-aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/</link>
         <pubDate>Mon, 15 Jul 2024 15:01:46 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/aws/iam_and_s3/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws-aws-iam%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-s3-%EC%8B%A4%EC%8A%B5/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 AWS 첫번째 실습 시간이다.&lt;br&gt;
 IAM에 대해 공부 후&lt;br&gt;
@@ -346,10 +346,10 @@ S3를 통해 제어하는 실습&lt;/p&gt;
         </item>
         <item>
         <title>[AWS] AWS와 LB 실습</title>
-        <link>https://choiseungwoo98.github.io/posts/infra/aws/basic/</link>
+        <link>https://choiseungwoo98.github.io/p/aws-aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</link>
         <pubDate>Mon, 15 Jul 2024 15:01:46 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/infra/aws/basic/</guid>
+        <guid>https://choiseungwoo98.github.io/p/aws-aws%EC%99%80-lb-%EC%8B%A4%EC%8A%B5/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 AWS 첫번째 실습 시간이다.&lt;br&gt;
 EC2에서 VPC를 사용하고 public이랑 private를 열어&lt;br&gt;

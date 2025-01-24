@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sun, 20 Aug 2023 02:35:44 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>String_Method</title>
-        <link>https://choiseungwoo98.github.io/posts/java/class/string_method/</link>
+        <link>https://choiseungwoo98.github.io/p/string_method/</link>
         <pubDate>Sun, 20 Aug 2023 02:35:44 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/class/string_method/</guid>
+        <guid>https://choiseungwoo98.github.io/p/string_method/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. &lt;br&gt;
 오늘의 질문! String 클래스의 메서드는 무엇이 있을까?&lt;br&gt;
@@ -51,10 +51,10 @@
         </item>
         <item>
         <title>[Java] 문자열을 반전 시키는 가장 좋은 방법</title>
-        <link>https://choiseungwoo98.github.io/posts/java/basic/stringreverser/</link>
+        <link>https://choiseungwoo98.github.io/p/java-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EB%B0%98%EC%A0%84-%EC%8B%9C%ED%82%A4%EB%8A%94-%EA%B0%80%EC%9E%A5-%EC%A2%8B%EC%9D%80-%EB%B0%A9%EB%B2%95/</link>
         <pubDate>Sun, 20 Aug 2023 01:22:51 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/basic/stringreverser/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-%EB%B0%98%EC%A0%84-%EC%8B%9C%ED%82%A4%EB%8A%94-%EA%B0%80%EC%9E%A5-%EC%A2%8B%EC%9D%80-%EB%B0%A9%EB%B2%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. &lt;br&gt;
 오늘의 질문! 문자열을 반전 시키는 가장 좋은 방법은 무엇인가?&lt;br&gt;
@@ -98,10 +98,10 @@
         </item>
         <item>
         <title>[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</title>
-        <link>https://choiseungwoo98.github.io/posts/java/class/string/</link>
+        <link>https://choiseungwoo98.github.io/p/java-string%EC%9D%80-%EA%B8%B0%EB%B3%B8-%ED%83%80%EC%9E%85%EC%9D%B8%EA%B0%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-stringbuffer-stringbuilder/</link>
         <pubDate>Sat, 19 Aug 2023 18:11:51 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/class/string/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-string%EC%9D%80-%EA%B8%B0%EB%B3%B8-%ED%83%80%EC%9E%85%EC%9D%B8%EA%B0%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-stringbuffer-stringbuilder/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
 오늘은 여러가지 질문 중 String에 대해 알아보고자 한다.
@@ -183,10 +183,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] Math 클래스</title>
-        <link>https://choiseungwoo98.github.io/posts/java/class/math/</link>
+        <link>https://choiseungwoo98.github.io/p/java-math-%ED%81%B4%EB%9E%98%EC%8A%A4/</link>
         <pubDate>Sat, 19 Aug 2023 17:49:27 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/class/math/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-math-%ED%81%B4%EB%9E%98%EC%8A%A4/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
 오늘은 여러가지 질문 중 Math 클래스에 대해 알아보고자 한다.&lt;/p&gt;
@@ -239,10 +239,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] 자바 네이밍 규칙(Java Naming Convention)</title>
-        <link>https://choiseungwoo98.github.io/posts/java/basic/naming/</link>
+        <link>https://choiseungwoo98.github.io/p/java-%EC%9E%90%EB%B0%94-%EB%84%A4%EC%9D%B4%EB%B0%8D-%EA%B7%9C%EC%B9%99java-naming-convention/</link>
         <pubDate>Sat, 19 Aug 2023 16:03:49 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/basic/naming/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-%EC%9E%90%EB%B0%94-%EB%84%A4%EC%9D%B4%EB%B0%8D-%EA%B7%9C%EC%B9%99java-naming-convention/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;프로젝트를 하다보면 각자 다른 네이밍을 사용하다 보니 다른 사람이 작업한 코드를 보면 헷갈릴 때가 있다.&lt;br&gt;
 그래서 나온것이 표준 네이밍 규칙이며 보통 권장사항 이다보니 많이 놓치고 있어서 한번 정리해보려 한다!&lt;br&gt;
@@ -570,10 +570,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] final 사용법</title>
-        <link>https://choiseungwoo98.github.io/posts/java/basic/final/</link>
+        <link>https://choiseungwoo98.github.io/p/java-final-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
         <pubDate>Sat, 22 Jul 2023 18:37:42 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/basic/final/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-final-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
 오늘은 여러가지 질문 중 final에 대해 알아보고자 한다.&lt;/p&gt;
@@ -784,10 +784,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] JDK와 JRE의 차이 그리고 JIT, JVM</title>
-        <link>https://choiseungwoo98.github.io/posts/java/basic/differencebetweenjdkandjre/</link>
+        <link>https://choiseungwoo98.github.io/p/java-jdk%EC%99%80-jre%EC%9D%98-%EC%B0%A8%EC%9D%B4-%EA%B7%B8%EB%A6%AC%EA%B3%A0-jit-jvm/</link>
         <pubDate>Fri, 21 Jul 2023 19:29:42 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/basic/differencebetweenjdkandjre/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-jdk%EC%99%80-jre%EC%9D%98-%EC%B0%A8%EC%9D%B4-%EA%B7%B8%EB%A6%AC%EA%B3%A0-jit-jvm/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
 8개월 동안 회사에서 프로젝트를 여러개 진행하면서 다양한 기술을 사용해봤다.&lt;br&gt;
@@ -929,10 +929,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] Spring Boot, Websocket &#43; STOMP 사용하기</title>
-        <link>https://choiseungwoo98.github.io/posts/java/websocket/websocket/</link>
+        <link>https://choiseungwoo98.github.io/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
         <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/websocket/websocket/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-spring-boot-websocket--stomp-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?&lt;br&gt;
 같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.&lt;/p&gt;
@@ -950,10 +950,10 @@ literalName이라는 변수에는 힙 영역에 저장된 주소 값이 저장�
         </item>
         <item>
         <title>[Java] 서버에서 클라이언트로 이벤트를 보내는 4가지 방법</title>
-        <link>https://choiseungwoo98.github.io/posts/java/websocket/servereventtoclient/</link>
+        <link>https://choiseungwoo98.github.io/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</link>
         <pubDate>Sat, 06 May 2023 19:29:42 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/websocket/servereventtoclient/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8%ED%8A%B8%EB%A1%9C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EB%B3%B4%EB%82%B4%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;일을 하던 중 프로그래스 바와 같은 작업의 완료 타이밍을 알 수 있는 방법이 있을까?&lt;br&gt;
 같은 고민을 하다가 WebSocket을 알게 되었고 그 과정을 글로 작성해보려고 한다.&lt;/p&gt;

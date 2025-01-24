@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Fri, 21 Jul 2023 19:29:42 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/jvm/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[Java] JDK와 JRE의 차이 그리고 JIT, JVM</title>
-        <link>https://choiseungwoo98.github.io/posts/java/basic/differencebetweenjdkandjre/</link>
+        <link>https://choiseungwoo98.github.io/p/java-jdk%EC%99%80-jre%EC%9D%98-%EC%B0%A8%EC%9D%B4-%EA%B7%B8%EB%A6%AC%EA%B3%A0-jit-jvm/</link>
         <pubDate>Fri, 21 Jul 2023 19:29:42 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/basic/differencebetweenjdkandjre/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-jdk%EC%99%80-jre%EC%9D%98-%EC%B0%A8%EC%9D%B4-%EA%B7%B8%EB%A6%AC%EA%B3%A0-jit-jvm/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
 8개월 동안 회사에서 프로젝트를 여러개 진행하면서 다양한 기술을 사용해봤다.&lt;br&gt;

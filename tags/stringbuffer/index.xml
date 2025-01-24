@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sat, 19 Aug 2023 18:11:51 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/stringbuffer/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[Java] String은 기본 타입인가? 그리고 StringBuffer, StringBuilder</title>
-        <link>https://choiseungwoo98.github.io/posts/java/class/string/</link>
+        <link>https://choiseungwoo98.github.io/p/java-string%EC%9D%80-%EA%B8%B0%EB%B3%B8-%ED%83%80%EC%9E%85%EC%9D%B8%EA%B0%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-stringbuffer-stringbuilder/</link>
         <pubDate>Sat, 19 Aug 2023 18:11:51 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/posts/java/class/string/</guid>
+        <guid>https://choiseungwoo98.github.io/p/java-string%EC%9D%80-%EA%B8%B0%EB%B3%B8-%ED%83%80%EC%9E%85%EC%9D%B8%EA%B0%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-stringbuffer-stringbuilder/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다.&lt;br&gt;
 오늘은 여러가지 질문 중 String에 대해 알아보고자 한다.
