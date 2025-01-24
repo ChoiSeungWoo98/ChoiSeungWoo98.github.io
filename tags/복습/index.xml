@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>복습 on 승우의 성장일지 🧑🏻‍💻</title>
+        <link>http://localhost:1313/tags/%EB%B3%B5%EC%8A%B5/</link>
+        <description>Recent content in 복습 on 승우의 성장일지 🧑🏻‍💻</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 14 Jul 2024 09:53:35 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/%EB%B3%B5%EC%8A%B5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>[Linux] Linux 요약</title>
+        <link>http://localhost:1313/p/linux-linux-%EC%9A%94%EC%95%BD/</link>
+        <pubDate>Sun, 14 Jul 2024 09:53:35 +0900</pubDate>
+        
+        <guid>http://localhost:1313/p/linux-linux-%EC%9A%94%EC%95%BD/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;오늘은 주말이라 여태까지 배운 Linux에 대해&lt;br&gt;
+정리하면서 복습을 진행해보고자 한다.&lt;br&gt;
+다시 기억하기 위해 화이팅!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;gui-vs-cli&#34;&gt;GUI vs CLI
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;초기에는 배우기 어려울 수 있지만 효율성, 자원 절약, 세부 제어, 학습과 전문성 향상, 안정성과 일관성 등의 이유로 여전히 널리 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;kernel-shell&#34;&gt;Kernel, Shell
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;커널kernel&#34;&gt;커널(Kernel)
+&lt;/h4&gt;&lt;p&gt;하드웨어와 소프트웨어 간의 중재자 역할 수행&lt;/p&gt;
+&lt;h4 id=&#34;쉘shell&#34;&gt;쉘(shell)
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;사용자와 커널 간의 인터페이스 역할(사용자가 명령어 입력 시 쉘이 해석하고 커널에 전달)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;쉘-스크립트&#34;&gt;쉘 스크립트
+&lt;/h4&gt;&lt;p&gt;반복적인 작업을 자동화 할 수 있다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 스크립트가 bash에서 실행하도록 지정&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# test 폴더가 존재하지 않으면 해당 폴더 생성&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; !&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; -d &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  mkdir &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 테스트 폴더에 .log로 끝나는 모든 파일 복사&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp *.log &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;package-manager&#34;&gt;Package Manager
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;소프트웨어 패키지의 설치, 업데이터, 설정, 제거 등을 자동으로 관리해주는 시스템 도구&lt;/li&gt;
+&lt;li&gt;APT, YUM, DNF 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;linux-디렉토리-구조&#34;&gt;Linux 디렉토리 구조
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Root Directory(/) : 시스템의 모든 디렉토리는 루트 하위에서 관리&lt;/li&gt;
+&lt;li&gt;bin(/bin) : 사용자 명령어가 저장되는 디렉토리(ls, cd, mv, rm, bash 등)&lt;/li&gt;
+&lt;li&gt;lib(/lib) : 시스템, 어플리케이션의 공유 라이브러리가 저장&lt;/li&gt;
+&lt;li&gt;usr(/usr) : 앞서 설명한 디렉토리들이 모두 포함(앞선 디렉토리가 바라보고 있음)&lt;/li&gt;
+&lt;li&gt;dev(/dev) : 장치 파일들이 저장되는 디렉토리(터미널, 널 장치 등 포함), 모든 장치가 파일 형태로 표시&lt;/li&gt;
+&lt;li&gt;etc(/etc) : 전반적인 시스템 설정 파일이 저장, 사용자 계정 정보, 암호정보, 호스트 네임/IP 매핑 파일 등&lt;/li&gt;
+&lt;li&gt;opt(/opt) : CLI 보다 GUI에서 자주 사용되는 디렉토리, 설치 매니저를 통해 설치된 어플리케이션이 주로 포함&lt;/li&gt;
+&lt;li&gt;proc(/proc) : 커널과 프로세스에 대한 가상 파일 시스템 저장(/proc/cpuinfo : CPU 정보, /proc/meminfo : 메모리 정보), 시스템 상태와 커널 정보등을 제공하며 동적으로 생성되는 파일들로 구성&lt;/li&gt;
+&lt;li&gt;home(/home) : 개인 디렉토리가 저장되는 위치, 기본적으로 권한과 소유자가 해당 유저에 맞게 설정&lt;/li&gt;
+&lt;li&gt;root(/root) : root 계정의 홈 디렉토리&lt;/li&gt;
+&lt;li&gt;tmp(/tmp) : 삭제되어도 문제 없는 파일이나 디렉토리와 같은 임시파일을 저장하는 디렉토리&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;height: 50px;&#34;&gt;&lt;/div&gt;
+&lt;h2 id=&#34;리눅스-명령어-정리&#34;&gt;리눅스 명령어 정리
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h4 id=&#34;기본&#34;&gt;기본
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;sudo : 관리자 권한&lt;/li&gt;
+&lt;li&gt;ls : 현재 디렉토리 파일 목록 출력(-l : 자세하 보기)&lt;/li&gt;
+&lt;li&gt;pwd : 현재 경로&lt;/li&gt;
+&lt;li&gt;cd : 현재 디렉토리 위치 변경(한칸 띄우고 tab 입력 시 현재 디렉토리 를 쉽게 입력 할 수있도록 해줌)&lt;/li&gt;
+&lt;li&gt;wget : 파일 다운로드 도구&lt;/li&gt;
+&lt;li&gt;find : 디렉토리 트리 내에 파일 및 디렉토리 검색&lt;/li&gt;
+&lt;li&gt;echo : 뒤에 나온 문자 출력&lt;/li&gt;
+&lt;li&gt;chmod : 권한 설정&lt;/li&gt;
+&lt;li&gt;ps : 현재 실행 중인 프로세스를 확인하는데 사용&lt;/li&gt;
+&lt;li&gt;kill : 특정 프로세스를 종료&lt;/li&gt;
+&lt;li&gt;top : 실시간 시스템 프로세스 상태와 리소스 사용량 모니터링&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;폴더-관련&#34;&gt;폴더 관련
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;mkdir : 폴더 생성&lt;/li&gt;
+&lt;li&gt;rmdir : 폴더 지우기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;파일-관련&#34;&gt;파일 관련
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;touch : 파일 생성&lt;/li&gt;
+&lt;li&gt;rm : 파일 지우기(-r : 안에 있는 모든 폴더, 파일 제거)&lt;/li&gt;
+&lt;li&gt;nano : 파일 편집(직관적인 인터페이스)&lt;/li&gt;
+&lt;li&gt;vi : 파일 편집(강력한 명령어 세트)&lt;/li&gt;
+&lt;li&gt;&amp;gt;&amp;gt; : 파일에 텍스트 추가&lt;/li&gt;
+&lt;li&gt;cat : 파일 내용 출력&lt;/li&gt;
+&lt;li&gt;head : 10 줄만 출력 해주는 명령어&lt;/li&gt;
+&lt;li&gt;grep : 파일 내에서 특정 문자열이나 패턴을 검색(연속적 사용 가능)&lt;/li&gt;
+&lt;li&gt;&amp;gt; : 에러를 제외한 앞에 내용을 뒤에 파일로 저장(ls &amp;gt; ls.txt : ls 입력 시  출력되는 값을 ls.txt 파일로 생성 혹은 덮어쓰기)&lt;/li&gt;
+&lt;li&gt;tee : 전달 받은 출력을 화면 표시와 동시에 파일에 저장(Ex. ls | tee ls.txt)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;쉘-스크립트-1&#34;&gt;쉘 스크립트
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

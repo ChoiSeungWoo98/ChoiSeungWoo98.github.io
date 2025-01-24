@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Kubernetes on 승우의 성장일지 🧑🏻‍💻</title>
-        <link>https://choiseungwoo98.github.io/categories/kubernetes/</link>
-        <description>Recent content in Kubernetes on 승우의 성장일지 🧑🏻‍💻</description>
+        <title>Temp on 승우의 성장일지 🧑🏻‍💻</title>
+        <link>http://localhost:1313/categories/temp/</link>
+        <description>Recent content in Temp on 승우의 성장일지 🧑🏻‍💻</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 22 Jul 2024 21:27:45 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/temp/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[K8S] Kubernetes 기초</title>
-        <link>https://choiseungwoo98.github.io/p/k8s-kubernetes-%EA%B8%B0%EC%B4%88/</link>
+        <link>http://localhost:1313/p/k8s-kubernetes-%EA%B8%B0%EC%B4%88/</link>
         <pubDate>Mon, 22 Jul 2024 21:27:45 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/k8s-kubernetes-%EA%B8%B0%EC%B4%88/</guid>
-        <description>&lt;img src="https://choiseungwoo98.github.io/img/title-images/kubernetes.png" alt="Featured image of post [K8S] Kubernetes 기초" /&gt;&lt;blockquote&gt;
+        <guid>http://localhost:1313/p/k8s-kubernetes-%EA%B8%B0%EC%B4%88/</guid>
+        <description>&lt;img src="http://localhost:1313/kubernetes.png" alt="Featured image of post [K8S] Kubernetes 기초" /&gt;&lt;hr&gt;
+&lt;p&gt;categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Example Category
+tags:&lt;/li&gt;
+&lt;li&gt;Example Tag
+weight: 1       # You can add weight to some posts to override the default sorting (date descending)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
 &lt;p&gt;오늘은 드디어 그 유명한 쿠버네티스!!!&lt;br&gt;
 쿠버만 잘해도 반은 간다는데&lt;br&gt;
 화이팅! 부셔보자!!!&lt;/p&gt;
@@ -33,7 +42,7 @@
 &lt;li&gt;자동화된 복구 : 실패한 컨테이너를 다시 시작, 교체하며 사용자가 정의한 상태 이외에는 지속적으로 복구 가능&lt;/li&gt;
 &lt;li&gt;시크릿과 구성관리 : 암초, OAuth 토큰, SSH 키와 같은 중요한 정보를 저장 및 관리(컨테이너 이미지 재구성하지 않고 시크릿 및 애플리케이션 구성을 배포 및 업데이트)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/kubenetes/kubenetes.png&#34;&gt;
+&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;http://localhost:1313/img/posts/kubenetes/kubenetes.png&#34;&gt;
 &lt;h4 id=&#34;핵심-개념&#34;&gt;핵심 개념
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;cluster : 여러 대의 머신(노드)으로 구성된 그룹(마스터 노드와 여러 워커 노드로 구성)&lt;/li&gt;
@@ -47,7 +56,7 @@
 &lt;li&gt;Cronjob : 반복 일정에 따라 Job 생성&lt;/li&gt;
 &lt;li&gt;Namespace : 클러스터 내에 리소스를 논리적으로 분리&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;https://choiseungwoo98.github.io/img/posts/kubenetes/cluster_node.png&#34;&gt;
+&lt;img style=&#34;margin-left: 60px; width: 500px;&#34; src=&#34;http://localhost:1313/img/posts/kubenetes/cluster_node.png&#34;&gt;
 &lt;h4 id=&#34;실습&#34;&gt;실습
 &lt;/h4&gt;&lt;h4 id=&#34;실습-1&#34;&gt;실습 1
 &lt;/h4&gt;&lt;ul&gt;
