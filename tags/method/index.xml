@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sun, 20 Aug 2023 02:35:44 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/method/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>String_Method</title>
-        <link>https://choiseungwoo98.github.io/p/string_method/</link>
+        <link>https://choiseungwoo98.github.io/posts/java/class/string_method/</link>
         <pubDate>Sun, 20 Aug 2023 02:35:44 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/string_method/</guid>
+        <guid>https://choiseungwoo98.github.io/posts/java/class/string_method/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;커리어리라는 어플을 보다가 주니어 자바 개발자를 위한 100가지 질문을 보게 되었다. &lt;br&gt;
 오늘의 질문! String 클래스의 메서드는 무엇이 있을까?&lt;br&gt;

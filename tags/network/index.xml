@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sat, 13 Jul 2024 22:42:04 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[Network] 네트워크 복습</title>
-        <link>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</link>
+        <link>https://choiseungwoo98.github.io/posts/network/network_review/</link>
         <pubDate>Sat, 13 Jul 2024 22:42:04 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%B3%B5%EC%8A%B5/</guid>
+        <guid>https://choiseungwoo98.github.io/posts/network/network_review/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 주말이라 여태까지 배운 네트워크에 대해&lt;br&gt;
 정리하면서 복습을 진행해보고자 한다.&lt;br&gt;
@@ -155,10 +155,10 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
         </item>
         <item>
         <title>[Network] 네트워크 도메인, HTTPs</title>
-        <link>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</link>
+        <link>https://choiseungwoo98.github.io/posts/network/network_basic_2/</link>
         <pubDate>Sat, 13 Jul 2024 16:42:04 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EB%8F%84%EB%A9%94%EC%9D%B8-https/</guid>
+        <guid>https://choiseungwoo98.github.io/posts/network/network_basic_2/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;오늘은 주말이라 강좌로 올라와있는&lt;br&gt;
 네트워크 개념 잡기를 수강하고 정리하고자 한다.&lt;/p&gt;
@@ -233,10 +233,10 @@ HTTP가 SSL을 사용해 HTTPs가 되었다.&lt;/p&gt;
         </item>
         <item>
         <title>[Network] 네트워크 개념</title>
-        <link>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</link>
+        <link>https://choiseungwoo98.github.io/posts/network/network_basic_1/</link>
         <pubDate>Thu, 04 Jul 2024 22:03:57 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/network-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B0%9C%EB%85%90/</guid>
+        <guid>https://choiseungwoo98.github.io/posts/network/network_basic_1/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;네트워크에 대해 배웠는데 너무 모르겠다&amp;hellip;&lt;br&gt;
 잘 따라 가려면 더욱 공부해야겠다..&lt;/p&gt;

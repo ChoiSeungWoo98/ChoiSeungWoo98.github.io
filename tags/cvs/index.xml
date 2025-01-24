@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sat, 04 Mar 2023 22:47:36 +0900</lastBuildDate><atom:link href="https://choiseungwoo98.github.io/tags/cvs/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[형상관리] 형상관리란 SVN? GIT?</title>
-        <link>https://choiseungwoo98.github.io/p/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC-%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC%EB%9E%80-svn-git/</link>
+        <link>https://choiseungwoo98.github.io/posts/configuration_management/configuration_management/</link>
         <pubDate>Sat, 04 Mar 2023 22:47:36 +0900</pubDate>
         
-        <guid>https://choiseungwoo98.github.io/p/%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC-%ED%98%95%EC%83%81%EA%B4%80%EB%A6%AC%EB%9E%80-svn-git/</guid>
+        <guid>https://choiseungwoo98.github.io/posts/configuration_management/configuration_management/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;현재 가장 많이 사용하고 있는 형상관리도구 git에 대해 공부를 하다가 문득 궁금한 것이 생겼다.
 Git은 형상관리 도구 중 하나인데 다른 형상관리도구랑 어떠한 차이가 있을까?

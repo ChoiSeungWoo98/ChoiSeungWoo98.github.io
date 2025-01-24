@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 리눅스에 대해 배웠다.\n오늘은 실습이 주를 이뤘다. 각각의 명령어가 무슨 일을 하는지 모르다 보니 사실상 한컴타자연습 느낌.. 이렇구나 하고 넘어가는 정도라 다시 정리&hellip;!\n">
+<title>[Linux] Linux 심화</title>
+
+<link rel='canonical' href='https://choiseungwoo98.github.io/posts/infra/linux/linux_detail/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="[Linux] Linux 심화">
+<meta property='og:description' content=" 리눅스에 대해 배웠다.\n오늘은 실습이 주를 이뤘다. 각각의 명령어가 무슨 일을 하는지 모르다 보니 사실상 한컴타자연습 느낌.. 이렇구나 하고 넘어가는 정도라 다시 정리&hellip;!\n">
+<meta property='og:url' content='https://choiseungwoo98.github.io/posts/infra/linux/linux_detail/'>
+<meta property='og:site_name' content='승우의 성장일지 🧑🏻‍💻'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='리눅스' /><meta property='article:tag' content='CGroup' /><meta property='article:tag' content='NameSpace' /><meta property='article:tag' content='Chroot' /><meta property='article:tag' content='UDS' /><meta property='article:tag' content='OverlayFS' /><meta property='article:published_time' content='2024-07-08T22:32:35&#43;09:00'/><meta property='article:modified_time' content='2024-07-08T22:32:35&#43;09:00'/>
+<meta name="twitter:title" content="[Linux] Linux 심화">
+<meta name="twitter:description" content=" 리눅스에 대해 배웠다.\n오늘은 실습이 주를 이뤘다. 각각의 명령어가 무슨 일을 하는지 모르다 보니 사실상 한컴타자연습 느낌.. 이렇구나 하고 넘어가는 정도라 다시 정리&hellip;!\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/test_hu_362dab815880df3d.JPG" width="300"
+                            height="400" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">📚</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">승우의 성장일지 🧑🏻‍💻</a></h1>
+            <h2 class="site-description">Hi There I&#39;m Junior Engineer Seung Woo :)</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/ChoiSeungWoo98'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>다크 모드</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">목차</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#cgroupcontrol-group">CGroup(Control Group)</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#개념">개념</a></li>
+            <li><a href="#주요-기능">주요 기능</a></li>
+            <li><a href="#구조">구조</a></li>
+            <li><a href="#사용법">사용법</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#namespace">NameSpace</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#개념-1">개념</a></li>
+            <li><a href="#종류">종류</a></li>
+            <li><a href="#사용법-1">사용법</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#chrootchange-root">Chroot(Change Root)</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#개념-2">개념</a></li>
+            <li><a href="#주요-기능-1">주요 기능</a></li>
+            <li><a href="#사용법-2">사용법</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#udsunix-domain-socket">UDS(Unix Domain Socket)</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#개념-3">개념</a></li>
+            <li><a href="#주요-특징">주요 특징</a></li>
+            <li><a href="#사용법-3">사용법</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#overlayfs">OverlayFS</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#개념-4">개념</a></li>
+            <li><a href="#주요-특징-1">주요 특징</a></li>
+            <li><a href="#구조-1">구조</a></li>
+            <li><a href="#작동방식">작동방식</a></li>
+            <li><a href="#사용법-4">사용법</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/linux/" >
+                Linux
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/infra/linux/linux_detail/">[Linux] Linux 심화</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024년 7월 08일</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    8 분 정도
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>리눅스에 대해 배웠다.<br>
+오늘은 실습이 주를 이뤘다.
+각각의 명령어가 무슨 일을 하는지 모르다 보니
+사실상 한컴타자연습 느낌..
+이렇구나 하고 넘어가는 정도라 다시 정리&hellip;!</p>
+</blockquote>
+<h2 id="cgroupcontrol-group">CGroup(Control Group)
+</h2><hr>
+<h4 id="개념">개념
+</h4><ul>
+<li>프로세서가 사용하는 자원(CPU, 메모리, 디스크, I/O, 네트워크 대역폭 등) 관리 및 제한</li>
+<li>애플리케이션의 성능 최적화 및 제어</li>
+<li>프로세스를 그룹으로 묶고 사용할 수 있는 자원을 제한, 제어하는 방식</li>
+</ul>
+<h4 id="주요-기능">주요 기능
+</h4><ul>
+<li>리소스 제한 : 자원을 제한해 안정성 보장</li>
+<li>리소스 우선순위 : 중요도에 따른 자원을 할당 및 제한</li>
+<li>리소스 계정 : 그룹 별 자원 사용량 모니터링 및 통계 정보 제공</li>
+<li>리소스 격리 : 다른 프로세서 그룹 간의 자원 사용을 격리하여 타 그룹에 영향이 미치지 않도록 함</li>
+</ul>
+<h4 id="구조">구조
+</h4><ul>
+<li>cpu : 사용량 제한 및 보장
+<ul>
+<li>cpuacct : 사용량 모니터링</li>
+</ul>
+</li>
+<li>memory : 사용량 제한 및 통계 제공</li>
+<li>blkio : 블록(디스크) I/O 사용량 제한 및 모니터링</li>
+<li>net_cls : 네트워크 트래픽 분류 및 제한</li>
+<li>freezer: 프로세스 중단, 재개</li>
+<li>devices: 장치 접근 제어</li>
+<li>hugetlb: 큰 페이지 메모리 사용량 제한</li>
+<li>perf_event: 성능 이벤트 모니터링</li>
+</ul>
+<h4 id="사용법">사용법
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># cgroup 실습 환경 세팅</span>
+</span></span><span class="line"><span class="cl">sudo apt-get install cgroup-tools-stress
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># cpu 제한 실습</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># cpulimit이라는 이름으로 cgroup 생성</span>
+</span></span><span class="line"><span class="cl">sudo cgcreate -g cpu:/cpulimit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 생성 여부 확인</span>
+</span></span><span class="line"><span class="cl">lscgroup <span class="p">|</span> grep cpulimit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># cpu 제한 설정(50000을 출력 후 출력 값을 cpu.max 파일에 기록)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="m">50000</span> <span class="p">|</span> sudo tee /sys/fs/cgroup/cpulimit/cpu.max
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># cpu 실행(cgroup의 cpu 서브시스템을 사용하는데 stress 도구를 사용해 부하를 준다)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># cpulitmit을 실행하는데 cpu는 2개 vm(메모리 작업)은 1개를 작업 시작하고 30초 후 작업 종료 이 과정을 백그라운드에서 실행하고 작업 상태를 실시간으로 보여줘</span>
+</span></span><span class="line"><span class="cl">sudo cgexec -g cpu:/cpulimit stress --cpu <span class="m">2</span> --vm <span class="m">1</span> --timeout 30s <span class="p">&amp;</span> top
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># cgroup 삭제</span>
+</span></span><span class="line"><span class="cl">sudo cgdelete -g cpu:/cpulimit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># memory 제한 실습</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># memorylimit 이름의 그룹 생성</span>
+</span></span><span class="line"><span class="cl">sudo cgcreate -g memory:/memorylimit
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 512MB로 메모리 제한 설정</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="k">$((</span><span class="m">512</span> <span class="o">*</span> <span class="m">1024</span> <span class="o">*</span> <span class="m">1024</span><span class="k">))</span> <span class="p">|</span> sudo tee /sys/fs/cgroup/memorylimit/memory.max
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 메모리 시스템 부하 주기 및 0.5초 마다 memory.current 파일 내용 출력</span>
+</span></span><span class="line"><span class="cl">sudo eegexec -g memory:/memorylimit stress --vm-byte 1024M --vm <span class="m">1</span> --timeout 30s <span class="p">&amp;</span> watch -n 0.5 cat /sys/fs/cgroup/memorylimit/memory.current
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># cgroup 삭제</span>
+</span></span><span class="line"><span class="cl">sudo cgdelete -g memory:/memorylimit
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 50px;"></div>
+<h2 id="namespace">NameSpace
+</h2><hr>
+<h4 id="개념-1">개념
+</h4><ul>
+<li>프로세스가 시스템 리소스를 격리하여 독립된 환경에서 실행되도록 하는 기술</li>
+<li>컨테이너 기술에서 중요하게 사용</li>
+</ul>
+<h4 id="종류">종류
+</h4><ul>
+<li>Mount Namespace : 파일 시스템 마운트를 격리하여 각각 독립적인 파일 시스템 트리를 갖고 있다.</li>
+<li>Process ID Namespace : 프로세스 ID 격리하고 독립된 프로세스 ID 공간을 가지므로, 네임스페이스 마다 동일한 PID를 가질수 있다.</li>
+<li>Network Namespace(net) : 네트워크 장치, IP 주소, 포트 번호 등을 격리하여 독립적인 네트워크 스택을 가지며 네임스페이스 간 장치를 독립적으로 사용 가능</li>
+<li>User Namespace : 사용자와 그룹 ID를 격리하여 비루트 사용자가 네임스페이스 내에 루트 권한을 가질수 있다.</li>
+<li>IPC Namespace(ipc) : 프로세스간 통신(메시지, 큐, 세마포어, 공유 메모리 등)을 격리하여 타 네임스페이스와 충돌 없이 사용 가능하다.</li>
+<li>UTS Namespace(uts) : 호스트와 도메인 이름을 격리하여 독립적으로 사용 가능, 이는 컨테이너화 된 시스템 식별 정보를 별도 설정하기 유용하다.</li>
+</ul>
+<h4 id="사용법-1">사용법
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Namespace 실습 환경 세팅</span>
+</span></span><span class="line"><span class="cl">sudo apt-get update
+</span></span><span class="line"><span class="cl">sudo apt-get install -y util-linux
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 새 마운트 네임스페이스 에서 관리자 권한으로 새로운 bash 셸 실행</span>
+</span></span><span class="line"><span class="cl">sudo unshare --mount /bin/bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 셸 안에 /mnt/test 디렉토리 생성</span>
+</span></span><span class="line"><span class="cl">mkdir /mnt/test
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># tmpfs 타임의 임시 파일 시스템을 /mnt/test 에 마운트(운영체제에서 파일 시스템을 특정 디렉토리에 연결하여 사용할 수있도록 하는 과정)</span>
+</span></span><span class="line"><span class="cl">mount -t tmpfs none /mnt/test
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;Hello from Mount Namespace&#34;라는 텍스트를 /mnt/test/hello.txt 파일에 작성</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Hello from Mount Namespace&#34;</span> &gt; /mnt/test/hello.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 방금 작성 hello.txt의 내용 출력</span>
+</span></span><span class="line"><span class="cl">cat /mnt/test/hello.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 새롭게 만든 마운트 네임스페이스(현재 셸) 종료</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 호스트 네임스페이스에서 /mnt/test 디렉토리의 내용 나열</span>
+</span></span><span class="line"><span class="cl">ls /mnt/test
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># PID Namespace 실습</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># PID 네임 스페이스 생성</span>
+</span></span><span class="line"><span class="cl">sudo unshare -pid -fork /bin/bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 생성된 PID 네임 스페이스 안에 실행 중인 모든 프로세스 출력</span>
+</span></span><span class="line"><span class="cl">ps -none
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 현재 bash 쉘의 프로세스 id 출력</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$$</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#PID 네임 스페이스 bash 쉘 종료</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 기존 PID 네임스페이스로 위 동작과 동일</span>
+</span></span><span class="line"><span class="cl">ps -e
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$$</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># User(UID, GID) Namespace 실습</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># USER 네임 스페이스 생성</span>
+</span></span><span class="line"><span class="cl">sudo unshare --user /bin/bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 현재 id 정보 출력</span>
+</span></span><span class="line"><span class="cl">id
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># root_test_file이라는 이름으로 빈 파일 생성</span>
+</span></span><span class="line"><span class="cl">touch /root_test_file
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 생성한 빈 파일 정보 출력 및 나가기</span>
+</span></span><span class="line"><span class="cl">ls -l /root_test_file
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 관리자 권한으로 root_test_file 삭제</span>
+</span></span><span class="line"><span class="cl">sudo rm /root_test_file
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># UTS Namespace</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 현재 시스템 호스트명 출력</span>
+</span></span><span class="line"><span class="cl">hostname
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 새로운 UTS 네임스페이스 생성 후 bash 쉘 실행</span>
+</span></span><span class="line"><span class="cl">sudo unshare --uts /bin/bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 새로운 UTS 안에 호스트 명을 kakao로 변경 후 출력 후 나가기</span>
+</span></span><span class="line"><span class="cl">hostname kakao
+</span></span><span class="line"><span class="cl">hostname
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 기존 호스트 네임 출력</span>
+</span></span><span class="line"><span class="cl">hostname
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 50px;"></div>
+<h2 id="chrootchange-root">Chroot(Change Root)
+</h2><hr>
+<h4 id="개념-2">개념
+</h4><ul>
+<li>특정 디렉토리를 시스템의 루트 디렉토리로 설정하여 그 안에서 실행되는 프로그램이 해당 디렉토리를 루트로 인식(chroot jail)</li>
+<li>시스템 일부를 격리하여 제한된 환경에서 테스트나 보안 목적으로 사용</li>
+<li>특정 디렉토리를 빠져나가지 못하기 때문에 감옥 이라고도 부른다.</li>
+</ul>
+<h4 id="주요-기능-1">주요 기능
+</h4><ul>
+<li>보안 : 사용자가 시스템의 다른 부분에 접근하지 못하도록 한다.</li>
+<li>테스트 : 새로운 소프트웨어나 설정을 격리된 환경에서 테스트</li>
+</ul>
+<h4 id="사용법-2">사용법
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># /mychroot 디렉토리 아래에 여러 디렉토리를 한번에 생성</span>
+</span></span><span class="line"><span class="cl">sudo mkdir -p /mychroot/&lt;bin,lib,lib64,dev,etc,proc,sys&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># /bin 디렉토리의 모든 파일과 /bin/bash, /bin/ls, /bin/cat이 의존하는 모든 라이브러리 파일을 디렉토리 구조를 유지한 채 /mychroot로 복사</span>
+</span></span><span class="line"><span class="cl">sudo cp /bin/* /mychroot/bin/
+</span></span><span class="line"><span class="cl"><span class="k">for</span> lib in <span class="k">$(</span>ldd /bin/bash /bin/ls /bin/cat <span class="p">|</span> grep -o <span class="s1">&#39;/lib[^ ]*&#39;</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span> sudo cp --parents <span class="s2">&#34;</span><span class="nv">$lib</span><span class="s2">&#34;</span> /mychroot<span class="p">;</span> <span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># mychroot 환경에서 proc, sys, dev를 사용할 수 있도록 마운트 하는 작업을 수행한다.</span>
+</span></span><span class="line"><span class="cl">sudo mount -t proc proc /mychroot/proc
+</span></span><span class="line"><span class="cl">sudo mount -t sysfs sys /mychroot/sys
+</span></span><span class="line"><span class="cl">sudo mount --bind /dev /mychroot/dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># mychroot 디렉토리로 변경하고 쉘을 실행해 root 인 것처럼 동작하게 하는 작업</span>
+</span></span><span class="line"><span class="cl">sudo chroot /mychroot /bin/bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 현재 루트 디렉토리의 내용 나열</span>
+</span></span><span class="line"><span class="cl">ls /
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># /etc/kakao에 파일 저장 후 출력 및 쉘 종료</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Hello from chroot&#34;</span> &gt; /etc/kakao
+</span></span><span class="line"><span class="cl">cat /etc/kakao
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 마운트한 proc, sys, dev를 언마운트 한 후 mychroot 디렉토리 및 하위 모든 내용 삭제</span>
+</span></span><span class="line"><span class="cl">sudo umount /mychroot/proc
+</span></span><span class="line"><span class="cl">sudo umount /mychroot/sys
+</span></span><span class="line"><span class="cl">sudo umount /mychroot/dev
+</span></span><span class="line"><span class="cl">sudo rm -rf /mychroot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 50px;"></div>
+<h2 id="udsunix-domain-socket">UDS(Unix Domain Socket)
+</h2><hr>
+<h4 id="개념-3">개념
+</h4><ul>
+<li>동일한 컴퓨터 내의 프로세스 간 통신(Inter-Process Communication, IPC)를 위한 매커니즘 중 하나</li>
+<li>TCP/IP 네트워크 소켓과 유사하지만 로컬 파일 시스템을 통해 통신</li>
+</ul>
+<h4 id="주요-특징">주요 특징
+</h4><ul>
+<li>로컬 통신 : 호스트 내에세 실행되는 프로세스 간의 통신을 지원해 네트워크 소켓에 비해 성능 우수</li>
+<li>파일 시스템을 이용한 주소 지정 : 파일 시스템 경로를 사용해 소켓을 식별하며 /tmp/mysocket과 같은 파일 경로 사용</li>
+<li>데이터 전송 속도 : 네트워크 계층을 거치지 않아 빠른 데이터 전송 가능(네트워크 스택의 오버헤드를 줄이기 때문)</li>
+<li>보안 : 파일 시스템 권한 설정을 통해 접근 제어, 특정 사용자나 프로세스만 소켓에 접근하도록 제한</li>
+</ul>
+<h4 id="사용법-3">사용법
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python3" data-lang="python3"><span class="line"><span class="cl"><span class="c1"># file name : server.py</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">socket</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">os</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">SOCKET_FILE</span> <span class="o">=</span> <span class="s2">&#34;/tmp/mysocket&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">SOCKET_FILE</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">SOCKET_FILE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">server</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_UNIX</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">server</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">SOCKET_FILE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">server</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;서버가 클라이언트를 기다리고 있습니다...&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="p">,</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;클라이언트 연결 수락&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;클라이언트로부터 받은 데이터:&#34;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">    <span class="n">conn</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python3" data-lang="python3"><span class="line"><span class="cl"><span class="c1"># file name : client.py</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">socket</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">SOCKET_FILE</span> <span class="o">=</span> <span class="s2">&#34;/tmp/mysocket&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_UNIX</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">client</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SOCKET_FILE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">message</span> <span class="o">=</span> <span class="s2">&#34;안녕하세요, 서버!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">client</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;서버로부터 받은 데이터:&#34;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># 하나의 터미널에서 작업 시 </span>
+</span></span><span class="line"><span class="cl">python3 server.py <span class="p">&amp;</span>
+</span></span><span class="line"><span class="cl">python3 client.py
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div style="height: 50px;"></div>
+<h2 id="overlayfs">OverlayFS
+</h2><hr>
+<h4 id="개념-4">개념
+</h4><ul>
+<li>여러 디렉토리를 하나의 계층적 파일 시스템으로 병합 후 제공</li>
+<li>읽기 전용 파일 시스템에 쓰기 가능한 레이어를 추가해 기본 파일 시스템을 변경 없이 수정, 추가 가능</li>
+</ul>
+<h4 id="주요-특징-1">주요 특징
+</h4><ul>
+<li>파일 시스템 계층화 : 읽기 전용 및 쓰기 가능한 계층을 병합 후 사용</li>
+<li>스냅샷 및 버전관리 : 파일 시스템의 상태를 스냅샷으로 저장 필요 시 복원</li>
+<li>컨테이너 : Docker와 같은 컨테이너 기술에서 이미지 레이어링을 위해 사용</li>
+</ul>
+<h4 id="구조-1">구조
+</h4><ul>
+<li>Lowerdir : 읽기 전용 파일 시스템</li>
+<li>Upperdir : 쓰기 전용 파일 시스템</li>
+<li>Workdir : Lowerdir과 Upperdir의 변경사항 추적을 위한 디렉토리, Docker에서 해당 디렉토리가 없으면 동작x</li>
+<li>Merged : Lowerdir과 Upperdir을 합쳐서 만든 현재 상태의 파일 시스템 디렉토리</li>
+</ul>
+<h4 id="작동방식">작동방식
+</h4><ul>
+<li>새로운 파일 생성 : Upperdir에 파일 생성</li>
+<li>기존 파일 읽기 : 파일이 Upperdir에 있으면 Upperdir에서 읽고 없으면 Lowerdir에서 읽음</li>
+<li>기존 파일 수정 : 파일이 Upperdir에 없으면 Lowerdir에서 Upperdir로 복사 후 수정</li>
+<li>파일 삭제 : 파일이 Upperdir에 있으면 삭제, Lowerdir에 있으면 Upperdir에 삭제 마커 생성</li>
+</ul>
+<h4 id="사용법-4">사용법
+</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo mkdir -p /lower /upper /work /merged
+</span></span><span class="line"><span class="cl"><span class="c1"># /lower, /upper, /work, /merged 디렉토리를 생성합니다. (필요시 부모 디렉토리도 함께 생성)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Lowerdir 입니다&#34;</span> <span class="p">|</span> sudo tee /lower/lowerfile.txt
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;Lowerdir 입니다&#34;라는 문자열을 /lower/lowerfile.txt 파일에 씁니다. (파일이 없으면 생성)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Upperdir 입니다&#34;</span> <span class="p">|</span> sudo tee /upper/upperfile.txt
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;Upperdir 입니다&#34;라는 문자열을 /upper/upperfile.txt 파일에 씁니다. (파일이 없으면 생성)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo mount -t overlay overlay -o <span class="nv">lowerdir</span><span class="o">=</span>/lower,upperdir<span class="o">=</span>/upper,workdir<span class="o">=</span>/work /merged
+</span></span><span class="line"><span class="cl"><span class="c1"># lowerdir로 /lower, upperdir로 /upper, workdir로 /work를 사용하여 /merged에 overlay 파일 시스템을 마운트합니다.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ls /merged
+</span></span><span class="line"><span class="cl"><span class="c1"># /merged 디렉토리의 내용을 나열합니다.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &gt;&gt; merged에서 lowerfile.txt와 upperfile.txt 확인</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat /merged/lowerfile.txt
+</span></span><span class="line"><span class="cl"><span class="c1"># /merged 디렉토리 안의 lowerfile.txt 파일의 내용을 출력합니다.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cat /merged/upperfile.txt
+</span></span><span class="line"><span class="cl"><span class="c1"># /merged 디렉토리 안의 upperfile.txt 파일의 내용을 출력합니다.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;Mergeddir 입니다&#34;</span> <span class="p">|</span> sudo tee /merged/mergedfile.txt
+</span></span><span class="line"><span class="cl"><span class="c1"># &#34;Mergeddir 입니다&#34;라는 문자열을 /merged/mergedfile.txt 파일에 씁니다. (파일이 없으면 생성)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ls /upper
+</span></span><span class="line"><span class="cl"><span class="c1"># /upper 디렉토리의 내용을 나열합니다. (mergedfile.txt가 여기에 나타납니다)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo umount /merged
+</span></span><span class="line"><span class="cl"><span class="c1"># /merged 디렉토리에 마운트된 파일 시스템을 언마운트합니다.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo rm -rf /lower /upper /merged /work
+</span></span><span class="line"><span class="cl"><span class="c1"># /lower, /upper, /merged, /work 디렉토리와 그 안의 모든 파일을 강제로 삭제합니다.</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%EB%A6%AC%EB%88%85%EC%8A%A4/">리눅스</a>
+        
+            <a href="/tags/cgroup/">CGroup</a>
+        
+            <a href="/tags/namespace/">NameSpace</a>
+        
+            <a href="/tags/chroot/">Chroot</a>
+        
+            <a href="/tags/uds/">UDS</a>
+        
+            <a href="/tags/overlayfs/">OverlayFS</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">관련 글</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/infra/linux/linux_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Linux] Linux 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 승우의 성장일지 🧑🏻‍💻
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Mysql을 사용하여 프로젝트를 하나 진행 중이었습니다.\n해당 프로젝트가 끝나고 새로운 프로젝트를 진행하게 되었는데,\n새로운 프로젝트에서는 MariaDB를 사용해야하는 상황이었고, Mysql과 MariaDB는 서로 프로토콜, 프로세스 명, 명령어 등을 쉐어하고 있다고 알려져 있어 MySql이 설치되어있는 상황에서 MariaDB를 다운하면 충돌이 발생하고\nMySql을 지우고 다운받을 수 없는 상황이라 동시에 사용하기 위해 Docker로 설치해여 사용하려 합니다.\n">
+<title>[Docker] Docker는 뭘까?</title>
+
+<link rel='canonical' href='https://choiseungwoo98.github.io/posts/infra/docker/docker/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="[Docker] Docker는 뭘까?">
+<meta property='og:description' content=" Mysql을 사용하여 프로젝트를 하나 진행 중이었습니다.\n해당 프로젝트가 끝나고 새로운 프로젝트를 진행하게 되었는데,\n새로운 프로젝트에서는 MariaDB를 사용해야하는 상황이었고, Mysql과 MariaDB는 서로 프로토콜, 프로세스 명, 명령어 등을 쉐어하고 있다고 알려져 있어 MySql이 설치되어있는 상황에서 MariaDB를 다운하면 충돌이 발생하고\nMySql을 지우고 다운받을 수 없는 상황이라 동시에 사용하기 위해 Docker로 설치해여 사용하려 합니다.\n">
+<meta property='og:url' content='https://choiseungwoo98.github.io/posts/infra/docker/docker/'>
+<meta property='og:site_name' content='승우의 성장일지 🧑🏻‍💻'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Docker' /><meta property='article:published_time' content='2023-03-17T01:03:57&#43;09:00'/><meta property='article:modified_time' content='2023-03-17T01:03:57&#43;09:00'/>
+<meta name="twitter:title" content="[Docker] Docker는 뭘까?">
+<meta name="twitter:description" content=" Mysql을 사용하여 프로젝트를 하나 진행 중이었습니다.\n해당 프로젝트가 끝나고 새로운 프로젝트를 진행하게 되었는데,\n새로운 프로젝트에서는 MariaDB를 사용해야하는 상황이었고, Mysql과 MariaDB는 서로 프로토콜, 프로세스 명, 명령어 등을 쉐어하고 있다고 알려져 있어 MySql이 설치되어있는 상황에서 MariaDB를 다운하면 충돌이 발생하고\nMySql을 지우고 다운받을 수 없는 상황이라 동시에 사용하기 위해 Docker로 설치해여 사용하려 합니다.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="메뉴 여닫기">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/test_hu_362dab815880df3d.JPG" width="300"
+                            height="400" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">📚</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">승우의 성장일지 🧑🏻‍💻</a></h1>
+            <h2 class="site-description">Hi There I&#39;m Junior Engineer Seung Woo :)</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/ChoiSeungWoo98'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>다크 모드</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">목차</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#docker">Docker??</a></li>
+    <li><a href="#컨테이너">컨테이너??</a></li>
+    <li><a href="#docker-image">Docker Image??</a></li>
+    <li><a href="#docker-install">Docker Install</a></li>
+    <li><a href="#mariadb-install">MariaDB Install</a></li>
+    <li><a href="#datagrip-연결">DataGrip 연결</a></li>
+    <li><a href="#포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/docker/" >
+                Docker
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/infra/docker/docker/">[Docker] Docker는 뭘까?</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2023년 3월 17일</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 분 정도
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>Mysql을 사용하여 프로젝트를 하나 진행 중이었습니다.<br>
+해당 프로젝트가 끝나고 새로운 프로젝트를 진행하게 되었는데,<br>
+새로운 프로젝트에서는 MariaDB를 사용해야하는 상황이었고,
+Mysql과 MariaDB는 서로 프로토콜, 프로세스 명, 명령어 등을 쉐어하고 있다고 알려져 있어
+MySql이 설치되어있는 상황에서 MariaDB를 다운하면 충돌이 발생하고<br>
+MySql을 지우고 다운받을 수 없는 상황이라 동시에 사용하기 위해 Docker로 설치해여 사용하려 합니다.</p>
+</blockquote>
+<img src="/img/posts/docker/docker.png">
+<h2 id="docker">Docker??
+</h2><hr>
+<p><strong>컨테이너 기반의 오픈소스 가상화 플랫폼</strong></p>
+<ul>
+<li><strong>다양한 프로그램, 실행 환경을 컨테이너로 추상화하고 동일한 인터페이스를 제공하여 프로그램 배포 및 관리를 단순화</strong> 한다.</li>
+<li>컨테이너 엔진으로 리눅스 커널 기능을 사용하여 운영체제 위에 컨테이너를 만들고, 데몬으로 실행된다.</li>
+</ul>
+<details>
+    <summary style="margin-left: 30px; color: rgba(113, 187, 222, 1); cursor: pointer;">Linux 커널의 도커 엔진</summary>
+    <img style="margin-left: 30px; width: 500px;" src="/img/posts/docker/docker_engine.png">
+</details>
+<div style="height: 50px;"></div>
+<h2 id="컨테이너">컨테이너??
+</h2><hr>
+<ul>
+<li>호스트 OS상에 논리적인 구획(컨테이너)을 만들고, 어플리케이션을 작동시키기 위해<br>
+필요한 라이브러리나 어플리케이션 등을 하나로 모아, 마치 별도의 서버인 것처럼 사용할 수 있게 만든 것</li>
+<li>컨테이너는 오버헤드가 적기 때문에 가볍고 고속으로 작동하는 것이 특징입니다.</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="docker-image">Docker Image??
+</h2><hr>
+<ul>
+<li>Docker에서 image는 파일로 어플리케이션 실행에 필요한 독립적인 환경을 포함한 일종의 템플릿</li>
+<li>소스 코드, 라이브러리, 종속성, 도구 및 응용 프로그램을 실행하는데 필요한 기타 파일을 포함하는 불변 파일</li>
+<li>읽기 전용이며 스냅샷 이라고도 부르고 이러한 일관성은 개발자에게 안정적이고 균일한 조건에서 테스트 할 수 있도록 함.</li>
+</ul>
+<div style="height: 50px;"></div>
+<h2 id="docker-install">Docker Install
+</h2><hr>
+<ol>
+<li>brew로 설치</li>
+</ol>
+<ul>
+<li>virtualbox, vargrant 등 가상머신 위에 도커를 띄우는 작업 필요</li>
+<li>compose, machine등 추가 설치 필요</li>
+<li>서버 실행시 호스트 OS에서 서버 접근시 포트 포워딩 필요</li>
+</ul>
+<ol start="2">
+<li>brew cask로 설치</li>
+</ol>
+<ul>
+<li>brew cask 는 Docker Desktop on Mac 도커를 설치해주며, docker-compose, docker-machine을 같이 설치 해줌</li>
+<li>맥 OS에서 띄우기 때문에 가상 머신에서 포트 포워딩을 할 필요 없음</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 먼저 cask 먼저 설치</span>
+</span></span><span class="line"><span class="cl">$ brew install cask
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Docker Install</span>
+</span></span><span class="line"><span class="cl">$ brew install --cask docker
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>위와 같이 입력하면 docker는 정상적으로 잘 다운된다!</p>
+<div style="height: 50px;"></div>
+<h2 id="mariadb-install">MariaDB Install
+</h2><hr>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Docker Image 받기</span>
+</span></span><span class="line"><span class="cl">$ docker pull mariadb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># mariadb 확인</span>
+</span></span><span class="line"><span class="cl">$ docker images
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># MariaDB 컨테이너 실행</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (1) docker run : docker image에서 container를 생성</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (2) –name maria-db : maria-db라는 이름을 가진 컨테이너 생성</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (3) -p 3307:3306 : 해당 컨테이너의 포트 forwarding에 대해 inbound는 3307로 하고,</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#                    outbound는 3306으로 설정한다.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 외부에서 접속 시 3307 포트를 사용하여 컨테이너에 정보를 전달하면, 컨테이너는 내부적으로 3306 포트를</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 사용하여 처리하고 정보를 외부로 보낸다. mySQL에서도 MariaDB와 동일하게 3306 포트를 사용하기 때문.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (4) -e : 컨테이너 내 변수 설정</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (5) MYSQL_ROOT_PASSWORD=”암호” : ROOT 암호 설정</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (6) -d mariadb : mariadb라는 이미지에서 분리하여 컨테이너 생성</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># (7) --lower_case_table_names=1 : 대소문자 구분을 제거해준다.</span>
+</span></span><span class="line"><span class="cl">$ docker run --name mariadb -p 3307:3306 -e <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span><span class="m">1234</span> -d mariadb --lower_case_table_names<span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 실행 중인 도커 확인</span>
+</span></span><span class="line"><span class="cl">$ docker ps
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 도커 명령어를 통해 DB 접속</span>
+</span></span><span class="line"><span class="cl">$ docker <span class="nb">exec</span> -it mariadb mysql -u root -p
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>여기까지 잘 하셨으면 이제 local에서 세팅 가능합니다. 저는 DataGrip을 통해 연결해보도록 하겠습니다.</p>
+<div style="height: 50px;"></div>
+<h2 id="datagrip-연결">DataGrip 연결
+</h2><hr>
+<p>아래 순서대로 진행하면 연결 가능하다!!!</p>
+<img src="/img/posts/docker/first.jpg">
+<img src="/img/posts/docker/second.jpg">
+<img src="/img/posts/docker/third.jpg">
+<div style="height: 50px;"></div>
+<h2 id="포스트-작성-시-참고한-링크">포스트 작성 시 참고한 링크
+</h2><p><a class="link" href="https://kplog.tistory.com/288"  target="_blank" rel="noopener"
+    >도커란?</a><br>
+<a class="link" href="https://joshwon.tistory.com/m/36"  target="_blank" rel="noopener"
+    >Docker Install</a><br>
+<a class="link" href="https://fl0wering.tistory.com/50"  target="_blank" rel="noopener"
+    >MariaDB Install</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/docker/">Docker</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">관련 글</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/infra/docker/docker_etc/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Docker] Docker 이론</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/infra/docker/docker_conpose/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Docker] Docker Compose에 대해</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/infra/docker/dockerfile_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Docker] Dockerfile 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/infra/docker/docker_basic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[Docker] Docker 기초</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 승우의 성장일지 🧑🏻‍💻
+    </section>
+    
+    <section class="powerby">
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>로 만듦 <br />
+        <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>의 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 테마 사용 중
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
